@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html class="ui-page-login">
+
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title>注册</title>
+		<link href="css/mui.min.css" rel="stylesheet" />
+		<link href="css/app.css" rel="stylesheet" />
+		<style>
+			
+		</style>
+	</head>
+
+	<body>
+		<header class="mui-bar mui-bar-nav">
+			<a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+			<h1 class="mui-title">注册</h1>
+		</header>
+		<div class="mui-content">
+			<div class="regist-progress">
+				<div class="item active">
+					<em>1</em>
+					<span>注册</span>
+				</div>
+				<div class="item">
+					<em>2</em>
+					<span>填写个人信息</span>
+				</div>
+				<div class="item">
+					<em>1</em>
+					<span>完成</span>
+				</div>
+			</div>
+			<form class="mui-input-group login-form">
+				<div class="mui-input-row">
+					<label>手机号</label>
+					<input id='account' type="text" class="mui-input-clear mui-input" placeholder="请输入手机号码">
+				</div>
+				<div class="mui-input-row">
+					<label>短信验证码</label>
+					<input id='password' type="password" class="mui-input-clear mui-input code-input" placeholder="请输入验证码">
+					<a class="btn-code">获取验证码</a>
+				</div>
+				<div class="mui-input-row">
+					<label>密码</label>
+					<input id='password_confirm' type="password" class="mui-input-clear mui-input" placeholder="设置8-16位字母数字组合密码">
+				</div>
+				<div class="mui-table-view-divider"></div>
+				<div class="mui-input-row">
+					<label>推荐码</label>
+					<input id='email' type="email" class="mui-input-clear mui-input" placeholder="请输入推荐人代码（必填）">
+				</div>
+			</form>
+			<div class="mui-content-padded">
+				<a onclick="showReg()">《用户协议》</a>
+			</div>
+			<div class="mui-content-padded">
+				<button id='reg' class="mui-btn mui-btn-block btn-login">注册</button>
+			</div>
+		</div>
+		<!-- 用户协议 -->
+		<div class="my-model" id="reg-model">
+			<div class="my-model-container">
+				<div class="model-header">
+					<h3 class="title">美立约商城推荐协议</h3>
+					<a class="btn-right" onclick="document.querySelector('#reg-model').classList.remove('open')"><i class="mui-icon mui-icon-close"></i></a>
+				</div>	
+				<div class="model-body has-footer">
+					<div class="reg-text">
+						金卡会员=充值1580<br />
+银卡会员=充值1080<br /><br />
+
+一．权益说明 <br />
+ 1.会员在推荐商品/店铺之前，需一次性充值1580元人民币成为美立约金卡会员。  <br /> 
+ 2、在线填写“我要推荐”并提交，即可申请成为“推荐人”，商品资料提交至后台系统后，公司将安排专属顾问于每月10日、25日向招商小组统一递交，经金卡招商小组审核通过后即可在美立约商城上线销售。 <br />
+ 3、推荐的商品在美立约商城一经上线，则推荐该商品的会员可获得该商品/店铺入驻10%的推荐奖励。 <br />
+  4、会员所推荐商品，商城并不保证该商品销量，但推荐人将获得该商品在平台销售利润的10%，且永不归零：销售利润=（商品零售价格-商品/商家结算价格-相关税费）。<br />
+   5、推荐人与商品的推荐关系经确认并捆绑后，合同期内无法变更或取消。<br />
+    6、推荐奖励按照网站给供应商结款的结算周期（次月15日、25日）返还到会员个人钱包中，名称为“产品推荐赠送”。 <br />
+    7、服务最终解释权归武汉市美约科技有限公司所有。<br />
+<br />
+ 二、推荐商品运营费用 <br />
+1、推荐商品保证金为每个厂家5000元，如果经营期间无违规操作，双方解除合同之日起三个月后予以返还。<br />
+2、推荐商品服务费为2000元/款/年，此费用为美立约商城技术服务费不予返还。 <br />
+3、如推荐人所推荐商家（法人或股东）为美立约银卡会员，则服务费享受8折优惠。 <br />如推荐商家（法人或股东）为美立约金卡会员，则服务费享受5折优惠。 <br />
+4、费用优惠认定标准： 1.商家(厂家或代理商)法人是网站金（银）卡会员（需提供厂家营业执照与法人在网站的专属优惠码码）。<br /> 2.商家（厂家或代理商）股东是网站金（银）卡会员（需提供国家认可第三方机构出具的厂家股东股份证明） <br />
+
+					</div>
+				</div>
+				<div class="model-footer">
+					<a class="btn-submit" onclick="agree()">同意</a>
+				</div>
+			</div>
+			<div class="my-model-cover"></div>
+		</div>
+		<script src="js/mui.min.js"></script>
+		<script src="js/app.js"></script>
+		<script>
+		function showReg(){
+			document.querySelector('#reg-model').classList.add('open');
+		}
+		function agree(){
+			document.querySelector('#reg-model').classList.remove('open');
+		}
+			(function($, doc) {
+				$.init();
+				$.plusReady(function() {
+					var settings = app.getSettings();
+					var regButton = doc.getElementById('reg');
+					var accountBox = doc.getElementById('account');
+					var passwordBox = doc.getElementById('password');
+					var passwordConfirmBox = doc.getElementById('password_confirm');
+					var emailBox = doc.getElementById('email');
+					regButton.addEventListener('tap', function(event) {
+						var regInfo = {
+							account: accountBox.value,
+							password: passwordBox.value,
+							email: emailBox.value
+						};
+						var passwordConfirm = passwordConfirmBox.value;
+						if (passwordConfirm != regInfo.password) {
+							plus.nativeUI.toast('密码两次输入不一致');
+							return;
+						}
+						app.reg(regInfo, function(err) {
+							if (err) {
+								plus.nativeUI.toast(err);
+								return;
+							}
+							plus.nativeUI.toast('注册成功');
+							$.openWindow({
+								url: 'login.html',
+								id: 'login',
+								show: {
+									aniShow: 'pop-in'
+								}
+							});
+						});
+					});
+				});
+			}(mui, document));
+		</script>
+	</body>
+
+</html>

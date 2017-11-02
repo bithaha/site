@@ -1,0 +1,101 @@
+﻿<!doctype html>
+<html>
+<head>
+    <meta charset="utf8">
+    <title>在线下单</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+    <link href="assets/css/base.css" rel="stylesheet">
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/base.js"></script>
+</head>
+
+<body class="cartbody">
+   
+<div class="list input-list">
+    <div class="item">
+        <label><i class="ico-addr"></i>地址</label>
+        <input type="text" class="text" placeholder="请填写详细收货地址">
+    </div>
+    <div class="item-divider"></div>
+    <div class="item">
+        <label>姓名</label>
+        <input type="text" class="text">
+    </div>
+    <div class="item">
+        <label>电话</label>
+        <input type="text" class="text">
+    </div>
+    <div class="item-divider"></div>
+</div>
+<div class="list cartlist">
+    <div class="item"><span class="titl"></span><span>选择产品</span></div>
+    <div class="item tips">单笔订单需折后累计满480元以上，否则视为无效！</div>
+    <div class="item">
+        <table class="carttable">
+            <tr>
+                <td><input type="checkbox" class="checkbox"></td>
+                <td>综合果蔬酵素原液</td>
+                <td>
+                    <div class="num-group">
+                        <a class="mul"></a>
+                        <input type="number" class="text" value="0">
+                        <a class="plus"></a>
+                    </div>
+                </td>
+                <td class="price">444.00</td>
+            </tr>
+            <tr>
+                <td><input type="checkbox" class="checkbox"></td>
+                <td>综合果蔬酵素原液</td>
+                <td>
+                    <div class="num-group">
+                        <a class="mul"></a>
+                        <input type="number" class="text" value="0">
+                        <a class="plus"></a>
+                    </div>
+                </td>
+                <td class="price">444.00</td>
+            </tr>
+            <tr>
+                <td><input type="checkbox" class="checkbox"></td>
+                <td>综合果蔬酵素原液</td>
+                <td>
+                    <div class="num-group">
+                        <a class="mul"></a>
+                        <input type="number" class="text" value="0">
+                        <a class="plus"></a>
+                    </div>
+                </td>
+                <td class="price">444.00</td>
+            </tr>
+        </table>
+    </div>
+</div>
+<div class="cart-footer">
+    <div class="info">
+        合计：<b class="total">7600.00</b><span class="t-jian">共30件</span>
+    </div>
+    <a class="btn-sub">提交订单</a>
+</div>
+
+<script type="text/javascript">
+$(function(){
+    $('.num-group').on('click','.mul',function(){
+        var val = parseInt($(this).next().val()) - 1;
+        val = val<0?0:val;
+        $(this).next().val(val);
+    })
+    $('.num-group').on('click','.plus',function(){
+        var val = parseInt($(this).prev().val()) + 1;
+        val = val>9999?9999:val;
+        $(this).prev().val(val);
+    })
+})
+</script>
+
+</body>
+</html>

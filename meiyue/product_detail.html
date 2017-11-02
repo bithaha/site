@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<title>美丽商城-商品详情</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<!--标准mui.css-->
+		<link rel="stylesheet" href="css/mui.min.css">
+		<!--App自定义的css-->
+		<link rel="stylesheet" type="text/css" href="css/app.css"/>
+		<script src="js/base.js"></script>
+	</head>
+
+	<body>	
+		
+		<div class="mui-content has-cartfoot">
+			<div class="mui-slider pro-detail-slider">
+				<div class="mui-slider-group">
+					<div class="mui-slider-item">
+					  <img src="img/demo/pro-img-5.jpg">
+					</div>
+				</div>
+			</div>
+			<div class="mui-table-view pro-detail">
+				<div class="mui-table-view-cell">
+					<h4 class="title">青春抗皱滋润面霜眼霜 组合50ml + 眼霜15ml</h4>
+					<div class="info">
+						<span class="msg mui-pull-right">免运费</span>
+						<span class="price">¥<em>688.00</em></span>
+					</div>
+				</div>
+				<div class="mui-table-view-cell">
+					<span class="tip-item"><i class="ico-gou"></i>企业认证</span>
+					<span class="tip-item"><i class="ico-gou"></i>担保交易</span>
+					<span class="tip-item"><i class="ico-gou"></i>线下门店</span>
+				</div>
+				<div class="mui-table-view-divider"></div>
+				<div class="mui-table-view-cell">
+					<a class="mui-navigate-right" href="#proData">
+						产品参数
+					</a>
+				</div>
+				<div class="mui-table-view-cell">
+					<a class="mui-navigate-right" href="#selCate">
+						选择产品数量及配送方式
+					</a>
+				</div>
+				<div class="mui-table-view-divider"></div>
+				<div class="mui-segmented-control pro-control">
+					<a class="mui-control-item mui-active" href="#detail">
+						产品介绍
+					</a>
+					<a class="mui-control-item" href="#comment">
+						用户评价
+					</a>
+				</div>
+				<div class="pro-detail-desc">
+					<div id="detail" class="mui-control-content mui-active">
+						<img src="img/demo/pro-img-6.jpg">
+					</div>
+					<div id="comment" class="mui-control-content">
+						gggg
+					</div>
+				</div>
+			</div>
+		</div>
+		<div id="proData" class="mui-popover mui-popover-action mui-popover-bottom pro-data">
+			<h3 class="title mui-content-padded">产品参数</h3>
+			<div class="mui-input-group data-detail">
+				<div class="mui-input-row">
+					<label>化妆品品类</label>
+					<div class="txt">爽肤水</div>
+				</div>
+				<div class="mui-input-row">
+					<label>手机号</label>
+					<div class="txt">爽肤水</div>
+				</div>
+			</div>
+			<div class="mui-content">
+				<a href="#proData" class="mui-btn mui-btn-block btn-pink">返回</a>
+			</div>
+		</div>
+		<div id="selCate" class="mui-popover mui-popover-action mui-popover-bottom pro-select">
+			<div class="mui-content">
+				<div class="head">
+					<a class="btn-del" href="#selCate"><i class="ico-del"></i></a>
+					<div class="img"><img src="img/cate-img-2.jpg"></div>
+					<div class="det">
+						<div class="price">¥<em>288.00</em></div>
+						<div class="desc">
+							库存678件
+						</div>
+						<div class="desc">
+							已选："200ml"
+						</div>
+					</div>
+				</div>
+				<div class="body">
+					<div class="info-row">
+						<h4 class="title">化妆品净含量</h4>
+						<div class="cate-tags">
+							<a class="item active">200ml</a><a class="item">300ml</a>
+						</div>
+					</div>
+					<div class="info-row">
+						<h4 class="title mui-pull-left">购买数量</h4>
+						<div class="num-group mui-pull-right">
+							<b class="mul">-</b>
+							<input type="text" value="1">
+							<b class="plus">+</b>
+						</div>
+					</div>
+					<div class="info-row">
+						<h4 class="title">配送方式</h4>
+						<div class="cate-tags">
+							<a class="item active">门店代收</a><a class="item">本人签收</a>
+						</div>
+					</div>
+				</div>
+				<div class="foot cart-footer">
+					<a class="btn-confirm">
+						<span>去购买</span>
+						<em></em>
+					</a>
+					<div class="info">
+						<a class="btn-putcart mui-active">
+							<i class="ico-cart"></i>
+							<span>加入购物车</span>
+						</a>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="cart-footer">
+			<a class="btn-confirm">
+				<span>去购买</span>
+				<em></em>
+			</a>
+			<div class="info">
+				<a class="btn-putcart mui-active">
+					<i class="ico-cart"></i>
+					<span>加入购物车</span>
+				</a>
+			</div>
+		</div>
+		<script src="js/mui.min.js"></script>
+		<script type="text/javascript" charset="utf-8">
+			 //mui初始化
+			mui.init();
+			
+		</script>
+	</body>
+
+</html>

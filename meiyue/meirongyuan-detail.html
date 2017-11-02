@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<title>美容院详情</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<!--标准mui.css-->
+		<link rel="stylesheet" href="css/mui.min.css">
+		<!--App自定义的css-->
+		<link rel="stylesheet" type="text/css" href="css/app.css"/>
+		<script src="js/base.js"></script>
+	</head>
+
+	<body>	
+		
+		<div class="mui-content has-cartfoot">
+			<div class="mui-slider pro-detail-slider">
+				<div class="mui-slider-group">
+					<div class="mui-slider-item">
+					  <img src="img/demo/mry-img-4.jpg">
+					</div>
+				</div>
+			</div>
+			<div class="mui-table-view pro-detail">
+				<div class="mui-table-view-cell">
+					<h4 class="title">光子全身疗法面部护理</h4>
+					<div class="info">
+						<span class="msg mui-pull-right">服务时长：45分钟</span>
+						<span class="price">¥<em>688.00</em></span>
+					</div>
+				</div>
+				<div class="mui-table-view-cell">
+					<span class="tip-item"><i class="ico-mry-1"></i><span>标准流程</span></span>
+					<span class="tip-item"><i class="ico-mry-2"></i><span>无隐形消费</span></span>
+					<span class="tip-item"><i class="ico-mry-3"></i><span>金牌服务</span></span>
+				</div>
+				<div class="mui-table-view-divider"></div>
+				<div class="mui-table-view-cell">
+					<a class="mui-navigate-right" href="#orderTime">
+						预约时间
+					</a>
+				</div>
+				<div class="mui-table-view-cell">
+					<a class="mui-navigate-right" href="#orderType">
+						服务方式
+					</a>
+				</div>
+				<div class="mui-table-view-divider"></div>
+				
+			</div>
+			<div class="mui-segmented-control pro-control">
+				<a class="mui-control-item mui-active" href="#detail">
+					项目介绍
+				</a>
+				<a class="mui-control-item" href="#comment">
+					用户评价
+				</a>
+			</div>
+			<div class="pro-detail-desc">
+				<div id="detail" class="mui-control-content mui-active">
+					<img src="img/demo/mry-detail-1.jpg">
+				</div>
+				<div id="comment" class="mui-control-content">
+					gggg
+				</div>
+			</div>
+		</div>
+		<div id="orderTime" class="mui-popover mui-popover-action mui-popover-bottom order-time">			
+			<div class="mui-content">
+				<div class="head row">
+					<div class="col active"><a class="item"><span>今天</span><b>08/15</b></a></div>
+					<div class="col"><a class="item"><span>明天</span><b>08/16</b></a></div>
+					<div class="col"><a class="item"><span>周一</span><b>08/16</b></a></div>
+					<div class="col"><a class="item"><span>周二</span><b>08/16</b></a></div>
+					<div class="col"><a class="item"><span>周三</span><b>08/16</b></a></div>
+					<div class="col"><a class="item"><span>周四</span><b>08/16</b></a></div>
+				</div>
+				<div class="body time-list">
+					<a class="item disabled">10:00</a>
+					<a class="item disabled">10:30</a>
+					<a class="item">11:00</a>
+					<a class="item">11:30</a>
+					<a class="item">12:00</a>
+					<a class="item">12:30</a>
+					<a class="item">13:00</a>
+					<a class="item">13:30</a>
+					<a class="item">14:00</a>
+					<a class="item">14:30</a>
+					<a class="item active">15:00</a>
+					<a class="item disabled">15:30</a>
+					<a class="item disabled">16:00</a>
+					<a class="item">16:30</a>
+					<a class="item">17:00</a>
+					<a class="item">17:30</a>
+					<a class="item">18:00</a>
+					<a class="item">18:30</a>
+				</div>
+				<a href="#proData" class="mui-btn mui-btn-block btn-pink">返回</a>
+			</div>
+		</div>
+		<div id="orderType" class="mui-popover mui-popover-action mui-popover-bottom pro-select">
+			<div class="mui-content">
+				<div class="head">
+					<a class="btn-del" href="#orderType"><i class="ico-del"></i></a>
+					<div class="img"><img src="img/demo/mry-img-4.jpg"></div>
+					<div class="det">
+						<h4 class="title">光子全身疗法面部护理</h4>
+						<div class="desc">
+							<span class="tag-item">会员专享</span>
+						</div>
+						<div class="price-area"><span class="price">¥<em>680.00</em></span><span class="price-del">¥998.00</span></div>
+					</div>
+				</div>
+				<div class="body">					
+					<div class="info-row">
+						<h4 class="title mui-pull-left">购买数量</h4>
+						<div class="num-group mui-pull-right">
+							<b class="mul">-</b>
+							<input type="text" value="1">
+							<b class="plus">+</b>
+						</div>
+					</div>
+					<div class="info-row">
+						<h4 class="title">服务方式</h4>
+						<div class="cate-tags">
+							<a class="item active">上门服务</a><a class="item">到店服务</a>
+						</div>
+					</div>
+				</div>
+				<div class="foot cart-footer">
+					<a class="btn-confirm">
+						<span>去购买</span>
+						<em></em>
+					</a>
+					<div class="info">
+						<a class="btn-putcart mui-active">
+							<i class="ico-cart"></i>
+							<span>加入购物车</span>
+						</a>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="cart-footer">
+			<a class="btn-confirm">
+				<span>去购买</span>
+				<em></em>
+			</a>
+			<div class="info">
+				<a class="btn-putcart mui-active">
+					<i class="ico-cart"></i>
+					<span>加入购物车</span>
+				</a>
+			</div>
+		</div>
+		<script src="js/mui.min.js"></script>
+		<script type="text/javascript" charset="utf-8">
+			 //mui初始化
+			mui.init();
+			
+		</script>
+	</body>
+
+</html>

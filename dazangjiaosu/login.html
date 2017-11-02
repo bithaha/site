@@ -1,0 +1,54 @@
+﻿<!doctype html>
+<html>
+<head>
+<meta charset="utf8">
+<title>登录</title>
+<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no">
+<meta name="format-detection" content="telephone=no">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+<link href="assets/css/base.css" rel="stylesheet">
+<script src="assets/js/jquery.min.js"></script>
+<script src="assets/js/base.js"></script>
+</head>
+
+<body class="login-body">
+    <div class="login-form">
+        <h3 class="login-title">大藏酵素合伙人</h3>
+        <div class="input-row">
+            <i class="icon ico-login-user"></i>
+            <input type="text" class="input-user" placeholder="手机号码" oninput="searUser(this)" onpropertychange="searUser(this)">
+            <a class="btn-clear" onclick="clearData(this)">x</a>
+        </div>
+        <div class="input-row">
+            <i class="icon ico-login-pwd"></i>
+            <input type="password" class="input-pwd" placeholder="手机号码" oninput="searUser(this)" onpropertychange="searUser(this)">
+            <a class="btn-clear" onclick="clearData(this)">x</a>
+        </div>
+        <div class="input-row">
+            <a href="#" class="pull-right">忘记密码</a>
+        </div>
+        <div class="input-row">
+            <a href="#" class="btn-login">登录</a>
+        </div>
+    </div>
+
+<script type="text/javascript">
+function searUser(obj){
+    var val = $.trim($(obj).val());
+    if(val==''){
+        $(obj).next('.btn-clear').hide();
+    }else{
+        $(obj).next('.btn-clear').show();
+    }
+    
+    
+}
+function clearData(o){
+    $(o).hide();
+    $(o).prev('input').val('');
+}
+</script>
+</body>
+</html>

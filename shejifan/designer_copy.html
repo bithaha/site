@@ -1,0 +1,434 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>设计师详情页--设计范</title>
+    <meta name="Keywords" content="" />
+    <meta name="Description" content="" />
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+    <link href="css/common.css" type="text/css" rel="stylesheet" />
+    <link href="css/designer.css" type="text/css" rel="stylesheet" />
+    <script src="js/jquery.min.js"></script>
+	<script src="js/common.js"></script>
+	<!--[if IE 6]>
+	<script type="text/javascript" src="js/iepng.js"></script>
+	<![endif]-->
+</head>
+
+<body style="overflow:hidden;">
+<!-- header start -->
+
+<div class="header c-header">
+	<div class="wraper">
+		<ul class="toplink">
+			<li><a href="login.html" class="link-item">登录</a></li>
+			<li><a href="regist.html" class="link-item">注册</a></li>
+		</ul>
+	</div>
+	<div class="navbar">
+		<div class="wraper">
+        	<div class="logo"><a herf="#"><img src="images/logo.png" alt="" /></a></div>
+            <div class="citybar">
+            	<span class="city-name">武汉</span>
+                <a href="javascript:void(0);" class="toggle" id="citytoogle">切换城市</a>
+				<ul class="citylist toggle-content" id="citylist">
+					<li>
+						<b>A</b>
+						<p><a href="javascript:void(0);">武汉</a><a href="javascript:void(0);">北京</a><a href="javascript:void(0);">上海</a><a href="javascript:void(0);">武汉</a><a href="javascript:void(0);">北京</a><a href="javascript:void(0);">上海</a><a href="javascript:void(0);">武汉</a><a href="javascript:void(0);">北京</a><a href="javascript:void(0);">上海</a><a href="javascript:void(0);">武汉</a><a href="javascript:void(0);">北京</a><a href="javascript:void(0);">上海</a><a href="javascript:void(0);">武汉</a><a href="javascript:void(0);">北京</a><a href="javascript:void(0);">上海</a><a href="javascript:void(0);">武汉</a><a href="javascript:void(0);">北京</a><a href="javascript:void(0);">上海</a><a href="javascript:void(0);">武汉</a><a href="javascript:void(0);">北京</a><a href="javascript:void(0);">上海</a>
+						</p>
+					</li>
+					<li>
+						<b>B</b>
+						<p><a href="javascript:void(0);">武汉</a><a href="javascript:void(0);">北京</a><a href="javascript:void(0);">上海</a><a href="javascript:void(0);">武汉</a><a href="javascript:void(0);">北京</a><a href="javascript:void(0);">上海</a><a href="javascript:void(0);">武汉</a><a href="javascript:void(0);">北京</a><a href="javascript:void(0);">上海</a><a href="javascript:void(0);">武汉</a><a href="javascript:void(0);">北京</a><a href="javascript:void(0);">上海</a><a href="javascript:void(0);">武汉</a><a href="javascript:void(0);">北京</a><a href="javascript:void(0);">上海</a><a href="javascript:void(0);">武汉</a><a href="javascript:void(0);">北京</a><a href="javascript:void(0);">上海</a><a href="javascript:void(0);">武汉</a><a href="javascript:void(0);">北京</a><a href="javascript:void(0);">上海</a>
+						</p>
+					</li>
+				</ul>
+            </div>
+			<ul class="nav-list">
+				<li><a href="index.html">首页</a></li>
+				<li class="active"><a href="sjds.html">设计大师</a></li>
+				<li><a href="designer_list.html">设计作品</a></li>
+				<li><a href="activity.html">最新活动</a></li>
+				<li><a href="contact.html">联系我们</a></li>
+			</ul>
+		</div>
+	</div>
+</div>
+<div id="headerEmpty" style="height:20px;display:none;"></div>
+<!-- header end -->
+<div class="layout">
+	<div class="wraper">
+    	<div class="brumb">
+        	<a href="index.html">首页</a><a href="sjds.html">设计大师</a><a href="#">全部设计师</a><a href="#">设计师详情</a>
+        </div>
+    </div>
+</div>
+<!-- slide end -->
+
+<!--设计师主页-->
+<div class="layout d-section">
+	<div class="wraper" id="my_elem">
+    	<!--<div class="d-con" id="d-con">
+            
+        </div>-->
+		<div class="m-tabs d-tabs">
+			<div class="tab active"><a href="javascript:">关于我</a></div>
+			<div class="tab"><a href="javascript:">我的作品</a></div>
+			<div class="tab"><a href="javascript:">业主评价</a></div>
+			<div class="tab"><a href="javascript:">我的动态</a></div>
+		</div>
+        <div class="d-inner">
+            <div class="d-slides clearfix">
+				<div class="d-item">
+					<div class="d-main">
+						<img class="dimg" src="images/demo/auth.jpg" />
+						<div class="d-menu">
+							<div class="name">
+								<h4>王颖峰</h4>
+							</div>
+							<div class="line"></div>
+							<div class="d-nav">
+								<ul>
+									<li><a href="javascript:void(0);">关于我</a></li>
+									<li><a href="javascript:void(0);">我的作品</a></li>
+									<li><a href="javascript:void(0);">业主评价</a></li>
+									<li><a href="javascript:void(0);">我的动态</a></li>
+								</ul>
+							</div>
+						</div>
+						<div class="white-line w-1"></div>
+						<div class="white-line w-2"></div>
+					</div>
+				</div>
+            	<!--关于我-->
+            	<div class="d-item">
+                	<div class="d-info-main clearfix">
+                    	<div class="vedio">
+                        	<div class="img"><img class="owl-lazy" src="images/demo/auth-1.jpg" alt="" /></div>
+                            <div class="det">
+                            	<h4><i class="i-play"></i>Designer 王颖峰</h4>
+                                <a href="#" class="play-link">点击播放</a>
+                            </div>
+                            <span class="arrow a-1"><b></b></span>
+                            <span class="arrow a-2"><b></b></span>
+                        </div>
+                        <div class="data">
+                        	<h3>HELLO</h3>
+                            <h4>您好，我是设计师王颖峰</h4>
+                            <ul class="data-list">
+                            	<li><label>设计经验：</label><div class="det">15年以上</div></li>
+                                <li><label>擅长空间：</label><div class="det">休闲会所/豪宅别墅</div></li>
+                                <li><label>所  在  地：</label><div class="det">湖北 武汉</div></li>
+                                <li><label>设计理念：</label><div class="det">最适合客户的方案才是好设计</div></li>
+                                <li><label>代表作品：</label><div class="det"><span class="tag-link">上海特爱贸易公办公司大楼</span><span class="tag-link">东湖夜总会</span><span class="tag-link">上海特爱贸易公办公司大楼</span></div></li>
+                            </ul>
+                            <a href="#" class="show-more"><i class="i-arrow-d"></i><span>点击展开更多</span></a>
+                        </div>
+                        <div class="avatar">
+                        	<div class="avatar-img">
+                            	<img src="images/demo/s-img-1.jpg"/>
+                            </div>
+                            <div class="name">
+                            	<h4>王颖峰</h4>
+                                <p>15年 武汉</p>
+                            </div>
+                            <a href="contact.html" class="btn-default">我要预约</a>
+                            <dl class="d-price">
+                            	<dt>设计取费</dt>
+                                <dd>面议</dd>
+                            </dl>
+                        </div>
+                    </div>
+                </div>
+                <!--我的作品-->
+                <div class="d-item">
+                	<ul class="works-list">
+                        <li>
+                        	<div class="item">
+                                <a href="article.html"><img class="owl-lazy" src="images/demo/w-img-1.jpg" alt="" /></a>
+                                <div class="det">
+                                    <p>项目名称：名称</p>
+									<p>建筑面积：100m&sup2;</p>
+									<p>设计费用：200元/m&sup2;</p>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                        	<div class="item">
+                                <a href="article.html"><img class="owl-lazy" src="images/demo/detail-img-1.jpg" alt="" /></a>
+                                <div class="det">
+                                    <p>项目名称：名称</p>
+									<p>建筑面积：100m&sup2;</p>
+									<p>设计费用：200元/m&sup2;</p>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                        	<div class="item">
+                                <a href="article.html"><img class="owl-lazy" src="images/demo/d-img-1.jpg" alt="" /></a>
+                                <div class="det">
+                                    <p>项目名称：名称</p>
+									<p>建筑面积：100m&sup2;</p>
+									<p>设计费用：200元/m&sup2;</p>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                        	<div class="item">
+                                <a href="article.html"><img class="owl-lazy" src="images/demo/w-img-4.jpg" alt=""></a>
+                                <div class="det">
+                                    <p>项目名称：名称</p>
+									<p>建筑面积：100m&sup2;</p>
+									<p>设计费用：200元/m&sup2;</p>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                        	<div class="item">
+                                <a href="article.html"><img class="owl-lazy" src="images/demo/w-img-5.jpg" alt=""></a>
+                                <div class="det">
+                                    <p>项目名称：名称</p>
+									<p>建筑面积：100m&sup2;</p>
+									<p>设计费用：200元/m&sup2;</p>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                        	<div class="item">
+                                <a href="article.html"><img class="owl-lazy" src="images/demo/w-img-6.jpg" alt=""></a>
+                                <div class="det">
+                                    <p>项目名称：名称</p>
+									<p>建筑面积：100m&sup2;</p>
+									<p>设计费用：200元/m&sup2;</p>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <!--业主评价-->
+                <div class="d-item">
+                	<div class="pj-inner clearfix">
+                    	<div class="pj-left">
+                        	<div class="pj-head">
+                            	<dl class="pj-info">
+                                	<dt><i class="i-edit"></i><span class="txt">业主评价</span></dt>
+                                    <dd><b class="red">100%</b><span class="txt">好评率</span></dt>
+                                    <dd><b>5</b><span class="txt">好评</span></dt>
+                                    <dd><b>0</b><span class="txt">中评</span></dt>
+                                    <dd><b>0</b><span class="txt">差评</span></dt>
+                                </dl>
+                            </div>
+                            <div class="pj-main">
+                            	<ul class="pj-list">
+                                	<li>
+                                    	<div class="img"><img src="images/demo/avatar-1.jpg" /></div>
+                                        <div class="det">
+                                        	<h4><span class="name">陈先生</span>13天前给出：<span class="star star-5"></span></h4>
+                                            <p>设计师的服务态度跟想法都很棒！比较有耐心，去过我们工地很多次，整个过程自己也比较省心。</p>
+                                        </div>
+                                    </li>
+                                    <li>
+                                    	<div class="img"><img src="images/demo/avatar-2.jpg" /></div>
+                                        <div class="det">
+                                        	<h4><span class="name">陈先生</span>13天前给出：<span class="star star-4"></span></h4>
+                                            <p>设计师很厉害哇，设计的效果非常满意。没有太多的沟通，一步到位！</p>
+                                        </div>
+                                    </li>
+                                    <li>
+                                    	<div class="img"><img src="images/demo/avatar-3.jpg" /></div>
+                                        <div class="det">
+                                        	<h4><span class="name">陈先生</span>13天前给出：<span class="star star-2"></span></h4>
+                                            <p>设计师很厉害哇，设计的效果非常满意。没有太多的沟通，一步到位！</p>
+                                        </div>
+                                    </li>
+                                </ul>
+                                <div class="pagenation">
+                                    <a href="javascript:void(0);" class="page-item"><i class="i-page-prev"></i></a>
+                                    <a href="javascript:void(0);" class="page-item"><i class="i-page-next"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="pj-right">
+                        	<div class="pj-head">
+                            	<h4 class="title">我要留言</h4>
+                            </div>
+                            <div class="mes-form">
+								<div class="form-row">
+									<label>评分：</label>
+									<div class="pf-con">
+										<a href="javascript:;"></a><a href="javascript:;"></a><a href="javascript:;"></a><a href="javascript:;"></a><a href="javascript:;"></a>
+									</div>
+								</div>
+								<div class="form-row">
+									<label>评价：</label>
+                            		<textarea></textarea>
+								</div>
+                                <div class="text-info">
+                                	<p>还可以输入<b>200</b>字符/汉字</p>
+                                	<input type="submit" class="btn-default" value="确认留言" />
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--我的动态-->
+                <div class="d-item my-news-item">
+                	<!--设计师动态-->
+                    <div class="my-news">
+                        <div class="m-title-bar"><img src="images/designer-news-1.png" /></div>
+                        <table class="news-table">
+							<tr>
+								<th>1月26</th><td><a href="#">今天与湖北武汉刘先生成功今天与湖北武汉刘先生成功面谈。</a></td>
+							</tr>
+							<tr>
+								<th>1月26</th><td><a href="#">今天与湖北武汉刘先生成功今天与湖北武汉刘先生成功面谈。</a><br /><a href="#">今天与湖北武汉刘先生成功今天与湖北武汉刘先生成功面谈。</a></td>
+							</tr>
+							<tr>
+								<th>1月26</th><td><a href="#">今天与湖北武汉刘先生成功今天与湖北武汉刘先生成功面谈。</a></td>
+							</tr>
+							<tr>
+								<th>1月26</th><td><a href="#">今天与湖北武汉刘先生成功今天与湖北武汉刘先生成功面谈。</a></td>
+							</tr>
+							<tr>
+								<th>1月26</th><td><a href="#">今天与湖北武汉刘先生成功今天与湖北武汉刘先生成功面谈。</a><br /><a href="#">今天与湖北武汉刘先生成功今天与湖北武汉刘先生成功面谈。</a></td>
+							</tr>
+							<tr>
+								<th>1月26</th><td><a href="#">今天与湖北武汉刘先生成功今天与湖北武汉刘先生成功面谈。</a></td>
+							</tr>
+						</table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- footer -->
+<div class="footer">
+	<div class="footer-ad">
+    	DECORATION DESIGN TO SHEJIFAN,YOU <b>BEST</b> CHOICE! 顶尖设计就找<b>设计范</b>，您最正确的选择！
+    </div>
+    <div class="footer-det">
+    	<div class="foot-link">
+        	<a href="#">关于设计范</a>
+            <a href="#">联系我们</a>
+            <a href="#">服务协议</a>
+            <a href="#">下载设计范APP</a>
+            <a href="#">设计范官方微信</a>
+        </div>
+        <div class="foot-info">
+        	<p>Copyright © 2015 fangshidai.cn All Rights Reserved. &nbsp;&nbsp; 鄂ICP备15001172号&nbsp;&nbsp;版权所有：设计范商务有限公司&nbsp;&nbsp;技术支持：美立约网络</p>
+            <p class="foot-tel">客服电话：400-666-6666</p>
+        </div>
+    </div>
+</div>
+<!--底部浮动公共 s-->
+<div class="f-bar" id="f-bar">
+	<div class="f-bar-inner">
+    	<a href="javascript:void(0);" onClick="hideFbar()" class="close"><i class="i-close"></i></a>
+    	<a href="http://wpa.qq.com/msgrd?v=3&uin=875938712&site=qq&menu=yes" target="_blank" class="btn">在线咨询</a><a href="contact.html" class="btn btn-1" target="_blank">报名预约</a>
+    </div>
+</div>
+<div class="f-bar-tit" id="f-bar-tit">	
+    <a href="javascript:void(0);" onClick="showFbar()" class="close"><img src="images/f-bar-t.png" /></a>
+</div>
+<a href="javascript:void(0);" class="gotop"></a>
+<!--底部浮动公共 e-->
+<script src="js/jquery.mousewheel.js"></script>
+<script>
+var dwidth = 0,wwidth = 0,sl = new Array();
+$(document).ready(function() {
+	
+	
+	
+	$('.works-list li').each(function(){
+		wwidth += $(this).outerWidth();
+	});
+	$('.works-list').parent().width(wwidth);
+	$('.d-slides .d-item').each(function(){
+		dwidth += $(this).outerWidth();
+		sl[$(this).index()]=dwidth;
+	});
+	$('.d-slides').width(dwidth);
+	
+	
+	var scrollSpeen = 200;
+	$('.d-inner').mousewheel(function(event, delta) {
+		if(delta > 0){
+			scrollSpeen = -200;
+		}else{
+			scrollSpeen = 200;
+		}
+		$('.d-inner').animate({'scrollLeft':$('.d-inner').scrollLeft()+scrollSpeen+'px'},20)
+		
+		event.stopPropagation();
+		event.preventDefault();
+
+	});
+	$('.d-inner').scroll(function(){
+		$('.d-slides .d-item').each(function(){
+			var index = $(this).index();
+			var dw = sl[index];
+			if($('.d-inner').scrollLeft() / dw >= 1){
+				$('.d-tabs .tab').eq(index).addClass('active').siblings().removeClass('active');
+			}
+		});
+	});
+	/*评分*/
+	$('.pf-con a').hover(function(){
+		$(this).addClass('sel').prevAll().addClass('sel')
+		$(this).nextAll().removeClass('sel');
+	},function(){
+		$(this).removeClass('sel').siblings().removeClass('sel')
+	});
+	$('.pf-con a').click(function(){
+		$(this).addClass('active').prevAll().addClass('active')
+		$(this).nextAll().removeClass('active');
+	});
+	
+	$('.d-tabs .tab').click(function(){
+		$(this).addClass('active').siblings().removeClass('active');
+		showPage($(this).index());
+	});
+	$('.d-nav a').click(function(){
+		var index = $('.d-nav a').index($(this));
+		showPage(index);
+	});
+	
+});
+
+function showPage(index){
+	var l=0;
+	$('.d-slides .d-item:lt('+(index+1)+')').each(function(){
+		l += $(this).outerWidth();
+	});
+	$('.d-inner').animate({'scrollLeft':l+'px'},200);
+}
+</script>
+<script>
+$(function(){
+	$('.header').slideUp();
+	$('#headerEmpty').show();
+	var timeout;
+	$('#headerEmpty').hover(function(){
+		$('.header').slideDown();
+		$('#headerEmpty').slideUp();
+	},function(){
+		timeout = setTimeout(function(){
+			$('.header').slideUp();
+			$('#headerEmpty').show();
+		},1000);
+	});
+	$('.header').hover(function(){
+		window.clearTimeout(timeout);
+	},function(){
+		timeout = setTimeout(function(){
+			$('.header').slideUp();
+			$('#headerEmpty').show();
+		},1000);
+	});
+})
+</script>
+</body>
+</html>
