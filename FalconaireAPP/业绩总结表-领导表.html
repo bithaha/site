@@ -1,0 +1,237 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf8">
+    <title>业绩总结表|falconaire</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link href="assets/css/bootstrap.min.css" rel="stylesheet">
+    <link href="assets/css/font-awesome.min.css" rel="stylesheet">
+    <link href="assets/css/base.css" rel="stylesheet">
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/bootstrap.min.js"></script>
+    <script src="assets/js/base.js"></script>
+    <style type="text/css">
+    html,body{width:100%;height:100%;}
+    .viewport{height:100%;}
+    .content{height: 100%;}
+    #mynetwork {
+        width: 100%;
+        height: 100%;
+        min-height: 100%;
+        border: 1px solid lightgray;
+        background-color: #f7f7f7;
+        color: #000;
+    }
+    </style>
+</head>
+
+<body>
+    <div class="viewport">
+        <div class="header">
+            <a class="btn-left" href="javascript:history.back();"><i class="fa fa-angle-left"></i></a>
+            <h3 class="title">业绩总结表</h3>
+            <a class="btn-right" href="index.html"><i class="fa fa-home"></i></a>
+        </div>
+        <div class="subheader">
+            <div class="tabs">
+                <a class="tab-item" href="业绩总结表-介绍表.html">介绍表</a>
+                <a class="tab-item active" href="业绩总结表-领导表.html">领导表</a>
+                <a class="tab-item" href="业绩总结表-业绩报表.html">业绩报表</a>
+            </div>
+        </div>
+        <div class="content">
+            <div id="mynetwork"></div>
+            <!--
+            <div class="list ldlist">
+                <div class="item">
+                    <div class="img"><img src="assets/img/AED-2.png"></div>
+                    <div class="det">
+                        <p>客户账号：TWD99900923</p>
+                        <p>客户姓名：李金烨</p>
+                        <p>投资金额：400000.00</p>
+                        <p>购买日期：2016-11-18 15:38:32</p>
+                    </div>
+                    <div class="arrow"><i class="fa fa-long-arrow-down"></i></div>
+                </div>
+                <div class="item">
+                    <div class="img"><img src="assets/img/AED-2.png"></div>
+                    <div class="det">
+                        <p>客户账号：TWD99900923</p>
+                        <p>客户姓名：李金烨</p>
+                        <p>投资金额：400000.00</p>
+                        <p>购买日期：2016-11-18 15:38:32</p>
+                    </div>
+                    <div class="arrow"><i class="fa fa-long-arrow-down"></i></div>
+                </div>
+                <div class="item">
+                    <div class="img"><img src="assets/img/AED-2.png"></div>
+                    <div class="det">
+                        <p>客户账号：TWD99900923</p>
+                        <p>客户姓名：李金烨</p>
+                        <p>投资金额：400000.00</p>
+                        <p>购买日期：2016-11-18 15:38:32</p>
+                    </div>
+                </div>
+            </div>
+            -->
+        </div>
+    </div>
+
+    <script src="http://playbox.falconaire.com/assets/js/vis.js" type="text/javascript" charset="utf-8"></script>
+    <script type="text/javascript">
+    var data = [{
+        id: 1519,
+        image: "http://playbox.falconaire.com/assets/img/icons/AEDicon-07.png",
+        shape: "circularImage",
+        label: "User ID: TWD99900923\nFull Name: 李金樺\nPrinciple Amount: 399000.00\nPurchased Date: 2016-11-18 15:38:32"
+    }, {
+        id: 1520,
+        image: "http://playbox.falconaire.com/assets/img/icons/AEDicon-07.png",
+        shape: "circularImage",
+        label: "客户账号: TWD71239779\n客户姓名: 李金樺\n投资余额: 400000.00\n购买日期: 2016-11-18 16:01:32"
+    }, {
+        id: 1521,
+        image: "http://playbox.falconaire.com/assets/img/icons/AEDicon-06.png",
+        shape: "circularImage",
+        label: "客户账号: TWD42627992\n客户姓名: 李金樺\n投资余额: 373964.00\n购买日期: 2016-11-18 16:05:09"
+    }, {
+        id: 1522,
+        image: "http://playbox.falconaire.com/assets/img/icons/AEDicon-05.png",
+        shape: "circularImage",
+        label: "客户账号: TWD90757038\n客户姓名: 李金樺\n投资余额: 168000.00\n购买日期: 2016-11-18 16:08:24"
+    }, {
+        id: 1523,
+        image: "http://playbox.falconaire.com/assets/img/icons/AEDicon-04.png",
+        shape: "circularImage",
+        label: "客户账号: TWD15728529\n客户姓名: 李金樺\n投资余额: 40000.00\n购买日期: 2016-11-18 16:12:43"
+    }]
+    var ed = [{
+        from: 1519,
+        to: 1520
+    }, {
+        from: 1520,
+        to: 1521
+    }, {
+        from: 1521,
+        to: 1522
+    }, {
+        from: 1522,
+        to: 1523
+    }]
+    </script>
+    <script type="text/javascript">
+    $('document').ready(function() {
+
+        draw(data, ed);
+    });
+
+    var nodes = null;
+    var edges = null;
+    var network = null;
+
+    // Called when the Visualization API is loaded.
+    function draw(data) {
+
+        // create people.
+        // value corresponds with the age of the person
+        nodes = data;
+        //console.log(nodes);
+
+        // create connections between people
+        // value corresponds with the amount of contact between two people
+        edges = ed;
+        //console.log(edges);
+
+        // create a network
+        var container = document.getElementById('mynetwork');
+        var data = {
+            nodes: nodes,
+            edges: edges
+        };
+        var options = {
+            interaction: {
+                dragNodes: false,
+                dragView: true,
+                hideEdgesOnDrag: false,
+                hideNodesOnDrag: false,
+                hover: true,
+                hoverConnectedEdges: true,
+                keyboard: {
+                    enabled: false,
+                    speed: {
+                        x: 10,
+                        y: 10,
+                        zoom: 0.02
+                    },
+                    bindToWindow: true
+                },
+                multiselect: true,
+                navigationButtons: true,
+                selectable: true,
+                selectConnectedEdges: true,
+                tooltipDelay: 300,
+                zoomView: true
+            },
+            nodes: {
+                borderWidth: 4,
+                size: 30,
+                color: {
+                    border: '#000',
+                    background: '#eee'
+                },
+                size: 35,
+                font: {
+                    color: '#343434',
+                    size: 16, // px
+                    face: 'arial',
+                    background: '#f7f7f7',
+                    strokeWidth: 0, // px
+                    strokeColor: '#ffffff',
+                    align: 'center'
+                }
+            },
+            edges: {
+                physics: false,
+                arrows: {
+                    to: {
+                        enabled: true,
+                        scaleFactor: 1
+                    },
+                    middle: {
+                        enabled: false,
+                        scaleFactor: 1
+                    },
+                    from: {
+                        enabled: false,
+                        scaleFactor: 1
+                    }
+                },
+                dashes: false,
+                color: '#dda108',
+                labelHighlightBold: true,
+            },
+            layout: {
+                improvedLayout: true,
+                hierarchical: {
+                    enabled: true,
+                    levelSeparation: 205,
+                    nodeSpacing: 300,
+                    treeSpacing: 5000,
+                    blockShifting: false,
+                    edgeMinimization: false,
+                    parentCentralization: true,
+                    direction: 'UD', // UD, DU, LR, RL
+                    sortMethod: 'directed' // hubsize, directed
+                }
+            }
+        };
+        network = new vis.Network(container, data, options);
+    }
+    </script>
+</body>
+
+</html>

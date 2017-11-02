@@ -1,0 +1,145 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf8">
+<title>验证用户|falconaire</title>
+<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no">
+<meta name="format-detection" content="telephone=no">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<link href="assets/css/bootstrap.min.css" rel="stylesheet">
+<link href="assets/css/font-awesome.min.css" rel="stylesheet">
+<link href="assets/css/base.css" rel="stylesheet">
+<script src="assets/js/jquery.min.js"></script>
+<script src="assets/js/bootstrap.min.js"></script>
+<script src="assets/js/base.js"></script>
+</head>
+
+<body>
+    <div class="viewport">
+        <div class="header">
+            <a class="btn-left" href="javascript:history.back();"><i class="fa fa-angle-left"></i></a>
+            <h3 class="title">验证用户</h3>
+            <a class="btn-right" href="index.html"><i class="fa fa-home"></i></a>
+        </div>
+        <div class="content">            
+            <div class="reg-form globle-form">
+                <div class="list">
+                    <div class="item">
+                        <label>客户ID</label>
+                        <input type="text" class="txt" value="TWD90809809" readonly="readonly">
+                    </div>
+                    <div class="item">
+                        <label>姓名</label>
+                        <input type="text" class="txt" value="李金华" readonly="readonly">
+                    </div>                    
+                    <div class="item">
+                        <label>身份证号</label>
+                        <input type="text" class="txt" value="42256354634332345646">
+                    </div>
+                    <div class="item item-divider"></div>
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <h3 class="title">上传身份证</h3>
+                        </div>
+                        <div class="panel-body">
+                            <div class="row">
+                                <div class="col-xs-6">
+                                    <p>(正面)</p>
+                                    <div class="upload-area">
+                                        <input class="fileinput" type="file" id="file1">
+                                        <img src="" class="upload-img">
+                                    </div>
+                                </div>
+                                <div class="col-xs-6">
+                                    <p>(反面)</p>
+                                    <div class="upload-area">
+										<input class="fileinput" type="file" id="file2">
+                                        <img src="" class="upload-img">
+									</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <h3 class="title">上传护照信息</h3>
+                        </div>
+                        <div class="panel-body">
+                            <div class="row">
+                                <div class="col-xs-6">
+                                    <div class="upload-area">
+                                        <input class="fileinput" type="file" id="file3">
+                                        <img src="" class="upload-img">
+                                    </div>
+                                </div>
+                                <div class="col-xs-6">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item item-divider"></div>
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <h3 class="title">上传银行信息</h3>
+                        </div>
+                        <div class="panel-body">
+                            <div class="row">
+                                <div class="col-xs-12 color-gray">
+                                    <p>*上传文件必须显示和账户同一个姓名与身份证<br />*核实过程需要1-2个工作日</p>
+                                </div>                                
+                                <div class="col-xs-6">
+                                    <div class="upload-area">
+                                        <input class="fileinput" type="file" id="file4">
+                                        <img src="" class="upload-img">
+                                    </div>
+                                </div>
+                                <div class="col-xs-6">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+
+                    <div class="item item-divider"></div>
+                    <div class="item">
+                        <a class="btn-block" id="submit">提交</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+<script>
+$(function(){
+	$('#submit').click(function(){
+		var file1 = $('#file1').val();
+		var file2 = $('#file2').val();
+		var file3 = $('#file3').val();
+		var file4 = $('#file4').val();
+		if(file4==''){
+			yyAlert('请完善银行信息');return;
+		}
+		if(file3=='' &&( file1=='' || file2 =='')){
+			yyAlert('请完善身份证或者护照信息');return;
+		}
+		
+		
+		yyAlert("提交成功");
+	});
+	$('.fileinput').change(function(){
+		var _this = $(this);
+		var file = this.files[0];
+		var reader = new FileReader();
+		reader.onload = function(evt){
+			//document.getElementById('image').src = evt.target.result;
+			_this.parent().find('.upload-img').attr('src',evt.target.result)
+		}
+		reader.readAsDataURL(file);
+		
+		
+	});
+})
+</script>
+</body>
+</html>

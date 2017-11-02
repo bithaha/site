@@ -1,0 +1,252 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>黄阁</title>
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+
+    <link href="css/main.css" rel="stylesheet">
+    <script src="js/jquery.min.js"></script>
+     <script src="js/GetCNDate.js"></script>
+    <script src="js/main.js"></script>
+    <script>
+		loadDate();
+		var updateTime = setInterval("loadDate()",1000);
+//Banner Start
+var curIndex=0;
+var time=800;
+var slideTime=5000;
+var int=setInterval("autoSlide()",slideTime);
+function autoSlide(){
+	curIndex+1>=$("#slide .imglist li").size()?curIndex=-1:false;
+	show(curIndex+1);
+}
+function show(index){
+	$("#slide .imgpage a").eq(curIndex).removeClass('active');
+	$("#slide .imgpage a").eq(index).addClass('active');
+	
+	$("#slide .imglist li").eq(curIndex).fadeOut(time);
+	$("#slide .imglist li").eq(index).fadeIn(time);
+	curIndex=index;
+}
+$(function(){
+	
+	
+	/*******主页页图片切换*****/
+	$("#slide .imgpage a").click(function(){
+		window.clearInterval(int);
+		show($(this).index());
+		int=setInterval("autoSlide()",slideTime);
+	});
+	$("#slide .t-left").click(function(){
+		window.clearInterval(int);
+		curIndex+1>=$("#slide .imglist li").size()?curIndex=-1:false;
+		show(curIndex-1);
+		int=setInterval("autoSlide()",slideTime);
+	});
+	$("#slide .t-right").click(function(){
+		window.clearInterval(int);
+		curIndex+1>=$("#slide .imglist li").size()?curIndex=-1:false;
+		
+		show(curIndex+1);
+		int=setInterval("autoSlide()",slideTime);
+	});
+	/*******主页图片切换*****/
+	
+});
+//Banner End
+
+    </script>
+	
+</head>
+
+<body>
+	<div class="header clearfix">
+    	<div class="time">
+        	<i class="i-clock"></i><span id="time">18:26:01</span>
+        </div>
+        <div class="date clearfix">
+        	<div class="txt">
+            	<span class="l">30~24 &#8451;</span>
+                <span class="l">晴转多云</span>
+            </div>
+            <div class="date-item">
+            	<span id="day">18</span>
+            </div>
+            <div class="txt">
+            	<span class="l" id="date">2015-10-18 星期日</span>
+                <span class="l" id="cndate">乙未年 庚辰月 甲子日九月十一</span>
+            </div>
+        </div>
+    </div>
+    <div class="contaner clearfix">
+    	<!--招商政策-->
+    	<div class="grid m-global">
+        	<div class="g-hd">
+            	<h3 class="title"><i class="icon-global"></i><span>招商政策</span></h3>
+            </div>
+            <div class="g-bd m-news">
+            	<ul class="newslist">
+                	<li><a href="javascript:void(0);" title="黄阁经济发展">黄阁经济发展</a></li>
+                    <li><a href="javascript:void(0);" title="黄阁经济发黄阁经济发展黄阁经济发展黄阁经济发展展">黄阁经济发黄阁经济发展黄阁经济发展黄阁经济发展展</a></li>
+                    <li><a href="javascript:void(0);" title="黄阁经济发黄阁经济发展黄阁经济发展黄阁经济发展展">黄阁经济发黄阁经济发展黄阁经济发展黄阁经济发展展</a></li>
+                    <li><a href="javascript:void(0);" title="黄阁经济发黄阁经济发展黄阁经济发展黄阁经济发展展">黄阁经济发黄阁经济发展黄阁经济发展黄阁经济发展展</a></li>
+                    <li><a href="javascript:void(0);" title="黄阁经济发黄阁经济发展黄阁经济发展黄阁经济发展展">黄阁经济发黄阁经济发展黄阁经济发展黄阁经济发展展</a></li>
+                    <li><a href="javascript:void(0);" title="黄阁经济发黄阁经济发展黄阁经济发展黄阁经济发展展">黄阁经济发黄阁经济发展黄阁经济发展黄阁经济发展展</a></li>
+                    <li><a href="javascript:void(0);" title="黄阁经济发黄阁经济发展黄阁经济发展黄阁经济发展展">黄阁经济发黄阁经济发展黄阁经济发展黄阁经济发展展</a></li>
+                    <li><a href="javascript:void(0);" title="黄阁经济发黄阁经济发展黄阁经济发展黄阁经济发展展">黄阁经济发黄阁经济发展黄阁经济发展黄阁经济发展展</a></li>
+                    <li><a href="javascript:void(0);" title="黄阁经济发黄阁经济发展黄阁经济发展黄阁经济发展展">黄阁经济发黄阁经济发展黄阁经济发展黄阁经济发展展</a></li>
+                </ul>
+            </div>
+        </div>
+        <!--交通环境-->
+        <div class="grid m-slide">
+        	<div class="g-hd">
+            	<h3 class="title"><i class="icon-eye"></i><span>交通环境</span></h3>
+            </div>
+            <div class="g-bd" id="slide">
+            	<div class="left imglist">
+                	<a href="javascript:void(0);" class="t-left"></a>
+                    <a href="javascript:void(0);" class="t-right"></a>
+                	<ul>
+                	<li style="display:block;"><a href="javascript:void(0);"><img src="images/img6.jpg" /><span class="tit">该镇位于东经113.4度，北纬22.8度，东临狮子洋，与东莞市隔海相望；南与横沥镇以蕉门水道为界；西与番禺区的窝头镇以骝岗水道为界</span></a></li>
+                    <li><a href="javascript:void(0);"><img src="images/img7.jpg" /><span class="tit">该镇位于东经113.4度，北纬22.8度，东临狮子洋，与东莞市隔海相望；南与横沥镇以蕉门水道为界；西与番禺区的窝头镇以骝岗水道为界</span></a></li>
+                    <li><a href="javascript:void(0);"><img src="images/img8.jpg" /><span class="tit">该镇位于东经113.4度，北纬22.8度，东临狮子洋，与东莞市隔海相望；南与横沥镇以蕉门水道为界；西与番禺区的窝头镇以骝岗水道为界</span></a></li>
+                    </ul>
+                </div>
+                <div class="right imgpage">
+                	<a href="javascript:void(0);" class="active"><img src="images/img6.jpg" /></a>
+                    <a href="javascript:void(0);"><img src="images/img7.jpg" /></a>
+                    <a href="javascript:void(0);"><img src="images/img8.jpg" /></a>
+                </div>
+            </div>
+        </div>
+        <!--明星企业-->
+        <div class="grid m-star">
+        	<div class="g-hd">
+            	<h3 class="title"><i class="icon-star"></i><span>明星企业</span></h3>
+            </div>
+            <div class="g-bd">
+            	<ul class="qylist">
+                	<li><a href="javascript:void(0);"><img src="images/company1.png" /><span>黄阁麒麟舞</span></a></li>
+                    <li><a href="javascript:void(0);"><img src="images/company2.png" /><span>开灯</span></a></li>
+                    <li><a href="javascript:void(0);"><img src="images/company3.png" /><span>炸油角</span></a></li>
+                </ul>
+            </div>
+        </div>
+        <!--用地情况-->
+        <div class="grid m-data">
+        	<div class="g-hd">
+            	<h3 class="title"><i class="icon-data"></i><span>用地情况</span></h3>
+            </div>
+            <div class="g-bd">
+            	<div class="process clearfix">
+                	<div class="item">
+                    	<span class="point"></span>
+                        <span class="line"></span>
+                        <span class="txt">1958年</span>
+                        <span class="txt">设黄阁公社</span>
+                    </div>
+                    <div class="item">
+                    	<span class="point"></span>
+                        <span class="line"></span>
+                        <span class="txt">1959年</span>
+                        <span class="txt">划归番禺区</span>
+                    </div>
+                    <div class="item">
+                    	<span class="point"></span>
+                        <span class="line"></span>
+                        <span class="txt">1980年</span>
+                        <span class="txt">改黄阁区</span>
+                    </div>
+                    <div class="item">
+                    	<span class="point"></span>
+                        <span class="line"></span>
+                        <span class="txt">1986年</span>
+                        <span class="txt">建镇</span>
+                    </div>
+                </div>
+                <div class="earth-img"><img src="images/img5.jpg" /></div>
+            </div>
+        </div>
+        <!--黄阁经济-->
+        <div class="grid m-ban">
+        	<div class="g-hd">
+            	<h3 class="title"><i class="icon-ban"></i><span>黄阁经济</span></h3>
+            </div>
+            <div class="g-bd">
+            	<div class="m-turn">
+                    <div class="m-turn-con" id="turn_box">
+						<div class="turn-item">
+							<a href="javascript:void(0);"><img src="images/econ1.png" /><span>黄阁镇抢抓"双区"发展机遇</span></a>
+						</div>
+						<div class="turn-item">
+							<a href="javascript:void(0);"><img src="images/econ2.png" /><span>《广州市南沙新区
+条例》要点</span></a>
+						</div>
+						<div class="turn-item">
+							<a href="javascript:void(0);"><img src="images/econ1.png" /><span>黄阁镇抢抓"双区"发展机遇</span></a>
+						</div>
+						<div class="turn-item">
+							<a href="javascript:void(0);"><img src="images/econ2.png" /><span>《广州市南沙新区
+条例》要点</span></a>
+						</div>
+						<div class="turn-item">
+							<a href="javascript:void(0);"><img src="images/econ1.png" /><span>黄阁镇抢抓"双区"发展机遇</span></a>
+						</div>
+						<div class="turn-item">
+							<a href="javascript:void(0);"><img src="images/econ2.png" /><span>《广州市南沙新区
+条例》要点</span></a>
+						</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="footer">
+    	<div class="footer-con clearfix">
+        	<div class="footer-item">
+            	<a href="javascript:void(0);"><i class="menu-icon menu-icon1"></i><span>首页</span></a>
+            </div>
+            <div class="footer-item">
+            	<a href="jiao3.html"><i class="menu-icon menu-icon2"></i><span>交通环境</span></a>
+            </div>
+            <div class="footer-item">
+            	<a href="jiao1.html"><i class="menu-icon menu-icon3"></i><span>招商政策</span></a>
+            </div>
+            <div class="footer-item">
+            	<a href="jt2.html"><i class="menu-icon menu-icon4"></i><span>明星企业</span></a>
+            </div>
+            <div class="footer-item">
+            	<a href="jt2.html"><i class="menu-icon menu-icon5"></i><span>用地情况</span></a>
+            </div>
+			<div class="footer-item">
+            	<a href="jt2.html"><i class="menu-icon menu-icon6"></i><span>黄阁视频</span></a>
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript" src="js/owl.carousel.js"></script>
+    <script type="text/javascript">
+    $(function(){
+
+	//要闻
+	if($('#turn_box').length>0){
+		$('#turn_box').owlCarousel({
+			autoPlay:true,
+			pagination: false,
+			navigation: true,
+			slideSpeed:500,
+			lazyLoad:true,
+			items:2,
+			navigationText:['','']
+		});	
+		
+	}
+	
+	
+
+})
+    </script> 
+</body>
+</html>

@@ -1,0 +1,70 @@
+﻿<!doctype html>
+<html>
+<head>
+<meta charset="utf8">
+<title>falconaire</title>
+<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no">
+<meta name="format-detection" content="telephone=no">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<link href="assets/css/bootstrap.min.css" rel="stylesheet">
+<link href="assets/css/font-awesome.min.css" rel="stylesheet">
+<link href="assets/css/base.css" rel="stylesheet">
+<script src="assets/js/jquery.min.js"></script>
+<script src="assets/js/bootstrap.min.js"></script>
+<script src="assets/js/base.js"></script>
+</head>
+
+<body class="login-body">
+    <div class="viewport">
+        <div class="login-container">
+            <h1 class="login-logo"><img src="assets/img/logo.png"><p class="tit">客户中心</p></h1>
+            <div class="login-form">
+                <div class="input-row">
+                    <i class="icon fa fa-globe"></i>
+                    <select class="select"><option>English</option><option>中文</option></select>
+                </div>
+                <div class="input-row">
+                    <i class="icon fa fa-user"></i>
+                    <input type="text" placeholder="请输入账号" oninput="searUser(this)" onpropertychange="searUser(this)">
+                    <a class="btn-clear" onclick="clearData(this)">X</a>
+                </div>
+                <div class="input-row">
+                    <i class="icon fa fa-lock"></i>
+                    <input type="password" placeholder="请输入密码" oninput="searUser(this)" onpropertychange="searUser(this)">
+                    <a class="btn-clear" onclick="clearData(this)">X</a>
+                </div>
+                <div class="input-row">
+                    <i class="icon fa fa-lock"></i>
+                    <input class="code" type="text" placeholder="请输入验证码" oninput="searUser(this)" onpropertychange="searUser(this)">
+                    <img class="code-img" src="assets/img/code-img-1.png">
+                </div>
+                <a class="btn-login" href="javascript:void(0);">登陆</a>
+                <div class="txt-row">
+                    <a class="pull-right" href="regist.html">注册账号</a>
+                    <a class="pull-left" href="#">忘记密码</a>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    
+    <script type="text/javascript">
+        function searUser(obj){
+            var val = $.trim($(obj).val());
+            if(val==''){
+                $(obj).next('.btn-clear').hide();
+            }else{
+                $(obj).next('.btn-clear').show();
+            }
+            
+            
+        }
+        function clearData(o){
+            $(o).hide();
+            $(o).prev('input').val('');
+        }
+    </script>
+</body>
+</html>

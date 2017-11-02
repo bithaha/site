@@ -1,0 +1,157 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf8">
+<title>详情|falconaire</title>
+<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no">
+<meta name="format-detection" content="telephone=no">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<link href="assets/css/bootstrap.min.css" rel="stylesheet">
+<link href="assets/css/font-awesome.min.css" rel="stylesheet">
+<link href="assets/css/base.css" rel="stylesheet">
+<script src="assets/js/jquery.min.js"></script>
+<script src="assets/js/bootstrap.min.js"></script>
+<script src="assets/js/base.js"></script>
+</head>
+
+<body>
+    <div class="viewport">
+        <div class="header">
+            <a class="btn-left" href="javascript:history.back();"><i class="fa fa-angle-left"></i></a>
+            <h3 class="title">客服详情</h3>
+            <a class="btn-right" href="index.html"><i class="fa fa-home"></i></a>
+        </div>
+        <div class="subheader">
+            <div class="tabs">
+                <a class="tab-item" href="客服.html"><span>提交问题</span></a>
+                <a class="tab-item active" href="客服-详情.html"><span>查看详情</span></a>
+            </div>
+        </div>
+        <div class="content">
+            <div class="line-divider"></div>
+            <div class="filter-contarner">
+                <div class="filter-row date-row">
+                    <a class="date-txt start-date">08/10/2016</a>
+                    <span class="date-line"></span>
+                    <a class="date-txt end-date">08/10/2016</a>
+                </div>
+            </div>
+            <div class="tz-list">
+                <div class="tz-item">
+                    <div class="title">2016年11月</div>
+                    <table>
+                        <thead>
+                            <tr>
+                                <td></td><td>需求单号</td><td>标题</td><td>状态</td>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="date"><b>03</b><span>周六</span></td>
+                                <td>102526</td>
+                                <td><a href="客服-需求单详情.html">咨询下提现申请</a></td>
+                                <td class="color-base">处理中</td>
+                            </tr>
+                            <tr>
+                                <td class="date"><b>03</b><span>周六</span></td>
+                                <td>102526</td>
+                                <td><a href="客服-需求单详情.html">咨询下提现申请</a></td>
+                                <td class="color-base">处理中</td>
+                            </tr>
+                            <tr class="color-gray">
+                                <td class="date"><b>03</b><span>周六</span></td>
+                                <td>102526</td>
+                                <td><a href="客服-需求单详情.html">咨询下提现申请</a></td>
+                                <td>已处理</td>
+                            </tr>                            
+                            <tr>
+                                <td class="date"><b>03</b><span>周六</span></td>
+                                <td>102526</td>
+                                <td>咨询下提现申请</td>
+                                <td class="color-base">处理中</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="tz-item">
+                    <div class="title">2016年11月</div>
+                    <table>
+                        <thead>
+                            <tr>
+                                <td></td><td>需求单号</td><td>标题</td><td>状态</td>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="date"><b>03</b><span>周六</span></td>
+                                <td>102526</td>
+                                <td><a href="客服-需求单详情.html">咨询下提现申请</a></td>
+                                <td class="color-base">处理中</td>
+                            </tr>
+                            <tr>
+                                <td class="date"><b>03</b><span>周六</span></td>
+                                <td>102526</td>
+                                <td><a href="客服-需求单详情.html">咨询下提现申请</a></td>
+                                <td class="color-base">处理中</td>
+                            </tr>
+                            <tr class="color-gray">
+                                <td class="date"><b>03</b><span>周六</span></td>
+                                <td>102526</td>
+                                <td><a href="客服-需求单详情.html">咨询下提现申请</a></td>
+                                <td>已处理</td>
+                            </tr>                            
+                            <tr>
+                                <td class="date"><b>03</b><span>周六</span></td>
+                                <td>102526</td>
+                                <td>咨询下提现申请</td>
+                                <td class="color-base">处理中</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+
+    <link rel="stylesheet" type="text/css" href="assets/css/mobiscroll.custom-2.6.2.min.css">
+    <script src="assets/js/mobiscroll.custom-2.6.2.min.js"></script>
+    <script type="text/javascript">
+        var options = {
+            lang:'cn',
+            preset: 'date', 
+            theme: 'android-ics light', 
+            mode: 'scroller', 
+            display: 'modal', 
+            lang: 'zh',
+            dateFormat: 'yy-mm-dd',
+            dateOrder: 'yymmdd',
+            setText:"确定",
+            cancelText:"取消"
+        };
+        var startSelect = {
+            onSelect: function(valueText,inst){
+                alert("您选择的开始时间是"+valueText);
+                $('.start-date').html(valueText);
+            }
+        }
+        var endSelect = {
+            onSelect: function(valueText,inst){
+                alert("您选择的结束时间是"+valueText);
+                $('.end-date').html(valueText);
+            }
+        }
+        $('.start-date').mobiscroll('destroy').mobiscroll(extend(options,startSelect));
+        $('.end-date').mobiscroll('destroy').mobiscroll(extend(options,endSelect));
+        /* 初始化时间 */
+        var newdate = new Date();
+        var now = newdate.getFullYear() +'-'+(newdate.getMonth()+1)+'-'+newdate.getDate();
+        $('.start-date').html(now);
+        $('.end-date').html(now);
+
+
+
+    </script>
+</body>
+</html>

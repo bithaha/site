@@ -1,0 +1,276 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf8">
+    <title>个人投资详情|falconaire</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link href="assets/css/bootstrap.min.css" rel="stylesheet">
+    <link href="assets/css/font-awesome.min.css" rel="stylesheet">
+    <link href="assets/css/base.css" rel="stylesheet">
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/bootstrap.min.js"></script>
+    <script src="assets/js/base.js"></script>
+</head>
+
+<body>
+    <div class="viewport">
+        <div class="header">
+            <a class="btn-left" href="javascript:history.back();"><i class="fa fa-angle-left"></i></a>
+            <h3 class="title">个人投资详情</h3>
+            <a class="btn-right" href="index.html"><i class="fa fa-home"></i></a>
+        </div>
+        <div class="subheader">
+            <div class="tabs">
+                <a class="tab-item" href="个人投资详情.html"><span>查看个人投资详情</span></a>
+                <a class="tab-item active" href="个人投资详情-原点加单.html"><span>原点加单</span></a>
+            </div>
+        </div>
+        <div class="content has-subfooter">
+            <div class="line-divider"></div>
+            <form id="update_profile" name="update_profile" method="post" action="#" class="form-horizontal form-seperated steps-form" onsubmit="return false;">
+                <div>
+                    <h3>1</h3>
+                    <section>
+                        <div class="form-block">
+                            <div class="form-row">
+                                <label class="tit">请输入加单金额（AED）</label>
+                                <div class="input-group">
+                                    <div class="input-group-addon">$</div>
+                                    <input type="number" class="form-control valid" id="top_up_amt" name="top_up_amt" placeholder="金额">
+                                    <div class="input-group-addon">.00</div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                    <h3>2</h3>
+                    <section>
+                        <div class="line-divider">选择支付方式</div>
+                        <div class="form-block">
+                            <div class="form-row">
+                                <label class="tit"><span class="right">余额：AED0.00</span>从代码余额扣除</label>
+                                <input class="txt" type="text" placeholder="0.00AED">
+                            </div>
+                            <div class="form-row">
+                                <label class="tit"><span class="right">余额：AED0.00</span>从账户余额扣除</label>
+                                <input class="txt" type="text" placeholder="0.00AED">
+                            </div>
+                            <div class="form-row">
+                                <label class="tit"><span class="right">余额：AED0.00</span>从红利余额扣除</label>
+                                <input class="txt" type="text" placeholder="0.00AED">
+                            </div>
+                        </div>
+                    </section>
+                    <h3>3</h3>
+                    <section>
+                        <div class="line-divider">合同</div>
+                        <div class="contract-content">
+                            <legend>请阅读与签字</legend>
+                            <div class="table-responsive" align="" style="position:relative;overflow:hidden;">
+                                <div id="su_contract" readonly="" style="padding:20px;background:#fff;margin-bottom:20px;resize:none;width:100%;height:auto;min-height:500px;overflow:hidden;">
+                                    <style type="text/css">
+                                    body {
+                                        /*font-family: Arial;*/
+                                    }
+                                    
+                                    .ul {
+                                        text-decoration: underline;
+                                        font-weight: bold;
+                                    }
+                                    
+                                    .np {
+                                        text-indent: 2em;
+                                    }
+                                    </style>
+                                    <h1 align="center">债权投融资合作协议</h1>
+                                    <p align="center">
+                                        甲方（投资方）： <span class="ul inv_name">李金樺</span> 身份证号： <span class="ul inv_id">Q202917657</span>
+                                        <br> 乙方（融资方）： <span class="ul">深圳方格艾特金融服务有限公司</span>
+                                    </p>
+                                    <p align="center">
+                                        法定代表人:
+                                        <br> 地址: <span class="ul">深圳市南山区粤海街道 SCC 中洲控股中心后海大道与海德一道交汇处 2301 室   
+</span>
+                                    </p>
+                                    <p class="np">鉴于：深圳方格艾特金融服务有限公司（方格艾特）为专业提 供投融资居间服务的平台。甲乙双方通过充分了解，自主达成债权 投融资合作意向。为规范双方权利义务关系，依据《中华人民共和 国合同法》及其他相关法律法规订立本协议。</p>
+                                    <p class="np ul">第一条 双方承诺与保证</p>
+                                    <p class="np">1．甲乙双方承诺：具备签订和履行本协议必备的权利能力和行 为能力，能独立承担民事责任。</p>
+                                    <p class="np">2．甲乙双方保证：向对方提供的所有证件、资料、文件均合法、真实、完整和有效。</p>
+                                    <p class="np">3．甲方保证：对本协议项下的投资资金拥有合法、有效、完全的所有权和不受限制的处分权；投资资金来源合法。</p>
+                                    <p class="np">4．乙方保证：合作项目不违反法律、法规、规章及国家政策的 规定，不改变资金用途。</p>
+                                    <p class="np ul">第二条 名词解释</p>
+                                    <p class="np">1. 合作项目：是指乙方获取本协议项下的甲方债权投资资金 后，将该资金投入到的具体的生产经营项目。</p>
+                                    <p class="np">2. 资金账户：指本合同各当事人开立的专属账户，以用于投融 资资金的划转、收付及其他操作。</p>
+                                    <p class="np">3. 投资收益：指甲方依本协议进行债权投资预期应获得的利息收入。</p>
+                                    <p class="np">4. 本金余额：指甲方投入的本金减去乙方累计已归还的本金后的余额。</p>
+                                    <p class="np ul">第三条 债权投融资合作内容</p>
+                                    <p class="np">1．合作项目名称： 石油期货计划 </p>
+                                    <p class="np">2．融资金额：<span class="ul amount">399455.00 AED</span></p>
+                                    <p></p>
+                                    <p class="np">3．融资资金用途：补充短期流动资金</p>
+                                    <p class="np">4．债权投融资合作期限为 365 天，即自 <span class="ul">2016年12月20日</span>起至 <span class="ul">2017年12月19日</span>止。实际合作起始日期以甲方投资资金划 入乙方资金账户之次日为准，合作天数不变，合作截至日期随合作起始日期的变动而相应变动。</p>
+                                    <p class="np ul">第四条 投资本金及收益的偿还</p>
+                                    <p class="np">1．甲方投资预期年化收益率：年化 <span class="ul package_percent">48</span>％。甲方投资资金划入 乙方资金帐户之次日为收益起算日，合作期限届满为收益结算日。</p>
+                                    <p class="np">2．甲乙双方确定：乙方归还甲方投资本金及收益的方式为每周 还息到期还本。</p>
+                                    <p class="np ul">第五条 提前偿还或提取投资本金及收益</p>
+                                    <p class="np">1．乙方根据合作项目运行情况及其财务状况，决定提前偿还甲方投资本金及收益的，甲方应予以接受。</p>
+                                    <p class="np">2．甲方根据自身财务状况，决定提前提取投资本金及收益的， 乙方应予以接受。但甲方应向乙方支付提前还款补偿金，提前还款补偿金按如下方式计算：</p>
+                                    <p class="np">1）实际合作期限未超过 90 天（含）的，提前还款补偿金为投 资本金金额的 15%；</p>
+                                    <p class="np">2）实际合作期限为 91 天以上不超过 365 天（含）的，提前还款补偿金为投资本金金额的 6%；</p>
+                                    <p class="np">3）实际合作期限为 366 天以上的，无需支付提前还款补偿金。</p>
+                                    <p class="np ul">第六条 违约责任 </p>
+                                    <p class="np">甲乙双方均应严格履行本协议约定的义务，因合同一方存在违</p>
+                                    <p class="np">约行为给另一方造成损失的，违约方应赔偿全部损失。 第七条 保密条款</p>
+                                    <p class="np">本协议项下的债权投融资信息为保密信息，甲乙双方均应对对 方的投资或融资信息予以保密。除非有法定或约定的理由，未经一 方同意，另一方不得以任何形式将本协议项下的投融资信息向除深 圳方格艾特金融服务有限公司以外的其他任何个人或单位进行披露。</p>
+                                    <p class="np">第八条 协议的签署及效力 </p>
+                                    <p class="np">甲乙双方均同意：本协议自甲、乙双方签署且甲方投资资金到</p>
+                                    <p class="np">达乙方资金账户之日产生法律效力。</p>
+                                    <p class="np ul">第九条 争议解决方式</p>
+                                    <p class="np">与本协议有关的争议或纠纷应通过协商解决，协商不成的，应 将争议或纠纷提交至本协议签订地有管辖权的法院以诉讼方式解决。</p>
+                                    <p class="np ul">第十条 其他条款</p>
+                                    <p class="np">1．甲方依本协议所得收益均应由甲方依照《中华人民共和国个人所得税法》及其他相关法律法规的规定纳税。</p>
+                                    <p class="np">2．甲乙双方同意：除本协议或其他相关协议另有约定，通过本平台形成的电子资料和通过其它途径形成的书面材料具有同等法律效力。</p>
+                                    <p class="np">3．本协议项下乙方的债务为不可转让债务。除非有法律法规的 特别规定或国家机关的强制要求，否则乙方不得将本协议项下的债务转让给其他第三方。</p>
+                                    <p class="np">4．本协议各当事人均同意并确认：本协议项下投融资资金的交 付、偿还等操作均通过甲乙双方实现和完成。</p>
+                                    <p class="np">5．甲方对合作项目的投资是债权投资，甲方不参与合作项目或 乙方公司的经营管理，不承担合作项目或乙方公司的盈亏风险，乙 方应依照本协议的约定按时、固定向甲方还本付息。</p>
+                                    <p class="np">6．甲方、乙方签署的一揽子居间服务协议及其他相关协议、文 件构成本协议的关联合同(或协议、文件) ，与本协议具有关联关系。</p>
+                                    <p class="np">7．甲方应当承担所有汇款费用，高达5%的费用。</p>
+                                    <p class="np ul">第十一条 特别声明 </p>
+                                    <p class="np">甲乙双方声明：已完全理解并接受本协议所有条款及与之相关的其他</p>
+                                    <p class="np">交易文件的法律意义，愿意遵守本协议的约定，同意受本协议的法律约束。</p>
+                                </div>
+                                <div align="center">
+                                    <button type="button" class="btn text-center sign" style="margin:0 auto;">签字请点击这</button>
+                                </div>
+                                <div id="signature-pad" class="m-signature-pad" style="position:absolute;bottom:30px;top:auto !important;width:100%;height:200px;left:0;display:none;">
+                                    <div class="m-signature-pad--body">
+                                        <canvas></canvas>
+                                    </div>
+                                    <div class="m-signature-pad--footer">
+                                        <div class="description">请在上方签字</div>
+                                        <button type="button" class="button clear" data-action="clear">清空</button>
+                                        <button type="button" class="button save" data-action="save">储存</button>
+                                    </div>
+                                </div>
+                                <input type="hidden" name="signature" id="signature">
+                            </div>
+                        </div>
+                    </section>
+                    <h3>
+                            <span style="font-size:18px;">确认付款</span></h3>
+                    <section>
+                        <legend>Top Up Confirmation</legend>
+                        <div class="table-responsive">
+                            <table class="table table-hover table-striped table-advanced">
+                                <thead>
+                                    <tr>
+                                        <th>Current Principle</th>
+                                        <th>Current Tier</th>
+                                        <th>Top Up Amount</th>
+                                        <th>New Principle</th>
+                                        <th>New Tier</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="fill">
+                                    <tr>
+                                        <td class='p_cp'></td>
+                                        <td class='p_ct'></td>
+                                        <td class='p_tua'></td>
+                                        <td class='p_np'></td>
+                                        <td class='p_nt'></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <div class="row" id="fill1">
+                        </div>
+                    </section>
+            </form>
+            </div>
+        </div>
+    </div>
+    <link media="all" type="text/css" rel="stylesheet" href="assets/js/signature/css/signature-pad.css">
+    <script src="assets/js/signature/signature_pad.js"></script>
+
+    <link media="all" type="text/css" rel="stylesheet" href="assets/vendors/jquery-steps/css/jquery.steps.css">
+    <script src="assets/vendors/jquery-steps/js/jquery.steps.js"></script>
+    <script src="assets/js/validation/jquery.validate.min.js"></script>
+    <script src="assets/js/validation/additional-methods.min.js"></script>
+    <script type="text/javascript">
+    var $val_messages = {
+        personalinfo_name: {
+            required: "请填写姓名",
+            minlength: "姓名最少8个字母"
+        },
+        select_pack: {
+            required: "请选择产品"
+        },
+        top_up_amt: {
+            required: "﻿Please Input Amount For Top Up"
+        },
+        ptype: "请选择支付方式",
+        wallet_1: {
+            required: "代码余额钱包"
+        },
+        wallet_2: {
+            required: "账户余额钱包"
+        },
+        email: {
+            required: "请输入电子邮箱"
+        },
+        code: {
+            required: "请输入产品代码"
+        },
+        serial: {
+            required: "填写编码",
+            remote: "有误"
+        },
+        tac_code_common: {
+            required: "输入验证码",
+            remote: "验证码有误",
+        },
+        tpin: {
+            required: "请输入PIN码",
+        },
+        signature: {
+            required: "Please review and sign contract",
+        },
+        credit_1: {
+            required: "请输入金额",
+        },
+        credit_2: {
+            required: "余额不足",
+        }
+
+    };
+
+    var total_amt_over = "总余额已超过产品价格";
+    var total_amt_insuff = "总余额不足";
+    var amt_insuff = "余额不足";
+    var credit1_val_msg1 = "需要至少产品价格的40%";
+    var credit2_val_msg2 = "最多可用产品价格的50%";
+    var credit1_val_max = "不能超过产品的价格";
+    var credit3_val_msg1 = "最多可用产品价格的10%";
+
+    var $wizard_Buttons = {
+        next: "下一页",
+        previous: "上一页",
+        finish: "提交",
+        submitbtn: "提交",
+        processbtn: "提交",
+    };
+    // $("#wizard").steps({
+    //     headerTag: "h3",
+    //     bodyTag: "section",
+    //     transitionEffect: "slideLeft",
+    //     autoFocus: true
+    // });
+    </script>
+    <script type="text/javascript" src="assets/js/purchase_top_up.js?v=265"></script>
+    
+</body>
+
+</html>

@@ -1,0 +1,90 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf8">
+<title>产品代码|falconaire</title>
+<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no">
+<meta name="format-detection" content="telephone=no">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<link href="assets/css/bootstrap.min.css" rel="stylesheet">
+<link href="assets/css/font-awesome.min.css" rel="stylesheet">
+<link href="assets/css/base.css" rel="stylesheet">
+<script src="assets/js/jquery.min.js"></script>
+<script src="assets/js/bootstrap.min.js"></script>
+<script src="assets/js/base.js"></script>
+</head>
+
+<body>
+    <div class="viewport">
+        <div class="header">
+            <a class="btn-left" href="javascript:history.back();"><i class="fa fa-angle-left"></i></a>
+            <h3 class="title">个人投资详情</h3>
+            <a class="btn-right" href="index.html"><i class="fa fa-home"></i></a>
+        </div>
+        <div class="subheader">
+            <div class="tabs">
+                <a class="tab-item active" href="产品代码.html"><span>购买产品代码</span></a>
+                <a class="tab-item" href="产品代码-未使用.html"><span>未使用</span></a>
+                <a class="tab-item" href="产品代码-已使用.html"><span>已使用</span></a>
+            </div>
+        </div>
+        <div class="content">
+            <div class="line-divider"></div>
+            <div class="list buyinfo">
+                <div class="item">
+                    <div class="row">
+                        <div class="col-xs-6"><img src="assets/img/AED-4.png"><span class="color-base">40,000AED</span></div>
+                        <div class="col-xs-6 text-right">
+                            <h4>每周红利：0.750%</h4>
+                            <h4>数量：x1</h4>
+                        </div>
+                    </div>
+                </div>
+                <div class="item text-right">合计金额：AED40，000</div>
+            </div>
+            <div class="line-divider">选择支付方式</div>
+            <div class="form-block">
+                <div class="form-row">
+                    <label class="tit"><span class="right">余额：AED0.00</span>从代码余额扣除</label>
+                    <input class="txt" type="text" placeholder="0.00AED">
+                </div>
+                <div class="form-row">
+                    <label class="tit"><span class="right">余额：AED0.00</span>从账户余额扣除</label>
+                    <input class="txt" type="text" placeholder="0.00AED">
+                </div>
+                <div class="form-row">
+                    <label class="tit"><span class="right">余额：AED0.00</span>从红利余额扣除</label>
+                    <input class="txt" type="text" placeholder="0.00AED">
+                </div>
+            </div>
+
+            <div class="single-btn-area">
+                <a class="btn-block" href="javascript:void(0);" onclick="confirm()">确认付款</a>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="modal">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                    <h4 class="modal-title">PIN码</h4>
+                </div>
+                <div class="modal-body">
+                    <input type="text" class="form-control" placeholder="PIN码">
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-block">提交</button>
+                </div>
+            </div><!-- /.modal-content -->
+        </div><!-- /.modal-dialog -->
+    </div><!-- /.modal -->
+    
+    <script type="text/javascript">
+        function confirm() {
+            $('#modal').modal("show");
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>无标题文档</title>
+<link href="css/case_show.css" type="text/css" rel="stylesheet" />
+</head>
+
+<body>
+<div id="show_page">
+<div class="show" id="show">
+	<div class="show-box">
+    	
+        <div class="show-con">
+        <table cellspacing="0" cellpadding="0">
+        <thead><tr><td><img src="images/design.png" /></td></tr></thead>
+        <tbody><tr><td><div class="show-bd" id="show-bd"><div class="show-info"><h2>主标题</h2><h3>副标题</h3><p>客户:asfasfasf<br />设计时间：2014年</p></div><div class="img"><p align="center"><img src="images/img_show.png" /></p></div></div></td></tr></tbody>
+        <tfoot><tr><td><p class="tel-info"><i class="i-phone"></i>T:15800489825&nbsp;&nbsp;<i class="i-mail"></i>E:clowlee@126.com</p></td></tr></tfoot></table>
+        </div>
+    </div>
+</div>
+</div>
+<script type="text/javascript" src="js/jquery-1.7.2.min.js"></script>
+<script type="text/javascript" src="js/case_show.js"></script>
+<script type="text/javascript">
+$(function(){
+	if($('#loading').length>0){
+		$('#loading').remove();
+	}
+	$('body').append('<div id="loading"></div>');
+	
+	var num = $('#show img').size();
+	$('#show img').load(function(){
+		num--;
+		if(num <= 0){
+
+			$('#loading').remove();
+			$('#show').show(1);
+			
+		}
+	});
+	
+	$('#show_page').click(function(){
+		$('#show_iframe', parent.document).remove();
+	});
+})
+</script>
+</body>
+</html>

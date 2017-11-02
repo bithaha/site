@@ -1,0 +1,86 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf8">
+<title>下载区|falconaire</title>
+<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no">
+<meta name="format-detection" content="telephone=no">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<link href="assets/css/bootstrap.min.css" rel="stylesheet">
+<link href="assets/css/font-awesome.min.css" rel="stylesheet">
+<link href="assets/css/base.css" rel="stylesheet">
+<script src="assets/js/jquery.min.js"></script>
+<script src="assets/js/bootstrap.min.js"></script>
+<script src="assets/js/base.js"></script>
+</head>
+
+<body>
+    <div class="viewport">
+        <div class="header">
+            <a class="btn-left" href="javascript:history.back();"><i class="fa fa-angle-left"></i></a>
+            <h3 class="title">下载区</h3>
+            <a class="btn-right" href="index.html"><i class="fa fa-home"></i></a>
+        </div>
+        <div class="content">
+            <table class="dm-table table-bgtr">
+                <thead>
+                    <tr>
+                        <td>日期</td><td>标题</td><td>选项</td>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>21/11/2016</td><td>	Complimentary Visit to Shenzhen Office</td><td><a class="btn btn-base">立刻下载</a></td>
+                    </tr>
+                    <tr>
+                        <td>21/11/2016</td><td>	Complimentary Visit to Shenzhen Office</td><td><a class="btn btn-base">立刻下载</a></td>
+                    </tr>
+					<tr>
+                        <td>21/11/2016</td><td>	Complimentary Visit to Shenzhen Office</td><td><a class="btn btn-base">立刻下载</a></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <link rel="stylesheet" type="text/css" href="assets/css/mobiscroll.custom-2.6.2.min.css">
+    <script src="assets/js/mobiscroll.custom-2.6.2.min.js"></script>
+    <script type="text/javascript">
+        var options = {
+            lang:'cn',
+            preset: 'date', 
+            theme: 'android-ics light', 
+            mode: 'scroller', 
+            display: 'modal', 
+            lang: 'zh',
+            dateFormat: 'yy-mm-dd',
+            dateOrder: 'yymmdd',
+            setText:"确定",
+            cancelText:"取消"
+        };
+        var startSelect = {
+            onSelect: function(valueText,inst){
+                alert("您选择的开始时间是"+valueText);
+                $('.start-date').html(valueText);
+            }
+        }
+        var endSelect = {
+            onSelect: function(valueText,inst){
+                alert("您选择的结束时间是"+valueText);
+                $('.end-date').html(valueText);
+            }
+        }
+        $('.start-date').mobiscroll('destroy').mobiscroll(extend(options,startSelect));
+        $('.end-date').mobiscroll('destroy').mobiscroll(extend(options,endSelect));
+        /* 初始化时间 */
+        var newdate = new Date();
+        var now = newdate.getFullYear() +'-'+(newdate.getMonth()+1)+'-'+newdate.getDate();
+        $('.start-date').html(now);
+        $('.end-date').html(now);
+
+
+
+    </script>
+</body>
+</html>

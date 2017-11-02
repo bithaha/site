@@ -1,0 +1,141 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>首页--个人网站</title>
+<link href="css/common.css" type="text/css" rel="stylesheet" />
+</head>
+
+<body>
+<div class="header">
+	<div class="wraper">
+    	<div class="logo"><a href="index.html"><img src="images/logo.png" alt="" /></a></div>
+        <div class="nav">
+        	<ul>
+            	<li class="li1"><a href="index.html" class="active"><span>首页</span></a></li>
+                <li class="li2"><a href="case.html"><span>案例</span></a></li>
+                <li class="li3"><a href="service.html"><span>服务</span></a></li>
+                <li class="li4"><a href="contact.html"><span>联系</span></a></li>
+            </ul>
+        </div>
+    </div>
+</div>
+<section class="slider">
+	<div class="wraper slider-con mt20">
+    	<a href="javascript:;" class="turn-left" id="left"></a>
+        <a href="javascript:;" class="turn-right" id="right"></a>
+    	<div class="swing" id="banner">
+        	<a href="#"><img src="images/b1.png" style="display:block;" /></a>
+            <a href="#"><img src="images/b2.png" /></a>
+            <a href="#"><img src="images/b3.png" /></a>
+            <a href="#"><img src="images/b4.png" /></a>
+            <a href="#"><img src="images/b5.png" /></a>
+        </div>
+        <div class="slider-page" id="banner_turn"></div>
+    </div>
+    <div class="slider-shadow"></div>
+</section>
+<div class="wraper">
+    <div class="case-con mt30">
+        <a href="case.html" class="cent-case">近期案例</a>
+        <ul class="case-fix">
+            <li class="li1">
+                <div class="img"><img src="images/img1.png" /></div>
+                <div class="txt"><h3>黄金搭档大保健系列产品</h3><h4>GOLD PARTNER HEALTH PRODUCTS</h4><p>Lorem Ipsum dolor sit amet,<br />consectetur adipiscing elit.Quis-<br />que quis rutrum erat.Donec in dui<br />fekis,nec suscript sapien.</p><p class="hide">客户：<span class="client">黄金搭档1</span>设计时间<span class="design_time">2014年</span></p></div>
+                <a href="javascript:;" class="open">open</a>
+            </li>
+            <li class="li2">
+                <div class="img"><img src="images/img_show.png" /></div>
+                <div class="txt"><h3>黄金搭档大保健系列产品</h3><h4>GOLD PARTNER HEALTH PRODUCTS</h4><p>Lorem Ipsum dolor sit amet,<br />consectetur adipiscing elit.Quis-<br />que quis rutrum erat.Donec in dui<br />fekis,nec suscript sapien.</p><p class="hide">客户：<span class="client">黄金搭档1</span>设计时间<span class="design_time">2014年</span></p></div>
+                <a href="javascript:;" class="open">open</a>
+            </li>
+            <li class="li3">
+                <div class="img"><img src="images/img1.png" /></div>
+                <div class="txt"><h3>黄金搭档大保健系列产品</h3><h4>GOLD PARTNER HEALTH PRODUCTS</h4><p class="hide">客户：<span class="client">黄金搭档1</span>设计时间<span class="design_time">2014年</span></p></div>
+                <a href="javascript:;" class="open">open</a>
+            </li>
+            <li class="li4">
+                <div class="img"><img src="images/img4.png" /></div>
+                <div class="txt"><h3>黄金搭档大保健系列产品</h3><h4>GOLD PARTNER HEALTH PRODUCTS</h4><p class="hide">客户：<span class="client">黄金搭档1</span>设计时间<span class="design_time">2014年</span></p></div>
+                <a href="javascript:;" class="open">open</a>
+            </li>
+            <li class="li5">
+                <div class="img"><img src="images/img1.png" /></div>
+                <div class="txt"><h3>黄金搭档大保健系列产品</h3><h4>GOLD PARTNER HEALTH PRODUCTS</h4><p class="hide">客户：<span class="client">黄金搭档1</span>设计时间<span class="design_time">2014年</span></p></div>
+                <a href="javascript:;" class="open">open</a>
+            </li>
+        </ul>
+        <div class="clearfix"></div>
+    </div>
+    <div class="footer mt30">
+    	<p class="tel-info"><i class="i-phone"></i>T:15800489825&nbsp;&nbsp;<i class="i-mail"></i>E:clowlee@126.com</p>
+        <p>2014&copy;My Company Copyright. All rights reserved</p>
+    </div>
+</div>
+<script type="text/javascript" src="js/jquery-1.7.2.min.js"></script>
+<script type="text/javascript">
+	  
+         /*Banner Start*/
+jQuery("#banner img").each(function() {
+   var el = jQuery(this);
+   jQuery("<a href='javascript:;'></a>").appendTo("#banner_turn");
+});
+jQuery("#banner_turn a").eq(0).addClass('cur');
+	var curIndex=0;
+	var time=600;
+	var slideTime=5000;
+
+	var int1;
+	
+	int1=setInterval("autoSlide()",slideTime);
+	function autoSlide(){
+		curIndex+1>=$("#banner img").size()?curIndex=-1:false;
+		show1(curIndex+1);
+	}
+	function show1(index){
+		$("#banner_turn a").eq(curIndex).removeClass('cur');
+		$("#banner img").eq(curIndex).stop(false,true).fadeOut(time);
+		
+		$("#banner img").eq(index).stop(false,true).fadeIn(time);
+		$("#banner_turn a").eq(index).addClass('cur');
+		curIndex=index;
+	}
+	
+	$(function(){
+		$("#banner_turn a").click(function(){
+			show1($("#banner_turn a").index($(this)));
+			window.clearInterval(int1);
+			int1=setInterval("autoSlide()",slideTime);
+		});
+		$("#banner_turn a").hover(function(){
+			window.clearInterval(int1);
+		},function(){
+			int1=setInterval("autoSlide()",slideTime);
+		});
+		$("#left").click(function(){
+			curIndex+1>=$("#banner img").size()?curIndex=-1:false;
+			var m = curIndex - 1;
+			if(m < -1){
+				m = $("#banner img").size()-2;
+			}
+			show1(m);
+			window.clearInterval(int1);
+			int1=setInterval("autoSlide()",slideTime);
+		});
+		$("#right").click(function(){
+			curIndex+1>=$("#banner img").size()?curIndex=-1:false;
+			var m = curIndex + 1;
+			if(curIndex > $("#banner img").size()-1){
+				m = 0;
+			}
+			show1(m);
+			window.clearInterval(int1);
+			int1=setInterval("autoSlide()",slideTime);
+		});
+	})
+	/*Banner End*/
+	
+      </script>
+      <script type="text/javascript" src="js/case_show.js"></script>
+</body>
+</html>
