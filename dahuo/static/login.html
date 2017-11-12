@@ -1,0 +1,45 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>登录|打货手机后台管理系统</title>
+	<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no">
+	<meta name="format-detection" content="telephone=no">
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black">
+	<link href="../assets/css/common.css" rel="stylesheet">
+	<style>html,body{height:100%;}</style>
+</head>
+
+<body class="login-body">
+	<div class="login-con">
+		<div class="login-logo"><a href="#"><img src="../assets/img/logo.png" /></a></div>
+		<div class="login-form">
+			<div class="f-line">
+				<input type="text" class="login-text usertxt" placeholder="请输入邮箱" oninput="checkData(this)" onpropertychange="checkData(this)"  /><a href="javascript:void(0);" class="ico-login" onClick="emptyData(this)"><b></b></a>
+			</div>
+			<div class="f-line">
+				<input type="text" class="login-text pwdtxt" placeholder="请输入密码"  oninput="checkData(this)" onpropertychange="checkData(this)" /><a href="javascript:void(0);" class="ico-login" onClick="emptyData(this)"><b></b></a>
+			</div>
+			<div class="f-line">
+				<input type="submit" class="login-sub" />
+			</div>
+		</div>
+		
+	</div>
+	<script src="../assets/js/zepto.js"></script>
+	<script type="text/javascript">
+	function checkData(obj){
+		var val = $.trim($(obj).val());
+		if(val == ''){
+			$(obj).next('.ico-login').removeClass('del');
+		}else{
+			$(obj).next('.ico-login').addClass('del');
+		}
+	}
+	function emptyData(obj){
+		$(obj).removeClass('del').prev().val("");
+	}
+	</script>
+</body>
+</html>

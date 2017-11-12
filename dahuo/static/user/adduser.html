@@ -1,0 +1,97 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>新增客户|打货手机后台管理系统</title>
+	<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no">
+	<meta name="format-detection" content="telephone=no">
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black">
+	<link href="../../assets/css/common.css" rel="stylesheet">
+</head>
+
+<body class="viewport">
+
+<div class="header">
+	<div class="back"><a href="javascript:history.back();" class="btn-header btn-back"></a></div>
+	<div class="title"><h4><span>新增客户</span></h4></div>
+	<div class="mun"><a href="#" class="btn-header">保存</a></div>
+</div>
+
+<div class="containar">
+	<ul class="info-list f-grid f-grid-1">
+		<li><label class="f-grid-s">用户名</label><div class="f-grid-c"><input type="text" id="username" name="username" class="text" value=""></div></li>
+		<li><label class="f-grid-s">密码</label>
+		<div class="f-grid-c"><input type="password" id="real_psw" name="real_psw" class="text" value=""></div>
+		</li>
+		<li><label class="f-grid-s">重复密码</label>
+		<div class="f-grid-c"><input class="text date-picker" type="password" id="re_real_psw" name="re_real_psw" value=""></div>
+		</li>
+	</ul>
+	<div class="jianju-10"></div>
+	<ul class="info-list f-grid f-grid-1">
+		<li><label class="f-grid-s">姓名</label><div class="f-grid-c"><input type="text" id="realname" name="realname" class="text" value=""></div></li>
+		<li><label class="f-grid-s">性别</label>
+		<div class="f-grid-c"><select name="gender"><option value="1">男</option><option value="0">女</option></select></div>
+		</li>
+		<li><label class="f-grid-s">生日</label>
+		<div class="f-grid-c"><input class="text date-picker" id="birthday" name="birthday" type="text" data-date-format="yyyy-mm-dd" value=""></div>
+		</li>
+	</ul>
+	<div class="jianju-10"></div>
+	<ul class="info-list f-grid f-grid-1">
+		<li><label class="f-grid-s">电话</label><div class="f-grid-c"><input type="text" id="phone" name="phone" class="text" value=""></div></li>
+		<li><label class="f-grid-s">邮箱</label><div class="f-grid-c"><input type="text" id="email" name="email" class="text" value=""></div></li>
+	</ul>
+	<div class="jianju-10"></div>
+	<ul class="info-list f-grid f-grid-1">
+		<li><label class="f-grid-s">头像</label>
+			<div class="f-grid-c mo-upload">
+				<input type="text" id="uploadTextfield1" class="upload-txt" value="请选择上传文件"><input type="button" class="upload-btn" value="" onclick="$('#head_img_file').click();">
+				<div id="d-file-box" class="d-file-box" data-filename="user.pic" data-filepath="user/pic" data-replacefileid="" style="display: none;">
+					<input id="head_img_file" class="ace_file" onchange="document.getElementById('uploadTextfield1').value=this.value" type="file" name="files[]" data-url="app/file/json/upload" accept="image/jpeg,image/pjpeg,image/png,image/gif">
+				</div>
+				<div data-height="40" class="img-view">
+					
+				</div>
+				<input type="hidden" name="head_img_id" id="head_img_id" value="">
+				<div class="message"></div>
+			</div>
+		</li>
+		<li><label class="f-grid-s">身份证照</label>
+			<div class="f-grid-c mo-upload">
+				<input type="text" id="uploadTextfield2" class="upload-txt" value="请选择上传文件"><input type="button" class="upload-btn" value="" onclick="$('#idcard_img_file').click();">
+				<div id="d-file-box" class="d-file-box" data-filename="user.idcard" data-filepath="user/idcard" data-replacefileid="" style="display: none;">
+					<input id="idcard_img_file" class="ace_file" onchange="document.getElementById('uploadTextfield2').value=this.value" type="file" name="files[]" data-url="app/file/json/upload" accept="image/jpeg,image/pjpeg,image/png,image/gif">
+				</div>
+				<div data-height="40" class="img-view">
+					
+				</div>
+				<input type="hidden" name="idcard_img" id="idcard_img" value="">
+				<div class="message"></div>
+			</div>
+		</li>
+		<li><label class="f-grid-s">身份证号码</label><div class="f-grid-c"><input type="text" id="idcard" name="idcard" class="text" value=""></div></li>
+	</ul>
+	<div class="jianju-10"></div>
+
+	<ul class="info-list f-grid f-grid-1" id="city">
+		<li><label class="f-grid-s">省份</label><div class="f-grid-c"><select id="s_province" name="province"><option>湖北省</option></select></div></li>
+		<li><label class="f-grid-s">城市</label><div class="f-grid-c"><select id="s_city" name="city"><option>武汉市</option></select></div></li>
+		<li><label class="f-grid-s">区县</label><div class="f-grid-c"><select id="s_county" name="county"><option>武昌区</option></select></div></li>
+		<li><label class="f-grid-s">详细地址</label><div class="f-grid-c"><textarea type="text" class="text" value="" ></textarea></div></li>
+	</ul>
+</div>
+
+<div class="btn-area">
+	<a href="#" class="btn-global btn-red">删除</a>
+</div>
+
+
+<script src="../../assets/js/zepto.js"></script>
+<script class="resources library" src="../../assets/js/area.js" type="text/javascript"></script>
+<script>
+_init_area();
+</script>
+</body>
+</html>

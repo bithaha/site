@@ -25,11 +25,16 @@
 
 ## 非在线项目
 
+#### pc
 - [奥式设计](https://tuchongyang.github.io/site/liao)
-- [FalconaireAPP](https://tuchongyang.github.io/site/FalconaireAPP)
 - [黄阁大屏](https://tuchongyang.github.io/site/huangge)
 - [后台框架](https://tuchongyang.github.io/site/management)
+- [设计范](https://tuchongyang.github.io/site/shejifan)
+
+#### 移动
+- [FalconaireAPP](https://tuchongyang.github.io/site/FalconaireAPP)
 - [大藏酵素](https://tuchongyang.github.io/site/dazangjiaosu)
 - [美立约商城](https://tuchongyang.github.io/site/meiyue)
 - [设计范](https://tuchongyang.github.io/site/shejifan)
 - [illusion](https://tuchongyang.github.io/site/illusion)
+- [打货应用](https://tuchongyang.github.io/site/dahuo/static)

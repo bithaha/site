@@ -1,0 +1,211 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>客户|打货手机后台管理系统</title>
+	<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no">
+	<meta name="format-detection" content="telephone=no">
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black">
+	<link href="../../assets/css/common.css" rel="stylesheet">
+</head>
+
+<body class="viewport">
+
+<div class="header">
+	<div class="back"><a href="javascript:history.back();" class="btn-header btn-back"></a></div>
+	<div class="title"><h4><span>客户</span></h4></div>
+	<div class="mun"><a href="adduser.html" class="btn-header btn-add"></a></div>
+</div>
+
+<div class="page-search">
+	<input type="text" class="text" id="searUserTxt" oninput="searUser(this)" onpropertychange="searUser(this)" placeholder="搜索用户/电话"><a href="javascript:void(0);" id="sear-close" class="sear-close" onclick="$('#searUserTxt').val('');$(this).hide();searUser(document.getElementById('searUserTxt'))">x</a>
+</div>
+
+<div class="containar">
+	
+	<ul class="info-list" id="userlist">			
+		<li class="list-li">
+			<a href="#" class="btn-sel"><i class="arrow"></i><span class="name-txt">涂重阳</span><br /><span><span class="color-gray">客户欠款：</span><span class="price">￥800.00</span></span></a>
+			<a href="javascript:void(0);" class="ubtn ubtn-sk"><span>收款</span></a>
+			<a href="javascript:void(0);" class="ubtn ubtn-mail"><span><i class="ico-mail"></i></span></a>
+			<a href="javascript:void(0);" class="ubtn ubtn-phone"><span><i class="ico-phone"></i></span></a>
+		</li>
+		
+		<li class="list-li">
+			<a href="#" class="btn-sel"><i class="arrow"></i><span class="name-txt">陈雪</span><br /><span><span class="color-gray">客户欠款：</span><span class="price">￥800.00</span></span></a>
+			<a href="javascript:void(0);" class="ubtn ubtn-sk"><span>收款</span></a>
+			<a href="javascript:void(0);" class="ubtn ubtn-mail"><span><i class="ico-mail"></i></span></a>
+			<a href="javascript:void(0);" class="ubtn ubtn-phone"><span><i class="ico-phone"></i></span></a>
+		</li>
+		
+		<li class="list-li">
+			<a href="#" class="btn-sel"><i class="arrow"></i><span class="name-txt">江湖</span><br /><span><span class="color-gray">客户欠款：</span><span class="price">￥800.00</span></span></a>
+			<a href="javascript:void(0);" class="ubtn ubtn-sk"><span>收款</span></a>
+			<a href="javascript:void(0);" class="ubtn ubtn-mail"><span><i class="ico-mail"></i></span></a>
+			<a href="javascript:void(0);" class="ubtn ubtn-phone"><span><i class="ico-phone"></i></span></a>
+		</li>
+		
+		<li class="list-li">
+			<a href="#" class="btn-sel"><i class="arrow"></i><span class="name-txt">胖子</span><br /><span><span class="color-gray">客户欠款：</span><span class="price">￥800.00</span></span></a>
+			<a href="javascript:void(0);" class="ubtn ubtn-sk"><span>收款</span></a>
+			<a href="javascript:void(0);" class="ubtn ubtn-mail"><span><i class="ico-mail"></i></span></a>
+			<a href="javascript:void(0);" class="ubtn ubtn-phone"><span><i class="ico-phone"></i></span></a>
+		</li>
+		
+		<li class="list-li">
+			<a href="#" class="btn-sel"><i class="arrow"></i><span class="name-txt">rrr</span><br /><span><span class="color-gray">客户欠款：</span><span class="price">￥800.00</span></span></a>
+			<a href="javascript:void(0);" class="ubtn ubtn-sk"><span>收款</span></a>
+			<a href="javascript:void(0);" class="ubtn ubtn-mail"><span><i class="ico-mail"></i></span></a>
+			<a href="javascript:void(0);" class="ubtn ubtn-phone"><span><i class="ico-phone"></i></span></a>
+		</li>
+		
+		<li class="list-li">
+			<a href="#" class="btn-sel"><i class="arrow"></i><span class="name-txt">gf</span><br /><span><span class="color-gray">客户欠款：</span><span class="price">￥800.00</span></span></a>
+			<a href="javascript:void(0);" class="ubtn ubtn-sk"><span>收款</span></a>
+			<a href="javascript:void(0);" class="ubtn ubtn-mail"><span><i class="ico-mail"></i></span></a>
+			<a href="javascript:void(0);" class="ubtn ubtn-phone"><span><i class="ico-phone"></i></span></a>
+		</li>
+		
+		<li class="list-li">
+			<a href="#" class="btn-sel"><i class="arrow"></i><span class="name-txt">江湖</span><br /><span><span class="color-gray">客户欠款：</span><span class="price">￥800.00</span></span></a>
+			<a href="javascript:void(0);" class="ubtn ubtn-sk"><span>收款</span></a>
+			<a href="javascript:void(0);" class="ubtn ubtn-mail"><span><i class="ico-mail"></i></span></a>
+			<a href="javascript:void(0);" class="ubtn ubtn-phone"><span><i class="ico-phone"></i></span></a>
+		</li>
+		
+		<li class="list-li">
+			<a href="#" class="btn-sel"><i class="arrow"></i><span class="name-txt">无需</span><br /><span><span class="color-gray">客户欠款：</span><span class="price">￥800.00</span></span></a>
+			<a href="javascript:void(0);" class="ubtn ubtn-sk"><span>收款</span></a>
+			<a href="javascript:void(0);" class="ubtn ubtn-mail"><span><i class="ico-mail"></i></span></a>
+			<a href="javascript:void(0);" class="ubtn ubtn-phone"><span><i class="ico-phone"></i></span></a>
+		</li>
+		
+		<li class="list-li">
+			<a href="#" class="btn-sel"><i class="arrow"></i><span class="name-txt">李露</span><br /><span><span class="color-gray">客户欠款：</span><span class="price">￥800.00</span></span></a>
+			<a href="javascript:void(0);" class="ubtn ubtn-sk"><span>收款</span></a>
+			<a href="javascript:void(0);" class="ubtn ubtn-mail"><span><i class="ico-mail"></i></span></a>
+			<a href="javascript:void(0);" class="ubtn ubtn-phone"><span><i class="ico-phone"></i></span></a>
+		</li>
+		
+	</ul>
+		
+</div>
+
+
+
+<script src="../../assets/js/zepto.js"></script>
+<script src="../../assets/js/Zepto.Hz2Py-min.js"></script>
+<script>
+/*拼音检索姓名*/
+var userlist = new Array();
+$(function(){
+	$("#userlist li").each(function(){
+		var _this = $(this);
+		var name = _this.find('.name-txt').text();
+		var inhid = $('<input type="hidden" value="" />');
+		inhid.val(name);
+		_this.attr("data-search",name+''+inhid.toPinyin().toLowerCase().replace(/[ ]/g,""));
+		userlist[_this.index()] = _this;
+	});
+})	
+function searUser(obj){
+	var val = $.trim($(obj).val());
+	if(val==''){
+		$(obj).next('.sear-close').hide();
+	}else{
+		$(obj).next('.sear-close').show();
+	}
+	$("#userlist").empty();
+	var resultNum = 0;
+	for(i=0;i<userlist.length;i++){
+		if(userlist[i].data("search").indexOf(val) >= 0){
+			$("#userlist").append(userlist[i]);
+			resultNum++;
+		}
+	}
+	if(resultNum==0){
+		$("#userlist").append('<li><a href="javascript:void(0);" class="text-empty color-gray text-center">没有搜索到用户信息</a></li>');
+	}
+	
+}
+var moveWidth = 120;
+var touchEle = document.getElementById('userlist');
+window.addEventListener('load',function(){
+	var initX;
+	var moveX;
+	var X = 0;
+	var objX = 0;
+	touchEle.addEventListener('touchstart',function(event){
+		//event.preventDefault();
+		var obj = event.target.parentNode;
+		$(".list-li").each(function(){
+			$(this).animate({'transform':'translateX(0)'},100);
+		});
+		if(obj.className == "list-li"){
+			initX = event.targetTouches[0].pageX;
+			objX =(obj.style.WebkitTransform.replace(/translateX\(/g,"").replace(/px\)/g,""))*1;
+		}
+		if( objX == 0){
+			window.addEventListener('touchmove',function(event) {
+				event.preventDefault();
+				var obj = event.target.parentNode;
+				if (obj.className == "list-li") {
+					moveX = event.targetTouches[0].pageX;
+					X = moveX - initX;
+					if (X > 0) {
+						obj.style.WebkitTransform = "translateX(" + 0 + "px)";
+					}
+					else if (X < 0) {
+						var l = Math.abs(X);
+						obj.style.WebkitTransform = "translateX(" + -l + "px)";
+						if(l>moveWidth){
+							l=moveWidth;
+							obj.style.WebkitTransform = "translateX(" + -l + "px)";
+						}
+					}
+				}
+			});
+		}
+		else if(objX<0){
+			touchEle.addEventListener('touchmove',function(event) {
+				event.preventDefault();
+				var obj = event.target.parentNode;
+				if (obj.className == "list-li") {
+					moveX = event.targetTouches[0].pageX;
+					X = moveX - initX;
+					if (X > 0) {
+						var r = -moveWidth + Math.abs(X);
+						obj.style.WebkitTransform = "translateX(" + r + "px)";
+						if(r>0){
+							r=0;
+							obj.style.WebkitTransform = "translateX(" + r + "px)";
+						}
+					}
+					else {     //向左滑动
+						obj.style.WebkitTransform = "translateX(" + -moveWidth + "px)";
+					}
+				}
+			});
+		}
+
+	})
+	touchEle.addEventListener('touchend',function(event){
+		event.preventDefault();
+		var obj = event.target.parentNode;
+		if(obj.className == "list-li"){
+			objX =(obj.style.WebkitTransform.replace(/translateX\(/g,"").replace(/px\)/g,""))*1;
+			if(objX>-40){
+				obj.style.WebkitTransform = "translateX(" + 0 + "px)";
+			}else{
+				obj.style.WebkitTransform = "translateX(" + -moveWidth + "px)";
+			}
+		}
+	 })
+
+})
+
+
+</script>
+</body>
+</html>
