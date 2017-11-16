@@ -1,0 +1,196 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>新闻</title>
+    <meta name="keywords" content="" />
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no">
+    <link rel="shortcut icon" href="assets/favicon.ico">
+    <link rel="stylesheet" type="text/css" href="assets/css/cssreset-min.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/index_complex.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/mobile.css">
+    <script type="text/javascript" src="assets/js/jquery-1.11.1.min.js"></script>
+    <script type="text/javascript" src="assets/js/common.js"></script>
+</head>
+
+<body>
+    <div class="header c_header">
+    	<div class="wraper">
+	        <div class="h_logo u_fl">
+	            <img src="assets/images/logo.png" height="30px">
+	        </div>
+	        <div class="h_link u_fr u_di">
+	            <a href="index.html">首页</a>
+	            <a href="news.html" class="selected">新闻</a>
+	            <a href="about.html">关于</a>
+	            <a href="cases.html">案例</a>
+	            <a href="join.html">加入</a>
+	        </div>
+            <b class="menu-btn"></b>
+        </div>
+    </div>
+    
+	<div class="layout">
+		<div class="wraper news-content">
+			<div class="main-tit-bar main-tit-bar-1">
+    			<h3 class="title-img"><img src="assets/images/tit-news.png"></h3>
+    			<h4 class="title"><span class="bgreen">咨询/新闻</span></h4>
+    		</div>
+			<ul class="c-news" id="c-news">
+				<li>
+					<h3 class="title"><a href="#">为集训中的美术高考学生和家长解答</a></h3>
+					<div class="img">
+						
+					</div>
+					<div class="info">
+						<span class="time">2015-11-04</span><span class="ico-tag ico-tag-red">置顶</span><span class="tag">新闻</span><span class="tag">美术</span>
+					</div>
+				</li>
+				<li>
+					<h3 class="title">华为集训中的美术高考学生和家长解答为集训中的美术高考学生和家长解答为集训中的美术高考学生和家长解答</h3>
+					<div class="img">
+						<img src="assets/images/news-img-1.png" />
+					</div>
+					<div class="info">
+						<span class="time">2015-11-04</span><span class="ico-tag ico-tag-red">置顶</span><span class="tag">新闻</span><span class="tag">美术</span>
+					</div>
+				</li>
+				<li>
+					<h3 class="title">为集训中的美术高考学生和家长解答</h3>
+					<div class="img">
+						<img src="assets/images/news-img-1.png" />
+						<img src="assets/images/news-img-1.png" />
+					</div>
+					<div class="info">
+						<span class="time">2015-11-04</span><span class="ico-tag ico-tag-red">置顶</span><span class="tag">新闻</span><span class="tag">美术</span>
+					</div>
+				</li>
+				<li>
+					<h3 class="title">为集训中的美术高考学生和家长解答</h3>
+					
+					
+					<div class="info">
+						<span class="time">2015-11-04</span><span class="ico-tag ico-tag-red">置顶</span><span class="tag">新闻</span><span class="tag">美术</span>
+					</div>
+				</li>
+				<li>
+					<h3 class="title">为集训中的美术高考学生和家长解答为集训中的美术高考学生和家长解答为集训中的美术高考学生和家长解答</h3>
+					<div class="img">
+						<img src="assets/images/news-img-1.png" />
+						<img src="assets/images/news-img-1.png" />
+						<img src="assets/images/news-img-1.png" />
+					</div>
+					<div class="info">
+						<span class="time">2015-11-04</span><span class="ico-tag ico-tag-red">置顶</span><span class="tag">新闻</span><span class="tag">美术</span>
+					</div>
+				</li>
+			</ul>
+			<!-- <div class="refresh-wrapper"><a class="refresh" href="javascript:void(0);">点击加载更多</a></div> -->
+			
+		</div>
+	</div>
+	
+    <div class="footer">
+    	<div class="wraper">
+    		<div class="fot-tel">
+    			<img src="assets/images/logo-normal.png">
+    			<span>400-027-7891</span>
+    		</div>
+    		<div class="fot-info">
+    			<p><span>E-mail: <b>Vip@027art.com</b></span><span>QQ: <b>10053321</b></span><span>地址: <b>武汉市洪山区恒安路富安街</b></span></p>
+    			<p><a href="index.html">紫信</a> 版权所有 <span>Copyright © 2008-2017 Zixin Cloud. All Rights Reserved</span><span>鄂ICP备13015655号-4</span></p>
+    		</div>
+    	</div>
+    </div>
+<!-- 返回顶部 -->
+<a href="javascript:" target="_parent" class="gotop"></a>
+<script type="text/javascript" src="assets/js/dropload.js"></script>
+<script type="text/javascript">
+	$(function(){
+		$('#c-news li').each(function(){
+			var _this = $(this);
+			if(_this.find('.img').length > 0){
+				_this.addClass('col-'+_this.find('.img').find('img').length);
+			}else{
+				_this.addClass('col-0');
+			}
+		});
+	});
+	$(function(){
+	    // 页数
+	    var page = 0;
+	    // 每页展示5个
+	    var size = 5;
+
+	    // dropload
+	    $('.news-content').dropload({
+	        scrollArea : window,
+	        distance:300,
+	        loadDownFn : function(me){
+	            page++;
+	            // 拼接HTML
+	            var result = '';
+	            // 为了测试，延迟1秒加载ajax，实际运用时不需要延时
+                setTimeout(function(){
+                    
+                    
+		            $.ajax({
+		                type: 'GET',
+		                url: 'assets/js/testNewsDatas.json?page='+page+'&size='+size,
+		                dataType: 'json',
+		                success: function(data){
+		                    var arrLen = data.length;
+		                    if(arrLen > 0){
+		                        for(var i=0; i<arrLen; i++){
+		                        	//拼接图片
+
+		                            result =   $('<li class="col-'+(data[i].images.length || 0)+'">'
+											+	'	<h3 class="title">'+data[i].title+'</h3>'
+											+	'	<div class="img">'
+											+	'	</div>'
+											+	'	<div class="info">'
+											+	'		<span class="time">'+data[i].update_at+'</span>'
+											+	'	</div>'
+											+	'</li>');
+									if(data[i].is_top){
+										result.find('.info').append('<span class="ico-tag ico-tag-red">置顶</span>');
+									}
+									for(var z in data[i].tags){
+										result.find('.info').append('<span class="tag">'+data[i].tags[z]+'</span>');
+									}
+									for(var j in data[i].images){
+										result.find('.img').append('<img src="'+data[i].images[j]+'">')
+									}
+
+									// 插入数据到页面，放到最后面
+									$('.c-news').append(result);
+		                        }
+		                        
+			                    me.resetload();
+		                    // 如果没有数据
+		                    }else{
+		                        // 锁定
+		                        me.lock();
+		                        // 无数据
+		                        me.noData();
+		                    }
+		                    
+		                },
+		                error: function(xhr, type){
+		                    alert('Ajax error!');
+		                    // 即使加载出错，也得重置
+		                    me.resetload();
+		                }
+		            });
+
+                },1000);
+
+	        }
+	    });
+	});
+</script>
+</body>
+
+</html>
