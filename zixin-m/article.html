@@ -1,0 +1,123 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>新闻</title>
+    <meta name="keywords" content="" />
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no">
+    <link rel="shortcut icon" href="assets/favicon.ico">
+    <link rel="stylesheet" type="text/css" href="assets/css/cssreset-min.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/index_complex.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/mobile.css">
+    <script type="text/javascript" src="assets/js/jquery-1.11.1.min.js"></script>
+    <script type="text/javascript" src="assets/js/common.js"></script>
+</head>
+
+<body>
+    <div class="header c_header">
+    	<div class="wraper">
+	        <div class="h_logo u_fl">
+	            <img src="assets/images/logo.png" height="30px">
+	        </div>
+	        <div class="h_link u_fr u_di">
+	            <a href="index.html">首页</a>
+	            <a href="news.html" class="selected">新闻</a>
+	            <a href="about.html">关于</a>
+	            <a href="cases.html">案例</a>
+	            <a href="join.html">加入</a>
+	        </div>
+            <b class="menu-btn"></b>
+        </div>
+    </div>
+    
+	<div class="layout layout-article">
+		<div class="wraper">
+			<div class="art-head">
+				<h3 class="title">武汉美术网：专门致力于艺术生文化课培训</h3>
+				<div class="info">
+					<span class="i-text red">艺考政策</span>
+					<span class="time">2015-12-04</span>
+					<span class="online-txt">当前【<span class="count">862</span>】人在线</span>
+				</div>
+			</div>
+			<div class="art-body">
+				<p>大连理工大学2016年美术类专业继续招生，各招生专业为雕塑和设计学类，我校将直接使用各省的艺术专业考试统考成绩录取。</p>
+				<img src="assets/images/case-6.png" />
+				<img src="assets/images/news-img-1.png" />
+				<p>招生省份将扩大至6个，包括河北省、内蒙古自治区、辽宁省、吉林省、黑龙江省和山东省。具体招生办法以我校2016年美术类专业招生简章为准，预计于2016年1月通过我校招生网发布，请考生及家长保持关注。</p>
+			</div>
+			<!-- <div class="refresh-wrapper"><a class="refresh" href="javascript:void(0);">点击加载更多</a></div> -->
+		</div>
+	</div>
+	
+    <div class="footer">
+    	<div class="wraper">
+    		<div class="fot-tel">
+    			<img src="assets/images/logo-normal.png">
+    			<span>400-027-7891</span>
+    		</div>
+    		<div class="fot-info">
+    			<p><span>E-mail: <b>Vip@027art.com</b></span><span>QQ: <b>10053321</b></span><span>地址: <b>武汉市洪山区恒安路富安街</b></span></p>
+    			<p><a href="index.html">紫信</a> 版权所有 <span>Copyright © 2008-2017 Zixin Cloud. All Rights Reserved</span><span>鄂ICP备13015655号-4</span></p>
+    		</div>
+    	</div>
+    </div>
+<!-- 返回顶部 -->
+<a href="javascript:" target="_parent" class="gotop"></a>
+<script type="text/javascript" src="assets/js/dropload.js"></script>
+<script type="text/javascript">
+	$(function(){
+	    // 页数
+	    var page = 0;
+	    // 每页展示5个
+	    var size = 5;
+
+	    // dropload
+	    $('.art-body').dropload({
+	        scrollArea : window,
+	        distance:300,
+	        loadDownFn : function(me){
+	            page++;
+	            // 拼接HTML
+	            var result = '';
+	            // 为了测试，延迟1秒加载ajax，实际运用时不需要延时
+                setTimeout(function(){
+                    
+                    
+		            $.ajax({
+		                type: 'GET',
+		                url: 'assets/js/testNewsDatas.json?page='+page+'&size='+size,
+		                dataType: 'json',
+		                success: function(data){
+		                    var arrLen = data.length;
+		                    if(arrLen > 0){
+		                        
+		                        
+			                    me.resetload();
+		                    // 如果没有数据
+		                    }else{
+		                        // 锁定
+		                        me.lock();
+		                        // 无数据
+		                        me.noData();
+		                    }
+		                    
+		                },
+		                error: function(xhr, type){
+		                    alert('Ajax error!');
+		                    // 即使加载出错，也得重置
+		                    me.resetload();
+		                }
+		            });
+
+                },1000);
+
+	        }
+	    });
+	});
+</script>
+</body>
+
+</html>
