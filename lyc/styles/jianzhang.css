@@ -1,0 +1,84 @@
+@charset "gb2312";
+/* 清除浮动 */
+.jz-region-list ul:after,.jz-txt-list:after,.jz-update ul:after{content:"";display:block;height:0;clear:both;visibility:hidden;}
+* html .jz-region-list ul,* html .jz-txt-list,* html .jz-update ul{display:inline-block;}
+* +html .jz-region-list ul,* +html .jz-txt-list,* +html .jz-update ul{display:inline-block;}
+
+
+
+/* 省份直达 */
+.jz-tit-bar{height:30px;line-height:30px;background-color:#ededed;padding-right:15px;margin:0 auto 10px; }
+.jz-tit-bar h2,.jz-tit-bar h3{display:inline; float:left;font-weight:normal;}
+.jz-tit-bar h2{font-size:110%;padding:0 0.72em;background-color:#bc2c09;}
+.jz-tit-bar h2,.jz-tit-bar h2 a{color:#fff;}
+.jz-tit-bar h3{padding-left:10px;font-size:90%;color:#666666;}
+.jz-tit-bar a.more{float:right;font-size:16px;}
+.jz-region-list{width:100%;position:relative;overflow:hidden;padding-bottom:25px;}
+.jz-region-list ul{height:54px; overflow: hidden;overflow:hidden;}
+.jz-region-list li{width:25%;float:left;padding:0 0.72em 10px 0.72em;white-space:nowrap;transition:all 0.3s ease-in;-webkit-transition: all 0.3s ease-in;}
+.jz-region-list li a{display:block;height:22px;line-height:22px;padding:0 10px; text-align:center;background-color:#e4354f;color:#fff;}
+.jz-region-list li a{*display:inline;}
+.jz-region-list li a:hover{background-color:#f60f32; color:#fff;}
+.icon-down{ width:10px;height:5px; background:url(img/sanjiao_white.png) no-repeat; display:inline-block;margin:0 3px; background-size:100% 100%;vertical-align: middle;}
+.active .icon-down{transform:rotate(180deg);-webkit-transform:rotate(180deg);-ms-transform:rotate(180deg);-o-transform:rotate(180deg);-moz-transform:rotate(180deg);}
+.jz-region-list ul.active{ height:inherit;}
+.jz-region-list ul li.toggle-li ~ li{transform:translate3d(0,-10px,0);-webkit-transform:translate3d(0,-10px,0);opacity:0;}
+.jz-region-list ul.active li.toggle-li ~ li{-webkit-transform:translate3d(0,0,0);transform:translate3d(0,0,0);opacity:1;}
+
+/* 最近更新 */
+.jz-update{width:100%;position:relative;overflow:hidden;margin-bottom:10px;}
+.jz-update .update-title{width:100%;position:relative;border-bottom:1px solid #d2d2d2;padding:0 10px;font-size:140%;line-height:1.2em;font-weight:bold;margin:0 auto 10px;color:#000;white-space:nowrap; text-align:center;}
+.jz-update .update-title em{color:#bc2c09;}
+.jz-update .update-title b{color:#f00;}
+.jz-update .update-title .line-s{border-bottom:3px solid #bc2c09;display:inline-block;padding:0 5px;padding-bottom:8px; position: relative;top: 2px;}
+.jz-update .update-title span.line{display:block;width:98px;height:3px;font-size:2px;background-color:#bc2c09;position:absolute;left:0;bottom:-2px;}
+.jz-update .update-time{display:block;text-align:center;padding-bottom:20px;color:#000;}
+.jz-update .update-time .info{color:#666666; display:block;}
+.jz-update .update-list{width:105%;}
+.jz-update .update-list-100{ width:100%;}
+.jz-update .update-list li{margin:0 0 10px 0.72em;float:left;position:relative;}
+.jz-update .update-list li a{display:inline-block;height:26px;line-height:26px;padding:0 10px;border:1px solid #f00;border-radius:12px; color:#f00;position:relative;z-index:3;background-color:#fff;}
+.jz-update .update-list li a{*display:inline;*overflow:hidden;}
+.jz-update .update-list li a:hover{background-color:#f60f32;border-color:#f60f32; color:#fff;}
+.jz-update .update-list li b{display:inline-block;width:20px;height:20px;line-height:20px;text-align:center;color:#fff;font-size:80%;position:absolute;right:-8px;top:-8px;background-color:#f00;font-weight:normal;border-radius:50%;z-index:99;}
+
+/* 院校免单 */
+.jz-big-title{padding:10px 0.72em; text-align:center;background-color:#bc2c09;font-size:140%;font-weight:normal;margin:0 auto;line-height:1.3em;}
+.jz-big-title,.jz-big-title a{color:#fff;}
+.jz-m-box{margin:0 auto;}
+.jz-m-box .jz-tit-bar{margin-bottom:0;}
+.jz-m-box .cont{padding:0.72em 0 15px 0.72em;}
+.jz-m-box .jz-txt-list li{margin-right:10px;padding-left:10px;height:26px;line-height:26px;overflow:hidden;;white-space:nowrap;text-overflow:ellipsis;}
+.jz-m-box .jz-txt-list li a,.jz-m-box .jz-txt-list li b{vertical-align:middle;}
+.jz-m-box .jz-txt-list li a{padding-right:8px;color:#666666;float:left;position:relative;}
+.jz-m-box .jz-txt-list li a:before{ content:" ";width:4px;height:4px;display:block;background:#bc2c09;border-radius:100%; position:absolute;top:50%;left:-10px;margin-top:-2px;}
+.jz-m-box .jz-txt-list-1 li{width:48%;margin-right:2%;     float: left; }
+.jz-m-box .jz-txt-list-2 li{width:356px;}
+
+.jz-txt-list .i-text{ float:right; height:15px;line-height:15px;font-size:70%;padding:0 4px;   margin-top: 4px;}
+.jz-txt-list-1 li .i-text{float:none; display:inline-block;float:left;}
+.jz-txt-list-1 li a{float:none;}
+
+/*  微信扫码  */
+.wxad-section{ background:#fff;padding:1.2em 0.72em;}
+.wxad-section .img{width:80px;float:left;}
+.wxad-section .det{margin-left:90px;}
+.wxad-section .det h3{font-size:125%;line-height:20px;font-weight:400;margin-bottom:0.62em;overflow:hidden;white-space:nowrap;text-overflow:ellipsis;}
+.wxad-section .det p{color:#8b8b8b;margin-bottom:6px; overflow:hidden;white-space:nowrap;text-overflow:ellipsis;}
+.a-attention{display:inline-block;line-height:20px;padding:0 6px;border:1px solid #f20000;color:#f20000;border-radius:3px;font-size:80%;}
+.icon-eye{width:18px;height:10px;display:inline-block; background:url(img/ico-view-gray.png) no-repeat;background-size:100% 100%;margin-left:10px;position:relative;top:2px;}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

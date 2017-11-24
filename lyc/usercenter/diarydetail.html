@@ -1,0 +1,206 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="gb2312">
+<title>看病记详情|良医城手机站</title>
+<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no">
+<meta name="format-detection" content="telephone=no">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<link href="../styles/common.css" rel="stylesheet">
+<link href="../styles/content.css" rel="stylesheet">
+<script src="../styles/js/jquery.min.js"></script>
+<script src="../styles/js/common.js"></script>
+<script>
+$(function(){
+	$('#edit-bar a').click(function(){
+		$(this).parent().addClass('active').siblings().removeClass('active');
+		$('#edit-tabcon .tab-panel').eq($(this).parent().parent().find('li').index($(this).parent())).slideDown().siblings('.tab-panel').hide();
+		$('#sq-btn').css('display','block');
+	});
+	$('#sq-btn').click(function(){
+		$('#edit-bar li').removeClass('active');
+		$('#edit-tabcon .tab-panel').slideUp();
+		$('#sq-btn').hide();
+	});
+})
+function showPanel(id){
+	var obj = $('#'+id);
+	obj.addClass('open');
+}
+function closePanel(id){
+	var obj = $('#'+id);
+	obj.removeClass('open');
+}
+
+function editTit(obj){
+	var title = $(obj).parent().find('.d-title').text();
+	$('#titPagePanel').find('.text').val(title).focus();
+	showPanel('titPagePanel');
+}
+function editTxt(obj){
+	var title = $(obj).parent().find('.d-content').text();
+	$('#txtPagePanel').find('.textarea').val(title).focus();
+	showPanel('txtPagePanel');
+}
+function editPic(obj){
+	var title = $(obj).parent().find('.d-content').text();
+	$('#txtPagePanel').find('.textarea').val(title).focus();
+	showPanel('picPagePanel');
+}
+
+function editData(obj){
+	$('#edit-bar').show();
+	$('#editCon').addClass('edit-enable');
+	$(obj).html('返回').attr('onclick','closeEdit(this)');
+}
+function closeEdit(obj){
+	$('#edit-bar').hide();
+	$('#editCon').removeClass('edit-enable');
+	$(obj).html('编辑').attr('onclick','editData(this)');
+}
+function removeData(obj){
+	$(obj).parent().slideUp(200,function(){
+		$(obj).parent().remove();
+	})
+}
+</script>
+</head>
+
+<body class="ucenter-body">
+
+<div class="ucenter-header">
+	<div class="ucenter-back"><a href="javascript:void(0);" class="btn-back"></a></div>
+	<div class="ucenter-title"><h3>查看看病记</h3></div>
+	<div class="ucenter-mu"><a href="javascript:void(0);" onclick="editData(this)" class="btn-mu">编辑</a></div>
+</div>
+
+
+<div class="ucenter-containar" id="editCon">
+	
+	<ul class="edit-bar diabled" id="edit-bar">
+		<li><a href="#"><i class="i_tit"></i><span>添加标题</span></a></li>
+		<li><a href="#"><i class="i_pic"></i><span>添加图片</span></a></li>
+		<li><a href="#"><i class="i_txt"></i><span>添加文本</span></a></li>
+	</ul>
+	<div class="edit-tabcon" id="edit-tabcon">
+		<div class="tab-panel">
+			<input type="text" class="text" placeholder="输入标题" />
+			<a href="#" class="btn btn-blue">提交</a>
+		</div>
+		<div class="tab-panel">
+			<div class="upload-imgs clearfix">
+				<a href="#" class="btn-photo"></a>
+				<a href="#" class="btn-photo plus"></a>
+			</div>
+			<a href="#" class="btn btn-blue">提交</a>
+		</div>
+		<div class="tab-panel">
+			<textarea class="text"></textarea>
+			<a href="#" class="btn btn-blue">提交</a>
+		</div>
+		<a href="javascript:void(0);" class="btn btn-more" id="sq-btn">收起</a>
+	</div>
+	
+	<div class="jianju-10"></div>
+	<div class="art-section">
+		<div class="art-head">
+			<h3 class="title">武汉华一教育：专门致力于艺术生文化课培训</h3>
+			<div class="info">
+				<span class="i-text red">艺考政策</span>
+				<span class="time">2015-12-04</span>
+				<span class="online-txt">当前【<span class="count">862</span>】人在线</span>
+			</div>
+		</div>
+		<div class="art-body">
+			<div class="dcon">
+				<h4 class="d-title"><span>这里是标题内容</span></h4>
+				<a href="javascript:void(0);" class="btn-del"  onClick="removeData(this)" title="删除">x</a>
+				<a href="javascript:void(0);" class="cover-edit" onClick="editTit(this)" title="编辑"></a>
+			</div>
+			<div class="dcon">
+				<div class="d-content">大连理工大学2016年美术类专业继续招生，各招生专业为雕塑和设计学类，我校将直接使用各省的艺术专业考试统考成绩录取。</div>
+				<a href="javascript:void(0);" class="btn-del" onClick="removeData(this)" title="删除">x</a>
+				<a href="javascript:void(0);" class="cover-edit" onClick="editTxt(this)" title="编辑"></a>
+			</div>
+			<div class="dcon">
+				<div class="d-image"><img src="../styles/img/1200.jpg" /></div>
+				<a href="javascript:void(0);" class="btn-del" onClick="removeData(this)" title="删除">x</a>
+				<a href="javascript:void(0);" class="cover-edit" onClick="editPic(this)" title="编辑"></a>
+			</div>
+			<div class="dcon">
+				<div class="d-content">招生省份将扩大至6个，包括河北省、内蒙古自治区、辽宁省、吉林省、黑龙江省和山东省。具体招生办法以我校2016年美术类专业招生简章为准，预计于2016年1月通过我校招生网发布，请考生及家长保持关注。</div>
+				<a href="javascript:void(0);" class="btn-del" onClick="removeData(this)" title="删除">x</a>
+				<a href="javascript:void(0);" class="cover-edit" onClick="editTxt(this)" title="编辑"></a>
+			</div>
+		</div>
+		
+	</div>
+
+</div>
+
+<div class="page-panel" id="titPagePanel">
+	<div class="page-head">
+		<div class="head-right"><a href="javascript:void(0);" ></a></div>
+		<div class="head-left"><a href="javascript:void(0);" class="btn-back"></a></div>
+		<div class="head-center">
+			<h2 class="title">修改标题</h2>
+		</div>
+	</div>
+	<div class="page-con">
+		<div class="panel-form">
+			<div class="row">
+				<input type="text" class="text" />
+			</div>
+			<div class="row">
+				<a href="#" class="btn btn-orange">保存</a>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="page-panel" id="txtPagePanel">
+	<div class="page-head">
+		<div class="head-right"><a href="javascript:void(0);" ></a></div>
+		<div class="head-left"><a href="javascript:void(0);"class="btn-back"></a></div>
+		<div class="head-center">
+			<h2 class="title">修改文本内容</h2>
+		</div>
+	</div>
+	<div class="page-con">
+		<div class="panel-form">
+			<div class="row">
+				<textarea class="textarea"></textarea>
+			</div>
+			<div class="row">
+				<a href="#" class="btn btn-orange">保存</a>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="page-panel" id="picPagePanel">
+	<div class="page-head">
+		<div class="head-right"><a href="javascript:void(0);" ></a></div>
+		<div class="head-left"><a href="javascript:void(0);"class="btn-back"></a></div>
+		<div class="head-center">
+			<h2 class="title">修改图片</h2>
+		</div>
+	</div>
+	<div class="page-con">
+		<div class="panel-form">
+			<div class="row">
+				<div class="upload-imgs clearfix">
+					<a href="#" class="btn-photo"></a>
+					<a href="#" class="btn-photo plus"></a>
+				</div>
+			</div>
+			<div class="row">
+				<a href="#" class="btn btn-orange">保存</a>
+			</div>
+		</div>
+	</div>
+</div>
+
+</body>
+</html>

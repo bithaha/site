@@ -1,0 +1,309 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="gb2312">
+<title>手机站主页|良医城</title>
+<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no">
+<meta name="format-detection" content="telephone=no">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<link href="styles/jquery.mmenu.all.css" rel="stylesheet">
+<link href="styles/common.css" rel="stylesheet">
+<link href="styles/index.css" rel="stylesheet">
+<script src="styles/js/jquery.min.js"></script>
+<script src="styles/js/common.js"></script>
+</head>
+
+<body>
+<div class="viewport">
+<header class="header">
+   <div class="logo"><img src="styles/img/logo.png" alt=""></div>
+   <a href="#menu" class="menu-btn"></a>
+   <a href="#" class="user-btn"></a>   
+   <nav id="menu">
+		<ul>
+			<li><a href="#">主页</a></li>
+			<li><a href="#">看病记</a></li>
+			<li><a href="#">问答</a></li>
+			<li class="last">
+				<!--<a href="#">登录</a><a href="#">注册</a>-->
+				<a href="#"><i class="i-user"></i>admin</a>
+			</li>
+		</ul>
+	</nav>
+</header>
+
+
+<!-- 轮播 -->
+<section class="swiper-container slide-banners">
+   <div class="swiper-wrapper">
+      <div class="swiper-slide banner-item"><img src="styles/img/demo/slide-banner-1.jpg" alt=""></div>
+      <div class="swiper-slide banner-item"><img src="styles/img/demo/slide-banner-1.jpg" alt=""></div>
+      <div class="swiper-slide banner-item"><img src="styles/img/demo/slide-banner-1.jpg" alt=""></div>
+   </div>
+   <div class="swiper-page"></div>
+</section>
+
+
+<!-- 导航菜单 -->
+<div class="swiper-container app-nav">
+   <div class="swiper-wrapper">
+      <div class="swiper-slide">
+         <div class="nav-item">
+         <a class="m-1" href="#"><i></i><span>看病记</span></a>
+         <a class="m-2" href="#"><i><b class="ico-txt-hot">热</b></i><span>成功病例</span></a>
+         <a class="m-3" href="#"><i></i><span>问答</span></a>
+         <a class="m-4" href="#"><i></i><span>找病例</span></a>
+         </div>
+      </div>
+      
+   </div>
+   <div class="swiper-page"></div> 
+</div>
+
+
+<!-- 头条 
+<section class="hot-news">
+   <div class="hot-item">
+      <h1 class="headline"><em>成功病例</em><a href="#">病例病例病例病例</a></h1>
+      <p class="summary">病例病例病例病例病例病例病例病例病例病例病例 ··· <a class="readmore" href="#">[ 详细 ]</a></p>
+   </div>
+   <div class="hot-item">
+      <h1 class="headline"><em>要闻</em><a href="#">要闻要闻要闻要闻</a></h1>
+      <p class="summary">今年是落实国务院实施意见、推进减少和规范加分工作实
+施的第一年，多项高考加分政策的调整 ··· <a class="readmore" href="#">[ 详细 ]</a></p>
+   </div>
+</section>
+-->
+<!-- 看病记 -->
+<div class="news-section">
+	 <div class="search-bar">
+      <div class="ipt-box"><input class="search-ipt" type="text" placeholder="病例/看病记/问答"></div>
+      <div class="btn-box"><input class="search-btn" type="button" value=""></div>
+   </div>
+	<div class="works-inner">
+      <div class="news-tit-bar">
+	  	 <a href="#" class="more"><i class="icon-eye"></i>看更多</a>
+         <h2 class="title">看病记</h2>
+      </div>
+      <div id="masonry" class="works">
+		<div class="works-item">
+			<div class="img"><a href="img_article.html"><img src="styles/img/demo/01.jpg" /></a></div>
+			<div class="txt"><span class="arrow-point"></span><a href="img_article.html"><span>爱琴海的独行</span></a></div>
+			<div class="desc">希腊这个名字，给我最深印象的是在儿时看过的动画片《圣斗士》里。那时希腊圣域是我心中这个世界上。<i class="icon-eye"></i></div>
+		</div>
+		<div class="works-item">
+			<div class="img"><a href="img_article.html"><img src="styles/img/demo/02.jpg" /></a></div>
+			<div class="txt"><span class="arrow-point"></span><a href="img_article.html"><span>爱琴海的独行</span></a></div>
+			<div class="desc">希腊这个名字，给我最深印象的是在儿时看过的动画片《圣斗士》里。那时希腊圣域是我心中这个世界上。<i class="icon-eye"></i></div>
+		</div>		
+		<div class="works-item">
+			<div class="img"><a href="img_article.html"><img src="styles/img/demo/04.jpg" /></a></div>
+			<div class="txt"><span class="arrow-point"></span><a href="img_article.html"><span>爱琴海的独行</span></a></div>
+			<div class="desc">希腊这个名字，给我最深印象的是在儿时看过的动画片《圣斗士》里。那时希腊圣域是我心中这个世界上。<i class="icon-eye"></i></div>
+		</div>	
+		<div class="works-item">
+			<div class="img"><a href="img_article.html"><img src="styles/img/demo/07.jpg" /></a></div>
+			<div class="txt"><span class="arrow-point"></span><a href="img_article.html"><span>爱琴海的独行</span></a></div>
+			<div class="desc">希腊这个名字，给我最深印象的是在儿时看过的动画片《圣斗士》里。那时希腊圣域是我心中这个世界上。<i class="icon-eye"></i></div>
+		</div>		
+		<div class="works-item">
+			<div class="img"><a href="img_article.html"><img src="styles/img/demo/11.jpg" /></a></div>
+			<div class="txt"><span class="arrow-point"></span><a href="img_article.html"><span>爱琴海的独行</span></a></div>
+			<div class="desc">希腊这个名字，给我最深印象的是在儿时看过的动画片《圣斗士》里。那时希腊圣域是我心中这个世界上。<i class="icon-eye"></i></div>
+		</div>		
+		<div class="works-item">
+			<div class="img"><a href="img_article.html"><img src="styles/img/demo/17.jpg" /></a></div>
+			<div class="txt"><span class="arrow-point"></span><a href="img_article.html"><span>爱琴海的独行</span></a></div>
+			<div class="desc">希腊这个名字，给我最深印象的是在儿时看过的动画片《圣斗士》里。那时希腊圣域是我心中这个世界上。<i class="icon-eye"></i></div>
+		</div>		
+	</div>
+   </div>
+</div>
+<div class="jianju-10"></div>
+<!-- 要闻 -->
+
+<!-- 成功病例 -->
+<section class="news-section">
+   
+   <div class="splendid-news">
+      <div class="news-tit-bar">
+	  	 <a href="#" class="more"><i class="icon-eye"></i>看更多</a>
+         <h2 class="title">成功病例</h2>
+      </div>
+      <ul class="c-news" id="c-news">
+		 <li>
+			<h3 class="title">爱琴海的独行爱琴海的独行爱琴海的独行</h3>
+			<div class="img">
+				<img src="styles/img/demo/01.jpg" /><img src="styles/img/demo/02.jpg" /><img src="styles/img/demo/07.jpg" />
+			</div>
+			<div class="info">
+				<span class="time">2015-11-04</span><span class="i-text i-text-border red">内科</span><i class="icon-eye"></i>
+			</div>
+		 </li>
+		 <li>
+			<h3 class="title">爱琴海的独行爱琴海的独行爱琴海的独行爱琴海的独行</h3>
+			<div class="img">
+				<img src="styles/img/demo/17.jpg" />
+			</div>
+			<div class="info">
+				<span class="time">2015-11-04</span><span class="i-text i-text-border green">儿科</span><i class="icon-eye"></i>
+			</div>
+		 </li>
+		 <li>
+			<h3 class="title">爱琴海的独行爱琴海的独行爱琴海的独行爱琴海的独行</h3>
+			<div class="img">
+				<img src="styles/img/demo/07.jpg" />
+			</div>
+			<div class="info">
+				<span class="time">2015-11-04</span><span class="i-text i-text-border gray">推广</span><i class="icon-eye"></i>
+			</div>
+		 </li>
+	 </ul>
+
+   </div>
+</section>
+<div class="jianju-10"></div>
+<!--问答-->
+<section class="news-section">
+   
+   <div class="hhcj-news">
+      <div class="news-tit-bar">
+	  	 <a href="#" class="more"><i class="icon-eye"></i>看更多</a>
+         <h2 class="title">热门问答</h2>
+      </div>
+	  <div class="ask-tag">
+	  	<ul>
+			<li class="i-asktag-1"><a href="#"><i></i><span>科学·技术</span></a></li>
+			<li class="i-asktag-2"><a href="#"><i></i><span>人文·社科</span></a></li>
+			<li class="i-asktag-3"><a href="#"><i></i><span>生活·娱乐</span></a></li>
+			<li class="i-asktag-4"><a href="#"><i></i><span>自然·生态</span></a></li>
+		</ul>
+	  </div>
+         <ul class="ask-list">
+            <li><h3 class="tit"><a href="#">北京哪家医院治疗心脏病最好？</a></h3>
+				<div class="body">
+					推荐去北京人民医院推荐去北京人民医院推荐去北京人民医院推荐去北京人民医院推荐去北京人民医院
+				</div>
+				<div class="foot">
+					<span class="tag-item"><i class="icon-yonghu"></i><span>夜一</span></span>
+					<span class="tag-item"><i class="icon-huida"></i><span>123</span></span>
+					<span class="tag-item"><i class="icon-eye"></i><span>123</span></span>
+				</div>
+			</li>
+			<li><h3 class="tit"><a href="#">北京哪家医院治疗心脏病最好？</a></h3>
+				<div class="body">
+					推荐去北京人民医院推荐去北京人民医院推荐去北京人民医院推荐去北京人民医院推荐去北京人民医院
+				</div>
+				<div class="foot">
+					<span class="tag-item"><i class="icon-yonghu"></i><span>夜一</span></span>
+					<span class="tag-item"><i class="icon-huida"></i><span>123</span></span>
+					<span class="tag-item"><i class="icon-eye"></i><span>123</span></span>
+				</div>
+			</li>
+			<li><h3 class="tit"><a href="#">北京哪家医院治疗心脏病最好？</a></h3>
+				<div class="body">
+					推荐去北京人民医院推荐去北京人民医院推荐去北京人民医院推荐去北京人民医院推荐去北京人民医院
+				</div>
+				<div class="foot">
+					<span class="tag-item"><i class="icon-yonghu"></i><span>夜一</span></span>
+					<span class="tag-item"><i class="icon-huida"></i><span>123</span></span>
+					<span class="tag-item"><i class="icon-eye"></i><span>123</span></span>
+				</div>
+			</li>
+			
+         </ul>
+   </div>
+</section>
+<div class="jianju-10"></div>
+<!-- 医院 -->
+<section class="news-section">
+   <div class="news-tit-bar">
+         <h2 class="title">医院</h2>
+      </div>
+   <div class="section-main yy-sear">
+      <div class="search-bar">
+         <div class="ipt-box"><input class="search-ipt" type="text" placeholder="搜医院"></div>
+         <div class="btn-box"><input class="search-btn" type="button" value=""></div>
+      </div>
+      <div class="college-list">
+        <ul>
+           <li><a href="#"><b class="ico-cafa"></b><span>北京肛肠医院</span></a></li>
+           <li><a href="#"><b class="ico-caa"></b><span>北京人民医院</span></a></li>
+           <li><a href="#"><b class="ico-tsinghua"></b><span>北京人民医院</span></a></li>
+           <li><a href="#"><b class="ico-hifa"></b><span>北京人民医院</span></a></li>
+           <li><a href="#"><b class="ico-tjarts"></b><span>北京人民医院</span></a></li>
+           <li><a href="#"><b class="ico-scfai"></b><span>北京人民医院</span></a></li>
+           <li><a href="#"><b class="ico-lumei"></b><span>北京人民医院</span></a></li>
+           <li><a href="#"><b class="ico-gzarts"></b><span>北京人民医院</span></a></li>
+           <li><a href="#"><b class="ico-xafa"></b><span>北京人民医院</span></a></li>
+        </ul>
+      </div>
+   </div>
+</section>
+
+
+
+<!-- 首页JS -->
+<script src="styles/js/swiper.min.js"></script>
+<script src="styles/js/index.js"></script>
+
+
+
+<!-- footer begin -->
+<footer class="footer">
+   <nav class="foot-nav"><a href="#">触屏版</a><a href="#">电脑版</a><a href="#">地图</a><a href="#">合作</a></nav>
+   <p>备案许可：鄂ICP备88888888号</p>
+   <p>良医城 · 版权所有</p>
+   <div class="copyright">Copyright &copy; 2008 - 2016 liangyicheng. All Rights Reserved</div>
+   <span class="foot-logo-ico"></span>
+</footer>
+<!--// footer end -->
+
+<!-- 返回顶部 -->
+<div class="gotop"></div>
+
+
+
+
+</div><!--// viewport -->
+
+
+
+<script src="styles/js/masonry.js"></script>
+<script>
+
+$(function(){
+	//瀑布流
+	var $container = $('#masonry');
+	$container.imagesLoaded( function(){
+		$container.masonry({
+			itemSelector : '.works-item',
+			gutterWidth : $container.width()*0.02,
+			isAnimated: true
+		});
+	});
+	
+	
+});
+
+$(function(){
+	$('#c-news li').each(function(){
+		var _this = $(this);
+		if(_this.find('.img').length > 0){
+			_this.addClass('col-'+_this.find('.img').find('img').length);
+		}else{
+			_this.addClass('col-0');
+		}
+	});
+	
+})
+</script>
+<script src="styles/js/jquery.mmenu.min.all.js"></script>
+<script>
+	$(function() {
+		$('nav#menu').mmenu();
+	});
+</script>
+</body>
+</html>
