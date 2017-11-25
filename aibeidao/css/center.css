@@ -1,0 +1,33 @@
+@charset "utf-8";
+/* CSS Document */
+/* 会员头部 */
+.cent-header{ background:#45bee0;}
+.cent-header .search{padding-top:20px;}
+.cent-header .logo{padding:10px 0;}
+.cent-header .logo img{height:60px;}
+.cent-header .search .txt{border:0;}
+.cent-header .search .sub{ background:#319cba;border:0;}
+
+.cent-layout{border-top:1px solid #ddd;margin-top:70px;}
+.cent-wraper{margin-top:-50px;margin-bottom:50px;}
+.cent-menu{width:120px;float:left;position:relative;}
+.cent-menu:after{ content:"";position:absolute;top:50px;right:0;background:#ddd;width:1px;height:100%;}
+.cent-menu .uimg{width:90px;height:90px;border-radius:100%;overflow:hidden;border:1px solid #ddd;margin:0 auto; box-shadow:0 0 5px 5px #fff;}
+.c-menu-list{margin-top:20px;}
+.c-menu-list li{ line-height:30px;}
+.c-menu-list li a{font-size:14px;color:#666;padding:0 10px; position:relative;}
+.c-menu-list li a:hover,.c-menu-list li.active a{ color:#45bee0;}
+.c-menu-list li.active a:before{ content:"";position:absolute;left:0;top:50%;margin-top:-2px;width:4px;height:4px;border-radius:100%;background:#45bee0;}
+.c-menu-list li.line{height:1px;background:#ddd;margin:10px 0;}
+
+.cent-content{margin-left:130px;}
+.chead-bar{margin-top:15px;}
+.chead-title{font-size:16px;color:#222;font-weight:normal;}
+
+.chead-con{margin:40px 0;}
+.ubase{float:left;width:330px;padding-left:30px;}
+.ubase .img{width:60px;height:60px;border-radius:100%;border:1px solid #ddd;overflow:hidden;float:left;}
+.ubase .img img{ max-width:100%;}
+.ubase .det{margin-left:70px;}
+.ubase .det .name{ font-weight:normal;font-size:15px;color:#444;}
+.i-vip{padding-left:25px;height:16px;line-height:16px; background:url(../images/vip.png) left no-repeat; display:inline-block;}

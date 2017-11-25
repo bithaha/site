@@ -1,0 +1,108 @@
+.grid{}
+.g-hd{ padding:10px 0; border-bottom-width:3px;border-bottom-style:solid;}
+.g-hd .title{ text-indent:-999px;overflow:hidden; background-image:url(../images/subtit.png); background-repeat:no-repeat;height:22px;line-height:22px;}
+.g-hd  .more{ background:url(../images/i_more.gif) right no-repeat;padding-right:15px;float:right;font-size:13px;}
+.g-bd{ padding:10px 0;}
+
+.g-bd:before,.g-bd:after{ display:table;content:" ";}
+.g-bd:after{ clear:both;}
+
+/* 育儿问答 */
+.ask-section{ width:350px;float:left;}
+.ask-section .g-hd{ border-bottom-color:#e50b0b;}
+.g-slide{ width:350px;}
+.g-slide .item{ position:relative;}
+.g-slide .item h4{ position:absolute;z-index:10;bottom:0;left:0;width:100%; color:#fff;background-color:rgba(0,0,0,0.6);font-weight:normal;line-height:30px;}
+.g-slide .item h4 a{color:#fff;margin:0 10px;}
+.g-slide .owl-dots{ position:absolute;right:10px;bottom:5px;z-index:20;}
+.g-slide .owl-dots .owl-dot{display:inline;padding:0 3px;}
+.g-slide .owl-dots .owl-dot span{display:inline-block;width:10px;height:10px;border-radius:50%;font-size:2px;overflow:hidden;background-color:#fff; cursor:pointer;}
+.g-slide .owl-dots .active span{ background-color:#e80000;}
+
+.n-list{margin:5px 0;}
+.n-list li{ vertical-align:text-bottom;line-height:30px;}
+.n-list li a{font-size:14px;color:#444; background:url(../images/circle_gray.png) left no-repeat;padding-left:20px;}
+.n-list li a:hover{ color:#e80000;}
+.n-list li .time{ float:right;}
+
+/* 启蒙教育 */
+.edu-section{ width:490px;float:left;margin-left:30px;}
+.edu-section .g-hd{ border-bottom-color:#40c0cb;}
+.edu-section .g-hd .title{ background-position:0 -30px;}
+
+.edu-section .img{float:left;width:150px;height:150px; overflow:hidden;}
+.edu-section .img img{ width:100%;}
+.edu-section .det{ padding-left:160px;}
+
+.e-list{}
+.e-list li{ vertical-align:text-bottom;line-height:30px;}
+.e-list li a{font-size:14px;color:#444;padding-left:10px;}
+.e-list li a:hover{ color:#40c0cb;}
+.e-list li .time{ float:right;}
+
+.i-text{ display:inline-block;padding:0 10px;line-height:20px;color:#fff;border-radius:3px;}
+.i-text.red{ background:#f35858;}
+.i-text.green{ background:#77d656;}
+
+
+/* 亲子乐园 */
+.math-section{ width:490px;float:left;margin-left:30px;}
+.math-section .g-hd{ border-bottom-color:#e2a71b;}
+.math-section .g-hd .title{ background-position:0 -90px;}
+
+.video-link-a{ font-size:14px;color:#222;margin-bottom:5px; display:inline-block;}
+
+
+/* 父母学堂 */
+.school-section{ width:300px;float:left;margin-left:30px;}
+.school-section .g-hd{ border-bottom-color:#5dc160;}
+.school-section .g-hd .title{ background-position:0 -60px;}
+
+.sch-tags{ width:100px;float:left;}
+.sch-tags a{ display:block;margin-bottom:10px; text-align:center;border:1px solid #5dc160;font-size:14px;color:#5dc160;border-radius:3px;}
+.sch-tags a:hover{ background:#5dc160;color:#fff;}
+
+.sch-det{ margin-left:110px;}
+.sch-det img{ max-width:100%;}
+.sch-det a{ line-height:20px; color: #222;}
+.sch-det a span{ font-size:14px;margin-top:5px; display:inline-block;}
+.sch-det a:hover{ color: #5dc160;}
+
+
+
+/* 许愿墙 */
+.wishing-section{ width:300px;float:left;margin-left:30px;}
+.wishing-section .g-hd{ border-bottom-color:#bf5ed0;}
+.wishing-section .g-hd .title{ background-position:0 -120px;}
+
+.wishing-wall{ margin-top:-10px;margin-bottom:-10px; background:#f9e8fd; position:relative; height:320px;}
+.wishing-wall .wish{position:absolute; background-repeat:no-repeat;}
+.wishing-wall .w-1{top:10px;left:10px;z-index:1; width:89px;height:92px; background-image:url(../images/wishing-note-1.png);}
+.wishing-wall .w-2{top:50px;left:100px;z-index:2; width:131px;height:135px; background-image:url(../images/wishing-note-2.png);}
+.wishing-wall .w-3{top:5px;left:180px;z-index:3; width:94px;height:94px; background-image:url(../images/wishing-note-3.png);}
+.wishing-wall .w-4{top:100px;left:20px;z-index:4; width:88px;height:95px; background-image:url(../images/wishing-note-4.png);}
+.wishing-wall .w-5{top:160px;left:70px;z-index:5; width:132px;height:135px; background-image:url(../images/wishing-note-5.png);}
+.wishing-wall .w-6{top:130px;left:180px;z-index:6; width:132px;height:135px; background-image:url(../images/wishing-note-6.png);}
+.wishing-wall .wish span{margin:10px;display:inline-block;color:#000; line-height:20px;}
+
+.wishing-wall .w-2 span{margin-top:50px;}
+.wishing-wall .w-3 span{margin-top:40px;margin-left:15px;}
+.wishing-wall .w-4 span{margin-top:30px;}
+.wishing-wall .w-5 span{margin-top:50px;}
+.wishing-wall .w-6 span{margin-top:40px;margin-left:30px;}
+
+/* 亲子游 */
+.holidays-section{ }
+.holidays-section .g-hd{ border-bottom-color:#45bee0;}
+.holidays-section .g-hd .title{ background-position:0 -150px;}
+
+
+.hol-slide{ width:1200px;}
+.hol-slide-item{ overflow:hidden;}
+.hol-slide-item img{ max-width:100%;}
+.hol-slide-item a.link{ color:#444;font-size:14px;line-height:30px;margin-top:5px;display:block;padding:0 10px;}
+.hol-slide-item a.link:hover{ color:#21b5df;}
+.owl-prev{ width:50px;height:90px;display:block; background:url(../images/slide-btns.png) 0 -50px no-repeat; text-indent:-9999px; cursor:pointer;position:absolute;left:10px;top:50%;margin-top:-45px;}
+.owl-next{ width:50px;height:90px;display:block; background:url(../images/slide-btns.png) -45px -50px no-repeat; text-indent:-9999px; cursor:pointer;position:absolute;right:10px;top:50%;margin-top:-45px;}
+
+

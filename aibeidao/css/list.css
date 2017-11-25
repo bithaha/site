@@ -1,0 +1,50 @@
+.header{ margin-bottom:20px;}
+
+
+/* 公共  */
+.btn-default { display: inline-block; line-height: 14px; height: 14px; border-radius: 2px; background: #F7F7F7; text-align: center; text-decoration: none; cursor: pointer; border: 1px solid #DDD; padding: 4px 13px 5px; color: #666; background-color: #f7f7f7; background-repeat: repeat-x; background-image: -moz-linear-gradient(top, #f7f7f7, #f2f2f2); background-image: -webkit-linear-gradient(top, #f7f7f7, #f2f2f2); background-image: -o-linear-gradient(top, #f7f7f7, #f2f2f2); background-image: linear-gradient(top, #f7f7f7, #f2f2f2); filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#f7f7f7', endColorstr='#f2f2f2', GradientType=0);
+}
+.p-price strong { color: #e4393c; font-weight: 400; font-family: Verdana; }
+
+
+/*  头部热卖推荐  */
+.hot-sales { position: relative; height: 152px; padding-left: 80px; padding-right: 80px; margin-bottom: 15px; background-color: #f1f1f1 }
+.hot-sales .hot-sales-act { width: 200px; height: 152px; position: absolute; right: 0; top: 0; padding-left: 50px }
+.hot-sales .hot-sales-act .hd { width: 30px; height: 60px; position: absolute; left: 0; top: 0; line-height: 18px; padding: 20px 10px 0 5px; font-size: 14px; text-align: center; font-family: "microsoft yahei"; color: #f60; background: url(../images/list.icons.other.png) no-repeat }
+.hot-sales .hot-sales-act .bd { height: 135px; overflow: hidden; padding-top: 15px; padding-right: 10px }
+.hot-sales .hot-sales-act .bd li { width: 165px; height: 22px; overflow: hidden; line-height: 22px; margin-bottom: 5px; text-overflow: ellipsis; white-space: nowrap; font-family: simsun }
+.hot-sales .hot-sales-act .bd .market-adlist li { height: 47px; line-height: 47px; margin-bottom: 10px; padding-left: 10px }
+.hot-sales .hot-sales-act .bd .market-adlist li img { border: 1px solid #ddd }
+.hot-sales-main { width: 100%; height: 137px; padding-top: 15px }
+.hot-sales-main .hd { width: 30px; height: 60px; position: absolute; left: 20px; top: 0; line-height: 18px; padding: 20px 10px 0 5px; font-size: 14px; text-align: center; font-family: "microsoft yahei"; color: #f60; background: url(../images/list.icons.other.png) no-repeat }
+.hot-sales-main .bd { width: 100%; height: 122px; overflow: hidden }
+.hot-sales-main dl { width: 264px; height: 100px; overflow: hidden; float: left; *display:inline;
+margin-right: 20px; margin-left: 10px; margin-bottom: 15px; padding: 11px; background-color: #fff }
+.hot-sales-main dt { float: left; width: 100px; height: 100px; padding: 0; margin-right: 10px }
+.hot-sales-main dt img { width: 100px; height: 100px }
+.hot-sales-main dd { float: left; width: 154px }
+.hot-sales-main dd .p-price { height: 20px; line-height: 20px; overflow: hidden; padding-top: 5px; color: #666 }
+.hot-sales-main dd .p-price strong { font-family: verdana; font-weight: 700 }
+.hot-sales-main dd .p-name { height: 40px; line-height: 20px; overflow: hidden; padding-top: 5px }
+.hot-sales-main dd .btns { padding-top: 3px; height: 27px; overflow: hidden }
+.hot-sales-main dd .btns a { display: inline-block; line-height: 14px; height: 14px; border-radius: 2px; background: #F7F7F7; text-align: center; text-decoration: none; cursor: pointer; border: 1px solid #DDD; padding: 4px 13px 5px; color: #666; background-color: #f7f7f7; background-repeat: repeat-x; background-image: -moz-linear-gradient(top, #f7f7f7, #f2f2f2); background-image: -webkit-linear-gradient(top, #f7f7f7, #f2f2f2); background-image: -o-linear-gradient(top, #f7f7f7, #f2f2f2); background-image: linear-gradient(top, #f7f7f7, #f2f2f2); filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#f7f7f7', endColorstr='#f2f2f2', GradientType=0)
+}
+.hot-sales-main dd .btns a:hover { text-decoration: none; box-shadow: 0 1px 1px rgba(0,1,1,.08); cursor: pointer; color: #666 }
+.hot-sales-main ul { _height: 137px }
+.hot-sales-main li { width: 264px; height: 100px; overflow: hidden; float: left; *display:inline;
+margin-right: 20px; margin-left: 10px; margin-bottom: 15px; padding: 11px; background-color: #fff }
+.hot-sales-main li .p-img { float: left; width: 100px; height: 100px; padding: 0; margin-right: 10px }
+.hot-sales-main li .p-img img { width: 100px; height: 100px }
+.hot-sales-main li .p-price { height: 20px; line-height: 20px; overflow: hidden; padding-top: 5px; color: #666 }
+.hot-sales-main li .p-price .number { font-weight: 700 }
+.hot-sales-main li .p-name { display: block; height: 40px; line-height: 20px; overflow: hidden; padding-top: 5px }
+.hot-sales-main li .p-btnbox { padding-top: 3px; height: 27px; overflow: hidden }
+
+
+/* 面包屑导航  */
+.crumbs-bar { position: relative; margin-bottom: 10px; z-index: 5 }
+.crumbs-nav { height: 24px; line-height: 24px }
+.crumbs-nav-item { float: left; margin-right: 8px }
+.crumbs-link, .crumbs-nav-item .menu-drop, .crumbs-nav-item .selector-set { float: left; margin-right: 5px }
+.crumbs-arrow { font-family: simsun; font-style: normal }
+.one-level .crumbs-link { font-size: 18px; font-weight: 700; font-family: "microsoft yahei" }
