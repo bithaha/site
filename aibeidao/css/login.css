@@ -1,0 +1,62 @@
+@charset "utf-8";
+/* CSS Document */
+
+*{margin:0;padding:0;box-sizing:border-box;}
+html,body{width:100%;height:100%;}
+body{ font-family:"Microsoft YaHei";overflow:hidden;}
+input{font-family:"Microsoft YaHei"}
+img{border:0;max-width:100%!important;}
+a,input,textarea{ -moz-transition: all 0.1s ease-in;  -webkit-transition: all 0.1s ease-in;  -o-transition: all 0.1s ease-in;  transition: all 0.1s ease-in;outline:none; text-decoration:none;}
+.row:after,.row:before{
+	display:table;
+	content:" ";
+}
+.row:after{clear:both;}
+.fl{float:left;}
+.fr{float:right;}
+
+
+.login-c{width:400px;margin:0 auto;background:url(../images/opa_black50.png);}
+.logo{padding-top:40px; text-align:center;margin-bottom:40px;}
+.logo img{}
+.foot-txt{position:absolute;bottom:20px;width:100%; text-align:center;font-size:13px;}
+
+.login-con{width:80%;margin:0 auto;padding:30px 0;}
+
+.login-form{color:#fff;font-size:13px; text-align:left;}
+.login-form a{color:#fff;font-size:13px;}
+.login-form .row{margin-bottom:20px;position:relative;font-size:0;}
+.login-form .title{color:#fff;font-weight:normal;font-size:16px;}
+.login-form input[type="text"],.login-form input[type="password"]{border:1px solid #fff;;padding:10px;outline:none;background:none;position:relative;z-index:10;width:100%;color:#fff;*width:96%;*padding:10px 2%;}
+.login-form .placeholder{position:absolute;font-size:13px;padding:0 10px;    top: 10px;z-index:1;}
+.userTxt,.pwdTxt{}
+.login-form input.codeTxt{width:48%;margin-right:2%; vertical-align: middle;*width:44%;*padding:10px 2%;*margin:0 1% 0 0;}
+.login-form .codeBtn{width:50%;line-height:39px; background:#f4bd15;color:#fff; text-align:center;display:inline-block; vertical-align:middle;}
+.codeBtn:hover{ background:#e8af00;}
+
+.code-img{ vertical-align: middle;width:50%;}
+.icon-user{width:20px;height:20px;display:inline-block; background:url(../images/user_icon.png) no-repeat;}
+.icon-pwd{width:20px;height:20px;display:inline-block; background:url(../images/pwd_icon.png) no-repeat;}
+.icon-phone{width:16px;height:25px;display:inline-block; background:url(../images/phone_icon.png) no-repeat;}
+.login-form .icon-user,.login-form .icon-pwd,.login-form .icon-phone{position:absolute;right:10px;top:8px;z-index:1;}
+.subBtn{width:100%;padding:10px;background:#fff;color:#222;text-align:center;border:0;outline:none; cursor:pointer;}
+.subBtn:hover{ background:#f6f6f6;}
+.bg-img{position:absolute;z-index:-1;width:100%;height:100%;top:0;left:0;}
+
+.checkbox{background:url(../images/checkbox.png) left no-repeat;padding-left:15px; display:inline-block;font-size:12px; cursor:pointer;}
+.checkbox.active{background:url(../images/checkbox_active.png) left no-repeat;}
+.tips{background:#fff;padding:0 10px;line-height:20px;color:red;font-size:12px;position:absolute;top:100%;right:0;}
+
+.i-qq,.i-wx,.i-wb{width:70px;height:70px;display:inline-block; background-image:url(../images/login_icon.png); background-repeat:no-repeat;}
+.i-wx{ background-position:0 -70px;}
+.i-wb{ background-position:0 -140px;}
+.other-login h3{margin:20px 0 10px;color:#fff;padding:6px 0;border-bottom:1px solid rgba(255,255,255,0.2); text-align:center;font-size:13px;font-weight:normal;}
+.other-login ul{ overflow:hidden;}
+.other-login li{float:left;width:33.33333333%; text-align:center; list-style:none;}
+.other-login li span{ display:block;color:#fff;font-size:12px; text-align:center;margin-top:5px;}
+
+
+@media (max-width: 1200px){
+	body{ background:none!important;}
+}
+
