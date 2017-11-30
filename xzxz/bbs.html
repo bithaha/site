@@ -1,0 +1,1016 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>论坛————欢迎来到象足行者网站</title>
+<link type="text/css" href="./css/common.css" rel="stylesheet" />
+<link type="text/css" href="./css/bbs.css" rel="stylesheet" />
+<script type="text/javascript" src="./js/jquery-1.8.0.min.js"></script>
+<script type="text/javascript" src="./js/common.js"></script>
+
+<script>
+$(function(){
+	$('#fzq_box li').hover(function(){
+		$(this).find('.bbs_index_xzltquan').css('display','none');
+	},function(){
+		$(this).find('.bbs_index_xzltquan').css('display','block');
+	});
+	
+	$('.bbs_index_pxhd_box ul li').mouseover(function(){
+		$(this).find('.bbs_index_pxhd_boxt').removeClass('la_1').addClass('la_0').parent().siblings().find('.bbs_index_pxhd_boxt').removeClass('la_0').addClass('la_1');
+		$(this).find('.bbs_index_pxhd_divhover').removeClass('la_0').addClass('la_1').parent().siblings().find('.bbs_index_pxhd_divhover').removeClass('la_1').addClass('la_0');
+	});
+	
+	$("#bbs_f_con").find('.bs_f_turn').find('a').click(function(){
+		window.clearInterval(bbs_int);
+		bbs_show($("#bbs_f_con").find('.bs_f_turn').find('a').index($(this)));
+		bbs_int=setInterval("bbs_autoSlide()",bbs_slideTime);
+	});
+})
+/*banner切换*/
+var bbsIndex=0;
+var bbs_time=800;
+var bbs_slideTime=5000;
+var bbs_int=setInterval("bbs_autoSlide()",bbs_slideTime);
+
+
+function bbs_autoSlide(){
+	bbsIndex+1>=$("#bbs_f_bg li").size()?bbsIndex=-1:false;
+	bbs_show(bbsIndex+1);
+}
+function bbs_show(index){
+	$("#bbs_f_con").find('.bs_f_turn').find('a').eq(bbsIndex).removeClass('banner_now');
+	$("#bbs_f_con").find('.bbs_f_txt').find('h4').eq(bbsIndex).css({'display':'none'});
+	$("#bbs_f_bg li").eq(bbsIndex).stop(false,true).fadeOut(bbs_time);
+	
+	$("#bbs_f_bg li").eq(index).stop(false,true).fadeIn(bbs_time);
+	$("#bbs_f_con").find('.bs_f_turn').find('a').eq(index).addClass('banner_now');
+	$("#bbs_f_con").find('.bbs_f_txt').find('h4').eq(index).css({'display':'block'});
+	bbsIndex=index;
+}
+</script>
+</head>
+
+<body>
+<!--头部-->
+<div class="header">
+	<div class="top">
+    	<div class="top_main">
+        	<div class="top_left">
+            	<ul>
+                	<li><a href="#" class="po_now">广州站</a></li>
+                    <li><a href="#">杭州站</a></li>
+                    <li><a href="#">上海站</a></li>
+                    <li><a href="#">西藏站</a></li>
+                    <li><a href="#">东北站</a></li>
+                    <li><a href="#">云南站</a></li>
+                    <li><a href="#">元阳站</a></li>
+                    <li><a href="#">坝上站</a></li>
+                    <li class="top_left_more" id="top_more"><a href="#">更多<img src="./images/x.gif" /></a>
+                    	<div class="top_left_more_d">
+                        	<a href="#">北京站</a><a href="#">北京站</a><a href="#">北京站</a><a href="#">北京站</a>
+                        </div>
+                    </li>
+                    <li class="head_weixin"><a href="#"><img src="./images/x.gif" />+微信</a></li>
+                    <li class="head_weibo"><a href="#"><img src="./images/x.gif" />+微博</a></li>
+                </ul>
+            </div>
+            <div class="top_right">
+            	<ul>
+                	<li><a href="#">登录</a></li>
+                    <li><a href="#">注册</a></li>
+                    <li><a href="#">帮助中心</a></li>
+                    <li class="fast_nav" id="fast_nav"><a href="#">快速导航<img src="./images/x.gif" /></a>
+                    	<div>
+                        	<a href="#">帮助中心</a><a href="#">帮助中心</a><a href="#">帮助中心</a><a href="#">帮助中心</a>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    
+    <div class="head_wraper">
+    	<div class="head_wrper_main">
+        	<div class="head_logo"><a href="#"><img src="./images/head_logo.png" /></a></div>
+            <div class="head_search">
+            	<div class="head_search_box">
+                    <span class="search_select_t" id="search_select_t"><label>全部</label><img src="./images/x.gif" /></span>
+                    <ul class="search_select_c" id="search_select_c">
+                    	<li class="search_select_now"><a href="#">全部</a></li>
+                        <li><a href="javascript:;">活动</a></li>
+                        <li><a href="javascript:;">象足行</a></li>
+                        <li><a href="javascript:;">图片</a></li>
+                        <li><a href="javascript:;">帖子</a></li>
+                        <li><a href="javascript:;">投票</a></li>
+                    </ul>
+                    <span class="search_text"><input type="text" value="" id="search_text"/><label>搜 目的地/游记/作品</label></span>
+                    
+                	<span class="search_sub"><input type="submit" value="搜  索"/></span>
+                </div>
+                <div class="head_hot_search">
+                	<span>热搜：<a href="#">塔川</a><a href="#">雾凇岛</a><a href="#">东川红土地</a>
+                    <a href="#">丽江</a><a href="#">三亚</a><a href="#">漠河</a><a href="#">哈尔滨</a></span>
+                </div>
+            </div>
+            <div class="head_active">
+            	<span class="fr">0</span><span class="fl"><a href="#">我的活动</a></span>
+            </div>
+            <div class="head_mycenter">
+            	<span><img src="./images/x.gif" /><a href="#">我的象足行</a></span>
+            </div>
+        </div>
+    </div>
+    
+    <div class="head_nav">
+    	<div class="head_nav_main">
+            <div class="head_nav_right">
+            	<a href="#" class="nav_mycenter"><img src="./images/x.gif" />个人中心</a>
+            </div>
+        	<div class="head_nav_t head_nav_t1" id="head_nav_t">
+            	<div class="head_nav_title"><h4>全部旅游产品分类<img src="./images/x.gif" /></h4></div>
+                <ul class="m_cate">
+                	<li class="m_cate_menu_1">
+                    	<div class="m_cate_type">
+                        	<i class="m_cate_icon"></i>
+                            <h2>象足国内游</h2>
+                            <b class="m_cate_arrow"></b>
+                        </div>
+                        <div class="m_cate_hote">
+                        	<a href="#">雪乡</a><a href="#">雪乡</a><a href="#">雪乡</a><a href="#">雪乡</a>
+                        </div>
+                        <div class="m_cate_ext">
+                        	<div class="m_cate_sub">
+                            	<dl class="m_cate_subItem">
+                                	<dd>
+                                    	<h3>东北1</h3>
+                                        <div class="m_cate_subCon">
+                                        	<a href="#">雪乡</a><a href="#">雪乡</a><a href="#">雪乡</a><a href="#">雪乡</a><a href="#">雪乡</a><a href="#">雪乡</a><a href="#">雪乡</a><a href="#">雪乡</a>
+                                        </div>
+                                    </dd>
+                                    <dd>
+                                    	<h3>东北1</h3>
+                                        <div class="m_cate_subCon">
+                                        	<a href="#">雪乡</a><a href="#">雪乡</a><a href="#">雪乡</a><a href="#">雪乡</a><a href="#">雪乡</a><a href="#">雪乡</a><a href="#">雪乡</a><a href="#">雪乡</a>
+                                        </div>
+                                    </dd>
+                                    <dd>
+                                    	<h3>东北1</h3>
+                                        <div class="m_cate_subCon">
+                                        	<a href="#">雪乡</a><a href="#">雪乡</a><a href="#">雪乡</a><a href="#">雪乡</a><a href="#">雪乡</a><a href="#">雪乡</a><a href="#">雪乡</a><a href="#">雪乡</a>
+                                        </div>
+                                    </dd>
+                                    <dd>
+                                    	<h3>东北1</h3>
+                                        <div class="m_cate_subCon">
+                                        	<a href="#">雪乡</a><a href="#">雪乡</a><a href="#">雪乡</a><a href="#">雪乡</a><a href="#">雪乡</a><a href="#">雪乡</a><a href="#">雪乡</a><a href="#">雪乡</a>
+                                        </div>
+                                    </dd>
+                                </dl>
+                            </div>
+                            <div class="m_cate_ads">
+                            	<div class="m_cate_adSub">
+                                	<h4>主题旅游</h4>
+                                    <div class="m_cate_adCun">
+                                    	<a href="#">春天花事</a><a href="#">西部神游</a><a href="#">蔚蓝大海</a><a href="#">最美秋色</a>
+                                    </div>
+                                </div>
+                                <div class="m_cate_adSub">
+                                	<h4>论坛推荐</h4>
+                                    <div class="m_cate_adCun">
+                                    	<a href="#">西部神游圈</a><a href="#">东部畅游圈</a>
+                                    </div>
+                                </div>
+                                <div class="m_cate_adimg">
+                                	<a href="#"><img src="images/adimg1.jpg" /></a>
+                                    <a href="#"><img src="images/adimg2.jpg" /></a>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="m_cate_menu_2">
+                    	<div class="m_cate_type">
+                        	<i class="m_cate_icon"></i>
+                            <h2>象足摄影游</h2>
+                            <b class="m_cate_arrow"></b>
+                        </div>
+                        <div class="m_cate_hote">
+                        	<a href="#">雪乡</a><a href="#">雪乡</a><a href="#">雪乡</a><a href="#">雪乡</a>
+                        </div>
+                        <div class="m_cate_ext">
+                        	<div class="m_cate_sub">
+                            	<dl class="m_cate_subItem">
+                                	<dd>
+                                    	<h3>东北2</h3>
+                                        <div class="m_cate_subCon">
+                                        	<a href="#">雪乡</a><a href="#">雪乡</a><a href="#">雪乡</a><a href="#">雪乡</a><a href="#">雪乡</a><a href="#">雪乡</a><a href="#">雪乡</a><a href="#">雪乡</a>
+                                        </div>
+                                    </dd>
+                                    <dd>
+                                    	<h3>东北2</h3>
+                                        <div class="m_cate_subCon">
+                                        	<a href="#">雪乡</a><a href="#">雪乡</a><a href="#">雪乡</a><a href="#">雪乡</a><a href="#">雪乡</a><a href="#">雪乡</a><a href="#">雪乡</a><a href="#">雪乡</a>
+                                        </div>
+                                    </dd>
+                                    <dd>
+                                    	<h3>东北2</h3>
+                                        <div class="m_cate_subCon">
+                                        	<a href="#">雪乡</a><a href="#">雪乡</a><a href="#">雪乡</a><a href="#">雪乡</a><a href="#">雪乡</a><a href="#">雪乡</a><a href="#">雪乡</a><a href="#">雪乡</a>
+                                        </div>
+                                    </dd>
+                                    <dd>
+                                    	<h3>东北2</h3>
+                                        <div class="m_cate_subCon">
+                                        	<a href="#">雪乡</a><a href="#">雪乡</a><a href="#">雪乡</a><a href="#">雪乡</a><a href="#">雪乡</a><a href="#">雪乡</a><a href="#">雪乡</a><a href="#">雪乡</a>
+                                        </div>
+                                    </dd>
+                                </dl>
+                            </div>
+                            <div class="m_cate_ads">
+                            	<div class="m_cate_adSub">
+                                	<h4>主题旅游</h4>
+                                    <div class="m_cate_adCun">
+                                    	<a href="#">春天花事</a><a href="#">西部神游</a><a href="#">蔚蓝大海</a><a href="#">最美秋色</a>
+                                    </div>
+                                </div>
+                                <div class="m_cate_adSub">
+                                	<h4>论坛推荐</h4>
+                                    <div class="m_cate_adCun">
+                                    	<a href="#">西部神游圈</a><a href="#">东部畅游圈</a>
+                                    </div>
+                                </div>
+                                <div class="m_cate_adimg">
+                                	<a href="#"><img src="images/adimg1.jpg" /></a>
+                                    <a href="#"><img src="images/adimg2.jpg" /></a>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="m_cate_menu_3">
+                    	<div class="m_cate_type">
+                        	<i class="m_cate_icon"></i>
+                            <h2>象足出境游</h2>
+                            <b class="m_cate_arrow"></b>
+                        </div>
+                        <div class="m_cate_hote">
+                        	<a href="#">雪乡</a><a href="#">雪乡</a><a href="#">雪乡</a><a href="#">雪乡</a>
+                        </div>
+                        <div class="m_cate_ext">
+                        	<div class="m_cate_sub">
+                            	<dl class="m_cate_subItem">
+                                	<dd>
+                                    	<h3>东北3</h3>
+                                        <div class="m_cate_subCon">
+                                        	<a href="#">雪乡</a><a href="#">雪乡</a><a href="#">雪乡</a><a href="#">雪乡</a><a href="#">雪乡</a><a href="#">雪乡</a><a href="#">雪乡</a><a href="#">雪乡</a>
+                                        </div>
+                                    </dd>
+                                    <dd>
+                                    	<h3>东北3</h3>
+                                        <div class="m_cate_subCon">
+                                        	<a href="#">雪乡</a><a href="#">雪乡</a><a href="#">雪乡</a><a href="#">雪乡</a><a href="#">雪乡</a><a href="#">雪乡</a><a href="#">雪乡</a><a href="#">雪乡</a>
+                                        </div>
+                                    </dd>
+                                    <dd>
+                                    	<h3>东北3</h3>
+                                        <div class="m_cate_subCon">
+                                        	<a href="#">雪乡</a><a href="#">雪乡</a><a href="#">雪乡</a><a href="#">雪乡</a><a href="#">雪乡</a><a href="#">雪乡</a><a href="#">雪乡</a><a href="#">雪乡</a>
+                                        </div>
+                                    </dd>
+                                    <dd>
+                                    	<h3>东北3</h3>
+                                        <div class="m_cate_subCon">
+                                        	<a href="#">雪乡</a><a href="#">雪乡</a><a href="#">雪乡</a><a href="#">雪乡</a><a href="#">雪乡</a><a href="#">雪乡</a><a href="#">雪乡</a><a href="#">雪乡</a>
+                                        </div>
+                                    </dd>
+                                </dl>
+                            </div>
+                            <div class="m_cate_ads">
+                            	<div class="m_cate_adSub">
+                                	<h4>主题旅游</h4>
+                                    <div class="m_cate_adCun">
+                                    	<a href="#">春天花事</a><a href="#">西部神游</a><a href="#">蔚蓝大海</a><a href="#">最美秋色</a>
+                                    </div>
+                                </div>
+                                <div class="m_cate_adSub">
+                                	<h4>论坛推荐</h4>
+                                    <div class="m_cate_adCun">
+                                    	<a href="#">西部神游圈</a><a href="#">东部畅游圈</a>
+                                    </div>
+                                </div>
+                                <div class="m_cate_adimg">
+                                	<a href="#"><img src="images/adimg1.jpg" /></a>
+                                    <a href="#"><img src="images/adimg2.jpg" /></a>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="m_cate_menu_4">
+                    	<div class="m_cate_type">
+                        	<i class="m_cate_icon"></i>
+                            <h2>象足华南游</h2>
+                            <b class="m_cate_arrow"></b>
+                        </div>
+                        <div class="m_cate_hote">
+                        	<a href="#">雪乡</a><a href="#">雪乡</a><a href="#">雪乡</a><a href="#">雪乡</a>
+                        </div>
+                        <div class="m_cate_ext">
+                        	<div class="m_cate_sub">
+                            	<dl class="m_cate_subItem">
+                                	<dd>
+                                    	<h3>东北4</h3>
+                                        <div class="m_cate_subCon">
+                                        	<a href="#">雪乡</a><a href="#">雪乡</a><a href="#">雪乡</a><a href="#">雪乡</a><a href="#">雪乡</a><a href="#">雪乡</a><a href="#">雪乡</a><a href="#">雪乡</a>
+                                        </div>
+                                    </dd>
+                                    <dd>
+                                    	<h3>东北4</h3>
+                                        <div class="m_cate_subCon">
+                                        	<a href="#">雪乡</a><a href="#">雪乡</a><a href="#">雪乡</a><a href="#">雪乡</a><a href="#">雪乡</a><a href="#">雪乡</a><a href="#">雪乡</a><a href="#">雪乡</a>
+                                        </div>
+                                    </dd>
+                                    <dd>
+                                    	<h3>东北4</h3>
+                                        <div class="m_cate_subCon">
+                                        	<a href="#">雪乡</a><a href="#">雪乡</a><a href="#">雪乡</a><a href="#">雪乡</a><a href="#">雪乡</a><a href="#">雪乡</a><a href="#">雪乡</a><a href="#">雪乡</a>
+                                        </div>
+                                    </dd>
+                                    <dd>
+                                    	<h3>东北4</h3>
+                                        <div class="m_cate_subCon">
+                                        	<a href="#">雪乡</a><a href="#">雪乡</a><a href="#">雪乡</a><a href="#">雪乡</a><a href="#">雪乡</a><a href="#">雪乡</a><a href="#">雪乡</a><a href="#">雪乡</a>
+                                        </div>
+                                    </dd>
+                                </dl>
+                            </div>
+                            <div class="m_cate_ads">
+                            	<div class="m_cate_adSub">
+                                	<h4>主题旅游</h4>
+                                    <div class="m_cate_adCun">
+                                    	<a href="#">春天花事</a><a href="#">西部神游</a><a href="#">蔚蓝大海</a><a href="#">最美秋色</a>
+                                    </div>
+                                </div>
+                                <div class="m_cate_adSub">
+                                	<h4>论坛推荐</h4>
+                                    <div class="m_cate_adCun">
+                                    	<a href="#">西部神游圈</a><a href="#">东部畅游圈</a>
+                                    </div>
+                                </div>
+                                <div class="m_cate_adimg">
+                                	<a href="#"><img src="images/adimg1.jpg" /></a>
+                                    <a href="#"><img src="images/adimg2.jpg" /></a>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="m_cate_menu_5">
+                    	<div class="m_cate_type">
+                        	<i class="m_cate_icon"></i>
+                            <h2>象足公司游</h2>
+                            <b class="m_cate_arrow"></b>
+                        </div>
+                        <div class="m_cate_hote">
+                        	<a href="#">雪乡</a><a href="#">雪乡</a><a href="#">雪乡</a><a href="#">雪乡</a>
+                        
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <div class="head_nav_list">
+            	<ul>
+                	<li><a href="index.html">首页</a></li>
+                    <li><a href="cn.html">国内游</a></li>
+                    <li><a href="out.html">出境游</a></li>
+                    <li><a href="hua.html">华南游</a></li>
+                    <li><a href="company.html">公司游</a></li>
+                    <li><a href="photography.html">象足摄影</a></li>
+                    <li><a href="legend.html">象足传奇</a></li>
+                    <li><a href="bbs.html" class="head_nav_now">象足论坛</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    
+</div>
+<!---->
+<!--主体部分-->
+<div class="content">
+	<div class="index_main">
+      <!---s 论坛TOP-->
+       <div class="bbs_index_topleft">
+    	<!---s 论坛左边幻灯-->
+    		<div class="bbs_index_flash">
+            	<div class="bbs_index_f_bg" id="bbs_f_bg">
+                	<ul>
+                    	<li style="display:block"><a href="#" target="_blank"><img src="images/bbs_index_flash.jpg" /></a></li>
+                        <li><a href="#" target="_blank"><img src="images/bbs_index_flash1.jpg" /></a></li>
+                        <li><a href="#" target="_blank"><img src="images/bbs_index_flash.jpg" /></a></li>
+                        <li><a href="#" target="_blank"><img src="images/bbs_index_flash1.jpg" /></a></li>
+                        <li><a href="#" target="_blank"><img src="images/bbs_index_flash.jpg" /></a></li>
+                        <li><a href="#" target="_blank"><img src="images/bbs_index_flash1.jpg" /></a></li>
+                    </ul>
+                </div>
+                <div class="bbs_index_f_control" id="bbs_f_con">
+                	<div class="bbs_f_txt">
+                    	<h4 class="current">云南元阳-罗平-东川 摄影团活动1</h4>
+                        <h4>云南元阳-罗平-东川 摄影团活动2</h4>
+                        <h4>云南元阳-罗平-东川 摄影团活动3</h4>
+                        <h4>云南元阳-罗平-东川 摄影团活动4</h4>
+                        <h4>云南元阳-罗平-东川 摄影团活动5</h4>
+                        <h4>云南元阳-罗平-东川 摄影团活动6</h4>
+                    </div>
+                    <div class="bs_f_turn">
+                    	<a href="javascript:;" class="banner_now"></a><a href="javascript:;"></a><a href="javascript:;"></a><a href="javascript:;"></a><a href="javascript:;"></a><a href="javascript:;"></a>
+                    </div>
+                </div>	
+            
+            </div>
+        <!---e 论坛左边幻灯-->
+        <!---s 论坛推荐-->	
+            <div class="bbs_index_toptuijian">
+       			<h3 class="bbs_index_toph3">论坛推荐</h3>
+               <div class="bbs_index_toptuijiao_box">
+                  <dl class="bbs_index_toptuijiao_boxdl">
+                		<dd><a href="#"><span>[游侠杭州圈]</span>天目好大雪！！！</a></dd>
+                		<dd><a href="#"><span>[游侠杭州圈]</span>天目好大雪！！！</a></dd>
+                        <dd><a href="#"><span>[游侠杭州圈]</span>天目好大雪！！！</a></dd>
+                        <dd><a href="#"><span>[游侠杭州圈]</span>天目好大雪！！！</a></dd>
+                        <dd><a href="#"><span>[游侠杭州圈]</span>天目好大雪！！！</a></dd>
+                	</dl>	
+                </div>
+       		</div>
+        <!---e 论坛推荐-->	
+        	</div>
+            
+        <!---s 论坛头条-->  
+        	<div class="bbs_index_toptiao">
+        		<h3 class="bbs_index_toph3" style="font-weight:bold;">今日头条</h3>
+        		<div class="bbs_index_toutiao_content">
+                	<div class="bbs_index_toutiao_div">
+                    	<h3><a href="#">安昌作业（二）：如诗的咖啡猫</a></h3>
+                        <p>
+                        	对不起各位亲了，现在才把贴子发出来。一是因为小鱼回来一直不得闲，二是因为集体照一直没拿到，所以一直未发帖。。。<a href="#" class="bbs_index_toutiao_a">[查看全文]</a>
+                        </p>
+                    </div>
+                    <div class="bbs_index_toutiao_div">
+                    	<h3><a href="#">安昌作业（二）：如诗的咖啡猫</a></h3>
+                        <p>
+                        	对不起各位亲了，现在才把贴子发出来。一是因为小鱼回来一直不得闲，二是因为集体照一直没拿到，所以一直未发帖。。。<a href="#" class="bbs_index_toutiao_a">[查看全文]</a>
+                        </p>
+                    </div>
+                    
+                     <dl class="bbs_index_toptuijiao_boxdl" style="border-top:1px solid #CCCCCC;">
+                		<dd><a href="#"><span>[游侠杭州圈]</span>踏雪天龙古道，登顶西天目主峰仙人顶</a></dd>
+                		<dd><a href="#"><span>[游侠杭州圈]</span>踏雪天龙古道，登顶西天目主峰仙人顶</a></dd>
+                        <dd><a href="#"><span>[游侠杭州圈]</span>踏雪天龙古道，登顶西天目主峰仙人顶</a></dd>
+                        <dd><a href="#"><span>[游侠杭州圈]</span>踏雪天龙古道，登顶西天目主峰仙人顶</a></dd>
+                        <dd><a href="#"><span>[游侠杭州圈]</span>踏雪天龙古道，登顶西天目主峰仙人顶</a></dd>
+                        <dd><a href="#"><span>[游侠杭州圈]</span>踏雪天龙古道，登顶西天目主峰仙人顶</a></dd>
+                        <dd><a href="#"><span>[游侠杭州圈]</span>踏雪天龙古道，登顶西天目主峰仙人顶</a></dd>
+                        <dd><a href="#"><span>[游侠杭州圈]</span>踏雪天龙古道，登顶西天目主峰仙人顶</a></dd>
+                        <dd><a href="#"><span>[游侠杭州圈]</span>踏雪天龙古道，登顶西天目主峰仙人顶</a></dd>
+                       
+                	</dl>	
+                </div>
+        	</div>
+         <!---e 论坛头条-->  
+         <!---s 论坛热门活动-->  	
+         	<div class="bbs_index_hd">
+         		<div class="bbs_index_hd_fatie"><a href="#">我要发帖</a></div>
+         		<h3 class="bbs_index_toph3" >热门活动</h3>	
+                   <div class="bbs_index_hd_box">
+                   		<ul>
+                   			<li><a href="#"><img src="images/bbs_index_img1.jpg" /></a><div><h3><a href="#">【冬日童话】登顶西天目主峰仙人顶</a></h3>时间：2013-3-3&nbsp;&nbsp;参与人数：100</div></li>
+                            <li><a href="#"><img src="images/bbs_index_img1.jpg" /></a><div><h3><a href="#">【冬日童话】登顶西天目主峰仙人顶</a></h3>时间：2013-3-3&nbsp;&nbsp;参与人数：100</div></li>
+                            <li><a href="#"><img src="images/bbs_index_img1.jpg" /></a><div><h3><a href="#">【冬日童话】登顶西天目主峰仙人顶</a></h3>时间：2013-3-3&nbsp;&nbsp;参与人数：100</div></li>
+                            
+                            <div class="clear"></div>
+                    	</ul>
+                        <dl>
+                        	<dd><a href="#">【冬日童话】登顶西天目主峰仙人顶</a></dd>
+                        	<dd><a href="#">【冬日童话】登顶西天目主峰仙人顶</a></dd>
+                            <dd><a href="#">【冬日童话】登顶西天目主峰仙人顶</a></dd>
+                            <dd><a href="#">【冬日童话】登顶西天目主峰仙人顶</a></dd>
+                            <dd><a href="#">【冬日童话】登顶西天目主峰仙人顶</a></dd>
+                            <dd><a href="#">【冬日童话】登顶西天目主峰仙人顶</a></dd>
+                        </dl>
+                   </div> 
+            
+            </div>
+            <div class="clear"></div>
+         <!---e 论坛热门活动--> 
+       <!---e 论坛TOP-->  
+         <div class="ext_erea clear"><a href="#"><img src="images/bbs_index_img2.jpg" /></a></div>
+         
+           <!---s 论坛精彩图库-->
+         	<div class="bbs_index_tuku">		
+            	<h3 class="bbs_index_toph3" >象足精彩图库</h3>	
+         		<ul>
+                	<li><a href="#"><img src="images/bbx_index_tukuimg1.jpg" /></a><p><a href="#">登顶西天目主峰仙人顶</a></p></li>
+                    <li><a href="#"><img src="images/bbx_index_tukuimg1.jpg" /></a><p><a href="#">登顶西天目主峰仙人顶</a></p></li>
+                    <li><a href="#"><img src="images/bbx_index_tukuimg1.jpg" /></a><p><a href="#">登顶西天目主峰仙人顶</a></p></li>
+                    <li><a href="#"><img src="images/bbx_index_tukuimg1.jpg" /></a><p><a href="#">登顶西天目主峰仙人顶</a></p></li>
+                    <li><a href="#"><img src="images/bbx_index_tukuimg1.jpg" /></a><p><a href="#">登顶西天目主峰仙人顶</a></p></li>
+                    <li><a href="#"><img src="images/bbx_index_tukuimg1.jpg" /></a><p><a href="#">登顶西天目主峰仙人顶</a></p></li>
+                    <li><a href="#"><img src="images/bbx_index_tukuimg1.jpg" /></a><p><a href="#">登顶西天目主峰仙人顶</a></p></li>
+                    <li><a href="#"><img src="images/bbx_index_tukuimg1.jpg" /></a><p><a href="#">登顶西天目主峰仙人顶</a></p></li>
+                    <li><a href="#"><img src="images/bbx_index_tukuimg1.jpg" /></a><p><a href="#">登顶西天目主峰仙人顶</a></p></li>
+                    <li><a href="#"><img src="images/bbx_index_tukuimg1.jpg" /></a><p><a href="#">登顶西天目主峰仙人顶</a></p></li>
+                    <li><a href="#"><img src="images/bbx_index_tukuimg1.jpg" /></a><p><a href="#">登顶西天目主峰仙人顶</a></p></li>
+                    <li><a href="#"><img src="images/bbx_index_tukuimg1.jpg" /></a><p><a href="#">登顶西天目主峰仙人顶</a></p></li>
+                </ul>
+          	</div>
+          <!---e 论坛精彩图库-->	
+       	<!---s 论坛报名活动-->
+        	<div class="bbs_index_pxhd">
+        		<h3 class="bbs_index_toph3" >报名活动排行榜</h3>	
+                	<div class="bbs_index_pxhd_box">
+        				<div class="m_tab1_t bbs_index_pxhd_t">
+                        	<a href="javascript:;" class="tab_now">本周活跃会员</a><a href="javascript:;">一周人气排行</a>
+                        </div>
+                        <div class="m_tab1_c">
+                        	
+                            <div class="m_tab1_item current">
+                            	<ul>
+                                    <li><span class="bbs_index_pxhd_span">1</span>
+                                    	<div class="bbs_index_pxhd_boxt la_0">小玉<b>等级：6</b></div>
+                                        <div class="bbs_index_pxhd_divhover la_1">
+                                            <img src="images/bbx_index_tukuimg2.jpg" /><p><a  href="#">蛋蛋1</a>等级：9<br/><span>活动：52</span>发帖：55<br/>  好友：4464</p>
+                                        </div>
+                                    </li>
+                                    <li><span class="bbs_index_pxhd_span">2</span>
+                                    	<div class="bbs_index_pxhd_boxt la_1">小玉<b>等级：6</b></div>
+                                        <div class="bbs_index_pxhd_divhover la_0">
+                                            <img src="images/bbx_index_tukuimg2.jpg" /><p><a  href="#">蛋蛋1</a>等级：9<br/><span>活动：52</span>发帖：55<br/>  好友：4464</p>
+                                        </div>
+                                    </li>
+                                    <li><span class="bbs_index_pxhd_span">3</span>
+                                    	<div class="bbs_index_pxhd_boxt la_1">小玉<b>等级：6</b></div>
+                                        <div class="bbs_index_pxhd_divhover la_0">
+                                            <img src="images/bbx_index_tukuimg2.jpg" /><p><a  href="#">蛋蛋1</a>等级：9<br/><span>活动：52</span>发帖：55<br/>  好友：4464</p>
+                                        </div>
+                                    </li>
+                                    <li><span class="bbs_index_pxhd_span">4</span>
+                                    	<div class="bbs_index_pxhd_boxt la_1">小玉<b>等级：6</b></div>
+                                        <div class="bbs_index_pxhd_divhover la_0">
+                                            <img src="images/bbx_index_tukuimg2.jpg" /><p><a  href="#">蛋蛋1</a>等级：9<br/><span>活动：52</span>发帖：55<br/>  好友：4464</p>
+                                        </div>
+                                    </li>
+                                    <li><span class="bbs_index_pxhd_span">5</span>
+                                    	<div class="bbs_index_pxhd_boxt la_1">小玉<b>等级：6</b></div>
+                                        <div class="bbs_index_pxhd_divhover la_0">
+                                            <img src="images/bbx_index_tukuimg2.jpg" /><p><a  href="#">蛋蛋1</a>等级：9<br/><span>活动：52</span>发帖：55<br/>  好友：4464</p>
+                                        </div>
+                                    </li>
+                                    <li><span class="bbs_index_pxhd_span">6</span>
+                                    	<div class="bbs_index_pxhd_boxt la_1">小玉<b>等级：6</b></div>
+                                        <div class="bbs_index_pxhd_divhover la_0">
+                                            <img src="images/bbx_index_tukuimg2.jpg" /><p><a  href="#">蛋蛋1</a>等级：9<br/><span>活动：52</span>发帖：55<br/>  好友：4464</p>
+                                        </div>
+                                    </li>
+                                    <li><span class="bbs_index_pxhd_span">7</span>
+                                    	<div class="bbs_index_pxhd_boxt la_1">小玉<b>等级：6</b></div>
+                                        <div class="bbs_index_pxhd_divhover la_0">
+                                            <img src="images/bbx_index_tukuimg2.jpg" /><p><a  href="#">蛋蛋1</a>等级：9<br/><span>活动：52</span>发帖：55<br/>  好友：4464</p>
+                                        </div>
+                                    </li>
+                                    <li><span class="bbs_index_pxhd_span">8</span>
+                                    	<div class="bbs_index_pxhd_boxt la_1">小玉<b>等级：6</b></div>
+                                        <div class="bbs_index_pxhd_divhover la_0">
+                                            <img src="images/bbx_index_tukuimg2.jpg" /><p><a  href="#">蛋蛋1</a>等级：9<br/><span>活动：52</span>发帖：55<br/>  好友：4464</p>
+                                        </div>
+                                    </li>
+                                    <li><span class="bbs_index_pxhd_span">9</span>
+                                    	<div class="bbs_index_pxhd_boxt la_1">小玉<b>等级：6</b></div>
+                                        <div class="bbs_index_pxhd_divhover la_0">
+                                            <img src="images/bbx_index_tukuimg2.jpg" /><p><a  href="#">蛋蛋1</a>等级：9<br/><span>活动：52</span>发帖：55<br/>  好友：4464</p>
+                                        </div>
+                                    </li>
+                                    <li><span class="bbs_index_pxhd_span">10</span>
+                                    	<div class="bbs_index_pxhd_boxt la_1">小玉<b>等级：6</b></div>
+                                        <div class="bbs_index_pxhd_divhover la_0">
+                                            <img src="images/bbx_index_tukuimg2.jpg" /><p><a  href="#">蛋蛋1</a>等级：9<br/><span>活动：52</span>发帖：55<br/>  好友：4464</p>
+                                        </div>
+                                    </li>
+                                
+                                  <div class="clear"></div>
+                                </ul>
+                            </div>
+                            
+                            <div class="m_tab1_item">
+                            	<ul>
+                                    <li><span class="bbs_index_pxhd_span">1</span>
+                                    	<div class="bbs_index_pxhd_boxt la_0">小玉<b>等级：6</b></div>
+                                        <div class="bbs_index_pxhd_divhover la_1">
+                                            <img src="images/bbx_index_tukuimg2.jpg" /><p><a  href="#">蛋蛋2</a>等级：9<br/><span>活动：52</span>发帖：55<br/>  好友：4464</p>
+                                        </div>
+                                    </li>
+                                    <li><span class="bbs_index_pxhd_span">2</span>
+                                    	<div class="bbs_index_pxhd_boxt la_1">小玉<b>等级：6</b></div>
+                                        <div class="bbs_index_pxhd_divhover la_0">
+                                            <img src="images/bbx_index_tukuimg2.jpg" /><p><a  href="#">蛋蛋2</a>等级：9<br/><span>活动：52</span>发帖：55<br/>  好友：4464</p>
+                                        </div>
+                                    </li>
+                                    <li><span class="bbs_index_pxhd_span">3</span>
+                                    	<div class="bbs_index_pxhd_boxt la_1">小玉<b>等级：6</b></div>
+                                        <div class="bbs_index_pxhd_divhover la_0">
+                                            <img src="images/bbx_index_tukuimg2.jpg" /><p><a  href="#">蛋蛋1</a>等级：9<br/><span>活动：52</span>发帖：55<br/>  好友：4464</p>
+                                        </div>
+                                    </li>
+                                    <li><span class="bbs_index_pxhd_span">4</span>
+                                    	<div class="bbs_index_pxhd_boxt la_1">小玉<b>等级：6</b></div>
+                                        <div class="bbs_index_pxhd_divhover la_0">
+                                            <img src="images/bbx_index_tukuimg2.jpg" /><p><a  href="#">蛋蛋1</a>等级：9<br/><span>活动：52</span>发帖：55<br/>  好友：4464</p>
+                                        </div>
+                                    </li>
+                                    <li><span class="bbs_index_pxhd_span">5</span>
+                                    	<div class="bbs_index_pxhd_boxt la_1">小玉<b>等级：6</b></div>
+                                        <div class="bbs_index_pxhd_divhover la_0">
+                                            <img src="images/bbx_index_tukuimg2.jpg" /><p><a  href="#">蛋蛋1</a>等级：9<br/><span>活动：52</span>发帖：55<br/>  好友：4464</p>
+                                        </div>
+                                    </li>
+                                    <li><span class="bbs_index_pxhd_span">6</span>
+                                    	<div class="bbs_index_pxhd_boxt la_1">小玉<b>等级：6</b></div>
+                                        <div class="bbs_index_pxhd_divhover la_0">
+                                            <img src="images/bbx_index_tukuimg2.jpg" /><p><a  href="#">蛋蛋1</a>等级：9<br/><span>活动：52</span>发帖：55<br/>  好友：4464</p>
+                                        </div>
+                                    </li>
+                                    <li><span class="bbs_index_pxhd_span">7</span>
+                                    	<div class="bbs_index_pxhd_boxt la_1">小玉<b>等级：6</b></div>
+                                        <div class="bbs_index_pxhd_divhover la_0">
+                                            <img src="images/bbx_index_tukuimg2.jpg" /><p><a  href="#">蛋蛋1</a>等级：9<br/><span>活动：52</span>发帖：55<br/>  好友：4464</p>
+                                        </div>
+                                    </li>
+                                    <li><span class="bbs_index_pxhd_span">8</span>
+                                    	<div class="bbs_index_pxhd_boxt la_1">小玉<b>等级：6</b></div>
+                                        <div class="bbs_index_pxhd_divhover la_0">
+                                            <img src="images/bbx_index_tukuimg2.jpg" /><p><a  href="#">蛋蛋1</a>等级：9<br/><span>活动：52</span>发帖：55<br/>  好友：4464</p>
+                                        </div>
+                                    </li>
+                                    <li><span class="bbs_index_pxhd_span">9</span>
+                                    	<div class="bbs_index_pxhd_boxt la_1">小玉<b>等级：6</b></div>
+                                        <div class="bbs_index_pxhd_divhover la_0">
+                                            <img src="images/bbx_index_tukuimg2.jpg" /><p><a  href="#">蛋蛋1</a>等级：9<br/><span>活动：52</span>发帖：55<br/>  好友：4464</p>
+                                        </div>
+                                    </li>
+                                    <li><span class="bbs_index_pxhd_span">10</span>
+                                    	<div class="bbs_index_pxhd_boxt la_1">小玉<b>等级：6</b></div>
+                                        <div class="bbs_index_pxhd_divhover la_0">
+                                            <img src="images/bbx_index_tukuimg2.jpg" /><p><a  href="#">蛋蛋1</a>等级：9<br/><span>活动：52</span>发帖：55<br/>  好友：4464</p>
+                                        </div>
+                                    </li>
+                                
+                                  <div class="clear"></div>
+                                </ul>
+                            </div>
+                            
+                        </div>
+                    	
+                        
+                    </div>
+            </div>
+             <div class="clear"></div>
+        <!---e 论坛报名活动-->
+        <div class="ext_erea clear"><a href="#"><img src="images/bbs_index_img2.jpg" /></a></div>
+        	 <!---s 论坛推荐bottom-->
+        	<div class="bbx_index_lttj">
+            	<h3 class="bbs_index_toph3" >论坛推荐</h3>
+                <div class="bbs_index_lttj_box">
+                	<div class="bbs_index_lttjdiv"><a href="#" class="more">更多+</a><h3>象足广州圈</h3></div>
+                      <div class="bbs_index_lttjcon">
+                		<a href="#"><img src="images/bbx_index_tukuimg3.jpg" /></a>
+                        <dl>
+                        	<dd><a href="#">登顶西天目主峰仙人顶</a></dd>
+                        	<dd><a href="#">登顶西天目主峰仙人顶</a></dd>
+                            <dd><a href="#">登顶西天目主峰仙人顶</a></dd>
+                            <dd><a href="#">登顶西天目主峰仙人顶</a></dd>
+                            <dd><a href="#">登顶西天目主峰仙人顶</a></dd>
+                    	</dl>
+                      </div>
+                </div>
+            	
+                  <div class="bbs_index_lttj_box bbs_index_lttj_box1">
+                	<div class="bbs_index_lttjdiv"><a href="#" class="more">更多+</a><h3>象足广州圈</h3></div>
+                      <div class="bbs_index_lttjcon">
+                		<a href="#"><img src="images/bbx_index_tukuimg3.jpg" /></a>
+                        <dl>
+                        	<dd><a href="#">登顶西天目主峰仙人顶</a></dd>
+                        	<dd><a href="#">登顶西天目主峰仙人顶</a></dd>
+                            <dd><a href="#">登顶西天目主峰仙人顶</a></dd>
+                            <dd><a href="#">登顶西天目主峰仙人顶</a></dd>
+                            <dd><a href="#">登顶西天目主峰仙人顶</a></dd>
+                    	</dl>
+                      </div>
+                </div>
+                
+                  <div class="bbs_index_lttj_box">
+                	<div class="bbs_index_lttjdiv"><a href="#" class="more">更多+</a><h3>象足广州圈</h3></div>
+                      <div class="bbs_index_lttjcon">
+                		<a href="#"><img src="images/bbx_index_tukuimg3.jpg" /></a>
+                        <dl>
+                        	<dd><a href="#">登顶西天目主峰仙人顶</a></dd>
+                        	<dd><a href="#">登顶西天目主峰仙人顶</a></dd>
+                            <dd><a href="#">登顶西天目主峰仙人顶</a></dd>
+                            <dd><a href="#">登顶西天目主峰仙人顶</a></dd>
+                            <dd><a href="#">登顶西天目主峰仙人顶</a></dd>
+                    	</dl>
+                      </div>
+                </div>
+                  <div class="bbs_index_lttj_box bbs_index_lttj_box1">
+                	<div class="bbs_index_lttjdiv"><a href="#" class="more">更多+</a><h3>象足广州圈</h3></div>
+                      <div class="bbs_index_lttjcon">
+                		<a href="#"><img src="images/bbx_index_tukuimg3.jpg" /></a>
+                        <dl>
+                        	<dd><a href="#">登顶西天目主峰仙人顶</a></dd>
+                        	<dd><a href="#">登顶西天目主峰仙人顶</a></dd>
+                            <dd><a href="#">登顶西天目主峰仙人顶</a></dd>
+                            <dd><a href="#">登顶西天目主峰仙人顶</a></dd>
+                            <dd><a href="#">登顶西天目主峰仙人顶</a></dd>
+                    	</dl>
+                      </div>
+                </div>
+                  <div class="bbs_index_lttj_box">
+                	<div class="bbs_index_lttjdiv"><a href="#" class="more">更多+</a><h3>象足广州圈</h3></div>
+                      <div class="bbs_index_lttjcon">
+                		<a href="#"><img src="images/bbx_index_tukuimg3.jpg" /></a>
+                        <dl>
+                        	<dd><a href="#">登顶西天目主峰仙人顶</a></dd>
+                        	<dd><a href="#">登顶西天目主峰仙人顶</a></dd>
+                            <dd><a href="#">登顶西天目主峰仙人顶</a></dd>
+                            <dd><a href="#">登顶西天目主峰仙人顶</a></dd>
+                            <dd><a href="#">登顶西天目主峰仙人顶</a></dd>
+                    	</dl>
+                      </div>
+                </div>
+                  <div class="bbs_index_lttj_box bbs_index_lttj_box1">
+                	<div class="bbs_index_lttjdiv"><a href="#" class="more">更多+</a><h3>象足广州圈</h3></div>
+                      <div class="bbs_index_lttjcon">
+                		<a href="#"><img src="images/bbx_index_tukuimg3.jpg" /></a>
+                        <dl>
+                        	<dd><a href="#">登顶西天目主峰仙人顶</a></dd>
+                        	<dd><a href="#">登顶西天目主峰仙人顶</a></dd>
+                            <dd><a href="#">登顶西天目主峰仙人顶</a></dd>
+                            <dd><a href="#">登顶西天目主峰仙人顶</a></dd>
+                            <dd><a href="#">登顶西天目主峰仙人顶</a></dd>
+                    	</dl>
+                      </div>
+                </div>
+                
+            </div>	 <div class="clear"></div>
+            <!---e 论坛推荐bottom-->
+               <div class="ext_erea clear"><a href="#"><img src="images/bbs_index_img2.jpg" /></a></div>
+             <!---s 象足论坛-->  
+             	<div class="bbs_index_xzlt" id="fzq_box">
+             		<h3 class="bbs_index_xzlt_h3">象足论坛</h3>
+                	<div class="bbs_index_xzlt_div">各地<br/><b>分站圈</b></div>
+                        <ul>
+                            <li>
+                            	<div class="bbs_index_xzltquan"><p>宁波圈</p></div>
+                                <div class="bbs_index_xzltquan_hover">
+                                <a href="#">
+                                	象足宁波圈<br/>
+                                    <b>推荐：</b>
+                                    <span><img src="images/x.gif" class="star"  align="absmiddle"/></span>
+                                    <span><img src="images/x.gif" class="star"  align="absmiddle"/></span>
+                                    <span><img src="images/x.gif" class="star"  align="absmiddle"/></span>
+                                    </a>
+                                </div>	
+                            </li>
+                        	 <li>
+                            	<div class="bbs_index_xzltquan"><p>宁波圈</p></div>
+                                <div class="bbs_index_xzltquan_hover">
+                                 <a href="#">
+                                	象足宁波圈<br/>
+                                    <b>推荐：</b>
+                                    <span><img src="images/x.gif" class="star"  align="absmiddle"/></span>
+                                    <span><img src="images/x.gif" class="star"  align="absmiddle"/></span>
+                                    <span><img src="images/x.gif" class="star"  align="absmiddle"/></span>
+                                    </a>
+                                </div>	
+                            </li>
+                            <li>
+                            	<div class="bbs_index_xzltquan"><p>宁波圈</p></div>
+                                <div class="bbs_index_xzltquan_hover">
+                                <a href="#">
+                                	象足宁波圈<br/>
+                                    <b>推荐：</b>
+                                    <span><img src="images/x.gif" class="star"  align="absmiddle"/></span>
+                                    <span><img src="images/x.gif" class="star"  align="absmiddle"/></span>
+                                    <span><img src="images/x.gif" class="star"  align="absmiddle"/></span>
+                                    </a>
+                                </div>	
+                            </li>
+                             <li>
+                            	<div class="bbs_index_xzltquan"><p>宁波圈</p></div>
+                                <div class="bbs_index_xzltquan_hover">
+                                <a href="#">
+                                	象足宁波圈<br/>
+                                    <b>推荐：</b>
+                                    <span><img src="images/x.gif" class="star"  align="absmiddle"/></span>
+                                    <span><img src="images/x.gif" class="star"  align="absmiddle"/></span>
+                                    <span><img src="images/x.gif" class="star"  align="absmiddle"/></span>
+                                    </a>
+                                </div>	
+                            </li>
+                            <li>
+                            	<div class="bbs_index_xzltquan"><p>宁波圈</p></div>
+                                <div class="bbs_index_xzltquan_hover">
+                                <a href="#">
+                                	象足宁波圈<br/>
+                                    <b>推荐：</b>
+                                    <span><img src="images/x.gif" class="star"  align="absmiddle"/></span>
+                                    <span><img src="images/x.gif" class="star"  align="absmiddle"/></span>
+                                    <span><img src="images/x.gif" class="star"  align="absmiddle"/></span>
+                                    </a>
+                                </div>	
+                            </li>
+                             <li>
+                            	<div class="bbs_index_xzltquan"><p>宁波圈</p></div>
+                                <div class="bbs_index_xzltquan_hover">
+                                <a href="#">
+                                	象足宁波圈<br/>
+                                    <b>推荐：</b>
+                                    <span><img src="images/x.gif" class="star"  align="absmiddle"/></span>
+                                    <span><img src="images/x.gif" class="star"  align="absmiddle"/></span>
+                                    <span><img src="images/x.gif" class="star"  align="absmiddle"/></span>
+                                    </a>
+                                </div>	
+                            </li>
+                            
+                        </ul>
+                	
+                    <div class="bbs_index_xzlt_div">主题<br/><b>旅游圈</b></div>
+                        <ul class="bbs_index_xzlt_ul">
+                            <li>
+                            	<div class="bbs_index_xzltquan"><p>西部神游</p></div>
+                                <div class="bbs_index_xzltquan_hover">
+                                <a href="#">
+                                	象足西部神游<br/>
+                                    <b>推荐：</b>
+                                    <span><img src="images/x.gif" class="star"  align="absmiddle"/></span>
+                                    <span><img src="images/x.gif" class="star"  align="absmiddle"/></span>
+                                    <span><img src="images/x.gif" class="star"  align="absmiddle"/></span>
+                                    </a>
+                                </div>	
+                            </li>
+                        	 <li>
+                            	<div class="bbs_index_xzltquan"><p>西部神游</p></div>
+                                <div class="bbs_index_xzltquan_hover">
+                                 <a href="#">
+                                	象足西部神游<br/>
+                                    <b>推荐：</b>
+                                    <span><img src="images/x.gif" class="star"  align="absmiddle"/></span>
+                                    <span><img src="images/x.gif" class="star"  align="absmiddle"/></span>
+                                    <span><img src="images/x.gif" class="star"  align="absmiddle"/></span>
+                                    </a>
+                                </div>	
+                            </li>
+                            <li>
+                            	<div class="bbs_index_xzltquan"><p>西部神游</p></div>
+                                <div class="bbs_index_xzltquan_hover">
+                                <a href="#">
+                                	象足西部神游<br/>
+                                    <b>推荐：</b>
+                                    <span><img src="images/x.gif" class="star"  align="absmiddle"/></span>
+                                    <span><img src="images/x.gif" class="star"  align="absmiddle"/></span>
+                                    <span><img src="images/x.gif" class="star"  align="absmiddle"/></span>
+                                    </a>
+                                </div>	
+                            </li>
+                             <li>
+                            	<div class="bbs_index_xzltquan"><p>西部神游</p></div>
+                                <div class="bbs_index_xzltquan_hover">
+                                <a href="#">
+                                	象足西部神游<br/>
+                                    <b>推荐：</b>
+                                    <span><img src="images/x.gif" class="star"  align="absmiddle"/></span>
+                                    <span><img src="images/x.gif" class="star"  align="absmiddle"/></span>
+                                    <span><img src="images/x.gif" class="star"  align="absmiddle"/></span>
+                                    </a>
+                                </div>	
+                            </li>
+                            <li>
+                            	<div class="bbs_index_xzltquan"><p>西部神游</p></div>
+                                <div class="bbs_index_xzltquan_hover">
+                                <a href="#">
+                                	象足西部神游<br/>
+                                    <b>推荐：</b>
+                                    <span><img src="images/x.gif" class="star"  align="absmiddle"/></span>
+                                    <span><img src="images/x.gif" class="star"  align="absmiddle"/></span>
+                                    <span><img src="images/x.gif" class="star"  align="absmiddle"/></span>
+                                    </a>
+                                </div>	
+                            </li>
+                             <li>
+                            	<div class="bbs_index_xzltquan"><p>西部神游</p></div>
+                                <div class="bbs_index_xzltquan_hover">
+                                <a href="#">
+                                	象足西部神游<br/>
+                                    <b>推荐：</b>
+                                    <span><img src="images/x.gif" class="star"  align="absmiddle"/></span>
+                                    <span><img src="images/x.gif" class="star"  align="absmiddle"/></span>
+                                    <span><img src="images/x.gif" class="star"  align="absmiddle"/></span>
+                                    </a>
+                                </div>	
+                            </li>
+                            
+                        </ul>
+                    
+                	  <div class="clear"></div>
+                </div>
+             <!---e 象足论坛-->   	
+            
+        <div class="clear"></div>
+    </div>
+</div>
+<!--尾部-->
+<div class="footer clear">
+	<div class="foot_menu">
+    	<div class="foot_menu_c">
+        	<div class="f_mt">
+            	<ul>
+                	<li class="f_mt_l1"><h4>注册与登录</h4>
+                    	<dl>
+                        	<dd><a href="#">·&nbsp;正式会员</a></dd>
+                            <dd><a href="#">·&nbsp;修改密码</a></dd>
+                            <dd><a href="#">·&nbsp;忘记密码</a></dd>
+                            <dd><a href="#">·&nbsp;无法登录</a></dd>
+                            <dd><a href="#">·&nbsp;邮箱验证</a></dd>
+                            <dd><a href="#">·&nbsp;安全常识</a></dd>
+                        </dl>
+                    </li>
+                    <li class="f_mt_l2"><h4>发票和付款</h4>
+                    	<dl>
+                        	<dd><a href="#">·&nbsp;如何使用支付宝在线付款</a></dd>
+                            <dd><a href="#">·&nbsp;如何使用银行卡汇款</a></dd>
+                            <dd><a href="#">·&nbsp;在线支付安全吗</a></dd>
+                            <dd><a href="#">·&nbsp;为什么支付不成功</a></dd>
+                            <dd><a href="#">·&nbsp;关于现场付款的问题</a></dd>
+                            <dd><a href="#">·&nbsp;是否可以停供发票</a></dd>
+                        </dl>
+                    </li>
+                    <li class="f_mt_l3"><h4>参加活动</h4>
+                    	<dl>
+                        	<dd><a href="#">·&nbsp;如何报名圈子活动</a></dd>
+                            <dd><a href="#">·&nbsp;如何修改报名成功的活动</a></dd>
+                            <dd><a href="#">·&nbsp;如何退出活动</a></dd>
+                            <dd><a href="#">·&nbsp;各种报名状态说明</a></dd>
+                            <dd><a href="#">·&nbsp;如何查看以往报名活动</a></dd>
+                            <dd><a href="#">·&nbsp;网上报名费用支付</a></dd>
+                        </dl>
+                    </li>
+                    <li class="f_mt_l4"><h4>常见问题与反馈</h4>
+                    	<dl>
+                        	<dd><a href="#">·&nbsp;网站使用常见问题</a></dd>
+                            <dd><a href="#">·&nbsp;上传图片文件超大的解决方法</a></dd>
+                            <dd><a href="#">·&nbsp;如何在圈子中发表帖子?</a></dd>
+                            <dd><a href="#">·&nbsp;如何在个人上传影集?</a></dd>
+                            <dd><a href="#">·&nbsp;如何在圈子图库中上传图片?</a></dd>
+                            <dd><a href="#">·&nbsp;双飞、双卧都是什么意思？</a></dd>
+                        </dl>
+                    </li>
+                </ul>
+            </div>
+            <div class="f_tj">推荐给朋友</div>
+            <div class="f_fri">
+            	<div class="f_fri_item">
+                	<a href="javascript:;" class="no_hover">旗下分站：</a>
+                    <a href="#">杭州站</a><a href="#">杭州站</a><a href="#">杭州站</a><a href="#">杭州站</a><a href="#">杭州站</a><a href="#">杭州站</a><a href="#">杭州站</a><a href="#">杭州站</a><a href="#">杭州站</a><a href="#">杭州站</a><a href="#">杭州站</a><a href="#">杭州站</a>
+                </div>
+                <div class="f_fri_item">
+                	<a href="javascript:;" class="no_hover">主题旅游：</a>
+                    <a href="#">杭州站</a><a href="#">杭州站</a><a href="#">杭州站</a><a href="#">杭州站</a><a href="#">杭州站</a><a href="#">杭州站</a><a href="#">杭州站</a><a href="#">杭州站</a><a href="#">杭州站</a><a href="#">杭州站</a><a href="#">杭州站</a><a href="#">杭州站</a>
+                </div>
+                <div class="f_fri_item">
+                	<a href="javascript:;" class="no_hover">友情链接：</a>
+                    <div class="f_fri_sub">
+                    	<a href="#">云南摄影</a><a href="#">云南摄影</a><a href="#">云南摄影</a><a href="#">云南摄影</a><a href="#">云南摄影</a><a href="#">云南摄影</a><a href="#">云南摄影</a><a href="#">云南摄影</a><a href="#">云南摄影</a><a href="#">云南摄影</a><a href="#">云南摄影</a><a href="#">云南摄影</a><a href="#">云南摄影</a><a href="#">云南摄影</a><a href="#">云南摄影</a><a href="#">云南摄影</a><a href="#">云南摄影</a><a href="#">云南摄影</a><a href="#">云南摄影</a><a href="#">云南摄影</a><a href="#">云南摄影</a><a href="#">云南摄影</a><a href="#">云南摄影</a>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+    <div class="foot_ad">
+    	<img src="images/fot.jpg" />
+    </div>
+    <div class="foot_bottom">
+    	<a href="#">关于象足行者</a>&nbsp;|&nbsp;<a href="#">我们的团队</a>&nbsp;|&nbsp;<a href="#">联系我们</a>&nbsp;|&nbsp;<a href="#">意见反馈</a>&nbsp;|&nbsp;<a href="#">商务合作</a>&nbsp;|&nbsp;<a href="#">使用协议</a>&nbsp;|&nbsp;<a href="#">隐私政策</a>&nbsp;|&nbsp;<a href="#">交换链接</a>&nbsp;|&nbsp;<a href="#">帮助中心</a>
+        <br />
+        广州市象足行者体育运动策划有限公司  粤ICP备13013002号<br />
+        地址：广州市越秀区北较场路金鹰酒店入口602（地铁:小北站B出口） 电话：020-62276601<br />
+        Copyright © 1998 - 2013 www.xzxzhw.com. All Rights Reserved<br />
+    </div>
+</div>
+
+<!---->
+
+<div class="x_tool">
+	<a href="#" class="x_t x_t1"></a>
+    <a href="#" class="x_t x_t2"></a>
+    <a href="#" class="x_t x_t3"></a>
+    <a href="#" class="x_t x_t4"></a>
+    <a href="#" class="x_t x_t5" id="backToTop"></a>
+</div>
+</body>
+</html>
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>

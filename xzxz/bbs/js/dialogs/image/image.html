@@ -1,0 +1,118 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <title></title>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8"/>
+    <link rel="stylesheet" href="image.css" type="text/css" />
+    <script type="text/javascript" src="../internal.js"></script>
+    <script type="text/javascript">
+        var upload,
+            imageUrls = [],
+            IMAGE_CONFIG = {
+                filetype    : {'gif': '2048', 'jpeg': '2048', 'png': '2048', 'jpg': '2048'},
+                uploadUrl   : parent.UEDITOR_CONFIG.imageUrl,
+                swf_root    : 'swfupload/',
+                description : '可上传的附件类型',
+                attachnum   : 10
+            };
+    </script>
+</head>
+<body>
+    <div class="wrapper">
+        <div id="imageTab">
+            <div id="tabHeads" class="clearfix">               
+                <span tabSrc="local" class="focus">本地上传</span>                
+            </div>
+            <div id="tabBodys">                
+                <div id="local" class="panel">
+                    <div class="edit_uping">
+						<span class="num">图片格式为jpg、gif、png，单张最大不超过 2M。</span>
+                        <div id="buttonPlaceHolder"></div>
+                    </div>
+                    <div class="eidt_uphoto">
+                        <ul id="photo_list" class="clearfix">
+                            <li class="empty"><div class="no">暂无</div></li>
+                            <li class="empty"><div class="no">暂无</div></li>
+                            <li class="empty"><div class="no">暂无</div></li>
+                            <li class="empty"><div class="no">暂无</div></li>
+                            <li class="empty"><div class="no">暂无</div></li>
+                            <li class="empty"><div class="no">暂无</div></li>
+                            <li class="empty"><div class="no">暂无</div></li>
+                            <li class="empty"><div class="no">暂无</div></li>
+                            <li class="empty"><div class="no">暂无</div></li>
+                            <li class="empty"><div class="no">暂无</div></li>
+                        </ul>
+                    </div>
+                </div>
+                <!--<iframe id="maskIframe" src="about:blank" scrolling="no" frameborder="no"></iframe>-->
+            </div>
+        </div>
+    </div>
+    <style type="text/css">
+    #SWFUpload_Console {display: none}
+    </style>
+    <script type="text/javascript" src="jquery-1.7.min.js"></script>
+    <script type="text/javascript" src="swfupload/swfupload.js"></script>
+    <script type="text/javascript" src="swfupload/swfupload.queue.js"></script>
+    <script type="text/javascript" src="swfupload/handlers.js?20130123"></script>
+
+    <script type="text/javascript">
+        window.onload = function() {
+            var hasFlash = null;
+            if( window.ActiveXObject ) {
+                try{ hasFlash = !!new ActiveXObject('ShockwaveFlash.ShockwaveFlash') }
+                catch( e ) {}
+            } else {
+                hasFlash = !!navigator.plugins['Shockwave Flash'];
+            }
+            if( !hasFlash ) {
+                alert( '未安装flash player，你将上传不了照片!' );
+
+                $('#buttonPlaceHolder').html('<a href="http://get.adobe.com/cn/flashplayer/" target="_blank" style="color:red">点我安装flash player！</a><br/>安装完毕后，请您刷新当前页面即可使用上传照片功能！')
+
+            }else{
+                var settings = {
+                    flash_url : IMAGE_CONFIG.swf_root + "swfupload.swf",
+
+                    upload_url: IMAGE_CONFIG.uploadUrl,
+                    //post_params: {"PHPSESSID" : "<?php echo session_id(); ?>"},
+
+                    file_types : (function(){
+                        var arr = [];
+                        for(var i in IMAGE_CONFIG.filetype) {
+                            if(i) {
+                                arr.push('*.' + i);
+                            }
+                        }
+                        return arr.join(';');
+                    })(),
+                    file_types_description : IMAGE_CONFIG.description,
+                    //file_upload_limit : IMAGE_CONFIG.attachnum,
+                    //file_queue_limit : IMAGE_CONFIG.attachnum,
+                    debug: true,
+
+                    file_dialog_start_handler : fileDialogStart,
+                    file_queued_handler : fileQueued,
+                    //file_queue_error_handler : fileQueueError,
+                    file_dialog_complete_handler : fileDialogComplete,
+                    upload_start_handler : uploadStart,
+                    upload_progress_handler : uploadProgress,
+                    upload_error_handler : uploadError,
+                    upload_success_handler : uploadSuccess,
+                    upload_complete_handler : uploadComplete,
+
+                    button_width: "80",
+                    button_height: "25",
+                    button_cursor : SWFUpload.CURSOR.HAND,
+                    button_window_mode : SWFUpload.WINDOW_MODE.TRANSPARENT,
+                    button_image_url: IMAGE_CONFIG.swf_root + "button80x25.png",
+                    button_placeholder_id: "buttonPlaceHolder"
+                };
+                imageUploader.init();
+                upload = new SWFUpload(settings);
+
+            }
+        }
+    </script>
+</body>
+</html>

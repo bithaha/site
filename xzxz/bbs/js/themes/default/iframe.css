@@ -1,0 +1,7 @@
+body{font:14px/1.5 \5b8b\4f53,arial,tahoma,sans-serif;}
+.ue_limit{width:800px; margin:0 auto; table-layout:fixed; word-wrap:break-word; word-break:break-all;}
+p{margin:5px 0;line-height:2em;text-indent:1em;padding-left:5px;}
+#initContent{color:#666;}
+.blockquote{background:url("images/blockquote.png") no-repeat right top #f7f7f7; border:1px dashed #ccc; clear:left; margin:0; padding:10px; font-size:12px; color:#737373;}
+.qoute-detail{color:#999999; margin-top:5px;}
+.qoute-detail a{margin-right:10px; color:#3c86b6;text-decoration:none;}

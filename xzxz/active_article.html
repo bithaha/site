@@ -1,0 +1,1004 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>活动详情————欢迎来到象足行者网站</title>
+<link type="text/css" href="./css/common.css" rel="stylesheet" />
+<link type="text/css" href="./css/content.css" rel="stylesheet" />
+<script type="text/javascript" src="./js/jquery-1.8.0.min.js"></script>
+<script type="text/javascript" src="./js/common.js"></script>
+<script type="text/javascript" src="./js/index.js"></script>
+<script>
+$(function(){
+	var st1 = $('#act_m_info').offset().top;
+	var st2 = $('#act_process').offset().top;
+	var st3 = $('#act_payment').offset().top;
+	var st4 = $('#act_clock').offset().top;
+	var st5 = $('#act_map').offset().top;
+	var st6 = $('#act_chat').offset().top;
+	
+	var array = new Array();
+	array[0] = st1-60;
+	array[1] = st2-60;
+	array[2] = st3-60;
+	array[3] = st4-60;
+	array[4] = st5-60;
+	array[5] = st6-60;
+	
+	$('#c_menu li').click(function(){
+		
+		$(this).addClass('sel').siblings().removeClass('sel');
+		
+		var st_num = $('#c_menu li').index($(this));
+		
+		$('body,html').animate({scrollTop:array[st_num]},1000);
+		
+		return false;
+	});
+	
+	var c_menu_t = $('#c_menu').offset().top;
+	
+	 $(window).scroll(function(){
+		 var this_scrollTop = $(this).scrollTop();
+		 if(this_scrollTop > c_menu_t ){
+		 	$('#c_menu').addClass('c_menu_fixed');
+			$('#c_menu_empty').css('display','block');
+			if(this_scrollTop >= array[0] && this_scrollTop < array[1]){
+				$('#c_menu li').eq(0).addClass('sel').siblings().removeClass('sel');
+			}else if(this_scrollTop >= array[1] && this_scrollTop < array[2]){
+				$('#c_menu li').eq(1).addClass('sel').siblings().removeClass('sel');
+			}else if(this_scrollTop >= array[2] && this_scrollTop < array[3]){
+				$('#c_menu li').eq(2).addClass('sel').siblings().removeClass('sel');
+			}else if(this_scrollTop >= array[3] && this_scrollTop < array[4]){
+				$('#c_menu li').eq(3).addClass('sel').siblings().removeClass('sel');
+			}else if(this_scrollTop >= array[4] && this_scrollTop < array[5]){
+				$('#c_menu li').eq(4).addClass('sel').siblings().removeClass('sel');
+			}else if(this_scrollTop >= array[5]){
+				$('#c_menu li').eq(5).addClass('sel').siblings().removeClass('sel');
+			}		
+		}else{
+			$('#c_menu').removeClass('c_menu_fixed');
+			$('#c_menu_empty').css('display','none');
+		}
+	 });
+});
+function getScrollTop()
+{
+    var scrollTop=0;
+    if(document.documentElement&&document.documentElement.scrollTop)
+    {
+        scrollTop=document.documentElement.scrollTop;
+    }
+    else if(document.body)
+    {
+        scrollTop=document.body.scrollTop;
+    }
+    return scrollTop;
+}
+
+</script>
+</head>
+
+<body>
+<!--头部-->
+<div class="header">
+	<div class="top">
+    	<div class="top_main">
+        	<div class="top_left">
+            	<ul>
+                	<li><a href="#" class="po_now">广州站</a></li>
+                    <li><a href="#">杭州站</a></li>
+                    <li><a href="#">上海站</a></li>
+                    <li><a href="#">西藏站</a></li>
+                    <li><a href="#">东北站</a></li>
+                    <li><a href="#">云南站</a></li>
+                    <li><a href="#">元阳站</a></li>
+                    <li><a href="#">坝上站</a></li>
+                    <li class="top_left_more" id="top_more"><a href="#">更多<img src="./images/x.gif" /></a>
+                    	<div class="top_left_more_d">
+                        	<a href="#">北京站</a><a href="#">北京站</a><a href="#">北京站</a><a href="#">北京站</a>
+                        </div>
+                    </li>
+                    <li class="head_weixin"><a href="#"><img src="./images/x.gif" />+微信</a></li>
+                    <li class="head_weibo"><a href="#"><img src="./images/x.gif" />+微博</a></li>
+                </ul>
+            </div>
+            <div class="top_right">
+            	<ul>
+                	<li><a href="#">登录</a></li>
+                    <li><a href="#">注册</a></li>
+                    <li><a href="#">帮助中心</a></li>
+                    <li class="fast_nav" id="fast_nav"><a href="#">快速导航<img src="./images/x.gif" /></a>
+                    	<div>
+                        	<a href="#">帮助中心</a><a href="#">帮助中心</a><a href="#">帮助中心</a><a href="#">帮助中心</a>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    
+    <div class="head_wraper">
+    	<div class="head_wrper_main">
+        	<div class="head_logo"><img src="./images/head_logo.png" /></div>
+            <div class="head_search">
+            	<div class="head_search_box">
+                    <span class="search_select_t" id="search_select_t"><label>全部</label><img src="./images/x.gif" /></span>
+                    <ul class="search_select_c" id="search_select_c">
+                    	<li class="search_select_now"><a href="javascript:;">全部</a></li>
+                        <li><a href="javascript:;">活动</a></li>
+                        <li><a href="javascript:;">象足行</a></li>
+                        <li><a href="javascript:;">图片</a></li>
+                        <li><a href="javascript:;">帖子</a></li>
+                        <li><a href="javascript:;">投票</a></li>
+                    </ul>
+                    <span class="search_text"><input type="text" value="" id="search_text"/><label>搜 目的地/游记/作品</label></span>
+                    
+                	<span class="search_sub"><input type="submit" value="搜  索"/></span>
+                </div>
+                <div class="head_hot_search">
+                	<span>热搜：<a href="#">塔川</a><a href="#">雾凇岛</a><a href="#">东川红土地</a>
+                    <a href="#">丽江</a><a href="#">三亚</a><a href="#">漠河</a><a href="#">哈尔滨</a></span>
+                </div>
+            </div>
+            <div class="head_active">
+            	<span class="fr">0</span><span class="fl"><a href="#">我的活动</a></span>
+            </div>
+            <div class="head_mycenter">
+            	<span><img src="./images/x.gif" /><a href="#">我的象足行</a></span>
+            </div>
+        </div>
+    </div>
+    
+    <div class="head_nav">
+    	<div class="head_nav_main">
+            <div class="head_nav_right">
+            	<a href="#" class="nav_mycenter"><img src="./images/x.gif" />个人中心</a>
+            </div>
+        	<div class="head_nav_t head_nav_t1" id="head_nav_t">
+            	<div class="head_nav_title"><h4>全部旅游产品分类<img src="./images/x.gif" /></h4></div>
+                <ul class="m_cate">
+                	<li class="m_cate_menu_1">
+                    	<div class="m_cate_type">
+                        	<i class="m_cate_icon"></i>
+                            <h2>象足国内游</h2>
+                            <b class="m_cate_arrow"></b>
+                        </div>
+                        <div class="m_cate_hote">
+                        	<a href="#">雪乡</a><a href="#">雪乡</a><a href="#">雪乡</a><a href="#">雪乡</a>
+                        </div>
+                        <div class="m_cate_ext">
+                        	<div class="m_cate_sub">
+                            	<dl class="m_cate_subItem">
+                                	<dd>
+                                    	<h3>东北1</h3>
+                                        <div class="m_cate_subCon">
+                                        	<a href="#">雪乡</a><a href="#">雪乡</a><a href="#">雪乡</a><a href="#">雪乡</a><a href="#">雪乡</a><a href="#">雪乡</a><a href="#">雪乡</a><a href="#">雪乡</a>
+                                        </div>
+                                    </dd>
+                                    <dd>
+                                    	<h3>东北1</h3>
+                                        <div class="m_cate_subCon">
+                                        	<a href="#">雪乡</a><a href="#">雪乡</a><a href="#">雪乡</a><a href="#">雪乡</a><a href="#">雪乡</a><a href="#">雪乡</a><a href="#">雪乡</a><a href="#">雪乡</a>
+                                        </div>
+                                    </dd>
+                                    <dd>
+                                    	<h3>东北1</h3>
+                                        <div class="m_cate_subCon">
+                                        	<a href="#">雪乡</a><a href="#">雪乡</a><a href="#">雪乡</a><a href="#">雪乡</a><a href="#">雪乡</a><a href="#">雪乡</a><a href="#">雪乡</a><a href="#">雪乡</a>
+                                        </div>
+                                    </dd>
+                                    <dd>
+                                    	<h3>东北1</h3>
+                                        <div class="m_cate_subCon">
+                                        	<a href="#">雪乡</a><a href="#">雪乡</a><a href="#">雪乡</a><a href="#">雪乡</a><a href="#">雪乡</a><a href="#">雪乡</a><a href="#">雪乡</a><a href="#">雪乡</a>
+                                        </div>
+                                    </dd>
+                                </dl>
+                            </div>
+                            <div class="m_cate_ads">
+                            	<div class="m_cate_adSub">
+                                	<h4>主题旅游</h4>
+                                    <div class="m_cate_adCun">
+                                    	<a href="#">春天花事</a><a href="#">西部神游</a><a href="#">蔚蓝大海</a><a href="#">最美秋色</a>
+                                    </div>
+                                </div>
+                                <div class="m_cate_adSub">
+                                	<h4>论坛推荐</h4>
+                                    <div class="m_cate_adCun">
+                                    	<a href="#">西部神游圈</a><a href="#">东部畅游圈</a>
+                                    </div>
+                                </div>
+                                <div class="m_cate_adimg">
+                                	<a href="#"><img src="images/adimg1.jpg" /></a>
+                                    <a href="#"><img src="images/adimg2.jpg" /></a>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="m_cate_menu_2">
+                    	<div class="m_cate_type">
+                        	<i class="m_cate_icon"></i>
+                            <h2>象足摄影游</h2>
+                            <b class="m_cate_arrow"></b>
+                        </div>
+                        <div class="m_cate_hote">
+                        	<a href="#">雪乡</a><a href="#">雪乡</a><a href="#">雪乡</a><a href="#">雪乡</a>
+                        </div>
+                        <div class="m_cate_ext">
+                        	<div class="m_cate_sub">
+                            	<dl class="m_cate_subItem">
+                                	<dd>
+                                    	<h3>东北2</h3>
+                                        <div class="m_cate_subCon">
+                                        	<a href="#">雪乡</a><a href="#">雪乡</a><a href="#">雪乡</a><a href="#">雪乡</a><a href="#">雪乡</a><a href="#">雪乡</a><a href="#">雪乡</a><a href="#">雪乡</a>
+                                        </div>
+                                    </dd>
+                                    <dd>
+                                    	<h3>东北2</h3>
+                                        <div class="m_cate_subCon">
+                                        	<a href="#">雪乡</a><a href="#">雪乡</a><a href="#">雪乡</a><a href="#">雪乡</a><a href="#">雪乡</a><a href="#">雪乡</a><a href="#">雪乡</a><a href="#">雪乡</a>
+                                        </div>
+                                    </dd>
+                                    <dd>
+                                    	<h3>东北2</h3>
+                                        <div class="m_cate_subCon">
+                                        	<a href="#">雪乡</a><a href="#">雪乡</a><a href="#">雪乡</a><a href="#">雪乡</a><a href="#">雪乡</a><a href="#">雪乡</a><a href="#">雪乡</a><a href="#">雪乡</a>
+                                        </div>
+                                    </dd>
+                                    <dd>
+                                    	<h3>东北2</h3>
+                                        <div class="m_cate_subCon">
+                                        	<a href="#">雪乡</a><a href="#">雪乡</a><a href="#">雪乡</a><a href="#">雪乡</a><a href="#">雪乡</a><a href="#">雪乡</a><a href="#">雪乡</a><a href="#">雪乡</a>
+                                        </div>
+                                    </dd>
+                                </dl>
+                            </div>
+                            <div class="m_cate_ads">
+                            	<div class="m_cate_adSub">
+                                	<h4>主题旅游</h4>
+                                    <div class="m_cate_adCun">
+                                    	<a href="#">春天花事</a><a href="#">西部神游</a><a href="#">蔚蓝大海</a><a href="#">最美秋色</a>
+                                    </div>
+                                </div>
+                                <div class="m_cate_adSub">
+                                	<h4>论坛推荐</h4>
+                                    <div class="m_cate_adCun">
+                                    	<a href="#">西部神游圈</a><a href="#">东部畅游圈</a>
+                                    </div>
+                                </div>
+                                <div class="m_cate_adimg">
+                                	<a href="#"><img src="images/adimg1.jpg" /></a>
+                                    <a href="#"><img src="images/adimg2.jpg" /></a>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="m_cate_menu_3">
+                    	<div class="m_cate_type">
+                        	<i class="m_cate_icon"></i>
+                            <h2>象足出境游</h2>
+                            <b class="m_cate_arrow"></b>
+                        </div>
+                        <div class="m_cate_hote">
+                        	<a href="#">雪乡</a><a href="#">雪乡</a><a href="#">雪乡</a><a href="#">雪乡</a>
+                        </div>
+                        <div class="m_cate_ext">
+                        	<div class="m_cate_sub">
+                            	<dl class="m_cate_subItem">
+                                	<dd>
+                                    	<h3>东北3</h3>
+                                        <div class="m_cate_subCon">
+                                        	<a href="#">雪乡</a><a href="#">雪乡</a><a href="#">雪乡</a><a href="#">雪乡</a><a href="#">雪乡</a><a href="#">雪乡</a><a href="#">雪乡</a><a href="#">雪乡</a>
+                                        </div>
+                                    </dd>
+                                    <dd>
+                                    	<h3>东北3</h3>
+                                        <div class="m_cate_subCon">
+                                        	<a href="#">雪乡</a><a href="#">雪乡</a><a href="#">雪乡</a><a href="#">雪乡</a><a href="#">雪乡</a><a href="#">雪乡</a><a href="#">雪乡</a><a href="#">雪乡</a>
+                                        </div>
+                                    </dd>
+                                    <dd>
+                                    	<h3>东北3</h3>
+                                        <div class="m_cate_subCon">
+                                        	<a href="#">雪乡</a><a href="#">雪乡</a><a href="#">雪乡</a><a href="#">雪乡</a><a href="#">雪乡</a><a href="#">雪乡</a><a href="#">雪乡</a><a href="#">雪乡</a>
+                                        </div>
+                                    </dd>
+                                    <dd>
+                                    	<h3>东北3</h3>
+                                        <div class="m_cate_subCon">
+                                        	<a href="#">雪乡</a><a href="#">雪乡</a><a href="#">雪乡</a><a href="#">雪乡</a><a href="#">雪乡</a><a href="#">雪乡</a><a href="#">雪乡</a><a href="#">雪乡</a>
+                                        </div>
+                                    </dd>
+                                </dl>
+                            </div>
+                            <div class="m_cate_ads">
+                            	<div class="m_cate_adSub">
+                                	<h4>主题旅游</h4>
+                                    <div class="m_cate_adCun">
+                                    	<a href="#">春天花事</a><a href="#">西部神游</a><a href="#">蔚蓝大海</a><a href="#">最美秋色</a>
+                                    </div>
+                                </div>
+                                <div class="m_cate_adSub">
+                                	<h4>论坛推荐</h4>
+                                    <div class="m_cate_adCun">
+                                    	<a href="#">西部神游圈</a><a href="#">东部畅游圈</a>
+                                    </div>
+                                </div>
+                                <div class="m_cate_adimg">
+                                	<a href="#"><img src="images/adimg1.jpg" /></a>
+                                    <a href="#"><img src="images/adimg2.jpg" /></a>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="m_cate_menu_4">
+                    	<div class="m_cate_type">
+                        	<i class="m_cate_icon"></i>
+                            <h2>象足华南游</h2>
+                            <b class="m_cate_arrow"></b>
+                        </div>
+                        <div class="m_cate_hote">
+                        	<a href="#">雪乡</a><a href="#">雪乡</a><a href="#">雪乡</a><a href="#">雪乡</a>
+                        </div>
+                        <div class="m_cate_ext">
+                        	<div class="m_cate_sub">
+                            	<dl class="m_cate_subItem">
+                                	<dd>
+                                    	<h3>东北4</h3>
+                                        <div class="m_cate_subCon">
+                                        	<a href="#">雪乡</a><a href="#">雪乡</a><a href="#">雪乡</a><a href="#">雪乡</a><a href="#">雪乡</a><a href="#">雪乡</a><a href="#">雪乡</a><a href="#">雪乡</a>
+                                        </div>
+                                    </dd>
+                                    <dd>
+                                    	<h3>东北4</h3>
+                                        <div class="m_cate_subCon">
+                                        	<a href="#">雪乡</a><a href="#">雪乡</a><a href="#">雪乡</a><a href="#">雪乡</a><a href="#">雪乡</a><a href="#">雪乡</a><a href="#">雪乡</a><a href="#">雪乡</a>
+                                        </div>
+                                    </dd>
+                                    <dd>
+                                    	<h3>东北4</h3>
+                                        <div class="m_cate_subCon">
+                                        	<a href="#">雪乡</a><a href="#">雪乡</a><a href="#">雪乡</a><a href="#">雪乡</a><a href="#">雪乡</a><a href="#">雪乡</a><a href="#">雪乡</a><a href="#">雪乡</a>
+                                        </div>
+                                    </dd>
+                                    <dd>
+                                    	<h3>东北4</h3>
+                                        <div class="m_cate_subCon">
+                                        	<a href="#">雪乡</a><a href="#">雪乡</a><a href="#">雪乡</a><a href="#">雪乡</a><a href="#">雪乡</a><a href="#">雪乡</a><a href="#">雪乡</a><a href="#">雪乡</a>
+                                        </div>
+                                    </dd>
+                                </dl>
+                            </div>
+                            <div class="m_cate_ads">
+                            	<div class="m_cate_adSub">
+                                	<h4>主题旅游</h4>
+                                    <div class="m_cate_adCun">
+                                    	<a href="#">春天花事</a><a href="#">西部神游</a><a href="#">蔚蓝大海</a><a href="#">最美秋色</a>
+                                    </div>
+                                </div>
+                                <div class="m_cate_adSub">
+                                	<h4>论坛推荐</h4>
+                                    <div class="m_cate_adCun">
+                                    	<a href="#">西部神游圈</a><a href="#">东部畅游圈</a>
+                                    </div>
+                                </div>
+                                <div class="m_cate_adimg">
+                                	<a href="#"><img src="images/adimg1.jpg" /></a>
+                                    <a href="#"><img src="images/adimg2.jpg" /></a>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="m_cate_menu_5">
+                    	<div class="m_cate_type">
+                        	<i class="m_cate_icon"></i>
+                            <h2>象足公司游</h2>
+                            <b class="m_cate_arrow"></b>
+                        </div>
+                        <div class="m_cate_hote">
+                        	<a href="#">雪乡</a><a href="#">雪乡</a><a href="#">雪乡</a><a href="#">雪乡</a>
+                        
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <div class="head_nav_list">
+            	<ul>
+                	<li><a href="index.html">首页</a></li>
+                    <li><a href="cn.html" class="head_nav_now">国内游</a></li>
+                    <li><a href="out.html">出境游</a></li>
+                    <li><a href="hua.html">华南游</a></li>
+                    <li><a href="company.html">公司游</a></li>
+                    <li><a href="photography.html">象足摄影</a></li>
+                    <li><a href="legend.html">象足传奇</a></li>
+                    <li><a href="bbs.html">象足论坛</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    
+</div>
+<!---->
+<!--主体部分-->
+<div class="content">
+	<div class="index_main">
+    	<!--s 国内游右侧-->
+        <div class="cn_right fr">
+
+            <!--s 圈子简介-->
+            <div class="g_eara">
+                <div class="g_hd">
+                    <h2>圈子简介</h2>
+                </div>
+                <div class="g_hd_c">
+                	<div class="jj">
+                    	<p align="center"><img src="images/gz.jpg" /><br /><a href="#" target="_blank">象足广州圈</a></p>
+                        <p align="center"><a href="#" title="加关注" class="add_focus"><img src="images/x.gif" />加关注</a><a href="#" title="加关注" class="add_favorites"><img src="images/x.gif" />加收藏</a></p>
+                    </div>
+                </div>
+            </div>
+            <!--s 圈子简介-->
+            
+            <!--s 报名情况-->
+            <div class="g_eara mt15">
+                <div class="g_hd">
+                    <h2>报名情况</h2>
+                </div>
+                <div class="g_hd_c">
+                    <div class="act_bm">已申请报名<span>1128</span>人</div>
+                    <div class="act_bm">报名成功<span>836</span>人&nbsp;&nbsp;&nbsp;&nbsp;待缴费<span>136</span>人</div>
+                    <div class="act_bm">未审核<span>15</span>人</div>
+                    <div class="act_bm"><a href="#" class="look_order">查看具体名单</a></div>
+                </div>
+            </div>
+            <!--e 报名情况-->
+            
+            <!--s 审核确认名单-->
+            <div class="g_eara mt15">
+                <div class="g_hd">
+                	<a href="#" class="more">更多+</a>
+                    <h2>审核确认名单</h2>
+                </div>
+                <div class="g_hd_c">
+                    <div class="u_box">
+                    	<ul>
+                        	<li><a href="#" target="_blank"><img src="images/u_head.jpg" /></a><p><i class="btn_sex_f">&nbsp;</i><a href="#">小芸</a></p></li>
+                            <li><a href="#" target="_blank"><img src="images/u_head.jpg" /></a><p><i class="btn_sex_m">&nbsp;</i><a href="#">小芸</a></p></li>
+                            <li><a href="#" target="_blank"><img src="images/u_head.jpg" /></a><p><i class="btn_sex_f">&nbsp;</i><a href="#">小芸</a></p></li>
+                            <li><a href="#" target="_blank"><img src="images/u_head.jpg" /></a><p><i class="btn_sex_m">&nbsp;</i><a href="#">小芸</a></p></li>
+                            <li><a href="#" target="_blank"><img src="images/u_head.jpg" /></a><p><i class="btn_sex_f">&nbsp;</i><a href="#">小芸</a></p></li>
+                            <li><a href="#" target="_blank"><img src="images/u_head.jpg" /></a><p><i class="btn_sex_m">&nbsp;</i><a href="#">小芸</a></p></li>
+                            <li><a href="#" target="_blank"><img src="images/u_head.jpg" /></a><p><i class="btn_sex_f">&nbsp;</i><a href="#">小芸</a></p></li>
+                            <li><a href="#" target="_blank"><img src="images/u_head.jpg" /></a><p><i class="btn_sex_m">&nbsp;</i><a href="#">小芸</a></p></li>
+                        </ul>
+                        <div class="clear"></div>
+                    </div>
+                </div>
+            </div>
+            <!--e 审核确认名单-->
+            
+            <!--s 关注此活动的象足行者-->
+            <div class="g_eara mt15 clear">
+                <div class="g_hd">
+                    <h2>关注此活动的象足行者</h2>
+                </div>
+                <div class="g_hd_c">
+                     <div class="u_box">
+                    	<ul>
+                        	<li><a href="#" target="_blank"><img src="images/u_head.jpg" /></a><p><i class="btn_sex_f">&nbsp;</i><a href="#">小芸</a></p></li>
+                            <li><a href="#" target="_blank"><img src="images/u_head.jpg" /></a><p><i class="btn_sex_m">&nbsp;</i><a href="#">小芸</a></p></li>
+                            <li><a href="#" target="_blank"><img src="images/u_head.jpg" /></a><p><i class="btn_sex_f">&nbsp;</i><a href="#">小芸</a></p></li>
+                            <li><a href="#" target="_blank"><img src="images/u_head.jpg" /></a><p><i class="btn_sex_m">&nbsp;</i><a href="#">小芸</a></p></li>
+                            <li><a href="#" target="_blank"><img src="images/u_head.jpg" /></a><p><i class="btn_sex_f">&nbsp;</i><a href="#">小芸</a></p></li>
+                            <li><a href="#" target="_blank"><img src="images/u_head.jpg" /></a><p><i class="btn_sex_m">&nbsp;</i><a href="#">小芸</a></p></li>
+                            <li><a href="#" target="_blank"><img src="images/u_head.jpg" /></a><p><i class="btn_sex_f">&nbsp;</i><a href="#">小芸</a></p></li>
+                            <li><a href="#" target="_blank"><img src="images/u_head.jpg" /></a><p><i class="btn_sex_m">&nbsp;</i><a href="#">小芸</a></p></li>
+                        </ul>
+                        <div class="clear"></div>
+                    </div>
+                </div>
+            </div>
+            <!--e 关注此活动的象足行者-->
+            
+            <!--s 住在该地的象足行者-->
+            <div class="g_eara mt15">
+                <div class="g_hd">
+                    <h2>住在该地的象足行者</h2>
+                </div>
+                <div class="g_hd_c">
+                     <div class="u_box">
+                    	<ul>
+                        	<li><a href="#" target="_blank"><img src="images/u_head.jpg" /></a><p><i class="btn_sex_f">&nbsp;</i><a href="#">小芸</a></p></li>
+                            <li><a href="#" target="_blank"><img src="images/u_head.jpg" /></a><p><i class="btn_sex_m">&nbsp;</i><a href="#">小芸</a></p></li>
+                            <li><a href="#" target="_blank"><img src="images/u_head.jpg" /></a><p><i class="btn_sex_f">&nbsp;</i><a href="#">小芸</a></p></li>
+                            <li><a href="#" target="_blank"><img src="images/u_head.jpg" /></a><p><i class="btn_sex_m">&nbsp;</i><a href="#">小芸</a></p></li>
+                            <li><a href="#" target="_blank"><img src="images/u_head.jpg" /></a><p><i class="btn_sex_f">&nbsp;</i><a href="#">小芸</a></p></li>
+                            <li><a href="#" target="_blank"><img src="images/u_head.jpg" /></a><p><i class="btn_sex_m">&nbsp;</i><a href="#">小芸</a></p></li>
+                            <li><a href="#" target="_blank"><img src="images/u_head.jpg" /></a><p><i class="btn_sex_f">&nbsp;</i><a href="#">小芸</a></p></li>
+                            <li><a href="#" target="_blank"><img src="images/u_head.jpg" /></a><p><i class="btn_sex_m">&nbsp;</i><a href="#">小芸</a></p></li>
+                        </ul>
+                        <div class="clear"></div>
+                    </div>
+                </div>
+            </div>
+            <!--e 住在该地的象足行者-->
+            
+            <!--s 线路分类-->
+            <div class="g_eara mt15">
+                <div class="g_hd">
+                    <h2>线路分类</h2>
+                </div>
+                <div class="g_hd_c">
+                    <div class="act_xl">
+                    	<h3>冰雪世界</h3>
+                        <div class="act_xl_item"><a href="#">东北</a></div>
+                        <h3>东北全景</h3>
+                        <div class="act_xl_item"><a href="#">黑龙江</a><a href="#">吉林</a><a href="#">辽宁</a></div>
+                    </div>
+                </div>
+            </div>
+            <!--e 线路分类-->
+            
+            <!--s 相关线路查看-->
+            <div class="g_eara mt15">
+                <div class="g_hd">
+                    <h2>相关线路查看</h2>
+                </div>
+                <div class="g_hd_c">
+                    <ul class="xl_ul">
+                    	<li class="xl_on">
+                        	<h3><img class="icon_l" src="images/x.gif" /><a href="#">【冬日童话】2014年冬季 吉林-雾凇长廊-长白山-魔界-雪乡-</a></h3>
+                            <div class="xl_line">
+                            	<div class="xl_line_pic">
+                                	<a href="#"><img src="images/db.jpg" /></a>
+                                </div>
+                                <div class="xl_line_info">
+                                	<dl>
+                                    	<dd>活动时间：2014-1-31</dd>
+                                        <dd>活动地点：辽宁</dd>
+                                        <dd>活动人数：65</dd>
+                                        <dd>活动经费：<span class="price">Y<b>2568</b>元</span></dd>
+                                    </dl>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                        	<h3><img class="icon_l" src="images/x.gif" /><a href="#">【冬日童话】2014年冬季 吉林-雾凇长廊-长白山-魔界-雪乡-</a></h3>
+                            <div class="xl_line">
+                            	<div class="xl_line_pic">
+                                	<a href="#"><img src="images/db.jpg" /></a>
+                                </div>
+                                <div class="xl_line_info">
+                                	<dl>
+                                    	<dd>活动时间：2014-1-31</dd>
+                                        <dd>活动地点：辽宁</dd>
+                                        <dd>活动人数：65</dd>
+                                        <dd>活动经费：<span class="price">Y<b>2568</b>元</span></dd>
+                                    </dl>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                        	<h3><img class="icon_l" src="images/x.gif" /><a href="#">【冬日童话】2014年冬季 吉林-雾凇长廊-长白山-魔界-雪乡-</a></h3>
+                            <div class="xl_line">
+                            	<div class="xl_line_pic">
+                                	<a href="#"><img src="images/db.jpg" /></a>
+                                </div>
+                                <div class="xl_line_info">
+                                	<dl>
+                                    	<dd>活动时间：2014-1-31</dd>
+                                        <dd>活动地点：辽宁</dd>
+                                        <dd>活动人数：65</dd>
+                                        <dd>活动经费：<span class="price">Y<b>2568</b>元</span></dd>
+                                    </dl>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                        	<h3><img class="icon_l" src="images/x.gif" /><a href="#">【冬日童话】2014年冬季 吉林-雾凇长廊-长白山-魔界-雪乡-</a></h3>
+                            <div class="xl_line">
+                            	<div class="xl_line_pic">
+                                	<a href="#"><img src="images/db.jpg" /></a>
+                                </div>
+                                <div class="xl_line_info">
+                                	<dl>
+                                    	<dd>活动时间：2014-1-31</dd>
+                                        <dd>活动地点：辽宁</dd>
+                                        <dd>活动人数：65</dd>
+                                        <dd>活动经费：<span class="price">Y<b>2568</b>元</span></dd>
+                                    </dl>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                        	<h3><img class="icon_l" src="images/x.gif" /><a href="#">【冬日童话】2014年冬季 吉林-雾凇长廊-长白山-魔界-雪乡-</a></h3>
+                            <div class="xl_line">
+                            	<div class="xl_line_pic">
+                                	<a href="#"><img src="images/db.jpg" /></a>
+                                </div>
+                                <div class="xl_line_info">
+                                	<dl>
+                                    	<dd>活动时间：2014-1-31</dd>
+                                        <dd>活动地点：辽宁</dd>
+                                        <dd>活动人数：65</dd>
+                                        <dd>活动经费：<span class="price">Y<b>2568</b>元</span></dd>
+                                    </dl>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <!--e 相关线路查看-->
+            
+            <!--s 精彩游记推荐-->
+            <div class="g_eara mt15">
+                <div class="g_hd">
+                	<a href="#" class="more">更多+</a>
+                    <h2>精彩游记推荐</h2>
+                </div>
+                <div class="g_hd_c">
+                    <ul class="tuijian">
+                    	<li><p align="center"><a href="#" target="_blank"><img src="images/hd1.jpg" /></a><br /><a href="#">人在楠溪江的路上</a></p></li>
+                        <li><p align="center"><a href="#" target="_blank"><img src="images/hd1.jpg" /></a><br /><a href="#">人在楠溪江的路上</a></p></li>
+                        <li><p align="center"><a href="#" target="_blank"><img src="images/hd1.jpg" /></a><br /><a href="#">人在楠溪江的路上</a></p></li>
+                        <li><p align="center"><a href="#" target="_blank"><img src="images/hd1.jpg" /></a><br /><a href="#">人在楠溪江的路上</a></p></li>
+                        <li><p align="center"><a href="#" target="_blank"><img src="images/hd1.jpg" /></a><br /><a href="#">人在楠溪江的路上</a></p></li>
+                        <li><p align="center"><a href="#" target="_blank"><img src="images/hd1.jpg" /></a><br /><a href="#">人在楠溪江的路上</a></p></li>
+                    </ul>
+                </div>
+            </div>
+            <!--e 精彩游记推荐-->
+            
+            <!--s 关注我们-->
+            <div class="g_eara mt15">
+                <div class="g_hd">
+                    <h2>关注我们</h2>
+                </div>
+                <div class="g_hd_c">
+                	<div class="guanzhu">
+                        <img src="images/weixin.jpg" align="top"/>
+                        <img src="images/weixin_code.png" />
+                        <p>登录微信，扫描二维码；加关注！
+    在这里，了解象足行的秘密！</p>
+                        <img src="images/sina.jpg" />
+                    </div>
+                </div>
+            </div>
+            <!--e 关注我们-->
+            
+        </div>
+        <!--e 国内游右侧-->
+    	<!--s 国内游左侧-->
+        <div class="cn_left fl">
+        	<div class="act_title mt10"><h4><img src="images/x.gif" />【冬日童话】2014年冬季 吉林-雾凇长廊-长白山-魔界-雪乡-雪谷-哈尔滨七日，深度纯玩全景游（A线吉林进哈尔滨结束共30期）</h4></div>
+            <div class="act_info mt10">
+            	<div class="act_pic">
+                	<img src="images/db.jpg" />
+                </div>
+                <div class="act_detail">
+                	<div class="act_detail_i">
+                    	<span class="act_s1">活动类型：</span>
+                        <span class="act_s2">深度旅游</span>
+                    </div>
+                    <div class="act_detail_i">
+                    	<span class="act_s1">活动时间：</span>
+                        <span class="act_s2">2014-1-31~2014-2-26</span>
+                    </div>
+                    <div class="act_detail_i">
+                    	<span class="act_s1">目的地：</span>
+                        <span class="act_s2">四川&nbsp;木格措&nbsp;海螺沟&nbsp;成都</span>
+                    </div>
+                    <div class="act_detail_i">
+                    	<span class="act_s1">活动费用：</span>
+                        <span class="act_s2">成人：<span class="price">￥<b>2580</b>元</span>&nbsp;&nbsp;&nbsp;&nbsp;儿童：<span class="price">￥<b>1150</b>元</span></span>
+                    </div>
+                    <div class="act_detail_i">
+                    	<span class="act_s1">交通工具：</span>
+                        <span class="act_s2">空调旅游车</span>
+                    </div>
+                    <div class="act_detail_i">
+                    	<span class="act_s1">集结地：</span>
+                        <span class="act_s2">四川成都</span>
+                    </div>
+                    <div class="act_detail_i">
+                    	<span class="act_s1">活动状态：</span>
+                        <span class="act_s2">报名进行时</span>
+                    </div>
+                    <div class="act_detail_i">
+                    	<span class="act_s1">活动批次：</span>
+                        <span class="act_s2">
+                        	<select>
+                            	<option>01-31（星期五）-02-05（星期三）（第一批）</option>
+                                <option>02-5（星期五）-03-05（星期三）（第一批）</option>
+                            </select>
+                        </span>
+                    </div>
+                    <div class="act_detail_i act_sub_i">
+                    	<span class="act_s1 act_sub"><a href="#">报名活动</a></span>
+                        <span class="act_s2"><a href="#">支付方式</a><a href="#">活动订单</a></span>
+                    </div>
+                    <div class="clear"></div>
+                </div>
+            </div>
+            
+            <!--s 东北游-->
+            <div class="c_title mt15"><h4><img src="images/x.gif" />活动详情</h4></div>
+            <div class="c_menu mt10" id="c_menu">
+            	<ul>
+                	<li class="sel"><a href="javascript:;">活动行程</a></li>
+                    <li><a href="javascript:;">预定流程</a></li>
+                    <li><a href="javascript:;">支付方式</a></li>
+                    <li><a href="javascript:;">报名提醒</a></li>
+                    <li><a href="javascript:;">报名地图</a></li>
+                    <li><a href="javascript:;">活动讨论</a></li>
+                </ul>
+            </div>
+            <div class="c_menu_empty" id="c_menu_empty"></div>
+            <div class="c_con act_con mt10">
+            	<!--s 活动行程-->
+                <div class="act_m_info" id="act_m_info">
+                	<h4>活动行程</h4>
+                    <p>
+                        【最新通知】接东北二人转剧场通知，大年三十至年初一二人转剧场过年停演2天，因此1.31号（初一）集合批次不能观看二人转演出，因年初一当天饭店餐厅多数不营业，特安排集体用晚餐，集合时间为6:20-30酒店大厅（如个别游侠抵达较迟，不能集体用晚餐，需要提前自备食物或夜宵）！
+                    </p>
+                    <p>
+                        【活动看点】<br />
+    
+    1、"吉林-长白山-魔界-雪乡-哈尔滨七日"是象足行冬季梦幻线路。象足行是有正规旅游资质，正规合同能开发票，提供双保险，不同于没有旅游资质的XXX户外这类野社，请大家放心！<br />
+    
+    2、集合地吉林，解散地哈尔滨：好处是长春龙嘉机场比哈尔滨入港航班价格便宜，单程最多达到500元以上！<br />
+    
+    3、一般团队会在雪乡、东升安排两个晚上的火炕，其实尝试一次就够了。而且雪乡住宿条件恶劣，象足行特别花大成本安排在雪乡入住宾馆标间能洗澡（元旦、春节除外，这个时候价极高服务恶化）；<br />
+    
+    4、特别安排雪乡至雪谷（东升林场）梦幻的林海雪原徒步穿越，路程大部分以下坡路居多，轻松不费力。如不参加的可以坐车至东升林场；<br />
+    
+    5、特在假期批次增加前往镜泊湖景区游玩，可以看见中国四大瀑布之一的吊水楼瀑布等奇景，这样不会因为看不到雪乡夜景而遗憾；<br />
+    
+    6、赠送象足行定制头巾、精美徽章、登山杖、保暖贴（放鞋内脚底）2组12贴；免费使用户外雪套（防止雪倒灌）<br />
+    
+    7、赠送滑雪运动（无限畅滑），东北二人转（东北民间艺术，绝对不能错过）；赠送：篝火晚会（热烈气氛）；赠送包饺子（北方风俗）；<br />
+    
+    8、象足行倡导负责任的旅行，环保互助，深度纯玩，全程无购物，专业领队带队。（欢迎全国旅友摄友报名）<br />
+    
+    9、如何拍出美丽的白雪世界——浅谈雪景拍摄技巧（点击查看）<br />
+    
+    10、冬季户外创作相机与自身保护（点击查看）<br />
+    
+    
+                    </p>
+                </div>
+                <!--e 活动行程-->
+                <!--s 预定流程-->
+                <div class="act_process mt10" id="act_process">
+					<h4>预定流程</h4>
+                    <ul>
+                    	<li class="step1"><img src="images/x.gif" /><span>在线/电话报名</span></li>
+                        <li class="step_next"><img src="images/x.gif" /></li>
+                        <li class="step2"><img src="images/x.gif" /><span>通过审核</span></li>
+                        <li class="step_next"><img src="images/x.gif" /></li>
+                        <li class="step3"><img src="images/x.gif" /><span>付款</span></li>
+                        <li class="step_next"><img src="images/x.gif" /></li>
+                        <li class="step4"><img src="images/x.gif" /><span>出行通知</span></li>
+                        <li class="step_next"><img src="images/x.gif" /></li>
+                        <li class="step5"><img src="images/x.gif" /><span>快乐出游</span></li>
+                        <li class="step_next"><img src="images/x.gif" /></li>
+                        <li class="step6"><img src="images/x.gif" /><span>回访</span></li>
+                        <li class="step_next"><img src="images/x.gif" /></li>
+                        <li class="step7"><img src="images/x.gif" /><span>交作业/加好友/分享作业</span></li>
+                    </ul>
+                    <div class="clear"></div>
+                </div>
+                <!--e 预定流程-->
+                <!--s 支付方式-->
+                <div class="act_payment" id="act_payment">
+					<h4>支付方式</h4>
+                    <p style="height:70px;"><img src="images/fangshi.png" /></p>
+                </div>
+                <!--e 支付方式-->
+                <!--s 报名提醒-->
+                <div class="act_clock" id="act_clock">
+					<h4>报名提醒</h4>
+                    <p>
+                    	1、象足行的活动不同于传统旅游线路，对参加队员的安全、环保和团队协作精神要求较高，要求体现中华传统美德;<br />
+                        2、为保证活动质量和安全，象足行大巴游和自驾游一般情况下不进行混搭，大巴不能超载;<br />
+                        3、因为象足行多为户外、摄影和深度游线路，操作比较复杂，根据外界天气、交通等各种情况的改变，象足行领队有权在活动队员全民投票，少数服从多数的情况下，更改活动行程;<br />
+                        4、因交通延阻、罢工、天气、飞机火车故障、航班取消或更改时间等不可抗力原因所引致的额外费用，因由顾客承担。如果因为不可抗力而导致活动取消，象足行财务负责退还活动全款;<br />
+                        5、在不减少景点的情况下，象足行领队有权根据天气、航班、船班等因素调整游览景点的先后顺序;<br />
+                        6、西部线路由于路途相对较为艰辛，各项条件比不上东部发达地区，希望参加队员有合理的心理预期。摄影线路由于其线路的特殊性，拍摄需要早出晚归，参与队员须对自身身体状况有合适的判断。西部及摄影线路有高血压、心脏病、冠心病等心血管疾病队员谢绝参加。代他人报名者，须准确、及时转告。<br />
+                        7、象足行给大家投保的险种为江泰太平洋之旅旅游意外险，最高保额为30万，周边游活动保险从上车开始到活动结束返程下车为止（活动返程中途下车的游侠保险截止到下车为止）。 国内长线活动保险从集合日开始到活动结束日为止;<br />
+                        8、国内游活动报名付款后，如不能参加，扣除情况如下：提前11天以上退出，扣除活动费用的1%；提前10-8天退出活动，扣除活动费用的10%；提前7-4天退出活动，扣除活动费用的30%；提前3-1天退出活动，扣除活动费用的50%；当天退出活动，扣除活动费用的70%，火车票和机票退款损失自理，请体谅;;<br />
+                        9、国内游活动的住宿安排一般为两人一标间（即1人1个床位，行程中表明多人间的除外）。如单人报名要求住一个房间的，需致电客服确认是否能安排，单房差自理。<br />
+                        10、华东游活动报名付款后，如不能参加，扣除情况如下：出发前3日及以上，支付旅游费用总额1%；出发前2日至1日，支付旅游费用总额50%；出发当日，支付旅游费用总额70%；黄金周线路（黄金周特指国庆长假及春节参加，黄金周线路特指线路日期有一半以上占用黄金周假期）出发前2日至1日，支付旅游费用总额55%；出发当日，支付旅游费用总额75%。如按上述比例支付的业务损失费不足以赔偿旅行社的实际损失，旅游者应当按实际损失对旅行社予以赔偿，但最高额不应当超过旅游费用总额。旅游者未按约定时间到达约定集合地点，也未能在出发途中加入旅游团队的，视为旅游者在出发当日解除合同。如要退出请发送手机短信"姓名+活动+退出人数+退出原因"，退出成功以收到回复短信为准，请谅解！( 注：上海地区用户发至15821150062，其他地区用户发至13606717445 )<br />
+                        11、象足行活动线路如存在质量或服务问题，请直拨管理层手机13858148135进行投诉协商。<br />
+                        12、男女一起报名，如无法同住者请在备注栏内注明！<br />
+                        13、凡有传染性疾病、心血管疾病、脑血管疾病、呼吸系统疾病、精神病、严重贫血病、大中型手术的恢复期病患者、行动不便者、孕妇等其他不适合出行者请勿报名。<br /> 
+                    </p>
+                </div>
+                <!--e 报名提醒-->
+                <!--s 报名地图-->
+                <div class="act_map" id="act_map">
+					<h4>报名地图</h4>
+                    <ul>
+                    	<li><img src="images/map1.png" /><span>象足行杭州二维地图</span></li>
+                        <li><img src="images/map1.png" /><span>象足行杭州二维地图</span></li>
+                        <li><img src="images/map1.png" /><span>象足行杭州二维地图</span></li>
+                        <li><img src="images/map1.png" /><span>象足行杭州二维地图</span></li>
+                        <div class="clear"></div>
+                    </ul>
+                    <div class="clear"></div>
+                </div>
+                <!--e 报名地图-->
+                <!--s 活动讨论-->
+                <div class="act_chat" id="act_chat">
+                	<h4>活动讨论</h4>
+					<ul class="chat_box mt15">
+                    	<li>
+                        	<div class="chat_pic">
+                            	<a href="#" target="_blank"><img src="images/u_head.jpg" /></a>
+                            </div>
+                            <div class="chat_detail">
+                            	<div class="chat_u_info">
+                                	<span class="floor">4</span>
+                                    <h5><img src="images/x.gif" class="btn_sex_f" /><a href="#" target="_blank">小芸</a></h5>
+                                </div>
+                                <div class="chat_m_info">
+                                	<p>人生就是走走停停，记得多分享；人生就是各种瞬间，记得多记录。</p>
+                                </div>
+                                <div class="chat_time">
+                                	<span>2013-12-12</span><a href="#">回复</a>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                        	<div class="chat_pic">
+                            	<a href="#" target="_blank"><img src="images/u_head.jpg" /></a>
+                            </div>
+                            <div class="chat_detail">
+                            	<div class="chat_u_info">
+                                	<span class="floor">3</span>
+                                    <h5><img src="images/x.gif" class="btn_sex_f" /><a href="#" target="_blank">小芸</a></h5>
+                                </div>
+                                <div class="chat_m_info">
+                                	<p>人生就是走走停停，记得多分享；人生就是各种瞬间，记得多记录。</p>
+                                </div>
+                                <div class="chat_time">
+                                	<span>2013-12-12</span>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                        	<div class="chat_pic">
+                            	<a href="#" target="_blank"><img src="images/u_head.jpg" /></a>
+                            </div>
+                            <div class="chat_detail">
+                            	<div class="chat_u_info">
+                                	<span class="floor">2</span>
+                                    <h5><img src="images/x.gif" class="btn_sex_f" /><a href="#" target="_blank">小芸</a></h5>
+                                </div>
+                                <div class="chat_m_info">
+                                	<p>人生就是走走停停，记得多分享；人生就是各种瞬间，记得多记录。</p>
+                                </div>
+                                <div class="chat_time">
+                                	<span>2013-12-12</span>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                        	<div class="chat_pic">
+                            	<a href="#" target="_blank"><img src="images/u_head.jpg" /></a></div>
+                            <div class="chat_detail">
+                            	<div class="chat_u_info">
+                                	<span class="floor">1</span>
+                                    <h5><img src="images/x.gif" class="btn_sex_f" /><a href="#" target="_blank">小芸</a></h5>
+                                </div>
+                                <div class="chat_m_info">
+                                	<p>人生就是走走停停，记得多分享；人生就是各种瞬间，记得多记录。人生就是走走停停，记得多分享；人生就是各种瞬间，记得多记录。人生就是走走停停，记得多分享；人生就是各种瞬间，记得多记录。人生就是走走停停，记得多分享；人生就是各种瞬间，记得多记录。</p>
+                                </div>
+                                <div class="chat_time">
+                                	<span>2013-12-12</span>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <!--e 活动讨论-->
+            </div>
+            <!--e 东部畅游-->
+        </div>
+        <!--e 国内游左侧-->
+        <div class="clear"></div>
+    </div>
+</div>
+<!--尾部-->
+<div class="footer clear mt15">
+	<div class="foot_menu">
+    	<div class="foot_menu_c">
+        	<div class="f_mt">
+            	<ul>
+                	<li class="f_mt_l1"><h4>注册与登录</h4>
+                    	<dl>
+                        	<dd><a href="#">·&nbsp;正式会员</a></dd>
+                            <dd><a href="#">·&nbsp;修改密码</a></dd>
+                            <dd><a href="#">·&nbsp;忘记密码</a></dd>
+                            <dd><a href="#">·&nbsp;无法登录</a></dd>
+                            <dd><a href="#">·&nbsp;邮箱验证</a></dd>
+                            <dd><a href="#">·&nbsp;安全常识</a></dd>
+                        </dl>
+                    </li>
+                    <li class="f_mt_l2"><h4>发票和付款</h4>
+                    	<dl>
+                        	<dd><a href="#">·&nbsp;如何使用支付宝在线付款</a></dd>
+                            <dd><a href="#">·&nbsp;如何使用银行卡汇款</a></dd>
+                            <dd><a href="#">·&nbsp;在线支付安全吗</a></dd>
+                            <dd><a href="#">·&nbsp;为什么支付不成功</a></dd>
+                            <dd><a href="#">·&nbsp;关于现场付款的问题</a></dd>
+                            <dd><a href="#">·&nbsp;是否可以停供发票</a></dd>
+                        </dl>
+                    </li>
+                    <li class="f_mt_l3"><h4>参加活动</h4>
+                    	<dl>
+                        	<dd><a href="#">·&nbsp;如何报名圈子活动</a></dd>
+                            <dd><a href="#">·&nbsp;如何修改报名成功的活动</a></dd>
+                            <dd><a href="#">·&nbsp;如何退出活动</a></dd>
+                            <dd><a href="#">·&nbsp;各种报名状态说明</a></dd>
+                            <dd><a href="#">·&nbsp;如何查看以往报名活动</a></dd>
+                            <dd><a href="#">·&nbsp;网上报名费用支付</a></dd>
+                        </dl>
+                    </li>
+                    <li class="f_mt_l4"><h4>常见问题与反馈</h4>
+                    	<dl>
+                        	<dd><a href="#">·&nbsp;网站使用常见问题</a></dd>
+                            <dd><a href="#">·&nbsp;上传图片文件超大的解决方法</a></dd>
+                            <dd><a href="#">·&nbsp;如何在圈子中发表帖子?</a></dd>
+                            <dd><a href="#">·&nbsp;如何在个人上传影集?</a></dd>
+                            <dd><a href="#">·&nbsp;如何在圈子图库中上传图片?</a></dd>
+                            <dd><a href="#">·&nbsp;双飞、双卧都是什么意思？</a></dd>
+                        </dl>
+                    </li>
+                </ul>
+            </div>
+            <div class="f_tj">推荐给朋友</div>
+            <div class="f_fri">
+            	<div class="f_fri_item">
+                	<a href="javascript:;" class="no_hover">旗下分站：</a>
+                    <a href="#">杭州站</a><a href="#">杭州站</a><a href="#">杭州站</a><a href="#">杭州站</a><a href="#">杭州站</a><a href="#">杭州站</a><a href="#">杭州站</a><a href="#">杭州站</a><a href="#">杭州站</a><a href="#">杭州站</a><a href="#">杭州站</a><a href="#">杭州站</a>
+                </div>
+                <div class="f_fri_item">
+                	<a href="javascript:;" class="no_hover">主题旅游：</a>
+                    <a href="#">杭州站</a><a href="#">杭州站</a><a href="#">杭州站</a><a href="#">杭州站</a><a href="#">杭州站</a><a href="#">杭州站</a><a href="#">杭州站</a><a href="#">杭州站</a><a href="#">杭州站</a><a href="#">杭州站</a><a href="#">杭州站</a><a href="#">杭州站</a>
+                </div>
+                <div class="f_fri_item">
+                	<a href="javascript:;" class="no_hover">友情链接：</a>
+                    <div class="f_fri_sub">
+                    	<a href="#">云南摄影</a><a href="#">云南摄影</a><a href="#">云南摄影</a><a href="#">云南摄影</a><a href="#">云南摄影</a><a href="#">云南摄影</a><a href="#">云南摄影</a><a href="#">云南摄影</a><a href="#">云南摄影</a><a href="#">云南摄影</a><a href="#">云南摄影</a><a href="#">云南摄影</a><a href="#">云南摄影</a><a href="#">云南摄影</a><a href="#">云南摄影</a><a href="#">云南摄影</a><a href="#">云南摄影</a><a href="#">云南摄影</a><a href="#">云南摄影</a><a href="#">云南摄影</a><a href="#">云南摄影</a><a href="#">云南摄影</a><a href="#">云南摄影</a>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+    <div class="foot_ad">
+    	<img src="images/fot.jpg" />
+    </div>
+    <div class="foot_bottom">
+    	<a href="#">关于象足行者</a>&nbsp;|&nbsp;<a href="#">我们的团队</a>&nbsp;|&nbsp;<a href="#">联系我们</a>&nbsp;|&nbsp;<a href="#">意见反馈</a>&nbsp;|&nbsp;<a href="#">商务合作</a>&nbsp;|&nbsp;<a href="#">使用协议</a>&nbsp;|&nbsp;<a href="#">隐私政策</a>&nbsp;|&nbsp;<a href="#">交换链接</a>&nbsp;|&nbsp;<a href="#">帮助中心</a>
+        <br />
+        广州市象足行者体育运动策划有限公司  粤ICP备13013002号<br />
+        地址：广州市越秀区北较场路金鹰酒店入口602（地铁:小北站B出口） 电话：020-62276601<br />
+        Copyright © 1998 - 2013 www.xzxzhw.com. All Rights Reserved<br />
+    </div>
+</div>
+
+<!---->
+
+<div class="x_tool">
+	<a href="#" class="x_t x_t1"></a>
+    <a href="#" class="x_t x_t2"></a>
+    <a href="#" class="x_t x_t3"></a>
+    <a href="#" class="x_t x_t4"></a>
+    <a href="#" class="x_t x_t5" id="backToTop"></a>
+</div>
+</body>
+</html>

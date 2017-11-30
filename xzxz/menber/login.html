@@ -1,0 +1,207 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>登录|象足行者</title>
+<link type="text/css" href="../css/reg_login.css" rel="stylesheet" />
+</head>
+
+<body>
+<span id="s1"></span><br /><span id="s2"></span>
+<div class="login_main">
+	<div class="login_logo"><img src="../images/logo.png" /></div>
+    <div class="login_left">
+    	<p align="center"><img src="../images/login_t.png" /></p>
+    	<div class="login_left_img" id="login_left_img">
+        	<ul>
+            	<li class="li1"><a href="javascript:;"><img src="../images/login_img1.jpg" /></a></li>
+                <li class="li2"><a href="javascript:;"><img src="../images/login_img2.jpg" /></a></li>
+                <li class="li3"><a href="javascript:;"><img src="../images/login_img3.jpg" /></a></li>
+                <li class="li4"><a href="javascript:;"><img src="../images/login_img4.jpg" /></a></li>
+                <li class="li5"><a href="javascript:;"><img src="../images/login_img5.jpg" /></a></li>
+                <li class="li6"><a href="javascript:;"><img src="../images/login_img6.jpg" /></a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="login_right">
+    	<div class="login_box">
+        	<h4>登录象足行者</h4>
+            <form class="login_form" id="login_form">
+            	<div class="msg" id="msg">
+                	<img src="../images/x.gif" /><span id="msg_info"></span>
+                </div>
+            	<div class="uinArea">
+                	<label class="input_tips" id="uin_tips">邮箱/用户名</label>
+                	<input type="text" class="login_input_text" id="uin_txt" />
+                </div>
+                <div class="pwdArea">
+                	<label class="input_tips" id="pwd_tips">密码</label>
+                	<input type="password" class="login_input_text" id="pwd_txt" />
+                </div>
+                <div class="codeArea">
+                	<label class="input_tips" id="code_tips">验证码</label>
+                	<input type="text" class="login_input_text code" id="code_txt" />
+                    <img src="../images/code_img.jpg" class="code_img" />
+                    <a href="#" class="code_a">看不清<br />换一张</a>
+                </div>
+                <div class="submitArea">
+                	<input type="submit" value="登 录" class="sub_btn"/>
+                    <span class="auto_login" id="auto_login">
+                    	<span><img src="../images/x.gif" /><label>下次自动登录</label></span>
+                        <input type="hidden" value=""/>
+                    </span>
+                </div>
+                <div class="login_form_bottom">
+                	<a href="#">忘了密码？</a>&nbsp;|&nbsp;<a href="#">注册新账号</a>&nbsp;|&nbsp;<a href="#">意见反馈</a>
+                </div>
+            </form>
+        </div>
+    </div>
+    <div class="clear"></div>
+    <div class="login_foot">
+    	<p>
+        	广州市象足行者体育运动策划有限公司  粤ICP备13013002号<br />
+            地址：广州市越秀区北较场路金鹰酒店入口602（地铁:小北站B出口） 电话：020-62276601<br />
+            Copyright <font style="font-family:'Microsoft YaHei';">©</font> 1998 - 2013 www.xzxzhw.com. All Rights Reserved
+        </p>
+    </div>
+</div>
+<div class="login_bg" id="login_bg">
+	
+</div>
+<script type="text/javascript" src="../js/jquery-1.8.0.min.js"></script>
+<script>
+
+var img_src = 
+['../images/login_bg1.jpg','../images/login_bg2.jpg','../images/login_bg3.jpg','../images/login_bg4.jpg'];
+
+var dh = $(document).height();
+$('#login_bg').append('<img id="bg_img" />');
+
+function loadPage(){
+    var randomNum = parseInt(4*Math.random());
+	var wh = $(window).height();
+	if(wh > dh){
+		$('#bg_img').height(wh + 'px');	
+	}else{
+		$('#bg_img').height(dh + 'px');	
+	}
+	$('#bg_img').attr('src',img_src[randomNum]+'');
+	
+}
+window.onload = function(){
+	loadPage();
+};
+window.onresize = function(){
+	loadPage();
+};
+</script>
+
+<script>
+function trim(str){ //删除左右两端的空格
+　     return str.replace(/(^\s*)|(\s*$)/g, "");
+ }
+$(function(){
+	
+	$('#uin_txt').focus(function(){
+		$('#uin_tips').css('color','#ccc')
+	});
+	$('#uin_txt').blur(function(){
+		if(trim($(this).val()) == ''){
+			$(this).val('');
+			$('#uin_tips').css('display','block');
+			$('#uin_tips').css('color','#999');
+		}
+	});
+	$('#uin_txt').keydown(function(){
+		$('#uin_tips').css('display','none')
+	});
+	
+	$('#pwd_txt').focus(function(){
+		$('#pwd_tips').css('color','#ccc')
+	});
+	$('#pwd_txt').blur(function(){
+		if(trim($(this).val()) == ''){
+			$(this).val('');
+			$('#pwd_tips').css({'display':'block','color':'#999'});
+		}
+	});
+	$('#pwd_txt').keydown(function(){
+		$('#pwd_tips').css('display','none')
+	});
+	
+	$('#code_txt').focus(function(){
+		$('#code_tips').css('color','#ccc')
+	});
+	$('#code_txt').blur(function(){
+		if(trim($(this).val()) == ''){
+			$(this).val('');
+			$('#code_tips').css('display','block');
+			$('#code_tips').css('color','#999');
+		}
+	});
+	$('#code_txt').keydown(function(){
+		$('#code_tips').css('display','none')
+	});
+	
+	/*自动登录按钮*/
+	var auto_index = 0;
+	$('#auto_login').click(function(){
+		if(auto_index == 0){
+			$(this).addClass('auto_login_no').next('input').val('0');
+			auto_index = 1;
+		}else{
+			$(this).removeClass('auto_login_no').next('input').val('1');
+			auto_index = 0;
+		}
+	});
+	
+	/**/
+	$('#login_left_img a').hover(function(){
+		var img_w = $(this).parent().width();
+		var img_h = $(this).parent().height();
+		$(this).find('img').animate({'width':img_w+20+'px','left':-10+'px','top':-(((img_w+20)*img_h)/img_w-img_h)/2+'px'},500);
+	},function(){
+		var img_w1 = $(this).parent().width();
+		var img_h1 = $(this).parent().height();
+		$(this).find('img').animate({'width':img_w1+'px','left':'0px','top':'0px'},500);
+	});
+	
+	/*表单检验*/
+	var check = {
+		check_uin: function(){
+			var uinTxt = $('#uin_txt').val();
+			if(trim(uinTxt) == ''){
+				$('#msg').css('display','inline-block').find('span').html('请输入登录用户名');return false;
+			}else{
+				$('#msg').css('display','none');return true;
+			}
+		},
+		check_pwd: function(){
+			var uinTxt = $('#pwd_txt').val();
+			if(trim(uinTxt) == ''){
+				$('#msg').css('display','inline-block').find('span').html('请输入密码');return false;
+			}else{
+				$('#msg').css('display','none');return true;
+			}
+		},
+		check_code: function(){
+			var uinTxt = $('#code_txt').val();
+			if(trim(uinTxt) == ''){
+				$('#msg').css('display','inline-block').find('span').html('请输入验证码');return false;
+			}else{
+				$('#msg').css('display','none');return true;
+			}
+		}
+	}
+	/*表单提交*/
+	
+	$('#login_form').submit(function(){
+		return check.check_uin() && check.check_pwd() && check.check_code();
+		
+	});
+	
+});
+</script>
+</body>
+</html>
