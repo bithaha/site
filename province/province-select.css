@@ -1,0 +1,37 @@
+/* 头部右上角省份按钮样式 */
+.header .location{position: absolute;color:#fff;padding: 0;left: 1em;height: 1.2em;line-height:1.2em;margin-top: -.6em;top:50%;z-index:1000;font-weight:normal;}
+.header .location .arrow{width: 1em;height:1em;display:inline-block;margin-left:.5em; vertical-align: middle;position:relative;}
+.header .location .arrow:before,.header .location .arrow:after{content:"";width: .6em;height:1px;background:#fff;display:block;top:50%;position:absolute;}
+.header .location .arrow:before{transform:rotate(45deg);left:0;}
+.header .location .arrow:after{transform:rotate(-45deg);right:0;}
+.header .location em{vertical-align: middle;}
+
+/* 城市选择css */
+.city-select-window{position: fixed;width: 100%;height: 100%;left: 0;top:0;z-index: 11000;background: #fff;opacity: 0; visibility: hidden;transform: translateY(20px);-webkit-transform: translateY(20px);transition: all .3s;-webkit-transition: all .3s;}
+.city-select-window.active{opacity: 1;visibility: visible;transform: translateY(0);-webkit-transform: translateY(0);}
+.city-select-window .head{position:absolute;width: 100%;}
+.city-select-window .head .title{height: 3.2em;line-height:3.2em;text-align:center;font-weight:normal;}
+.city-select-window .head .btn-left{position:absolute;display:block;height: 3.6em;min-width:3.6em;text-align:center;line-height: 3.6em;z-index:10;}
+.city-select-window .head .btn-left:active{background:#eee;}
+.city-select-window .content{position: absolute;top: 3.6em;bottom:0;overflow:auto;width:100%;}
+.city-select-window .ico-back{width: 1.4em;height: 1.4em;display:inline-block;position:absolute;top:50%;left:50%;margin-left: -.7em;margin-top: -.7em;}
+.city-select-window .ico-back:before,.ico-back:after{content:"";display:block;width:100%;height:1px;background:#000;top:50%;left:0;margin-top:-1px;position:absolute;transform: rotate(45deg);-webkit-transform:rotate(45deg);}
+.city-select-window .ico-back:after{transform: rotate(-45deg);-webkit-transform: rotate(-45deg);}
+.city-search{background:#edf0f5;padding: .4em .8em;position:relative;}
+.city-search .txt{width: 100%;background:#fff;border:0;padding: .5em .8em;padding-left: 2.6em;border-radius:3px;}
+.city-search .ico-sear{position:absolute;width:1.4em;height:1.4em;left:1.4em;top:50%;margin-top:-.7em;}
+.city-search .ico-sear:before,.city-search .ico-sear:after{content:"";display:block;}
+.city-search .ico-sear:before{width:1.2em;height:1.2em;border:1px solid #babac0;border-radius:50%;}
+.city-search .ico-sear:after{width:.4em;height:1px;background:#babac0;position:absolute;bottom:0;right:0;transform:rotate(45deg);-webkit-transform:rotate(45deg);transform-origin: bottom right;-webkit-transform-origin: bottom right;}
+.city-select-window .content .inner{padding: 0 1.4em;position:relative;}
+.city-select-window .content .tit{padding: 1em 0;color:#858585;font-weight:normal;font-size:1em;}
+.city-show-body{overflow:hidden;}
+.citylist:after{content:"";display:block;clear:both;}
+.citylist a{width: 31%;margin-right: 3.5%;line-height:2.4em;display: inline-block;float: left;text-align: center;margin-bottom: 1em;border-radius: 2px;border:1px solid #eaeaea;color:#000;}
+.citylist a:nth-child(3n){margin-right:0;}
+.citylist a:active,.citylist a.active{background: #fbf5f4;border-color:#ad391e;color:#ad391e;}
+.search-list{height: 100%;top: 0;left: 0;background: #fff;z-index: 90;overflow: auto;}
+.search-list a{display: block;padding: 1em;border-bottom: 1px solid #eee;}
+.city-select-window .btn-del{width: 1.6em;height: 1.6em;line-height: 1.6em;text-align:center;border-radius: 50%;position: absolute;right: 1.4em;top: 50%;margin-top: -.8em;color:#fff;background: rgba(0,0,0,.5);display: none;}
+.search-list a:active{background: #eee;}
+.city-select-window .inner .search-list{margin-left:-1.4em;margin-right:-1.4em;}
