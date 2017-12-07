@@ -1,0 +1,117 @@
+@charset "gb2312";
+body, html, h1, h2, h3, h4, h5, h6, p, ul, ol, li, dl, dt, dd, th, td, form, object, iframe, blockquote, pre, a, abbr, address, code, img, fieldset, form, label, figure { margin:0; padding:0; }
+body, html, input, button, textarea { color:#333; font:16px/1.8 "Microsoft YaHei", Arial, simsun, Tahoma, Verdana, Helvetica, sans-serif; }
+article, aside, figcaption, figure, footer, header, hgroup, main, nav, section { display:block; }
+body { _background-image:url(about:blank); _background-attachment:fixed; }
+h1 { font-size:18px; }
+h2 { font-size:16px; }
+h3, h4, h5 { font-size:14px; }
+img { border:none; vertical-align:middle; }
+li { list-style:none; }
+i, em { font-style:normal; }
+a { color:#6d6d6d; text-decoration:none; cursor:pointer; }
+a:focus { outline:none; }
+a:hover { color:#28ad38; text-decoration:none; }
+input[type="text"]:focus ,select{ outline:none; }
+input[type="button"], input[type="reset"], input[type="submit"] { cursor:pointer; }
+input[type="reset"]::-moz-focus-inner, input[type="button"]::-moz-focus-inner, input[type="submit"]::-moz-focus-inner, input[type="file"] > input[type="button"]::-moz-focus-inner {border:none;padding:0;}
+::-webkit-input-placeholder { color:    #e1e1e1;}
+:-moz-placeholder { color:    #e1e1e1;}
+::-moz-placeholder {color:    #e1e1e1;}
+:-ms-input-placeholder {color:    #e1e1e1;}
+
+/* 清除浮动 */
+.clearfix:after, .layout:after, .header:after,.navbar:after, .navbar .nav:after, .main-tit-bar:after, .wraper:after { content:""; display:block; height:0; clear:both; visibility:hidden; }
+/* 布局 */
+.layout,.wraper, .navbar ,.section,.footer,.footer-fix{ width:1200px; margin:0 auto;min-width:1200px; }
+.disabled { display:none; }
+.z9999 { z-index:9999; }
+/* tag */
+.ico-txt { display:inline-block; height:22px; line-height:22px; padding:0 6px; border-radius:3px; color:#fff; font-size:14px; }
+.ico-txt { *display:inline;}
+.ico-txt-pink { background-color:#fcaaaa; }
+.ico-txt-blue { background-color:#a9c3f9; }
+.ico-txt-yellow { background-color:#ffbe58; }
+.ico-txt-green { background-color:#86d38d; }
+.ico-txt-purple { background-color:#be9bd9; }
+.ico-txt-green { background-color:#86d38d; }
+.ico-dark-green { background-color:#42ac01; }
+.ico-dark-red { background-color:#c00; }
+
+.color-green{color:#28ad38;}
+/* -------------------------------- 
+ * 页头 
+ * -------------------------------- */
+body{padding-top:130px;}
+.header{border-bottom:1px solid #ebebeb;position:fixed;top:0;width:100%;left:0;background:#fff;background-color:rgba(255,255,255,.96);z-index:999;}
+.header-top{height:40px;line-height:40px;background:#2c2c2c;color:#fff;transition:height .3s;-webkit-transition:height .3s;}
+.header-top .wraper{overflow:hidden;}
+.topnav{float:right;}
+.topnav li{float:left;}
+.topnav li a{color:#fff;display:block;padding:0 18px;}
+.topnav li a:hover{background:#555;}
+.nav li.last .btn{height:40px;line-height:40px;background:#28ad38;color:#fff;border-radius:40px;padding:0 20px;position:relative;top:25px;}
+.nav li.last .btn:hover{opacity:.9;}
+
+.navbar{height:90px;}
+.navbar .nav{float:right;}
+.navbar li{float:left;padding:0 15px;}
+.navbar li a{display:block;height:90px;line-height:90px;border-bottom:1px solid transparent;}
+.navbar li.active a{color:#28ad38;border-bottom-color:#28ad38;}
+
+.header .logo{float:left;height:60px;margin-top:15px;}
+.header .logo img{height:100%;}
+
+.header.active .header-top{height:0;overflow:hidden;}
+.ico-tel,.ico-regist,.ico-login{width:1em;height:1em;display:inline-block;background-size:100% 100%;vertical-align:middle;margin-right:5px;    font-size: 20px;}
+.ico-tel{background-image:url(img/ico-tel.png);}
+.ico-regist{background-image:url(img/ico-regist.png);}
+.ico-login{background-image:url(img/ico-login.png);}
+
+/* 导航条 */
+
+/* -------------------------------- 
+ * 页底 
+ * -------------------------------- */
+.footer { color:#aaa; background:#000;padding:90px 0;font-size:18px; }
+.footer-tel{float:right;text-align:right;line-height:36px;}
+.footer-tel .tel{font-size:30px;color:#28ad38;font-weight:normal;margin-bottom:10px;}
+.footer-logo{float:left;}
+.footer-logo p{margin-top:40px;font-size:24px;}
+.footer-download{float:left;margin-left:60px;padding-left:60px;border-left:1px solid #4f4f4f;}
+.footer-download .tit{color:#28ad38; font-size: 18px;font-weight:normal;}
+.footer-download li{float:left;margin-left:45px;}
+
+/* 底部导航 */
+
+/*大图*/
+.flexslider{border:0; margin:0;   overflow: hidden;}
+.flex-direction-nav a:before{line-height:40px;}
+.slid-item{width:100%;overflow:hidden;position:relative;}
+.slid-img{width:4000px;position:relative;left:50%;margin-left:-2000px;text-align:center;}
+.flexslider .slides img{width:auto;display:inline-block;vertical-align:top;height:600px;}
+.flex-control-nav{bottom:15px;z-index:10;}
+.flex-control-paging li a{background:#fff;opacity:.6;filter:Alpha(opacity=50);}
+.flex-control-paging li a.flex-active{background:#28ad38;opacity:.8;}
+
+.ireg-box{width:400px;position:absolute;top:0;left:0;background:#fff;z-index:50;left:50%;top:70px;border:1px solid #eee;padding:35px 0;margin-left:-555px;}
+.ireg-box h4{font-size:18px;line-height:18px;text-align:center;font-weight:normal;margin:0 0 15px 0;}
+.ireg-box h3{font-size:30px;line-height:32px;text-align:center;font-weight:normal;margin:0 0 20px 0;}
+.ireg-form{margin:0 60px;}
+.ireg-form li{margin-bottom:15px;}
+.ireg-form .text{height:48px;line-height:48px;border:1px solid #ddd;border-radius:20px;padding:0 30px;width:220px;}
+.ireg-form .text:focus{border-color:#28ad38;}
+.ireg-form select{height:48px;line-height:48px;border:1px solid #ddd;border-radius:20px;padding:0 15px;width:136px;font-size:16px;outline:none;}
+.ireg-form .btn{display:block;height:48px;line-height:48px;text-align:center;background:#28ad38;color:#fff;border-radius:20px;}
+.ireg-box .tip{text-align:center;font-size:18px;}
+.ireg-box.active{}
+
+/* 返回顶部 */
+.gotop { display:none; width:55px; height:55px; text-align:center; color:#fff; font-size:12px; background:#bbb url(img/go-top.png) center center no-repeat; position:fixed; right:10px; bottom:70px; z-index:9999; line-height:1.3em; cursor:pointer; _position:absolute; _bottom:auto; _top:expression(eval(document.documentElement.scrollTop+document.documentElement.clientHeight-this.offsetHeight-(parseInt(this.currentStyle.marginTop, 10)||0)-(parseInt(this.currentStyle.marginBottom, 10)||0)));
+_margin-bottom:10px; _background:url(img/go-top-ie.png) 0 0 no-repeat; }
+.gotop:hover { background-color:#28ad38; _background:url(img/go-top-ie.png) 0 -55px no-repeat; }
+
+/*fix ie*/
+.flex-control-nav li{*display:inline;}
+.flex-direction-nav{*position:absolute;}
+.ys-list li{*display:inline!important;}
