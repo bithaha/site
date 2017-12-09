@@ -1,0 +1,57 @@
+@media (max-width: 1200px){
+	.wraper,.header,.layout,.footer{width: auto;min-width: 1px;}
+	.wraper{margin:0 15px;}
+	.topright .search{display: none;}
+	.ireg-box{left: auto;margin-left:0;right:0;top: 0;padding-top: 10px;}
+	.flexslider .slides img{height: 420px;}
+
+	.in-news .img,.in-news ul{width: 100%;float: none;}
+	.contact-list li{width:140px;height: 140px;}
+	.contact-list li i{font-size: 40px;}
+	.contact-list li .img{padding-top:20px;}
+	.footer-navs .nav li{padding:0 20px;}
+}
+@media(max-width: 768px){
+	body{padding-top: 3rem;}
+	.header{position: fixed;top: 0;left: 0;width: 100%;}
+	.btnnav{display: block;}
+	.topright .tel{display: none;}
+	.header-top .wraper{position: relative;}
+	.header-top{background: #fff;position: relative;z-index: 10;}
+	.wraper{margin:0 .6rem;}
+	.header-top .wraper{padding: .5rem 0;}
+	.header .logo{height: 2rem;}
+	.navbar{position: absolute;top: 100%;width: 100%;opacity: 0;visibility: hidden;transition: all .3s;-webkit-transition: all .3s;transform: translateY(-20px);-webkit-transform: translateY(-20px);}
+	.navbar li{float:none; text-align: center;}
+	.navbar .wraper{margin:0;}
+	.header.active .navbar{opacity: 1;visibility: visible;transform: translateY(0);-webkit-transform: translateY(0);}
+	.header-cover{position: fixed;width: 100%;height: 100%;top: 0;left: 0;z-index: 98;background:rgba(0,0,0,.3);}
+
+	.ireg-box{width: 14rem;left: 1rem;right:1rem;}
+
+
+	.tx-section{padding:1rem 0;}
+	.main-tit-bar .title{font-size: .8rem;margin-bottom: .5rem;}
+	.main-tit-bar .title span{padding-bottom: .5rem;}
+	.main-tit-bar .title-en{font-size: .7rem;margin-top: .3rem;}
+	.main-tit-bar .desc{font-size: .6rem;margin-top:.3rem;}
+	.main-tit-bar .title span:after{height: 3px;bottom:-2px;}
+
+	.tx-list .item-1{margin-bottom: -1.8rem;}
+	.tx-list .item-1 img{position: static;left: 0;top:0;height: 100%;}
+	.tx-list{width: 100%;float:none;}
+	.tx-list li{width: 100%;}
+
+	.xb-section{height: auto;padding: 2rem 0;}
+	.xb-section .tit{margin-top: 0;}
+	.xb-section .tit h3{font-size: 1rem;}
+	.xb-section .tit p{font-size:.6rem;line-height: 1.2;}
+
+	.sz-list li{width: 50%;height:6rem;border-bottom: 1px solid #eee;}
+	.sz-section{padding: 2rem 0 5rem;}
+	.sz-list li .txt{padding-top: 1.3rem;font-size: .5rem;line-height: 1.2;}
+	.sz-list li .txt h3{font-size:.8rem;}
+
+	.news-section{padding:1rem 0;}
+
+}
