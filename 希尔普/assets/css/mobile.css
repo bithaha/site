@@ -5,14 +5,14 @@
 	.ireg-box{left: auto;margin-left:0;right:0;top: 0;padding-top: 10px;}
 	.flexslider .slides img{height: 420px;}
 
-	.in-news .img,.in-news ul{width: 100%;float: none;}
+	.in-news .img,.in-news ul{width: 100%;float: none;    min-height: 6rem;}
 	.contact-list li{width:140px;height: 140px;}
 	.contact-list li i{font-size: 40px;}
 	.contact-list li .img{padding-top:20px;}
 	.footer-navs .nav li{padding:0 20px;}
 }
 @media(max-width: 768px){
-	body{padding-top: 3rem;}
+	body{padding-top: 3rem;font-size: .6rem;}
 	.header{position: fixed;top: 0;left: 0;width: 100%;}
 	.btnnav{display: block;}
 	.topright .tel{display: none;}
@@ -23,6 +23,7 @@
 	.header .logo{height: 2rem;}
 	.navbar{position: absolute;top: 100%;width: 100%;opacity: 0;visibility: hidden;transition: all .3s;-webkit-transition: all .3s;transform: translateY(-20px);-webkit-transform: translateY(-20px);}
 	.navbar li{float:none; text-align: center;}
+	.navbar li a{height: 1.8rem;line-height: 1.8rem;}
 	.navbar .wraper{margin:0;}
 	.header.active .navbar{opacity: 1;visibility: visible;transform: translateY(0);-webkit-transform: translateY(0);}
 	.header-cover{position: fixed;width: 100%;height: 100%;top: 0;left: 0;z-index: 98;background:rgba(0,0,0,.3);}
@@ -31,6 +32,7 @@
 
 
 	.tx-section{padding:1rem 0;}
+	.main-tit-bar{margin-bottom: 1.5rem;}
 	.main-tit-bar .title{font-size: .8rem;margin-bottom: .5rem;}
 	.main-tit-bar .title span{padding-bottom: .5rem;}
 	.main-tit-bar .title-en{font-size: .7rem;margin-top: .3rem;}
@@ -51,7 +53,29 @@
 	.sz-section{padding: 2rem 0 5rem;}
 	.sz-list li .txt{padding-top: 1.3rem;font-size: .5rem;line-height: 1.2;}
 	.sz-list li .txt h3{font-size:.8rem;}
-
+	.site-sys h4,.site-sys h3{font-size: .8rem;}
+	.site-sys .desc{font-size: .6rem;}
 	.news-section{padding:1rem 0;}
+	.in-news ul li .tit{font-size: .8rem;}
 
+
+	.contact-section{padding: 1.5rem 0;}
+	.big-tel{font-size: 1.4rem;}
+	.ico-bigtel{font-size: 1.2rem}
+	.contact-list li{width: 6rem;height: 6rem;margin: 0 .3rem .5rem .3rem;}
+	.contact-list li .img{padding-top: .5rem;margin-bottom: .6rem;}
+	.contact-list li i{font-size: 2rem;}
+	.tf-img{margin-top: 2rem;}
+
+	.footer-navs .nav{float: none;}
+	.footer-navs .nav li{float:none;padding:0;}
+	.footer-navs .nav li .det{ overflow: hidden; }
+	.footer-navs .nav li dd{float: left;margin:0 .5rem 1rem 0;}
+	.footer-navs .nav li .tit{ margin-bottom: .6rem; font-size: .7rem;color:#15894b;}
+	.footer-navs .nav li a{font-size: .6rem;}
+	.footer .qrcode{float:none; text-align: center; overflow: hidden;}
+	.footer .qrcode dd{margin: 0 .3rem; display: inline-block;font-size: .5rem;}
+	.footer-infos{padding: 1rem 0;line-height: 1.2;}
+
+	.gotop{width: 2rem;height: 2rem;bottom: 2rem;}
 }
