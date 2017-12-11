@@ -310,9 +310,10 @@ _margin-bottom:10px; _background:url(../images/go-top-ie.png) 0 0 no-repeat; }
 .owl-prev,.owl-next{text-indent:-9999px;overflow:hidden;cursor:pointer;}
 
 /* 明星学员 */
-.mx-section{padding: 60px 0;}
+.mx-section{padding: 60px 0 0;}
 .star-slider{ width: 900px;margin:0 auto 60px; text-align: center;}
 .star-slider .item{display: inline-block;line-height: 55px;padding:0 20px;border-radius: 3px;background:#dadada;font-size: 24px;color:#141515;}
+.star-slider .item.active{background-color:#15894b;color:#fff;}
 .star-slider .owl-stage-outer{width: auto;}
 .star-slider .owl-prev,.star-slider .owl-next{width: 29px;height: 66px;display: block;position: absolute;top: 50%;margin-top:-33px;left:-100px;background: url(../images/turns.png) 0 0 no-repeat;background-size: 100% auto;}
 .star-slider .owl-next{background-position: 0 -66px;left:auto;right: -100px;}
@@ -322,15 +323,37 @@ _margin-bottom:10px; _background:url(../images/go-top-ie.png) 0 0 no-repeat; }
 .star-list li .img{overflow: hidden;height: 290px;}
 .star-list li .img img{vertical-align: top;width: 100%;}
 .star-list li .det{padding: 15px 10px;font-size: 18px;color:#000; text-align: center;}
-.star-list li .det .tit{margin-bottom: 10px;font-weight: normal;font-size: 18px;}
+.star-list li .det .tit{margin-bottom: 10px;font-weight: normal;font-size: 18px;overflow: hidden;text-overflow: ellipsis;white-space: nowrap;}
 .star-list li p{color:#999;}
 .star-list li .green{color:#15894b;margin-left: 5px;}
 
 
+
 /* 明星教师 */
 .mxjs-section{padding: 60px 0;}
-.teacher-slider{}
-.teacher-slider .img{width: 235px;height: 235px;border: 4px solid #15894b;border-radius:50%;overflow: hidden;}
+.teacher-slider{ width: 1200px; text-align: center;}
+.teacher-slider .img{width: 235px;height: 235px;margin:0 auto;border: 4px solid #15894b;border-radius:50%;overflow: hidden; position: relative;z-index: 10;}
 .teacher-slider .img img{width: 100%;}
-.teacher-slider .det{background: #15894b;padding: 100px 30px 30px 30px;margin-top: -70px;color:#fff;font-size: 18px;line-height: 30px;}
-.teacher-slider .det .tit{text-align: center;}
+.teacher-slider .det{background: #ddd;padding: 100px 30px 30px 30px;margin-top: -70px;color:#000;font-size: 18px;line-height: 30px;text-align: left;}
+.teacher-slider .det .tit{text-align: center;margin-bottom: 30px;font-size: 28px;}
+.teacher-slider .det .info{ overflow: hidden;margin-bottom: 10px; }
+.teacher-slider .det .info .km{float: right;}
+.teacher-slider .det .info .jl{float: left;}
+
+.teacher-slider .item.active .det{background: #15894b;color:#fff;}
+.teacher-slider .owl-prev,.teacher-slider .owl-next{width: 29px;height: 66px;display: block;position: absolute;top: 50%;margin-top:-33px;left:-50px;background: url(../images/turns.png) 0 0 no-repeat;background-size: 100% auto;}
+.teacher-slider .owl-next{background-position: 0 -66px;left:auto;right: -50px;}
+
+.zhaolaoshi-section{}
+.zhaolaoshi-section img{vertical-align: top;max-width:100%;}
+
+/* 常见问题 */
+.faq-section{padding: 55px 0; position: relative;}
+.faq-section .bg{position: absolute;width: 100%;height: 424px;background:#15894b;z-index:1;top: 0;left: 0;}
+.faq-section .wraper{position: relative;z-index: 10;}
+.faq-section .title{color:#fff;font-size: 36px;margin-bottom: 60px;text-align: center;font-weight: normal;}
+.faq-list{background: #fff;margin:0 45px;padding:50px 0 0 25px; overflow: hidden;}
+.faq-list li{width: 320px;height:360px;float: left;background: #f2f2f2;margin:0 0 25px 25px;color:#303133;font-size: 14px;line-height: 28px;}
+.faq-list li .tit{margin: 30px 20px;font-size: 16px;line-height:1;padding-bottom: 10px;border-bottom:1px solid #eaeaea;margin-bottom: 20px;}
+.faq-list li .q{margin: 0 25px 30px 25px;font-weight: bold;}
+.faq-list li .a{margin:0 25px;}
