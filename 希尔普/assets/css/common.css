@@ -216,9 +216,9 @@ _margin-bottom:10px; _background:url(../images/go-top-ie.png) 0 0 no-repeat; }
 .ad-section img{vertical-align: top;max-width: 100%;}
 .gj-section{margin-bottom: 30px;}
 .gj-section .wraper{background: #fff;box-shadow: 0 0 30px rgba(0,0,0,.15); overflow: hidden;border-top:1px solid #32cc79;}
-.gj-section .tabs{width: 160px;float: left; background: #32cc79;}
+.gj-section .tabs{width: 160px;float: left; overflow: hidden;}
 .gj-section .tabs-con{margin-left: 160px;}
-.gj-section .tabs li a{display: block;width: 160px;padding: 20px 0;border-bottom:1px solid #2bae67;color:#fff;font-size: 20px; text-align: center;}
+.gj-section .tabs li a{display: block;width: 160px;background: #32cc79;padding: 20px 0;border-bottom:1px solid #2bae67;color:#fff;font-size: 20px; text-align: center;}
 .gj-section .tabs li.active a,.gj-section .tabs li.active a:hover{background: #fff;color:#32cc79;border-left:1px solid #32cc79;}
 .gj-section .tabs li a:hover{background:rgba(0,0,0,.1);}
 .tabs-panel{display: none;}
@@ -280,6 +280,7 @@ _margin-bottom:10px; _background:url(../images/go-top-ie.png) 0 0 no-repeat; }
 .ico-user{background-position: 0 0;}
 .ico-clock{background-position: 0 -1.5em;}
 .art-body{font-size: 18px;color:#666;line-height: 48px;margin-bottom: 80px;}
+.art-body img{max-width: 100%;}
 .art-body .img{text-align: center;margin:20px 0;}
 
 /* 动态 */
@@ -357,3 +358,55 @@ _margin-bottom:10px; _background:url(../images/go-top-ie.png) 0 0 no-repeat; }
 .faq-list li .tit{margin: 30px 20px;font-size: 16px;line-height:1;padding-bottom: 10px;border-bottom:1px solid #eaeaea;margin-bottom: 20px;}
 .faq-list li .q{margin: 0 25px 30px 25px;font-weight: bold;}
 .faq-list li .a{margin:0 25px;}
+
+/* 希尔普课程 */
+.edu-section{padding: 60px 0;}
+.edu-list{width: 115%; overflow: hidden;}
+.edu-list li{width: 340px;margin-right: 90px;float: left; position: relative;padding-top:300px;}
+.edu-list li .img{position: absolute;width: 100%;height: 100%;top: 0;left: 0;z-index:1;text-align: center;}
+.edu-list li .img img{max-width: 100%;}
+.edu-list li .det{position: relative;z-index: 20;background: #dddddd;border-radius:5px; overflow: hidden; text-align: center;}
+.edu-list li .det .desc{font-size: 16px;color:#4e4e4e; line-height: 32px;padding: 10px 20px;}
+.edu-list li .det .btnarea{background: #535c64; text-align: center;padding: 20px 0;}
+.edu-list li .det .btnarea .btn{height: 35px;line-height: 35px;padding: 0 20px;border-radius:3px;display: inline-block; background: #15894b;color:#fff;}
+.edu-list li .det .btnarea .btn:hover{opacity: .9;}
+
+/*  */
+.shouke-section{background: #15894b;color: #fff;padding: 40px 0 30px; text-align: center;}
+.shouke-section .title{font-size: 48px;font-weight: normal;margin-bottom: 30px;}
+.shouke-list{ overflow: hidden; }
+.shouke-list li{width: 33.3333333%;float: left;font-size: 20px;}
+.shouke-list li i{background-image: url(../images/sprits-36x36.png);background-size: 100% auto; vertical-align: middle;font-size: 36px;margin-right: 15px;}
+.ico-sk-1{background-position: 0 0;}
+.ico-sk-2{background-position: 0 -1.5em;}
+.ico-sk-3{background-position: 0 -3em;}
+.shouke-list li span{vertical-align: middle;}
+
+/* 核心优势 */
+.core-section{padding: 90px 0 130px;background: url(../images/edu-bg.png) center center no-repeat;background-size: cover;}
+.core-section .wraper{background: #fff;padding: 50px 0;}
+.core-title-bar{margin-bottom: 50px;text-align: center;}
+.core-title-bar .title{font-size: 48px;color:#505050;font-weight: normal;}
+.core-title-bar .sub{font-size: 24px;color:#15894b;margin-top: 15px;}
+.core-list{margin: 0 40px; overflow: hidden;position: relative;}
+.core-list li{width: 50%;float: left;}
+.core-list .line1{width: 100%;height: 1px;background: #cacaca;position: absolute;top: 50%;left: 0;}
+.core-list .line2{width: 1px;height: 100%;background: #cacaca;position: absolute;top: 0;left: 50%;}
+.core-list li .site{font-size: 18px;color:#757271;line-height: 30px;height: 240px; }
+.core-list li .tit:before{content: "";display: block;width: 25px;height: 25px;background: #15894b;top: 3px;left: -40px;border-radius:50%; position: absolute;}
+.core-list li .tit{font-size: 24px;color:#2b2527;margin-bottom: 15px;font-weight: normal;position: relative;}
+.core-list li.s1 .site,.core-list li.s3 .site{padding: 70px 135px 0 60px;}
+.core-list li.s2 .site,.core-list li.s4 .site{padding: 70px 60px 0 185px;}
+.core-list li.cent{position: absolute;width: 280px;height: 280px;border-radius:50%;left: 50%;top: 50%;margin: -140px 0 0 -140px;background: #535c64;color:#fff;border: 5px solid #dddddd;z-index: 10;text-align: center;}
+.core-list li.cent h3{font-size: 48px;color:#fff;margin-top: 90px;font-weight: bold;}
+.core-list li.cent h4{font-size: 24px;margin-top: 10px;}
+
+/* 初中课程 */
+.cur-section{padding: 60px 0;}
+.cur-section .tabs{ text-align: center;margin-bottom: 60px;font-size: 0; }
+.cur-section .tabs li{display: inline-block;margin:0 17px;}
+.cur-section .tabs li a{display: block;font-size: 20px;line-height: 55px;color:#141515;background: #dadada;padding: 0 50px;border-radius:5px;}
+.cur-section .tabs li.active a{background: #15894b;color:#fff;}
+
+.cur-list{ width: 110%; }
+.cur-list li{width: 370px;height:250px;float: left;margin: 0 44px 44px 0;}

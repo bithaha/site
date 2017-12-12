@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="assets/css/common.css">
     <link rel="stylesheet" href="assets/css/mobile.css">
     <script src="assets/js/jquery.min.js"></script>
-    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/common.js"></script>
     <script src="assets/js/owl.carousel.js"></script>
 </head>
 
@@ -757,7 +757,7 @@
             $('#star_tabs .tabs-panel').eq(index).addClass('active').siblings().removeClass('active');
         })
 
-        
+        var itemNum = $(window).width() < 768?1:4;
         $('.teacher-slider').owlCarousel({
             autoplay:false,
             loop: false,
@@ -767,7 +767,7 @@
             autoplayTimeout:5000,
             smartSpeed:500,
             lazyLoad:true,
-            items: 4,
+            items: itemNum,
             slideBy:1,
             navText:['','']
         }); 

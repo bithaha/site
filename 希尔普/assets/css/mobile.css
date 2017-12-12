@@ -10,8 +10,11 @@
 	.contact-list li i{font-size: 40px;}
 	.contact-list li .img{padding-top:20px;}
 	.footer-navs .nav li{padding:0 20px;}
+
+	.teacher-slider{width: 100%;}
 }
 @media(max-width: 768px){
+	*{box-sizing: border-box;}
 	body{padding-top: 3rem;font-size: .6rem;}
 	.header{position: fixed;top: 0;left: 0;width: 100%;}
 	.btnnav{display: block;}
@@ -78,4 +81,64 @@
 	.footer-infos{padding: 1rem 0;line-height: 1.2;}
 
 	.gotop{width: 2rem;height: 2rem;bottom: 2rem;}
+
+	/**/
+	.liuxue-box .det,.liuxue-box .img,.gj-section .tabs,.gj-section .art-list,.gj-section .art-list li,.edu-list li,.edu-list,.shouke-list li,.core-list li{width: 100%;float:none;}
+	.gj-section .tabs li{width: 33.3333333%;float:left;}
+	.gj-section .tabs li a{width: 100%;font-size: .7rem;padding: .5rem 0;}
+	.gj-section .tabs-con{margin:0;}
+	.gj-section .art-list li a{margin-left: 1rem;}
+	.edu-list li{margin-right:0;}
+	.shouke-section .title{font-size:1rem;}
+	.shouke-list li{margin-bottom: .5rem;font-size: .7rem;}
+	.core-title-bar .title{font-size: 1rem;}
+	.core-title-bar .sub{font-size: .7rem;}
+	.core-list{margin: 0 .5rem;}
+	.core-list li .site{height: auto;font-size: .6rem;line-height: 1.8;}
+	.core-list li.s1 .site, .core-list li.s3 .site{padding:0 0 1rem 1rem;}
+	.core-list li.s2 .site, .core-list li.s4 .site{padding: 0 0 1rem 1rem;}
+	.core-list .line1,.core-list .line2{display: none;}
+	.core-list li.cent{position: relative;top: 0;left: 0;margin: 0 auto;width: 12rem;height: 12rem;}
+	.core-list li .tit:before{width: .8rem;height: .8rem;left: -1rem;top: 0;}
+	.core-list li .tit{font-size: .8rem;margin-bottom: .5rem;    line-height: 1;}
+	.core-list li.cent h3{font-size: 2rem;    margin-top: 4rem;}
+	.core-list li.cent h4{font-size: 1rem;}
+
+	.cur-section .tabs{margin-bottom: 1rem;}
+	.cur-section .tabs li{margin: 0 .2rem .5rem;}
+	.cur-section .tabs li a{font-size: .7rem;line-height: 1.4rem;padding: 0 .5rem;}
+	.cur-list{width: 100%;}
+	.cur-list li{float: none;width: 100%;margin:0 0 1rem 0; text-align: center;}
+
+	.news-box .tit-bar .title{font-size: .7rem;}
+	.news-list li{height: 1.4rem;line-height: 1.4rem;font-size: .6rem;}
+	.news-list li .info{font-size: .5rem;}
+	.news-list li .info .name{display: none;}
+
+	.art-title{font-size: 1.2rem;}
+	.art-infos{font-size: .6rem;padding: .3rem 0;margin-bottom: 1rem;}
+	.art-infos .item{margin:0 1rem;}
+	.art-body{font-size: .6rem;line-height: 1.8;}
+
+	.star-slider{width: 100%;}
+	.star-slider .item{font-size: .6rem;line-height: 1.8;padding:0 .1rem;margin:0 .1rem;}
+	.star-list{width: 100%;}
+	.star-list li{width: 50%;margin-right:0;margin-bottom: 1rem;}
+	.star-list li:nth-child(odd){padding-right:.2rem;}
+	.star-list li:nth-child(even){padding-left:.2rem;}
+	.star-list li .img{height: 10rem;}
+	.star-list li .det{font-size: .6rem;padding-left: 0;padding-right: 0;}
+	.star-list li .det .tit{font-size: .7rem;}
+
+	.teacher-slider{width: 14.8rem; overflow: hidden;}
+	.teacher-slider .img{width: 5rem;height: 5rem;}
+	.teacher-slider .det{padding: 2rem .5rem 1rem;font-size: .6rem;    margin-top: -2rem;}
+	.teacher-slider .det .tit{font-size: .7rem;margin-bottom: .6rem;}
+
+	.faq-list{margin: 0 .5rem;padding: .5rem;}
+	.faq-list li{width: 100%;float:none;margin:0 0 1rem 0;height: auto;padding-bottom: 1rem;}
+	.faq-list li .tit{padding: 1rem 0 .5rem;margin: 0 .5rem 1rem;}
+	.faq-list li .q{margin:0 .5rem 1rem;}
+	.faq-list li .a{margin: 0  .5rem;}
+
 }
