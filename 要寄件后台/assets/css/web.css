@@ -1,0 +1,53 @@
+/* 公共 */
+body{background: #f3f3f5;font-size: 18px;color:#535353;}
+/* 左侧菜单 */
+.sitbar{position: fixed;width: 240px;left: 0;top: 0;bottom:0;background: #487dcd;}
+.sitbar .logo{width: 100%;padding: 25px 0 20px; text-align: center;border-bottom: 2px solid #4377c8;}
+.sitbar .menu{border-top:2px solid #5186d6;}
+.sitbar .menu li{}
+.sitbar .menu li a{padding: 25px 20px 25px 40px;display:block;color:#fff;font-size: 20px;position: relative;overflow: hidden;text-overflow: ellipsis; white-space: nowrap;}
+.sitbar .menu li a:hover{background:rgba(0,0,0,.1);}
+.sitbar .menu li a span{margin-left: 10px; vertical-align: middle;}
+.sitbar .menu li .ico-menu{width: 1em;height: 1em;display: inline-block;background-image: url(../img/web/sprites-24x24.png);background-size: 100% auto; vertical-align: middle;}
+.sitbar .menu li .ico-arrow{width: 1em;height: 1em;display: inline-block;background-image: url(../img/web/arrow_r_w.png);background-size:100% 100%; vertical-align: middle;position: absolute;right: 20px;top: 50%;margin-top: -.5em;}
+
+.ico-menu-1{background-position: 0 0;}
+.ico-menu-2{background-position: 0 -1.5em;}
+.ico-menu-3{background-position: 0 -3em;}
+
+.sitbar .submenu{background: #356dc2;}
+.sitbar .menu li .submenu a{padding-left: 70px;}
+
+
+/* 头部 */
+.header{height: 70px;background:#fff;position: fixed;top: 0;left: 240px;right: 0;border-bottom:1px solid #ebebed;}
+.header .welcome{float: left;padding: 15px 20px;}
+.header .welcome .img{display:inline-block;width: 40px;height: 40px;border-radius:50%;overflow: hidden;vertical-align: middle;margin-right: 7px;}
+.header .welcome .img img{width: 100%;height: 100%;}
+.header .welcome .txt{font-size: 18px;color:#1c1c1c; display: inline-block;vertical-align: middle;}
+.header .nav{float: right;}
+.header .nav li{float: left;}
+.header .nav li a{font-size:24px;padding:23px 18px;}
+.header .nav i{font-size:24px;width: 1em;height: 1em;display: inline-block;background-image: url(../img/web/sprites-24x24.png);background-size: 100% auto;}
+.ico-email{background-position: 0 -4.5em;}
+.ico-set{background-position: 0 -6em;}
+.ico-close{background-position: 0 -7.5em;}
+.header .nav li .num{position: absolute;min-width:18px;height: 18px;line-height: 18px;color:#fff;background:#fe8b21;border-radius:20px;text-align: center;font-size: 12px;top: 10px;right:0;}
+
+/*主体*/
+.m_content{padding: 90px 20px 20px 260px;}
+.tit-bar{margin-bottom: 20px;}
+.tit-bar:after{content: "";display: block;clear: both;}
+.tit-bar .title{font-size: 20px;}
+.tit-bar .btn{float: right;}
+.filter-wraper{background:#fff;padding: 20px 15px 0 15px; position: relative;margin-bottom: 60px;}
+.filter-wraper .form-inline .form-group{margin:0 60px 20px 0;}
+.filter-wraper .btn{float: right; position: absolute;right:20px;bottom:20px;}
+.filter-wraper label{font-weight: normal;}
+
+.table-container{background: #fff;padding: 10px 0 0 40px;}
+.table-container table thead tr td{color:#356dc2;font-size: 22px;}
+.table-container table tr td{padding: 25px 0;text-align: center;}
+.table-container .uimg{width: 40px;height: 40px;border-radius:50%;overflow: hidden;vertical-align: middle;display: inline-block;margin-right: 10px;}
+.table-container .uimg img{width: 100%;height: 100%;}
+.table-container .uname{vertical-align: middle;}

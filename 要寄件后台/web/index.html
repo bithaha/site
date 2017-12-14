@@ -18,9 +18,9 @@
 </head>
 
 <body>
-<div class="hbar">
+<div class="header">
 	<div class="welcome">
-		<span class="img"><img src="../assets/img/default_head.png"></span>
+		<span class="img"><img src="../assets/img/web/default_head.png"></span>
 		<span class="txt">您好！理工大学呈贡校区</span>
 	</div>
 	<ul class="nav">
@@ -29,16 +29,16 @@
 		<li><a href="#"><i class="ico-close"></i></a></li>
 	</ul>
 </div>
-<div class="mbar">
+<div class="sitbar">
 	<div class="logo">
 		<a href="#"><img src="../assets/img/web/logo_web.png"></a>
 	</div>
 	<ul class="menu">
 		<li>
-			<a href="#"><i class="ico-menu-1"></i><span>快递管理</span><i class="ico-arrow"></i></a>
+			<a href="#"><i class="ico-menu ico-menu-1"></i><span>快递管理</span><i class="ico-arrow"></i></a>
 		</li>
 		<li>
-			<a href="#"><i class="ico-menu-2"></i><span>数据中心</span><i class="ico-arrow"></i></a>
+			<a href="#"><i class="ico-menu ico-menu-2"></i><span>数据中心</span><i class="ico-arrow"></i></a>
 			<dl class="submenu">
 				<dd>
 					<a href="#">用户管理</a>
@@ -48,7 +48,7 @@
 			</dl>
 		</li>
 		<li>
-			<a href="#"><i class="ico-menu-3"></i><span>个人中心中心</span><i class="ico-arrow"></i></a>
+			<a href="#"><i class="ico-menu ico-menu-3"></i><span>个人中心</span><i class="ico-arrow"></i></a>
 			<dl class="submenu">
 				<dd>
 					<a href="#">个人设置</a>
@@ -60,7 +60,75 @@
 	</ul>
 </div>
 <div class="m_content">
-	
+	<div class="tit-bar">
+		<h3 class="title">信息查询</h3>
+	</div>
+	<div class="filter-wraper">
+		<div class="form-inline">
+			<div class="form-group">
+				<label>用户姓名</label>
+				<input type="text" class="form-control" placeholder="">
+			</div>
+			<div class="form-group">
+				<label>绑定手机</label>
+				<input type="text" class="form-control" placeholder="">
+			</div>
+			<div class="form-group">
+				<label>用户类型</label>
+				<select class="form-control"><option>普通用户</option><option>会员</option></select>
+			</div>
+			<button type="submit" class="btn btn-primary">查询</button>
+		</div>
+	</div>
+
+
+	<div class="tit-bar">
+		<a class="btn btn-primary">添加用户</a>
+		<h3 class="title">用户列表</h3>
+	</div>
+	<div class="table-container">
+		<table class="table">
+			<thead>
+				<tr>
+					<td>用户信息</td><td>用户姓名</td><td>绑定手机</td><td>身份证号</td><td>用户类型</td><td>操作</td>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td><span class="uimg"><img src="../assets/img/web/default_head.png"></span><span class="uname">理工大学呈贡校区</span></td>
+					<td>张三</td>
+					<td>15955555555</td>
+					<td>42111111111111111</td>
+					<td>普通用户</td>
+					<td><a class="btn btn-default">查看</a><a class="btn">编辑</a></td>
+				</tr>
+				<tr>
+					<td><span class="uimg"><img src="../assets/img/web/default_head.png"></span><span class="uname">理工大学呈贡校区</span></td>
+					<td>张三</td>
+					<td>15955555555</td>
+					<td>42111111111111111</td>
+					<td>普通用户</td>
+					<td><a class="btn btn-default">查看</a><a class="btn">编辑</a></td>
+				</tr>
+				<tr>
+					<td><span class="uimg"><img src="../assets/img/web/default_head.png"></span><span class="uname">理工大学呈贡校区</span></td>
+					<td>张三</td>
+					<td>15955555555</td>
+					<td>42111111111111111</td>
+					<td>普通用户</td>
+					<td><a class="btn btn-default">查看</a><a class="btn">编辑</a></td>
+				</tr>
+				<tr>
+					<td><span class="uimg"><img src="../assets/img/web/default_head.png"></span><span class="uname">理工大学呈贡校区</span></td>
+					<td>张三</td>
+					<td>15955555555</td>
+					<td>42111111111111111</td>
+					<td>普通用户</td>
+					<td><a class="btn btn-default">查看</a><a class="btn">编辑</a></td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
 </div>
 
 
