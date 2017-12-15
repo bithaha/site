@@ -155,3 +155,8 @@
     return new Dialog(config);
   }
 })(jQuery || Zepto);
+
+
+$(function(){
+  
+})
