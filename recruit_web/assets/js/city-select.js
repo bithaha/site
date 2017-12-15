@@ -28,6 +28,15 @@
 
 	
 	var api = {};
+	api.getCity = function(){
+		var city = localStorage.getItem('city');
+		if(!city){
+			localStorage.setItem('city','武汉');
+			return "武汉";
+		}else{
+			return city;
+		}
+	}
 	api.init = function(){
 		var modal = this.modal = $('<div class="city-select-window">\
 				    <div class="header">\
@@ -53,7 +62,11 @@
 			var citysHtml = "";
 			/* 首先取出城市列表 */
 			item.citys.forEach(function(c, j){
-				citysHtml += '<a>'+c+'</a>';
+				var activeClass="";
+				if(c == api.getCity()){
+					activeClass = 'class="active"';
+				}
+				citysHtml += '<a '+activeClass+'>'+c+'</a>';
 				if(item.letter != "热门"){
 					api.searchList.push(c);
 					api.searchListPy.push(toPy(c));
@@ -155,6 +168,7 @@
 		}
 	}
 	api.select = function(city){
+		localStorage.setItem('city',city);
 		api.then && api.then(city);
 		api.destroy();
 	}
@@ -213,7 +227,7 @@
     	return character;
 	}
 
-
+	cityselect.currentCity = api.getCity();
 	$.extend({
 		city: cityselect
 	})

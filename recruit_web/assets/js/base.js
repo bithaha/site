@@ -1,8 +1,12 @@
+var ROOT_CONFIG = {
+    domain: "http://wwk.ngrok.xiaomiqiu.cn/"
+}
+
 /* rem布局，
     1rem = body宽度 / 16 
     长度rem = 16 x 设计图实际像素/设计图宽度
 */
-(function(doc, win) {
+;(function(doc, win) {
     var docEl = doc.documentElement,
         resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
         recalc = function() {
@@ -61,17 +65,48 @@
     }
     window.yyAlert = yyAlert;
 })();
-var loading = {
-	"show": function(){
-		if($('#loading').length <= 0){
-			$('body').append('<div class="loading-container" id="loading"><div class="loading spinner"></div></div>')
-		}
-		$('#loading').addClass('active');
-	},
-	"hide":function(){
-		$('#loading').removeClass('active');
-	}
-}
+(function($){
+    var loading = {};
+    var defaults = {
+        text: "",
+    }
+    var timer;
+    loading.show = function(opt){
+        var opts = $.extend(true,{},defaults, opt);
+        var temp = $('<div class="loading back-cover" id="loading"><div class="inner"><div class="loading-img"><div><span class="text"></span></div></div>');
+        if($('#loading').length > 0){
+            temp = $('#loading');
+        }else{
+            $('body').append(temp);
+        }
+
+        window.clearTimeout(timer);
+
+        if(opts.text){
+            temp.find('.text').html(opts.text);
+        }
+        if(opts.template){
+            temp.find('.inner').html(opts.template);
+        }
+        if(opts.noCover){
+            temp.removeClass('back-cover');
+        }
+        if(opts.duration){
+            timer = setTimeout(function(){
+                loading.hide();
+            },parseInt(opts.duration));
+        }
+
+
+    }
+    loading.hide = function(){
+        $('#loading').remove();
+    }
+
+    $.extend({
+        loading: loading
+    });
+})(jQuery);
 
 /* extend 模拟jquery的$.extend() */
 function extend(destination, source) {
@@ -97,6 +132,16 @@ var deepCopy = function(o) {
         return n;
     } else {
         return o;
+    }
+}
+var API = {
+    getQueryString : function(name) {
+        var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)", "i");
+        var r = window.location.search.substr(1).match(reg);
+        if (r != null) {
+            return unescape(r[2])
+        }
+        return null
     }
 }
 

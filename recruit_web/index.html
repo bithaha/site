@@ -1,0 +1,222 @@
+﻿<!doctype html>
+<html>
+<head>
+<meta charset="utf8">
+<title>公众号招聘</title>
+<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no">
+<meta name="format-detection" content="telephone=no">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+<link href="assets/css/swiper.min.css" rel="stylesheet">
+<link href="assets/css/base.css" rel="stylesheet">
+<script src="assets/js/jquery.min.js"></script>
+<script src="assets/js/swiper.min.js"></script>
+<script src="assets/js/base.js"></script>
+</head>
+
+<body>
+
+        <div class="header">
+            <a class="btn-left" id="city"><i class="ico-posi"></i></a>
+            <h3 class="title">
+                <div class="top-search">
+                    <input class="txt" type="text" placeholder="输入职位或公司名">
+                    <input class="btn" type="submit" value="">
+                </div>
+            </h3>
+            <a class="btn-right" href="javascript:;" id="topuser"><i class="ico-user"></i></a>
+            <div class="top-menu">
+                
+            </div>
+        </div>
+        <div class="content">
+            <div class="swiper-container index-slider">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide"><img src="assets/images/banner.jpg"></div>
+                    <div class="swiper-slide"><img src="assets/images/banner.jpg"></div>
+                    <div class="swiper-slide"><img src="assets/images/banner.jpg"></div>
+                </div>
+                <!-- Add Pagination -->
+                <div class="swiper-pagination"></div>
+            </div>
+            <div class="menu-list clearfix">
+                <a class="item" href="javascript:;" data-type="UI"><i class="ico-menu ico-menu-1"></i><span>UI设计</span></a>
+                <a class="item" href="javascript:;" data-type="PHP"><i class="ico-menu ico-menu-2"></i><span>PHP</span></a>
+                <a class="item" href="javascript:;" data-type="JAVA"><i class="ico-menu ico-menu-3"></i><span>JAVA</span></a>
+                <a class="item" href="javascript:;" data-type="IOS"><i class="ico-menu ico-menu-4"></i><span>IOS</span></a>
+                <a class="item" href="javascript:;" data-type="ARCHITECT"><i class="ico-menu ico-menu-5"></i><span>架构师</span></a>
+                <a class="item" href="javascript:;" data-type="ANDROID"><i class="ico-menu ico-menu-6"></i><span>安卓</span></a>
+                <a class="item" href="javascript:;" data-type="PRODUCT"><i class="ico-menu ico-menu-7"></i><span>产品</span></a>
+                <a class="item" href="javascript:;" data-type="UED"><i class="ico-menu ico-menu-8"></i><span>UED</span></a>
+                <a class="item" href="javascript:;" data-type="OPERATION"><i class="ico-menu ico-menu-9"></i><span>运营</span></a>
+            </div>
+            <div class="line-divider"></div>
+            <div class="layout">
+                <h3 class="m-title">招聘信息</h3>
+                
+                <div class="list zp-list" id="zpList">
+                    <!-- <a class="item" href="job_detail.html">
+                        <span class="tit">UI设计师</span>
+                        <span class="txt">武汉市美约极客教育机构</span>
+                    </a> -->
+                    
+                </div>
+                <div class="m-loading"><div class="inner"></div></div>
+                <a class="loadmore"><span>点击加载更多</span><i></i></a>
+            </div>
+        </div>
+    
+<!-- 返回顶部 --> 
+<a href="javascript:" target="_parent" class="gotop"></a> 
+
+<script type="text/javascript" src="assets/js/city-select.js"></script>
+<script type="text/javascript">
+var user_id = API.getQueryString("user_id");
+var identity = API.getQueryString("identity");
+var city = $.city.currentCity;
+var jobType = "JAVA";
+
+var jobs_pageSize = 5;
+var jobs_curPage = 1;
+var jobs=[];/*存储所有招聘信息*/
+
+function getJobs(){
+    $('.moredata').addClass('active');
+    $.ajax({
+        url: ROOT_CONFIG.domain + "meyur/JobInfo/queryMany",
+        method: "post",
+        dataType: 'JSON',
+        contentType: "application/json; charset=utf-8",
+        data:JSON.stringify({"city": city,"jobType": jobType,"pageSize":jobs_pageSize.toString(),"curPage":jobs_curPage.toString()}),
+        success:function(data){
+            if(data.isOk){
+                for(var i in data.page.datas){
+                    jobs.push(data.page.datas[i]);
+                    $("#zpList").append('<a class="item" href="job_detail.html"><span class="tit">'+data.page.datas[i].jobName+'</span><span class="txt">'+data.page.datas[i].company+'</span></a>');
+                }
+                /* 判空 */
+                if(jobs.length <= 0){
+                    $("#zpList").html('<div class="empty">没有招聘信息</div>')
+                }
+                $(".m-loading").hide()
+                $('.moredata').removeClass('active');
+            }
+        },
+        error:function(data){
+            console.log(data);
+        }
+    })
+}
+function resetJobs(){
+    jobs_curPage = 1;
+    jobs = [];
+    $("#zpList").empty();
+    $(".m-loading").show();
+    $('.moredata').hide();
+}
+/* 轮播图 */
+function bannerInit(){
+    $(".index-slider .swiper-wrapper").empty();
+    $.ajax({
+        url: ROOT_CONFIG.domain + "meyur/Banner/queryMany",
+        method: "post",
+        dataType: 'JSON',
+        contentType: "application/json; charset=utf-8",
+        data:JSON.stringify({"advNumbers":"4"}),
+        success:function(data){
+            if(data.isOk){
+                data.page.datas.forEach(function(item, i){
+                    var href = "javascript:;";
+                    if(item.advUrl){href = item.advUrl;}
+                    $(".index-slider .swiper-wrapper").append('<div class="swiper-slide"><a href="'+href+'"><img src="'+item.imageUrl+'"></a></div>')
+                });
+                var swiper = new Swiper('.index-slider', {
+                    pagination: '.swiper-pagination',
+                    autoplay: 3000,
+                    paginationClickable: true
+                });
+            }else{
+                $.loading.show({template:data.opErrorMsg,duration:2000});
+            }
+        },
+        error:function(data){
+            $.loading.show({template:data.opErrorMsg,duration:2000});
+        }
+    })
+}
+
+function getUserInfo(){
+
+
+    
+    $.ajax({
+        url: ROOT_CONFIG.domain + "meyur/IdentityActivate/query",
+        method: "post",
+        dataType: 'JSON',
+        data:{},
+        success:function(data){
+            
+            console.log(data);
+        },
+        error:function(data){
+            console.log(data);
+        }
+    })
+}
+/* 右上角信息 */
+function initMenus(){
+    var ucenter = '';
+    if(identity == "0"){
+        ucenter = '<li><a href="job_list.html"><i class="ico-resume"></i><span>职位管理</span></a></li>'
+    }else{
+        ucenter = '<li><a href="resume_detail.html"><i class="ico-resume"></i><span>我的简历</span></a></li>'
+    }
+    var menuHtml = '<ul>\
+                    <li><a href="javascript:;" id="userId">17665393869</a></li>\
+                    <li class="divider"></li>\
+                    '+ucenter+'\
+                    <li><a href="index.html"><i class="ico-exit"></i><span>退出</span></a></li>\
+                </ul>';
+    $('.top-menu').html(menuHtml)
+}
+$(document).ready(function(){ 
+
+initMenus();
+
+getJobs();
+// bannerInit();
+
+    
+    
+//getUserInfo();
+
+
+}); 
+
+
+
+
+	
+    
+
+$(function(){
+    
+    $('#city').html(city).click(function(){
+        var _this = this;
+        $.city().then(function(city){
+            console.log(city);
+            $(_this).html(city);
+        })
+    });
+    $(".menu-list a").click(function(){
+        $(this).addClass('active').siblings().removeClass('active');
+        jobType = $(this).data('type');
+        resetJobs();
+        getJobs();
+    })
+})
+
+</script>
+</body>
+</html>

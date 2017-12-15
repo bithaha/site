@@ -1,12 +1,12 @@
 /* 公共 */
 body{background: #f3f3f5;font-size: 18px;color:#535353;}
 /* 左侧菜单 */
-.sitbar{position: fixed;width: 240px;left: 0;top: 0;bottom:0;background: #487dcd;}
+.sitbar{position: fixed;width: 240px;left: 0;top: 0;bottom:0;background: #487dcd;z-index: 99;}
 .sitbar .logo{width: 100%;padding: 25px 0 20px; text-align: center;border-bottom: 2px solid #4377c8;}
 .sitbar .menu{border-top:2px solid #5186d6;}
 .sitbar .menu li{}
 .sitbar .menu li a{padding: 25px 20px 25px 40px;display:block;color:#fff;font-size: 20px;position: relative;overflow: hidden;text-overflow: ellipsis; white-space: nowrap;}
-.sitbar .menu li a:hover{background:rgba(0,0,0,.1);}
+.sitbar .menu li a:hover,.sitbar .menu li.active a:hover{background:rgba(0,0,0,.1);}
 .sitbar .menu li a span{margin-left: 10px; vertical-align: middle;}
 .sitbar .menu li .ico-menu{width: 1em;height: 1em;display: inline-block;background-image: url(../img/web/sprites-24x24.png);background-size: 100% auto; vertical-align: middle;}
 .sitbar .menu li .ico-arrow{width: 1em;height: 1em;display: inline-block;background-image: url(../img/web/arrow_r_w.png);background-size:100% 100%; vertical-align: middle;position: absolute;right: 20px;top: 50%;margin-top: -.5em;}
@@ -20,7 +20,7 @@ body{background: #f3f3f5;font-size: 18px;color:#535353;}
 
 
 /* 头部 */
-.header{height: 70px;background:#fff;position: fixed;top: 0;left: 240px;right: 0;border-bottom:1px solid #ebebed;}
+.header{height: 70px;background:#fff;position: fixed;top: 0;left: 240px;right: 0;border-bottom:1px solid #ebebed;z-index: 99;}
 .header .welcome{float: left;padding: 15px 20px;}
 .header .welcome .img{display:inline-block;width: 40px;height: 40px;border-radius:50%;overflow: hidden;vertical-align: middle;margin-right: 7px;}
 .header .welcome .img img{width: 100%;height: 100%;}
@@ -47,7 +47,7 @@ body{background: #f3f3f5;font-size: 18px;color:#535353;}
 
 .table-container{background: #fff;padding: 10px 0 0 40px;}
 .table-container table thead tr td{color:#356dc2;font-size: 22px;}
-.table-container table tr td{padding: 25px 0;text-align: center;}
+.table-container table tr td{padding: 25px 0;text-align: center;line-height: 40px;}
 .table-container .uimg{width: 40px;height: 40px;border-radius:50%;overflow: hidden;vertical-align: middle;display: inline-block;margin-right: 10px;}
 .table-container .uimg img{width: 100%;height: 100%;}
 .table-container .uname{vertical-align: middle;}
