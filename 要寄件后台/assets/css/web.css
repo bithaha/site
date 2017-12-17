@@ -76,3 +76,29 @@ body{background: #f3f3f5;font-size: 18px;color:#535353;}
 .login_box .links{margin-top: 40px;text-align: right;}
 .login_box .links a{color:#47b0f4;}
 .login_box .links a:hover{text-decoration: underline;}
+
+.login_box_fast{text-align: center;}
+.login_box_fast .tit{font-size: 20px;margin-bottom: 15px;}
+.login_box_fast .txt{font-size: 16px;color:#666;}
+.login_box_fast .login_styles{text-align: center;padding: 50px 0;}
+.login_box_fast .login_styles li{display: inline-block;margin:0 25px;}
+.ico_wechat,.ico_qq{font-size:80px;width: 1em;height: 1em;display: inline-block;background-image: url(../img/web/sprites-shares.png);background-size: 100% auto;}
+.ico_qq{background-position: 0 -1.5em;}
+.login_box_fast .links{text-align: center;margin-top: 0;}
+
+.fast_qrcode .qtit{font-size: 14px;font-weight: bold;color:#000;margin-bottom: 15px;}
+.fast_qrcode .img img{border:1px solid #d1d1d1;padding: 6px;display: inline-block;}
+.fast_qrcode .tip{line-height: 30px;display: inline-block;padding: 0 10px;background:#f1f1f1;color:#808080;font-size: 12px;margin: 10px 0 40px;border-radius: 10px;}
+
+/* 快递管理 */
+.down-title{padding: 35px 0;}
+.down-title a{font-size: 28px;color:#356dc2;}
+.ico-qr{width: 1em;height: 1em;display: inline-block;background: url(../img/web/ico_qrcode.png);background-size: 100% 100%;}
+.down-title a i{font-size: 36px;margin-right: 10px;vertical-align: middle;}
+.down-title a span{vertical-align: middle;}
+.filter-wraper-1{ background: none;border-top:1px solid #ebebed; }
+.start-date,.end-date{background-image:url(../img/web/ico_data_s.png);background-repeat:no-repeat;background-position: center right;}
+.end-date{background-image:url(../img/web/ico_data_e.png);}
+
+.pages{}
+.pages a{display: inline-block;height: 40px;line-height: 40px;color:#666;border:1px solid #e8e8e6;}
