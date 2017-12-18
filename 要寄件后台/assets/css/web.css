@@ -7,6 +7,13 @@ body{background: #f3f3f5;font-size: 18px;color:#535353;}
 .checkbox input[type="checkbox"]{ opacity: 0; }
 .checkbox input[type="checkbox"]:checked + em{ background-image: url(../img/web/checkbox_a.png) }
 
+/* 按钮 */
+.btn-common,a.btn-common{height: 50px;line-height: 50px;background:#356dc2;font-size: 20px;color:#fff;padding:0 20px;border-radius:0;}
+.btn-common:hover,a.btn-common:hover{color:#fff;opacity: .9;}
+
+
+
+
 
 /* 左侧菜单 */
 .sitbar{position: fixed;width: 240px;left: 0;top: 0;bottom:0;background: #487dcd;z-index: 99;}
@@ -48,14 +55,14 @@ body{background: #f3f3f5;font-size: 18px;color:#535353;}
 .tit-bar:after{content: "";display: block;clear: both;}
 .tit-bar .title{font-size: 20px;}
 .tit-bar .btn{float: right;}
-.filter-wraper{background:#fff;padding: 20px 15px 0 15px; position: relative;margin-bottom: 60px;}
+.filter-wraper{background:#fff;padding: 20px 15px 0 15px; position: relative;margin-bottom: 40px;}
 .filter-wraper .form-inline .form-group{margin:0 60px 20px 0;}
 .filter-wraper .btn{float: right; position: absolute;right:20px;bottom:20px;}
 .filter-wraper label{font-weight: normal;}
 
 .table-container{background: #fff;padding: 10px 0 0 40px;}
 .table-container table thead tr td{color:#356dc2;font-size: 22px;}
-.table-container table tr td{padding: 25px 0;text-align: center;line-height: 40px;}
+.table-container table tr td{padding: 25px 10px;text-align: center;line-height: 30px;}
 .table-container .uimg{width: 40px;height: 40px;border-radius:50%;overflow: hidden;vertical-align: middle;display: inline-block;margin-right: 10px;}
 .table-container .uimg img{width: 100%;height: 100%;}
 .table-container .uname{vertical-align: middle;}
@@ -91,7 +98,7 @@ body{background: #f3f3f5;font-size: 18px;color:#535353;}
 .fast_qrcode .tip{line-height: 30px;display: inline-block;padding: 0 10px;background:#f1f1f1;color:#808080;font-size: 12px;margin: 10px 0 40px;border-radius: 10px;}
 
 /* 快递管理 */
-.down-title{padding: 35px 0;}
+.down-title{padding: 10px 0 35px 0;}
 .down-title a{font-size: 28px;color:#356dc2;}
 .ico-qr{width: 1em;height: 1em;display: inline-block;background: url(../img/web/ico_qrcode.png);background-size: 100% 100%;}
 .down-title a i{font-size: 36px;margin-right: 10px;vertical-align: middle;}
@@ -101,4 +108,32 @@ body{background: #f3f3f5;font-size: 18px;color:#535353;}
 .end-date{background-image:url(../img/web/ico_data_e.png);}
 
 .pages{}
-.pages a{display: inline-block;height: 40px;line-height: 40px;color:#666;border:1px solid #e8e8e6;}
+.pages a{display: inline-block;height: 40px;line-height: 40px;color:#666;border:1px solid #e8e8e6;background: #fff;min-width: 40px;text-align: center;padding:0 10px;}
+.pages a:hover,.pages a.active{background: #3381ff;color: #fff;}
+.m-tit-bar{background: #f7f8fc;border-left:10px solid #356dc2;margin:20px 0;}
+.m-tit-bar .title{padding: 0 20px;color:#356dc2;height: 48px;line-height: 48px;}
+.m-tit-bar .btn{float:right;height: 42px;line-height: 40px;margin-top: 4px;background: #356dc2;color:#fff;padding:0 20px;border-radius:0;font-size: 20px;margin-right: 20px;}
+.m-tit-bar .btn:hover{opacity: .9;}
+.table-container .checkbox{margin:0;}
+
+/* 添加用户 */
+.container_white{background: #fff;padding: 40px 20px 20px 40px;}
+.container_white .title{border-bottom: 1px solid #f3f3f3;padding-bottom: 40px;}
+.add_user_form label{font-weight: normal;width: 120px;text-align: right;}
+.add_user_form .form-control{border-radius:0;width: 300px;}
+.add_user_form .form-group{margin: 20px 0; }
+.add_user_form .beizhu{width: 730px;height: 140px;}
+.add_user_form .btns{margin:130px 0 60px; text-align: center;}
+.add_user_form .btns .btn{height: 50px;line-height: 50px;padding:0 50px;font-size:20px;margin:0 20px;border-radius: 0;}
+.add_user_form .btns .btn-save{color:#fff;background:#356dc2; border:1px solid #356dc2;}
+.add_user_form .btns .btn-cancel{color:#8c8c8c;background:#e7effc;border:1px solid #d9dcdf;}
+.add_user_form .btns .btn:hover{opacity: .9;}
+
+/* 电子面单 */
+.miandan_head{background: #fff;padding:20px 30px; position: relative;margin-bottom: 40px;}
+.miandan_head .btn{position: absolute;z-index: 10;bottom:20px;right: 30px;}
+.miandan_head .det{padding: 0 150px;}
+.miandan_head .icon{float:left;font-size: 126px;}
+.ico-miandan{background-image: url(../img/web/miandan.png);}
+.miandan_head .det .tit{margin-bottom: 20px;font-size: 20px;}
+.miandan_head:after{content: "";display: block;clear: both;}
