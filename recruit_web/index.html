@@ -21,8 +21,9 @@
             <a class="btn-left" id="city"><i class="ico-posi"></i></a>
             <h3 class="title">
                 <div class="top-search">
-                    <input class="txt" type="text" placeholder="输入职位或公司名">
-                    <input class="btn" type="submit" value="">
+                    <input class="txt" type="text" id="searchTxt" placeholder="输入职位或公司名">
+                    <a class="btn" onclick="searchJob()"></a>
+                    <a class="del">x</a>
                 </div>
             </h3>
             <a class="btn-right" href="javascript:;" id="topuser"><i class="ico-user"></i></a>
@@ -72,35 +73,49 @@
 
 <script type="text/javascript" src="assets/js/city-select.js"></script>
 <script type="text/javascript">
-var user_id = API.getQueryString("user_id");
-var identity = API.getQueryString("identity");
+var user_id = API.getQueryString("id");
 var city = $.city.currentCity;
-var jobType = "JAVA";
+var jobType = "";
+var keywords = "";
 
-var jobs_pageSize = 5;
+var jobs_pageSize = 10;
 var jobs_curPage = 1;
 var jobs=[];/*存储所有招聘信息*/
 
-function getJobs(){
-    $('.moredata').addClass('active');
+/* 将user_id加入缓存 */
+if(!user_id){
+    user_id = sessionStorage.getItem('id');
+}else{
+    sessionStorage.setItem('user_id',user_id);
+}
+
+function getJobs(opts){
+    keywords = $("#searchTxt").val();
     $.ajax({
-        url: ROOT_CONFIG.domain + "meyur/JobInfo/queryMany",
+        url: ROOT_CONFIG.domain + "/JobInfo/queryMany",
         method: "post",
         dataType: 'JSON',
         contentType: "application/json; charset=utf-8",
-        data:JSON.stringify({"city": city,"jobType": jobType,"pageSize":jobs_pageSize.toString(),"curPage":jobs_curPage.toString()}),
+        data:JSON.stringify({"city": city,"jobType": jobType,"pageSize":jobs_pageSize.toString(),"curPage":jobs_curPage.toString(),"jobOrCompany":keywords}),
         success:function(data){
             if(data.isOk){
                 for(var i in data.page.datas){
                     jobs.push(data.page.datas[i]);
-                    $("#zpList").append('<a class="item" href="job_detail.html"><span class="tit">'+data.page.datas[i].jobName+'</span><span class="txt">'+data.page.datas[i].company+'</span></a>');
+                    $("#zpList").append('<a class="item" href="job_detail.html?jobId='+data.page.datas[i].id+'"><span class="tit">'+data.page.datas[i].jobName+'</span><span class="txt">'+data.page.datas[i].company+'</span></a>');
                 }
                 /* 判空 */
                 if(jobs.length <= 0){
                     $("#zpList").html('<div class="empty">没有招聘信息</div>')
                 }
                 $(".m-loading").hide()
-                $('.moredata').removeClass('active');
+                $('.loadmore').removeClass('active');
+                if(data.page.curPage < data.page.maxPage){
+                    $('.loadmore').css({"display":"block"});
+                }else{
+                    $('.loadmore').css({"display":"none"});
+                }
+
+                opts && opts.success && opts.success(data);
             }
         },
         error:function(data){
@@ -119,7 +134,7 @@ function resetJobs(){
 function bannerInit(){
     $(".index-slider .swiper-wrapper").empty();
     $.ajax({
-        url: ROOT_CONFIG.domain + "meyur/Banner/queryMany",
+        url: ROOT_CONFIG.domain + "/Banner/queryMany",
         method: "post",
         dataType: 'JSON',
         contentType: "application/json; charset=utf-8",
@@ -149,13 +164,17 @@ function bannerInit(){
 function getUserInfo(){
 
 
-    
     $.ajax({
-        url: ROOT_CONFIG.domain + "meyur/IdentityActivate/query",
+        url: ROOT_CONFIG.domain + "/User/query",
         method: "post",
         dataType: 'JSON',
-        data:{},
+        contentType: "application/json; charset=utf-8",
+        data:JSON.stringify({"userId":user_id}),
         success:function(data){
+            if(data.isOk){
+                initMenus(data);
+            }
+            sessionStorage.setItem("userInfo",data.data);//全局缓存用户信息
             
             console.log(data);
         },
@@ -165,32 +184,39 @@ function getUserInfo(){
     })
 }
 /* 右上角信息 */
-function initMenus(){
+function initMenus(data){
     var ucenter = '';
+    var identity = data.data.identity
     if(identity == "0"){
         ucenter = '<li><a href="job_list.html"><i class="ico-resume"></i><span>职位管理</span></a></li>'
     }else{
         ucenter = '<li><a href="resume_detail.html"><i class="ico-resume"></i><span>我的简历</span></a></li>'
     }
     var menuHtml = '<ul>\
-                    <li><a href="javascript:;" id="userId">17665393869</a></li>\
+                    <li><a href="javascript:;" id="userId">'+data.data.nickName+'</a></li>\
                     <li class="divider"></li>\
                     '+ucenter+'\
                     <li><a href="index.html"><i class="ico-exit"></i><span>退出</span></a></li>\
                 </ul>';
     $('.top-menu').html(menuHtml)
 }
+
+function searchJob(){
+    var key = $("#searchTxt").val();
+    if(key == ""){
+        $.loading.show({template:"请输入搜索词",duration: 1500})
+    }
+    resetJobs();
+    getJobs();
+}
+
 $(document).ready(function(){ 
 
-initMenus();
+
 
 getJobs();
-// bannerInit();
-
-    
-    
-//getUserInfo();
-
+bannerInit(); 
+getUserInfo();
 
 }); 
 
@@ -204,9 +230,12 @@ $(function(){
     
     $('#city').html(city).click(function(){
         var _this = this;
-        $.city().then(function(city){
-            console.log(city);
-            $(_this).html(city);
+        $.city().then(function(c){
+            console.log(c);
+            $(_this).html(c);
+            city = c;
+            resetJobs();
+            getJobs();
         })
     });
     $(".menu-list a").click(function(){
@@ -214,7 +243,56 @@ $(function(){
         jobType = $(this).data('type');
         resetJobs();
         getJobs();
+    });
+    $("#searchTxt").on("input propertychange",function(){
+        if($(this).val() != ""){
+            $(this).parent().find('.del').show();
+        }else{
+            $(this).parent().find('.del').hide();
+        }
+    });
+    $(".top-search .del").click(function(){
+        $("#searchTxt").val("");
+        $(this).hide();
+        keywords = "";
+        resetJobs();
+        getJobs();
+    });
+    /* 下一页 */
+    $('.loadmore').click(function(){
+        $(this).addClass('active');
+        jobs_curPage++;
+        getJobs();
+
     })
+
+    /* 下拉刷新 */
+    $('.content').dropload({
+        scrollArea : window,
+        loadUpFn : function(me){
+            /* 刷新职位列表 */
+            resetJobs();
+            getJobs({
+                success:function(data){
+                    me.resetload();
+                    // 解锁loadDownFn里锁定的情况
+                    me.unlock();
+                    if(data.page.curPage < data.page.maxPage){
+                        me.noData(false);
+                    }else{
+                        me.noData(true);
+                    }
+                    
+                    
+                }
+            });
+            /* 刷新banner */
+            bannerInit();
+            
+        },
+        threshold : 50
+    });
+
 })
 
 </script>

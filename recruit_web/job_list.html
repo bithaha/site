@@ -25,27 +25,7 @@
     <div class="content">
         <div class="job-container">
             <h3 class="c-title">已发布职位</h3>
-            <ul class="list">
-                <a class="item" href="job_detail.html">
-                    <h4 class="name">UI设计师</h4>
-                    <div class="tags">
-                        <span class="color-red">4千-8千</span><span class="color-gray">全职</span>
-                    </div>
-                    <div class="tags">
-                        <span>武汉市</span><span>1-3年</span><span>大专</span>
-                    </div>
-                    <b class="btn-del">删除</b>
-                </a>
-                <a class="item" href="job_detail.html">
-                    <h4 class="name">UI设计师</h4>
-                    <div class="tags">
-                        <span class="color-red">4千-8千</span><span class="color-gray">全职</span>
-                    </div>
-                    <div class="tags">
-                        <span>武汉市</span><span>1-3年</span><span>大专</span>
-                    </div>
-                    <b class="btn-del">删除</b>
-                </a>
+            <ul class="list" id="zpList">
                 <a class="item" href="job_detail.html">
                     <h4 class="name">UI设计师</h4>
                     <div class="tags">
@@ -57,11 +37,130 @@
                     <b class="btn-del">删除</b>
                 </a>
             </ul>
+            <div class="m-loading"><div class="inner"></div></div>
+            <a class="loadmore"><span>点击加载更多</span><i></i></a>
         </div>
     </div>
 
 <script type="text/javascript">
+var user_id = sessionStorage.getItem("user_id");
 
+var jobs_pageSize = 10;
+var jobs_curPage = 1;
+var jobs=[];/*存储所有招聘信息*/
+
+
+$(function(){
+    $("#zpList").empty().on('click','a',function(e){
+        e.stopPropagation();
+        if(e.target.className == "btn-del"){
+            deleteJob(this);
+        }else{
+            location.href="job_detail.html?jobId="+$(this).data("id");
+        }
+    });
+    getJobs();
+    /* 下一页 */
+    $('.loadmore').click(function(){
+        $(this).addClass('active');
+        jobs_curPage++;
+        getJobs();
+
+    })
+    /* 下拉刷新 */
+    $('.content').dropload({
+        scrollArea : window,
+        loadUpFn : function(me){
+            /* 刷新职位列表 */
+            resetJobs();
+            getJobs({
+                success:function(data){
+                    me.resetload();
+                    // 解锁loadDownFn里锁定的情况
+                    me.unlock();
+                    if(data.page.curPage < data.page.maxPage){
+                        me.noData(false);
+                    }else{
+                        me.noData(true);
+                    }
+                    
+                    
+                }
+            });
+            
+        },
+        threshold : 50
+    });
+})
+
+function getJobs(opts){
+    $('.loadmore').addClass('active');
+    $.ajax({
+        url: ROOT_CONFIG.domain + "/JobInfo/queryByCompany",
+        method: "post",
+        dataType: 'JSON',
+        contentType: "application/json; charset=utf-8",
+        data:JSON.stringify({"userId": user_id,"pageSize":jobs_pageSize.toString(),"curPage":jobs_curPage.toString()}),
+        success:function(data){
+            if(data.isOk){
+                for(var i in data.page.datas){
+                    var job = data.page.datas[i];
+                    jobs.push(job);
+                    $("#zpList").append('<a class="item" data-id="'+job.id+'"><h4 class="name">'+job.jobName+'</h4><div class="tags"><span class="color-red">'+API.filter.wageLevel(job.wageLevel)+'</span><span class="color-gray">'+job.jobType+'</span></div><div class="tags"><span>'+(job.city || "")+'</span><span>'+API.filter.workTime(job.workTime)+'</span><span>'+API.filter.reqEducation(job.reqEducation)+'</span><span>'+(job.sendTime?job.sendTime:0)+'人投递</span></div><b class="btn-del">删除</b></a>');
+                }
+                /* 判空 */
+                if(jobs.length <= 0){
+                    $("#zpList").html('<div class="empty">没有招聘信息</div>')
+                }
+                $('.loadmore').removeClass('active');
+                if(data.page.curPage < data.page.maxPage){
+                    $('.loadmore').css({"display":"block"});
+                }else{
+                    $('.loadmore').css({"display":"none"});
+                }
+
+                opts && opts.success && opts.success(data);
+            }else{
+                $("#zpList").html('<div class="empty">加载出错</div>')
+            }
+            $(".m-loading").hide()
+        },
+        error:function(data){
+            console.log(data);
+        }
+    })
+}
+function resetJobs(){
+    jobs_curPage = 1;
+    jobs = [];
+    $("#zpList").empty();
+    $(".m-loading").show();
+    $('.moredata').hide();
+}
+function deleteJob(o){
+    var jobId = $(o).data('id');
+    var e = event || window.event;
+    e.stopPropagation();
+    yyConfirm("确定删除该职位吗？",function(){
+        $.ajax({
+            url: ROOT_CONFIG.domain + "/JobInfo/delete",
+            method: "post",
+            dataType: 'JSON',
+            contentType: "application/json; charset=utf-8",
+            data:JSON.stringify({"jobId": jobId}),
+            success:function(data){
+                if(data.isOk){
+                    $(o).animate({"transform":"scaleY(0)"},300,function(){
+                        $(o).remove();
+                    })
+                }
+            },
+            error:function(data){
+                console.log(data);
+            }
+        })
+    })
+}
 
 
 </script>

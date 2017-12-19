@@ -50,13 +50,37 @@
     </div>
 
 <script type="text/javascript">
+
+$(document).ready(function(){ 
+
+
+// autoLoad();
+
+// bannerInit();
+
+    
+    
+//getUserInfo();
+
+
+}); 
+
 var user_id = API.getQueryString('id');
+if(user_id){
+    sessionStorage.setItem("user_id",user_id);
+}
 function qiuzhi(){
-    location.href="resume_edit.html?user_id="+user_id+"&identity="+"1";
+    location.href="resume_edit.html?user_id="+user_id+"&fromActive="+"true";
+    //activiteUser();
+    
 }
 function qiye(){
     location.href="business_registry.html?user_id="+user_id+"&identity="+"0";
 }
+
+
+
+
 </script>
 </body>
 </html>

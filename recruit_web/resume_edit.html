@@ -20,56 +20,189 @@
         <h3 class="title">
             我的简历
         </h3>
-        <a class="btn-right" href="index.html">保存</a>
+        <a class="btn-right" href="javascript:;" onclick="saveResume()" >保存</a>
     </div>
     <div class="content">
         <div class="resume-edit">
-        	<div class="uhead">
-        		<div class="img"><img src="assets/images/uhead.jpg"></div>
-        		<div class="name">张子欣</div>
-        	</div>
-        	<div class="formarea">
-				<div class="frow">
-        			<label>姓名：</label>
-        			<div class="det"><input type="text" name="" value=""></div>
-        		</div>
-				<div class="frow">
-        			<label>姓别：</label>
-        			<div class="det">
-						<input type="radio" name="sex" value="">男 &nbsp;&nbsp;&nbsp;&nbsp;
-						<input type="radio" name="sex" value="">女
-					</div>
-        		</div>
-        		<div class="frow">
-        			<label>联系方式：</label>
-        			<div class="det"><input type="text" name="" value=""></div>
-        		</div>
-        		<div class="frow">
-        			<label>学历：</label>
-        			<div class="det">
-						<select><option>大专</option><option>本科</option><option>硕士</option><option>博士</option><option>其他</option></select>
-					</div>
-        		</div>
-        		<div class="frow">
-        			<label>毕业院校：</label>
-        			<div class="det"><input type="text" name="" value=""></div>
-        		</div>
-        		<div class="frow">
-        			<label>工作经验：</label>
-        			<div class="det">
-						<select><option>应届生</option><option>1年</option><option>2年</option><option>3年</option><option>4年</option><option>5年</option><option>5年以上</option></select>
-					</div>
-        		</div>
-        	</div>
-        	<h4 class="title">项目经验</h4>
-        	<div class="edit-con">
-        		<textarea class="textarea" placeholder="请输入项目描述"></textarea>
-        	</div>
+            <div class="uhead">
+                <div class="img"><img src="assets/images/avatar.png" onerror="this.src='assets/images/avatar.png'"></div>
+                <div class="name" id="nickname"></div>
+            </div>
+            <div class="formarea">
+                <div class="frow">
+                    <label>姓名：</label>
+                    <div class="det"><input type="text" id="username" name="" value=""></div>
+                </div>
+                <div class="frow">
+                    <label>姓别：</label>
+                    <div class="det">
+                        <input type="radio" name="sex" value="男">男 &nbsp;&nbsp;&nbsp;&nbsp;
+                        <input type="radio" name="sex" value="女">女
+                    </div>
+                </div>
+                <div class="frow">
+                    <label>联系方式：</label>
+                    <div class="det"><input type="text" id="phoneNumber" name="" value=""></div>
+                </div>
+                <div class="frow">
+                    <label>学历：</label>
+                    <div class="det">
+                        <select id="education"><option value="大专">大专</option><option value="本科">本科</option><option value="硕士">硕士</option><option value="博士">博士</option><option>其他</option></select>
+                    </div>
+                </div>
+                <div class="frow">
+                    <label>毕业院校：</label>
+                    <div class="det"><input type="text" id="school" name="" value=""></div>
+                </div>
+                <div class="frow">
+                    <label>工作经验：</label>
+                    <div class="det">
+                        <select id="workTime"><option value="0">应届生</option><option value="1">1年</option><option value="2">2年</option><option value="3">3年</option><option value="4">4年</option><option value="5">5年</option><option value="6">6年</option><option value="7">7年</option><option value="8">8年</option><option value="9">9年</option><option value="10">10年</option><option value="11">10年以上</option></select>
+                    </div>
+                </div>
+            </div>
+            <h4 class="title">项目经验</h4>
+            <div class="edit-con">
+                <textarea class="textarea" placeholder="请输入项目描述" id="proExperience"></textarea>
+            </div>
         </div>
     </div>
 
 <script type="text/javascript">
 
+var user_id = sessionStorage.getItem('user_id');
+var isFromActive = API.getQueryString('fromActive');//通过这个参数判断是否是求职者激活
+var resume_id = "";//通过这个参数判断是否是简历修改
+
+if(!user_id && API.getQueryString('user_id')){
+    user_id = API.getQueryString('user_id');
+    sessionStorage.setItem('user_id',user_id);
+}
+
+$(document).ready(function(){ 
+    getUserInfo();
+    initResume();
+}); 
+
+function getUserInfo(){
+    var param = JSON.stringify({"userId":user_id});
+    var url = "/User/query";
+    if(isFromActive){
+        url = "/User/queryCache"
+    }
+    $.ajax({
+        url: ROOT_CONFIG.domain + url,
+        method: "post",
+        dataType: 'JSON',
+        contentType: "application/json; charset=utf-8",
+        data:param,
+        success:function(data){
+            if(data.isOk){
+                $(".uhead .img img").attr('src',data.data.headimgurl);
+                $(".uhead .name").html(data.data.nickName);
+            }else{
+                console.log("获取用户信息失败 ");
+                console.log(data);
+            }
+        },
+        error:function(data){
+            console.log(data);
+        }
+    })
+}
+
+function saveResume(){
+    var sex = $('input[name="sex"]:checked').val();
+    var phoneNumber = $('#phoneNumber').val();
+    var school = $('#school').val();
+    var username = $('#username').val();
+    var workTime = $('#workTime').val();
+    var education = $('#education').val();
+    var proExperience = $('#proExperience').val();
+    if(sex == ""){
+        $.loading.show({"template":"请选择性别",duration: 1500});return;
+    }
+    if(phoneNumber == ""){
+        $.loading.show({"template":"请输入联系方式",duration: 1500});return;
+    }
+    if(school == ""){
+        $.loading.show({"template":"请输入毕业学校",duration: 1500});return;
+    }
+    if(username == ""){
+        $.loading.show({"template":"请输入姓名",duration: 1500});return;
+    }
+    if(workTime == ""){
+        $.loading.show({"template":"请选择工作经历",duration: 1500});return;
+    }
+    if(education == ""){
+        $.loading.show({"template":"请选择学历",duration: 1500});return;
+    }
+    if(proExperience == ""){
+        $.loading.show({"template":"请输入项目经验",duration: 1500});return;
+    }
+    var params = {"userId":user_id,
+                            "sex":sex,              //男  女
+                            "username":username,       
+                            "phoneNumber":phoneNumber,
+                            "education":education,           // 大专  本科 硕士  博士 其他
+                            "school":school,
+                            "workTime":workTime,    //工作经验 0：应届生 1：1年 2 2年 3 3年 4 4年  。。。。  10 10年  11 10年以上
+                            "proExperience":proExperience}
+    var url = "/Resume/save";
+    if(resume_id){
+        url="/Resume/update";
+        params.id = resume_id;
+    }
+    $.ajax({
+        url: ROOT_CONFIG.domain + url,
+        method: "post",
+        dataType: 'JSON',
+        contentType: "application/json; charset=utf-8",
+        data:JSON.stringify(params),
+        success:function(data){
+            if(data.isOk){
+                if(resume_id){
+                    history.back();location.reload();
+                }else{
+                    location.href="index.html?id="+user_id;
+                }
+                
+            }else{
+                console.log("false");
+                console.log(data);
+            }
+        },
+        error:function(data){
+            console.log(data);
+        }
+    })
+}
+function initResume(){
+    $.ajax({
+        url: ROOT_CONFIG.domain + "/Resume/detail",
+        method: "post",
+        dataType: 'JSON',
+        contentType: "application/json; charset=utf-8",
+        data: JSON.stringify({"userId":user_id}),
+        success:function(data){
+            if(data.isOk && data.datas && data.datas[0]){
+                var resume = data.datas[0];
+                resume_id = resume.id;
+                $("#username").val(resume.username);
+                $("#phoneNumber").val(resume.phoneNumber);
+                $("#education").val(resume.education);
+                $("#school").val(resume.school);
+                $("#workTime").val(resume.workTime);
+                $("#proExperience").val(resume.proExperience);
+            }else{
+
+            }
+        },
+        error:function(data){
+            console.log(data);
+        }
+    })
+}
 
 
 </script>

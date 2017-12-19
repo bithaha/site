@@ -26,29 +26,29 @@
         <div class="job-container job-detail">
             <ul class="list">
                 <li class="item">
-                    <h4 class="name">UI设计师</h4>
+                    <h4 class="name" id="jobName">UI设计师</h4>
                     <div class="tags">
-                        <span class="color-red">4千-8千</span><span class="color-gray">全职</span>
+                        <span class="color-red" id="wageLevel">4千-8千</span><span class="color-gray" id="jobType">全职</span>
                     </div>
                     <div class="tags">
-                        <span><i class="ico-addr"></i><em>武汉市</em></span><span><i class="ico-time"></i><em>1-3年</em></span><span><i class="ico-edu"></i><em>大专</em></span>
+                        <span><i class="ico-addr"></i><em id="city">武汉市</em></span><span><i class="ico-time"></i><em id="workTime">1-3年</em></span><span><i class="ico-edu"></i><em>大专</em></span>
                     </div>
                 </li>
                 <li class="item item-divider"></li>
                 <li class="item">
-                    <h4 class="name">武汉美约极客有限公司</h4>
+                    <h4 class="name" id="company">武汉美约极客有限公司</h4>
                     <div class="tags">
-                        <span>私营企业10-50人</span><span class="color-gray">2017-8-20更新</span>
+                        <span><em id="companyType">私营企业</em><em><!--10-50人--></em></span><span class="color-gray"><em id="createDate">2017-8-20</em>更新</span><span class="color-gray"><em id="sendTime">0</em>人投递</span>
                     </div>
                     <div class="tags">
-                        <span>武汉市红钢城街道工人文化宫三楼</span>
+                        <span id="address">武汉市红钢城街道工人文化宫三楼</span>
                     </div>
                 </li>
                 <li class="item item-divider"></li>
             </ul>
             <div class="desc">
                 <h4 class="title">职位描述</h4>
-                <div class="body">
+                <div class="body" id="jobDescribe">
                     岗位职责：<br /><br />
                     1、网站内容建设的布局和结构等方面的整体规划和文字编辑工作；<br />
                     2、负责网站日常美术设计和宣传资料的制作；<br />
@@ -66,13 +66,119 @@
 
         </div>
         <div class="fot-btn">
-            <a href="index.html" class="button">投递简历</a>
+            <a href="javascript:;" onclick="send()" class="button">投递简历</a>
         </div>
     </div>
 
 <script type="text/javascript">
 
+var job_id = API.getQueryString('jobId');
+var user_id = sessionStorage.getItem("user_id");
+var userInfo = sessionStorage.getItem("userInfo");
 
+$(function(){
+    initJob();
+    if(!userInfo){
+        getUserInfo();
+    }else{
+        if(userInfo.identity == "0"){
+            $(".fot-btn").remove();
+        }
+    }
+})
+
+function initJob(){
+    $.ajax({
+        url: ROOT_CONFIG.domain + "/JobInfo/detail",
+        method: "post",
+        dataType: 'JSON',
+        contentType: "application/json; charset=utf-8",
+        data: JSON.stringify({"jobId":job_id}),
+        success:function(data){
+            if(data.isOk){
+                if(data.data.userId == user_id){
+                    $(".fot-btn").remove();
+                }
+                for(var i in data.data){
+                    if($("#"+i).length > 0){
+                        $("#"+i).html(filter(i,data.data[i]));
+                    }
+                }
+
+            }else{
+
+            }
+        },
+        error:function(data){
+            console.log(data);
+        }
+    })
+}
+function filter(a, b){
+    if(a=="wageLevel"){
+        return API.filter.wageLevel(b);
+    }
+    if(a=="workTime"){
+        return API.filter.workTime(b);
+    }
+    if(a=="reqEducation"){
+        return API.filter.reqEducation(b);
+    }
+    if(a=="createDate"){
+        return (new Date(b)).Format("yyyy-MM-dd");
+    }
+    if(a=="sendTime"){
+        return b?b:0;
+    }
+    return b;
+}
+
+/* 投递简历 */
+function send(){
+    $.loading.show({"text":"投递中..."});
+    $.ajax({
+        url: ROOT_CONFIG.domain + "/Resume/send",
+        method: "post",
+        dataType: 'JSON',
+        contentType: "application/json; charset=utf-8",
+        data: JSON.stringify({"jobId":job_id,"userId": user_id}),
+        success:function(data){
+            if(data.isOk){
+                
+                $.loading.show({"template":"投递成功!",duration:1500});
+            }else{
+                $.loading.show({template:data.opMsg,duration:1500})
+            }
+        },
+        error:function(data){
+            console.log(data);
+            $.loading.show({"template":"投递失败，请稍后重试",duration:1500});
+        }
+    })
+}
+
+function getUserInfo(){
+
+
+    $.ajax({
+        url: ROOT_CONFIG.domain + "/User/query",
+        method: "post",
+        dataType: 'JSON',
+        contentType: "application/json; charset=utf-8",
+        data:JSON.stringify({"userId":user_id}),
+        success:function(data){
+            userInfo = data.data;
+            sessionStorage.setItem("userInfo",data.data);//全局缓存用户信息
+            if(userInfo.identity == "0"){
+                $(".fot-btn").remove();
+            }
+            console.log(data);
+        },
+        error:function(data){
+            console.log(data);
+        }
+    })
+}
 </script>
 </body>
 </html>
