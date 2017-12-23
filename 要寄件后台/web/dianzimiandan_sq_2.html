@@ -40,8 +40,8 @@
 			<a href="javascript:;"><i class="ico-menu ico-menu-2"></i><span>数据中心</span><i class="ico-arrow"></i></a>
 			<dl class="submenu">
 				<dd>
-					<a href="users.html" class="active">用户管理</a>
-					<a href="dianzimiandan.html">点子面单管理</a>
+					<a href="users.html">用户管理</a>
+					<a href="dianzimiandan.html" class="active">点子面单管理</a>
 					<a href="order.html">订单管理</a>
 				</dd>
 			</dl>
@@ -60,49 +60,51 @@
 </div>
 <div class="m_content">
 	<div class="container_white">
-		<h3 class="title">添加用户</h3>
+		<h3 class="title">申请开通电子面单服务</h3>
 		<div class="m-tit-bar">
-			<h3 class="title">用户信息</h3>
+			<h3 class="title">申请开通</h3>
 		</div>
-		<div class="form-inline add_user_form">
-			<div class="form-group">
-				<label>用户姓名</label>
-				<input type="text" class="form-control" placeholder="">
-			</div>
-			<div class="form-group">
-				<label>绑定手机</label>
-				<input type="text" class="form-control" placeholder="">
-			</div>
-			<div class="form-group">
-				<label>身份证号</label>
-				<input type="text" class="form-control" placeholder="">
-			</div>
-			<div class="form-group">
-				<label>用户类型</label>
-				<select class="form-control">
-					<option>普通用户</option>
-					<option>会员用户</option>
-				</select>
-			</div>
-			<div class="form-group">
-				<label>详细地址</label>
-				<input type="text" class="form-control" placeholder="">
-			</div>
-		</div>
-		<div class="m-tit-bar">
-			<h3 class="title">备注信息</h3>
-		</div>
-		<div class="form-inline add_user_form">
-			<div class="form-group">
-				<label>备注：</label>
-				<textarea class="form-control beizhu" placeholder=""></textarea>
-			</div>
-			<div class="btns">
-				<a class="btn btn-save">保存</a>
-				<a class="btn btn-cancel">取消</a>
-			</div>
-		</div>
+		<table class="table-form">
+			<tr>
+				<th>服务商</th>
+				<td><img src="../assets/img/web/zto.png"></td>
+			</tr>
+			<tr>
+				<th>开通面单年费</th>
+				<td>600元/年  <a class="btn btn-border pull-right">在线支付</a><span class="tip-red">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*请先支付年费，才能进行下一步操作</span></td>
+			</tr>
+			<tr>
+				<th>网点名称</th>
+				<td><input type="text" class="form-control" name=""></td>
+			</tr>
+			<tr>
+				<th>负责人</th>
+				<td><input type="text" class="form-control" name=""></td>
+			</tr>
+			<tr>
+				<th>发货地址</th>
+				<td><select class="form-control"><option>湖北省</option></select><select class="form-control"><option>武汉市</option></select><select class="form-control"><option>武昌区</option></select><select class="form-control"><option>和平大大道</option></select><input type="text" class="form-control" name=""></td>
+			</tr>
+			<tr>
+				<th>联系电话</th>
+				<td><input type="text" class="form-control" name=""></td>
+			</tr>
+			<tr>
+				<th></th>
+				<td>
+					<div class="checkbox">
+				        <label><input type="checkbox"><em>阅读并同意</em></label>
+				        <a href="#">《要寄件调用电子面单协议》</a>
+				    </div>
+			    </td>
+			</tr>
+			<tr>
+				<td colspan="2" class="text-center"><a class="btn btn-save">提交</a><a class="btn btn-cancel">取消</a></td>
+			</tr>
+		</table>
 	</div>
+
+	
 	
 </div>
 

@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="../assetsfavicon.ico" rel="bookmark" type="image/x-icon" />
+    <link href="../assetsfavicon.ico" rel="icon" type="image/x-icon" />
+    <link href="../assetsfavicon.ico" rel="shortcut icon" type="image/x-icon" />
+    <link href="../assetsfavicon.ico" rel="apple-touch-icon-precomposed" />
+    <title>要寄件分站管理系统</title>
+    <link href="../plugins/datetimepicker/jquery.datetimepicker.css" rel="stylesheet">
+    <link href="../plugins/bootstrap/bootstrap.css" rel="stylesheet">
+    <link href="../assets/css/base.css" rel="stylesheet">
+    <link href="../assets/css/web.css" rel="stylesheet">
+</head>
+
+<body>
+<div class="header">
+	<div class="welcome">
+		<span class="img"><img src="../assets/img/web/default_head.png"></span>
+		<span class="txt">您好！理工大学呈贡校区</span>
+	</div>
+	<ul class="nav">
+		<li><a href="#"><i class="ico-email"></i><em class="num">2</em></a></li>
+		<li><a href="#"><i class="ico-set"></i></a></li>
+		<li><a href="#"><i class="ico-close"></i></a></li>
+	</ul>
+</div>
+<div class="sitbar">
+	<div class="logo">
+		<a href="index.html"><img src="../assets/img/web/logo_web.png"></a>
+	</div>
+	<ul class="menu">
+		<li>
+			<a href="index.html"><i class="ico-menu ico-menu-1"></i><span>快递管理</span><i class="ico-arrow"></i></a>
+		</li>
+		<li>
+			<a href="javascript:;"><i class="ico-menu ico-menu-2"></i><span>数据中心</span><i class="ico-arrow"></i></a>
+			<dl class="submenu">
+				<dd>
+					<a href="users.html">用户管理</a>
+					<a href="dianzimiandan.html">点子面单管理</a>
+					<a href="order.html">订单管理</a>
+				</dd>
+			</dl>
+		</li>
+		<li>
+			<a href="javascript:;"><i class="ico-menu ico-menu-3"></i><span>个人中心</span><i class="ico-arrow"></i></a>
+			<dl class="submenu">
+				<dd>
+					<a href="setting.html" class="active">个人设置</a>
+					<a href="account.html">账单信息</a>
+					<a href="record.html">提现申请记录</a>
+				</dd>
+			</dl>
+		</li>
+	</ul>
+</div>
+<div class="m_content">
+	
+	<div class="container_white">
+		<h3 class="title">个人设置</h3>
+		<div class="m-tit-bar">
+			<h3 class="title">个人信息</h3>
+		</div>
+		<table class="table-form">
+			<tr>
+				<th>用户昵称</th>
+				<td>
+					<span class="uname">理工大学呈贡校区</span>
+				</td>
+				<td width="160"><a class="btn btn-border">修改</a><a class="btn">确认</a></td>
+			</tr>
+			<tr>
+				<th>用户头像</th>
+				<td>
+					<span class="uimg"><img src="../assets/img/web/default_head.png"></span>
+				</td>
+				<td width="160"><a class="btn btn-border">修改</a><a class="btn">确认</a></td>
+			</tr>
+			<tr>
+				<th>详细地址</th>
+				<td>江西省&nbsp;&nbsp;南昌市&nbsp;&nbsp;新建区&nbsp;&nbsp;长征西路29号红谷十二庭</td>
+			</tr>
+		</table>
+		<div style="height: 80px;"></div>
+		<div class="m-tit-bar">
+			<h3 class="title">帐号信息</h3>
+		</div>
+		<table class="table-form">
+			<tr>
+				<th>绑定手机</th>
+				<td>158****2323</td>
+				<td width="160"><a class="btn btn-border">修改</a><a class="btn">确认</a></td>
+			</tr>
+			<tr>
+				<th>登录密码</th>
+				<td>********</td>
+				<td width="160"><a class="btn btn-border">修改</a><a class="btn">确认</a></td>
+			</tr>
+			<tr>
+				<th>第三方帐号绑定</th>
+				<td></td>
+				<td width="160"><a class="btn btn-border">修改</a><a class="btn">确认</a></td>
+			</tr>
+		</table>
+		<div style="height: 80px;"></div>
+		<div class="text-center">
+			<a class="btn btn-save">保存</a><a class="btn btn-cancel">返回</a>
+		</div>
+	</div>
+
+</div>
+
+
+
+
+
+
+
+    <script src="../plugins/jquery/jquery-1.11.3.min.js"></script>
+    <script src="../plugins/datetimepicker/jquery.datetimepicker.js"></script>
+    <script src="../assets/js/base.js" type="text/javascript"></script>
+    <script type="text/javascript">
+    $(function () {
+    	$(".start-date").datetimepicker({
+    		timepicker:false,
+    		format:"Y-m-d"
+    	});
+    	$(".end-date").datetimepicker({
+    		timepicker:false,
+    		format:"Y-m-d"
+    	});
+    })
+    </script>
+</body>
+
+</html>

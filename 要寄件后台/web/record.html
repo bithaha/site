@@ -35,7 +35,7 @@
 	</div>
 	<ul class="menu">
 		<li>
-			<a href="index.html" class="active"><i class="ico-menu ico-menu-1"></i><span>快递管理</span><i class="ico-arrow"></i></a>
+			<a href="index.html"><i class="ico-menu ico-menu-1"></i><span>快递管理</span><i class="ico-arrow"></i></a>
 		</li>
 		<li>
 			<a href="javascript:;"><i class="ico-menu ico-menu-2"></i><span>数据中心</span><i class="ico-arrow"></i></a>
@@ -53,97 +53,61 @@
 				<dd>
 					<a href="setting.html">个人设置</a>
 					<a href="account.html">账单信息</a>
-					<a href="record.html">提现申请记录</a>
+					<a href="record.html" class="active">提现申请记录</a>
 				</dd>
 			</dl>
 		</li>
 	</ul>
 </div>
 <div class="m_content">
-	<div class="down-title"><a href="javascript:;"><i class="ico-qr"></i><span>下载寄件二维码</span></a></div>
-	<div class="filter-wraper filter-wraper-1">
-		<div class="form-inline">
-			<div class="form-group">
-				<label>寄件人电话</label>
-				<input type="text" class="form-control" placeholder="">
+	
+	<div class="miandan_head">
+		<a class="btn btn-common" href="record_sq.html">立即提现</a>
+		<i class="icon ico-miandan"></i>
+		<div class="det">
+			<h3 class="tit">可提现金额（元）</h3>
+			<div class="desc">
+				<h3 class="price">1860.00</h3>
 			</div>
-			<div class="form-group">
-				<label>快递公司</label>
-				<input type="text" class="form-control" placeholder="">
-			</div>
-			<div class="form-group">
-				<label>时间段</label>
-				<input type="text" class="form-control start-date" placeholder="">
-				<label>至</label>
-				<input type="text" class="form-control end-date" placeholder="">
-			</div>
-			<button type="submit" class="btn btn-primary">查询</button>
 		</div>
 	</div>
 
 	<div class="table-container">
 		<div class="m-tit-bar">
-			<a href="javascript:;" class="btn">打印纸质面单</a>
-			<a href="javascript:;" class="btn">打印电子面单</a>
-			<h3 class="title">寄件列表</h3>
+			<h3 class="title">提现记录列表</h3>
 		</div>
 		<table class="table">
 			<thead>
 				<tr>
-					<td>快递单号</td><td>快递公司</td><td>寄件人</td><td>寄件电话</td><td>收件人</td><td>收件人电话</td><td>收件人地址</td><td>运费</td><td>申请时间</td><td>状态</td><td>操作</td>
+					<td>用户信息</td><td>提现账户</td><td>提现金额</td><td>申请时间</td><td>当前状态</td><td>操作</td>
 				</tr>
 			</thead>
 			<tbody>
 				<tr>
 					<td>
 						<div class="checkbox">
-					        <label><input type="checkbox"><em>98566656565</em></label>
+					        <label><input type="checkbox"><em></em></label>
 					    </div>
 					</td>
-					<td>百世汇通</td>
-					<td>张三</td>
-					<td>15955556666</td>
-					<td>李小四</td>
-					<td>15966666666</td>
-					<td>江西省-南昌市-新建区长征西路229号红谷</td>
-					<td>12元</td>
-					<td>2017-11-30</td>
-					<td>待寄出</td>
-					<td><a class="btn btn-default">修改</a><a class="btn">删除</a></td>
+					<td><span class="uimg"><img src="../assets/img/web/default_head.png"></span><span class="uname">理工大学呈贡校区</span></td>
+					<td>支付宝 5454654@qq.com</td>
+					<td>600.00元</td>
+					<td>2017-11-11 11:11:11</td>
+					<td><i class="ico-tip"></i><span>待审核</span></td>
+					<td><a class="btn btn-default">取消</a><a class="btn">删除</a></td>
 				</tr>
 				<tr>
 					<td>
 						<div class="checkbox">
-					        <label><input type="checkbox"><em>98566656565</em></label>
+					        <label><input type="checkbox"><em></em></label>
 					    </div>
 					</td>
-					<td>百世汇通</td>
-					<td>张三</td>
-					<td>15955556666</td>
-					<td>李小四</td>
-					<td>15966666666</td>
-					<td>江西省-南昌市-新建区长征西路229号红谷</td>
-					<td>12元</td>
-					<td>2017-11-30</td>
-					<td>待寄出</td>
-					<td><a class="btn btn-default">修改</a><a class="btn">删除</a></td>
-				</tr>
-				<tr>
-					<td>
-						<div class="checkbox">
-					        <label><input type="checkbox"><em>98566656565</em></label>
-					    </div>
-					</td>
-					<td>百世汇通</td>
-					<td>张三</td>
-					<td>15955556666</td>
-					<td>李小四</td>
-					<td>15966666666</td>
-					<td>江西省-南昌市-新建区长征西路229号红谷</td>
-					<td>12元</td>
-					<td>2017-11-30</td>
-					<td>待寄出</td>
-					<td><a class="btn btn-default">修改</a><a class="btn">删除</a></td>
+					<td><span class="uimg"><img src="../assets/img/web/default_head.png"></span><span class="uname">理工大学呈贡校区</span></td>
+					<td>支付宝 5454654@qq.com</td>
+					<td>600.00元</td>
+					<td>2017-11-11 11:11:11</td>
+					<td><i class="ico-tip"></i><span>待审核</span></td>
+					<td><a class="btn btn-default">取消</a><a class="btn">删除</a></td>
 				</tr>
 			</tbody>
 		</table>

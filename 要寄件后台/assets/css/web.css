@@ -2,10 +2,12 @@
 body{background: #f3f3f5;font-size: 18px;color:#535353;}
 
 .checkbox{}
-.checkbox input[type="checkbox"] + em{padding-left: 25px;display: inline-block;background: url(../img/web/checkbox.png) left top no-repeat;line-height: 20px;}
+.checkbox input[type="checkbox"] + em{padding-left: 25px;display: inline-block;background: url(../img/web/checkbox.png) left top no-repeat;line-height: 20px;height: 20px;}
 .checkbox label{padding-left: 0;}
 .checkbox input[type="checkbox"]{ opacity: 0; }
 .checkbox input[type="checkbox"]:checked + em{ background-image: url(../img/web/checkbox_a.png) }
+.checkbox a{color:#356dc2;}
+.checkbox a:hover{text-decoration: underline;}
 
 /* 按钮 */
 .btn-common,a.btn-common{height: 50px;line-height: 50px;background:#356dc2;font-size: 20px;color:#fff;padding:0 20px;border-radius:0;}
@@ -66,6 +68,8 @@ body{background: #f3f3f5;font-size: 18px;color:#535353;}
 .table-container .uimg{width: 40px;height: 40px;border-radius:50%;overflow: hidden;vertical-align: middle;display: inline-block;margin-right: 10px;}
 .table-container .uimg img{width: 100%;height: 100%;}
 .table-container .uname{vertical-align: middle;}
+.table-container table tr td.text-left{text-align: left;}
+.table-container table i,.table-container table span,.table-container table img{vertical-align: middle;}
 
 /* 登录 */
 .login_bg{position: absolute;width: 100%;height: 100%;top: 0;left: 0;z-index: -1;background: url(../img/web/login_bg.png) center bottom no-repeat;background-size: cover;}
@@ -124,10 +128,10 @@ body{background: #f3f3f5;font-size: 18px;color:#535353;}
 .add_user_form .form-group{margin: 20px 0; }
 .add_user_form .beizhu{width: 730px;height: 140px;}
 .add_user_form .btns{margin:130px 0 60px; text-align: center;}
-.add_user_form .btns .btn{height: 50px;line-height: 50px;padding:0 50px;font-size:20px;margin:0 20px;border-radius: 0;}
-.add_user_form .btns .btn-save{color:#fff;background:#356dc2; border:1px solid #356dc2;}
-.add_user_form .btns .btn-cancel{color:#8c8c8c;background:#e7effc;border:1px solid #d9dcdf;}
-.add_user_form .btns .btn:hover{opacity: .9;}
+.btn-save,.btn-cancel{height: 50px;line-height: 50px;padding:0 50px;font-size:20px;margin:0 20px;border-radius: 0;}
+.btn-save,a.btn-save{color:#fff;background:#356dc2; border:1px solid #356dc2;}
+.btn-cancel,a.btn-cancel{color:#8c8c8c;background:#e7effc;border:1px solid #d9dcdf;}
+a.btn-save:hover{opacity: .9;color:#fff;}
 
 /* 电子面单 */
 .miandan_head{background: #fff;padding:20px 30px; position: relative;margin-bottom: 40px;}
@@ -138,3 +142,26 @@ body{background: #f3f3f5;font-size: 18px;color:#535353;}
 .miandan_head .det .tit{margin-bottom: 20px;font-size: 20px;}
 .miandan_head:after{content: "";display: block;clear: both;}
 .miandan_head .desc{line-height: 30px;}
+.miandan_head .price{font-size: 56px;color:#fe8b21;}
+
+.ico-ok{background-image: url(../img/web/sprites-24x24.png);background-position: 0 -9em;background-size:100% auto;}
+.ico-tip{background-image: url(../img/web/sprites-24x24.png);background-position: 0 -10.5em;background-size:100% auto;}
+.service_sq_List{ overflow: hidden; }
+.service_sq_List li{width: 460px;float: left;margin-bottom: 40px;}
+.service_sq_List li .img{margin: 0 30px 0 120px;height: 160px;border:1px solid #ddd;background-repeat:no-repeat;background-position:center center;}
+.service_sq_List li .det{width:120px;float: left;margin: 0 ;}
+.service_sq_List li .det h3{font-size: 20px;}
+.service_sq_List li .det h4{margin-top: 10px;color:#fd8c22;}
+.service_sq_List li .det .btn{margin-top:50px;}
+.service_sq_List li .img.yto{background-image: url(../img/web/yto.png);}
+.service_sq_List li .img.zto{background-image: url(../img/web/zto.png);}
+
+.table-form{width: 100%;}
+.table-form td{padding: 15px;line-height: 30px;}
+.table-form th{padding: 15px 0;line-height:30px;width:110px;font-weight: normal;vertical-align: top;}
+.table-form .form-control{width:340px;display: inline-block;border-radius:0;}
+.table-form select.form-control{margin: 0 10px 10px 0;}
+.table-form .tip-red{color:#ff0000;}
+.table-form .btn-border{font-size: 16px;padding: 0 20px;height: 30px;line-height: 30px;border:1px solid #2589ff;color:#2589ff;}
+
+/*  */

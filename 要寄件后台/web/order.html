@@ -35,7 +35,7 @@
 	</div>
 	<ul class="menu">
 		<li>
-			<a href="index.html" class="active"><i class="ico-menu ico-menu-1"></i><span>快递管理</span><i class="ico-arrow"></i></a>
+			<a href="index.html"><i class="ico-menu ico-menu-1"></i><span>快递管理</span><i class="ico-arrow"></i></a>
 		</li>
 		<li>
 			<a href="javascript:;"><i class="ico-menu ico-menu-2"></i><span>数据中心</span><i class="ico-arrow"></i></a>
@@ -43,7 +43,7 @@
 				<dd>
 					<a href="users.html">用户管理</a>
 					<a href="dianzimiandan.html">点子面单管理</a>
-					<a href="order.html">订单管理</a>
+					<a href="order.html" class="active">订单管理</a>
 				</dd>
 			</dl>
 		</li>
@@ -60,13 +60,9 @@
 	</ul>
 </div>
 <div class="m_content">
-	<div class="down-title"><a href="javascript:;"><i class="ico-qr"></i><span>下载寄件二维码</span></a></div>
+	
 	<div class="filter-wraper filter-wraper-1">
 		<div class="form-inline">
-			<div class="form-group">
-				<label>寄件人电话</label>
-				<input type="text" class="form-control" placeholder="">
-			</div>
 			<div class="form-group">
 				<label>快递公司</label>
 				<input type="text" class="form-control" placeholder="">
@@ -77,20 +73,19 @@
 				<label>至</label>
 				<input type="text" class="form-control end-date" placeholder="">
 			</div>
+			<div class="form-group">
+				<label>订单状态</label>
+				<select class="form-control"><option>已支付</option></select>
+			</div>
 			<button type="submit" class="btn btn-primary">查询</button>
 		</div>
 	</div>
 
 	<div class="table-container">
-		<div class="m-tit-bar">
-			<a href="javascript:;" class="btn">打印纸质面单</a>
-			<a href="javascript:;" class="btn">打印电子面单</a>
-			<h3 class="title">寄件列表</h3>
-		</div>
 		<table class="table">
 			<thead>
 				<tr>
-					<td>快递单号</td><td>快递公司</td><td>寄件人</td><td>寄件电话</td><td>收件人</td><td>收件人电话</td><td>收件人地址</td><td>运费</td><td>申请时间</td><td>状态</td><td>操作</td>
+					<td>订单号</td><td>用户信息</td><td>快递单号</td><td>快递公司</td><td>运费</td><td>支付渠道</td><td>申请时间</td><td>订单状态</td><td>操作</td>
 				</tr>
 			</thead>
 			<tbody>
@@ -100,16 +95,14 @@
 					        <label><input type="checkbox"><em>98566656565</em></label>
 					    </div>
 					</td>
-					<td>百世汇通</td>
-					<td>张三</td>
-					<td>15955556666</td>
-					<td>李小四</td>
-					<td>15966666666</td>
-					<td>江西省-南昌市-新建区长征西路229号红谷</td>
-					<td>12元</td>
-					<td>2017-11-30</td>
-					<td>待寄出</td>
-					<td><a class="btn btn-default">修改</a><a class="btn">删除</a></td>
+					<td><span class="uimg"><img src="../assets/img/web/default_head.png"></span><span class="uname">理工大学呈贡校区</span></td>
+					<td>956565665</td>
+					<td>天天快递</td>
+					<td>22元</td>
+					<td>微信钱包</td>
+					<td>2017-11-30 11:22:22</td>
+					<td><i class="ico-tip"></i><span>未付款</span></td>
+					<td><a class="btn btn-default" href="order_detail.html">查看</a><a class="btn">删除</a></td>
 				</tr>
 				<tr>
 					<td>
@@ -117,33 +110,14 @@
 					        <label><input type="checkbox"><em>98566656565</em></label>
 					    </div>
 					</td>
-					<td>百世汇通</td>
-					<td>张三</td>
-					<td>15955556666</td>
-					<td>李小四</td>
-					<td>15966666666</td>
-					<td>江西省-南昌市-新建区长征西路229号红谷</td>
-					<td>12元</td>
-					<td>2017-11-30</td>
-					<td>待寄出</td>
-					<td><a class="btn btn-default">修改</a><a class="btn">删除</a></td>
-				</tr>
-				<tr>
-					<td>
-						<div class="checkbox">
-					        <label><input type="checkbox"><em>98566656565</em></label>
-					    </div>
-					</td>
-					<td>百世汇通</td>
-					<td>张三</td>
-					<td>15955556666</td>
-					<td>李小四</td>
-					<td>15966666666</td>
-					<td>江西省-南昌市-新建区长征西路229号红谷</td>
-					<td>12元</td>
-					<td>2017-11-30</td>
-					<td>待寄出</td>
-					<td><a class="btn btn-default">修改</a><a class="btn">删除</a></td>
+					<td><span class="uimg"><img src="../assets/img/web/default_head.png"></span><span class="uname">理工大学呈贡校区</span></td>
+					<td>956565665</td>
+					<td>天天快递</td>
+					<td>22元</td>
+					<td>微信钱包</td>
+					<td>2017-11-30 11:22:22</td>
+					<td><i class="ico-ok"></i><span>已付款</span></td>
+					<td><a class="btn btn-default" href="order_detail.html">查看</a><a class="btn">删除</a></td>
 				</tr>
 			</tbody>
 		</table>
