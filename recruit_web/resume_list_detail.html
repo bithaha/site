@@ -2,7 +2,7 @@
 <html>
 <head>
 <meta charset="utf8">
-<title>简历编辑——公众号招聘</title>
+<title>简历详情——公众号招聘</title>
 <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no">
 <meta name="format-detection" content="telephone=no">
 <meta name="apple-mobile-web-app-capable" content="yes">
@@ -20,14 +20,9 @@
         <h3 class="title">
             我的简历
         </h3>
-        <a class="btn-right" href="resume_edit.html">编辑</a>
     </div>
     <div class="content">
         <div class="resume-edit">
-        	<div class="uhead">
-        		<div class="img"><img src="assets/images/avatar.png" onerror="this.src='assets/images/avatar.png'"></div>
-        		<div class="name"></div>
-        	</div>
         	<div class="formarea">
                 <div class="frow">
                     <label>姓名：</label>
@@ -56,15 +51,15 @@
         	</div>
         </div>
     </div>
-
+    
 <div class="poster-loading posterShowLoading active" id="showLoading"><ion-spinner icon="ripple" class="inner spinner-assertive spinner spinner-ripple"><svg viewBox="0 0 64 64"><g fill="none" fill-rule="evenodd" stroke-width="3"><circle cx="32" cy="32" r="23.9964"><animate attributeName="r" begin="0s" dur="2s" values="0;24" keyTimes="0;1" keySplines="0.1,0.2,0.3,1" calcMode="spline" repeatCount="indefinite"></animate><animate attributeName="stroke-opacity" begin="0s" dur="2s" values=".2;1;.2;0" repeatCount="indefinite"></animate></circle><circle cx="32" cy="32" r="19.5595"><animate attributeName="r" begin="-1s" dur="2s" values="0;24" keyTimes="0;1" keySplines="0.1,0.2,0.3,1" calcMode="spline" repeatCount="indefinite"></animate><animate attributeName="stroke-opacity" begin="-1s" dur="2s" values=".2;1;.2;0" repeatCount="indefinite"></animate></circle></g></svg></ion-spinner></div>
 
+
 <script type="text/javascript">
-var user_id = sessionStorage.getItem('user_id');
+var user_id = API.getQueryString('user_id');
 
 
 $(function(){
-    getUserInfo();
     initResume();
 })
 
@@ -98,30 +93,7 @@ function initResume(){
         }
     })
 }
-function getUserInfo(){
-    var param = JSON.stringify({"userId":user_id});
-    console.log("param"+param);
-    var url = "/User/query";
-    $.ajax({
-        url: ROOT_CONFIG.domain + url,
-        method: "post",
-        dataType: 'JSON',
-        contentType: "application/json; charset=utf-8",
-        data:param,
-        success:function(data){
-            if(data.isOk){
-                $(".uhead .img img").attr('src',data.data.headimgurl);
-                $(".uhead .name").html(data.data.nickName);
-            }else{
-                console.log("获取用户信息失败 ");
-                console.log(data);
-            }
-        },
-        error:function(data){
-            console.log(data);
-        }
-    })
-}
+
 
 </script>
 </body>

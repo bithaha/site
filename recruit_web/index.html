@@ -58,8 +58,15 @@
                 
                 <div class="list zp-list" id="zpList">
                     <!-- <a class="item" href="job_detail.html">
+
+                        <span class="right">
+                            <span class="price">4k-6k/月</span>
+                            <span class="city">武汉</span>
+                            <span class="time">12-3</span>
+                        </span>
                         <span class="tit">UI设计师</span>
                         <span class="txt">武汉市美约极客教育机构</span>
+                        <span class="tags"><em>双休</em><em>餐补</em></span>
                     </a> -->
                     
                 </div>
@@ -97,11 +104,35 @@ function getJobs(opts){
         dataType: 'JSON',
         contentType: "application/json; charset=utf-8",
         data:JSON.stringify({"city": city,"jobType": jobType,"pageSize":jobs_pageSize.toString(),"curPage":jobs_curPage.toString(),"jobOrCompany":keywords}),
-        success:function(data){
-            if(data.isOk){
-                for(var i in data.page.datas){
-                    jobs.push(data.page.datas[i]);
-                    $("#zpList").append('<a class="item" href="job_detail.html?jobId='+data.page.datas[i].id+'"><span class="tit">'+data.page.datas[i].jobName+'</span><span class="txt">'+data.page.datas[i].company+'</span></a>');
+        success:function(res){
+            if(res.isOk){
+                for(var i in res.page.datas){
+                    var item = res.page.datas[i];console.log(item)
+                    jobs.push(item);
+                    var str = '<a class="item" href="job_detail.html?jobId={{jobId}}">\
+                                <span class="right">\
+                                    <span class="price">{{wageLevel}}/月</span>\
+                                    <span class="city">{{city}}</span>\
+                                    <span class="time">{{createDate}}</span>\
+                                </span>\
+                                <span class="tit">{{jobName}}</span>\
+                                <span class="txt">{{company}}</span>\
+                                <span class="tags">{{welfareTypes}}</span>\
+                            </a>';
+                    str = str.replace("{{jobId}}",item.id);
+                    str = str.replace("{{wageLevel}}",API.filter.wageLevel(item.wageLevel));
+                    str = str.replace("{{city}}",item.city);
+                    str = str.replace("{{createDate}}",API.filter.jobDate(item.createDate));
+                    str = str.replace("{{jobName}}",item.jobName);
+                    str = str.replace("{{company}}",item.company);
+
+                    var welfareTypes = "";
+                    item.welfareTypes && (item.welfareTypes = JSON.parse(item.welfareTypes)) && item.welfareTypes.forEach(function(welfare){
+                        welfareTypes += "<em>"+API.filter.welfareTypes(welfare)+"</em>"
+                    })
+                    str = str.replace("{{welfareTypes}}",welfareTypes);
+
+                    $("#zpList").append(str);
                 }
                 /* 判空 */
                 if(jobs.length <= 0){
@@ -109,17 +140,19 @@ function getJobs(opts){
                 }
                 $(".m-loading").hide()
                 $('.loadmore').removeClass('active');
-                if(data.page.curPage < data.page.maxPage){
+                if(res.page.curPage < res.page.maxPage){
                     $('.loadmore').css({"display":"block"});
                 }else{
                     $('.loadmore').css({"display":"none"});
                 }
 
-                opts && opts.success && opts.success(data);
+                opts && opts.success && opts.success(res);
             }
         },
         error:function(data){
+            $(".m-loading").hide()
             console.log(data);
+            $("#zpList").append('<div class="empty">加载异常</div>')
         }
     })
 }
@@ -174,7 +207,7 @@ function getUserInfo(){
             if(data.isOk){
                 initMenus(data);
             }
-            sessionStorage.setItem("userInfo",data.data);//全局缓存用户信息
+            sessionStorage.setItem("userInfo",JSON.stringify(data.data));//全局缓存用户信息
             
             console.log(data);
         },
@@ -190,7 +223,7 @@ function initMenus(data){
     if(identity == "0"){
         ucenter = '<li><a href="job_list.html"><i class="ico-resume"></i><span>职位管理</span></a></li>'
     }else{
-        ucenter = '<li><a href="resume_detail.html"><i class="ico-resume"></i><span>我的简历</span></a></li>'
+        ucenter = '<li><a href="resume_detail.html"><i class="ico-resume"></i><span>我的简历</span></a></li><li><a href="send_job_list.html"><i class="ico-resume"></i><span>投递历史</span></a></li>'
     }
     var menuHtml = '<ul>\
                     <li><a href="javascript:;" id="userId">'+data.data.nickName+'</a></li>\

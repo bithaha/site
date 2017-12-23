@@ -90,6 +90,12 @@
                     </div>
                 </li>
                 <li class="item">
+                    <h4 class="name">公司福利</h4>
+                    <div class="det">
+                        <div class="tags" id="welfareTypes"></div>
+                    </div>
+                </li>
+                <li class="item">
                     <h4 class="name">职位描述</h4>
                     <div class="det">
                         <textarea name="jobDescribe"></textarea>
@@ -104,7 +110,37 @@
 
 <script type="text/javascript">
 var user_id = sessionStorage.getItem("user_id");
+var welfareTypes = [];
+var max = 4;/* 指定最多选择的福利个数 */
 
+
+$(function(){
+    initWelfareTypes();
+})
+
+function initWelfareTypes(){
+    API.data.welfare.forEach(function(item,i){
+        $("#welfareTypes").append('<a data-type="'+item.type+'">'+item.name+'</a>');
+    });
+    $("#welfareTypes").on('click','a',function(){
+        var type = $(this).data('type');
+        if($(this).hasClass('active')){
+            welfareTypes.forEach(function(item,i,a){
+                if(item == type){
+                    a.splice(i,1);
+                }
+            })
+            $(this).removeClass('active');
+        }else{
+            if(welfareTypes.length >= max){
+                $.loading.show({template: "福利最多不能超过"+max+"个",duration:1500});return;
+            }
+            welfareTypes.push(type);
+            $(this).addClass('active');
+        }
+        
+    })
+}
 
 function submit(){
     var pass = true,params = {};
@@ -117,7 +153,7 @@ function submit(){
         }
     });
     params.userId = user_id;
-
+    params.welfareTypes = JSON.stringify(welfareTypes);
 
     if(pass){
         $.ajax({

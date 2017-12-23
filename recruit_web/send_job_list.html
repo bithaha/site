@@ -2,7 +2,7 @@
 <html>
 <head>
 <meta charset="utf8">
-<title>职位编辑——公众号招聘</title>
+<title>投递列表——公众号招聘</title>
 <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no">
 <meta name="format-detection" content="telephone=no">
 <meta name="apple-mobile-web-app-capable" content="yes">
@@ -18,13 +18,13 @@
     <div class="header">
         <a class="btn-left" href="javascript:history.back();"><i class="ico-back"></i></a>
         <h3 class="title">
-            职位编辑
+            投递列表
         </h3>
-        <a class="btn-right" href="create_job.html">新建</a>
+        <a class="btn-right"></a>
     </div>
     <div class="content">
         <div class="job-container">
-            <h3 class="c-title">已发布职位</h3>
+            <h3 class="c-title">已投递职位</h3>
             <ul class="list" id="zpList">
                 <!-- <a class="item" href="job_detail.html">
                     <h4 class="name">UI设计师</h4>
@@ -41,7 +41,6 @@
             <a class="loadmore"><span>点击加载更多</span><i></i></a>
         </div>
     </div>
-
 <div class="poster-loading posterShowLoading active" id="showLoading"><ion-spinner icon="ripple" class="inner spinner-assertive spinner spinner-ripple"><svg viewBox="0 0 64 64"><g fill="none" fill-rule="evenodd" stroke-width="3"><circle cx="32" cy="32" r="23.9964"><animate attributeName="r" begin="0s" dur="2s" values="0;24" keyTimes="0;1" keySplines="0.1,0.2,0.3,1" calcMode="spline" repeatCount="indefinite"></animate><animate attributeName="stroke-opacity" begin="0s" dur="2s" values=".2;1;.2;0" repeatCount="indefinite"></animate></circle><circle cx="32" cy="32" r="19.5595"><animate attributeName="r" begin="-1s" dur="2s" values="0;24" keyTimes="0;1" keySplines="0.1,0.2,0.3,1" calcMode="spline" repeatCount="indefinite"></animate><animate attributeName="stroke-opacity" begin="-1s" dur="2s" values=".2;1;.2;0" repeatCount="indefinite"></animate></circle></g></svg></ion-spinner></div>
 
 <script type="text/javascript">
@@ -55,14 +54,9 @@ var jobs=[];/*存储所有招聘信息*/
 $(function(){
     $("#zpList").empty().on('click','a',function(e){
         e.stopPropagation();
-        if(e.target.className == "btn-del"){
-            deleteJob(this);
-        }else if(e.target.className == "senditem"){
-            location.href="resume_list.html?jobId="+$(this).data("id");
-        }
-        else{
-            location.href="job_detail.html?jobId="+$(this).data("id");
-        }
+       
+        location.href="job_detail.html?jobId="+$(this).data("id");
+        
     });
     getJobs();
     /* 下一页 */
@@ -101,7 +95,7 @@ $(function(){
 function getJobs(opts){
     $('.loadmore').addClass('active');
     $.ajax({
-        url: ROOT_CONFIG.domain + "/JobInfo/queryByCompany",
+        url: ROOT_CONFIG.domain + "/Resume/sendResumeDetail",
         method: "post",
         dataType: 'JSON',
         contentType: "application/json; charset=utf-8",
@@ -144,30 +138,6 @@ function resetJobs(){
     $("#zpList").empty();
     $(".m-loading").show();
     $('.moredata').hide();
-}
-function deleteJob(o){
-    var jobId = $(o).data('id');
-    var e = event || window.event;
-    e.stopPropagation();
-    yyConfirm("确定删除该职位吗？",function(){
-        $.ajax({
-            url: ROOT_CONFIG.domain + "/JobInfo/delete",
-            method: "post",
-            dataType: 'JSON',
-            contentType: "application/json; charset=utf-8",
-            data:JSON.stringify({"jobId": jobId}),
-            success:function(data){
-                if(data.isOk){
-                    $(o).animate({"transform":"scaleY(0)"},300,function(){
-                        $(o).remove();
-                    })
-                }
-            },
-            error:function(data){
-                console.log(data);
-            }
-        })
-    })
 }
 
 

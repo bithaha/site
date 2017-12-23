@@ -131,6 +131,8 @@
 var user_id = API.getQueryString("user_id");
 
 $(function(){
+    var phoneReg = new RegExp(/\d{11}/),emailReg = new RegExp(/^\w+([-+.]\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*$/);
+
     /* 城市选择 */
     $("#city").click(function(){
         var _this = this;
@@ -142,21 +144,23 @@ $(function(){
         var pass = true,params = {};
         params.userId = user_id;
         /* 表单校验 */
-        $('#form input,#form textarea,#form select').each(function(){console.log($(this).val())
+        $('#form input,#form textarea,#form select').each(function(){
+            var val = $.trim($(this).val()),name = $(this).attr('name');
             $(this).removeClass('error');
-            if($(this).val() == ''){
+            if(val == ''){
                 $(this).addClass('error');
-                pass = false;
-            }else{
-                params[$(this).attr('name')] = $(this).val();
+                $.loading.show({template:"信息不完整",duration:1000});pass = false;return false;
             }
-        })
-        var success = function(){
-            yyAlert("提交成功",function(){
-                location.href="index.html?user_id="+user_id+"&identity=0";
-            });
+            if(name == "companyPhone" && !phoneReg.test(val)){
+                $.loading.show({template:"手机格式不正确",duration:1000});pass = false;return false;
+            }
+            if(name == "companyEmail" && !emailReg.test(val)){
+                $.loading.show({template:"请输入正确的邮箱格式",duration:1000});pass = false;return false;
+            }
+            params[name] = val;
             
-        }
+        })
+
         if(pass){
             $.ajax({
                 url: ROOT_CONFIG.domain + "/Company/save",
@@ -181,6 +185,9 @@ $(function(){
             })
 
         }
+    });
+    $('#form input,#form textarea').focus(function(){
+        $(this).removeClass("error");
     })
 })
 

@@ -98,6 +98,8 @@ function getUserInfo(){
         data:param,
         success:function(data){
             if(data.isOk){
+                // var tips = '<p>获取用户信息接口：'+url+'</p><p style="word-wrap: break-word;">返回数据：'+JSON.stringify(data.data)+'</p>';
+                // yyAlert(tips);
                 $(".uhead .img img").attr('src',data.data.headimgurl);
                 $(".uhead .name").html(data.data.nickName);
             }else{
@@ -124,7 +126,10 @@ function saveResume(){
     }
     if(phoneNumber == ""){
         $.loading.show({"template":"请输入联系方式",duration: 1500});return;
+    }else if(!/\d{11}/.test(phoneNumber)){
+        $.loading.show({"template":"请输入正确的电话格式",duration: 1500});return;
     }
+
     if(school == ""){
         $.loading.show({"template":"请输入毕业学校",duration: 1500});return;
     }
@@ -194,6 +199,11 @@ function initResume(){
                 $("#school").val(resume.school);
                 $("#workTime").val(resume.workTime);
                 $("#proExperience").val(resume.proExperience);
+                $("input[name='sex']").each(function(){
+                    if($(this).val() == resume.sex){
+                        $(this).attr("checked",true);
+                    }
+                })
             }else{
 
             }

@@ -31,8 +31,9 @@
                         <span class="color-red" id="wageLevel">4千-8千</span><span class="color-gray" id="jobType">全职</span>
                     </div>
                     <div class="tags">
-                        <span><i class="ico-addr"></i><em id="city">武汉市</em></span><span><i class="ico-time"></i><em id="workTime">1-3年</em></span><span><i class="ico-edu"></i><em>大专</em></span>
+                        <span><i class="ico-addr"></i><em id="city">武汉市</em></span><span><i class="ico-time"></i><em id="workTime">1-3年</em></span><span><i class="ico-edu"></i><em id="reqEducation">大专</em></span>
                     </div>
+                    <div class="fuli" id="welfareTypes"></div>
                 </li>
                 <li class="item item-divider"></li>
                 <li class="item">
@@ -70,6 +71,9 @@
         </div>
     </div>
 
+
+
+<div class="poster-loading posterShowLoading active" id="showLoading"><ion-spinner icon="ripple" class="inner spinner-assertive spinner spinner-ripple"><svg viewBox="0 0 64 64"><g fill="none" fill-rule="evenodd" stroke-width="3"><circle cx="32" cy="32" r="23.9964"><animate attributeName="r" begin="0s" dur="2s" values="0;24" keyTimes="0;1" keySplines="0.1,0.2,0.3,1" calcMode="spline" repeatCount="indefinite"></animate><animate attributeName="stroke-opacity" begin="0s" dur="2s" values=".2;1;.2;0" repeatCount="indefinite"></animate></circle><circle cx="32" cy="32" r="19.5595"><animate attributeName="r" begin="-1s" dur="2s" values="0;24" keyTimes="0;1" keySplines="0.1,0.2,0.3,1" calcMode="spline" repeatCount="indefinite"></animate><animate attributeName="stroke-opacity" begin="-1s" dur="2s" values=".2;1;.2;0" repeatCount="indefinite"></animate></circle></g></svg></ion-spinner></div>
 <script type="text/javascript">
 
 var job_id = API.getQueryString('jobId');
@@ -81,6 +85,7 @@ $(function(){
     if(!userInfo){
         getUserInfo();
     }else{
+        userInfo = JSON.parse(userInfo);
         if(userInfo.identity == "0"){
             $(".fot-btn").remove();
         }
@@ -111,6 +116,9 @@ function initJob(){
         },
         error:function(data){
             console.log(data);
+        },
+        complete:function(){
+            $('#showLoading').removeClass('active');
         }
     })
 }
@@ -129,6 +137,13 @@ function filter(a, b){
     }
     if(a=="sendTime"){
         return b?b:0;
+    }
+    if(a == "welfareTypes"){
+        var ws = "",b = JSON.parse(b);
+        b.forEach(function(item,i){
+            ws += '<span>'+API.filter.welfareTypes(item)+'</span>'
+        });
+        return ws;
     }
     return b;
 }
@@ -168,7 +183,7 @@ function getUserInfo(){
         data:JSON.stringify({"userId":user_id}),
         success:function(data){
             userInfo = data.data;
-            sessionStorage.setItem("userInfo",data.data);//全局缓存用户信息
+            sessionStorage.setItem("userInfo",JSON.stringify(data.data));//全局缓存用户信息
             if(userInfo.identity == "0"){
                 $(".fot-btn").remove();
             }

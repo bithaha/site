@@ -199,45 +199,87 @@ var API = {
         }
         return null
     },
+    data:{
+        wageLevel: [{"key": 1, "value": "2千以下" },
+                    {"key": 2, "value": "2千-4千"},
+                    {"key": 3, "value": "4千-6千"},
+                    {"key": 4, "value": "6千-8千"},
+                    {"key": 5, "value": "8千-1万"},
+                    {"key": 6, "value": "1万-1.5万"},
+                    {"key": 7, "value": "1.5万-2万"},
+                    {"key": 8, "value": "2万-3万"},
+                    {"key": 9, "value": "3万-4万"},
+                    {"key": 10, "value": "4万-5万"},
+                    {"key": 11, "value": "5万以上"}],
+        workTime: [{"key": 1, "value": "无经验" },
+                    {"key": 2, "value": "1-3年"},
+                    {"key": 3, "value": "3-5年"},
+                    {"key": 4, "value": "5-10年"},
+                    {"key": 5, "value": "10年以上"}],
+        reqEducation: [{"key": 1, "value": "博士" },
+                    {"key": 2, "value": "硕士"},
+                    {"key": 3, "value": "本科"},
+                    {"key": 4, "value": "大专"},
+                    {"key": 5, "value": "其它"}],
+        welfare:[{type: 1, name: "美女如云"},
+                 {type: 2, name: "餐补"},
+                 {type: 3, name: "住房补贴"},
+                 {type: 4, name: "包住"},
+                 {type: 5, name: "包食宿"},
+                 {type: 6, name: "五险一金"},
+                 {type: 7, name: "六险一金"},
+                 {type: 8, name: "话补"},
+                 {type: 9, name: "双休"},
+                 {type: 10, name: "年度旅游"},
+                 {type: 11, name: "带薪年假"},
+                 {type: 12, name: "专业团队"},
+                 {type: 13, name: "弹性工作制"},
+                 {type: 14, name: "期权"},
+                 {type: 15, name: "年终奖"},
+                 {type: 16, name: "公司氛围好"},
+                 {type: 17, name: "领导nice"},
+                 {type: 18, name: "年终分红"},
+                 {type: 19, name: "扁平管理"},
+                 {type: 20, name: "地铁周边"},
+                 {type: 20, name: "移动互联网"}]                       
+    },
     filter:{
         wageLevel:function(a){
-            result = "其它";
-            switch(a){
-                case "1": result = "2千以下";break;
-                case "2": result = "2千-4千";break;
-                case "3": result = "4千-6千";break;
-                case "4": result = "6千-8千";break;
-                case "5": result = "8千-1万";break;
-                case "6": result = "1万-1.5万";break;
-                case "7": result = "1.5万-2万";break;
-                case "8": result = "2万-3万";break;
-                case "9": result = "3万-4万";break;
-                case "10": result = "4万-5万";break;
-                case "11": result = "5万以上";break;
-            }
-            return result;
+            var result = "其它";
+            var item = API.data.wageLevel.find(function(b){
+                return b.key == a;
+            })
+            item && (result = item.value);return result;
         },
         workTime:function(a){
-            result = "其它";
-            switch(a){
-                case "1": result = "无经验";break;
-                case "2": result = "1-3年";break;
-                case "3": result = "3-5年";break;
-                case "4": result = "5-10年";break;
-                case "5": result = "10年以上";break;
-            }
-            return result;
+            var result = "其它";
+            var item = API.data.workTime.find(function(b){
+                return b.key == a;
+            })
+            item && (result = item.value);return result;
         },
         reqEducation:function(a){
-             result = "其它";
-            switch(a){
-                case "1": result = "博士";break;
-                case "2": result = "硕士";break;
-                case "3": result = "本科";break;
-                case "4": result = "大专";break;
-                case "5": result = "其它";break;
+            var result = "其它";
+            var item = API.data.reqEducation.find(function(b){
+                return b.key == a;
+            })
+            item && (result = item.value);return result;
+        },
+        jobDate:function(timestemp){
+            var d = new Date(timestemp),now = new Date();
+            if(d.getFullYear() == now.getFullYear() && d.getMonth() == now.getMonth()){
+                if(d.getDate() == now.getDate()){
+                    return "今天";
+                }else if(d.getDate() == now.getDate() - 1){
+                    return "昨天";
+                }else if(d.getDate() == now.getDate() - 2){
+                    return "前天";
+                }
             }
-            return result;
+            return d.Format("MM-dd");
+        },
+        welfareTypes:function(type){
+            return API.data.welfare.find(function(item){ return item.type==type;}).name;
         }
     }
 }
@@ -291,3 +333,4 @@ $(document).ready(function(){
     })
     
 });
+
