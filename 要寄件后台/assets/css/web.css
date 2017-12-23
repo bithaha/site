@@ -137,3 +137,4 @@ body{background: #f3f3f5;font-size: 18px;color:#535353;}
 .ico-miandan{background-image: url(../img/web/miandan.png);}
 .miandan_head .det .tit{margin-bottom: 20px;font-size: 20px;}
 .miandan_head:after{content: "";display: block;clear: both;}
+.miandan_head .desc{line-height: 30px;}
