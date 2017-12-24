@@ -11,9 +11,9 @@
     <link href="../assets/favicon.ico" rel="shortcut icon" type="image/x-icon" />
     <link href="../assets/favicon.ico" rel="apple-touch-icon-precomposed" />
     <title>要寄件分站管理系统</title>
+    <link href="../plugins/datetimepicker/jquery.datetimepicker.css" rel="stylesheet">
     <link href="../plugins/bootstrap/bootstrap.css" rel="stylesheet">
-    <link href="../assets/css/base.css" rel="stylesheet">
-    <link href="../assets/css/web.css" rel="stylesheet">
+    <link href="../assets/css/manage.css" rel="stylesheet">
 </head>
 
 <body>
@@ -51,16 +51,17 @@
 			<dl class="submenu">
 				<dd>
 					<a href="setting.html">个人设置</a>
-					<a href="account.html" class="active">账单信息</a>
-					<a href="record.html">提现申请记录</a>
+					<a href="account.html">账单信息</a>
+					<a href="record.html" class="active">提现申请记录</a>
 				</dd>
 			</dl>
 		</li>
 	</ul>
 </div>
 <div class="m_content">
+	
 	<div class="miandan_head">
-		<a class="btn btn-common" href="dianzimiandan_sq_1.html">立即提现</a>
+		<a class="btn btn-common" href="record_sq.html">立即提现</a>
 		<i class="icon ico-miandan"></i>
 		<div class="det">
 			<h3 class="tit">可提现金额（元）</h3>
@@ -72,44 +73,40 @@
 
 	<div class="table-container">
 		<div class="m-tit-bar">
-			<h3 class="title">账单列表</h3>
+			<h3 class="title">提现记录列表</h3>
 		</div>
 		<table class="table">
 			<thead>
 				<tr>
-					<td>订单号</td><td>用户信息</td><td>快递单号</td><td>快递公司</td><td>运费</td><td>支付渠道</td><td>申请时间</td><td>订单状态</td><td>操作</td>
+					<td>用户信息</td><td>提现账户</td><td>提现金额</td><td>申请时间</td><td>当前状态</td><td>操作</td>
 				</tr>
 			</thead>
 			<tbody>
 				<tr>
 					<td>
 						<div class="checkbox">
-					        <label><input type="checkbox"><em>98566656565</em></label>
+					        <label><input type="checkbox"><em></em></label>
 					    </div>
 					</td>
 					<td><span class="uimg"><img src="../assets/img/web/default_head.png"></span><span class="uname">理工大学呈贡校区</span></td>
-					<td>956565665</td>
-					<td>天天快递</td>
-					<td>22元</td>
-					<td>微信钱包</td>
-					<td>2017-11-30 11:22:22</td>
-					<td><i class="ico-tip"></i><span>未付款</span></td>
-					<td><a class="btn btn-default" href="order_detail.html">查看</a><a class="btn">删除</a></td>
+					<td>支付宝 5454654@qq.com</td>
+					<td>600.00元</td>
+					<td>2017-11-11 11:11:11</td>
+					<td><i class="ico-tip"></i><span>待审核</span></td>
+					<td><a class="btn btn-default">取消</a><a class="btn">删除</a></td>
 				</tr>
 				<tr>
 					<td>
 						<div class="checkbox">
-					        <label><input type="checkbox"><em>98566656565</em></label>
+					        <label><input type="checkbox"><em></em></label>
 					    </div>
 					</td>
 					<td><span class="uimg"><img src="../assets/img/web/default_head.png"></span><span class="uname">理工大学呈贡校区</span></td>
-					<td>956565665</td>
-					<td>天天快递</td>
-					<td>22元</td>
-					<td>微信钱包</td>
-					<td>2017-11-30 11:22:22</td>
-					<td><i class="ico-ok"></i><span>已付款</span></td>
-					<td><a class="btn btn-default" href="order_detail.html">查看</a><a class="btn">删除</a></td>
+					<td>支付宝 5454654@qq.com</td>
+					<td>600.00元</td>
+					<td>2017-11-11 11:11:11</td>
+					<td><i class="ico-tip"></i><span>待审核</span></td>
+					<td><a class="btn btn-default">取消</a><a class="btn">删除</a></td>
 				</tr>
 			</tbody>
 		</table>
@@ -131,9 +128,19 @@
 
 
     <script src="../plugins/jquery/jquery-1.11.3.min.js"></script>
+    <script src="../plugins/datetimepicker/jquery.datetimepicker.js"></script>
     <script src="../assets/js/base.js" type="text/javascript"></script>
     <script type="text/javascript">
-    
+    $(function () {
+    	$(".start-date").datetimepicker({
+    		timepicker:false,
+    		format:"Y-m-d"
+    	});
+    	$(".end-date").datetimepicker({
+    		timepicker:false,
+    		format:"Y-m-d"
+    	});
+    })
     </script>
 </body>
 

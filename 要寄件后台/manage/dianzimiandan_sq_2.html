@@ -6,15 +6,13 @@
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link href="../assetsfavicon.ico" rel="bookmark" type="image/x-icon" />
-    <link href="../assetsfavicon.ico" rel="icon" type="image/x-icon" />
-    <link href="../assetsfavicon.ico" rel="shortcut icon" type="image/x-icon" />
-    <link href="../assetsfavicon.ico" rel="apple-touch-icon-precomposed" />
+    <link href="../assets/favicon.ico" rel="bookmark" type="image/x-icon" />
+    <link href="../assets/favicon.ico" rel="icon" type="image/x-icon" />
+    <link href="../assets/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+    <link href="../assets/favicon.ico" rel="apple-touch-icon-precomposed" />
     <title>要寄件分站管理系统</title>
-    <link href="../plugins/datetimepicker/jquery.datetimepicker.css" rel="stylesheet">
     <link href="../plugins/bootstrap/bootstrap.css" rel="stylesheet">
-    <link href="../assets/css/base.css" rel="stylesheet">
-    <link href="../assets/css/web.css" rel="stylesheet">
+    <link href="../assets/css/manage.css" rel="stylesheet">
 </head>
 
 <body>
@@ -42,7 +40,7 @@
 			<dl class="submenu">
 				<dd>
 					<a href="users.html">用户管理</a>
-					<a href="dianzimiandan.html">点子面单管理</a>
+					<a href="dianzimiandan.html" class="active">点子面单管理</a>
 					<a href="order.html">订单管理</a>
 				</dd>
 			</dl>
@@ -53,48 +51,60 @@
 				<dd>
 					<a href="setting.html">个人设置</a>
 					<a href="account.html">账单信息</a>
-					<a href="record.html" class="active">提现申请记录</a>
+					<a href="record.html">提现申请记录</a>
 				</dd>
 			</dl>
 		</li>
 	</ul>
 </div>
 <div class="m_content">
-	
 	<div class="container_white">
-		<h3 class="title">申请提现</h3>
+		<h3 class="title">申请开通电子面单服务</h3>
 		<div class="m-tit-bar">
-			<h3 class="title">申请提现</h3>
+			<h3 class="title">申请开通</h3>
 		</div>
 		<table class="table-form">
 			<tr>
-				<th>账户类型</th>
-				<td><select class="form-control"><option>支付宝账户</option></select></td>
-				<td width="160"></td>
+				<th>服务商</th>
+				<td><img src="../assets/img/web/zto.png"></td>
 			</tr>
 			<tr>
-				<th>提现手续费</th>
-				<td>0.1%</td>
-				<td></td>
+				<th>开通面单年费</th>
+				<td>600元/年  <a class="btn btn-border pull-right">在线支付</a><span class="tip-red">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*请先支付年费，才能进行下一步操作</span></td>
 			</tr>
 			<tr>
-				<th>提现账户</th>
-				<td>302555656@qq.com</td>
-				<td><a class="btn btn-default" href="order_detail.html">修改</a><a class="btn">确认</a></td>
-			</tr>
+				<th>网点名称</th>
+				<td><input type="text" class="form-control" name=""></td>
 			</tr>
 			<tr>
-				<th>提现金额</th>
-				<td>500.00元</td>
-				<td><a class="btn btn-default" href="order_detail.html">修改</a><a class="btn">确认</a></td>
+				<th>负责人</th>
+				<td><input type="text" class="form-control" name=""></td>
+			</tr>
+			<tr>
+				<th>发货地址</th>
+				<td><select class="form-control"><option>湖北省</option></select><select class="form-control"><option>武汉市</option></select><select class="form-control"><option>武昌区</option></select><select class="form-control"><option>和平大大道</option></select><input type="text" class="form-control" name=""></td>
+			</tr>
+			<tr>
+				<th>联系电话</th>
+				<td><input type="text" class="form-control" name=""></td>
+			</tr>
+			<tr>
+				<th></th>
+				<td>
+					<div class="checkbox">
+				        <label><input type="checkbox"><em>阅读并同意</em></label>
+				        <a href="#">《要寄件调用电子面单协议》</a>
+				    </div>
+			    </td>
+			</tr>
+			<tr>
+				<td colspan="2" class="text-center"><a class="btn btn-save">提交</a><a class="btn btn-cancel">取消</a></td>
 			</tr>
 		</table>
-		<div style="height: 80px;"></div>
-		<div class="text-center">
-			<a class="btn btn-save">提现</a><a class="btn btn-cancel">返回</a>
-		</div>
 	</div>
 
+	
+	
 </div>
 
 
@@ -104,19 +114,9 @@
 
 
     <script src="../plugins/jquery/jquery-1.11.3.min.js"></script>
-    <script src="../plugins/datetimepicker/jquery.datetimepicker.js"></script>
     <script src="../assets/js/base.js" type="text/javascript"></script>
     <script type="text/javascript">
-    $(function () {
-    	$(".start-date").datetimepicker({
-    		timepicker:false,
-    		format:"Y-m-d"
-    	});
-    	$(".end-date").datetimepicker({
-    		timepicker:false,
-    		format:"Y-m-d"
-    	});
-    })
+    
     </script>
 </body>
 

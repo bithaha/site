@@ -6,15 +6,14 @@
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link href="../assetsfavicon.ico" rel="bookmark" type="image/x-icon" />
-    <link href="../assetsfavicon.ico" rel="icon" type="image/x-icon" />
-    <link href="../assetsfavicon.ico" rel="shortcut icon" type="image/x-icon" />
-    <link href="../assetsfavicon.ico" rel="apple-touch-icon-precomposed" />
+    <link href="../assets/favicon.ico" rel="bookmark" type="image/x-icon" />
+    <link href="../assets/favicon.ico" rel="icon" type="image/x-icon" />
+    <link href="../assets/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+    <link href="../assets/favicon.ico" rel="apple-touch-icon-precomposed" />
     <title>要寄件分站管理系统</title>
     <link href="../plugins/datetimepicker/jquery.datetimepicker.css" rel="stylesheet">
     <link href="../plugins/bootstrap/bootstrap.css" rel="stylesheet">
-    <link href="../assets/css/base.css" rel="stylesheet">
-    <link href="../assets/css/web.css" rel="stylesheet">
+    <link href="../assets/css/manage.css" rel="stylesheet">
 </head>
 
 <body>
@@ -43,7 +42,7 @@
 				<dd>
 					<a href="users.html">用户管理</a>
 					<a href="dianzimiandan.html">点子面单管理</a>
-					<a href="order.html">订单管理</a>
+					<a href="order.html" class="active">订单管理</a>
 				</dd>
 			</dl>
 		</li>
@@ -51,7 +50,7 @@
 			<a href="javascript:;"><i class="ico-menu ico-menu-3"></i><span>个人中心</span><i class="ico-arrow"></i></a>
 			<dl class="submenu">
 				<dd>
-					<a href="setting.html" class="active">个人设置</a>
+					<a href="setting.html">个人设置</a>
 					<a href="account.html">账单信息</a>
 					<a href="record.html">提现申请记录</a>
 				</dd>
@@ -62,55 +61,64 @@
 <div class="m_content">
 	
 	<div class="container_white">
-		<h3 class="title">个人设置</h3>
+		<h3 class="title">订单号：00001225522</h3>
 		<div class="m-tit-bar">
-			<h3 class="title">个人信息</h3>
+			<a href="javascript:;" class="btn">打印纸质面单</a>
+			<a href="javascript:;" class="btn">打印电子面单</a>
+			<h3 class="title">订单详情</h3>
 		</div>
 		<table class="table-form">
 			<tr>
-				<th>用户昵称</th>
+				<th>用户信息</th>
 				<td>
-					<span class="uname">理工大学呈贡校区</span>
+					<span class="uimg"><img src="../assets/img/web/default_head.png"></span><span class="uname">理工大学呈贡校区</span>
 				</td>
-				<td width="160"><a class="btn btn-border">修改</a><a class="btn">确认</a></td>
 			</tr>
 			<tr>
-				<th>用户头像</th>
-				<td>
-					<span class="uimg"><img src="../assets/img/web/default_head.png"></span>
-				</td>
-				<td width="160"><a class="btn btn-border">修改</a><a class="btn">确认</a></td>
+				<th>快递单号</th>
+				<td>9595989898989</td>
 			</tr>
 			<tr>
-				<th>详细地址</th>
-				<td>江西省&nbsp;&nbsp;南昌市&nbsp;&nbsp;新建区&nbsp;&nbsp;长征西路29号红谷十二庭</td>
+				<th>快递公司</th>
+				<td><select class="form-control"><option>申通快递</option></select></td>
+			</tr>
+			<tr>
+				<th>寄件信息</th>
+				<td>云南省&nbsp;&nbsp;大理市&nbsp;&nbsp;理工大学呈贡校区服务点&nbsp;&nbsp;15666666666</td>
+			</tr>
+			<tr>
+				<th>收件信息</th>
+				<td>云南省&nbsp;&nbsp;大理市&nbsp;&nbsp;理工大学呈贡校区服务点&nbsp;&nbsp;李小四&nbsp;&nbsp;15666666666</td>
+			</tr>
+			<tr>
+				<th>物品类型</th>
+				<td>日用品</td>
+			</tr>
+			<tr>
+				<th>物品重量</th>
+				<td><input type="text" value="1.2kg" class="form-control"></td>
+			</tr>
+			<tr>
+				<th>运费金额</th>
+				<td>18元</td>
+			</tr>
+			<tr>
+				<th>支付渠道</th>
+				<td>线下支付</td>
+			</tr>
+			<tr>
+				<th>申请时间</th>
+				<td>2017-11-30 12:22:12</td>
+			</tr>
+			<tr>
+				<th>订单状态</th>
+				<td><i class="ico-tip"></i><span>未支付</span></td>
+			</tr>
+			<tr>
+				<td colspan="2" class="text-center"><a class="btn btn-save">确定</a><a class="btn btn-cancel">返回</a></td>
 			</tr>
 		</table>
-		<div style="height: 80px;"></div>
-		<div class="m-tit-bar">
-			<h3 class="title">帐号信息</h3>
-		</div>
-		<table class="table-form">
-			<tr>
-				<th>绑定手机</th>
-				<td>158****2323</td>
-				<td width="160"><a class="btn btn-border">修改</a><a class="btn">确认</a></td>
-			</tr>
-			<tr>
-				<th>登录密码</th>
-				<td>********</td>
-				<td width="160"><a class="btn btn-border">修改</a><a class="btn">确认</a></td>
-			</tr>
-			<tr>
-				<th>第三方帐号绑定</th>
-				<td></td>
-				<td width="160"><a class="btn btn-border">修改</a><a class="btn">确认</a></td>
-			</tr>
-		</table>
-		<div style="height: 80px;"></div>
-		<div class="text-center">
-			<a class="btn btn-save">保存</a><a class="btn btn-cancel">返回</a>
-		</div>
+
 	</div>
 
 </div>
