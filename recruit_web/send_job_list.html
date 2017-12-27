@@ -105,7 +105,7 @@ function getJobs(opts){
                 for(var i in data.page.datas){
                     var job = data.page.datas[i];
                     jobs.push(job);
-                    $("#zpList").append('<a class="item" data-id="'+job.id+'"><h4 class="name">'+job.jobName+'</h4><div class="tags"><span class="color-red">'+API.filter.wageLevel(job.wageLevel)+'</span><span class="color-gray">'+job.jobType+'</span></div><div class="tags"><span>'+(job.city || "")+'</span><span>'+API.filter.workTime(job.workTime)+'</span><span>'+API.filter.reqEducation(job.reqEducation)+'</span><span class="senditem">'+(job.sendTime?job.sendTime:0)+'人投递</span></div><b class="btn-del">删除</b></a>');
+                    $("#zpList").append('<a class="item" data-id="'+job.id+'"><h4 class="name">'+job.jobName+'</h4><div class="tags"><span class="color-red">'+API.filter.wageLevel(job.wageLevel)+'</span><span class="color-gray">'+job.jobType+'</span></div><div class="tags"><span>'+(job.city || "")+'</span><span>'+API.filter.workTime(job.workTime)+'</span><span>'+API.filter.reqEducation(job.reqEducation)+'</span><span class="senditem">'+(job.sendTime?job.sendTime:0)+'人投递</span></div></a>');
                 }
                 /* 判空 */
                 if(jobs.length <= 0){

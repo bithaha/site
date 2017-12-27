@@ -41,16 +41,16 @@
                 <!-- Add Pagination -->
                 <div class="swiper-pagination"></div>
             </div>
-            <div class="menu-list clearfix">
-                <a class="item" href="javascript:;" data-type="UI"><i class="ico-menu ico-menu-1"></i><span>UI设计</span></a>
-                <a class="item" href="javascript:;" data-type="PHP"><i class="ico-menu ico-menu-2"></i><span>PHP</span></a>
-                <a class="item" href="javascript:;" data-type="JAVA"><i class="ico-menu ico-menu-3"></i><span>JAVA</span></a>
-                <a class="item" href="javascript:;" data-type="IOS"><i class="ico-menu ico-menu-4"></i><span>IOS</span></a>
-                <a class="item" href="javascript:;" data-type="ARCHITECT"><i class="ico-menu ico-menu-5"></i><span>架构师</span></a>
-                <a class="item" href="javascript:;" data-type="ANDROID"><i class="ico-menu ico-menu-6"></i><span>安卓</span></a>
-                <a class="item" href="javascript:;" data-type="PRODUCT"><i class="ico-menu ico-menu-7"></i><span>产品</span></a>
-                <a class="item" href="javascript:;" data-type="UED"><i class="ico-menu ico-menu-8"></i><span>UED</span></a>
-                <a class="item" href="javascript:;" data-type="OPERATION"><i class="ico-menu ico-menu-9"></i><span>运营</span></a>
+            <div class="menu-list clearfix" id="menuList">
+                <a class="item" href="javascript:;" data-type="UI"><img src="assets/images/menu-1.png"><span>UI设计</span></a>
+                <a class="item" href="javascript:;" data-type="PHP"><img src="assets/images/menu-2.png"><span>PHP</span></a>
+                <a class="item" href="javascript:;" data-type="JAVA"><img src="assets/images/menu-3.png"><span>JAVA</span></a>
+                <a class="item" href="javascript:;" data-type="IOS"><img src="assets/images/menu-4.png"><span>IOS</span></a>
+                <a class="item" href="javascript:;" data-type="ARCHITECT"><img src="assets/images/menu-5.png"><span>架构师</span></a>
+                <a class="item" href="javascript:;" data-type="ANDROID"><img src="assets/images/menu-6.png"><span>安卓</span></a>
+                <a class="item" href="javascript:;" data-type="PRODUCT"><img src="assets/images/menu-7.png"><span>产品</span></a>
+                <a class="item" href="javascript:;" data-type="UED"><img src="assets/images/menu-8.png"><span>UED</span></a>
+                <a class="item" href="javascript:;" data-type="OPERATION"><img src="assets/images/menu-9.png"><span>运营</span></a>
             </div>
             <div class="line-divider"></div>
             <div class="layout">
@@ -107,7 +107,7 @@ function getJobs(opts){
         success:function(res){
             if(res.isOk){
                 for(var i in res.page.datas){
-                    var item = res.page.datas[i];console.log(item)
+                    var item = res.page.datas[i];
                     jobs.push(item);
                     var str = '<a class="item" href="job_detail.html?jobId={{jobId}}">\
                                 <span class="right">\
@@ -174,7 +174,7 @@ function bannerInit(){
         data:JSON.stringify({"advNumbers":"4"}),
         success:function(data){
             if(data.isOk){
-                data.page.datas.forEach(function(item, i){
+                data.datas.forEach(function(item, i){
                     var href = "javascript:;";
                     if(item.advUrl){href = item.advUrl;}
                     $(".index-slider .swiper-wrapper").append('<div class="swiper-slide"><a href="'+href+'"><img src="'+item.imageUrl+'"></a></div>')
@@ -193,7 +193,30 @@ function bannerInit(){
         }
     })
 }
-
+/* 类型 */
+function jobTypeInit(){
+    $.ajax({
+        url: ROOT_CONFIG.domain + "/JobInfo/getJobTypes",
+        method: "post",
+        dataType: 'JSON',
+        contentType: "application/json; charset=utf-8",
+        data:JSON.stringify({"amount":"9"}),
+        success:function(data){
+            if(data.isOk){
+                $("#menuList").empty();
+                data.datas.forEach(function(item, i){
+                   $("#menuList").append('<a class="item" href="javascript:;" data-type="'+item.jobtypeKey+'"><img src="'+item.jobtypeImage+'"><span>'+item.jobtypeValue+'</span></a>')
+                });
+                
+            }else{
+                $.loading.show({template:data.opErrorMsg,duration:2000});
+            }
+        },
+        error:function(data){
+            $.loading.show({template:data.opErrorMsg,duration:2000});
+        }
+    })
+}
 function getUserInfo(){
 
 
@@ -229,7 +252,7 @@ function initMenus(data){
                     <li><a href="javascript:;" id="userId">'+data.data.nickName+'</a></li>\
                     <li class="divider"></li>\
                     '+ucenter+'\
-                    <li><a href="index.html"><i class="ico-exit"></i><span>退出</span></a></li>\
+                    <!--<li><a href="#"><i class="ico-exit"></i><span>退出</span></a></li>-->\
                 </ul>';
     $('.top-menu').html(menuHtml)
 }
@@ -246,9 +269,9 @@ function searchJob(){
 $(document).ready(function(){ 
 
 
-
-getJobs();
 bannerInit(); 
+jobTypeInit();
+getJobs();
 getUserInfo();
 
 }); 
@@ -271,7 +294,7 @@ $(function(){
             getJobs();
         })
     });
-    $(".menu-list a").click(function(){
+    $(".menu-list").on('click','a',function(){
         $(this).addClass('active').siblings().removeClass('active');
         jobType = $(this).data('type');
         resetJobs();

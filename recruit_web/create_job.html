@@ -34,7 +34,7 @@
                 <li class="item">
                     <h4 class="name">职位类型</h4>
                     <div class="det">
-                        <select class="select" name="jobType">
+                        <select class="select" name="jobType" id="jobType">
                             <option value="UI">UI</option>
                             <option value="PHP">PHP</option>
                             <option value="JAVA">JAVA</option>
@@ -115,6 +115,7 @@ var max = 4;/* 指定最多选择的福利个数 */
 
 
 $(function(){
+    jobTypeInit();
     initWelfareTypes();
 })
 
@@ -139,6 +140,30 @@ function initWelfareTypes(){
             $(this).addClass('active');
         }
         
+    })
+}
+/* 类型 */
+function jobTypeInit(){
+    $.ajax({
+        url: ROOT_CONFIG.domain + "/JobInfo/getJobTypes",
+        method: "post",
+        dataType: 'JSON',
+        contentType: "application/json; charset=utf-8",
+        data:JSON.stringify({"amount":"9"}),
+        success:function(data){
+            if(data.isOk){
+                $("#jobType").empty();
+                data.datas.forEach(function(item, i){
+                   $("#jobType").append('<option value="'+item.jobtypeKey+'">'+item.jobtypeValue+'</option>')
+                });
+                
+            }else{
+                $.loading.show({template:data.opErrorMsg,duration:2000});
+            }
+        },
+        error:function(data){
+            $.loading.show({template:data.opErrorMsg,duration:2000});
+        }
     })
 }
 

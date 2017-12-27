@@ -34,6 +34,7 @@
                         <span><i class="ico-addr"></i><em id="city">武汉市</em></span><span><i class="ico-time"></i><em id="workTime">1-3年</em></span><span><i class="ico-edu"></i><em id="reqEducation">大专</em></span>
                     </div>
                     <div class="fuli" id="welfareTypes"></div>
+                    <div class="status" id="status"></div>
                 </li>
                 <li class="item item-divider"></li>
                 <li class="item">
@@ -106,7 +107,7 @@ function initJob(){
                 }
                 for(var i in data.data){
                     if($("#"+i).length > 0){
-                        $("#"+i).html(filter(i,data.data[i]));
+                        $("#"+i).html(filter(i,data.data[i],data,data));
                     }
                 }
 
@@ -122,7 +123,7 @@ function initJob(){
         }
     })
 }
-function filter(a, b){
+function filter(a, b, o){
     if(a=="wageLevel"){
         return API.filter.wageLevel(b);
     }
@@ -144,6 +145,11 @@ function filter(a, b){
             ws += '<span>'+API.filter.welfareTypes(item)+'</span>'
         });
         return ws;
+    }
+    if(a == "status" && o.userId == user_id){
+        return b == "Y"?'<span class="color-green">审核通过</span>':b == "N"?'<span class="color-orange">待审核</span>':b == "C"? '<span class="color-red">审核不通过</span>':""
+    }else if(a == "status" && o.userId != user_id){
+        return "";
     }
     return b;
 }

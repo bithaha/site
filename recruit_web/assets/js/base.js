@@ -1,5 +1,5 @@
 var ROOT_CONFIG = {
-    domain: "http://www.meyur.cn/meyur"
+    domain: "http://www.meyur.cn"
 }
 
 /* rem布局，
@@ -241,7 +241,14 @@ var API = {
                  {type: 18, name: "年终分红"},
                  {type: 19, name: "扁平管理"},
                  {type: 20, name: "地铁周边"},
-                 {type: 20, name: "移动互联网"}]                       
+                 {type: 21, name: "移动互联网"}],
+        companyScale: [{"key":1,"value":"少于50人"},
+                       {"key":2,"value":"50-150人"},
+                       {"key":3,"value":"150-500人"},
+                       {"key":4,"value":"500-1000人"},
+                       {"key":5,"value":"1000-5000人"},
+                       {"key":6,"value":"5000-10000人"},
+                       {"key":7,"value":"10000人以上"},]                  
     },
     filter:{
         wageLevel:function(a){
@@ -330,7 +337,11 @@ $(document).ready(function(){
                 $('.menu-cover').remove();
             })
         }
-    })
+    });
+	/* 通用拦截 */
+	if(!API.getQueryString("id") && !sessionStorage.getItem("user_id")){
+		location.href="https://open.weixin.qq.com/connect/oauth2/authorize?appid=wxce4fd3757ef3a868&redirect_uri=http%3a%2f%2fwww.meyur.cn%2fWechatRedirectServlet%2flogin&response_type=code&scope=snsapi_userinfo&state=STATE#wechat_redirect";
+	}
     
 });
 
