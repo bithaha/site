@@ -52,7 +52,7 @@ body{background: #f3f3f5;font-size: 18px;color:#535353;}
 
 
 /* 左侧菜单 */
-.sitbar{position: fixed;width: 240px;left: 0;top: 0;bottom:0;background: #487dcd;z-index: 99;}
+.sitbar{position: fixed;width: 240px;left: 0;top: 0;bottom:0;background: #487dcd;z-index: 99; overflow: auto;}
 .sitbar .logo{width: 100%;padding: 25px 0 20px; text-align: center;border-bottom: 2px solid #4377c8;}
 .sitbar .menu{border-top:2px solid #5186d6;}
 .sitbar .menu li{}
@@ -65,6 +65,10 @@ body{background: #f3f3f5;font-size: 18px;color:#535353;}
 .ico-menu-1{background-position: 0 0;}
 .ico-menu-2{background-position: 0 -1.5em;}
 .ico-menu-3{background-position: 0 -3em;}
+.ico-menu-4{background-position: 0 -12em;}
+.ico-menu-5{background-position: 0 -13.5em;}
+.ico-menu-6{background-position: 0 -15em;}
+.ico-menu-7{background-position: 0 -16.5em;}
 
 .sitbar .submenu{background: #356dc2;}
 .sitbar .menu li .submenu a{padding-left: 70px;opacity: .7;}
@@ -193,6 +197,8 @@ a.btn-save:hover{opacity: .9;color:#fff;}
 .table-form{width: 100%;}
 .table-form td{padding: 15px;line-height: 30px;}
 .table-form th{padding: 15px 0;line-height:30px;width:110px;font-weight: normal;vertical-align: top;}
+.table-form td,.table-form th{border-bottom: 1px solid #eee;}
+.table-form thead td{color:#356dc2;}
 .table-form .form-control{width:340px;display: inline-block;border-radius:0;}
 .table-form select.form-control{margin: 0 10px 10px 0;}
 .table-form .tip-red{color:#ff0000;}
