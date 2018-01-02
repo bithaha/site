@@ -47,7 +47,22 @@ body{background: #f3f3f5;font-size: 18px;color:#535353;}
 .btn-common,a.btn-common{height: 50px;line-height: 50px;background:#356dc2;font-size: 20px;color:#fff;padding:0 20px;border-radius:0;}
 .btn-common:hover,a.btn-common:hover{color:#fff;opacity: .9;}
 
-
+/* 字体 */
+@font-face {
+  font-family: 'iconfont';  /* project id 523534 */
+  src: url('//at.alicdn.com/t/font_523534_xwaczqxlg32z9f6r.eot');
+  src: url('//at.alicdn.com/t/font_523534_xwaczqxlg32z9f6r.eot?#iefix') format('embedded-opentype'),
+  url('//at.alicdn.com/t/font_523534_xwaczqxlg32z9f6r.woff') format('woff'),
+  url('//at.alicdn.com/t/font_523534_xwaczqxlg32z9f6r.ttf') format('truetype'),
+  url('//at.alicdn.com/t/font_523534_xwaczqxlg32z9f6r.svg#iconfont') format('svg');
+}
+.iconfont{
+    font-family:"iconfont" !important;
+    font-size:16px;font-style:normal;
+    -webkit-font-smoothing: antialiased;
+    -webkit-text-stroke-width: 0.2px;
+    -moz-osx-font-smoothing: grayscale;
+}
 
 
 

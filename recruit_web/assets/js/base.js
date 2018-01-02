@@ -339,7 +339,7 @@ $(document).ready(function(){
         }
     });
 	/* 通用拦截 */
-	if(!API.getQueryString("id") && !sessionStorage.getItem("user_id")){
+	if(!API.getQueryString("id") && !sessionStorage.getItem("user_id") && location.href.indexOf('job_detail')<=-1){
 		location.href="https://open.weixin.qq.com/connect/oauth2/authorize?appid=wxce4fd3757ef3a868&redirect_uri=http%3a%2f%2fwww.meyur.cn%2fWechatRedirectServlet%2flogin&response_type=code&scope=snsapi_userinfo&state=STATE#wechat_redirect";
 	}
     

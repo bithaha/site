@@ -2,7 +2,7 @@
 <html>
 <head>
 <meta charset="utf8">
-<title>职位详情</title>
+<title>美约人才 职位详情</title>
 <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no">
 <meta name="format-detection" content="telephone=no">
 <meta name="apple-mobile-web-app-capable" content="yes">
@@ -34,7 +34,7 @@
                         <span><i class="ico-addr"></i><em id="city">武汉市</em></span><span><i class="ico-time"></i><em id="workTime">1-3年</em></span><span><i class="ico-edu"></i><em id="reqEducation">大专</em></span>
                     </div>
                     <div class="fuli" id="welfareTypes"></div>
-                    <div class="status" id="status"></div>
+                    <div class="status" id="status" style="display: none;"></div>
                 </li>
                 <li class="item item-divider"></li>
                 <li class="item">
@@ -75,6 +75,17 @@
 
 
 <div class="poster-loading posterShowLoading active" id="showLoading"><ion-spinner icon="ripple" class="inner spinner-assertive spinner spinner-ripple"><svg viewBox="0 0 64 64"><g fill="none" fill-rule="evenodd" stroke-width="3"><circle cx="32" cy="32" r="23.9964"><animate attributeName="r" begin="0s" dur="2s" values="0;24" keyTimes="0;1" keySplines="0.1,0.2,0.3,1" calcMode="spline" repeatCount="indefinite"></animate><animate attributeName="stroke-opacity" begin="0s" dur="2s" values=".2;1;.2;0" repeatCount="indefinite"></animate></circle><circle cx="32" cy="32" r="19.5595"><animate attributeName="r" begin="-1s" dur="2s" values="0;24" keyTimes="0;1" keySplines="0.1,0.2,0.3,1" calcMode="spline" repeatCount="indefinite"></animate><animate attributeName="stroke-opacity" begin="-1s" dur="2s" values=".2;1;.2;0" repeatCount="indefinite"></animate></circle></g></svg></ion-spinner></div>
+
+<script src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js" type="text/javascript"></script>
+<script type="text/javascript">
+    var wxShare = {
+        init:function(){
+            weshareInit();
+        }
+    }
+</script>
+<script src="assets/js/wx_share.js"></script>
+
 <script type="text/javascript">
 
 var job_id = API.getQueryString('jobId');
@@ -105,11 +116,14 @@ function initJob(){
                 if(data.data.userId == user_id){
                     $(".fot-btn").remove();
                 }
+                wxShare.title = data.data.jobName+"_美约人才";
+                wxShare.init();
                 for(var i in data.data){
                     if($("#"+i).length > 0){
                         $("#"+i).html(filter(i,data.data[i],data,data));
                     }
                 }
+
 
             }else{
 
@@ -188,6 +202,9 @@ function getUserInfo(){
         contentType: "application/json; charset=utf-8",
         data:JSON.stringify({"userId":user_id}),
         success:function(data){
+            if(data.isOk){
+                $('#status').show();
+            }
             userInfo = data.data;
             sessionStorage.setItem("userInfo",JSON.stringify(data.data));//全局缓存用户信息
             if(userInfo.identity == "0"){
