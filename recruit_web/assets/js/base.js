@@ -200,7 +200,8 @@ var API = {
         return null
     },
     data:{
-        wageLevel: [{"key": 1, "value": "2千以下" },
+        wageLevel: [{"key": 0, "value": "保密" },
+                    {"key": 1, "value": "2千以下" },
                     {"key": 2, "value": "2千-4千"},
                     {"key": 3, "value": "4千-6千"},
                     {"key": 4, "value": "6千-8千"},
@@ -340,7 +341,7 @@ $(document).ready(function(){
     });
 	/* 通用拦截 */
 	if(!API.getQueryString("id") && !sessionStorage.getItem("user_id") && location.href.indexOf('job_detail')<=-1){
-		location.href="https://open.weixin.qq.com/connect/oauth2/authorize?appid=wxce4fd3757ef3a868&redirect_uri=http%3a%2f%2fwww.meyur.cn%2fWechatRedirectServlet%2flogin&response_type=code&scope=snsapi_userinfo&state=STATE#wechat_redirect";
+		//location.href="https://open.weixin.qq.com/connect/oauth2/authorize?appid=wxce4fd3757ef3a868&redirect_uri=http%3a%2f%2fwww.meyur.cn%2fWechatRedirectServlet%2flogin&response_type=code&scope=snsapi_userinfo&state=STATE#wechat_redirect";
 	}
     
 });

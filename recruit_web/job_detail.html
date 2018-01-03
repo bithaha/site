@@ -165,6 +165,9 @@ function filter(a, b, o){
     }else if(a == "status" && o.userId != user_id){
         return "";
     }
+    if(a == "jobDescribe"){
+        return b.replace(/\n/g,'<br />').replace(/\r/g,'<br />');
+    }
     return b;
 }
 
