@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+    <title>实名认证</title>
+    <link href="../assets/favicon.ico" rel="bookmark" type="image/x-icon" />
+    <link href="../assets/favicon.ico" rel="icon" type="image/x-icon" />
+    <link href="../assets/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+    <link href="../assets/favicon.ico" rel="apple-touch-icon-precomposed" />
+    <link href="../assets/css/wap.css" rel="stylesheet">
+    <script src="../assets/js/base.js" type="text/javascript"></script>
+</head>
+<body>
+	<div class="header">
+        <a class="btn-left" href="javascript:history.back();"><i class="ico-back"></i></a>
+        <h3 class="title">实名认证</h3>
+        <a class="btn-right" href="javascript:;"></a>
+    </div>
+    <div class="content has-footer">
+    	<div class="line"></div>
+    	<div class="shiming-head">
+    		<div class="img"><img src="../assets/img/web/ico-card.png"></div>
+    		<div class="det">
+    			<h3>实名认证</h3>
+    			<p>仅支持中国居民身份证进行实名认证</p>
+    		</div>
+    	</div>
+    	<div class="line"></div>
+    	<div class="list reg-form shiming-form">
+            <div class="item">
+                <label>真实姓名</label>
+                <input type="text" class="txt" value="" placeholder="请填写身份证姓名">
+            </div>
+            <div class="item">
+                <label>身份证号</label>
+                <input type="text" class="txt" value="" placeholder="请填写18位身份证号">
+            </div>
+            <div class="item">
+            	<div class="sfz-card">
+            		<h3>身份证 正面</h3>
+            		<div class="btn-upload">
+            			<input type="file" name="">
+            			<i class="icon"></i>
+            			<span>点击上传证件照</span>
+            			<img src="">
+            		</div>
+            	</div>
+            	<div class="sfz-card">
+            		<h3>身份证 反面</h3>
+            		<div class="btn-upload">
+            			<input type="file" name="">
+            			<i class="icon"></i>
+            			<span>点击上传证件照</span>
+            			<img src="">
+            		</div>
+            	</div>
+            </div>
+        </div>
+        <div class="tips">每张最大3M，仅支持jpg / jpeg / png格式</div>
+    </div>
+    <div class="footer-bar">
+    	<a class="btn btn-common" href="javascript:;">提交</a>
+    </div>
+
+<script type="text/javascript" src="../assets/js/jquery.min.js"></script>
+<script type="text/javascript">
+$(function(){
+	$(".btn-upload input[type='file']").change(function(){
+		var _this = this;
+		var reader = new FileReader();
+		reader.onloadend = function(e) {  
+			$(_this).parent().find('img').attr('src',e.target.result);
+		}
+		reader.readAsDataURL(_this.files[0]);
+		
+	})
+})
+	
+</script>
+</body>
+</html>
