@@ -37,13 +37,13 @@ img[src=""]{opacity: 0;}
 }
 
 .list{}
-.list .item{padding:.4rem 0.7rem;display: block; position: relative;border-bottom: 1px solid #eee;}
+.list .item{padding: .5rem;display: block; position: relative;border-bottom: 1px solid #eee;background: #fff;}
 .list .item-divider{background-color: #f4f4f4;padding: .2rem 0;}
 .list .item-link{}
-.list .item-link .arrow-left{font-size: .7rem;position: absolute;left: .35rem;top:50%;margin-top: -.35rem;}
-.list .item-link .arrow-right{font-size: 1rem;position: absolute;right: .35rem;top:50%;margin-top: -.5rem;color: #ccc;}
-.list .item-link .arrow-left + .txt{padding-left: 1.4rem;}
-.list a.item:active{background-color: #f4f4f4;}
+.list .item-link .arrow-left{font-size: .6rem;position: absolute;left: .35rem;top:50%;margin-top: -.3rem;}
+.list .item-link .arrow-right{font-size: .6rem;position: absolute;right: .35rem;top:50%;margin-top: -.3rem;color: #ccc;}
+.list .item-link .arrow-left + .txt{padding-left: .5rem;}
+.list .item:active{background-color: #f4f4f4;}
 
 
 .header{position: fixed;width: 100%;top:0;left: 0;z-index: 100;height: 1.44rem;line-height: 1.44rem;background-color: #fff;color: #000;}
@@ -71,7 +71,7 @@ img[src=""]{opacity: 0;}
 .shiming-head .det p{font-size: .34rem;color:#999;}
 .shiming-form{background: #fff;}
 
-.reg-form .item {padding-left: .7rem;padding-right: .7rem;display: -webkit-box;display: -webkit-flex;display: -moz-box;display: -moz-flex; display: -ms-flexbox; display: flex;}
+.reg-form .item {padding-left: .5rem;padding-right: .5rem;display: -webkit-box;display: -webkit-flex;display: -moz-box;display: -moz-flex; display: -ms-flexbox; display: flex;}
 .reg-form .tit { font-weight: normal; white-space: nowrap; margin: 0;}
 .reg-form .txt { border: 0; width: 100%; padding-left: .6rem; text-align: right;}
 
@@ -118,3 +118,11 @@ img[src=""]{opacity: 0;}
 .xieyi-container .body{background: #fff;padding: .5rem;line-height: 1.5;font-size: .4rem;color:#585c64;}
 .xieyi-container .body h3{text-align: center;font-weight:normal;font-size: .44rem;color:#000;margin-bottom: .2rem;}
 .xieyi-container .body p{text-indent: .8rem;}
+
+
+/*-----------*/
+.ico-wangdian,.ico-ji,.ico-shou{background-image: url(../img/web/sprites-60x60.png);background-size: 100% auto;}
+.ico-ji{background-position: 0 -1.5em;}
+.ico-shou{background-position: 0 -3em;}
+.ico-arrow{background-image: url(../img/web/arrow_r_g.png);}
+.info-list{}
