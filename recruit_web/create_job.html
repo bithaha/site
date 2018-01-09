@@ -51,6 +51,7 @@
                     <h4 class="name">工资标准</h4>
                     <div class="det">
                         <select class="select" name="wageLevel">
+                            <option value="-1">面议</option>
                             <option value="0">保密</option>
                             <option value="1">2千以下</option>
                             <option value="2">2千-4千</option>
@@ -93,7 +94,7 @@
                 <li class="item">
                     <h4 class="name">工作省市</h4>
                     <div class="det">
-                        <select class="select" id="province" name="province" style="width:48%;"></select><select class="select" id="city" name="city" style="width:48%;margin-left: 4%;"></select>
+                        <select class="select" id="province" name="jobProvince" style="width:48%;"></select><select class="select" id="city" name="jobCity" style="width:48%;margin-left: 4%;"></select>
                     </div>
                 </li>
                 <li class="item">
@@ -165,7 +166,7 @@ function jobTypeInit(){
         method: "post",
         dataType: 'JSON',
         contentType: "application/json; charset=utf-8",
-        data:JSON.stringify({"amount":"9"}),
+        data:JSON.stringify({"amount":"18"}),
         success:function(data){
             if(data.isOk){
                 $("#jobType").empty();

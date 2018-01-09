@@ -16,7 +16,7 @@
 <body>
 
     <div class="header">
-        <a class="btn-left" href="javascript:history.back();"><i class="ico-back"></i></a>
+        <a class="btn-left" onclick="goback()"><i class="ico-back"></i></a>
         <h3 class="title">
             职位详情
         </h3>
@@ -31,7 +31,7 @@
                         <span class="color-red" id="wageLevel">4千-8千</span><span class="color-gray" id="jobType">全职</span>
                     </div>
                     <div class="tags">
-                        <span><i class="ico-addr"></i><em id="city">武汉市</em></span><span><i class="ico-time"></i><em id="workTime">1-3年</em></span><span><i class="ico-edu"></i><em id="reqEducation">大专</em></span>
+                        <span><i class="ico-addr"></i><em id="jobCity">武汉市</em></span><span><i class="ico-time"></i><em id="workTime">1-3年</em></span><span><i class="ico-edu"></i><em id="reqEducation">大专</em></span>
                     </div>
                     <div class="fuli" id="welfareTypes"></div>
                     <div class="status" id="status" style="display: none;"></div>
@@ -93,12 +93,28 @@ var user_id = sessionStorage.getItem("user_id");
 var userInfo = sessionStorage.getItem("userInfo");
 
 $(function(){
+    if(!job_id){
+        job_id = sessionStorage.getItem("job_id");
+    }else{
+        sessionStorage.setItem("job_id",job_id);
+    }
+    if(!user_id){
+        user_id = API.getQueryString("userId");
+        if(user_id){
+            send();
+        }
+    }
+
+    
+
+
+    initGuanzhu();
     initJob();
     if(!userInfo){
         getUserInfo();
     }else{
         userInfo = JSON.parse(userInfo);
-        if(userInfo.identity == "0"){
+        if(userInfo && userInfo.identity == "0"){
             $(".fot-btn").remove();
         }
     }
@@ -173,6 +189,10 @@ function filter(a, b, o){
 
 /* 投递简历 */
 function send(){
+    if(!user_id){
+        window.open("https://open.weixin.qq.com/connect/oauth2/authorize?appid=wxce4fd3757ef3a868&redirect_uri=http%3a%2f%2fwww.meyur.cn%2fwechatlogin%2flogin&response_type=code&scope=snsapi_userinfo&state=STATE#wechat_redirect");return;
+    }
+
     $.loading.show({"text":"投递中..."});
     $.ajax({
         url: ROOT_CONFIG.domain + "/Resume/send",
@@ -207,12 +227,13 @@ function getUserInfo(){
         success:function(data){
             if(data.isOk){
                 $('#status').show();
+                userInfo = data.data;
+                sessionStorage.setItem("userInfo",JSON.stringify(data.data));//全局缓存用户信息
+                if(userInfo.identity == "0"){
+                    $(".fot-btn").remove();
+                }
             }
-            userInfo = data.data;
-            sessionStorage.setItem("userInfo",JSON.stringify(data.data));//全局缓存用户信息
-            if(userInfo.identity == "0"){
-                $(".fot-btn").remove();
-            }
+            
             console.log(data);
         },
         error:function(data){

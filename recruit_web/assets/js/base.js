@@ -200,7 +200,8 @@ var API = {
         return null
     },
     data:{
-        wageLevel: [{"key": 0, "value": "保密" },
+        wageLevel: [{"key": -1, "value": "面议" },
+                    {"key": 0, "value": "保密" },
                     {"key": 1, "value": "2千以下" },
                     {"key": 2, "value": "2千-4千"},
                     {"key": 3, "value": "4千-6千"},
@@ -340,9 +341,53 @@ $(document).ready(function(){
         }
     });
 	/* 通用拦截 */
-	if(!API.getQueryString("id") && !sessionStorage.getItem("user_id") && location.href.indexOf('job_detail')<=-1){
-		//location.href="https://open.weixin.qq.com/connect/oauth2/authorize?appid=wxce4fd3757ef3a868&redirect_uri=http%3a%2f%2fwww.meyur.cn%2fWechatRedirectServlet%2flogin&response_type=code&scope=snsapi_userinfo&state=STATE#wechat_redirect";
+	if(!API.getQueryString("id") && !sessionStorage.getItem("user_id") && location.href.indexOf('job_detail')<=-1 && location.href.indexOf('resume_list_detail')<=-1){
+		location.href="https://open.weixin.qq.com/connect/oauth2/authorize?appid=wxce4fd3757ef3a868&redirect_uri=http%3a%2f%2fwww.meyur.cn%2fWechatRedirectServlet%2flogin&response_type=code&scope=snsapi_userinfo&state=STATE#wechat_redirect";
 	}
     
 });
 
+function goback(){
+    var checkJobDetail = function(){
+        if(document.referrer == '' && location.href.indexOf('job_detail') > -1){
+            window.location.href = "index.html";
+        }else{
+            window.history.go( -1 );
+        }
+    }
+    if ((navigator.userAgent.indexOf('MSIE') >= 0) && (navigator.userAgent.indexOf('Opera') < 0)){ // IE
+        if(history.length > 0){
+            checkJobDetail();
+        }else{
+            window.location.href = "index.html";
+        }
+    }else{ //非IE浏览器
+        if (navigator.userAgent.indexOf('Firefox') >= 0 ||
+            navigator.userAgent.indexOf('Opera') >= 0 ||
+            navigator.userAgent.indexOf('Safari') >= 0 ||
+            navigator.userAgent.indexOf('Chrome') >= 0 ||
+            navigator.userAgent.indexOf('WebKit') >= 0){
+
+            if(window.history.length > 1){
+                checkJobDetail();
+            }else{
+                window.location.href = "index.html";
+            }
+        }else{ //未知的浏览器
+            checkJobDetail();
+        }
+    }
+}
+function initGuanzhu(){
+    var guanzhu = '<div class="wx-guanzhu">\
+                    <img src="http://www.meyur.cn/recruit_web/assets/images/meiyue_logo.jpg">\
+                    <div class="det">\
+                        <p>微信关注美约人才</p>\
+                        <p>获取全国企业招聘信息</p>\
+                    </div>\
+                    <a class="btn" href="https://mp.weixin.qq.com/mp/profile_ext?action=home&__biz=MzU5OTAyMDU2Nw==&scene=124#wechat_redirect">关注</a>\
+                </div>'
+    if($('.wx-guanzhu').length <= 0){
+        $('body').addClass('has-guanzhu').append(guanzhu);
+    }
+}

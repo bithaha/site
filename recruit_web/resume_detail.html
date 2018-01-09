@@ -33,6 +33,10 @@
                     <label>姓名：</label>
                     <div class="det" id="username">张子欣</div>
                 </div>
+                <div class="frow">
+                    <label>性别：</label>
+                    <div class="det" id="sex">女</div>
+                </div>
         		<div class="frow">
         			<label>联系方式：</label>
         			<div class="det" id="phoneNumber">13254869945</div>
@@ -81,6 +85,7 @@ function initResume(){
             if(data.isOk){
                 var resume = data.datas[0];
                 $("#username").html(resume.username);
+                $("#sex").html(resume.sex);
                 $("#phoneNumber").html(resume.phoneNumber);
                 $("#education").html(resume.education);
                 $("#school").html(resume.school);

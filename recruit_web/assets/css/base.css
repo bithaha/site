@@ -82,7 +82,7 @@ i{width: 1em;height: 1em;display: inline-block;}
 .line-divider{padding: .2rem .7rem;background-color: #f4f4f4;}
 .menu-list{background-color: #fff;font-size:0;}
 .menu-list .item{display: inline-block;font-size: .6rem;vertical-align: top;width: 11.11111%;padding: .3rem .1rem; text-align: center;}
-.menu-list .item span{display: block;font-size: .4rem;}
+.menu-list .item span{display: block;font-size: .38rem;margin-top: .3rem;line-height: 1.2;}
 .menu-list .item:active,.menu-list .item.active{background-color: #f4f4f4;}
 .menu-list .ico-menu{font-size:1.2rem;width: 1em;height: 1em;display: inline-block;background-repeat: no-repeat;background-size: auto 100%;background-image: url(../images/sprites.png); vertical-align: top;}
 .menu-list .ico-menu-1{background-position: 0 0;}
@@ -351,11 +351,11 @@ i{width: 1em;height: 1em;display: inline-block;}
     stroke: #ef473a;
     fill: #ef473a;
 }
-.poster-loading .spinner svg{
-    width: 50px;
-    height: 50px;
-}
-.poster-loading.active{
-    opacity: 1;
-    visibility: visible;
-}
+.poster-loading .spinner svg{width: 50px; height: 50px;}
+.poster-loading.active{opacity: 1; visibility: visible;}
+
+body.has-guanzhu{padding-bottom: 3rem;}
+.wx-guanzhu{background:#fff;z-index:999;position: fixed;width: 100%;bottom:0;left: 0;padding: .5rem;border-top:1px solid #eee;}
+.wx-guanzhu img{width: 2rem;height: 2rem;float: left;}
+.wx-guanzhu .det{margin-left: 2.5rem;color:#999;padding-top:.2rem;}
+.wx-guanzhu .btn{position: absolute;right: .5rem;top: 50%;line-height: 1rem;margin-top: -.5rem;padding:0 .5rem;border:1px solid #0b5ab9;color: #0b5ab9;border-radius: 3px;}

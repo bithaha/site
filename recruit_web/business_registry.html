@@ -84,7 +84,7 @@
                 <li class="item">
                     <h4 class="name">所在省市</h4>
                     <div class="det">
-                        <input type="text" name="companyCity" readonly="readonly" id="city">
+                        <select class="select" id="province" name="companyProvince" style="width:48%;"></select><select class="select" id="city" name="companyCity" style="width:48%;margin-left: 4%;"></select>
                     </div>
                 </li>
                 <li class="item">
@@ -128,7 +128,7 @@
     </div>
     <script src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js" type="text/javascript"></script>
 <script src="assets/js/wx_share.js"></script>
-<script type="text/javascript" src="assets/js/city-select.js"></script>
+<script src="assets/js/area.js"></script>
 <script type="text/javascript">
 var user_id = API.getQueryString("user_id");
 
@@ -136,12 +136,7 @@ $(function(){
     var phoneReg = new RegExp(/\d{11}/),emailReg = new RegExp(/^\w+([-+.]\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*$/);
 
     /* 城市选择 */
-    $("#city").click(function(){
-        var _this = this;
-        $.city().then(function(city){
-            $(_this).val(city);
-        });
-    })
+    _init_area();
     $('#submit').click(function(){
         var pass = true,params = {};
         params.userId = user_id;

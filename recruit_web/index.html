@@ -51,6 +51,15 @@
                 <a class="item" href="javascript:;" data-type="PRODUCT"><img src="assets/images/menu-7.png"><span>产品</span></a>
                 <a class="item" href="javascript:;" data-type="UED"><img src="assets/images/menu-8.png"><span>UED</span></a>
                 <a class="item" href="javascript:;" data-type="OPERATION"><img src="assets/images/menu-9.png"><span>运营</span></a>
+                <a class="item" href="javascript:;" data-type="UI"><img src="assets/images/menu-1.png"><span>UI设计</span></a>
+                <a class="item" href="javascript:;" data-type="PHP"><img src="assets/images/menu-2.png"><span>PHP</span></a>
+                <a class="item" href="javascript:;" data-type="JAVA"><img src="assets/images/menu-3.png"><span>JAVA</span></a>
+                <a class="item" href="javascript:;" data-type="IOS"><img src="assets/images/menu-4.png"><span>IOS</span></a>
+                <a class="item" href="javascript:;" data-type="ARCHITECT"><img src="assets/images/menu-5.png"><span>架构师</span></a>
+                <a class="item" href="javascript:;" data-type="ANDROID"><img src="assets/images/menu-6.png"><span>安卓</span></a>
+                <a class="item" href="javascript:;" data-type="PRODUCT"><img src="assets/images/menu-7.png"><span>产品</span></a>
+                <a class="item" href="javascript:;" data-type="UED"><img src="assets/images/menu-8.png"><span>UED</span></a>
+                <a class="item" href="javascript:;" data-type="OPERATION"><img src="assets/images/menu-9.png"><span>运营</span></a>
             </div>
             <div class="line-divider"></div>
             <div class="layout">
@@ -104,7 +113,7 @@ function getJobs(opts){
         method: "post",
         dataType: 'JSON',
         contentType: "application/json; charset=utf-8",
-        data:JSON.stringify({"city": city,"jobType": jobType,"pageSize":jobs_pageSize.toString(),"curPage":jobs_curPage.toString(),"jobOrCompany":keywords}),
+        data:JSON.stringify({"jobCity": city,"jobType": jobType,"pageSize":jobs_pageSize.toString(),"curPage":jobs_curPage.toString(),"jobOrCompany":keywords}),
         success:function(res){
             if(res.isOk){
                 for(var i in res.page.datas){
@@ -113,7 +122,7 @@ function getJobs(opts){
                     var str = '<a class="item" href="job_detail.html?jobId={{jobId}}">\
                                 <span class="right">\
                                     <span class="price">{{wageLevel}}/月</span>\
-                                    <span class="city">{{city}}</span>\
+                                    <span class="city">{{jobCity}}</span>\
                                     <span class="time">{{createDate}}</span>\
                                 </span>\
                                 <span class="tit">{{jobName}}</span>\
@@ -122,7 +131,7 @@ function getJobs(opts){
                             </a>';
                     str = str.replace("{{jobId}}",item.id);
                     str = str.replace("{{wageLevel}}",API.filter.wageLevel(item.wageLevel));
-                    str = str.replace("{{city}}",item.city);
+                    str = str.replace("{{jobCity}}",item.jobCity);
                     str = str.replace("{{createDate}}",API.filter.jobDate(item.createDate));
                     str = str.replace("{{jobName}}",item.jobName);
                     str = str.replace("{{company}}",item.company);
@@ -201,7 +210,7 @@ function jobTypeInit(){
         method: "post",
         dataType: 'JSON',
         contentType: "application/json; charset=utf-8",
-        data:JSON.stringify({"amount":"9"}),
+        data:JSON.stringify({"amount":"18"}),
         success:function(data){
             if(data.isOk){
                 $("#menuList").empty();
@@ -219,7 +228,9 @@ function jobTypeInit(){
     })
 }
 function getUserInfo(){
-
+    if(!user_id){
+        location.href="https://open.weixin.qq.com/connect/oauth2/authorize?appid=wxce4fd3757ef3a868&redirect_uri=http%3a%2f%2fwww.meyur.cn%2fWechatRedirectServlet%2flogin&response_type=code&scope=snsapi_userinfo&state=STATE#wechat_redirect";
+    }
 
     $.ajax({
         url: ROOT_CONFIG.domain + "/User/query",
