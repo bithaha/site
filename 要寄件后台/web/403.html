@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <link href="../assets/favicon.ico" rel="bookmark" type="image/x-icon" />
+    <link href="../assets/favicon.ico" rel="icon" type="image/x-icon" />
+    <link href="../assets/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+    <link href="../assets/favicon.ico" rel="apple-touch-icon-precomposed" />
+    <title>要寄件</title>
+    <link href="../plugins/bootstrap/bootstrap.css" rel="stylesheet">
+    <link href="../assets/css/web.css" rel="stylesheet">
+</head>
+
+<body>
+<div class="container">
+	<div class="con-404">
+		<div class="img"><img src="../assets/img/web/logo-gray.png" height="270"></div>
+		<div class="txt gray">
+			<p>抱歉，您没有权限进行该操作</p>
+			<p><span id="time">3</span>秒之后会自动跳转...</p>
+		</div>
+		<div class="btns">
+			<a class="btn btn-common">返回首页</a>
+		</div>
+	</div>
+</div>
+<script type="text/javascript">
+var time = 3;
+var timer = setInterval(function(){
+	time--;
+	if(time < 0){
+		window.clearInterval(timer);
+		alert("跳转");
+	}else{
+		document.getElementById('time').innerHTML = time;
+	}
+},1000)
+</script>
+</body>
+
+</html>
