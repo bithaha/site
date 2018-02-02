@@ -56,6 +56,7 @@ img[src=""]{opacity: 0;}
 .header + .content{padding-top: 1.44rem;}
 .content.has-footer{padding-bottom: 2.7rem;}
 .ico-back{background-image: url(../img/web/ico-back.png);}
+.header .btn-left .ico-back{ position: absolute;top: 50%;left: 50%;transform: translate(-50%,-50%);-webkit-transform: translate(-50%,-50%); }
 
 .footer-bar{position: fixed;bottom:0;left:0;z-index: 100;background: #fff;height: 2.5rem;width:100%;}
 .footer-bar .btn-common{margin: .6rem .46rem;display: block;}
