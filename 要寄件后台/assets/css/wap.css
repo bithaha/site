@@ -224,3 +224,24 @@ img[src=""]{opacity: 0;}
 .fast-login .ls a{display: inline-block;margin:0 1rem;font-size: 1.3rem;}
 .ico-wechat{background-image: url(../img/web/ico-wechat.png);}
 .ico-qq{background-image: url(../img/web/ico-qq.png);}
+
+/* 物品信息 */
+.good-box{background:#fff;padding: .4rem .3rem;}
+.good-box .title{margin: 0 0 .3rem 0;font-weight: normal;font-size: .4rem;}
+.good-tags{margin-bottom: .3rem; overflow: hidden;}
+.good-tags a{width: 3.2rem;height: .8rem;line-height: .8rem;text-align: center;display: block;float: left;margin: 0 .2rem .3rem 0;border:1px solid #ccc;border-radius:3px;}
+.good-tags a:nth-child(3n){margin-right: 0;}
+.good-tags a.active{border-color:#1a87f6;color:#1a87f6;}
+.good-form{ overflow: hidden; }
+.good-form input[type="text"]{width: 8rem;line-height: .8rem;border:0;background:#eee;border-radius:3px;float: left;padding: 0 .3rem;}
+.good-form .btn{background:#1a87f6;color:#fff;display: inline-block;width: 1.8rem;text-align: center;line-height: .8rem;border-radius:3px;float: left;margin-left: .2rem}
+
+.weight-box{ overflow: hidden; text-align: center;padding: .2rem 0 .3rem;}
+.weight-box .btn{width: 1rem;height: 1rem;text-align: center;line-height: .9rem;border-radius: 50%;border:1px solid #ccc;font-size: .8rem;display: inline-block;    vertical-align: bottom;color:#000;}
+.weight-box .num{display: inline-block;width: 3rem;}
+.weight-box .num em{color: #999;}
+.weight-box .num b{font-size: 1rem;font-weight: normal;color: #1a87f6;}
+.good-photo .btn-upload{width: 2rem;height:2rem;padding:0;margin: 0 auto;}
+.good-photo .btn-upload span{display: none;}
+.good-photo .btn-upload .icon{font-size:1rem;transform: translate(-50%,-50%);-webkit-transform: translate(-50%,-50%);}
+.good-photo .tip{text-align: center;margin-top: 1rem;color:#999;}

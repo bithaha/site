@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+    <title>寄件</title>
+    <link href="../assets/favicon.ico" rel="bookmark" type="image/x-icon" />
+    <link href="../assets/favicon.ico" rel="icon" type="image/x-icon" />
+    <link href="../assets/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+    <link href="../assets/favicon.ico" rel="apple-touch-icon-precomposed" />
+    <link rel="stylesheet" type="text/css" href="../plugins/mobiscroll/mobiscroll.custom-2.6.2.min.css">
+    <link href="../assets/css/wap.css" rel="stylesheet">
+    <script src="../assets/js/base.js" type="text/javascript"></script>
+</head>
+<body>
+	<div class="header">
+        <a class="btn-left" href="javascript:history.back();"><i class="ico-back"></i></a>
+        <h3 class="title">物品信息</h3>
+        <a class="btn-right" href="javascript:;"></a>
+    </div>
+    <div class="content has-footer">
+        <div class="good-box">
+            <h3 class="title">物品类型</h3>
+            <div class="good-tags">
+               <a>日用品</a><a>数码产品</a><a>衣物</a><a>食物</a><a>文件</a><a class="active">其它</a>
+            </div>
+            <div class="good-form">
+               <input type="text" placeholder="请输入物品类型"><a class="btn">确定</a>
+            </div>
+        </div>
+        <div class="line"></div>
+        <div class="good-box">
+           <h3 class="title">物品重量</h3>
+           <div class="weight-box">
+               <a class="btn btn-mul">-</a>
+               <span class="num"><b>1</b><em>公斤</em></span>
+               <a class="btn btn-plus">+</a>
+           </div>
+       </div>
+       <div class="line"></div>
+        <div class="good-box good-photo">
+           <h3 class="title">物品照片</h3>
+           <div class="btn-upload">
+                <input type="file" name="">
+                <i class="icon"></i>
+                <span>点击上传</span>
+                <img src="">
+            </div>
+            <div class="tip">因包裹报损投诉理赔，照片可做为物证！</div>
+       </div>
+    </div>
+    <div class="footer-bar">
+    	<a class="btn btn-common" href="javascript:;">提交</a>
+    </div>
+
+<script type="text/javascript" src="../assets/js/jquery.min.js"></script>
+<script type="text/javascript">
+$(function(){
+    /********** 计算物品重量 *************/
+    var initWeight = 1;
+    $('.weight-box').on('click','.btn-plus',function(){
+        $(this).parent().find('.num').find('b').html(++initWeight);
+    }).on('click','.btn-mul',function(){
+        if(initWeight <= 1){return;}
+        $(this).parent().find('.num').find('b').html(--initWeight);
+    });
+    /********** 计算物品重量 *************/
+    /********** 物品类型 *************/
+    $(".good-tags").on('click','a',function(){
+        $(this).addClass('active').siblings().removeClass('active');
+    })
+
+})
+    
+</script>
+</body>
+</html>
