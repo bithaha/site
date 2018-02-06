@@ -74,8 +74,8 @@ img[src=""]{opacity: 0;}
 .shiming-form{background: #fff;}
 
 .reg-form .item {padding-left: .5rem;padding-right: .5rem;display: -webkit-box;display: -webkit-flex;display: -moz-box;display: -moz-flex; display: -ms-flexbox; display: flex;}
-.reg-form .tit { font-weight: normal; white-space: nowrap; margin: 0;}
-.reg-form .txt ,.reg-form input[type="text"]{ border: 0; width: 100%;  }
+.reg-form .tit,.reg-form .label { font-weight: normal; white-space: nowrap; margin: 0;}
+.reg-form .txt ,.reg-form input[type="text"]{ border: 0; width: 80%;margin-left: 2%;  background:none;}
 .reg-form .tit + .txt,.reg-form .tit + input[type="text"]{text-align: right;padding-left: .6rem;}
 
 .sfz-card{width: 48%;float: left;}
@@ -245,3 +245,8 @@ img[src=""]{opacity: 0;}
 .good-photo .btn-upload span{display: none;}
 .good-photo .btn-upload .icon{font-size:1rem;transform: translate(-50%,-50%);-webkit-transform: translate(-50%,-50%);}
 .good-photo .tip{text-align: center;margin-top: 1rem;color:#999;}
+
+@media (min-width: 600px){
+  body,.header,.footer-bar { width: 600px;  margin: 0 auto; }
+  .header,.footer-bar{left: 50%;margin-left: -300px;}
+}
