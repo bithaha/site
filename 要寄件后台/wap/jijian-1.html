@@ -31,9 +31,9 @@
                 <span class="txt">请选择附近的快递服务网点</span>
                 <a class="arrow-right"><i class="ico-arrow"></i></a>
             </label>
-            <label class="item item-link">
+            <label class="item item-link" onclick="modal.show()">
                 <a class="arrow-left"><i class="ico-shou"></i></a>
-                <span class="txt">请填写收件人详细地址</span>
+                <span class="txt" id="shoujianTxt">请填写收件人详细地址</span>
                 <a class="arrow-right"><i class="ico-arrow"></i></a>
             </label>
         </div>
@@ -104,10 +104,37 @@
     <div class="footer-bar">
     	<a class="btn btn-common" href="javascript:;">提交</a>
     </div>
-
+<div class="modal" id="addressModal">
+    <div class="header">
+        <a class="btn-left" onclick="modal.hide()"><i class="ico-back"></i></a>
+        <h3 class="title">选择收货地址</h3>
+        <a class="btn-right" href="javascript:;">使用新地址</a>
+    </div>
+    <div class="content">
+        <div class="list address-list">
+            <div class="item" onclick="modal.select()">
+                <p class="tit name">张三  18099999999 <span class="tag tag-yellow">公司</span></p>
+                <p class="add">北京北京市东城区东城路15号</p>
+                <a class="btn btn-edit">编辑</a>
+            </div>
+        </div>
+    </div>
+</div>
 <script type="text/javascript" src="../assets/js/jquery.min.js"></script>
 <script type="text/javascript" src="../plugins/mobiscroll/mobiscroll.custom-2.6.2.min.js"></script>
 <script type="text/javascript">
+var modal = {
+    container: $('#addressModal'),
+    show: function(){
+        this.container.addClass('active');
+    },
+    hide:function(){
+        this.container.removeClass('active');
+    },
+    select: function(){
+        
+    }
+}
 $(function(){
     $('#express').scroller('destroy').scroller({
         lang:'cn',
