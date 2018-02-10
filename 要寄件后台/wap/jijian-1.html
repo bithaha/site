@@ -112,7 +112,7 @@
     </div>
     <div class="content">
         <div class="list address-list">
-            <div class="item" onclick="modal.select()">
+            <div class="item" >
                 <p class="tit name">张三  18099999999 <span class="tag tag-yellow">公司</span></p>
                 <p class="add">北京北京市东城区东城路15号</p>
                 <a class="btn btn-edit">编辑</a>
@@ -136,6 +136,12 @@ var modal = {
     }
 }
 $(function(){
+$('.address-list').on('click','.item',function(){
+	alert(1)
+}).on('click','.btn-edit',function(e){
+e.stopPropagation()
+	alert(2)
+})
     $('#express').scroller('destroy').scroller({
         lang:'cn',
         preset: 'select',
