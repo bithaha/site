@@ -216,3 +216,23 @@ img[src=""]{opacity: 0;}
 .top-user{float: right;margin-top: 15px;}
 .top-user img{width: 40px;height: 40px;border-radius: 50%;margin-right: 5px;vertical-align: middle;}
 .top-user .name{}
+
+.uinfo-table{width: 100%;border-collapse: collapse;}
+.uinfo-table td{text-align: left;}
+.uinfo-table td,.uinfo-table th{padding: 10px;}
+.uinfo-table th{width: 120px;text-align: right;font-weight: normal;}
+.uinfo-table .btn-link{color:#3fa3de;}
+.uinfo-btns{margin: 50px 0; text-align: center;}
+.uinfo-btns .btn{padding: 0 20px;line-height: 40px;}
+.uinfo-btns .btn-submit{background: #3381ff;color:#fff;margin: 0 20px 0 0;}
+.uinfo-btns .btn-cancel{background-color: #eee;color:#444;}
+
+.ico-ok{background-image: url(../img/web/sprites-24x24.png);background-position: 0 -9em;background-size:100% auto;}
+.ico-tip{background-image: url(../img/web/sprites-24x24.png);background-position: 0 -10.5em;background-size:100% auto;}
+
+.safe-table th{text-align: left;}
+.uinfo-table td,.uinfo-table th{padding: 20px 10px;}
+.safe-table .desc{color:#999;}
+.safe-table  .tit{margin-left: 5px;font-size: 18px;}
+.btn-common,a.btn-common{background:#3381ff;color:#fff;}
+a.btn-common:hover{color: #fff;}
