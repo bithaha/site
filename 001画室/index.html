@@ -1,155 +1,580 @@
 ﻿<!doctype html>
 <html>
 <head>
-<meta charset="utf8">
-<title>国美001画室</title>
-<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no">
-<link href="assets/css/swiper.min.css" rel="stylesheet">
-<link href="assets/css/base.css" rel="stylesheet">
-<script src="assets/js/jquery.min.js"></script>
-<script src="assets/js/swiper.min.js"></script>
-<script src="assets/js/base.js"></script>
+    <meta charset="utf8">
+    <title>国美001画室</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="assets/css/swiper.min.css" rel="stylesheet">
+    <link href="assets/css/base.css" rel="stylesheet">
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/swiper.min.js"></script>
+    <script src="assets/js/jquery.lazyload.js"></script>    
+    <script src="assets/js/base.js"></script>
 </head>
 
 <body>
 
-    <div class="header">
-        <h3 class="title"><img src="assets/images/logo.png"></h3>
+<div class="header">
+    <h3 class="title"><img src="assets/images/logo.png"></h3>
+</div>
+<div class="content">
+    <!-- 轮播图 -->
+    <div class="swiper-container index-slider">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide"><img src="assets/images/banner-1.png"></div>
+            <div class="swiper-slide"><img src="assets/images/banner-1.png"></div>
+            <div class="swiper-slide"><img src="assets/images/banner-1.png"></div>
+        </div>
+        <div class="swiper-pagination index-swiper-pagination"></div>
     </div>
-    <div class="content">
-        <!-- 轮播图 -->
-        <div class="swiper-container index-slider">
+    <div class="line-divider"></div>
+    <!--菜单-->
+    <div class="menu-list clearfix">
+        <a class="item" href="javascript:;"><i class="ico-menu ico-menu-1"></i><span>画室简介</span></a>
+        <a class="item" href="javascript:;"><i class="ico-menu ico-menu-2"></i><span>辉煌成绩</span></a>
+        <a class="item" href="javascript:;"><i class="ico-menu ico-menu-3"></i><span>招生简章</span></a>
+        <a class="item" href="javascript:;"><i class="ico-menu ico-menu-4"></i><span>师资力量</span></a>
+        <a class="item" href="javascript:;"><i class="ico-menu ico-menu-5"></i><span>画室环境</span></a>
+        <a class="item" href="javascript:;"><i class="ico-menu ico-menu-6"></i><span>画室作品</span></a>
+        <a class="item" href="javascript:;"><i class="ico-menu ico-menu-7"></i><span>管理服务</span></a>
+        <a class="item" href="javascript:;"><i class="ico-menu ico-menu-8"></i><span>联系我们</span></a>
+    </div>
+    <!--画室头条-->
+    <div class="toutiao">
+        <div class="tit"><i class="ico-toutiao"></i></div>
+        <div class="det">
+            <div class="toutiao-item">
+                <span class="tag">推荐</span>
+                <div class="con">
+                    <div class="swiper-container slider-tuijian">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <a href="#">国美001开学教育考试总结大会举办</a>
+                            </div>
+                            <div class="swiper-slide">
+                                <a href="#">国美001开学教育考试总结大会举办1</a>
+                            </div>
+                            <div class="swiper-slide">
+                                <a href="#">国美001开学教育考试总结大会举办2</a>
+                            </div>    
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+            <div class="toutiao-item">
+                <span class="tag">最新</span>
+                <div class="con">
+                    <div class="swiper-container slider-zuixin">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <a href="#">联考默写：教你如何快速画好动态速写动态线！</a>
+                            </div>
+                            <div class="swiper-slide">
+                                <a href="#">联考默写：教你如何快速画好动态速写动态线！1</a>
+                            </div>
+                            <div class="swiper-slide">
+                                <a href="#">联考默写：教你如何快速画好动态速写动态线！2</a>
+                            </div>    
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="line-divider"></div>
+    <div class="ad-area"><a href="#"><img src="assets/images/ad-1.png"></a></div>
+    <div class="line-divider"></div>
+    <!--热门班型-->
+    <div class="hot-class">
+        <h3 class="tit"></h3>
+        <ul class="hot-class-list">
+            <li>
+                <div class="det">
+                    <img src="assets/images/demo/class-1.png">
+                    <h3>三美班</h3>
+                    <p>让优秀的你发光</p>
+                </div>
+                <div class="info">
+                    <span class="tag">教学特色</span>
+                    <span>每年6-8月开课</span>
+                </div>
+            </li>
+            <li>
+                <div class="det">
+                    <img src="assets/images/demo/class-1.png">
+                    <h3>三美班</h3>
+                    <p>让优秀的你发光</p>
+                </div>
+                <div class="info">
+                    <span class="tag">教学特色</span>
+                    <span>每年6-8月开课</span>
+                </div>
+            </li>
+            <li>
+                <div class="det">
+                    <img src="assets/images/demo/class-1.png">
+                    <h3>三美班</h3>
+                    <p>让优秀的你发光</p>
+                </div>
+                <div class="info">
+                    <span class="tag">教学特色</span>
+                    <span>每年6-8月开课</span>
+                </div>
+            </li>
+            <li>
+                <div class="det">
+                    <img src="assets/images/demo/class-1.png">
+                    <h3>三美班</h3>
+                    <p>让优秀的你发光</p>
+                </div>
+                <div class="info">
+                    <span class="tag">教学特色</span>
+                    <span>每年6-8月开课</span>
+                </div>
+            </li>
+            <li>
+                <div class="det">
+                    <img src="assets/images/demo/class-1.png">
+                    <h3>三美班</h3>
+                    <p>让优秀的你发光</p>
+                </div>
+                <div class="info">
+                    <span class="tag">教学特色</span>
+                    <span>每年6-8月开课</span>
+                </div>
+            </li>
+            <li>
+                <div class="det">
+                    <img src="assets/images/demo/class-1.png">
+                    <h3>三美班</h3>
+                    <p>让优秀的你发光</p>
+                </div>
+                <div class="info">
+                    <span class="tag">教学特色</span>
+                    <span>每年6-8月开课</span>
+                </div>
+            </li>
+        </ul>
+    </div>
+    <div class="line-divider"></div>
+    <!--新闻动态-->
+    <div class="section-hotnews">
+        <div class="in-tit-bar">
+            <a class="more">更多 ></a>
+            <h3 class="title">新闻动态</h3>
+        </div>
+        <div class="in-news-list">
+            <a class="item">
+                <span class="img"><img src="assets/images/demo/news-img-1.png"></span>
+                <span class="det">
+                    <span class="tit">国美001画室举行2017-2018年开学典礼 室举年开学典礼</span>
+                    <span class="desc"><span class="time">2018年01月20日  15:36</span></span>
+                </span>
+            </a>
+            <a class="item">
+                <span class="img"><img src="assets/images/demo/news-img-1.png"></span>
+                <span class="det">
+                    <span class="tit">国美001画室举行2017-2018年开学典礼 室举年开学典礼</span>
+                    <span class="desc"><span class="time">2018年01月20日  15:36</span></span>
+                </span>
+            </a>
+            <a class="item">
+                <span class="img"><img src="assets/images/demo/news-img-1.png"></span>
+                <span class="det">
+                    <span class="tit">国美001画室举行2017-2018年开学典礼 室举年开学典礼</span>
+                    <span class="desc"><span class="time">2018年01月20日  15:36</span></span>
+                </span>
+            </a>
+        </div>
+    </div>
+    <div class="line-divider"></div>
+    <!--辉煌成绩-->
+    <div class="section-chengji">
+        <div class="in-tit-bar">
+            <a class="more">更多 ></a>
+            <h3 class="title">辉煌成绩</h3>
+        </div>
+        <div class="swiper-container slider-chengji">
             <div class="swiper-wrapper">
-                <div class="swiper-slide"><img src="assets/images/banner-1.png"></div>
-                <div class="swiper-slide"><img src="assets/images/banner-1.png"></div>
-                <div class="swiper-slide"><img src="assets/images/banner-1.png"></div>
-            </div>
-            <div class="swiper-pagination"></div>
-        </div>
-        <div class="line-divider"></div>
-        <!--菜单-->
-        <div class="menu-list clearfix">
-            <a class="item" href="javascript:;"><i class="ico-menu ico-menu-1"></i><span>画室简介</span></a>
-            <a class="item" href="javascript:;"><i class="ico-menu ico-menu-2"></i><span>辉煌成绩</span></a>
-            <a class="item" href="javascript:;"><i class="ico-menu ico-menu-3"></i><span>招生简章</span></a>
-            <a class="item" href="javascript:;"><i class="ico-menu ico-menu-4"></i><span>师资力量</span></a>
-            <a class="item" href="javascript:;"><i class="ico-menu ico-menu-5"></i><span>画室环境</span></a>
-            <a class="item" href="javascript:;"><i class="ico-menu ico-menu-6"></i><span>画室作品</span></a>
-            <a class="item" href="javascript:;"><i class="ico-menu ico-menu-7"></i><span>管理服务</span></a>
-            <a class="item" href="javascript:;"><i class="ico-menu ico-menu-8"></i><span>联系我们</span></a>
-        </div>
-        <!--画室头条-->
-        <div class="toutiao">
-            <div class="tit"><i class="ico-toutiao"></i></div>
-            <div class="det">
-                <div class="toutiao-item">
-                    <span class="tag">推荐</span>
-                    <div class="con">
-                        国美001阿斯打扫打扫大苏打
+                <div class="swiper-slide">
+                    <img src="assets/images/demo/chengji-img-1.png">
+                    <div class="shadow"></div>
+                    <div class="txt">
+                        来画室比较晚，8月初过来的，一开始特别不适应国美001，感觉自己的方法和画室非常不一样，在老师的指导下，也慢慢的调整过来了，可塑性很强。
                     </div>
                 </div>
-                <div class="toutiao-item">
-                    <span class="tag">推荐</span>
-                    <div class="con">
-                        国美001阿斯打扫打扫大苏打
+                <div class="swiper-slide">
+                    <img src="assets/images/demo/chengji-img-1.png">
+                    <div class="shadow"></div>
+                    <div class="txt">
+                        来画室比较晚，8月初过来的，一开始特别不适应国美001，感觉自己的方法和画室非常不一样，在老师的指导下，也慢慢的调整过来了，可塑性很强。
                     </div>
                 </div>
             </div>
+            <div class="swiper-pagination chengji-swiper-pagination"></div>
         </div>
-        <div class="line-divider"></div>
-        <div class="ad-area"><a href="#"><img src="assets/images/ad-1.png"></a></div>
-        <div class="line-divider"></div>
-        <!--热门班型-->
-        <div class="hot-class">
-            <h3 class="tit"></h3>
-            <ul class="hot-class-list">
-                <li>
-                    <div class="det">
-                        <img src="assets/images/demo/class-1.png">
-                        <h3>三美班</h3>
-                        <p>让优秀的你发光</p>
-                    </div>
-                    <div class="info">
-                        <span class="tag">教学特色</span>
-                        <span>每年6-8月开课</span>
-                    </div>
-                </li>
-                <li>
-                    <div class="det">
-                        <img src="assets/images/demo/class-1.png">
-                        <h3>三美班</h3>
-                        <p>让优秀的你发光</p>
-                    </div>
-                    <div class="info">
-                        <span class="tag">教学特色</span>
-                        <span>每年6-8月开课</span>
-                    </div>
-                </li>
-                <li>
-                    <div class="det">
-                        <img src="assets/images/demo/class-1.png">
-                        <h3>三美班</h3>
-                        <p>让优秀的你发光</p>
-                    </div>
-                    <div class="info">
-                        <span class="tag">教学特色</span>
-                        <span>每年6-8月开课</span>
-                    </div>
-                </li>
-                <li>
-                    <div class="det">
-                        <img src="assets/images/demo/class-1.png">
-                        <h3>三美班</h3>
-                        <p>让优秀的你发光</p>
-                    </div>
-                    <div class="info">
-                        <span class="tag">教学特色</span>
-                        <span>每年6-8月开课</span>
-                    </div>
-                </li>
-                <li>
-                    <div class="det">
-                        <img src="assets/images/demo/class-1.png">
-                        <h3>三美班</h3>
-                        <p>让优秀的你发光</p>
-                    </div>
-                    <div class="info">
-                        <span class="tag">教学特色</span>
-                        <span>每年6-8月开课</span>
-                    </div>
-                </li>
-                <li>
-                    <div class="det">
-                        <img src="assets/images/demo/class-1.png">
-                        <h3>三美班</h3>
-                        <p>让优秀的你发光</p>
-                    </div>
-                    <div class="info">
-                        <span class="tag">教学特色</span>
-                        <span>每年6-8月开课</span>
-                    </div>
-                </li>
-            </ul>
+        <ul class="chengji-list">
+            <li>
+                <img src="assets/images/demo/demo-head.png">
+                <h3>刘梓璇</h3>
+                <div class="det"><span class="tag">央美第16名</span></div>
+            </li>
+            <li>
+                <img src="assets/images/demo/demo-head.png">
+                <h3>刘梓璇</h3>
+                <div class="det"><span class="tag">央美第16名</span></div>
+            </li>
+            <li>
+                <img src="assets/images/demo/demo-head.png">
+                <h3>刘梓璇</h3>
+                <div class="det"><span class="tag">央美第16名</span></div>
+            </li>
+            <li>
+                <img src="assets/images/demo/demo-head.png">
+                <h3>刘梓璇</h3>
+                <div class="det"><span class="tag">央美第16名</span></div>
+            </li>
+            <li>
+                <img src="assets/images/demo/demo-head.png">
+                <h3>刘梓璇</h3>
+                <div class="det"><span class="tag">央美第16名</span></div>
+            </li>
+            <li>
+                <img src="assets/images/demo/demo-head.png">
+                <h3>刘梓璇</h3>
+                <div class="det"><span class="tag">央美第16名</span></div>
+            </li>
+            <li>
+                <img src="assets/images/demo/demo-head.png">
+                <h3>刘梓璇</h3>
+                <div class="det"><span class="tag">央美第16名</span></div>
+            </li>
+            <li>
+                <img src="assets/images/demo/demo-head.png">
+                <h3>刘梓璇</h3>
+                <div class="det"><span class="tag">央美第16名</span></div>
+            </li>
+        </ul>
+    </div>
+    <div class="line-divider"></div>
+    <!--名师聚焦-->
+    <div class="section-teacher">
+        <div class="in-tit-bar">
+            <a class="more">更多 ></a>
+            <h3 class="title">名师聚焦</h3>
         </div>
-        <div class="line-divider"></div>
-        <!--新闻动态-->
-        <div class="news">
+        <div class="swiper-container slider-teacher">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <div class="img"><img src="assets/images/demo/teacher-1.png"></div>
+                    <div class="det">
+                        <h3 class="tit">余碧波<em>校长</em></h3>
+                        <div class="star"><span class="star-state"></span></div>
+                        <div class="desc">简介：中国美术学院研修生，本科学士学位...</div>
+                        <div class="btns"><a class="btn" href="#">预约体验课</a></div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="img"><img src="assets/images/demo/teacher-2.png"></div>
+                    <div class="det">
+                        <h3 class="tit">余碧波<em>校长</em></h3>
+                        <div class="star"><span class="star-state"></span></div>
+                        <div class="desc">简介：中国美术学院研修生，本科学士学位...</div>
+                        <div class="btns"><a class="btn" href="#">预约体验课</a></div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="img"><img src="assets/images/demo/teacher-1.png"></div>
+                    <div class="det">
+                        <h3 class="tit">余碧波<em>校长</em></h3>
+                        <div class="star"><span class="star-state"></span></div>
+                        <div class="desc">简介：中国美术学院研修生，本科学士学位...</div>
+                        <div class="btns"><a class="btn" href="#">预约体验课</a></div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="img"><img src="assets/images/demo/teacher-2.png"></div>
+                    <div class="det">
+                        <h3 class="tit">余碧波<em>校长</em></h3>
+                        <div class="star"><span class="star-state"></span></div>
+                        <div class="desc">简介：中国美术学院研修生，本科学士学位...</div>
+                        <div class="btns"><a class="btn" href="#">预约体验课</a></div>
+                    </div>
+                </div>
+            </div>
         </div>
-
-
+    </div>
+    <div class="line-divider"></div>
+    <!--作品展示-->
+    <div class="section-works">
+        <div class="in-tit-bar">
+            <a class="more">更多 ></a>
+            <h3 class="title">作品展示</h3>
+        </div>
+        <div class="works-pages"></div>
+        <div class="swiper-container slider-works">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <div class="img"><img src="assets/images/demo/sucai-img-1.png"></div>
+                    <div class="img"><img src="assets/images/demo/sucai-img-2.png"></div>
+                    <div class="img"><img src="assets/images/demo/sucai-img-3.png"></div>
+                    <div class="img"><img src="assets/images/demo/sucai-img-4.png"></div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="img"><img src="assets/images/demo/sucai-img-1.png"></div>
+                    <div class="img"><img src="assets/images/demo/sucai-img-2.png"></div>
+                    <div class="img"><img src="assets/images/demo/sucai-img-3.png"></div>
+                    <div class="img"><img src="assets/images/demo/sucai-img-4.png"></div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="img"><img src="assets/images/demo/sucai-img-1.png"></div>
+                    <div class="img"><img src="assets/images/demo/sucai-img-2.png"></div>
+                    <div class="img"><img src="assets/images/demo/sucai-img-3.png"></div>
+                    <div class="img"><img src="assets/images/demo/sucai-img-4.png"></div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="img"><img src="assets/images/demo/sucai-img-1.png"></div>
+                    <div class="img"><img src="assets/images/demo/sucai-img-2.png"></div>
+                    <div class="img"><img src="assets/images/demo/sucai-img-3.png"></div>
+                    <div class="img"><img src="assets/images/demo/sucai-img-4.png"></div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="img"><img src="assets/images/demo/sucai-img-1.png"></div>
+                    <div class="img"><img src="assets/images/demo/sucai-img-2.png"></div>
+                    <div class="img"><img src="assets/images/demo/sucai-img-3.png"></div>
+                    <div class="img"><img src="assets/images/demo/sucai-img-4.png"></div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="img"><img src="assets/images/demo/sucai-img-1.png"></div>
+                    <div class="img"><img src="assets/images/demo/sucai-img-2.png"></div>
+                    <div class="img"><img src="assets/images/demo/sucai-img-3.png"></div>
+                    <div class="img"><img src="assets/images/demo/sucai-img-4.png"></div>
+                </div>                
+            </div>
+        </div>
+        <div class="btns"><a class="btn btn-border">查看更多 ></a></div>
+    </div>
+    <div class="line-divider"></div>
+    <!--独家视频-->
+    <div class="section-vidoe">
+        <div class="in-tit-bar">
+            <a class="more">更多 ></a>
+            <h3 class="title">独家视频</h3>
+        </div>
+        <ul class="in-vidoe-list">
+            <li>
+                <div class="img"><a href="#"><img src="assets/images/demo/video-img-1.png"><span class="tag tag-orange">独家</span></a></div>
+                <div class="det">
+                    <h3 class="tit"><a href="#">国美001画室任务组合教学示范过程</a></h3>
+                    <div class="desc">武汉国美001画室隶属武汉美培教育咨询有限公司...</div>
+                    <div class="btns"><a class="btn">查看</a></div>
+                </div>
+            </li>
+            <li>
+                <div class="img"><a href="#"><img src="assets/images/demo/video-img-1.png"><span class="tag tag-blue">独家</span></a></div>
+                <div class="det">
+                    <h3 class="tit"><a href="#">国美001画室任务组合教学示范过程</a></h3>
+                    <div class="desc">武汉国美001画室隶属武汉美培教育咨询有限公司...</div>
+                    <div class="btns"><a class="btn">查看</a></div>
+                </div>
+            </li>
+        </ul>
+    </div>
+    <div class="line-divider"></div>
+    <!--美考快讯-->
+    <div class="section-news">
+        <div class="in-tit-bar">
+            <a class="more">更多 ></a>
+            <h3 class="title">美考快讯</h3>
+        </div>
+        <ul class="cc-news" id="c-news">
+            <li>
+                <h3 class="title"><a href="#">为集训中的美术高考学生和家长解答</a></h3>
+                <div class="img">
+                    <img class="lazy" data-original="assets/images/demo/kuaixun-img-1.png" />
+                </div>
+                <div class="info">
+                    <span class="time">2015-11-04</span>
+                </div>
+            </li>
+            <li>
+                <h3 class="title"><a href="#">华为集训中的美术高考学生和家长解答为集训中的美术高考学生和家长解答为集训中的美术高考学生和家长解答</a></h3>
+                <div class="img">
+                    
+                </div>
+                <div class="info">
+                   
+                </div>
+            </li>
+            <li>
+                <h3 class="title"><a href="#">华为集训中的美术高考学生和家长解答为集训中的美术高考学生答</a></h3>
+                <div class="img">
+                    
+                </div>
+                <div class="info">
+                   
+                </div>
+            </li>
+        </ul>
+    </div>
+    <div class="line-divider"></div>
+    <!--热门问答-->
+    <div class="section-news">
+        <div class="in-tit-bar">
+            <a class="more">更多 ></a>
+            <h3 class="title">热门问答</h3>
+        </div>
+        <ul class="ask-list">
+            <li>
+                <div class="avatar"><img src="assets/images/demo/demo-head-1.png"></div>
+                <div class="tit"><a href="#"><span class="tag tag-teacher">家长</span>画室开设有文化课吗？孩子文化课基础不好，想边学专业的同时文化课也能带一下。</a></div>
+                <div class="desc">国美001画室独立的文化课体系，不与第三方合办或外包，画室自主开设的文化课班次，完美配合专业课的进度，课程安排更加科学。把专业课和文化课的学习进度结合起来，分阶段制定教学安排，大大提高学习效率。</div>
+                <div class="fot"><i class="ico-zan"></i><b>69</b>人觉得有用</div>
+            </li>
+            <li>
+                <div class="avatar"><img src="assets/images/demo/demo-head-2.png"></div>
+                <div class="tit"><a href="#"><span class="tag tag-student">家长</span>画室开设有文化课吗？孩子文化课基础不好，想边学专业的同时文化课也能带一下。</a></div>
+                <div class="desc">国美001画室独立的文化课体系，不与第三方合办或外包，画室自主开设的文化课班次，完美配合专业课的进度，课程安排更加科学。把专业课和文化课的学习进度结合起来，分阶段制定教学安排，大大提高学习效率。</div>
+                <div class="fot"><i class="ico-zan"></i><b>69</b>人觉得有用</div>
+            </li>
+            <li>
+                <div class="avatar"><img src="assets/images/demo/demo-head-3.png"></div>
+                <div class="tit"><a href="#"><span class="tag tag-teacher">家长</span>画室开设有文化课吗？孩子文化课基础不好，想边学专业的同时文化课也能带一下。</a></div>
+                <div class="desc">国美001画室独立的文化课体系，不与第三方合办或外包，画室自主开设的文化课班次，完美配合专业课的进度，课程安排更加科学。把专业课和文化课的学习进度结合起来，分阶段制定教学安排，大大提高学习效率。</div>
+                <div class="fot"><i class="ico-zan"></i><b>69</b>人觉得有用</div>
+            </li>
+        </ul>
+    </div>
+    <div class="line-divider"></div>
+    <!--生活环境-->
+    <div class="section-huanjing">
+        <div class="in-tit-bar">
+            <a class="more">更多 ></a>
+            <h3 class="title">生活环境</h3>
+        </div>
+        <div class="works-pages"></div>
+        <div class="swiper-container slider-huanjing">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <img src="assets/images/demo/huanjing-img-1.png">
+                </div>
+                <div class="swiper-slide">
+                    <img src="assets/images/demo/huanjing-img-1.png">
+                </div>
+                <div class="swiper-slide">
+                    <img src="assets/images/demo/huanjing-img-1.png">
+                </div>             
+            </div>
+        </div>
+    </div>
+    <div class="line-divider"></div>
+    <!--画室地址-->
+    <div class="section-map">
+        <div class="in-tit-bar">
+            <a class="more">更多 ></a>
+            <h3 class="title">画室地址</h3>
+        </div>
+        <div class="img"><img src="assets/images/huanjing-img-2.png"></div>
+        <div class="infos">
+            <p>校区地址：武汉市青山区青王路武东路口（公交车站牌）</p>
+            <p>咨询报名：15871447798（余老师）   15871447799（林老师）</p>
+            <p>QQ咨询：1034310416    邮箱：1034310416@qq.com </p>
+            <p>微信公众号：国美001画室（wuhanguomei001）</p> 
+            <p>微信订阅号：武汉美培</p>
+        </div>
+        <div class="btns"><a class="btn">乘车路线</a><a class="btn">自驾路线</a><a class="btn">免费接送</a></div>
+    </div>
+    <div class="line-divider"></div>
+    <!--咨询报名-->
+    <div class="section-footer">
+        <p>咨询报名：15871447798（余老师） QQ咨询：1034310416</p>
+        <p>武汉国美001画室版权所有</p>
+        <p>鄂ICP备12003349号</p>
+        <p><a href="#" class="btn">详细联系方式</a></p>
     </div>
 
+
+
+</div>
+<div class="footer-bar">
+    <a class="btn" href="#"><i class="ico-tel"></i><span>画室热线</span></a>
+    <a class="btn" href="#"><i class="ico-mess"></i><span>在线咨询</span></a>
+    <a class="btn" href="#"><i class="ico-ting"></i><span>免费试听</span></a>
+    <a class="btn" href="javascript:;" onclick="backtop()"><i class="ico-backtop"></i><span>回到顶部</span></a>
+</div>
 
 <script type="text/javascript">
-	
-    var swiper = new Swiper('.index-slider', {
-        pagination: '.swiper-pagination',
-        autoplay: 3000,
-        paginationClickable: true,
-		onInit: function(swiper){
-		  $('.index-slider').height($('.index-slider img').eq(0).height());
-		}
-
+$(document).ready(function(){
+    window.initRem && initRem();
+    var swiper1 = new Swiper('.index-slider', {
+        pagination: {
+            el: '.index-swiper-pagination',
+            clickable: true,
+        },
+        autoplay: 3000
+    });
+    /*辉煌成绩*/
+    var swiper2 = new Swiper('.slider-chengji', {
+        slidesPerView: 'auto',
+        spaceBetween: 6,
+        pagination: {
+            el: '.chengji-swiper-pagination',
+            clickable: true,
+        },
+    });
+    /*名师聚焦*/
+    var swiper3 = new Swiper('.slider-teacher', {
+        slidesPerView: 'auto',
+        spaceBetween: 15
+    });
+    /*作品展示*/
+    var works_titles = ["最新","色彩","素描","速写","清华设计","造型专业"]
+    var swiper4 = new Swiper('.slider-works', {
+        pagination: {
+            el: '.works-pages',
+            clickable: true,
+            renderBullet: function (index, className) {
+                return '<span class="' + className + '">' + works_titles[index] + '</span>';
+            },
+        }
+    });
+    /*生活环境*/
+    var swiper5 = new Swiper('.slider-huanjing', {
+        slidesPerView: 'auto',
+        spaceBetween: 15
+    });
+    /*画室头条 推荐*/
+    var swiper6 = new Swiper('.slider-tuijian', {
+        direction: 'vertical',
+        autoplay: {
+            delay: 2000,
+            stopOnLastSlide: false,
+            disableOnInteraction: true,
+        }
+    });
+    /*画室头条 最新*/
+    var swiper7 = new Swiper('.slider-zuixin', {
+        direction: 'vertical',
+        autoplay: {
+            delay: 2000,
+            stopOnLastSlide: false,
+            disableOnInteraction: true,
+        }
+    });
+})
+    
+    /**/
+    $(function(){
+        $('#c-news li').each(function(){
+            var _this = $(this);
+            if(_this.find('.img').length > 0){
+                _this.addClass('col-'+_this.find('.img').find('img').length);
+            }else{
+                _this.addClass('col-0');
+            }
+        });
     });
 
 </script>

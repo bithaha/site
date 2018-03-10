@@ -15,7 +15,23 @@
         };
 
     if (!doc.addEventListener) return;
+    win.initRem = recalc;
     win.onresize = function(){recalc();};
     win.addEventListener(resizeEvt, recalc, false);
     doc.addEventListener('DOMContentLoaded', recalc, false);
 })(document, window);
+
+
+$(function(){
+    /* 懒加载 */
+    if($("img.lazy").length > 0){
+        $("img.lazy").lazyload({ effect : "fadeIn"});   
+    }
+    /*底部间距*/
+    if($('.footer-bar').length > 0){
+        $('.content').addClass("has-footer")
+    }
+})
+function backtop(){
+    $('body,html').animate({scrollTop:0})
+}
