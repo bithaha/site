@@ -28,7 +28,6 @@
         </div>
         <div class="swiper-pagination index-swiper-pagination"></div>
     </div>
-    <div class="line-divider"></div>
     <!--菜单-->
     <div class="menu-list clearfix">
         <a class="item" href="javascript:;"><i class="ico-menu ico-menu-1"></i><span>画室简介</span></a>
@@ -268,7 +267,7 @@
         <div class="swiper-container slider-teacher">
             <div class="swiper-wrapper">
                 <div class="swiper-slide">
-                    <div class="img"><img class="lazy" data-original="assets/images/demo/teacher-1.png"></div>
+                    <div class="img"><img src="assets/images/demo/teacher-1.png"></div>
                     <div class="det">
                         <h3 class="tit">余碧波<em>校长</em></h3>
                         <div class="star"><span class="star-state"></span></div>
@@ -277,7 +276,7 @@
                     </div>
                 </div>
                 <div class="swiper-slide">
-                    <div class="img"><img class="lazy" data-original="assets/images/demo/teacher-2.png"></div>
+                    <div class="img"><img src="assets/images/demo/teacher-2.png"></div>
                     <div class="det">
                         <h3 class="tit">余碧波<em>校长</em></h3>
                         <div class="star"><span class="star-state"></span></div>
@@ -286,7 +285,7 @@
                     </div>
                 </div>
                 <div class="swiper-slide">
-                    <div class="img"><img class="lazy" data-original="assets/images/demo/teacher-1.png"></div>
+                    <div class="img"><img src="assets/images/demo/teacher-1.png"></div>
                     <div class="det">
                         <h3 class="tit">余碧波<em>校长</em></h3>
                         <div class="star"><span class="star-state"></span></div>
@@ -295,7 +294,7 @@
                     </div>
                 </div>
                 <div class="swiper-slide">
-                    <div class="img"><img class="lazy" data-original="assets/images/demo/teacher-2.png"></div>
+                    <div class="img"><img src="assets/images/demo/teacher-2.png"></div>
                     <div class="det">
                         <h3 class="tit">余碧波<em>校长</em></h3>
                         <div class="star"><span class="star-state"></span></div>
@@ -313,7 +312,7 @@
             <a class="more">更多 ></a>
             <h3 class="title">作品展示</h3>
         </div>
-        <div class="works-pages"></div>
+        <div class="works-pages works-pages-1"></div>
         <div class="swiper-container slider-works">
             <div class="swiper-wrapper">
                 <div class="swiper-slide">
@@ -454,7 +453,6 @@
             <a class="more">更多 ></a>
             <h3 class="title">生活环境</h3>
         </div>
-        <div class="works-pages"></div>
         <div class="swiper-container slider-huanjing">
             <div class="swiper-wrapper">
                 <div class="swiper-slide">
@@ -476,15 +474,34 @@
             <a class="more">更多 ></a>
             <h3 class="title">画室地址</h3>
         </div>
-        <div class="img"><img src="assets/images/huanjing-img-2.png"></div>
-        <div class="infos">
-            <p>校区地址：武汉市青山区青王路武东路口（公交车站牌）</p>
-            <p>咨询报名：15871447798（余老师）   15871447799（林老师）</p>
-            <p>QQ咨询：1034310416    邮箱：1034310416@qq.com </p>
-            <p>微信公众号：国美001画室（wuhanguomei001）</p> 
-            <p>微信订阅号：武汉美培</p>
+        <div class="works-pages works-pages-2"></div>
+        <div class="swiper-container slider-map">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <div class="img"><img src="assets/images/huanjing-img-2.png"></div>
+                    <div class="infos">
+                        <p>校区地址：武汉市青山区青王路武东路口（公交车站牌）</p>
+                        <p>咨询报名：15871447798（余老师）   15871447799（林老师）</p>
+                        <p>QQ咨询：1034310416    邮箱：1034310416@qq.com </p>
+                        <p>微信公众号：国美001画室（wuhanguomei001）</p> 
+                        <p>微信订阅号：武汉美培</p>
+                    </div>
+                    <div class="btns"><a class="btn">乘车路线</a><a class="btn">自驾路线</a><a class="btn">免费接送</a></div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="img"><img src="assets/images/huanjing-img-2.png"></div>
+                    <div class="infos">
+                        <p>校区地址：武汉市青山区青王路武东路口（公交车站牌）</p>
+                        <p>咨询报名：15871447798（余老师）   15871447799（林老师）</p>
+                        <p>QQ咨询：1034310416    邮箱：1034310416@qq.com </p>
+                        <p>微信公众号：国美001画室（wuhanguomei001）</p> 
+                        <p>微信订阅号：武汉美培</p>
+                    </div>
+                    <div class="btns"><a class="btn">乘车路线</a><a class="btn">自驾路线</a><a class="btn">免费接送</a></div>
+                </div>               
+            </div>
         </div>
-        <div class="btns"><a class="btn">乘车路线</a><a class="btn">自驾路线</a><a class="btn">免费接送</a></div>
+        
     </div>
     <div class="line-divider"></div>
     <!--咨询报名-->
@@ -533,7 +550,7 @@ $(document).ready(function(){
     var works_titles = ["最新","色彩","素描","速写","清华设计","造型专业"]
     var swiper4 = new Swiper('.slider-works', {
         pagination: {
-            el: '.works-pages',
+            el: '.works-pages-1',
             clickable: true,
             renderBullet: function (index, className) {
                 return '<span class="' + className + '">' + works_titles[index] + '</span>';
@@ -547,6 +564,20 @@ $(document).ready(function(){
     var swiper5 = new Swiper('.slider-huanjing', {
         slidesPerView: 'auto',
         spaceBetween: 15
+    });
+    /*画室地址*/
+    var works_titles = ["校区1","校区2"]
+    var swiper4 = new Swiper('.slider-map', {
+        pagination: {
+            el: '.works-pages-2',
+            clickable: true,
+            renderBullet: function (index, className) {
+                return '<span class="' + className + '">' + works_titles[index] + '</span>';
+            },
+        },
+        lazy: {
+            loadPrevNext: true,
+        },
     });
     /*画室头条 推荐*/
     var swiper6 = new Swiper('.slider-tuijian', {
