@@ -42,7 +42,7 @@ img[src=""]{opacity: 0;}
 .list .item-link{}
 .list .item-link .arrow-left{font-size: .6rem;position: absolute;left: .35rem;top:50%;margin-top: -.3rem;}
 .list .item-link .arrow-right{font-size: .6rem;position: absolute;right: .35rem;top:50%;margin-top: -.3rem;color: #ccc;}
-.list .item-link .arrow-left + .txt{padding-left: .6rem;}
+.list .item-link .arrow-left + .txt{padding-left: .6rem;display: block;line-height: 1.4;}
 .list .item:active{background-color: #f4f4f4;}
 
 
