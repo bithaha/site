@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<form method="post" action="/blog/add/action">
+		{% csrf_token %}
+		{% if article %}
+		<input type="hidden" name="article_id" value="{{article.id}}">
+		{% endif %}
+		<p>标题：<input type="text" name="title" value="{{article.title}}"></p>
+		<p>内容：<textarea name="content">{{article.content}}</textarea></p>
+		<input type="submit" name="" value="提交">
+	</form>
+</body>
+</html>
