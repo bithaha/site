@@ -1,0 +1,19 @@
+__pycache__/
+*.py[cod]
+.Python
+
+
+# Django stuff:
+*.log
+*.sqlite3
+*/migrations/*.py
+!*/migrations/__init__.py
+
+# Sphinx documentation
+docs/_build/
+
+#deploy
+/static/
+/media/
+/alatting/settings.py
+/alatting/wsgi.py
