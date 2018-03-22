@@ -236,3 +236,41 @@ img[src=""]{opacity: 0;}
 .safe-table  .tit{margin-left: 5px;font-size: 18px;}
 .btn-common,a.btn-common{background:#3381ff;color:#fff;}
 a.btn-common:hover{color: #fff;}
+
+.btn-menu{display: none;}
+
+@media(max-width:600px){
+    .header{position: fixed;width: 100%;left: 0;top: 0;background-color: #fff;box-shadow: 0 0 10px #eee;z-index:100;}
+    .header .logo img{height: 34px;}
+    body{padding-top: 60px;}
+    img{max-width: 100%;}
+    .btn-menu{display: block;width: 1em;height: 1em;font-size: 30px;position: absolute;right: 15px;top: 50%;margin-top: -.5em;}
+    .btn-menu b{width: 100%;height: 3px;position: absolute;left:0;top: 50%;margin-top: -1px;background:#3fa3de;}
+    .btn-menu b:before,.btn-menu b:after{content: "";display: block;width: 100%;height: 3px;background:#3fa3de;position: absolute;left: 0;top: -7px;}
+    .btn-menu b:after{top: 7px;}
+    .header.active .btn-menu{background:#eee;}
+
+    .top-links{display: none;}
+    .top-nav{position: absolute;top: 100%;left: 0;background-color: rgba(255,255,255,.96);border-top: 1px solid #eee;transform:scaleY(0);-webkit-transform:scaleY(0);transition: all .3s;-webkit-transition: all .3s;transform-origin: top center;-webkit-transform-origin: top center;}
+
+    .header.active .top-nav{transform:scaleY(1);-webkit-transform:scaleY(1);}
+    .header-cover{position: fixed;width: 100%;height: 100%;top:0;left: 0;background-color: rgba(0,0,0,.3);z-index: 99; opacity: 0;visibility: hidden; transition: all .3s;-webkit-transition: all .3s;}
+    .header-cover.active{ opacity: 1;visibility: visible; }
+
+
+    .main-tit-bar{padding-top: 1rem;}
+    .main-tit-bar .title{padding-bottom: .4rem;font-size: .5rem;}
+    .main-tit-bar .des{font-size: .4rem;margin: .3rem 0;}
+
+    .sq-con{height: auto;}
+    .sq-con .btn{bottom:1%;font-size: .4rem;height: .8rem;line-height: .8rem;width: auto;padding: 0 .5rem;border-width:1px;margin-left: -1.2rem;}
+    .footer{font-size: .4rem;padding: .5rem;line-height: .6rem;}
+
+    .banner-jon{height: 6rem;}
+    .wrap li{width: 50%;}
+    .column-1{float: none;width:100%;text-align: center;margin-bottom: .5rem;}
+    .column-1 li{display: inline-block;padding: 0 1rem;}
+    .column-2{margin-left:0;}
+    .r-middle{padding: .5rem;width:auto;}
+    .column-1 ul .select .select-tag{top: auto;bottom:-3px;left: 50%;right:auto;margin-left: -6px;transform: rotate(90deg);-webkit-transform: rotate(90deg);}
+}
