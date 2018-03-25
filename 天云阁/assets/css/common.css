@@ -350,7 +350,29 @@ input[type="file"] > input[type="button"]::-moz-focus-inner{border:none;padding:
 .mouth-list li{width: 340px;float: left;margin-right: 90px;}
 .mouth-list li img{width: 100%;display: block;}
 
+/**/
+.layout-in-menus{}
+.layout-in-menus .wraper{overflow: hidden;}
+.in-menu-list{width: 115%; overflow: hidden;margin-left: -64px;}
+.in-menu-list li{float: left;text-align: center;}
+.in-menu-list li a{display: block;font-size: 16px;color:#333;}
+.in-menu-list li .icon{display: block;padding: 0 64px;border-right: 1px solid #ddd;padding-bottom: 10px;}
+.in-menu-list li .icon i{width: 60px;height: 60px;display: inline-block;background-image: url(../images/sprites-60x60.png);background-repeat: no-repeat; vertical-align: top;}
+.in-menu-list li .txt{display: block;margin-top: 20px;line-height: 1;}
+.ico-me-1{background-position: 0 -720px;}
+.ico-me-2{background-position: 0 -810px;}
+.ico-me-3{background-position: 0 -900px;}
+.ico-me-4{background-position: 0 -990px;}
+.ico-me-5{background-position: 0 -1080px;}
+.ico-me-6{background-position: 0 -1170px;}
+.ico-me-7{background-position: 0 -1260px;}
 
+/* 艺术院校 */
+.layout-yuanxiao{background: url(../images/demo/xy-bg.jpg) center bottom no-repeat;margin-top:
+	60px;padding-bottom:70px;background-repeat: no-repeat;}
+.in-yuanxiao-list{width: 105%;overflow: hidden;padding-top: 20px;}
+.in-yuanxiao-list li{width: 224px;float:left;margin: 0 20px 20px 0;height: 105px;text-align: center;}
+.in-yuanxiao-list li img{height: 100%;}
 /* -------------------------------- 
  * 页底 
  * -------------------------------- */
