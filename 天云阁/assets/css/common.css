@@ -33,7 +33,7 @@ input[type="file"] > input[type="button"]::-moz-focus-inner{border:none;padding:
 .course-banner a:before{-moz-transition:all 0.5s ease-in-out;-webkit-transition:all 0.5s ease-in-out;-ms-transition:all 0.5s ease-in-out;-o-transition:all 0.5s ease-in-out;transition:all 0.5s ease-in-out;}
 
 /* 颜色 */
-.footer a:hover,.wenhua-list li .det .tit a:hover{color:#df0000;}
+.footer a:hover,.wenhua-list li .det .tit a:hover,.dlink-list a:hover{color:#df0000;}
 
 /* tag */
 .ico-txt{display:inline-block;height:22px;line-height:22px;padding:0 6px; font-weight:normal;color:#fff;font-size:14px;border-radius:3px;}
@@ -99,6 +99,23 @@ input[type="file"] > input[type="button"]::-moz-focus-inner{border:none;padding:
 .navbar li .subnav .det{margin: 30px 0 30px 60px;width: 320px;color: #ccc;font-size: 14px;line-height: 24px;float: left;}
 
 .navbar li:hover .subnav{opacity: 1;visibility: visible;transform: translateY(0);-webkit-transform: translateY(0);}
+/* -------------------------------- 
+ * 页底 
+ * -------------------------------- */
+.footer{background-color: #37363c;line-height: 1;font-size: 14px;color:#9c9b9d;text-align: center;padding: 30px 0 10px;background-image: url(../images/footer-bg.png);}
+.ico-yanzheng{width: 124px;height: 47px;display: inline-block;background: url(../images/fot-aq.png);}
+.ico-pinpai{width: 124px;height: 47px;display: inline-block;background: url(../images/fot-pinpai.png);}
+.footer p{margin:0 0 20px;}
+.footer p i{margin: 0 10px;}
+.flinks{background: #39383e;color:#888;font-size: 14px;line-height: 30px;padding: 50px 0;}
+.flinks .tbar{float: right;width: 420px;}
+.flinks .tbar .flogo{margin-bottom: 20px;}
+.dlink-list{margin-right: 530px;border-right: 1px solid #999;overflow: hidden;}
+.dlink-list dl{float: left;padding-right: 60px;}
+.dlink-list dl dt{margin-bottom: 10px;}
+.dlink-list dl dt,.dlink-list dl dt a{font-size: 18px;color:#e1e1e1;}
+.dlink-list dl dd{}
+.dlink-list a{color:#888;}
 
 /* 轮播 */
 .flexslider{position: relative;overflow: hidden;}
@@ -350,6 +367,7 @@ input[type="file"] > input[type="button"]::-moz-focus-inner{border:none;padding:
 .mouth-list li{width: 340px;float: left;margin-right: 90px;}
 .mouth-list li img{width: 100%;display: block;}
 
+.layout-work{width: 100%;overflow: hidden;}
 /**/
 .layout-in-menus{}
 .layout-in-menus .wraper{overflow: hidden;}
@@ -369,15 +387,13 @@ input[type="file"] > input[type="button"]::-moz-focus-inner{border:none;padding:
 
 /* 艺术院校 */
 .layout-yuanxiao{background: url(../images/demo/xy-bg.jpg) center bottom no-repeat;margin-top:
-	60px;padding-bottom:70px;background-repeat: no-repeat;}
+	60px;padding-bottom:130px;background-repeat: no-repeat;}
 .in-yuanxiao-list{width: 105%;overflow: hidden;padding-top: 20px;}
 .in-yuanxiao-list li{width: 224px;float:left;margin: 0 20px 20px 0;height: 105px;text-align: center;}
 .in-yuanxiao-list li img{height: 100%;}
-/* -------------------------------- 
- * 页底 
- * -------------------------------- */
-.footer{text-align:center;font-size:16px;line-height:45px;padding-bottom:50px;}
 
+.float-menu{position: relative;z-index: 10;margin-top: -60px;background: url(../images/opacity-50.png);}
+.float-menu .wraper{height: 60px;}
 
 /* for ie */
 @media \0screen\,screen\9{
