@@ -119,6 +119,7 @@ input[type="file"] > input[type="button"]::-moz-focus-inner{border:none;padding:
 
 /* 轮播 */
 .flexslider{position: relative;overflow: hidden;}
+.flexslider .slides{overflow: hidden;}
 .flexslider .flex-control-paging{position: absolute;z-index: 10;bottom: 30px;left: 0;width: 100%; text-align: center;}
 .flexslider .flex-control-paging li{width: 12px;height: 12px;display: inline-block;margin: 0 8px;}
 .flexslider .flex-control-paging li{*display: inline;}
@@ -157,7 +158,7 @@ input[type="file"] > input[type="button"]::-moz-focus-inner{border:none;padding:
 
 .toutiao-slider{float: right;width: 280px;}
 .in-news-container{width: 890px;float: left;}
-.toutiao-slider{}
+.toutiao-slider .slides{height: 440px;overflow: hidden;}
 .toutiao-slider .flex-prev,.toutiao-slider .flex-next{width: 36px;height: 60px;display: block;position: absolute;top: 50%;margin-top: -30px;left: 0;background: url(../images/banner-arrow.png) 0 -176px; }
 .toutiao-slider .flex-next{left: auto;right: 0;background-position: 0 -236px;}
 .toutiao-slider .flex-control-paging{bottom: 15px;}
@@ -173,7 +174,7 @@ input[type="file"] > input[type="button"]::-moz-focus-inner{border:none;padding:
 
 /* 六大班型 */
 .class-slider{}
-.class-slider .slides{width: 100%;}
+.class-slider .slides{width: 100%;height: 590px; overflow: hidden;}
 .class-slider .slides li{width: 390px;float: left;background: #f4f5f9;}
 .class-slider .slides li .tit{height: 170px;line-height: 170px;background: #39383e;text-align: center;font-size: 30px;font-weight: bold;color:#fff;}
 .class-slider .slides li .img{width: 120px;height: 120px;display: block;border-radius:50%;margin: -50px auto 0;overflow: hidden;border:10px solid rgba(255,255,255,.3);}
@@ -368,6 +369,7 @@ input[type="file"] > input[type="button"]::-moz-focus-inner{border:none;padding:
 .mouth-list li img{width: 100%;display: block;}
 
 .layout-work{width: 100%;overflow: hidden;}
+.work-slider .slides{height: 415px;}
 /**/
 .layout-in-menus{}
 .layout-in-menus .wraper{overflow: hidden;}
@@ -394,6 +396,31 @@ input[type="file"] > input[type="button"]::-moz-focus-inner{border:none;padding:
 
 .float-menu{position: relative;z-index: 10;margin-top: -60px;background: url(../images/opacity-50.png);}
 .float-menu .wraper{height: 60px;}
+.float-menu .tit{float: left;display:block;width: 266px;height:60px;background: url(../images/float-menu-tit.png) left center no-repeat;background-size: contain;}
+.float-menu .text{float: left;background: #fff;padding: 0 10px 0 20px;height: 44px;line-height: 44px;border-radius:3px;margin-left: 15px;border:0;outline:none;box-sizing: content-box;margin-top: 8px;font-size: 16px;}
+.float-menu .text.name{width: 106px;margin-left: 30px;}
+.float-menu .text.tel{width: 140px;}
+.float-menu .text.class{width: 160px;}
+.float-menu .cc{width: 173px;height: 60px;margin-left:40px;float: left;background: url(../images/float-menu-tit1.png) no-repeat;}
+.float-menu .btn-baoming{width: 125px;display: block;float: right;height: 40px;line-height: 40px;margin-top:10px;background: #ff413c;color:#fff;font-size:20px;text-align: center;border-radius: 40px;border-bottom: 3px solid #9a1c05;}
+.float-menu .btn-baoming:active{border-top: 3px solid #9a1c05;border-bottom:0;}
+
+.float-menu-line{margin-top:-60px;height:0;}
+.float-menu.fixed{width: 100%;bottom:0;left: 0;position: fixed;}
+
+/* 右侧浮动栏 */
+.mbar{position: fixed;position: fixed;z-index: 9999;top: 0;right: 0;bottom:0;background: #444851;color:#fff;width: 45px;overflow: hidden;}
+.mbar ul{position: absolute;top: 50%;left: 0;width: 100%;margin-top: -150px;}
+.mbar li{text-align: center;}
+.mbar li a{padding: 20px 0;display: block;}
+.mbar li a:hover,.mbar .gotop:hover{background:#292b31;}
+.mbar li i,.ico-gotop{width: 30px;height: 30px;display: inline-block;background-image: url(../images/sprites-30x30.png);background-repeat: no-repeat;}
+.ico-mbar-user{background-position: 0 -180px;}
+.ico-mbar-wechat{background-position: 0 -225px;}
+.ico-mbar-tel{background-position: 0 -270px;}
+.ico-gotop{background-position: 0 -315px;}
+.mbar .gotop{position: absolute;bottom: 20px;left: 0;width: 100%;text-align: center;display: block;padding: 20px 0;}
+
 
 /* for ie */
 @media \0screen\,screen\9{

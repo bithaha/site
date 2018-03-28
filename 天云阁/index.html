@@ -6,6 +6,7 @@
 	<link rel="shortcut icon" href="assets/favicon.ico" type="image/x-icon" />
 	<link rel="stylesheet" href="assets/css/common.css">
 	<script type="text/javascript" src="assets/js/jquery.min.js"></script>
+	<script src="assets/js/lazyload.js"></script>
 	<script type="text/javascript" src="assets/js/jquery.flexslider-min.js"></script>
 	<script type="text/javascript" src="assets/js/common.js"></script>
 </head>
@@ -197,7 +198,7 @@
 		        <li class="li-1">
 		        	<div class="img"><img src=""></div>
 		        	<div class="det">
-		        		<h3 class="tit"><b>姓名</b>担任职务</h3>
+		        		<h3 class="tit"><b>姓名1</b>担任职务</h3>
 		        		<div class="desc">
 		        			<p>综合班由天云阁骨干教师授课</p>
 		        			<p>综合班由天云阁骨干教师授课，更高的联考过线率，更高的统考分数，为你通过联考保驾护航。</p>
@@ -212,7 +213,7 @@
 		        <li class="li-2">
 		        	<div class="img"><img src=""></div>
 		        	<div class="det">
-		        		<h3 class="tit"><b>姓名</b>担任职务</h3>
+		        		<h3 class="tit"><b>姓名2</b>担任职务</h3>
 		        		<div class="desc">
 		        			<p>综合班由天云阁骨干教师授课</p>
 		        			<p>综合班由天云阁骨干教师授课，更高的联考过线率，更高的统考分数，为你通过联考保驾护航。</p>
@@ -227,7 +228,7 @@
 		        <li class="li-3">
 		        	<div class="img"><img src=""></div>
 		        	<div class="det">
-		        		<h3 class="tit"><b>姓名</b>担任职务</h3>
+		        		<h3 class="tit"><b>姓名3</b>担任职务</h3>
 		        		<div class="desc">
 		        			<p>综合班由天云阁骨干教师授课</p>
 		        			<p>综合班由天云阁骨干教师授课，更高的联考过线率，更高的统考分数，为你通过联考保驾护航。</p>
@@ -242,7 +243,7 @@
 		        <li class="li-4">
 		        	<div class="img"><img src=""></div>
 		        	<div class="det">
-		        		<h3 class="tit"><b>姓名</b>担任职务</h3>
+		        		<h3 class="tit"><b>姓名4</b>担任职务</h3>
 		        		<div class="desc">
 		        			<p>综合班由天云阁骨干教师授课</p>
 		        			<p>综合班由天云阁骨干教师授课，更高的联考过线率，更高的统考分数，为你通过联考保驾护航。</p>
@@ -257,7 +258,7 @@
 		        <li class="li-5">
 		        	<div class="img"><img src=""></div>
 		        	<div class="det">
-		        		<h3 class="tit"><b>姓名</b>担任职务</h3>
+		        		<h3 class="tit"><b>姓名5</b>担任职务</h3>
 		        		<div class="desc">
 		        			<p>综合班由天云阁骨干教师授课</p>
 		        			<p>综合班由天云阁骨干教师授课，更高的联考过线率，更高的统考分数，为你通过联考保驾护航。</p>
@@ -850,16 +851,27 @@
 		</ul>
 	</div>
 </div>
-<div class="float-menu">
+<!--预约浮动栏-->
+<div class="float-menu-line"><!--此div记录float-menu位置--></div>
+<div class="float-menu fixed">
 	<div class="wraper">
-		
+		<div class="tit"></div>
+		<input class="text name" type="text" placeholder="学生姓名">
+		<input class="text tel" type="text" placeholder="联系电话">
+		<select class="text class"><option>选择意向班级</option></select>
+		<div class="cc"></div>
+		<a class="btn btn-baoming">在线报名</a>
 	</div>
 </div>
-
-<script src="styles/js/owl.carousel.js"></script>
-<script src="styles/js/lazyload.js"></script>
-<script src="styles/js/index.js"></script>
-
+<!--右侧浮动栏-->
+<div class="mbar">
+	<ul>
+		<li><a class="btn" href="#"><i class="ico-mbar-user"></i></a></li>
+		<li><a class="btn" href="#"><i class="ico-mbar-wechat"></i></a></li>
+		<li><a class="btn" href="#"><i class="ico-mbar-tel"></i></a></li>
+	</ul>
+	<a class="gotop" href="javascript:" target="_parent"><i class="ico-gotop"></i></a>
+</div>
 
 
 <!-- footer start -->
@@ -914,8 +926,6 @@
 		<p><i class="ico-yanzheng"></i><i class="ico-pinpai"></i></p>
 	</div>
 </div>
-<!-- 返回顶部 -->
-<a href="javascript:" target="_parent" class="gotop"></a>
 <!-- footer end -->
 
 <script type="text/javascript">
@@ -949,7 +959,22 @@ $(function(){
         controlsContainerNav: $('.slider-tabs-work'),/* 自定义分页器容器 */
         pagesText:["教师作品","学生作品","素描作品","色彩作品","速写作品"],/* 自定义分页器文本显示 */
     });
-})
+});
+(function(){
+
+	var curIndex = -1;
+	function autoplay(){
+		curIndex+1>$('.team-slider li').length?curIndex=-1:false;
+		show(curIndex+1);
+	}
+	function show(index){
+		$('.team-slider li').eq(index).addClass('active').siblings().removeClass('active');
+		curIndex = index;
+	}
+	var timer = setInterval(function(){
+		autoplay();
+	},1000);
+})();
 </script>
 </body>
 </html>
