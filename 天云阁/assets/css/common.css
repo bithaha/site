@@ -458,18 +458,33 @@ input[type="file"] > input[type="button"]::-moz-focus-inner{border:none;padding:
 .article-con .left{width: 90px;float: left;text-align: center;}
 .article-con .right{width: 1030px;float: right;padding-left: 40px;border-left: 1px solid #ddd;}
 .article-con .left .date{font-weight: normal;}
-.article-con .left .date h4{font-weight: normal;}
+.article-con .left .date h4{font-weight: normal;font-size: 18px;line-height: 1;margin-bottom: 15px;}
 .article-con .left .date .year{}
 .article-con .left .date .day{font-size: 30px;}
 .article-con .left .date .time{}
 .article-con .left .tit{margin-top: 30px;font-size: 14px;}
 .article-con .left .tit p{color:#df0000;}
-.article-con .left .tit .btn{display: inline-block;background: #df0000;color: #fff;}
+.article-con .left .tit .btn{display: inline-block;background: #df0000;color: #fff;padding: 0 10px;border-radius: 20px;}
 .art-body{font-size: 18px;line-height: 36px;color:#000;}
 
 
+/* 校园环境 */
+.environment-slider-1{}
+.envi-con{ overflow: hidden; background: #f7f7f7;}
+.envi-con .img{float: left;width: 50%;}
+.envi-con .img img{width: 100%;}
+.envi-con .det{float: left;width: 50%;}
+.envi-con .det h3{font-size: 24px;color:#000;line-height:1;font-weight: normal;padding: 55px 0 25px 30px;}
+.envi-con .det p{font-size: 14px;line-height: 24px;color:#666;padding-left: 30px;}
+.envi-con.even{background: none;}
+.envi-con.even .img{float: right;}
+.envi-con.even .det h3{padding-left:0;padding-right: 30px;}
+.envi-con.even .det p{padding-left: 0;padding-right: 30px;}
 
-
+.envi-title{font-size: 24px;color: #000;margin-bottom: 15px;line-height: 1;margin-top: 30px;font-weight: normal;}
+.envi-list{width: 105%;}
+.envi-list dd{width: 288px;height: 288px;float: left;margin: 15px 15px 0 0;}
+.envi-list dd img{width: 100%;}
 
 /* for ie */
 @media \0screen\,screen\9{
