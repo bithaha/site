@@ -486,6 +486,19 @@ input[type="file"] > input[type="button"]::-moz-focus-inner{border:none;padding:
 .envi-list dd{width: 288px;height: 288px;float: left;margin: 15px 15px 0 0;}
 .envi-list dd img{width: 100%;}
 
+/* 名师 */
+.tearcher-list{overflow: hidden;width: 105%;}
+.tearcher-list dd{width: 288px;height: 400px;float: left;position:relative;margin: 0 15px 15px 0;overflow: hidden;}
+.tearcher-list dd .img img{width: 100%;}
+.tearcher-list dd .det{position: absolute;z-index: 20;right:15px;line-height:1;bottom: 0;padding-bottom:15px;left: 15px;color:#fff;transition: all .3s;-webkit-transition: all .3s;transform: translateY(100%);-webkit-transform: translateY(100%);}
+.tearcher-list dd .bg{position: absolute;width: 100%;height: 100%;top: 0;left: 0;z-index: 10;background: url(../images/opacity-50.png);opacity: 0;visibility: hidden;transition: all .3s;-webkit-transition: all .3s;}
+.tearcher-list dd .det .name{font-size: 22px;margin-bottom: 10px;}
+.tearcher-list dd .det .zw{font-size: 16px;color:#fefb00;margin-bottom: 10px;}
+.tearcher-list dd .det .desc{font-size: 14px;opacity: .6;filter: alpha(opacity=60);}
+.tearcher-list dd:hover .bg{opacity: 1;visibility: visible;}
+.tearcher-list dd:hover .det{transform: translateY(0);-webkit-transform: translateY(0);}
+
+
 /* for ie */
 @media \0screen\,screen\9{
 .m-img:hover,.tutorial-video li .v-img:hover{filter:alpha(opacity=90);}
