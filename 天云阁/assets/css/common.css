@@ -499,6 +499,21 @@ input[type="file"] > input[type="button"]::-moz-focus-inner{border:none;padding:
 .tearcher-list dd:hover .det{transform: translateY(0);-webkit-transform: translateY(0);}
 
 
+/* 六大班型 */
+.class-slider-list{margin-bottom: 30px;}
+.class-slider-list .slides{width: 105%;height: auto;}
+.class-slider-list li{margin: 0 15px 36px 0;}
+.class-slider-list li dd .red{color: #df0000;}
+.class-slider-list li dd .red em{font-size: 30px;}
+
+/* 画室头条 */
+.site-con{overflow: hidden;}
+.site-con .left{width: 870px;float: left;}
+.site-con .right{width: 300px;float: right;}
+
+
+
+
 /* for ie */
 @media \0screen\,screen\9{
 .m-img:hover,.tutorial-video li .v-img:hover{filter:alpha(opacity=90);}
