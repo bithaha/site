@@ -1,8 +1,0 @@
-导航下拉参考网址：http://www.chunhuashi.com/
-
-侧边栏参考网址：http://vip.hfjy.com/
-
-师资参考网址：http://www.hfjy.com/teachers.html
-
-这是个浮层，一直在最底下：http://www.hfjy.com/teachers.html
-
