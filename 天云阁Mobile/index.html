@@ -2,825 +2,153 @@
 <html>
 <head>
 	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>天云阁</title>
 	<link rel="shortcut icon" href="assets/favicon.ico" type="image/x-icon" />
+	<link rel="stylesheet" href="assets/css/swiper.min.css">
 	<link rel="stylesheet" href="assets/css/common.css">
 	<script type="text/javascript" src="assets/js/jquery.min.js"></script>
 	<script type="text/javascript" src="assets/js/lazyload.js"></script>
-	<script type="text/javascript" src="assets/js/jquery.flexslider-min.js"></script>
+	<script type="text/javascript" src="assets/js/swiper.min.js"></script>
 	<script type="text/javascript" src="assets/js/common.js"></script>
 </head>
 
 <!-- header start -->
 <div class="header">
-	<div class="wraper">
-		<div class="logo"><a href="#"><img src="assets/images/logo.png" alt=""></a></div>
-		<div class="top-right">
-			<div class="tel"><i class="ico-top-tel"></i><span>185-7171-4545</span></div>
-			<div class="links"><a class="btn btn-top-wechat">微信</a><a class="btn btn-top-qq">qq</a></div>
-			<div class="conts"><a class="btn">联系我们</a></div>
-		</div>
-		<div class="navbar">
-			<ul>
-				<li class="active"><a href="#" class="link">首页</a></li>
-				<li><a href="#" class="link">关于我们</a></li>
-				<li><a href="#" class="link">画室资讯</a></li>
-				<li><a href="#" class="link">招生专栏</a></li>
-				<li><a href="#" class="link">画室团队</a></li>
-				<li><a href="#" class="link">教学环境</a></li>
-				<li><a href="#" class="link">文化课</a></li>
-				<li>
-					<a href="#" class="link">历年成绩<span class="arrow"></span></a>
-					<div class="subnav">
-						<dl>
-							<dd><a href="#">素描静物</a></dd>
-							<dd><a href="#">素描头像</a></dd>
-							<dd><a href="#">色彩静物</a></dd>
-							<dd><a href="#">色彩头像</a></dd>
-						</dl>
-						<div class="img"><img src="assets/images/demo/nav-img-1.jpg"></div>
-						<div class="det">这里是文字简介这里是文字简介这里是文字简介这里是文字简介这里是文字简介这里是文字简介这里是文字简介这里是文字简介这里是文字简介这里是文字简介这里是文字简介这里是文字简介这里是文字简介这里是文字简介</div>
-					</div>
-				</li>
-				<li>
-					<a href="#" class="link">作品展示<span class="arrow"></span></a>
-					<div class="subnav">
-						<dl>
-							<dd><a href="#">素描静物</a></dd>
-							<dd><a href="#">素描头像</a></dd>
-							<dd><a href="#">色彩静物</a></dd>
-							<dd><a href="#">色彩头像</a></dd>
-						</dl>
-						<div class="img"><img src="assets/images/demo/nav-img-1.jpg"></div>
-						<div class="det">这里是文字简介这里是文字简介这里是文字简介这里是文字简介这里是文字简介这里是文字简介这里是文字简介这里是文字简介这里是文字简介这里是文字简介这里是文字简介这里是文字简介这里是文字简介这里是文字简介</div>
-					</div>
-				</li>
-				<li>
-					<a href="#" class="link">校区<span class="arrow"></span></a>
-					<div class="subnav">
-						<dl>
-							<dd><a href="#">素描静物</a></dd>
-							<dd><a href="#">素描头像</a></dd>
-							<dd><a href="#">色彩静物</a></dd>
-							<dd><a href="#">色彩头像</a></dd>
-						</dl>
-						<div class="img"><img src="assets/images/demo/nav-img-1.jpg"></div>
-						<div class="det">这里是文字简介这里是文字简介这里是文字简介这里是文字简介这里是文字简介这里是文字简介这里是文字简介这里是文字简介这里是文字简介这里是文字简介这里是文字简介这里是文字简介这里是文字简介这里是文字简介</div>
-					</div>
-				</li>
-			</ul>
-		</div>
+	<div class="logo"><a href="#"><img src="assets/images/logo-white-1.png" alt=""></a></div>
+	<div class="top-right">
+		<a class="tel" href="tel://18571714545"><i class="ico-top-tel"></i><span>185-7171-4545</span></a>
+	</div>
+	<div class="swiper-container navbar">
+	    <div class="swiper-wrapper">
+	        <div class="swiper-slide">
+	        	<ul>
+					<li class="active"><a href="#" class="link">首页</a></li>
+					<li><a href="#" class="link">关于我们</a></li>
+					<li><a href="#" class="link">画室资讯</a></li>
+					<li><a href="#" class="link">招生专栏</a></li>
+					<li><a href="#" class="link">画室团队</a></li>
+					<li><a href="#" class="link">教学环境</a></li>
+					<li><a href="#" class="link">文化课</a></li>
+					<li><a href="#" class="link">历年成绩</a></li>
+					<li><a href="#" class="link">作品展示</a></li>
+					<li><a href="#" class="link">校区</a></li>
+				</ul>
+	        </div>
+	    </div>
+	    <a class="btn-plus"><i class="ico-plus"></i></a>
+	    <!-- <div class="swiper-scrollbar swiper-scrollbar-navbar"></div> -->
 	</div>
 </div>
 <!-- 大图轮播 -->
-<div class="flexslider index-slider">
-    <ul class="slides">
-        <li>
-            <div class="slide-img"><a href="#"><img src="assets/images/demo/banner-1.png"></a></div>
-        </li>
-        <li>
-            <div class="slide-img"><a href="#"><img src="assets/images/demo/banner-1.png"></a></div>
-        </li>
-    </ul>
+<div class="swiper-container index-slider">
+    <div class="swiper-wrapper">
+        <div class="swiper-slide"><img src="assets/images/demo/banner-1.jpg"></div>
+        <div class="swiper-slide"><img src="assets/images/demo/banner-1.jpg"></div>
+        <div class="swiper-slide"><img src="assets/images/demo/banner-1.jpg"></div>
+    </div>
+    <div class="swiper-pagination index-swiper-pagination"></div>
 </div>
+<!--菜单-->
+<div class="list section-menus">
+	<a class="item"><i class="ico-menu-1"></i><span>画室简介</span></a>
+	<a class="item"><i class="ico-menu-2"></i><span>辉煌成绩</span></a>
+	<a class="item"><i class="ico-menu-3"></i><span>名师团队</span></a>
+	<a class="item"><i class="ico-menu-4"></i><span>招生简章</span></a>
+	<a class="item"><i class="ico-menu-5"></i><span>作品展示</span></a>
+	<a class="item"><i class="ico-menu-6"></i><span>教学环境</span></a>
+	<a class="item"><i class="ico-menu-7"></i><span>文化课</span></a>
+	<a class="item"><i class="ico-menu-8"></i><span>联系我们</span></a>
+</div>
+<div class="line"></div>
+<!---->
+<div class="section-activity">
+	<span class="tit">优惠活动</span>
+	<div class="swiper-container activity-slider">
+	    <div class="swiper-wrapper">
+	        <div class="swiper-slide"><a href="#">天云阁画室2018年春季班火热报名中...</a></div>
+	        <div class="swiper-slide"><a href="#">天云阁画室2018年春季班火热报名中...</a></div>
+	        <div class="swiper-slide"><a href="#">天云阁画室2018年春季班火热报名中...</a></div>
+	    </div>
+	</div>
+</div>
+<div class="line"></div>
 <!--画室头条-->
-<div class="layout layout-toutiao">
-	<div class="wraper">
-		<div class="main-tit-bar">
-			<h3 class="title"><span class="red">画室头条</span>最新动向</h3>
-			<div class="desc"><span class="line"></span><span class="txt">The latest trends in the headlines of the studio</span><span class="line"></span></div>
-		</div>
+<div class="section-toutiao">
+	<div class="main-tit-bar">
+		<h3 class="title"><span class="red">家长口碑</span>真实代言</h3>
+		<div class="desc"><span class="l"></span><span class="txt">True word of word of the parent's word of mouth</span><span class="l"></span></div>
 	</div>
-	<div class="wraper">
-		<div class="flexslider toutiao-slider">
-		    <ul class="slides">
-		        <li><a href="#"><img src="assets/images/demo/news-banner-1.png"></a></li>
-		        <li><a href="#"><img src="assets/images/demo/news-banner-1.png"></a></li>
-		    </ul>
-		</div>
-		<div class="in-news-container">
-			<div class="in-news-main">
-				<div class="img"><a href="#"><img src="assets/images/demo/img-1.png"></a></div>
-				<div class="det">
-					<h3 class="tit"><a href="#">让每个学生拿起画笔描绘出灿烂的人生 · 为每个家庭创造精彩的未来！</a></h3>
-					<div class="info">画室活动&nbsp;|&nbsp;发布时间：2018年01月22日&nbsp;12:05:56</div>
-					<div class="desc">这里是文章简介这里是文章简介这里是文章简介这里是文章简介这里是文章简介这里是文章简介这里是文章简介这里是文章简里是文章简介这介...</div>
-				</div>
-			</div>
-			<div class="news-list-1">
-  				<ul>
-	            	<li><span>2018-2-24</span><a href="#" title="">天云阁 | 让每个学生拿起画笔描绘出灿烂的人生 · 为每个家庭创造精彩的未来！</a></li>
-	            	<li><span>2018-2-24</span><b class="ico-txt border red">推荐</b><a href="#" title="">天云阁 | 让每个学生拿起画笔描绘出灿烂的人生 · 为每个家庭创造精彩的未来！</a></li>
-	            	<li><span>2018-2-24</span><a href="#" title="">天云阁 | 让每个学生拿起画笔描绘出灿烂的人生 · 为每个家庭创造精彩的未来！</a></li>
-	            	<li><span>2018-2-24</span><a href="#" title="">天云阁 | 让每个学生拿起画笔描绘出灿烂的人生 · 为每个家庭创造精彩的未来！</a></li>
-	            	<li><span>2018-2-24</span><a href="#" title="">天云阁 | 让每个学生拿起画笔描绘出灿烂的人生 · 为每个家庭创造精彩的未来！</a></li>
-	            	<li><span>2018-2-24</span><b class="ico-txt border green">图集</b><a href="#" title="">天云阁 | 让每个学生拿起画笔描绘出灿烂的人生 · 为每个家庭创造精彩的未来！</a></li>
-	            	<li><span>2018-2-24</span><a href="#" title="">天云阁 | 让每个学生拿起画笔描绘出灿烂的人生 · 为每个家庭创造精彩的未来！</a></li>
-	        	</ul>
-	      	</div>
-		</div>
-	</div>
+	<div class="in-news-list">
+        <a class="item">
+            <span class="img"><img class="lazy" data-src="assets/images/demo/toutiao-img-1.jpg" src="assets/images/demo/news-img-1.png"></span>
+            <span class="det">
+                <span class="tit">国美001画室举行2017-2018年开学典礼 室举年开学典礼</span>
+                <span class="desc"><span>画室活动</span>&nbsp;|&nbsp;<span class="time">2018年01月20日  15:36</span></span>
+            </span>
+        </a>
+        <a class="item">
+            <span class="img"><img class="lazy" data-src="assets/images/demo/toutiao-img-1.jpg" src="assets/images/demo/news-img-1.png"></span>
+            <span class="det">
+                <span class="tit">国美001画室举行2017-2018年开学典礼 室举年开学典礼</span>
+                <span class="desc"><span>作品</span>&nbsp;|&nbsp;<span class="time">2018年01月20日  15:36</span></span>
+            </span>
+        </a>
+        <a class="item">
+            <span class="img"><img class="lazy" data-src="assets/images/demo/toutiao-img-1.jpg" src="assets/images/demo/news-img-1.png"></span>
+            <span class="det">
+                <span class="tit">国美001画室举行2017-2018年开学典礼 室举年开学典礼</span>
+                <span class="desc"><span>画室活动</span>&nbsp;|&nbsp;<span class="time">2018年01月20日  15:36</span></span>
+            </span>
+        </a>
+    </div>
 </div>
+<div class="line"></div>
 <!--六大班型-->
-<div class="layout layout-toutiao">
-	<div class="wraper">
-		<div class="main-tit-bar">
-			<h3 class="title"><span class="red">六大班型</span>自由选择</h3>
-			<div class="desc"><span class="line"></span><span class="txt">Six large class free choice</span><span class="line"></span></div>
+<div class="section-class">
+	<div class="main-tit-bar">
+		<h3 class="title"><span class="red">六大班型</span>自由选择</h3>
+		<div class="desc"><span class="l"></span><span class="txt">Six large class free choice</span><span class="l"></span></div>
+	</div>
+	<div class="class-item">
+		<div class="img"><img src="assets/images/demo/class-main.jpg"></div>
+		<div class="det">
+			<h3>联考精品班</h3>
+			<div class="name">每班限招<b>22</b>人</div>
+			<div class="desc">综合班由天云阁骨干教师授课，更高的联考过线率，更高的统考分数，为你通过联考保驾护航。</div>
+			<div class="btns">
+				<a class="btn"><span>查看课程</span><i class="ico-arrow"></i></a>
+			</div>
 		</div>
-		<div class="flexslider class-slider has-more">
-		    <ul class="slides">
-		        <li>
-		        	<h3 class="tit">联考精品班</h3>
-		        	<div class="img"><img src="assets/images/demo/class-img-1.png"></div>
-		        	<div class="det">
-		        		<p>综合班由天云阁骨干教师授课，更高的联考过线率，更高的统考分数，为你通过联考保驾护航。</p>
-		        		<dl>
-		        			<dd><b>适合学员：</b>高三应、往届希望快速通过联考</dd>
-		        			<dd><b>班级人数：</b>每班限招22人</dd>
-		        			<dd><b>师资配备：</b>画室一级讲师或特聘教师主讲</dd>
-		        		</dl>
-		        		<a class="btn" href="#">立即咨询学习课程</a>
-		        	</div>
-		        </li>
-		        <li>
-		        	<h3 class="tit">联考精品班</h3>
-		        	<div class="img"><img src="assets/images/demo/class-img-1.png"></div>
-		        	<div class="det">
-		        		<p>综合班由天云阁骨干教师授课，更高的联考过线率，更高的统考分数，为你通过联考保驾护航。</p>
-		        		<dl>
-		        			<dd><b>适合学员：</b>高三应、往届希望快速通过联考</dd>
-		        			<dd><b>班级人数：</b>每班限招22人</dd>
-		        			<dd><b>师资配备：</b>画室一级讲师或特聘教师主讲</dd>
-		        		</dl>
-		        		<a class="btn" href="#">立即咨询学习课程</a>
-		        	</div>
-		        </li>
-		        <li>
-		        	<h3 class="tit">联考精品班</h3>
-		        	<div class="img"><img src="assets/images/demo/class-img-1.png"></div>
-		        	<div class="det">
-		        		<p>综合班由天云阁骨干教师授课，更高的联考过线率，更高的统考分数，为你通过联考保驾护航。</p>
-		        		<dl>
-		        			<dd><b>适合学员：</b>高三应、往届希望快速通过联考</dd>
-		        			<dd><b>班级人数：</b>每班限招22人</dd>
-		        			<dd><b>师资配备：</b>画室一级讲师或特聘教师主讲</dd>
-		        		</dl>
-		        		<a class="btn" href="#">立即咨询学习课程</a>
-		        	</div>
-		        </li>
-		        <li>
-		        	<h3 class="tit">联考精品班</h3>
-		        	<div class="img"><img src="assets/images/demo/class-img-1.png"></div>
-		        	<div class="det">
-		        		<p>综合班由天云阁骨干教师授课，更高的联考过线率，更高的统考分数，为你通过联考保驾护航。</p>
-		        		<dl>
-		        			<dd><b>适合学员：</b>高三应、往届希望快速通过联考</dd>
-		        			<dd><b>班级人数：</b>每班限招22人</dd>
-		        			<dd><b>师资配备：</b>画室一级讲师或特聘教师主讲</dd>
-		        		</dl>
-		        		<a class="btn" href="#">立即咨询学习课程</a>
-		        	</div>
-		        </li>
-		    </ul>
-			<a class="btn btn-more" href="#"></a>
-		</div>
-		
 	</div>
 </div>
 <!--金牌团队-->
-<div class="layout layout-jinpai">
-	<div class="wraper">
-		<div class="main-tit-bar">
-			<h3 class="title"><span class="red">金牌团队</span>名师风采</h3>
-			<div class="desc"><span class="line"></span><span class="txt">The demeanor of the gold medal team master</span><span class="line"></span></div>
-		</div>
-		<div class="flexslider team-slider">
-		    <ul class="slides">
-		        <li class="li-1">
-		        	<div class="img"><img src=""></div>
-		        	<div class="det">
-		        		<h3 class="tit"><b>姓名1</b>担任职务</h3>
-		        		<div class="desc">
-		        			<p>综合班由天云阁骨干教师授课</p>
-		        			<p>综合班由天云阁骨干教师授课，更高的联考过线率，更高的统考分数，为你通过联考保驾护航。</p>
-		        		</div>
-		        		<div class="fot">
-		        			<a class="btn" href="#">师资咨询></a>
-		        			<span class="txt">授课时长：<b>5</b><em>年</em></span>
-		        		</div>
-		        		
-		        	</div>
-		        </li>
-		        <li class="li-2">
-		        	<div class="img"><img src=""></div>
-		        	<div class="det">
-		        		<h3 class="tit"><b>姓名2</b>担任职务</h3>
-		        		<div class="desc">
-		        			<p>综合班由天云阁骨干教师授课</p>
-		        			<p>综合班由天云阁骨干教师授课，更高的联考过线率，更高的统考分数，为你通过联考保驾护航。</p>
-		        		</div>
-		        		<div class="fot">
-		        			<a class="btn" href="#">师资咨询></a>
-		        			<span class="txt">授课时长：<b>5</b><em>年</em></span>
-		        		</div>
-		        		
-		        	</div>
-		        </li>
-		        <li class="li-3">
-		        	<div class="img"><img src=""></div>
-		        	<div class="det">
-		        		<h3 class="tit"><b>姓名3</b>担任职务</h3>
-		        		<div class="desc">
-		        			<p>综合班由天云阁骨干教师授课</p>
-		        			<p>综合班由天云阁骨干教师授课，更高的联考过线率，更高的统考分数，为你通过联考保驾护航。</p>
-		        		</div>
-		        		<div class="fot">
-		        			<a class="btn" href="#">师资咨询></a>
-		        			<span class="txt">授课时长：<b>5</b><em>年</em></span>
-		        		</div>
-		        		
-		        	</div>
-		        </li>
-		        <li class="li-4">
-		        	<div class="img"><img src=""></div>
-		        	<div class="det">
-		        		<h3 class="tit"><b>姓名4</b>担任职务</h3>
-		        		<div class="desc">
-		        			<p>综合班由天云阁骨干教师授课</p>
-		        			<p>综合班由天云阁骨干教师授课，更高的联考过线率，更高的统考分数，为你通过联考保驾护航。</p>
-		        		</div>
-		        		<div class="fot">
-		        			<a class="btn" href="#">师资咨询></a>
-		        			<span class="txt">授课时长：<b>5</b><em>年</em></span>
-		        		</div>
-		        		
-		        	</div>
-		        </li>
-		        <li class="li-5">
-		        	<div class="img"><img src=""></div>
-		        	<div class="det">
-		        		<h3 class="tit"><b>姓名5</b>担任职务</h3>
-		        		<div class="desc">
-		        			<p>综合班由天云阁骨干教师授课</p>
-		        			<p>综合班由天云阁骨干教师授课，更高的联考过线率，更高的统考分数，为你通过联考保驾护航。</p>
-		        		</div>
-		        		<div class="fot">
-		        			<a class="btn" href="#">师资咨询></a>
-		        			<span class="txt">授课时长：<b>5</b><em>年</em></span>
-		        		</div>
-		        		
-		        	</div>
-		        </li>
-		        <li class="li-6">
-		        	<div class="img"><img src=""></div>
-		        	<div class="det">
-		        		<h3 class="tit"><b>姓名6</b>担任职务</h3>
-		        		<div class="desc">
-		        			<p>综合班由天云阁骨干教师授课</p>
-		        			<p>综合班由天云阁骨干教师授课，更高的联考过线率，更高的统考分数，为你通过联考保驾护航。</p>
-		        		</div>
-		        		<div class="fot">
-		        			<a class="btn" href="#">师资咨询></a>
-		        			<span class="txt">授课时长：<b>5</b><em>年</em></span>
-		        		</div>
-		        		
-		        	</div>
-		        </li>
-		    </ul>
-		    <div class="control">
-		    	<a class="btn-prev"></a>
-		    	<a class="btn-next"></a>
-		    </div>
-		</div>
-		
+<div class="section-master">
+	<div class="main-tit-bar">
+		<h3 class="title"><span class="red">金牌团队</span>名师风采</h3>
+		<div class="desc"><span class="l"></span><span class="txt">The demeanor of the gold medal team master</span><span class="l"></span></div>
 	</div>
+	<ul class="master-list">
+		<li>
+			<div class="img"><img src="assets/images/demo/head.jpg"></div>
+			<div class="name"><b>姓名</b>担任职务</div>
+			<div class="year"><b>授课时长：<em>5</em>年</b></div>
+			<div class="school"><img src="assets/images/demo/logo-1.jpg"></div>
+		</li>
+		<li>
+			<div class="img"><img src="assets/images/demo/head.jpg"></div>
+			<div class="name"><b>姓名</b>担任职务</div>
+			<div class="year"><b>授课时长：<em>5</em>年</b></div>
+			<div class="school"><img src="assets/images/demo/logo-1.jpg"></div>
+		</li>
+	</ul>
 </div>
-<!--校园环境-->
-<div class="layout layout-environment">
-	<div class="wraper">
-		<div class="main-tit-bar">
-			<h3 class="title"><span class="red">校园环境</span>温馨如家</h3>
-			<div class="desc"><span class="line"></span><span class="txt">The campus environment is like a home </span><span class="line"></span></div>
-		</div>
-		<div class="sliders-tabs slider-tabs-environment"></div>
-		<div class="flexslider environment-slider">
-		    <ul class="slides">
-		        <li>
-		        	<div class="m-img img-1"><img src="assets/images/demo/hj-img-1.png"></div>
-		        	<div class="m-img img-2"><img src="assets/images/demo/hj-img-2.png"></div>
-		        	<div class="m-img img-3"><img src="assets/images/demo/hj-img-3.png"></div>
-		        	<div class="m-img img-4"><img src="assets/images/demo/hj-img-4.png"></div>
-		        	<div class="m-img img-5"><img src="assets/images/demo/hj-img-5.png"></div>
-		        	<div class="m-img img-6"><img src="assets/images/demo/hj-img-6.png"></div>
-		        	<div class="m-img img-7"><img src="assets/images/demo/hj-img-7.png"></div>
-		        	<div class="m-img img-8"><a class="more" href="#">查看更多<i class="ico-more-w"></i></a></div>
-		        </li>
-		        <li>
-		        	<div class="m-img img-1"><img src="assets/images/demo/hj-img-1.png"></div>
-		        	<div class="m-img img-2"><img src="assets/images/demo/hj-img-2.png"></div>
-		        	<div class="m-img img-3"><img src="assets/images/demo/hj-img-3.png"></div>
-		        	<div class="m-img img-4"><img src="assets/images/demo/hj-img-4.png"></div>
-		        	<div class="m-img img-5"><img src="assets/images/demo/hj-img-5.png"></div>
-		        	<div class="m-img img-6"><img src="assets/images/demo/hj-img-6.png"></div>
-		        	<div class="m-img img-7"><img src="assets/images/demo/hj-img-7.png"></div>
-		        	<div class="m-img img-8"><a class="more" href="#">查看更多<i class="ico-more-w"></i></a></div>
-		        </li>
-		    </ul>
-		</div>
-		
-	</div>
-</div>
-<!--效率最高-->
-<div class="layout layout-effic">
-	<div class="wraper">
-		<div class="main-tit-bar">
-			<h3 class="title"><span class="red">效率最高</span>提分最快</h3>
-			<div class="desc"><span class="line"></span><span class="txt">Maximum efficiency is the fastest</span><span class="line"></span></div>
-		</div>
-		<div class="effic-des">
-			<p>我校将高中各科知识按章节分模块归类，编写了具有特色的《艺考生高考必备专题教程》教材</p>
-			<p>每节课教师讲多少知识，学生做多少题，如何考核都有严格的规定和安排</p>
-			<p>学会每堂课，学生才吃饭；学会每天课，学生才睡觉；学会每周课，学生才放假；学会每月课，学生才合格</p>
-		</div>
-		<div class="effic-con">
-			<ul class="tits">
-				<li class="t-1"><b>01</b><span>【堂堂清】</span></li>
-				<li class="t-2"><b>02</b><span>【日日清】</span></li>
-				<li class="t-3"><b>03</b><span>【周周清】</span></li>
-				<li class="t-4"><b>04</b><span>【月月清】</span></li>
-			</ul>
-			<div class="img"></div>
-			<ul class="txts">
-				<li class="t-1"><p>当堂疑惑当堂解决</p><p>不把问题留到课后</p></li>
-				<li class="t-2"><p>当天学习任务当天完成</p><p>什么时候过关什么时候休息</p><p>力求“今日事今日毕”</p></li>
-				<li class="t-3"><p>实行学习内容验收制度</p><p>结合周考由班主任</p><p>逐一检验学生各科本周学习效果</p></li>
-				<li class="t-4"><p>一月一大考</p><p>根据试卷分析学生知识点掌握情况</p><p>制定学习解决方案及时落实</p><p>确保每周小进步，每月大进步</p></li>
-			</ul>
-		</div>
-	</div>
-</div>
-<!--高考情况-->
-<div class="layout layout-wenhuake">
-	<div class="wraper">
-		<table class="score-table">
-			<tr>
-				<td width="25%"><h3 class="tit">96.1%</h3></td>
-				<td width="25%"><h3 class="tit">90%<em>以上</em></h3></td>
-				<td width="25%"><h3 class="tit">3-6<em>个月</em></h3></td>
-				<td width="25%"><h3 class="tit">137<em>分</em></h3></td>
-			</tr>
-			<tr>
-				<td>2017界高考本科过线率</td>
-				<td>高考一本线通过率</td>
-				<td><p>真正实现</p><p>文化课成绩大跃升</p></td>
-				<td>雷嘉兴高考415提高137分考入湖北美术学院</td>
-			</tr>
-		</table>
-		<ul class="wenhua-list">
-			<li>
-				<div class="img"><a href="#"><img src="assets/images/demo/cc-img-1.png"></a></div>
-				<div class="det">
-					<h3 class="tit"><a href="#">学校简介</a></h3>
-					<div class="desc">
-						武汉天云阁画室艺考生文化课集训基地是由原华师一附中、武汉外校等武汉市重点中学一线教师。
-					</div>
-					<a href="#" class="btn"><i class="ico-arrow-r"></i></a>
-				</div>
-			</li>
-			<li>
-				<div class="img"><a href="#"><img src="assets/images/demo/cc-img-1.png"></a></div>
-				<div class="det">
-					<h3 class="tit"><a href="#">学校简介</a></h3>
-					<div class="desc">
-						武汉天云阁画室艺考生文化课集训基地是由原华师一附中、武汉外校等武汉市重点中学一线教师。
-					</div>
-					<a href="#" class="btn"><i class="ico-arrow-r"></i></a>
-				</div>
-			</li>
-			<li>
-				<div class="img"><a href="#"><img src="assets/images/demo/cc-img-1.png"></a></div>
-				<div class="det">
-					<h3 class="tit"><a href="#">学校简介</a></h3>
-					<div class="desc">
-						武汉天云阁画室艺考生文化课集训基地是由原华师一附中、武汉外校等武汉市重点中学一线教师。
-					</div>
-					<a href="#" class="btn"><i class="ico-arrow-r"></i></a>
-				</div>
-			</li>
-			<li>
-				<div class="img"><a href="#"><img src="assets/images/demo/cc-img-1.png"></a></div>
-				<div class="det">
-					<h3 class="tit"><a href="#">学校简介</a></h3>
-					<div class="desc">
-						武汉天云阁画室艺考生文化课集训基地是由原华师一附中、武汉外校等武汉市重点中学一线教师。
-					</div>
-					<a href="#" class="btn"><i class="ico-arrow-r"></i></a>
-				</div>
-			</li>
-		</ul>
-		<div class="wenhua-btn"><a class="btn btn-border" href="#">查看文化课专版 ></a></div>
-	</div>
-</div>
-<!--行业优势-->
-<div class="layout layout-youshi">
-	<div class="wraper">
-		<div class="main-tit-bar white">
-			<h3 class="title"><span class="red">行业领先</span>优势对比</h3>
-			<div class="desc"><span class="line"></span><span class="txt">Works of teachers and students</span><span class="line"></span></div>
-		</div>
-		<div class="youshi-wigt">
-			<div class="youshi-wigt-1">
-				<ul>
-					<li>
-						<h3 class="title">其他机构：</h3>
-					</li>
-					<li>
-						<div class="img"><i class="ico-ys-1"></i></div>
-						<div class="det">
-							<h3 class="tit">一个老师能有几双手？</h3>
-							<p class="desc del">某些机构打包学员上大课，老师不够，视频直播来凑。</p>
-						</div>
-					</li>
-					<li>
-						<div class="img"><i class="ico-ys-2"></i></div>
-						<div class="det">
-							<h3 class="tit">低升学率！哪来的前途？</h3>
-							<p class="desc del">通过率平平，成绩不稳定，无法更加给学员一个好的平台。</p>
-						</div>
-					</li>
-					<li>
-						<div class="img"><i class="ico-ys-3"></i></div>
-						<div class="det">
-							<h3 class="tit">低升学率！哪来的前途？</h3>
-							<p class="desc del">通过率平平，成绩不稳定，无法更加给学员一个好的平台。</p>
-						</div>
-					</li>
-					<li>
-						<div class="img"><i class="ico-ys-4"></i></div>
-						<div class="det">
-							<h3 class="tit">跟不上时代的步伐？</h3>
-							<p class="desc del">小型画室在时代面前不能做到科学教学，智能教学！实现不了学生。</p>
-						</div>
-					</li>
-				</ul>
-			</div>
-			<div class="youshi-wigt-2">
-				<ul>
-					<li>
-						<h3 class="title">天云阁画室：</h3>
-					</li>
-					<li>
-						<div class="img"><i class="ico-ys-5"></i></div>
-						<div class="det">
-							<h3 class="tit">学不会不可能</h3>
-							<p class="desc">真正的小班授课，老师：学员 1:15，理论实操全吸收。</p>
-						</div>
-					</li>
-					<li>
-						<div class="img"><i class="ico-ys-6"></i></div>
-						<div class="det">
-							<h3 class="tit">超高升学率</h3>
-							<p class="desc">通过率超高，对清美、央美、八大美院也是超高比例。</p>
-						</div>
-					</li>
-					<li>
-						<div class="img"><i class="ico-ys-7"></i></div>
-						<div class="det">
-							<h3 class="tit">浓郁的学习氛围</h3>
-							<p class="desc">画室注重学习氛围，杜绝影响学习的一切不良因素。</p>
-						</div>
-					</li>
-					<li>
-						<div class="img"><i class="ico-ys-8"></i></div>
-						<div class="det">
-							<h3 class="tit">智慧校园线上线下</h3>
-							<p class="desc">家校互通，传统与智能相结合，实现科学管理，家校通！</p>
-						</div>
-					</li>
-				</ul>
-			</div>
-		</div>
-		
-	</div>
-	<div class="bg"><div class="l"></div><div class="r"></div></div>
-</div>
-<!--辉煌成绩-->
-<div class="layout layout-chengji">
-	<div class="wraper">
-		<div class="main-tit-bar">
-			<h3 class="title"><span class="red">辉煌成绩</span>教学成果</h3>
-			<div class="desc"><span class="line"></span><span class="txt">Achievements in teaching brilliant achievements</span><span class="line"></span></div>
-		</div>
-		<div class="chengji-wraper">
-			<div class="chengji-tit"><h3>98%</h3><p>联考本科过线率</p></div>
-			<div class="chengji-ico-bar"><span class="l"></span><span class="r"></span></div>
-			<div class="chengji-con">
-				<div class="chengji-con-site">
-					<h3 class="title">2017年天云阁画室美术联考成绩汇报</h3>
-					<div class="info">
-						<p>武汉天云阁画室2017年学员共计202人，在我们团队带领下，创造了湖北省联考98％的本科过线率</p>
-						<p>其中河南校区第一年参加统考的33名学生100％通过河南省Ａ类线，在此向社会公布本画室真实成绩...</p>
-					</div>
-					<table>
-						<tr>
-							<th>天云阁学员</th><th>战绩</th><th>天云阁学员</th><th>战绩</th><th>天云阁学员</th><th>战绩</th>
-						</tr>
-						<tr>
-							<td>巫培培</td><td>272</td><td>巫培培</td><td>272</td><td>巫培培</td><td>272</td>
-						</tr>
-						<tr>
-							<td>巫培培</td><td>272</td><td>巫培培</td><td>272</td><td>巫培培</td><td>272</td>
-						</tr>
-						<tr>
-							<td>巫培培</td><td>272</td><td>巫培培</td><td>272</td><td>巫培培</td><td>272</td>
-						</tr>
-						<tr>
-							<td>巫培培</td><td>272</td><td>巫培培</td><td>272</td><td>巫培培</td><td>272</td>
-						</tr>
-						<tr>
-							<td>巫培培</td><td>272</td><td>巫培培</td><td>272</td><td>巫培培</td><td>272</td>
-						</tr>
-						<tr>
-							<td>巫培培</td><td>272</td><td>巫培培</td><td>272</td><td>巫培培</td><td>272</td>
-						</tr>
-						<tr>
-							<td>巫培培</td><td>272</td><td>巫培培</td><td>272</td><td>巫培培</td><td>272</td>
-						</tr>
-						<tr>
-							<td>巫培培</td><td>272</td><td>巫培培</td><td>272</td><td>巫培培</td><td>272</td>
-						</tr>
-						<tr>
-							<td>巫培培</td><td>272</td><td>巫培培</td><td>272</td><td>巫培培</td><td>272</td>
-						</tr>
-						<tr>
-							<td>巫培培</td><td>272</td><td>巫培培</td><td>272</td><td>巫培培</td><td>272</td>
-						</tr>
-					</table>
-				</div>
-			</div>
-			<div class="chengji-ico-bar bottom"><span class="l"></span><span class="r"></span></div>
-		</div>
-		
-	</div>
-</div>
-<!--过线学员-->
-<div class="layout layout-xueyuan">
-	<div class="wraper">
-		<h3 class="xueyuan-title">2017年天云阁画室重点院校过线学员</h3>
-		<div class="description">
-			<p>武汉天云阁画室2017年学员共计202人，在我们团队带领下，创造了湖北省联考98％的本科过线率</p>
-			<p>其中河南校区第一年参加统考的33名学生100％通过河南省Ａ类线</p>
-			<p>在此向社会公布本画室真实成绩。</p>
-		</div>
-		<div class="flexslider student-slider has-more">
-		    <ul class="slides">
-		        <li>
-		        	<dl class="xueyaun-list">
-						<dd>
-							<div class="img"><img src="assets/images/demo/uhead-1.png"></div>
-							<div class="name"><b>于珂</b>江汉高中</div>
-							<div class="sc"><span class="tag">湖北美术学院</span></div>
-						</dd>
-						<dd>
-							<div class="img"><img src="assets/images/demo/uhead-2.png"></div>
-							<div class="name"><b>于珂</b>江汉高中</div>
-							<div class="sc"><span class="tag">湖北美术学院</span></div>
-						</dd>
-						<dd>
-							<div class="img"><img src="assets/images/demo/uhead-3.png"></div>
-							<div class="name"><b>于珂</b>江汉高中</div>
-							<div class="sc"><span class="tag">湖北美术学院</span></div>
-						</dd>
-						<dd>
-							<div class="img"><img src="assets/images/demo/uhead-4.png"></div>
-							<div class="name"><b>于珂</b>江汉高中</div>
-							<div class="sc"><span class="tag">湖北美术学院</span></div>
-						</dd>
-						<dd>
-							<div class="img"><img src="assets/images/demo/uhead-5.png"></div>
-							<div class="name"><b>于珂</b>江汉高中</div>
-							<div class="sc"><span class="tag">湖北美术学院</span></div>
-						</dd>
-						<dd>
-							<div class="img"><img src="assets/images/demo/uhead-6.png"></div>
-							<div class="name"><b>于珂</b>江汉高中</div>
-							<div class="sc"><span class="tag">湖北美术学院</span></div>
-						</dd>
-						<dd>
-							<div class="img"><img src="assets/images/demo/uhead-7.png"></div>
-							<div class="name"><b>于珂</b>江汉高中</div>
-							<div class="sc"><span class="tag">湖北美术学院</span></div>
-						</dd>
-						<dd>
-							<div class="img"><img src="assets/images/demo/uhead-1.png"></div>
-							<div class="name"><b>于珂</b>江汉高中</div>
-							<div class="sc"><span class="tag">湖北美术学院</span></div>
-						</dd>
-						<dd>
-							<div class="img"><img src="assets/images/demo/uhead-2.png"></div>
-							<div class="name"><b>于珂</b>江汉高中</div>
-							<div class="sc"><span class="tag">湖北美术学院</span></div>
-						</dd>
-						<dd>
-							<div class="img"><img src="assets/images/demo/uhead-3.png"></div>
-							<div class="name"><b>于珂</b>江汉高中</div>
-							<div class="sc"><span class="tag">湖北美术学院</span></div>
-						</dd>
-						<dd>
-							<div class="img"><img src="assets/images/demo/uhead-4.png"></div>
-							<div class="name"><b>于珂</b>江汉高中</div>
-							<div class="sc"><span class="tag">湖北美术学院</span></div>
-						</dd>
-						<dd>
-							<div class="img"><img src="assets/images/demo/uhead-5.png"></div>
-							<div class="name"><b>于珂</b>江汉高中</div>
-							<div class="sc"><span class="tag">湖北美术学院</span></div>
-						</dd>
-						<dd>
-							<div class="img"><img src="assets/images/demo/uhead-6.png"></div>
-							<div class="name"><b>于珂</b>江汉高中</div>
-							<div class="sc"><span class="tag">湖北美术学院</span></div>
-						</dd>
-						<dd>
-							<div class="img"><img src="assets/images/demo/uhead-7.png"></div>
-							<div class="name"><b>于珂</b>江汉高中</div>
-							<div class="sc"><span class="tag">湖北美术学院</span></div>
-						</dd>
-						<dd>
-							<div class="img"><img src="assets/images/demo/uhead-1.png"></div>
-							<div class="name"><b>于珂</b>江汉高中</div>
-							<div class="sc"><span class="tag">湖北美术学院</span></div>
-						</dd>
-						<dd>
-							<div class="img"><img src="assets/images/demo/uhead-2.png"></div>
-							<div class="name"><b>于珂</b>江汉高中</div>
-							<div class="sc"><span class="tag">湖北美术学院</span></div>
-						</dd>
-						<dd>
-							<div class="img"><img src="assets/images/demo/uhead-3.png"></div>
-							<div class="name"><b>于珂</b>江汉高中</div>
-							<div class="sc"><span class="tag">湖北美术学院</span></div>
-						</dd>
-						<dd>
-							<div class="img"><img src="assets/images/demo/uhead-4.png"></div>
-							<div class="name"><b>于珂</b>江汉高中</div>
-							<div class="sc"><span class="tag">湖北美术学院</span></div>
-						</dd>
-						<dd>
-							<div class="img"><img src="assets/images/demo/uhead-5.png"></div>
-							<div class="name"><b>于珂</b>江汉高中</div>
-							<div class="sc"><span class="tag">湖北美术学院</span></div>
-						</dd>
-						<dd>
-							<div class="img"><img src="assets/images/demo/uhead-6.png"></div>
-							<div class="name"><b>于珂</b>江汉高中</div>
-							<div class="sc"><span class="tag">湖北美术学院</span></div>
-						</dd>
-						<dd>
-							<div class="img"><img src="assets/images/demo/uhead-7.png"></div>
-							<div class="name"><b>于珂</b>江汉高中</div>
-							<div class="sc"><span class="tag">湖北美术学院</span></div>
-						</dd>
-					</dl>
-		        </li>
-		        <li>
-		        	<dl class="xueyaun-list">
-						<dd>
-							<div class="img"><img src="assets/images/demo/uhead-2.png"></div>
-							<div class="name"><b>于珂d</b>江汉高中</div>
-							<div class="sc"><span class="tag">湖北美术学院</span></div>
-						</dd>
-						<dd>
-							<div class="img"><img src="assets/images/demo/uhead-3.png"></div>
-							<div class="name"><b>于珂d</b>江汉高中</div>
-							<div class="sc"><span class="tag">湖北美术学院</span></div>
-						</dd>
-						<dd>
-							<div class="img"><img src="assets/images/demo/uhead-1.png"></div>
-							<div class="name"><b>于珂d</b>江汉高中</div>
-							<div class="sc"><span class="tag">湖北美术学院</span></div>
-						</dd>
-						<dd>
-							<div class="img"><img src="assets/images/demo/uhead-4.png"></div>
-							<div class="name"><b>于珂d</b>江汉高中</div>
-							<div class="sc"><span class="tag">湖北美术学院</span></div>
-						</dd>
-						<dd>
-							<div class="img"><img src="assets/images/demo/uhead-5.png"></div>
-							<div class="name"><b>于珂</b>江汉高中</div>
-							<div class="sc"><span class="tag">湖北美术学院</span></div>
-						</dd>
-						<dd>
-							<div class="img"><img src="assets/images/demo/uhead-6.png"></div>
-							<div class="name"><b>于珂</b>江汉高中</div>
-							<div class="sc"><span class="tag">湖北美术学院</span></div>
-						</dd>
-						<dd>
-							<div class="img"><img src="assets/images/demo/uhead-7.png"></div>
-							<div class="name"><b>于珂</b>江汉高中</div>
-							<div class="sc"><span class="tag">湖北美术学院</span></div>
-						</dd>
-						<dd>
-							<div class="img"><img src="assets/images/demo/uhead-1.png"></div>
-							<div class="name"><b>于珂</b>江汉高中</div>
-							<div class="sc"><span class="tag">湖北美术学院</span></div>
-						</dd>
-						<dd>
-							<div class="img"><img src="assets/images/demo/uhead-2.png"></div>
-							<div class="name"><b>于珂</b>江汉高中</div>
-							<div class="sc"><span class="tag">湖北美术学院</span></div>
-						</dd>
-						<dd>
-							<div class="img"><img src="assets/images/demo/uhead-3.png"></div>
-							<div class="name"><b>于珂</b>江汉高中</div>
-							<div class="sc"><span class="tag">湖北美术学院</span></div>
-						</dd>
-						<dd>
-							<div class="img"><img src="assets/images/demo/uhead-4.png"></div>
-							<div class="name"><b>于珂</b>江汉高中</div>
-							<div class="sc"><span class="tag">湖北美术学院</span></div>
-						</dd>
-						<dd>
-							<div class="img"><img src="assets/images/demo/uhead-5.png"></div>
-							<div class="name"><b>于珂</b>江汉高中</div>
-							<div class="sc"><span class="tag">湖北美术学院</span></div>
-						</dd>
-						<dd>
-							<div class="img"><img src="assets/images/demo/uhead-6.png"></div>
-							<div class="name"><b>于珂</b>江汉高中</div>
-							<div class="sc"><span class="tag">湖北美术学院</span></div>
-						</dd>
-						<dd>
-							<div class="img"><img src="assets/images/demo/uhead-7.png"></div>
-							<div class="name"><b>于珂</b>江汉高中</div>
-							<div class="sc"><span class="tag">湖北美术学院</span></div>
-						</dd>
-						<dd>
-							<div class="img"><img src="assets/images/demo/uhead-1.png"></div>
-							<div class="name"><b>于珂</b>江汉高中</div>
-							<div class="sc"><span class="tag">湖北美术学院</span></div>
-						</dd>
-						<dd>
-							<div class="img"><img src="assets/images/demo/uhead-2.png"></div>
-							<div class="name"><b>于珂</b>江汉高中</div>
-							<div class="sc"><span class="tag">湖北美术学院</span></div>
-						</dd>
-						<dd>
-							<div class="img"><img src="assets/images/demo/uhead-3.png"></div>
-							<div class="name"><b>于珂</b>江汉高中</div>
-							<div class="sc"><span class="tag">湖北美术学院</span></div>
-						</dd>
-						<dd>
-							<div class="img"><img src="assets/images/demo/uhead-4.png"></div>
-							<div class="name"><b>于珂</b>江汉高中</div>
-							<div class="sc"><span class="tag">湖北美术学院</span></div>
-						</dd>
-						<dd>
-							<div class="img"><img src="assets/images/demo/uhead-5.png"></div>
-							<div class="name"><b>于珂</b>江汉高中</div>
-							<div class="sc"><span class="tag">湖北美术学院</span></div>
-						</dd>
-						<dd>
-							<div class="img"><img src="assets/images/demo/uhead-6.png"></div>
-							<div class="name"><b>于珂</b>江汉高中</div>
-							<div class="sc"><span class="tag">湖北美术学院</span></div>
-						</dd>
-						<dd>
-							<div class="img"><img src="assets/images/demo/uhead-7.png"></div>
-							<div class="name"><b>于珂</b>江汉高中</div>
-							<div class="sc"><span class="tag">湖北美术学院</span></div>
-						</dd>
-					</dl>
-		        </li>
-		    </ul>
-			<a class="btn btn-more" href="#"></a>
-		</div>
-		
-	</div>
-</div>
-
-<!--家长口碑-->
-<div class="layout layout-mouth">
-	<div class="wraper">
-		<div class="main-tit-bar white">
-			<h3 class="title"><span class="red">家长口碑</span>真实代言</h3>
-			<div class="desc"><span class="line"></span><span class="txt">True word of word of the parent's word of mouth</span><span class="line"></span></div>
-		</div>
-		<ul class="mouth-list">
-			<li><img src="assets/images/demo/phone-1.png"></li>
-			<li><img src="assets/images/demo/phone-2.png"></li>
-			<li><img src="assets/images/demo/phone-3.png"></li>
-		</ul>
-	</div>
-</div>
-
 <!--师生作品-->
 <div class="layout layout-work">
 	<div class="wraper">
 		<div class="main-tit-bar">
 			<h3 class="title"><span class="red">师生作品</span>大图赏析</h3>
-			<div class="desc"><span class="line"></span><span class="txt">Works of teachers and students</span><span class="line"></span></div>
+			<div class="desc"><span class="l"></span><span class="txt">Works of teachers and students</span><span class="l"></span></div>
 		</div>
 	</div>
 	<div class="sliders-tabs slider-tabs-work"></div>
@@ -957,54 +285,32 @@
 	</div>
 </div>
 <!-- footer end -->
-<link rel="stylesheet" type="text/css" href="assets/css/jquery.mCustomScrollbar.css">
-<script src="assets/js/jquery.mCustomScrollbar.concat.min.js"></script>
+
 
 <script type="text/javascript">
 $(function(){
-	$(".index-slider").flexslider({
-        animation:"fade",
-        slideshowSpeed:6e3
+	window.initRem && initRem();
+	/*导航*/
+	var swiper1 = new Swiper('.navbar', {
+		direction: 'horizontal',
+		slidesPerView: 'auto',
+		freeMode: true,
+		scrollbar: {
+			el: '.swiper-scrollbar-navbar',
+		},
+		mousewheel: true,
     });
-    $(".toutiao-slider").flexslider({
-        animation:"fade",
-        slideshowSpeed:6e3
+    /*大图轮播*/
+    var swiper2 = new Swiper('.index-slider', {
+    	pagination: {
+        	el: '.index-swiper-pagination',
+    	},
     });
-    $(".class-slider").flexslider({
-        animation:"slide",
-        slideshowSpeed:6e3,
-        itemWidth: 390,
-        itemMargin: 15,
-        controlNav: false
+    /*优惠活动*/
+    var swiper3 = new Swiper('.activity-slider', {
+    	direction: 'vertical',
+    	autoplay: true
     });
-    $(".student-slider").flexslider({
-        animation:"slide",
-        slideshowSpeed:6e3,
-        controlNav: false
-    });
-    $(".work-slider").flexslider({
-        animation:"slide",
-        slideshowSpeed:6e3,
-        itemWidth: 415,
-        itemMargin: 10,
-        controlNav: true,
-        controlsContainerNav: $('.slider-tabs-work'),/* 自定义分页器容器 */
-        pagesText:["教师作品","学生作品","素描作品","色彩作品","速写作品"]/* 自定义分页器文本显示 */
-    });
-    $(".environment-slider").flexslider({
-        animation:"slide",
-        slideshowSpeed:6e3,
-        controlNav: true,
-        controlsContainerNav: $('.slider-tabs-environment'),/* 自定义分页器容器 */
-        pagesText:["武汉校区","河南校区"]/* 自定义分页器文本显示 */
-    });
-
-
-    $(".chengji-con").mCustomScrollbar({
-		scrollButtons:{
-			enable:true
-		}
-	})
 
 
 });

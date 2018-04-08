@@ -1,15 +1,26 @@
+/* rem布局， 
+    长度rem = 设计图实际像素/100
+*/
+(function(doc, win) {
+    var docEl = doc.documentElement,
+        resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
+        recalc = function() {
+            var clientWidth = docEl.clientWidth;
+            if (!clientWidth) return;
+            if(clientWidth < 600){
+                docEl.style.fontSize = 100 * document.body.clientWidth / 750 + 'px';
+            }else{
+                docEl.style.fontSize = 100 * 600 / 750 + 'px';
+            }
+        };
 
+    if (!doc.addEventListener) return;
+    win.initRem = recalc;
+    win.onresize = function(){recalc();};
+    win.addEventListener(resizeEvt, recalc, false);
+    doc.addEventListener('DOMContentLoaded', recalc, false);
+})(document, window);
 
-$(function(){
-	$('.tabs').each(function(){
-		$(this).find('li').eq(0).addClass('active').siblings().removeClass('active');
-		$(this).next('.tabs-panels').find('.tabs-panel').eq(0).addClass('active').siblings().removeClass('active');
-	});
-	$(document).on('click','.tabs > li',function(){
-		$(this).addClass('active').siblings().removeClass('active');
-		$(this).parent().next().find('.tabs-panel').eq($(this).index()).addClass('active').siblings().removeClass('active');
-	});
-})
 
 $(function(){
 	/* 懒加载 */
