@@ -105,4 +105,28 @@ img[src=""]{opacity: 0;}
 .class-item .det .btn i{margin-left: .25rem;}
 /*金牌团队*/
 .master-list{overflow: hidden;margin: 0 .25rem;}
-.master-list li{width: 50%;float: left;}
+.master-list li{width: 50%;float: left;text-align: center;color:#666;position: relative;padding: .3rem 0;}
+.master-list li .img{width: 1.5rem;height: 1.5rem;padding: .1rem;border-radius: 50%;overflow: hidden;margin: 0 auto;border:1px solid #ddd;margin-bottom: .2rem;}
+.master-list li .name{font-size: .24rem;margin-bottom: .15rem;}
+.master-list li .name b{font-size: .3rem;font-weight: normal;color: #000;margin-right: .2rem;}
+.master-list li .year b{font-weight: normal;color:#df0000;}
+.master-list li .year b em{font-size: .36rem;}
+.master-list li .school{margin-top: .2rem;}
+.master-list li .school img{height: .4rem;}
+.master-list li:before,.master-list li:after{content:"";display:block;width: 1px;top: 0;bottom: .35rem;background:#eee;position: absolute;right:0;}
+.master-list li:after{right: .35rem;top:0;bottom:auto;left:0;width: auto;height: 1px;}
+.master-list li:nth-child(2n):before,.master-list li:nth-child(1):after,.master-list li:nth-child(2):after{display: none;}
+.master-list li:nth-child(2n):after{left:.35rem;right:0;}
+.master-list li:nth-child(3n):before{top:.35rem;bottom:0;}
+
+.btn-border-area{padding: .45rem 0;text-align: center;}
+.btn-border-area .btn{display: inline-block;line-height: .6rem;color:#df0000;font-size: .3rem;padding: 0 .45rem;border-radius: .6rem;border: 1px solid #df0000;}
+
+.sliders-tabs{text-align: center;margin-bottom: .4rem;font-size: 0;}
+.sliders-tabs span{display: inline-block;margin: 0 .1rem;font-size: .26rem;height: .45rem;line-height: .45rem;border:1px solid #aaa;padding: 0 .2rem;color:#666;width: auto;border-radius:0;background:#fff;opacity: 1;}
+.sliders-tabs .swiper-pagination-bullet-active{border-color:#df0000;background:#df0000;color:#fff;}
+/**/
+.environment-slider .swiper-slide{height: 5rem;}
+.environment-slider .img-1{position: absolute;width: 5rem;height: 5rem;top:0;left: 0;}
+.environment-slider .img-2{position: absolute;width: 2.4rem;height: 2.4rem;top:0;right: 0;}
+.environment-slider .img-3{position: absolute;width: 2.4rem;height: 2.4rem;bottom:0;right: 0;}

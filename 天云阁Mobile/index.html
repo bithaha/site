@@ -132,8 +132,20 @@
 		<li>
 			<div class="img"><img src="assets/images/demo/head.jpg"></div>
 			<div class="name"><b>姓名</b>担任职务</div>
+			<div class="year">授课时长：<b><em>5</em>年</b></div>
+			<div class="school"><img src="assets/images/demo/logo-2.jpg"></div>
+		</li>
+		<li>
+			<div class="img"><img src="assets/images/demo/head.jpg"></div>
+			<div class="name"><b>姓名</b>担任职务</div>
 			<div class="year"><b>授课时长：<em>5</em>年</b></div>
 			<div class="school"><img src="assets/images/demo/logo-1.jpg"></div>
+		</li>
+		<li>
+			<div class="img"><img src="assets/images/demo/head.jpg"></div>
+			<div class="name"><b>姓名</b>担任职务</div>
+			<div class="year">授课时长：<b><em>5</em>年</b></div>
+			<div class="school"><img src="assets/images/demo/logo-2.jpg"></div>
 		</li>
 		<li>
 			<div class="img"><img src="assets/images/demo/head.jpg"></div>
@@ -142,7 +154,52 @@
 			<div class="school"><img src="assets/images/demo/logo-1.jpg"></div>
 		</li>
 	</ul>
+	<div class="btn-border-area"><a class="btn">查看更多 ></a></div>
 </div>
+<div class="line"></div>
+<!--校园环境-->
+<div class="section-class">
+	<div class="main-tit-bar">
+		<h3 class="title"><span class="red">校园环境</span>温馨如家</h3>
+		<div class="desc"><span class="l"></span><span class="txt">The campus environment is like a home </span><span class="l"></span></div>
+	</div>
+	
+	<div class="swiper-container environment-slider">
+		<div class="sliders-tabs slider-tabs-environment"></div>
+	    <div class="swiper-wrapper">
+	        <div class="swiper-slide">
+	        	<div class="img img-1"><img src="assets/images/demo/envi-img-1.jpg"></div>
+	        	<div class="img img-2"><img src="assets/images/demo/envi-img-1.jpg"></div>
+	        	<div class="img img-3"><img src="assets/images/demo/envi-img-1.jpg"></div>
+	        </div>
+	        <div class="swiper-slide">
+	        	<div class="img img-1"><img src="assets/images/demo/envi-img-1.jpg"></div>
+	        	<div class="img img-2"><img src="assets/images/demo/envi-img-1.jpg"></div>
+	        	<div class="img img-3"><img src="assets/images/demo/envi-img-1.jpg"></div>
+	        </div>
+	    </div>
+	</div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 <!--师生作品-->
 <div class="layout layout-work">
 	<div class="wraper">
@@ -310,6 +367,16 @@ $(function(){
     var swiper3 = new Swiper('.activity-slider', {
     	direction: 'vertical',
     	autoplay: true
+    });
+    /*教学环境*/
+    var swiper4 = new Swiper('.environment-slider', {
+    	pagination: {
+        	el: '.slider-tabs-environment',
+        	renderBullet: function (index, className) {
+        		var envis = ["武汉校区","河南校区"]
+	          return '<span class="' + className + '">' + (envis[index] || (index + 1)) + '</span>';
+	        },
+    	},
     });
 
 
