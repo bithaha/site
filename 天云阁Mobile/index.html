@@ -158,7 +158,7 @@
 </div>
 <div class="line"></div>
 <!--校园环境-->
-<div class="section-class">
+<div class="section-environment">
 	<div class="main-tit-bar">
 		<h3 class="title"><span class="red">校园环境</span>温馨如家</h3>
 		<div class="desc"><span class="l"></span><span class="txt">The campus environment is like a home </span><span class="l"></span></div>
@@ -179,9 +179,90 @@
 	        </div>
 	    </div>
 	</div>
+	<div class="btn-border-area"><a class="btn">查看更多 ></a></div>
 </div>
-
-
+<div class="line"></div>
+<!--效率-->
+<div class="section-xiaolv">
+	<div class="main-tit-bar">
+		<h3 class="title"><span class="red">效率最高</span>提分最快</h3>
+		<div class="desc"><span class="l"></span><span class="txt">Maximum efficiency is the fastest</span><span class="l"></span></div>
+	</div>
+	<div class="xiaolv-title"><i class="ico-flag"></i>“四清”教学法</div>
+	<div class="swiper-container xiaolv-slider">
+	    <div class="swiper-wrapper">
+	        <div class="swiper-slide">
+	        	<h3>01</h3>
+	        	<h4>【堂堂清】</h4>
+	        </div>
+	        <div class="swiper-slide">
+	        	<h3>02</h3>
+	        	<h4>【日日清】</h4>
+	        </div>
+	        <div class="swiper-slide">
+	        	<h3>03</h3>
+	        	<h4>【月月清】</h4>
+	        </div>
+	    </div>
+	</div>
+	<ul class="xiaolv-list">
+		<li class="item">
+			<h3><em>96.1%</em></h3><p>2017届高考本科过线率</p>
+		</li>
+		<li class="item">
+			<h3><em>90%</em>以上</h3><p>高考一本线通过率</p>
+		</li>
+		<li class="item">
+			<h3><em>3-6</em>个月</h3><p>真正实现<br>文化课成绩大跃升</p>
+		</li>
+		<li class="item">
+			<h3><em>137</em>分</h3><p>雷嘉兴高考415提高137分<br>考入湖北美术学院</p>
+		</li>
+	</ul>
+	<ul class="wenhua-list">
+		<li>
+			<div class="img"><a href="#"><img src="assets/images/demo/cc-img-1.png"></a></div>
+			<div class="det">
+				<h3 class="tit"><a href="#">学校简介</a></h3>
+				<div class="desc">
+					武汉天云阁画室艺考生文化课集训基地是由原华师一附中、武汉外校等武汉市重点中学一线教师。
+				</div>
+				<a href="#" class="btn"><i class="ico-arrow-r"></i></a>
+			</div>
+		</li>
+		<li>
+			<div class="img"><a href="#"><img src="assets/images/demo/cc-img-1.png"></a></div>
+			<div class="det">
+				<h3 class="tit"><a href="#">学校简介</a></h3>
+				<div class="desc">
+					武汉天云阁画室艺考生文化课集训基地是由原华师一附中、武汉外校等武汉市重点中学一线教师。
+				</div>
+				<a href="#" class="btn"><i class="ico-arrow-r"></i></a>
+			</div>
+		</li>
+		<li>
+			<div class="img"><a href="#"><img src="assets/images/demo/cc-img-1.png"></a></div>
+			<div class="det">
+				<h3 class="tit"><a href="#">学校简介</a></h3>
+				<div class="desc">
+					武汉天云阁画室艺考生文化课集训基地是由原华师一附中、武汉外校等武汉市重点中学一线教师。
+				</div>
+				<a href="#" class="btn"><i class="ico-arrow-r"></i></a>
+			</div>
+		</li>
+		<li>
+			<div class="img"><a href="#"><img src="assets/images/demo/cc-img-1.png"></a></div>
+			<div class="det">
+				<h3 class="tit"><a href="#">学校简介</a></h3>
+				<div class="desc">
+					武汉天云阁画室艺考生文化课集训基地是由原华师一附中、武汉外校等武汉市重点中学一线教师。
+				</div>
+				<a href="#" class="btn"><i class="ico-arrow-r"></i></a>
+			</div>
+		</li>
+	</ul>
+</div>
+<div class="line"></div>
 
 
 
@@ -378,7 +459,11 @@ $(function(){
 	        },
     	},
     });
-
+    /*四清教学法*/
+    var swiper2 = new Swiper('.xiaolv-slider', {
+    	slidesPerView: 2,
+    	spaceBetween: 15,
+    });
 
 });
 /*金牌团队轮播*/

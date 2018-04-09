@@ -130,3 +130,30 @@ img[src=""]{opacity: 0;}
 .environment-slider .img-1{position: absolute;width: 5rem;height: 5rem;top:0;left: 0;}
 .environment-slider .img-2{position: absolute;width: 2.4rem;height: 2.4rem;top:0;right: 0;}
 .environment-slider .img-3{position: absolute;width: 2.4rem;height: 2.4rem;bottom:0;right: 0;}
+
+.xiaolv-slider{margin:0 0 0 .25rem;padding-right: 1.2rem;}
+.xiaolv-slider .swiper-slide{background: #eee;padding: .3rem 0;color:#fff;text-align: center;border-radius:.15rem;background-image: url(jx-bg-1.png);background-size: 100% 100%;background-image: url(../images/jx-bg-1.png);}
+.xiaolv-slider .swiper-slide h3{margin-bottom: .15rem;font-size: .48rem;}
+.xiaolv-slider .swiper-slide h4{font-size: .3rem;font-weight: normal;}
+.xiaolv-slider .swiper-slide:nth-child(1){background-image: url(../images/jx-bg-1.png);}
+.xiaolv-slider .swiper-slide:nth-child(2){background-image: url(../images/jx-bg-2.png);}
+.xiaolv-slider .swiper-slide:nth-child(3){background-image: url(../images/jx-bg-3.png);}
+
+.xiaolv-title{font-size: .3rem;margin-bottom: .4rem;padding: 0 .25rem;}
+.ico-flag{background-image: url(../images/ico-flag.png);vertical-align: middle;}
+.xiaolv-list{ overflow: hidden; padding: .35rem 0;font-size: 0;}
+.xiaolv-list li{width: 50%;display:inline-block;padding:.35rem 0;font-size: .24rem;text-align: center;vertical-align: top;}
+.xiaolv-list li h3{color:#df0000;margin-bottom: .3rem;}
+.xiaolv-list li h3 em{font-size: .48rem;}
+.xiaolv-list li p{line-height: .32rem;color: #333;}
+
+.wenhua-list{width: 105%; overflow: hidden;}
+.wenhua-list li{width: 590px;float: left;margin: 0 25px 25px 0;border:1px solid #ddd;}
+.wenhua-list li .img{width: 280px;height: 200px;float: left;}
+.wenhua-list li .img img{width: 100%;height: 100%;display: block;}
+.wenhua-list li .det{margin-left: 305px;}
+.wenhua-list li .det .tit{font-weight: normal;font-size: 26px;line-height: 1;margin-bottom: 10px;padding-top: 20px;}
+.wenhua-list li .det .tit a{color:#000;}
+.wenhua-list li .det .desc{font-size: 16px;color: #666;line-height: 30px;height: 90px;overflow: hidden;margin-bottom: 10px;}
+.wenhua-list li .det .btn{}
+.ico-arrow-r{width: 20px;height: 20px;display: inline-block;background: url(../images/sprites-20x20.png) 0 -90px no-repeat;}
