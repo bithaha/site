@@ -50,48 +50,57 @@
     <div class="swiper-pagination index-swiper-pagination"></div>
 </div>
 
-<div class="site-toutiao">
+<div class="site-envi">
 	<div class="main-tit-bar">
-		<h3 class="title"><span class="red">画室头条</span>最新动向</h3>
-		<div class="desc"><span class="l"></span><span class="txt">The latest trends in the headlines of the studio</span><span class="l"></span></div>
+		<h3 class="title"><span class="red">师生作品</span>大图欣赏</h3>
+		<div class="desc"><span class="l"></span><span class="txt">Works of teachers and students</span><span class="l"></span></div>
 	</div>
-	<div class="in-news-list co-news-list">
-        <a class="item">
-            <span class="img"><img class="lazy" data-src="assets/images/demo/toutiao-img-1.jpg"></span>
-            <span class="det">
-                <span class="tit">国美001画室举行2017-2018年开学典礼 室举年开学典礼</span>
-                <span class="desc"><span>画室活动</span>&nbsp;|&nbsp;<span class="time">2018年01月20日  15:36</span></span>
-            </span>
-        </a>
-        <a class="item">
-            <span class="img"><img class="lazy" data-src="assets/images/demo/toutiao-img-1.jpg"></span>
-            <span class="det">
-                <span class="tit">国美001画室举行2017-2018年开学典礼 室举年开学典礼</span>
-                <span class="desc"><span>作品</span>&nbsp;|&nbsp;<span class="time">2018年01月20日  15:36</span></span>
-            </span>
-        </a>
-        <a class="item">
-            <span class="img"><img class="lazy" data-src="assets/images/demo/toutiao-img-1.jpg"></span>
-            <span class="det">
-                <span class="tit">国美001画室举行2017-2018年开学典礼 室举年开学典礼</span>
-                <span class="desc"><span>画室活动</span>&nbsp;|&nbsp;<span class="time">2018年01月20日  15:36</span></span>
-            </span>
-        </a>
-        <a class="item">
-            <span class="img"><img class="lazy" data-src="assets/images/demo/toutiao-img-1.jpg"></span>
-            <span class="det">
-                <span class="tit">国美001画室举行2017-2018年开学典礼 室举年开学典礼</span>
-                <span class="desc"><span>作品</span>&nbsp;|&nbsp;<span class="time">2018年01月20日  15:36</span></span>
-            </span>
-        </a>
-        <a class="item">
-            <span class="img"><img class="lazy" data-src="assets/images/demo/toutiao-img-1.jpg"></span>
-            <span class="det">
-                <span class="tit">国美001画室举行2017-2018年开学典礼 室举年开学典礼</span>
-                <span class="desc"><span>画室活动</span>&nbsp;|&nbsp;<span class="time">2018年01月20日  15:36</span></span>
-            </span>
-        </a>
-    </div>
+	
+	<div class="swiper-container work-slider">
+		<div class="sliders-tabs slider-tabs-work"></div>
+	    <div class="swiper-wrapper">
+	        <div class="swiper-slide">
+	        	<ul class="in-work-list">
+	        		<li><img src="assets/images/demo/work-img-1.jpg"></li>
+	        		<li><img src="assets/images/demo/work-img-1.jpg"></li>
+	        		<li><img src="assets/images/demo/work-img-1.jpg"></li>
+	        		<li><img src="assets/images/demo/work-img-1.jpg"></li>
+	        	</ul>
+	        </div>
+	        <div class="swiper-slide">
+	        	<ul class="in-work-list">
+	        		<li><img src="assets/images/demo/work-img-1.jpg"></li>
+	        		<li><img src="assets/images/demo/work-img-1.jpg"></li>
+	        		<li><img src="assets/images/demo/work-img-1.jpg"></li>
+	        		<li><img src="assets/images/demo/work-img-1.jpg"></li>
+	        	</ul>
+	        </div>
+	        <div class="swiper-slide">
+	        	<ul class="in-work-list">
+	        		<li><img src="assets/images/demo/work-img-1.jpg"></li>
+	        		<li><img src="assets/images/demo/work-img-1.jpg"></li>
+	        		<li><img src="assets/images/demo/work-img-1.jpg"></li>
+	        		<li><img src="assets/images/demo/work-img-1.jpg"></li>
+	        	</ul>
+	        </div>
+	        <div class="swiper-slide">
+	        	<ul class="in-work-list">
+	        		<li><img src="assets/images/demo/work-img-1.jpg"></li>
+	        		<li><img src="assets/images/demo/work-img-1.jpg"></li>
+	        		<li><img src="assets/images/demo/work-img-1.jpg"></li>
+	        		<li><img src="assets/images/demo/work-img-1.jpg"></li>
+	        	</ul>
+	        </div>
+	        <div class="swiper-slide">
+	        	<ul class="in-work-list">
+	        		<li><img src="assets/images/demo/work-img-1.jpg"></li>
+	        		<li><img src="assets/images/demo/work-img-1.jpg"></li>
+	        		<li><img src="assets/images/demo/work-img-1.jpg"></li>
+	        		<li><img src="assets/images/demo/work-img-1.jpg"></li>
+	        	</ul>
+	        </div>
+	    </div>
+	</div>
 	<div class="pages-wraper">
 		<a class="btn">上一页</a>
 		<a class="btn">下一页</a>
@@ -143,6 +152,17 @@ $(function(){
     	pagination: {
     		clickable :true,
         	el: '.index-swiper-pagination',
+    	},
+    });
+    /*师生作品*/
+    var swiper4 = new Swiper('.work-slider', {
+    	pagination: {
+    		clickable :true,
+        	el: '.slider-tabs-work',
+        	renderBullet: function (index, className) {
+        		var envis = ["教师作品","学生作品","素描作品","色彩作品","速写作品"]
+	          return '<span class="' + className + '">' + (envis[index] || (index + 1)) + '</span>';
+	        },
     	},
     });
 

@@ -50,48 +50,42 @@
     <div class="swiper-pagination index-swiper-pagination"></div>
 </div>
 
-<div class="site-toutiao">
+<div class="site-envi">
 	<div class="main-tit-bar">
-		<h3 class="title"><span class="red">画室头条</span>最新动向</h3>
-		<div class="desc"><span class="l"></span><span class="txt">The latest trends in the headlines of the studio</span><span class="l"></span></div>
+		<h3 class="title"><span class="red">校园环境</span>温馨如家</h3>
+		<div class="desc"><span class="l"></span><span class="txt">The campus environment is like a home </span><span class="l"></span></div>
 	</div>
-	<div class="in-news-list co-news-list">
-        <a class="item">
-            <span class="img"><img class="lazy" data-src="assets/images/demo/toutiao-img-1.jpg"></span>
-            <span class="det">
-                <span class="tit">国美001画室举行2017-2018年开学典礼 室举年开学典礼</span>
-                <span class="desc"><span>画室活动</span>&nbsp;|&nbsp;<span class="time">2018年01月20日  15:36</span></span>
-            </span>
-        </a>
-        <a class="item">
-            <span class="img"><img class="lazy" data-src="assets/images/demo/toutiao-img-1.jpg"></span>
-            <span class="det">
-                <span class="tit">国美001画室举行2017-2018年开学典礼 室举年开学典礼</span>
-                <span class="desc"><span>作品</span>&nbsp;|&nbsp;<span class="time">2018年01月20日  15:36</span></span>
-            </span>
-        </a>
-        <a class="item">
-            <span class="img"><img class="lazy" data-src="assets/images/demo/toutiao-img-1.jpg"></span>
-            <span class="det">
-                <span class="tit">国美001画室举行2017-2018年开学典礼 室举年开学典礼</span>
-                <span class="desc"><span>画室活动</span>&nbsp;|&nbsp;<span class="time">2018年01月20日  15:36</span></span>
-            </span>
-        </a>
-        <a class="item">
-            <span class="img"><img class="lazy" data-src="assets/images/demo/toutiao-img-1.jpg"></span>
-            <span class="det">
-                <span class="tit">国美001画室举行2017-2018年开学典礼 室举年开学典礼</span>
-                <span class="desc"><span>作品</span>&nbsp;|&nbsp;<span class="time">2018年01月20日  15:36</span></span>
-            </span>
-        </a>
-        <a class="item">
-            <span class="img"><img class="lazy" data-src="assets/images/demo/toutiao-img-1.jpg"></span>
-            <span class="det">
-                <span class="tit">国美001画室举行2017-2018年开学典礼 室举年开学典礼</span>
-                <span class="desc"><span>画室活动</span>&nbsp;|&nbsp;<span class="time">2018年01月20日  15:36</span></span>
-            </span>
-        </a>
-    </div>
+	
+	<div class="swiper-container envi-slider">
+		<div class="sliders-tabs slider-tabs-envi"></div>
+		<div class="envi-desc">天云阁美术培训学校总部位于武汉市洪山区湖北生物科技职业学院，实行独立全封闭式校区管理，借助湖北生物科技职业学院的浓厚校园氛围，给学员更加安全、放心与安静的学习环境，使所有学员都能专心攻读学业。</div>
+	    <div class="swiper-wrapper">
+	        <div class="swiper-slide">
+	        	<ul class="envi-list">
+	        		<li><img src="assets/images/demo/envi-img-4.jpg"></li>
+	        		<li><img src="assets/images/demo/envi-img-5.jpg"></li>
+	        		<li><img src="assets/images/demo/envi-img-6.jpg"></li>
+	        		<li><img src="assets/images/demo/envi-img-7.jpg"></li>
+	        		<li><img src="assets/images/demo/envi-img-8.jpg"></li>
+	        		<li><img src="assets/images/demo/envi-img-9.jpg"></li>
+	        		<li><img src="assets/images/demo/envi-img-10.jpg"></li>
+	        		<li><img src="assets/images/demo/envi-img-11.jpg"></li>
+	        	</ul>
+	        </div>
+	        <div class="swiper-slide">
+	        	<ul class="envi-list">
+	        		<li><img src="assets/images/demo/envi-img-4.jpg"></li>
+	        		<li><img src="assets/images/demo/envi-img-5.jpg"></li>
+	        		<li><img src="assets/images/demo/envi-img-6.jpg"></li>
+	        		<li><img src="assets/images/demo/envi-img-7.jpg"></li>
+	        		<li><img src="assets/images/demo/envi-img-8.jpg"></li>
+	        		<li><img src="assets/images/demo/envi-img-9.jpg"></li>
+	        		<li><img src="assets/images/demo/envi-img-10.jpg"></li>
+	        		<li><img src="assets/images/demo/envi-img-11.jpg"></li>
+	        	</ul>
+	        </div>
+	    </div>
+	</div>
 	<div class="pages-wraper">
 		<a class="btn">上一页</a>
 		<a class="btn">下一页</a>
@@ -143,6 +137,17 @@ $(function(){
     	pagination: {
     		clickable :true,
         	el: '.index-swiper-pagination',
+    	},
+    });
+    /*教学环境*/
+    var swiper4  = new Swiper('.envi-slider', {
+    	pagination: {
+    		clickable :true,
+        	el: '.slider-tabs-envi',
+        	renderBullet: function (index, className) {
+        		var envis = ["武汉校区","河南校区"]
+	          return '<span class="' + className + '">' + (envis[index] || (index + 1)) + '</span>';
+	        },
     	},
     });
 
