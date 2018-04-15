@@ -57,7 +57,13 @@
 	</div>
 	
 	<div class="swiper-container work-slider">
-		<div class="sliders-tabs slider-tabs-work"></div>
+		<div class="sliders-tabs slider-tabs-work">
+			<a href="#" class="active">教师作品</a>
+			<a href="#" class="">学生作品</a>
+			<a href="#" class="">素描作品</a>
+			<a href="#" class="">色彩作品</a>
+			<a href="#" class="">速写作品</a>
+		</div>
 	    <div class="swiper-wrapper">
 	        <div class="swiper-slide">
 	        	<ul class="in-work-list">
@@ -154,17 +160,7 @@ $(function(){
         	el: '.index-swiper-pagination',
     	},
     });
-    /*师生作品*/
-    var swiper4 = new Swiper('.work-slider', {
-    	pagination: {
-    		clickable :true,
-        	el: '.slider-tabs-work',
-        	renderBullet: function (index, className) {
-        		var envis = ["教师作品","学生作品","素描作品","色彩作品","速写作品"]
-	          return '<span class="' + className + '">' + (envis[index] || (index + 1)) + '</span>';
-	        },
-    	},
-    });
+    
 
 });
 

@@ -1,0 +1,1306 @@
+<!DOCTYPE html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="keywords" content="开心人影视，电影，电视剧，综艺，动漫，娱乐，快报，微电影，纪录片，公开课，游戏，音乐，预告，电视剧榜，创星空间，人气，颜值，电影榜，高清，720P，1080P，新片，点播，大片，TVB，韩剧，好看的电视剧，连续剧，伦理电影，战争电影，电影排行，电影下载…" />
+    <meta name="description" content="开心人影视是中国领先的高清影视视频门户，免费提供电影、电视剧、综艺、音乐MV、动漫、新片、大片的高清在线点播和下载，是中国最大最全的正版影视发行平台" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <script>
+    var browser = {
+            versions: function() {
+                var u = navigator.userAgent,
+                    app = navigator.appVersion;
+                return {
+                    trident: u.indexOf('Trident') > -1, //IE内核
+                    presto: u.indexOf('Presto') > -1, //opera内核
+                    webKit: u.indexOf('AppleWebKit') > -1, //苹果、谷歌内核
+                    gecko: u.indexOf('Gecko') > -1 && u.indexOf('KHTML') == -1, //火狐内核
+                    mobile: !!u.match(/AppleWebKit.*Mobile.*/), //是否为移动终端
+                    ios: !!u.match(/\(i[^;]+;( U;)? CPU.+Mac OS X/), //ios终端
+                    android: u.indexOf('Android') > -1 || u.indexOf('Linux') > -1, //android终端或者uc浏览器
+                    androidPhone: u.indexOf('Android') > -1 && u.indexOf('Mobile') > -1,
+                    iPhone: u.indexOf('iPhone') > -1, //是否为iPhone或者QQHD浏览器
+                    iPod: u.indexOf('iPod') > -1, //是否为iPhone或者QQHD浏览器
+                    iPad: u.indexOf('iPad') > -1, //是否iPad
+                    winphone: u.indexOf('Windows Phone') > -1, //是否windows phone
+                    webApp: u.indexOf('Safari') == -1 //是否web应该程序，没有头部与底部
+                };
+            }(),
+            language: (navigator.browserLanguage || navigator.language).toLowerCase()
+        },
+        murl;
+    if (browser.versions.androidPhone || browser.versions.iPhone || browser.versions.iPod || browser.versions.winphone) {
+        murl = 'http://m.kankan.com/';
+    }
+    try {!!murl ? location.href = murl : '' } catch (ee) {};
+    </script>
+    <title>开心人影视</title>
+    <!--[if IE]>
+    <script src="http://misc.web.kankan.com/www/v10/js/htmlfive.js"></script>
+    <![endif]-->
+    <link href="css/top_nav.css" rel="stylesheet" type="text/css" media="all" />
+    <link href="css/index.css" rel="stylesheet" type="text/css" media="all" />
+</head>
+
+<body class="middlemode">
+    <!-- 头部 -->
+    <header class="header">
+        <div class="head">
+            <div class="wrapper">
+                <!-- logo -->
+                <div class="logoarea">
+                    <h1 class="logo"><a href="/">天天看看<b></b></a></h1></div>
+                <!-- 搜索 -->
+                <div id="searcharea-main" class="searcharea">
+                    <form id="searchForm" action="http://search.kankan.com/search.php" style="z-index: -1;" method="get" target="_blank">
+                        <fieldset class="searcharea_search">
+                            <input id="keyword" class="input" name="keyword" autocomplete="off" value="搜索超过10万部影视内容" maxlength="26" type="text" sendreq="true" />
+                            <button id="btnSearch" type="submit" title="搜索">搜索</button>
+                        </fieldset>
+                    </form>
+                    <!--completeDiv-->
+                    <div id="keywordInfo-wrap" class="completeDiv" style="display: none;">
+                        <div id="keyword-info" style="display:none"></div>
+                        <div id="more-info" class="completetips" style="display:none"></div>
+                    </div>
+                </div>
+                <!-- 搜索END -->
+                <!-- userarea -->
+                <section class="userarea">
+                    <!-- 登录后 -->
+                    <div id="dropbox_user_tigger" class="dropbox dropbox_user" style="display:none">
+                        <div class="dropbox_tigger">
+                            <div id="icon_con" class="icon_con">
+                                <img id="user-pic" width="26" height="26" src="">
+                            </div>
+                            <!-- 请控制长度 -->
+                            <span id="user-name"></span>
+                        </div>
+                        <div class="dropcon">
+                            <b class="i_arw"></b>
+                            <div id="user-msg" class="userinfo">
+                            </div>
+                            <!--userinfo 用户信息 END-->
+                        </div>
+                        <!--dropcon 下拉浮层 END-->
+                        <iframe id="dropbox_user_tigger_ifm" class="dropcon_iframe userinfo_iframe" scrolling="no" frameborder="no"></iframe>
+                    </div>
+                    <!-- 未登录 -->
+                    <div id="no-login" class="dropbox" style="display:;">
+                        <div class="dropbox_tigger dropbox_tigger_user">
+                            <i class="icon icon_user"></i>
+                            <a href="javascript://" onclick="Login.Show(); return false;" target="_self" title="登录">登录</a>/
+                            <a href="http://u.kankan.com/register.html?regfrom=KK_001" target="_blank" title="注册">注册</a>
+                        </div>
+                    </div>
+                    <div id="get-vip" class="dropbox">
+                        <div class="dropbox_tigger">
+                            <a href="http://busi.vip.kankan.com/userinfo/jump?src=kankanweb" target="_blank">
+                            <i class="icon icon_vip"></i>
+                            开通会员
+                        </a>
+                        </div>
+                    </div>
+                    <div id="fav_div" class="dropbox dropbox_favs">
+                        <div class="dropbox_tigger">
+                            <i class="icon icon_fav">
+                            <!-- 提示红点 -->
+                            <b id="fav_head" class="icon icon_tips" style="display:none"></b>
+                        </i> 收藏
+                        </div>
+                        <div class="dropcon">
+                            <b class="i_arw"></b>
+                            <p id="favloading" class="his_loading" style="display: none;">加载中...</p>
+                            <iframe id="favfront" class="hisiframe" scrolling="no" frameborder="no" width="288" height="358"></iframe>
+                        </div>
+                        <iframe class="dropcon_iframe favs_iframe" scrolling="no" frameborder="no"></iframe>
+                    </div>
+                    <div id="history_div" class="dropbox dropbox_record">
+                        <div id="dropbox_his_layer_tigger" class="dropbox_tigger">
+                            <i class="icon icon_record">
+                            <!-- 提示红点 -->
+                            <!-- <b class="icon icon_tips"></b> -->
+                        </i> 记录
+                        </div>
+                        <div class="dropcon">
+                            <b class="i_arw"></b>
+                            <p id="historyloading" class="his_loading">加载中...</p>
+                            <iframe id="historyfront" class="hisiframe" scrolling="no" frameborder="no" width="288" height="358" style="display:none"></iframe>
+                        </div>
+                        <iframe id="dropcon_iframe_his" class="dropcon_iframe history_iframe dropcon_show" scrolling="no" frameborder="no"></iframe>
+                    </div>
+                    <!-- 160303 S-->
+                    <div id="kk_pc_div" class="dropbox" style="display: none;">
+                        <div class="dropbox_tigger">
+                            <a href="http://www.kankan.com/app/kkyy.html" target="_blank">
+                            <i class="icon icon_app"></i>
+                            客户端
+                        </a>
+                        </div>
+                    </div>
+                </section>
+                <!-- userarea END -->
+            </div>
+        </div>
+    </header>
+    <!-- 头部 END -->
+    <!-- 导航条 -->
+    <div class="nav">
+        <div class="wrapper">
+            <a class="s_n" href="http://www.kankan.com" target="_blank">首页</a>
+            <a class="s_n" href="http://yule.kankan.com" target="_blank">娱乐</a>
+            <a class="s_n" href="http://tv.kankan.com" target="_blank">电视剧</a>
+            <a class="s_n" href="http://movie.kankan.com" target="_blank">电影</a>
+            <a class="s_n" href="http://wdy.kankan.com" target="_blank">网络电影</a>
+            <a class="s_n" href="http://zy.kankan.com" target="_blank">综艺</a>
+            <a class="s_n" href="http://anime.kankan.com" target="_blank">动漫</a>
+            <div class="middle_show">
+                <a class="s_n" href="http://jilupian.kankan.com" target="_blank">纪录片</a>
+                <a class="s_n" href="http://open.kankan.com" target="_blank">公开课</a>
+            </div>
+            <div class="wide_show">
+                <a class="s_n" href="http://chupin.kankan.com" id="nav_chupin" target="_blank">看看出品</a>
+            </div>
+            <span class="s_n_line"></span>
+            <a class="s_n" href="http://video.kankan.com/list/news/all,new,all/index-1.html" target="_blank">资讯</a>
+            <a class="s_n" href="http://fun.kankan.com" target="_blank">搞笑</a>
+            <a class="s_n" href="http://fashion.kankan.com" target="_blank">时尚</a>
+            <a class="s_n" href="http://yinyue.kankan.com" target="_blank">音乐</a>
+            <div class="right_area">
+                <a class="s_n" href="http://vip.kankan.com" target="_blank">
+                <i class="icon icon_vip_s"></i>会员
+            </a>
+            </div>
+        </div>
+    </div>
+    <!-- 导航条 END -->
+    <!-- 轮播 -->
+    <section id="section_1" class="focus">
+        <ul class="focus_bg" id="focus_bg">
+            <li style="background:#bdae99 url(http://i2.kanimg.kankan.com/gallery2/block/2018/03/24/15bc214e6f31c496690128235e696d8a.jpg) 50% 0 no-repeat;display:block;" id="focus_bg_0"></li>
+            <li style="background:#ffc20f url(http://i7.kanimg.kankan.com/gallery2/block/2018/04/14/10eb961e24afd74879e8f8076d76c321.jpg) 50% 0 no-repeat;display:none;" id="focus_bg_1"></li>
+            <li style="background:#0d131e url(http://i4.kanimg.kankan.com/gallery2/block/2018/04/14/90352a9918cc3685848af51c041d0745.jpg) 50% 0 no-repeat;display:none;" id="focus_bg_2"></li>
+            <li style="background:#050e2b url(http://i5.kanimg.kankan.com/gallery2/block/2018/04/14/93dd6d12b0051b0a885c8f9ec756a0fa.jpg) 50% 0 no-repeat;display:none;" id="focus_bg_3"></li>
+            <li style="background:#c6c260 url(http://i6.kanimg.kankan.com/gallery2/block/2018/04/14/0bb6527adee20348a7d6eeba2259ca53.jpg) 50% 0 no-repeat;display:none;" id="focus_bg_4"></li>
+            <li style="background:#71535c url(http://i7.kanimg.kankan.com/gallery2/block/2018/04/14/52632c3d285379eb8abaf269b8e03ebc.jpg) 50% 0 no-repeat;display:none;" id="focus_bg_5"></li>
+            <li style="background:#130c12 url(http://i2.kanimg.kankan.com/gallery2/block/2018/04/13/bfb34e79a058409b53d5c03ad65b3907.jpg) 50% 0 no-repeat;display:none;" id="focus_bg_6"></li>
+            <li style="background:#0b151e url(http://i2.kanimg.kankan.com/gallery2/block/2018/04/13/75c4bf53720af51a96974e89039ed015.jpg) 50% 0 no-repeat;display:none;" id="focus_bg_7"></li>
+            <li style="background:#75eafb url(http://img2.kanimg.kankan.com//gallery2/block/2018/04/12/1753b1699020c124fba0473e6d969c85.jpg) 50% 0 no-repeat;display:none;" id="focus_bg_8"></li>
+        </ul>
+        <div class="wrapper">
+            
+            <div class="focusbox_tigger">
+                <ul>
+                    <li class="on"><a target="_blank" href="http://vod.kankan.com/v/105/105020.shtml" title="" blockid="9812"><img src="http://i8.kanimg.kankan.com/gallery2/block/2018/03/24/20836d15608f90e7e36f1871afc50f02.jpg" width="140" height="70" alt="《熊爸熊孩子》沙溢伴儿子海边骑行享欢乐假期" /><span></span></a></li>
+                    <li><a target="_blank" href="http://vod.kankan.com/v/43/43670.shtml" title="《疯狂的赛车》郭涛黄渤都豁出去 就要把人笑趴下 " blockid="9812"><img src="http://img2.kanimg.kankan.com//gallery2/block/2018/04/14/344ad72de6cf5fb189db18bcfe2bbf34.jpg" width="140" height="70" alt="《疯狂的赛车》郭涛黄渤都豁出去 就要把人笑趴下 " /><span></span></a></li>
+                    <li id="focus_tigger_2"><a target="_blank" href="http://vod.kankan.com/v/105/105144.shtml" title="《RunFox狐狸快跑》让孩子成为故事的主角！" blockid="9812"><img src="http://i0.kanimg.kankan.com/gallery2/block/2018/04/14/5ddce347a322067e84d56cf30d9e731f.jpg" width="140" height="70" alt="《RunFox狐狸快跑》让孩子成为故事的主角！" /><span></span></a></li>
+                    <li id="focus_tigger_3"><a target="_blank" href="http://vod.kankan.com/ab/0/340.shtml" title="“影后”娜塔莉·波特曼是怎样诞生的：十部电影，见证“小萝莉”到“影后”的蜕变" blockid="9812"><img src="http://img2.kanimg.kankan.com//gallery2/block/2018/04/14/303a9e9064e5363e9138d380c88d922c.jpg" width="140" height="70" alt="“影后”娜塔莉·波特曼是怎样诞生的：十部电影，见证“小萝莉”到“影后”的蜕变" /><span></span></a></li>
+                    <li id="focus_tigger_4"><a target="_blank" href="http://vod.kankan.com/v/91/91543.shtml" title="《小镇大法官》暖男林永健化身发证急先锋 “赤脚”法官不好当" blockid="9812"><img src="http://i4.kanimg.kankan.com/gallery2/block/2018/04/14/9074afb8cf68c79b3475a2840a7f17bc.jpg" width="140" height="70" alt="《小镇大法官》暖男林永健化身发证急先锋 “赤脚”法官不好当" /><span></span></a></li>
+                    <li id="focus_tigger_5"><a target="_blank" href="http://vip.kankan.com/vod/104866.html?fref=kk_home_lbt_01" title="《欲罪》少女误陷网贷骗局 大哥出马全力营救" blockid="9812"><img src="http://i2.kanimg.kankan.com/gallery2/block/2018/04/14/e3909ee2ff3e0bcb8cfa78f5ebdbac2e.jpg" width="140" height="70" alt="《欲罪》少女误陷网贷骗局 大哥出马全力营救" /><span></span></a></li>
+                    <li id="focus_tigger_6" class="middle_show"><a target="_blank" href="http://vod.kankan.com/v/92/92371.shtml" title="《黄金血道》吴樾变身热血巡官再踏英雄路" blockid="9812"><img src="http://i2.kanimg.kankan.com/gallery2/block/2018/04/13/29f87d488115a157c8a1f768a1ab5711.jpg" width="140" height="70" alt="《黄金血道》吴樾变身热血巡官再踏英雄路" /><span></span></a></li>
+                    <li id="focus_tigger_7" class="middle_show"><a target="_blank" href="http://vod.kankan.com/v/104/104750/547881.shtml" title="《狂暴巨兽》巨无霸猛兽扫荡美国 巨石强森掀起绝地反击" blockid="9812"><img src="http://i6.kanimg.kankan.com/gallery2/block/2018/04/13/a821f3202afeee6f92ab74a5235e2f02.jpg" width="140" height="70" alt="《狂暴巨兽》巨无霸猛兽扫荡美国 巨石强森掀起绝地反击" /><span></span></a></li>
+                    <li id="focus_tigger_8" class="wide_show"><a target="_blank" href="http://vod.kankan.com/v/91/91937.shtml" title="《好想好想爱上你》张歆艺黄觉老街坊变情侣 再造纯爱经典" blockid="9812"><img src="http://i7.kanimg.kankan.com/gallery2/block/2018/04/12/96b0f18ed3cd0f9f7dbbe32ecfcb67fb.jpg" width="140" height="70" alt="《好想好想爱上你》张歆艺黄觉老街坊变情侣 再造纯爱经典" /><span></span></a></li>
+                </ul>
+            </div>
+        </div>
+    </section>
+    
+    <!-- 电视剧 -->
+    <section id="kankan-teleplay" class="wrapper mod">
+        <div class="box box4">
+            <div class="box_tt">
+                <h2>
+                    <a target="_blank"   href="http://tv.kankan.com/" blockid="9824">电视剧</a>
+                </h2>
+                <div class="act">
+                    <a target="_blank" href="http://movie.kankan.com/type,order,genre/teleplay,update,ox/" blockid="9824">偶像言情</a> | <a target="_blank" href="http://movie.kankan.com/type,order,genre/teleplay,update,jd/" blockid="9824">军旅谍战</a> | <a target="_blank" href="http://movie.kankan.com/type,order,genre/teleplay,hits,wx/" blockid="9824">古装武侠</a>
+                    <a target="_blank" class="actmore" href="http://tv.kankan.com/" blockid="9824">更多<i></i></a>
+                </div>
+                <div class="cm_gm" id="cm1587"></div>
+                <script type="text/javascript" src="http://biz5.kankan.com/portal/008/A/cm1587.js" async></script>
+            </div>
+            <div class="imglist_hot imglist_hot2 J-hot-focus">
+                <!-- 最多5个 -->
+                <ul class="list">
+                    <li class="cur">
+                        <a target="_blank" href="http://vod.kankan.com/v/67/67356.shtml" class="pic " blockid="9825">
+            <img src="http://img.movie.kanimg.kankan.com/img_default.gif" _src="http://i9.kanimg.kankan.com/gallery2/block/2018/04/10/b7b89dcf2d951fa84387986bef381543.jpg" alt="尖刀战士" >
+                        <!--角标-->
+                                                            
+                                                                    </a>
+                        <div class="tabbox">
+                            <a target="_blank" href="http://vod.kankan.com/v/67/67356.shtml" class="tit" blockid="9825">尖刀战士</a>
+                            <p class="des">
+                                叶璇演绎叛谍狂花
+                                <span>
+                34集全
+                </span>
+                            </p>
+                        </div>
+                    </li>
+                    <li>
+                        <a target="_blank" href="http://vod.kankan.com/v/85/85047.shtml" class="pic " blockid="9825">
+            <img src="http://img.movie.kanimg.kankan.com/img_default.gif" _src="http://img2.kanimg.kankan.com//gallery2/block/2018/04/12/c650124147b97e3be74d3944cec00f3b.jpg" alt="天生要完美" >
+                        <!--角标-->
+                                                            
+                                                                    </a>
+                        <div class="tabbox">
+                            <a target="_blank" href="http://vod.kankan.com/v/85/85047.shtml" class="tit" blockid="9825">天生要完美</a>
+                            <p class="des">
+                                青春励志热血军旅
+                                <span>
+                30集全
+                </span>
+                            </p>
+                        </div>
+                    </li>
+                    <li>
+                        <a target="_blank" href="http://vod.kankan.com/v/89/89282.shtml" class="pic " blockid="9825">
+            <img src="http://img.movie.kanimg.kankan.com/img_default.gif" _src="http://i9.kanimg.kankan.com/gallery2/block/2018/04/11/fc3aa8096fb7308d4f74a4b6e7f162c8.jpg" alt="女人的秘密第二季" >
+                        <!--角标-->
+                                                            
+                                                                    </a>
+                        <div class="tabbox">
+                            <a target="_blank" href="http://vod.kankan.com/v/89/89282.shtml" class="tit" blockid="9825">女人的秘密第二季</a>
+                            <p class="des">
+                                男心女身大反转
+                                <span>
+                52集全
+                </span>
+                            </p>
+                        </div>
+                    </li>
+                </ul>
+                <!-- 最多5个 -->
+                <ul class="tabtigger">
+                    <li class="cur">
+                        1 </li>
+                    <li>
+                        2 </li>
+                    <li>
+                        3 </li>
+                </ul>
+                <a target="_self" title="向左" class="scrolltigger scrolltigger_L" href="javascript:void(0)"></a>
+                <a target="_self" title="向右" class="scrolltigger scrolltigger_R" href="javascript:void(0)"></a>
+            </div>
+            <div class="box box2">
+                <ul class="imglist imglist220x125">
+                    <li class="">
+                        <a target="_blank" href="http://vod.kankan.com/v/92/92765.shtml" class="pic " blockid="9826">
+        <img src="http://img.movie.kanimg.kankan.com/img_default.gif" _src="http://i2.kanimg.kankan.com/gallery2/block/2018/04/13/4c24173b71e397ba8bd04871e83a4476.jpg" alt="女怕嫁错郎" >
+                <span class="js">
+        39集全
+        </span>
+        <!--角标-->
+                                        
+                                            </a>
+                        <div class="tc">
+                            <p class="tit"> <a target="_blank" href="http://vod.kankan.com/v/92/92765.shtml" blockid="9826">女怕嫁错郎</a></p>
+                            <p class="des">闫学晶化身励志姐</p>
+                        </div>
+                    </li>
+                    <li class="middle_show">
+                        <a target="_blank" href="http://vod.kankan.com/v/92/92605.shtml" class="pic " blockid="9826">
+        <img src="http://img.movie.kanimg.kankan.com/img_default.gif" _src="http://img2.kanimg.kankan.com//gallery2/block/2018/04/12/a2c565267ba38325d9bf979e08e427b7.jpg" alt="游击英雄" >
+                <span class="js">
+        36集全
+        </span>
+        <!--角标-->
+                                        
+                                            </a>
+                        <div class="tc">
+                            <p class="tit"> <a target="_blank" href="http://vod.kankan.com/v/92/92605.shtml" blockid="9826">游击英雄</a></p>
+                            <p class="des">巾帼英雄铁血抗战</p>
+                        </div>
+                    </li>
+                    <li class="wide_show">
+                        <a target="_blank" href="http://vod.kankan.com/v/72/72700.shtml" class="pic " blockid="9826">
+        <img src="http://img.movie.kanimg.kankan.com/img_default.gif" _src="http://i1.kanimg.kankan.com/gallery2/block/2018/03/29/20a8ec2d378820eee3b10453a50c54e2.jpg" alt="决战燕子门" >
+                <span class="js">
+        42集全
+        </span>
+        <!--角标-->
+                                        
+                                            </a>
+                        <div class="tc">
+                            <p class="tit"> <a target="_blank" href="http://vod.kankan.com/v/72/72700.shtml" blockid="9826">决战燕子门</a></p>
+                            <p class="des">一代侠盗闯荡江湖</p>
+                        </div>
+                    </li>
+                    <li class="">
+                        <a target="_blank" href="http://vod.kankan.com/v/88/88960.shtml" class="pic " blockid="9826">
+        <img src="http://img.movie.kanimg.kankan.com/img_default.gif" _src="http://i5.kanimg.kankan.com/gallery2/block/2018/04/11/eaa70dd28798e87da8525a06a0a4969d.jpg" alt="福根进城" >
+                <span class="js">
+        49集全
+        </span>
+        <!--角标-->
+                                        
+                                            </a>
+                        <div class="tc">
+                            <p class="tit"> <a target="_blank" href="http://vod.kankan.com/v/88/88960.shtml" blockid="9826">福根进城</a></p>
+                            <p class="des">为爱奔波的大草包</p>
+                        </div>
+                    </li>
+                    <li class="middle_show">
+                        <a target="_blank" href="http://vod.kankan.com/v/92/92533.shtml" class="pic " blockid="9826">
+        <img src="http://img.movie.kanimg.kankan.com/img_default.gif" _src="http://i9.kanimg.kankan.com/gallery2/block/2018/04/10/65a43815a31f03fcc1468af337c061b4.jpg" alt="马兰谣" >
+                <span class="js">
+        24集全
+        </span>
+        <!--角标-->
+                                        
+                                            </a>
+                        <div class="tc">
+                            <p class="tit"> <a target="_blank" href="http://vod.kankan.com/v/92/92533.shtml" blockid="9826">马兰谣</a></p>
+                            <p class="des">报国情怀英雄史诗</p>
+                        </div>
+                    </li>
+                    <li class="wide_show">
+                        <a target="_blank" href="http://vod.kankan.com/v/94/94078/547917.shtml" class="pic " blockid="9826">
+        <img src="http://img.movie.kanimg.kankan.com/img_default.gif" _src="http://i7.kanimg.kankan.com/gallery2/block/2018/04/13/4006e4e6f8273a55c83fa9141d8d2d26.jpg" alt="远大前程" >
+                <span class="js">
+        预告片
+        </span>
+        <!--角标-->
+                                        
+                                            </a>
+                        <div class="tc">
+                            <p class="tit"> <a target="_blank" href="http://vod.kankan.com/v/94/94078/547917.shtml" blockid="9826">远大前程</a></p>
+                            <p class="des">收视率持续攀高曝幕后艰辛</p>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <aside class="aside">
+            <div class="box_tt">
+                <h2><a target="_blank" href="http://www.kankan.com/top/list_teleplay_all_daily.html"   blockid="9858">热播榜</a></h2>
+                <a target="_blank" class="more" href="http://www.kankan.com/top/list_teleplay_all_daily.html" blockid="9858">更多<i></i></a>
+            </div>
+            <ul class="rank">
+                <li class="top1">
+                    <a target="_blank" href="http://vod.kankan.com/v/69/69032.shtml" title="粟裕大将" blockid="9859" blockid="9859">
+        <img src="http://img.movie.kanimg.kankan.com/img_default.gif" _src="http://i8.kanimg.kankan.com/gallery2/block/2018/02/28/8ae36896a57a4c1c09d5ab5b384023a8.jpg" alt="粟裕大将"/>
+        <div class="masktxt">
+            <em>1</em><span>粟裕大将</span><b class="icon icon_keep"></b>
+        </div>
+        </a>
+                </li>
+                <li>
+                    <a target="_blank" href="http://vod.kankan.com/v/86/86894/447148.shtml" title="风云再起" blockid="9859" blockid="9859"><em>2</em><span>风云再起</span><b class="icon icon_up"></b></a>
+                </li>
+                <li>
+                    <a target="_blank" href="http://vod.kankan.com/v/88/88960/483813.shtml" title="福根进城" blockid="9859" blockid="9859"><em>3</em><span>福根进城</span><b class="icon icon_up"></b></a>
+                </li>
+                <li>
+                    <a target="_blank" href="http://vod.kankan.com/v/73/73152/347505.shtml" title="特种兵之火凤凰" blockid="9859" blockid="9859"><em>4</em><span>特种兵之火凤凰</span><b class="icon icon_up"></b></a>
+                </li>
+                <li>
+                    <a target="_blank" href="http://vod.kankan.com/v/89/89586/495713.shtml" title="终极教师2" blockid="9859" blockid="9859"><em>5</em><span>终极教师2</span><b class="icon icon_up"></b></a>
+                </li>
+                <li>
+                    <a target="_blank" href="http://vod.kankan.com/v/89/89180/487359.shtml" title="四手妙弹" blockid="9859" blockid="9859"><em>6</em><span>四手妙弹</span><b class="icon icon_down"></b></a>
+                </li>
+                <li>
+                    <a target="_blank" href="http://vod.kankan.com/v/89/89377/488950.shtml" title="神探联盟 第二季" blockid="9859" blockid="9859"><em>7</em><span>神探联盟 第二季</span><b class="icon icon_up"></b></a>
+                </li>
+                <li>
+                    <a target="_blank" href="http://vod.kankan.com/v/85/85047/456476.shtml" title="天生要完美" blockid="9859" blockid="9859"><em>8</em><span>天生要完美</span><b class="icon icon_down"></b></a>
+                </li>
+                <li>
+                    <a target="_blank" href="http://vod.kankan.com/v/91/91078/511332.shtml" title="云水怒" blockid="9859" blockid="9859"><em>9</em><span>云水怒</span><b class="icon icon_down"></b></a>
+                </li>
+                <li>
+                    <a target="_blank" href="http://vod.kankan.com/v/72/72700/348105.shtml" title="决战燕子门" blockid="9859" blockid="9859"><em>10</em><span>决战燕子门</span><b class="icon icon_up"></b></a>
+                </li>
+            </ul>
+        </aside>
+    </section>
+    <!-- 电视剧END -->
+    <!-- 个人中心 -->
+    <section class="wrapper mgb20 visible" style="height:470px;display:none" id="grzx_container">
+        <div class="box_tt">
+            <h2><a id="grzx_lnk" href="http://t.kankan.com" target="_blank">个人中心</a></h2>
+            <div class="tabbox">
+                <a href="javascript:void(0)" id="grzx_tab_0" class="cur" title="猜您喜欢">猜您喜欢</a>
+                <a href="javascript:void(0)" id="grzx_tab_1" title="观看记录">观看记录<div class="numbox" id="grzx_tab_1_numbox" style="display:none"></div></a>
+                <a href="javascript:void(0)" id="grzx_tab_2" title="我的收藏">我的收藏<div class="numbox" id="grzx_tab_2_numbox" style="display:none"></div></a>
+            </div>
+            <div id="grzx_tab_1_numbox_more" class="r-area" style="display:none">
+                <a style="display:none" href="http://movie.kankan.com/pcenter/?type=history" target="_blank" class="more" id="grzx_tab_1_numbox_more_login">全部观看记录<i></i></a>
+                <span style="display:none" class="more" id="grzx_tab_1_numbox_more_unlogin">请<a onclick="Login.Show();return false;" target="_self"  target="_self" onclick="Login.Show();return false;" style="margin:0 3px;color:#21b7ef;">登录</a>后，查看更多云观看记录</span>
+            </div>
+            <div id="grzx_tab_2_numbox_more" class="r-area" style="display:none">
+                <a style="display:none" href="http://movie.kankan.com/pcenter/?type=fav" target="_blank" class="more" id="grzx_tab_2_numbox_more_login">查看全部收藏<i></i></a>
+            </div>
+        </div>
+        <div id="grzx_list_0" style="">
+            <div id="RelatedRecommendOuterContainer" style="display:block">
+                <div class="scorll">
+                    <div class="box box5">
+                        <!-- 改变此ul的left值滚动 -->
+                        <ul class="imglist imglist220x310" style="left:0;" id="RelatedRecommendContainer"></ul>
+                    </div>
+                    <!-- 去掉scrolltigger_none则显示 -->
+                    <a target="_self" title="向左" class="scrolltigger scrolltigger_L scrolltigger_none" href="javascript:void(0)" id="scrolltigger_L"></a>
+                    <a target="_self" title="向右" class="scrolltigger scrolltigger_R" href="javascript:void(0)" id="scrolltigger_R"></a>
+                </div>
+                <div class="interested">
+                    <dl id="RelatedRecommendTags"></dl>
+                    <em>点击标签可切换对应推送内容</em>
+                </div>
+            </div>
+        </div>
+        <div id="grzx_list_1" style="display:none;">
+            <div id="grzx_list_1_unlogin">
+                <div class="box box5">
+                    <div class="c-s-tips" id="grzx_list_1_unlogin_text">
+                        <div class="loading"><i class="icon icon_record"></i>加载中...</div>
+                    </div>
+                </div>
+            </div>
+            <div class="scorll" id="grzx_list_1_login" style="display:none">
+                <div class="box box5">
+                    <ul class="imglist imglist220x310" style="left:0;" id="grzx_view_history"></ul>
+                </div>
+                <a target="_self" href="javascript:void(0)" class="scrolltigger scrolltigger_L scrolltigger_none" title="向左" id="grzx_view_history_prev"></a>
+                <a target="_self" href="javascript:void(0)" class="scrolltigger scrolltigger_R" title="向右" id="grzx_view_history_next"></a>
+            </div>
+        </div>
+        <div id="grzx_list_2" style="display:none;">
+            <div class="scorll" id="grzx_list_2_unlogin">
+                <div class="box box5">
+                    <div class="c-s-tips" id="grzx_list_2_unlogin_text">
+                        <div class="loading">请登录查看精彩收藏视频！<span class="btn" onclick="Login.Show();return false;">登  录</span></div>
+                    </div>
+                </div>
+            </div>
+            <div class="scorll" id="grzx_list_2_login">
+                <div class="box box5">
+                    <ul class="imglist imglist220x310" style="left:0;" id="grzx_fav_list"></ul>
+                </div>
+                <a target="_self" href="javascript:void(0)" class="scrolltigger scrolltigger_L scrolltigger_none" title="向左" id="grzx_fav_list_prev"></a>
+                <a target="_self" href="javascript:void(0)" class="scrolltigger scrolltigger_R" title="向右" id="grzx_fav_list_next"></a>
+            </div>
+        </div>
+    </section>
+    
+    <!-- 电影 -->
+    <section id="kankan-film" class="wrapper mod">
+        <div class="box box4">
+            <div class="box_tt">
+                <h2>
+                    <a target="_blank"   href="http://movie.kankan.com/" blockid="9831">电影</a>
+                </h2>
+                <div class="act">
+                    <a target="_blank" href="http://movie.kankan.com/type,order,genre,status,charges/movie,update,Action,zp,free/" blockid="9831">动作</a> | <a target="_blank" href="http://movie.kankan.com/type,order,genre,status,charges/movie,update,Comedy,zp,free/" blockid="9831">喜剧</a> | <a target="_blank" href="http://movie.kankan.com/type,order,genre,status,charges/movie,update,Horror,zp,free/" blockid="9831">恐怖</a> | <a target="_blank" href="http://movie.kankan.com/type,order,genre,status,charges/movie,update,Romance,zp,free/" blockid="9831">爱情</a> | <a target="_blank" href="http://movie.kankan.com/type,order,genre,status,charges/movie,update,Sci-Fi,zp,free/" blockid="9831">科幻</a>
+                    <a target="_blank" class="actmore" href="http://movie.kankan.com/" blockid="9831">更多<i></i></a>
+                </div>
+                <div class="cm_gm" id="cm1586"></div>
+                <script type="text/javascript" src="http://biz5.kankan.com/portal/008/A/cm1586.js" async></script>
+            </div>
+            <ul class="imglist imglist220x310 movielist">
+                <li class="">
+                    <a target="_blank" href="http://vod.kankan.com/v/41/41018.shtml" class="pic " blockid="9832">
+                        <img src="http://img.movie.kanimg.kankan.com/img_default.gif" _src="http://i1.kanimg.kankan.com/gallery2/block/2018/04/13/cfe6315c0d0c35dddfbf6fd37ed7574b.jpg" alt="钻石迷情" >
+        
+                    <!--角标-->
+                                        
+                                        
+                        <div class="masktxt"><span class="des">爱情动作搞笑片</span></div>
+                    </a>
+                    <div class="txtbox">
+                        <a target="_blank" href="http://vod.kankan.com/v/41/41018.shtml" blockid="9832">钻石迷情</a>
+                        <span class="score"><em>7</em>.0</span>
+                    </div>
+                </li>
+                <li class="">
+                    <a target="_blank" href="http://vod.kankan.com/v/73/73509.shtml" class="pic " blockid="9832">
+                    <img src="http://img.movie.kanimg.kankan.com/img_default.gif" _src="http://i3.kanimg.kankan.com/gallery2/block/2018/04/12/a818d52e0ea5d11a310ee99c26d55a3c.jpg" alt="冬荫功2:拳霸天下" >
+        
+        <!--角标-->
+               <div class="masktxt"><span class="des">拳霸旋风卷土重来</span></div>
+                </a>
+                    <div class="txtbox">
+                        <a target="_blank" href="http://vod.kankan.com/v/73/73509.shtml" blockid="9832">冬荫功2:拳霸天下</a>
+                        <span class="score"><em>8</em>.1</span>
+                    </div>
+                </li>
+                <li class="">
+                    <a target="_blank" href="http://vod.kankan.com/v/75/75709.shtml" class="pic " blockid="9832">
+                        <img src="http://img.movie.kanimg.kankan.com/img_default.gif" _src="http://i5.kanimg.kankan.com/gallery2/block/2018/04/11/fa4fcfc96b5857283038583e5bdfe949.jpg" alt="命运派对" >
+        
+        <!--角标-->
+                                        
+                                        
+                        <div class="masktxt"><span class="des">引爆最具争议银行劫案</span></div>
+                    </a>
+                    <div class="txtbox">
+                        <a target="_blank" href="http://vod.kankan.com/v/75/75709.shtml" blockid="9832">命运派对</a>
+                        <span class="score"><em>6</em>.5</span>
+                    </div>
+                </li>
+                <li class="middle_show">
+                    <a target="_blank" href="http://vod.kankan.com/v/70/70560.shtml" class="pic " blockid="9832">
+                        <img src="http://img.movie.kanimg.kankan.com/img_default.gif" _src="http://i4.kanimg.kankan.com/gallery2/block/2018/04/10/eb458033480907ef4f8e8b701b293727.jpg" alt="分手合约" >
+                        
+                        <!--角标-->
+                                                        
+                                                        
+                        <div class="masktxt"><span class="des">韩式唯美治愈系爱情</span></div>
+                    </a>
+                    <div class="txtbox">
+                        <a target="_blank" href="http://vod.kankan.com/v/70/70560.shtml" blockid="9832">分手合约</a>
+                        <span class="score"><em>8</em>.5</span>
+                    </div>
+                </li>
+                <li class="wide_show">
+                    <a target="_blank" href="http://vod.kankan.com/v/43/43670.shtml" class="pic " blockid="9832">
+                        <img src="http://img.movie.kanimg.kankan.com/img_default.gif" _src="http://i0.kanimg.kankan.com/gallery2/block/2018/04/09/b35823068809585ea1336bb6be9fdcfe.jpg" alt="疯狂的赛车" >
+                        
+                        <!--角标-->
+                                                        
+                                                        
+                        <div class="masktxt"><span class="des">疯狂的石头姊妹片</span></div>
+                    </a>
+                    <div class="txtbox">
+                        <a target="_blank" href="http://vod.kankan.com/v/43/43670.shtml" blockid="9832">疯狂的赛车</a>
+                        <span class="score"><em>9</em>.0</span>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <aside class="aside">
+            <div class="box_tt">
+                <h2><a target="_blank" href="http://www.kankan.com/top/list_movie_all_daily.html"   blockid="9862">电影热播榜</a></h2>
+                <a target="_blank" class="more" href="http://www.kankan.com/top/list_movie_all_daily.html" blockid="9862">更多<i></i></a>
+            </div>
+            <ul class="rank rank2">
+                <li class="top1">
+                    <a target="_blank" href="http://vod.kankan.com/v/74/74760/495856.shtml" title="烈日灼心" blockid="9863" blockid="9863">
+                        <img src="http://img.movie.kanimg.kankan.com/img_default.gif" _src="http://i1.kanimg.kankan.com/gallery2/block/2018/02/11/157d931cb94cfcf0596835629c56250d.jpg" alt="烈日灼心"/>
+                        <div class="masktxt">
+                            <em>1</em><span>烈日灼心</span><b class="icon icon_up"></b>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a target="_blank" href="http://vod.kankan.com/v/71/71855/423519.shtml" title="医生" blockid="9863" blockid="9863"><em>2</em><span>医生</span><b class="icon icon_up"></b></a>
+                </li>
+                <li>
+                    <a target="_blank" href="http://vod.kankan.com/v/40/40463/235536.shtml" title="僵尸复活" blockid="9863" blockid="9863"><em>3</em><span>僵尸复活</span><b class="icon icon_down"></b></a>
+                </li>
+                <li>
+                    <a target="_blank" href="http://vod.kankan.com/v/40/40790/166305.shtml" title="暮光之城" blockid="9863" blockid="9863"><em>4</em><span>暮光之城</span><b class="icon icon_down"></b></a>
+                </li>
+                <li>
+                    <a target="_blank" href="http://vod.kankan.com/v/74/74673/360722.shtml" title="夜关门:欲望之花" blockid="9863" blockid="9863"><em>5</em><span>夜关门:欲望之花</span><b class="icon icon_up"></b></a>
+                </li>
+                <li>
+                    <a target="_blank" href="http://vod.kankan.com/v/54/54181/338476.shtml" title="终结者" blockid="9863" blockid="9863"><em>6</em><span>终结者</span><b class="icon icon_down"></b></a>
+                </li>
+                <li>
+                    <a target="_blank" href="http://vod.kankan.com/v/99/99244/540164.shtml" title="寂寞主妇" blockid="9863" blockid="9863"><em>7</em><span>寂寞主妇</span><b class="icon icon_down"></b></a>
+                </li>
+                <li>
+                    <a target="_blank" href="http://vod.kankan.com/v/22/22414/244656.shtml" title="醉猴" blockid="9863" blockid="9863"><em>8</em><span>醉猴</span><b class="icon icon_up"></b></a>
+                </li>
+            </ul>
+        </aside>
+    </section>
+    <!-- 电影END -->
+    
+    <!-- 网络电影 -->
+    <section id="kankan-wldy" class="wrapper mod">
+        <div class="box box4">
+            <div class="box_tt">
+                <h2>
+                <a target="_blank"   href="http://movie.kankan.com/type,order/vmovie,update/" blockid="9835">网络电影</a>
+                </h2>
+                <div class="act">
+                    <a target="_blank" href="http://vod.kankan.com/v/60/60579/217551.shtml" blockid="9835">婚前试爱</a> | <a target="_blank" href="http://vod.kankan.com/v/93/93857/534704.shtml" blockid="9835">乌林大会</a> | <a target="_blank" href="http://vod.kankan.com/v/98/98303/537600.shtml" blockid="9835">冲动情侣</a>
+                    <a target="_blank" class="actmore" href="http://movie.kankan.com/type,order/vmovie,update/" blockid="9835">更多<i></i></a>
+                </div>
+            </div>
+            <ul class="imglist imglist220x310 movielist">
+                <li class="">
+                    <a target="_blank" href="http://vod.kankan.com/v/85/85940.shtml" class="pic J-gif " blockid="9836">
+                        <img src="http://img.movie.kanimg.kankan.com/img_default.gif" _src="http://i5.kanimg.kankan.com/gallery2/block/2018/04/13/9f0905db0530b2b9b850928eac13490c.jpg" alt="湘囧之西游降妖" data-gif="http://i1.kanimg.kankan.com/gallery2/block/2018/04/13/4dfab3b4ebd3acebd0616a17e5466ac2.jpg">
+                          <span class="gif">GIF</span>
+                        <!--角标-->
+                                                        
+                                                        
+                        <div class="masktxt"><span class="des">恶搞版西游记</span></div>
+                    </a>
+                    <div class="txtbox">
+                        <a target="_blank" href="http://vod.kankan.com/v/85/85940.shtml" blockid="9836">湘囧之西游降妖</a>
+                        <span class="score"><em>7</em>.9</span>
+                    </div>
+                </li>
+                <li class="">
+                    <a target="_blank" href="http://vod.kankan.com/v/98/98887.shtml" class="pic " blockid="9836">
+                        <img src="http://img.movie.kanimg.kankan.com/img_default.gif" _src="http://img2.kanimg.kankan.com//gallery2/block/2018/04/12/50166f8a28df8309e0ee72f0583b399d.jpg" alt="极品桃花运" >
+                        
+                        <!--角标-->
+                                                        
+                                                        
+                        <div class="masktxt"><span class="des">屌丝约爱爆笑囧事</span></div>
+                    </a>
+                    <div class="txtbox">
+                        <a target="_blank" href="http://vod.kankan.com/v/98/98887.shtml" blockid="9836">极品桃花运</a>
+                        <span class="score"><em>8</em>.5</span>
+                    </div>
+                </li>
+                <li class="">
+                    <a target="_blank" href="http://vod.kankan.com/v/70/70344.shtml" class="pic " blockid="9836">
+                        <img src="http://img.movie.kanimg.kankan.com/img_default.gif" _src="http://i5.kanimg.kankan.com/gallery2/block/2018/04/11/0b7facb9c60a6f94cf0bfb0c26cb54f7.jpg" alt="IT骚年相亲记" >
+                        
+                        <!--角标-->
+                                                        
+                                                        
+                        <div class="masktxt"><span class="des">IT男相亲趣事多</span></div>
+                    </a>
+                    <div class="txtbox">
+                        <a target="_blank" href="http://vod.kankan.com/v/70/70344.shtml" blockid="9836">IT骚年相亲记</a>
+                        <span class="score"><em>7</em>.5</span>
+                    </div>
+                </li>
+                <li class="middle_show">
+                    <a target="_blank" href="http://vod.kankan.com/v/70/70736.shtml" class="pic " blockid="9836">
+                        <img src="http://img.movie.kanimg.kankan.com/img_default.gif" _src="http://i3.kanimg.kankan.com/gallery2/block/2018/04/10/8399faae5afd5ae6de6e6c2e7abe1182.jpg" alt="换脸新娘" >
+                        
+                        <!--角标-->
+                                                        
+                                                        
+                        <div class="masktxt"><span class="des">无缝对接新《笑傲》</span></div>
+                    </a>
+                    <div class="txtbox">
+                        <a target="_blank" href="http://vod.kankan.com/v/70/70736.shtml" blockid="9836">换脸新娘</a>
+                        <span class="score"><em>7</em>.3</span>
+                    </div>
+                </li>
+                <li class="wide_show">
+                    <a target="_blank" href="http://vod.kankan.com/v/90/90373.shtml" class="pic " blockid="9836">
+                        <img src="http://img.movie.kanimg.kankan.com/img_default.gif" _src="http://i7.kanimg.kankan.com/gallery2/block/2018/04/09/3b71e80c88c2f49a0a2d78e81dfb5cff.jpg" alt="夜上海·女人花" >
+                        
+                        <!--角标-->
+                                                        
+                                                        
+                        <div class="masktxt"><span class="des">人性背后的真相</span></div>
+                    </a>
+                    <div class="txtbox">
+                        <a target="_blank" href="http://vod.kankan.com/v/90/90373.shtml" blockid="9836">夜上海·女人花</a>
+                        <span class="score"><em>8</em>.5</span>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <aside class="aside">
+            <div class="box_tt">
+                <h2><a target="_blank" href="http://www.kankan.com/top/list_vmovie_all_daily.html"   blockid="9864">网络电影热播榜</a></h2>
+                <a target="_blank" class="more" href="http://www.kankan.com/top/list_vmovie_all_daily.html" blockid="9864">更多<i></i></a>
+            </div>
+            <ul class="rank rank2">
+                <li class="top1">
+                    <a target="_blank" href="http://vod.kankan.com/v/89/89334/487769.shtml" title="保姆的私密日记" blockid="9865" blockid="9865">
+                        <img src="http://img.movie.kanimg.kankan.com/img_default.gif" _src="http://i9.kanimg.kankan.com/gallery2/block/2018/02/11/6f8b40cf687a167c088348d3616759c2.jpg" alt="保姆的私密日记"/>
+                        <div class="masktxt">
+                            <em>1</em><span>保姆的私密日记</span><b class="icon icon_up"></b>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a target="_blank" href="http://vod.kankan.com/v/90/90183/500210.shtml" title="僵尸王爷" blockid="9865" blockid="9865"><em>2</em><span>僵尸王爷</span><b class="icon icon_up"></b></a>
+                </li>
+                <li>
+                    <a target="_blank" href="http://vod.kankan.com/v/84/84294/400280.shtml" title="黑暗之光" blockid="9865" blockid="9865"><em>3</em><span>黑暗之光</span><b class="icon icon_up"></b></a>
+                </li>
+                <li>
+                    <a target="_blank" href="http://vod.kankan.com/v/68/68199/270569.shtml" title="三人床" blockid="9865" blockid="9865"><em>4</em><span>三人床</span><b class="icon icon_up"></b></a>
+                </li>
+                <li>
+                    <a target="_blank" href="http://vod.kankan.com/v/88/88272/468167.shtml" title="虎王来袭" blockid="9865" blockid="9865"><em>5</em><span>虎王来袭</span><b class="icon icon_up"></b></a>
+                </li>
+                <li>
+                    <a target="_blank" href="http://vod.kankan.com/v/89/89207/485843.shtml" title="爱夜蒲之夜店女神" blockid="9865" blockid="9865"><em>6</em><span>爱夜蒲之夜店女神</span><b class="icon icon_up"></b></a>
+                </li>
+                <li>
+                    <a target="_blank" href="http://vod.kankan.com/v/86/86582/435067.shtml" title="开房美梦" blockid="9865" blockid="9865"><em>7</em><span>开房美梦</span><b class="icon icon_up"></b></a>
+                </li>
+                <li>
+                    <a target="_blank" href="http://vod.kankan.com/v/84/84197/393539.shtml" title="床上关系2" blockid="9865" blockid="9865"><em>8</em><span>床上关系2</span><b class="icon icon_down"></b></a>
+                </li>
+            </ul>
+        </aside>
+    </section>
+    <!-- 网络电影 END -->
+
+    <!-- 动漫 -->
+    <section id="kankan-animation" class="wrapper mod">
+        <div class="box">
+            <div class="box_tt">
+                <h2>
+                    <a target="_blank"   href="http://anime.kankan.com/" blockid="9839">动漫</a>
+                </h2>
+                <div class="act">
+                    <a target="_blank" href="http://anime.kankan.com/qinzi/" blockid="9839">亲子</a> | <a target="_blank" href="http://movie.kankan.com/type,order,genre,status/anime,hits,xfdh,zp/" blockid="9839">新番</a> | <a target="_blank" href="http://movie.kankan.com/type,order,genre,status/anime,hits,jcova,zp/" blockid="9839">剧场</a> | <a target="_blank" href="http://movie.kankan.com/type,order,genre,status/anime,hits,rx,zp/" blockid="9839">热血</a> | <a target="_blank" href="http://movie.kankan.com/type,order,genre,status/anime,hits,a_sg,zp/" blockid="9839">儿歌</a>
+                    <a target="_blank" class="actmore" href="http://anime.kankan.com/" blockid="9839">更多<i></i></a>
+                </div>
+                <div class="cm_gm" id="cm2846"></div>
+                <script type="text/javascript" src="http://biz5.kankan.com/portal/008/A/cm2846.js" async></script>
+            </div>
+            <div class="imglist_hot imglist_hot2 J-hot-focus">
+                <!-- 最多5个 -->
+                <ul class="list">
+                    <li class="cur">
+                        <a target="_blank" href="http://vod.kankan.com/v/104/104261.shtml" class="pic " blockid="9840">
+                            <img src="http://img.movie.kanimg.kankan.com/img_default.gif" _src="http://i8.kanimg.kankan.com/gallery2/block/2018/04/13/2161dbd2018973bffde33f95c3ce7066.jpg" alt="逆光之颤" >
+                        </a>
+                        <div class="tabbox">
+                            <a target="_blank" href="http://vod.kankan.com/v/104/104261.shtml" class="tit" blockid="9840">逆光之颤</a>
+                            <p class="des">
+                                与战友征服异世大陆
+                                <span>
+                              更新至03集                             </span>
+                            </p>
+                        </div>
+                    </li>
+                    <li>
+                        <a target="_blank" href="http://vod.kankan.com/v/105/105144.shtml" class="pic " blockid="9840">
+                            <img src="http://img.movie.kanimg.kankan.com/img_default.gif" _src="http://i6.kanimg.kankan.com/gallery2/block/2018/03/30/a97da5e27d1c5ab96ff37f5126a3a81c.jpg" alt="RunFox狐狸快跑" >
+                        <!--角标-->
+                        </a>
+                        <div class="tabbox">
+                            <a target="_blank" href="http://vod.kankan.com/v/105/105144.shtml" class="tit" blockid="9840">RunFox狐狸快跑</a>
+                            <p class="des">
+                                让孩子成为故事主角
+                                <span>更新至09集</span>
+                            </p>
+                        </div>
+                    </li>
+                    <li>
+                        <a target="_blank" href="http://vod.kankan.com/v/104/104534.shtml" class="pic " blockid="9840">
+                            <img src="http://img.movie.kanimg.kankan.com/img_default.gif" _src="http://i0.kanimg.kankan.com/gallery2/block/2018/02/06/5863a39e1aa0f005e1717ecfd58ad500.jpg" alt="兔小贝公益剧" >
+                        <!--角标-->
+                        </a>
+                        <div class="tabbox">
+                            <a target="_blank" href="http://vod.kankan.com/v/104/104534.shtml" class="tit" blockid="9840">兔小贝公益剧</a>
+                            <p class="des">
+                                让孩子成长的动画
+                                <span>更新至48集</span>
+                            </p>
+                        </div>
+                    </li>
+                </ul>
+                <!-- 最多5个 -->
+                <ul class="tabtigger">
+                    <li class="cur">
+                        1 </li>
+                    <li>
+                        2 </li>
+                    <li>
+                        3 </li>
+                </ul>
+                <a target="_self" title="向左" class="scrolltigger scrolltigger_L" href="javascript:void(0)"></a>
+                <a target="_self" title="向右" class="scrolltigger scrolltigger_R" href="javascript:void(0)"></a>
+            </div>
+            <div class="box box3">
+                <ul class="imglist imglist220x125">
+                    <li class="">
+                        <a target="_blank" href="http://vod.kankan.com/v/70/70101.shtml" class="pic " blockid="9841">
+        <img src="http://img.movie.kanimg.kankan.com/img_default.gif" _src="http://i4.kanimg.kankan.com/gallery2/block/2018/04/13/23c4e21fe9576cda20ceaee87c279298.jpg" alt="兔小贝儿歌" >
+        
+        <!--集数-->
+                    <span class="js">
+                              更新至563集                             </span>
+        
+        <!--角标-->
+                                        
+                                            </a>
+                        <div class="tc">
+                            <p class="tit"> <a target="_blank" href="http://vod.kankan.com/v/70/70101.shtml" blockid="9841">兔小贝儿歌</a></p>
+                            <p class="des">经典儿歌寓教于乐</p>
+                        </div>
+                    </li>
+                    <li class="middle_show">
+                        <a target="_blank" href="http://vod.kankan.com/v/92/92995.shtml" class="pic " blockid="9841">
+        <img src="http://img.movie.kanimg.kankan.com/img_default.gif" _src="http://i5.kanimg.kankan.com/gallery2/block/2018/04/12/d44fce83100d4fc8fb6909f293f1d324.jpg" alt="我差点就信了2" >
+        
+        <!--集数-->
+                    <span class="js">
+                              更新至192集                             </span>
+        
+        <!--角标-->
+                                        
+                                            </a>
+                        <div class="tc">
+                            <p class="tit"> <a target="_blank" href="http://vod.kankan.com/v/92/92995.shtml" blockid="9841">我差点就信了2</a></p>
+                            <p class="des">爆笑王子历险记</p>
+                        </div>
+                    </li>
+                    <li class="wide_show">
+                        <a target="_blank" href="http://vod.kankan.com/v/104/104960.shtml" class="pic " blockid="9841">
+        <img src="http://img.movie.kanimg.kankan.com/img_default.gif" _src="http://i9.kanimg.kankan.com/gallery2/block/2018/04/09/0629a290e703124de2b58a0309194902.jpg" alt="叫我僵小鱼 日常篇2" >
+        
+        <!--集数-->
+                    <span class="js">
+                              更新至12集                             </span>
+        
+        <!--角标-->
+                                        
+                                            </a>
+                        <div class="tc">
+                            <p class="tit"> <a target="_blank" href="http://vod.kankan.com/v/104/104960.shtml" blockid="9841">叫我僵小鱼 日常篇2</a></p>
+                            <p class="des">暖萌小僵尸何去何从</p>
+                        </div>
+                    </li>
+                    <li class="">
+                        <a target="_blank" href="http://vod.kankan.com/v/92/92007.shtml" class="pic " blockid="9841">
+        <img src="http://img.movie.kanimg.kankan.com/img_default.gif" _src="http://i3.kanimg.kankan.com/gallery2/block/2018/03/19/6b1ad2889727e9a1fe99998d15eb5065.jpg" alt="动植物大战" >
+        
+        <!--集数-->
+                    <span class="js">
+                              更新至21集                             </span>
+        
+        <!--角标-->
+                                        
+                                            </a>
+                        <div class="tc">
+                            <p class="tit"> <a target="_blank" href="http://vod.kankan.com/v/92/92007.shtml" blockid="9841">动植物大战</a></p>
+                            <p class="des">环保小队战雾霾魔王</p>
+                        </div>
+                    </li>
+                    <li class="">
+                        <a target="_blank" href="http://vod.kankan.com/v/98/98666.shtml" class="pic " blockid="9841">
+        <img src="http://img.movie.kanimg.kankan.com/img_default.gif" _src="http://i5.kanimg.kankan.com/gallery2/block/2018/03/21/919aad593ec6439e62c1413e1adf8497.jpg" alt="口水三国 第二季" >
+        
+        <!--集数-->
+                    <span class="js">
+                              更新至46集                             </span>
+        
+        <!--角标-->
+                                        
+                                            </a>
+                        <div class="tc">
+                            <p class="tit"> <a target="_blank" href="http://vod.kankan.com/v/98/98666.shtml" blockid="9841">口水三国 第二季</a></p>
+                            <p class="des">欢乐三国趣事多</p>
+                        </div>
+                    </li>
+                    <li class="middle_show">
+                        <a target="_blank" href="http://vod.kankan.com/v/105/105060.shtml" class="pic " blockid="9841">
+        <img src="http://img.movie.kanimg.kankan.com/img_default.gif" _src="http://i4.kanimg.kankan.com/gallery2/block/2018/02/26/b98f2c4474c9e63a31330f73c3592059.jpg" alt="星学院之魔法礼服" >
+        
+        <!--集数-->
+                    <span class="js">
+                              26集全                             </span>
+        
+        <!--角标-->
+                                        
+                                            </a>
+                        <div class="tc">
+                            <p class="tit"> <a target="_blank" href="http://vod.kankan.com/v/105/105060.shtml" blockid="9841">星学院之魔法礼服</a></p>
+                            <p class="des">魔法少女的冒险之旅</p>
+                        </div>
+                    </li>
+                    <li class="wide_show">
+                        <a target="_blank" href="http://vod.kankan.com/v/104/104934.shtml" class="pic " blockid="9841">
+        <img src="http://img.movie.kanimg.kankan.com/img_default.gif" _src="http://i4.kanimg.kankan.com/gallery2/block/2018/02/26/55d80e806894a30eb964d6f7596186df.jpg" alt="吉祥宝宝之我是食神" >
+        
+        <!--集数-->
+                    <span class="js">
+                              1集全                             </span>
+        
+        <!--角标-->
+                                        
+                                            </a>
+                        <div class="tc">
+                            <p class="tit"> <a target="_blank" href="http://vod.kankan.com/v/104/104934.shtml" blockid="9841">吉祥宝宝之我是食神</a></p>
+                            <p class="des">一代厨神的励志故事</p>
+                        </div>
+                    </li>
+                    <li class="">
+                        <a target="_blank" href="http://vod.kankan.com/v/92/92292.shtml" class="pic " blockid="9841">
+        <img src="http://img.movie.kanimg.kankan.com/img_default.gif" _src="http://i7.kanimg.kankan.com/gallery2/block/2018/01/29/777e3937a595ea76d17bf89a1ee8e108.jpg" alt="最强战士 迷你特工队" >
+        
+        <!--集数-->
+                    <span class="js">
+                              52集全                             </span>
+        
+        <!--角标-->
+                                        
+                                            </a>
+                        <div class="tc">
+                            <p class="tit"> <a target="_blank" href="http://vod.kankan.com/v/92/92292.shtml" blockid="9841">最强战士 迷你特工队</a></p>
+                            <p class="des">进击的小动物战士</p>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
+    <!-- 动漫 END -->
+    
+    <!-- 综艺 -->
+    <section id="kankan-variety" class="wrapper mod">
+        <div class="box">
+            <div class="box_tt">
+                <h2>
+                    <a target="_blank"   href="http://zy.kankan.com/" blockid="9842">综艺</a>
+                </h2>
+                <div class="act">
+                    <a target="_blank" href="http://movie.kankan.com/type,order,genre,status/tv,update,xx,zp/" blockid="9842">真人秀场</a> | <a target="_blank" href="http://movie.kankan.com/type,order,genre,status/tv,update,ymgx,zp/" blockid="9842">幽默搞笑</a> | <a target="_blank" href="http://movie.kankan.com/type,order,genre,status/tv,update,tkx,zp/" blockid="9842">脱口秀</a> | <a target="_blank" href="http://movie.kankan.com/type,order,genre,status/tv,update,yx,zp/" blockid="9842">游戏互动</a>
+                    <a target="_blank" class="actmore" href="http://zy.kankan.com/" blockid="9842">更多<i></i></a>
+                </div>
+                <div class="cm_gm cm_gm_right" id="cm2845"></div>
+                <script type="text/javascript" src="http://biz5.kankan.com/portal/008/A/cm2845.js" async></script>
+            </div>
+            <div class="imglist_hot imglist_hot2 J-hot-focus">
+                <!-- 最多5个 -->
+                <ul class="list">
+                    <li class="cur">
+                        <a target="_blank" href="http://vod.kankan.com/v/74/74570.shtml" class="pic " blockid="9843">
+                            <img src="http://img.movie.kanimg.kankan.com/img_default.gif" _src="http://i0.kanimg.kankan.com/gallery2/block/2018/04/13/1cf74365ba28f4ebb8485d324bc87edc.jpg" alt="最炫国剧风" >
+                        </a>
+                        <div class="tabbox">
+                            <a target="_blank" href="http://vod.kankan.com/v/74/74570.shtml" class="tit" blockid="9843">最炫国剧风</a>
+                            <p class="des">
+                                人在江湖，身不由己
+                                <span>
+                              2018-04-12期                             </span>
+                            </p>
+                        </div>
+                    </li>
+                </ul>
+                <!-- 最多5个 -->
+                <ul class="tabtigger">
+                    <li class="cur">
+                        1 </li>
+                </ul>
+                <a target="_self" title="向左" class="scrolltigger scrolltigger_L" href="javascript:void(0)"></a>
+                <a target="_self" title="向右" class="scrolltigger scrolltigger_R" href="javascript:void(0)"></a>
+            </div>
+            <div class="box box3">
+                <ul class="imglist imglist220x125">
+                    <li class="">
+                        <a target="_blank" href="http://vod.kankan.com/v/92/92864.shtml" class="pic " blockid="9844">
+        <img src="http://img.movie.kanimg.kankan.com/img_default.gif" _src="http://i4.kanimg.kankan.com/gallery2/block/2018/04/12/b0063b14b4d2fa1a416c9d3c94d1c3dc.jpg" alt="火星电影情报站" >
+        
+        <!--集数-->
+                    <span class="js">
+                              2018-04-12期                             </span>
+        
+        <!--角标-->
+                                        
+                                            </a>
+                        <div class="tc">
+                            <p class="tit"> <a target="_blank" href="http://vod.kankan.com/v/92/92864.shtml" blockid="9844">火星电影情报站</a></p>
+                            <p class="des">&quot;湮灭&quot;带你踏上死亡之旅</p>
+                        </div>
+                    </li>
+                    <li class="middle_show">
+                        <a target="_blank" href="http://vod.kankan.com/v/68/68619.shtml" class="pic " blockid="9844">
+        <img src="http://img.movie.kanimg.kankan.com/img_default.gif" _src="http://i8.kanimg.kankan.com/gallery2/block/2018/04/12/70a898ba4c36cd177c76988401dbb7b0.jpg" alt="魔法课堂" >
+        
+        <!--集数-->
+                    <span class="js">
+                              2018-04-12期                             </span>
+        
+        <!--角标-->
+                                        
+                                            </a>
+                        <div class="tc">
+                            <p class="tit"> <a target="_blank" href="http://vod.kankan.com/v/68/68619.shtml" blockid="9844">魔法课堂</a></p>
+                            <p class="des">PerryTattoo口红限量上线</p>
+                        </div>
+                    </li>
+                    <li class="wide_show">
+                        <a target="_blank" href="http://vod.kankan.com/v/105/105193.shtml" class="pic " blockid="9844">
+        <img src="http://img.movie.kanimg.kankan.com/img_default.gif" _src="http://img2.kanimg.kankan.com//gallery2/block/2018/04/12/84875a1e482babb7abcb9a4064832b1f.jpg" alt="生了么产后瑜伽" >
+        
+        <!--集数-->
+                    <span class="js">
+                              2018-03-14期                             </span>
+        
+        <!--角标-->
+                                        
+                                            </a>
+                        <div class="tc">
+                            <p class="tit"> <a target="_blank" href="http://vod.kankan.com/v/105/105193.shtml" blockid="9844">生了么产后瑜伽</a></p>
+                            <p class="des">低弓箭步:元气满满一整天</p>
+                        </div>
+                    </li>
+                    <li class="">
+                        <a target="_blank" href="http://vod.kankan.com/v/92/92693.shtml" class="pic " blockid="9844">
+        <img src="http://img.movie.kanimg.kankan.com/img_default.gif" _src="http://i3.kanimg.kankan.com/gallery2/block/2018/04/11/62e9ba9082085a82ace8eea84186e42e.jpg" alt="耐撕星球" >
+        
+        <!--集数-->
+                    <span class="js">
+                              2018-04-11期                             </span>
+        
+        <!--角标-->
+                                        
+                                            </a>
+                        <div class="tc">
+                            <p class="tit"> <a target="_blank" href="http://vod.kankan.com/v/92/92693.shtml" blockid="9844">耐撕星球</a></p>
+                            <p class="des">TFboys谁才是扛把子</p>
+                        </div>
+                    </li>
+                    <li class="">
+                        <a target="_blank" href="http://vod.kankan.com/v/85/85223.shtml" class="pic " blockid="9844">
+        <img src="http://img.movie.kanimg.kankan.com/img_default.gif" _src="http://i9.kanimg.kankan.com/gallery2/block/2018/04/10/75abfb3a8b9f2dbe0c5a702175d544ab.jpg" alt="明星撞衫咚咚锵" >
+        
+        <!--集数-->
+                    <span class="js">
+                              2018-04-10期                             </span>
+        
+        <!--角标-->
+                                        
+                                            </a>
+                        <div class="tc">
+                            <p class="tit"> <a target="_blank" href="http://vod.kankan.com/v/85/85223.shtml" blockid="9844">明星撞衫咚咚锵</a></p>
+                            <p class="des">张韶涵靠白西装气场全开</p>
+                        </div>
+                    </li>
+                    <li class="middle_show">
+                        <a target="_blank" href="http://vod.kankan.com/v/105/105187.shtml" class="pic " blockid="9844">
+        <img src="http://img.movie.kanimg.kankan.com/img_default.gif" _src="http://i5.kanimg.kankan.com/gallery2/block/2018/04/03/0d766f318aa03f5c2da71a756687a45c.jpg" alt="第22届全球华语榜中榜" >
+        
+        <!--集数-->
+                    <span class="js">
+                              预告片                             </span>
+        
+        <!--角标-->
+                                        
+                                            </a>
+                        <div class="tc">
+                            <p class="tit"> <a target="_blank" href="http://vod.kankan.com/v/105/105187.shtml" blockid="9844">第22届全球华语榜中榜</a></p>
+                            <p class="des">盛世娱乐华语荣耀</p>
+                        </div>
+                    </li>
+                    <li class="wide_show">
+                        <a target="_blank" href="http://vod.kankan.com/v/92/92943.shtml" class="pic " blockid="9844">
+        <img src="http://img.movie.kanimg.kankan.com/img_default.gif" _src="http://i8.kanimg.kankan.com/gallery2/block/2018/04/04/997ed3d8a770141e7122278c68860da0.jpg" alt="玩疯了创玩星球" >
+        
+        <!--集数-->
+                    <span class="js">
+                              2018-04-04期                             </span>
+        
+        <!--角标-->
+                                        
+                                            </a>
+                        <div class="tc">
+                            <p class="tit"> <a target="_blank" href="http://vod.kankan.com/v/92/92943.shtml" blockid="9844">玩疯了创玩星球</a></p>
+                            <p class="des">小黑猫智斗爱迪生</p>
+                        </div>
+                    </li>
+                    <li class="">
+                        <a target="_blank" href="http://vod.kankan.com/v/105/105101.shtml" class="pic " blockid="9844">
+        <img src="http://img.movie.kanimg.kankan.com/img_default.gif" _src="http://i3.kanimg.kankan.com/gallery2/block/2018/04/03/d5791109f58d15eb48daa11caf2c5155.jpg" alt="拳城出击" >
+        
+        <!--集数-->
+                    <span class="js">
+                              预告片                             </span>
+        
+        <!--角标-->
+                                        
+                                            </a>
+                        <div class="tc">
+                            <p class="tit"> <a target="_blank" href="http://vod.kankan.com/v/105/105101.shtml" blockid="9844">拳城出击</a></p>
+                            <p class="des">2017年度总决赛集锦</p>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
+    <!-- 综艺 END -->
+    <!-- 搞笑 -->
+    <section id="kankan-funny" class="wrapper mod">
+        <div class="box_tt">
+            <h2>
+        <a target="_blank"   href="http://video.kankan.com/list/joke/all,new,all/index-1.html" blockid="9848">搞笑</a>
+        </h2>
+            <div class="act">
+                <a target="_blank" href="http://video.kankan.com/list/joke/jrqs,new,all/index-1.html" blockid="9848">囧事</a> | <a target="_blank" href="http://video.kankan.com/list/joke/zgeg,new,all/index-1.html" blockid="9848">整蛊</a> | <a target="_blank" href="http://video.kankan.com/list/joke/bxcw,new,all/index-1.html" blockid="9848">萌宠</a>
+                <a target="_blank" class="actmore" href="http://video.kankan.com/list/joke/all,new,all/index-1.html" blockid="9848">更多<i></i></a>
+            </div>
+            <div class="cm_gm" id="cm2917"></div>
+            <script type="text/javascript" src="http://biz5.kankan.com/portal/008/A/cm2917.js" async></script>
+        </div>
+        <div class="box box5">
+            <ul class="imglist imglist220x125">
+                <li class="">
+                    <a target="_blank" href="http://video.kankan.com/news/album/1/1137.shtml?c=620342" class="pic " blockid="9849">
+        <img src="http://img.movie.kanimg.kankan.com/img_default.gif" _src="http://i7.kanimg.kankan.com/gallery2/block/2018/04/12/d9189cd0eb44257668b2d2da18ed7a88.jpg" alt="3岁小宝宝给妈妈的惊喜" >
+        
+        <!--角标-->
+                                        
+                                            </a>
+                    <div class="tc">
+                        <p class="tit"> <a target="_blank" href="http://video.kankan.com/news/album/1/1137.shtml?c=620342" blockid="9849">3岁小宝宝给妈妈的惊喜</a></p>
+                        <p class="des">全程爆笑超可爱
+                    </div>
+                </li>
+                <li class="">
+                    <a target="_blank" href="http://video.kankan.com/news/album/1/1137.shtml?c=620309" class="pic " blockid="9849">
+        <img src="http://img.movie.kanimg.kankan.com/img_default.gif" _src="http://i1.kanimg.kankan.com/gallery2/block/2018/04/12/423ae43ae91e2d51419a63bc2afb0f5f.jpg" alt="以为你是安静睡觉的猫头鹰" >
+        
+        <!--角标-->
+                                        
+                                            </a>
+                    <div class="tc">
+                        <p class="tit"> <a target="_blank" href="http://video.kankan.com/news/album/1/1137.shtml?c=620309" blockid="9849">以为你是安静睡觉的猫头鹰</a></p>
+                        <p class="des">没想到套路这么深
+                    </div>
+                </li>
+                <li class="">
+                    <a target="_blank" href="http://video.kankan.com/news/album/1/1137.shtml?c=619807" class="pic " blockid="9849">
+        <img src="http://img.movie.kanimg.kankan.com/img_default.gif" _src="http://i6.kanimg.kankan.com/gallery2/block/2018/04/10/aa29b0092c3fdb872d98c9b5aff68c1b.jpg" alt="女婴放屁被发现后表情生动" >
+        
+        <!--角标-->
+                                        
+                                            </a>
+                    <div class="tc">
+                        <p class="tit"> <a target="_blank" href="http://video.kankan.com/news/album/1/1137.shtml?c=619807" blockid="9849">女婴放屁被发现后表情生动</a></p>
+                        <p class="des">给你个小眼神自己体会
+                    </div>
+                </li>
+                <li class="middle_show">
+                    <a target="_blank" href="http://video.kankan.com/news/album/1/1137.shtml?c=619805" class="pic " blockid="9849">
+        <img src="http://img.movie.kanimg.kankan.com/img_default.gif" _src="http://i7.kanimg.kankan.com/gallery2/block/2018/04/10/1b2d9edeb682880bf2c8738f9a8e0469.jpg" alt="爱豆们被粉丝逗到唱不下去" >
+        
+        <!--角标-->
+                                        
+                                            </a>
+                    <div class="tc">
+                        <p class="tit"> <a target="_blank" href="http://video.kankan.com/news/album/1/1137.shtml?c=619805" blockid="9849">爱豆们被粉丝逗到唱不下去</a></p>
+                        <p class="des">自己的粉丝笑哭了也要唱完
+                    </div>
+                </li>
+                <li class="wide_show">
+                    <a target="_blank" href="http://video.kankan.com/news/album/1/1137.shtml?c=619218" class="pic " blockid="9849">
+        <img src="http://img.movie.kanimg.kankan.com/img_default.gif" _src="http://i6.kanimg.kankan.com/gallery2/block/2018/04/02/a55df823bea2332b925a859ebdfc7a5d.jpg" alt="这版本《告白气球》敲好听" >
+        
+        <!--角标-->
+                                        
+                                            </a>
+                    <div class="tc">
+                        <p class="tit"> <a target="_blank" href="http://video.kankan.com/news/album/1/1137.shtml?c=619218" blockid="9849">这版本《告白气球》敲好听</a></p>
+                        <p class="des">中间伴奏的妹纸是认真的么
+                    </div>
+                </li>
+                <li class="">
+                    <a target="_blank" href="http://video.kankan.com/news/album/1/1137.shtml?c=619219" class="pic " blockid="9849">
+        <img src="http://img.movie.kanimg.kankan.com/img_default.gif" _src="http://i2.kanimg.kankan.com/gallery2/block/2018/04/02/2c97f537b0724f65f8752f8a10a65d24.jpg" alt="这就是你没有女朋友的原因" >
+        
+        <!--角标-->
+                                        
+                                            </a>
+                    <div class="tc">
+                        <p class="tit"> <a target="_blank" href="http://video.kankan.com/news/album/1/1137.shtml?c=619219" blockid="9849">这就是你没有女朋友的原因</a></p>
+                        <p class="des">骚年太悲催了
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </section>
+    <!-- 搞笑END -->
+    <!-- 生活 -->
+    <section id="kankan-life" class="wrapper mod">
+        <div class="box_tt">
+            <h2>
+                <a target="_blank"   href="http://video.kankan.com/list/life/all,new,all/index-1.html" blockid="9850">生活</a>
+            </h2>
+            <div class="act">
+                <a target="_blank" href="http://video.kankan.com/list/news/technology,new,all/index-1.html" blockid="9850">科技</a> | <a target="_blank" href="http://video.kankan.com/list/life/tourism,new,all/index-1.html" blockid="9850">旅游</a> | <a target="_blank" href="http://video.kankan.com/list/life/auto,new,all/index-1.html" blockid="9850">汽车</a>
+                <a target="_blank" class="actmore" href="http://video.kankan.com/list/life/all,new,all/index-1.html" blockid="9850">更多<i></i></a>
+            </div>
+            <div class="cm_gm" id="cm2918"></div>
+            <script type="text/javascript" src="http://biz5.kankan.com/portal/008/A/cm2918.js" async></script>
+        </div>
+        <div class="box box5">
+            <ul class="imglist imglist220x125">
+                <li class="">
+                    <a target="_blank" href="http://video.kankan.com/life/album/0/627.shtml?c=621090" class="pic " blockid="9851">
+        <img src="http://img.movie.kanimg.kankan.com/img_default.gif" _src="http://i8.kanimg.kankan.com/gallery2/block/2018/04/14/3e951ebed066515648c8a658faa8cc3a.jpg" alt="烤箱版红烧鱼盖饭" >
+        
+        <!--角标-->
+                                        
+                                            </a>
+                    <div class="tc">
+                        <p class="tit"> <a target="_blank" href="http://video.kankan.com/life/album/0/627.shtml?c=621090" blockid="9851">烤箱版红烧鱼盖饭</a></p>
+                        <p class="des">看完流口水真的不是你的错
+                    </div>
+                </li>
+                <li class="">
+                    <a target="_blank" href="http://video.kankan.com/life/album/0/634.shtml?c=621089" class="pic " blockid="9851">
+        <img src="http://img.movie.kanimg.kankan.com/img_default.gif" _src="http://i7.kanimg.kankan.com/gallery2/block/2018/04/14/3b7c339a508708dbe3930939bfc787ce.jpg" alt="发胶的三种另类用法" >
+        
+        <!--角标-->
+                                        
+                                            </a>
+                    <div class="tc">
+                        <p class="tit"> <a target="_blank" href="http://video.kankan.com/life/album/0/634.shtml?c=621089" blockid="9851">发胶的三种另类用法</a></p>
+                        <p class="des">不要太惊讶哦！
+                    </div>
+                </li>
+                <li class="">
+                    <a target="_blank" href="http://video.kankan.com/life/album/0/681.shtml?c=621091" class="pic " blockid="9851">
+        <img src="http://img.movie.kanimg.kankan.com/img_default.gif" _src="http://i8.kanimg.kankan.com/gallery2/block/2018/04/14/f4ca2d1ea61856d8b1491ee40c6a81d8.jpg" alt="国际泡面大测评" >
+        
+        <!--角标-->
+                                        
+                                            </a>
+                    <div class="tc">
+                        <p class="tit"> <a target="_blank" href="http://video.kankan.com/life/album/0/681.shtml?c=621091" blockid="9851">国际泡面大测评</a></p>
+                        <p class="des">款款真材实料让你大满足
+                    </div>
+                </li>
+                <li class="middle_show">
+                    <a target="_blank" href="http://video.kankan.com/life/album/1/1140.shtml?c=620206" class="pic " blockid="9851">
+        <img src="http://img.movie.kanimg.kankan.com/img_default.gif" _src="http://img2.kanimg.kankan.com//gallery2/block/2018/04/12/5acbff94834a672d0ab97e9cfecaf363.jpg" alt="一孕真的会傻三年吗？" >
+        
+        <!--角标-->
+                                        
+                                            </a>
+                    <div class="tc">
+                        <p class="tit"> <a target="_blank" href="http://video.kankan.com/life/album/1/1140.shtml?c=620206" blockid="9851">一孕真的会傻三年吗？</a></p>
+                        <p class="des">真相原来是这样的
+                    </div>
+                </li>
+                <li class="wide_show">
+                    <a target="_blank" href="http://video.kankan.com/life/album/1/1134.shtml?c=620211" class="pic " blockid="9851">
+        <img src="http://img.movie.kanimg.kankan.com/img_default.gif" _src="http://i6.kanimg.kankan.com/gallery2/block/2018/04/12/822cf708a47abf485d25995243e7f07d.jpg" alt="1招搞定水果渍" >
+        
+        <!--角标-->
+                                        
+                                            </a>
+                    <div class="tc">
+                        <p class="tit"> <a target="_blank" href="http://video.kankan.com/life/album/1/1134.shtml?c=620211" blockid="9851">1招搞定水果渍</a></p>
+                        <p class="des">轻松让衣物焕然如新
+                    </div>
+                </li>
+                <li class="">
+                    <a target="_blank" href="http://video.kankan.com/life/album/1/1136.shtml?c=619901" class="pic " blockid="9851">
+        <img src="http://img.movie.kanimg.kankan.com/img_default.gif" _src="http://img2.kanimg.kankan.com//gallery2/block/2018/04/11/d1f62943abc90ccf91eab7a0054b7e57.jpg" alt="看完真实的分娩" >
+        
+        <!--角标-->
+                                        
+                                            </a>
+                    <div class="tc">
+                        <p class="tit"> <a target="_blank" href="http://video.kankan.com/life/album/1/1136.shtml?c=619901" blockid="9851">看完真实的分娩</a></p>
+                        <p class="des">脊背发凉又热泪盈眶
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </section>
+    <!-- 生活END -->
+
+    <!-- footer -->
+    
+    
+    
+</body>
+
+</html>

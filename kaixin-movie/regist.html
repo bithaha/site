@@ -1,0 +1,863 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>注册中心</title>
+<meta name="keywords" content="看看网络,看看网络注册,看看帐号注册">
+<meta name="description" content="看看网络注册中心">
+<link rel="stylesheet" href="css/res.css?v=20150612">
+<meta http-equiv="content-type" charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=7" />
+<script>
+//URL参数解析
+function getParameter(e){
+    var t=parent.location.search,n=new RegExp("[?&]"+e+"=([^&]+)","g"),r=n.exec(t),i=null;
+    return null!=r&&(i=decodeURIComponent(r[1])),i
+}  
+</script>
+
+</head>
+
+<body>
+<div class="wp_res">
+	<div class="header">
+    	<h1><a href="http://www.kankan.com" class="logo png">看看网络</a></h1>
+        <a href="http://u.kankan.com/login.html" class="login" title="已有看看帐号">已有看看帐号<span class="ico_log png"></span></a>
+    </div>
+	<div class="main_res png">
+		<div data-bind="visible:viewCtrl()==10||viewCtrl()==11" >
+		<!-- 注册表单 -->
+    	<div class="title">
+        	<a href="javascript:void(0)" class="phone" title="手机注册"><span class="ico_r_phone"></span>手机注册</a>
+            <a href="#" class="email un" title="邮箱注册" style="display:none"><span class="ico_r_email"></span>邮箱注册</a>
+        </div>
+        <div class="form">
+            <div data-bind="visible:viewCtrl()==10" class="form_phone">
+                <ul>
+                    <li style="z-index:2;">	
+                        <div data-bind="css:{'warn':((rPhone.hasError()==1&&rPhone.isSelected()==false)||(rPhone.hasError()==2&&rPhone.isSelected()==false)),'cho':rPhone.isSelected()}" class="text">
+                            <span class="ico_f_phone"></span>
+                            <input tabindex="1" data-bind="hasFocus:rPhone.isSelected,textInput:rPhone.val,event:{keydown:rPhone.keydown},attr:{'placeholder':rPhone.isSelected()==true?'':'手机号码'}" type="text" .
+								class="ipt_nor" placeholder="手机号码" value="" />
+                            <div data-bind="visible:rPhone.val().length>0" class="option" >
+                                <a data-bind="click:rPhone.delval,visible:(rPhone.isSelected()==true||rPhone.hover()==true),event:{focus:rPhone.onfocus,mouseout:rPhone.mouseout,mouseover:rPhone.mouseover}"  style="display:none;"  href="#" class="ico_f_del"></a>
+                            </div>
+							<!-- hasError ==-1初始状态 ==0正确的格式 ==1格式错误 ==2手机已经注册 ==3安全手机冲突 
+							
+							
+							(rPhone.isSelected()==true&&rPhone.hasError()==-1)||(rPhone.hasError()==1&&rPhone.isSelected()==true)
+							-->
+                            <div data-bind="visible:rPhone.isSelected()==true" style="display:none;"  class="tips" >
+                                <span class="ico_arw"></span>
+                                <span class="ico_arw_i"></span>
+                                <span class="ico_t_note"></span>
+                                <p>请输入您的手机号!(暂不支持港澳台及国外手机)</p>
+                            </div>
+							
+							<div data-bind="visible:(rPhone.hasError()==1&&rPhone.isSelected()==false&&rPhone.val().length!=13)" style="display:none;" class="tips mrg">
+								<span class="ico_arw"></span>
+									<span class="ico_arw_i"></span>
+									<span class="ico_t_warn"></span>
+									<p>请输入11位的手机号码！</p>
+							</div>
+							<div data-bind="visible:(rPhone.hasError()==1&&rPhone.val().length==13&&rPhone.isSelected()==false)" style="display:none;" class="tips mrg">
+								<span class="ico_arw"></span>
+									<span class="ico_arw_i"></span>
+									<span class="ico_t_warn"></span>
+									<p>输入的手机格式错误</p>
+							</div>
+							<div data-bind="visible:rPhone.hasError()==2&&rPhone.isSelected()==false" style="display:none;" class="tips">
+                                <span class="ico_arw"></span>
+                                <span class="ico_arw_i"></span>
+                                <span class="ico_t_warn"></span>
+                                <p>您输入的手机号码已被注册</p>
+                                <a href="http://u.kankan.com/login.html">立即登录&gt;&gt;</a>
+                            </div>
+							<span data-bind="visible:rPhone.hasError()==0" style="display:none" class="ico_t_ok"></span>
+							
+                        </div>
+						<!--//val=0获取验证码，==1正在获取 ==2验码已发送， ==3重新获取验正码 -->
+                        <div data-bind="visible:rVerifyCode.val()==0"  class="get">
+                            <a data-bind="click:rVerifyCode.svaild" href="#" class="btn_nor_1" title="免费获取验证码">免费获取验证码</a>
+							
+                        </div>
+                        <div data-bind="visible:rVerifyCode.val()==1" style="display:none;"  class="get">
+                            <a href="#" class="btn_nor_1 nor_1_dis" title="正在发送...">正在发送...</a>
+                        </div>
+                        <div data-bind="visible:rVerifyCode.val()==2"  style="display:none;"  class="get">
+                            <a data-bind="text:'验证码已发送('+rVerifyCode.time()+')'" href="#" class="btn_nor_1 nor_1_dis" title="验证码已发送">验证码已发送</a>
+							
+                            <span data-bind="visible:rVerifyCode.time()<=55" class="note">
+								<a href="#" class="link_get">没收到短信？</a>
+							</span>
+                            <div class="tips_note" style="display:none;">
+                            	<span class="ico_arw"></span>
+                                <span class="ico_arw_i"></span>
+                                <p>如果没有收到短信验证码，请排查以下原因：</p>
+                                <ul>
+                                	<li>＊手机信号不好</li>
+                                	<li>＊被手机安全软件拦截，请查看拦截记录</li>
+                                	<li>＊手机欠费停机</li>
+                                </ul>
+                                <p>如有疑问，请拨打客服热线：400-0755-887</p>
+                            </div>
+                        </div>
+                        <div data-bind="visible:rVerifyCode.val()==3"  style="display:none;"   class="get">
+                            <a data-bind="click:rVerifyCode.svaild" href="#" class="btn_nor_1" title="重新获取验证码">重新获取验证码</a>
+                        </div>
+						<div data-bind="visible:rVerifyCode.val()==4"  style="display:none;"   class="get ">
+                            <a  data-bind="click:rVerifyCode.svaild"  href="#" class="btn_nor_1" title="免费获取验证码">免费获取验证码</a>
+							<span  class="note warn" style="color:#eb712a;">
+                                您的手机发送短信太频繁，请明天再试
+							</span>
+                            
+                        </div>
+						
+						
+                    </li>
+                    <li>
+                        <div data-bind="css:{'cho':rCodeNumber().isSelected(),'warn':rCodeNumber().isSelected()==false&&(rCodeNumber().hasError()==1||rCodeNumber().hasError()==2)}" class="text">
+                            <span class="ico_f_code"></span>
+                            <input tabindex="2" data-bind="hasFocus:rCodeNumber().isSelected,textInput:rCodeNumber().val,event:{keydown:rCodeNumber().keydown},attr:{placeholder:rCodeNumber().isSelected()==true?'':'验证码'}" 
+								type="text" class="ipt_nor"  placeholder="验证码" value="" />
+                            <div data-bind="visible:rCodeNumber().val().length>0"  style="display:none;" class="option">
+                                <a data-bind="click:rCodeNumber().deval,visible:(rCodeNumber().isSelected()||rCodeNumber().hover()),event:{focus:rCodeNumber().focus,mouseout:rCodeNumber().mouseout,mouseover:rCodeNumber().mouseover}" href="#" class="ico_f_del" title="清空"></a>
+                            </div>
+                            <!--
+							-->
+							<div data-bind="visible:rCodeNumber().isSelected()==false&&(rCodeNumber().hasError()==1)" style="display:none;" class="tips mrg">
+                                <span class="ico_arw"></span>
+                                <span class="ico_arw_i"></span>
+                                <span class="ico_t_warn"></span>
+                                <p>验证码格式错误！请重新输入！</p>
+                            </div>
+							<div data-bind="visible:(rCodeNumber().isSelected()==true)" style="display:none;" class="tips">
+                                <span class="ico_arw"></span>
+                                <span class="ico_arw_i"></span>
+                                <span class="ico_t_note"></span>
+                                <p>请输入手机收到的验证码(6位随机数字)</p>
+                            </div>
+							<div data-bind="visible:rCodeNumber().isSelected()==false&&(rCodeNumber().hasError()==2)" style="display:none;" class="tips mrg">
+                                <span class="ico_arw"></span>
+                                <span class="ico_arw_i"></span>
+                                <span class="ico_t_warn"></span>
+                                <p>验证码错误！</p>
+                            </div>
+						</div>
+                    </li>
+                    <li>
+                        <div data-bind="css:{'cho':rPsw1.isSelected(),'warn':rPsw1.isSelected()==false&&(rPsw1.hasError()==1||rPsw1.strength()<0)}" class="text">
+                            <span class="ico_f_pwd"></span>
+                            <!--
+							<input id="psw1" name="psw1" data-bind="textInput:rPsw1.val,hasFocus:rPsw1.isSelected,attr:{type:rPsw1.isShow()?'text':'password',placeholder:rPsw1.isSelected()==true?'':'密码'},event:{keypress:rPsw1.keypress,keydown:rPsw1.keydown}" 
+								class="ipt_nor" value="" placeholder="密码" type="password" maxlength="16" />
+							
+							<likepsw params="value:{'target':rPsw1,'class':'ipt_nor',placeholder:'密码'}"></likepsw>
+							-->
+							<input tabindex="3" id="psw1" name="psw1" data-bind="textInput:rPsw1.val,hasFocus:rPsw1.isSelected,attr:{type:rPsw1.isShow()?'text':'password',placeholder:rPsw1.isSelected()==true?'':'密码'},event:{keypress:rPsw1.keypress,keydown:rPsw1.keydown}" 
+								class="ipt_nor" value="" placeholder="密码" type="password" maxlength="16" />
+							
+								
+                            <div class="option">
+                                <!--
+								<a data-bind="click:rPsw1.deval,visible:rPsw1.val().length>0" href="#" class="ico_f_del" title="清空"></a>
+								-->
+                                <a data-bind="click:rPsw1.show,visible:rPsw1.val().length>0,event:{focus:rPsw1.onfocus}"  style="display:none;"  href="#" class="ico_f_eye" title="显示密码"></a>
+								
+
+                            </div>
+                            								<div data-bind="visible:rPsw1.isSelected()==false && rPsw1.hasError()==0&&rPsw1.strength()>=0" class="level" style="display:none;">
+									<span data-bind="text:(rPsw1.strength()>=85?'强':(rPsw1.strength()>=60?'中':'弱'))">强</span>
+									<i data-bind="css:{'s':rPsw1.strength()>=0}" class="s"></i>
+									<i data-bind="css:{'s':rPsw1.strength()>=60}" ></i>
+									<i data-bind="css:{'s':rPsw1.strength()>=85}" ></i>
+									<a href="#" class="ico_t_help"></a>
+									<div class="level_help" style="display:none">
+										<span class="ico_arw"></span>
+										<span class="ico_arw_i"></span>
+										<p>密码强弱由密码评分决定：</p>
+										<p>强：85分以上；     </p>
+										<p>中：60分 - 85分；   弱：59分以下；</p>
+										<p>帐号密码强度评分细则（总分100分）：</p>
+										<ul>
+											<li>
+												<p>一.长度（25分）</p>
+												<p>5分: 小于8个字符</p>
+												<p>10分: 8 到10个字符</p>
+												<p>25分: 大于10个字符</p>
+											</li>
+                                        
+											<li>
+												<p>二.字母组成（20分）</p>
+												<p>0分: 没有字母</p>
+												<p>10分: 全都是小（大）写字母</p>
+												<p>20分: 大小写混合字母</p>
+											</li>
+											<li>
+												<p>三.数字组成（20分）</p>
+												<p>0分: 没有数字</p>
+												<p>10分: 1或2个数字</p>
+												<p>20分: 大于2个数字</p>
+											</li>
+                                        
+											<li>
+												<p>四.其它特殊符号（25分）</p>
+												<p>0分: 没有符号</p>
+												<p>10分: 1 个符号</p>
+												<p>25分: 大于1个符号</p>
+											</li>
+                                        
+											<li>
+												<p>五.额外奖励（5分）</p>
+												<p>2分: 字母和数字</p>
+												<p>3分: 字母、数字和符号</p>
+												<p>5分: 大小写字母、数字和符号</p>
+											</li>
+										</ul>
+									</div>
+                                </div>
+							<div data-bind="visible:rPsw1.isCaplock()==true&&rPsw1.isSelected()==true" style="display:none;" class="tips_lock">
+                            	<span class="ico_arw"></span>
+                                <span class="ico_arw_i"></span>
+                                <p>大写已打开</p>
+                            </div>
+							<div data-bind="visible:rPsw1.isSelected()==true" style="display:none;" class="tips">
+                                <span class="ico_arw"></span>
+                                <span class="ico_arw_i"></span>
+                                <span class="ico_t_note"></span>
+                                <p>请输入6-16位英文，数字，字符（空格除外）</p>
+                            </div>
+							<div data-bind="visible:(rPsw1.isSelected()==false&&(rPsw1.val().length>0&&rPsw1.val().length<6))" style="display:none;" class="tips mrg">
+                                <span class="ico_arw"></span>
+                                <span class="ico_arw_i"></span>
+                                <span class="ico_t_warn"></span>
+                                <p>密码太短，必须是6-16！</p>
+                            </div>
+							<div data-bind="visible:rPsw1.isSelected()==false&&(rPsw1.hasError()==0&&rPsw1.strength()<0)" style="display:none;" class="tips mrg">
+                                <span class="ico_arw"></span>
+                                <span class="ico_arw_i"></span>
+                                <span class="ico_t_warn"></span>
+                                <p>密码太简单！</p>
+                            </div>
+                            <!--
+							<a href="#" class="ico_t_ref" title="刷新"></a> 应该没有刷新的
+							-->
+                        </div>
+                    </li>
+                    <li>
+						<div data-bind="css:{'cho':rPsw2.isSelected(),'warn':((rPsw2.val()!=rPsw1.val()&&rPsw2.val().length>0)&&rPsw2.isSelected()==false)}" class="text">
+							<span class="ico_f_cfm"></span>
+							<!--
+							<input data-bind="event:{keydown:rPsw2.keydown},textInput:rPsw2.val,hasFocus:rPsw2.isSelected,attr:{type:rPsw2.isShow()?'text':'password',placeholder:rPsw2.isSelected()==true?'':'确认密码'}"  class="ipt_nor" placeholder="确认密码" value=""  type="password" maxlength="16" />
+							
+							<likepsw params="value:{target:rPsw2,class:'ipt_nor',placeholder:'确认密码'}"></likepsw>
+							-->
+							<input tabindex="4" data-bind="event:{keydown:rPsw2.keydown},textInput:rPsw2.val,hasFocus:rPsw2.isSelected,attr:{type:rPsw2.isShow()?'text':'password',placeholder:rPsw2.isSelected()==true?'':'确认密码'}"  class="ipt_nor" placeholder="确认密码" value=""  type="password" maxlength="16" />
+							
+							
+							<div class="option">
+                                <!--
+								<a data-bind="click:rPsw2.delval,visible:rPsw2.val().length>0" href="#" class="ico_f_del" title="清空"></a>
+								-->
+                                <a data-bind="click:rPsw2.show,visible:rPsw2.val().length>0"  style="display:none;"  href="#" class="ico_f_eye" title="显示密码"></a>
+                            </div>
+                            <span data-bind="visible:rPsw2.hasError()==0" style="display:none" class="ico_t_ok"></span>
+							<div data-bind="visible:rPsw2.isSelected()==true" style="display:none;" class="tips mrg">
+                                <span class="ico_arw"></span>
+                                <span class="ico_arw_i"></span>
+                                <span class="ico_t_note"></span>
+                                <p>请再次输入您的密码</p>
+                            </div>
+							<div data-bind="visible:(rPsw2.val()!=rPsw1.val()&&rPsw2.val().length>0)&&rPsw2.isSelected()==false"  style="display:none;" class="tips mrg">
+                                <span class="ico_arw"></span>
+                                <span class="ico_arw_i"></span>
+                                <span class="ico_t_warn"></span>
+                                <p>两次输入的密码不一致</p>
+                            </div>
+							
+                        </div>
+                    </li>
+                </ul>
+                
+				<div class="warn" style="display:none">
+				</div>
+				<a data-bind="click:phoneRegister.save" href="#" class="btn_nor_2" title="立即注册">立即注册</a>
+                <p class="txt_agree">注册即表示同意<a href="http://www.kankan.com/aboutcn/protocol.html" target="_blank">《天天看看网络服务使用协议》</a></p>
+				<p data-bind="visible:phoneRegister.tip().length>0" style="display:none" class="warn_fail">
+					<i class="ico_t_warn"></i>
+					<span data-bind="text:phoneRegister.tip">注册失败</span>
+				</p>
+            </div>
+        
+            <div  data-bind="visible:viewCtrl()==11"  class="form_email" style="display:none">
+                <ul>
+                    <li data-bind="css:{'idx':rMail.isSelected()==true}">
+						<!--
+						||(rMail.hasError()==3&&rMail.isSelected()==false)
+						-->
+                        <div data-bind="css:{'warn':((rMail.hasError()==1&&rMail.isSelected()==false)||(rMail.hasError()==2&&rMail.isSelected()==false))&&rMail.hover()==false,'cho':rMail.isSelected()}" class="text">
+                            <span class="ico_f_email"></span>
+                            <input tabindex="5" data-bind="textInput:rMail.val,hasFocus:rMail.isSelected,event:{keydown:rMail.keydown,change:rMail.change},attr:{placeholder:rMail.isSelected()?'':'邮箱'}"  type="text" class="ipt_nor" placeholder="邮箱" value="" />
+                            <div data-bind="visible:rMail.val().length>0"  class="option">
+                                <a data-bind="click:rMail.delval,visible:(rMail.isSelected()==true||rMail.hover()==true),event:{mouseover:rMail.mouseover,mouseout:rMail.mouseout}" href="#" class="ico_f_del"></a>
+                            </div>
+                            <div data-bind="visible:rMail.isSelected()" id="divTipMail"  style="display:none;" class="tips note">
+                                <span class="ico_arw"></span>
+                                <span class="ico_arw_i"></span>
+                                <span class="ico_t_note"></span>
+                                <p>请输入您常用的邮箱。没有邮箱？试试<a id="toRegisterPhone1" href="#"  >手机注册&gt;&gt;</a>	</p>
+															
+                            </div>
+                            <div data-bind="visible:((rMail.isSelected()==true&&rMail.val().length>=1)||rMail.hover()==true)&&rMail.mailtips().length>0&&rMail.showTip()==true,event:{mouseover:rMail.mouseover,mouseout:rMail.mouseout}" 
+								class="drop_email">
+                            	<p>请选择邮箱类型</p>
+								<div data-bind="foreach:rMail.mailtips">
+									<a data-bind="text:$data,click:$root.rMail.select" href="#">xxxx@qq.com</a>
+								</div>
+                            </div>
+							<div data-bind="visible:rMail.hasError()==2" style="display:none;" class="tips">
+                                <span class="ico_arw"></span>
+                                <span class="ico_arw_i"></span>
+                                <span class="ico_t_warn"></span>
+                                <p>您输入的邮箱已被注册</p>
+                                <a href="http://u.kankan.com/login.html">立即登录&gt;&gt;</a>
+                            </div>
+							<div data-bind="visible:(rMail.hasError()==1&&rMail.isSelected()==false&&rMail.hover()==false)"  style="display:none;" class="tips mrg">
+                                <span class="ico_arw"></span>
+                                <span class="ico_arw_i"></span>
+                                <span class="ico_t_warn"></span>
+                                <p>您输入的邮箱格式不正确</p>
+                            </div>
+							<div data-bind="visible:(rMail.hasError()==3&&rMail.isSelected()==false)"  style="display:none;" class="tips mrg">
+                                <span class="ico_arw"></span>
+                                <span class="ico_arw_i"></span>
+                                <span class="ico_t_note"></span>
+                                <p><span data-bind="text:rMail.tipMsg"></span>邮箱可能收不到激活邮件，建议更换或</p>
+								<a id="toRegisterPhone2" href="#"  >手机注册&gt;&gt;</a>									
+                            </div>
+							<span data-bind="visible:rMail.hasError()==0" style="display:none" class="ico_t_ok"></span>
+                        </div>
+                    </li>
+                    <li>
+                        <div data-bind="css:{'cho':rPsw3.isSelected(),'warn':rPsw3.isSelected()==false&&(rPsw3.hasError()==1||rPsw3.strength()<0)}" class="text">
+                            <span class="ico_f_pwd"></span>
+                            <!--
+							<input data-bind="textInput:rPsw1.val,hasFocus:rPsw1.isSelected,attr:{type:rPsw1.isShow()?'text':'password',placeholder:rPsw1.isSelected()?'':'密码'},event:{keypress:rPsw1.keypress,keydown:rPsw1.keydown}" class="ipt_nor" value="" placeholder="密码" type="password" maxlength="16" />
+                            
+							<likepsw params="value:{target:rPsw3,class:'ipt_nor',placeholder:'密码'}"></likepsw>
+							-->
+							<input tabindex="6" data-bind="textInput:rPsw3.val,hasFocus:rPsw3.isSelected,attr:{type:rPsw3.isShow()?'text':'password',placeholder:rPsw3.isSelected()?'':'密码'},event:{keypress:rPsw3.keypress,keydown:rPsw3.keydown}" class="ipt_nor" value="" placeholder="密码" type="password" maxlength="16" />
+                            
+							
+							<div class="option">
+                                <!--
+								<a data-bind="click:rPsw1.deval,visible:rPsw1.val().length>0" href="#" class="ico_f_del" title="清空"></a>
+								-->
+                                <a data-bind="click:rPsw3.show,visible:rPsw3.val().length>0,event:{focus:rPsw3.onfocus}" href="#" class="ico_f_eye" title="显示密码"></a>
+								
+								
+                            </div>
+                            <div data-bind="visible:rPsw3.isSelected()==false && rPsw3.hasError()==0&&rPsw3.strength()>=0" class="level" style="display:none;">
+									<span style="display:none" class="ico_t_ok"></span>
+									<span data-bind="text:(rPsw3.strength()>=85?'强':(rPsw3.strength()>=60?'中':'弱'))">强</span>
+									<i data-bind="css:{'s':rPsw3.strength()>=0}" class="s"></i>
+									<i data-bind="css:{'s':rPsw3.strength()>=60}" ></i>
+									<i data-bind="css:{'s':rPsw3.strength()>=85}" ></i>
+									<a href="#" class="ico_t_help"></a>
+									<div class="level_help" style="display:none">
+										<span class="ico_arw"></span>
+										<span class="ico_arw_i"></span>
+										<p>密码强弱由密码评分决定：</p>
+										<p>强：85分以上；  </p>
+										<p>中：60分 - 85分；   弱：59分以下；</p>
+										<p>帐号密码强度评分细则（总分100分）：</p>
+										<ul>
+											<li>
+												<p>一.长度（25分）</p>
+												<p>5分: 小于8个字符</p>
+												<p>10分: 8 到10个字符</p>
+												<p>25分: 大于10个字符</p>
+											</li>
+                                        
+											<li>
+												<p>二.字母组成（20分）</p>
+												<p>0分: 没有字母</p>
+												<p>10分: 全都是小（大）写字母</p>
+												<p>20分: 大小写混合字母</p>
+											</li>
+											<li>
+												<p>三.数字组成（20分）</p>
+												<p>0分: 没有数字</p>
+												<p>10分: 1或2个数字</p>
+												<p>20分: 大于2个数字</p>
+											</li>
+                                        
+											<li>
+												<p>四.其它特殊符号（25分）</p>
+												<p>0分: 没有符号</p>
+												<p>10分: 1 个符号</p>
+												<p>25分: 大于1个符号</p>
+											</li>
+                                        
+											<li>
+												<p>五.额外奖励（5分）</p>
+												<p>2分: 字母和数字</p>
+												<p>3分: 字母、数字和符号</p>
+												<p>5分: 大小写字母、数字和符号</p>
+											</li>
+										</ul>
+									</div>
+                                </div>
+							<div data-bind="visible:rPsw3.isCaplock()==true&&rPsw3.isSelected()==true" style="display:none;" class="tips_lock">
+                            	<span class="ico_arw"></span>
+                                <span class="ico_arw_i"></span>
+                                <p>大写已打开</p>
+                            </div>
+							<div data-bind="visible:rPsw3.isSelected()==true" style="display:none;" class="tips">
+                                <span class="ico_arw"></span>
+                                <span class="ico_arw_i"></span>
+                                <span class="ico_t_note"></span>
+                                <p>请输入6-16位英文，数字，字符（空格除外）</p>
+                            </div>
+							<div data-bind="visible:rPsw3.isSelected()==false&&(rPsw3.val().length>0&&rPsw3.val().length<6)" style="display:none;" class="tips mrg">
+                                <span class="ico_arw"></span>
+                                <span class="ico_arw_i"></span>
+                                <span class="ico_t_warn"></span>
+                                <p>密码太短，必须是6-16！</p>
+                            </div>
+							<div data-bind="visible:rPsw3.isSelected()==false&&(rPsw3.hasError()==0&&rPsw3.strength()<0)" style="display:none;" class="tips mrg">
+                                <span class="ico_arw"></span>
+                                <span class="ico_arw_i"></span>
+                                <span class="ico_t_warn"></span>
+                                <p>密码太简单！</p>
+                            </div>
+                            <!--
+							<a href="#" class="ico_t_ref" title="刷新"></a> 应该没有刷新的
+							-->
+                        </div>
+                    </li>
+                    <li>
+						<div data-bind="css:{'cho':rPsw4.isSelected(),'warn':((rPsw4.val()!=rPsw3.val()&&rPsw4.val().length>0)&&rPsw4.isSelected()==false)}" class="text">
+							<span class="ico_f_cfm"></span>
+							<!--
+							<input data-bind="event:{keydown:rPsw2.keydown},textInput:rPsw2.val,hasFocus:rPsw2.isSelected,attr:{type:rPsw2.isShow()?'text':'password',placeholder:rPsw2.isSelected()?'':'确认密码'}" class="ipt_nor" placeholder="确认密码" value=""  type="password" maxlength="16" />
+							
+							<likepsw params="value:{target:rPsw4,class:'ipt_nor',placeholder:'确认密码'}"></likepsw>
+							
+							-->
+							<input tabindex="7" data-bind="event:{keydown:rPsw4.keydown},textInput:rPsw4.val,hasFocus:rPsw4.isSelected,attr:{type:rPsw4.isShow()?'text':'password',placeholder:rPsw4.isSelected()?'':'确认密码'}" class="ipt_nor" placeholder="确认密码" value=""  type="password" maxlength="16" />
+							
+							
+							<div class="option">
+                                <!--
+								<a data-bind="click:rPsw2.delval,visible:rPsw2.val().length>0" href="#" class="ico_f_del" title="清空"></a>
+								-->
+                                <a data-bind="click:rPsw4.show,visible:rPsw4.val().length>0" href="#" class="ico_f_eye" title="显示密码"></a>
+                            </div>
+                            <span data-bind="visible:rPsw4.hasError()==0" style="display:none" class="ico_t_ok"></span>
+							<!--
+							<span data-bind="visible:rPsw2.hasError()==1&&rPsw2.isSelected()==false" style="display:none" class="ico_t_warn"></span>
+							-->
+							<div data-bind="visible:rPsw4.isSelected()==true" style="display:none;" class="tips mrg">
+                                <span class="ico_arw"></span>
+                                <span class="ico_arw_i"></span>
+                                <span class="ico_t_note"></span>
+                                <p>请再次输入您的密码</p>
+                            </div>
+							<div data-bind="visible:(rPsw4.val()!=rPsw3.val()&&rPsw4.val().length>0)&&rPsw4.isSelected()==false" sstyle="display:none;" class="tips mrg">
+                                <span class="ico_arw"></span>
+                                <span class="ico_arw_i"></span>
+                                <span class="ico_t_warn"></span>
+                                <p>两次输入的密码不一致</p>
+                            </div>
+							
+                        </div>
+                    </li>
+                    <li data-bind="visible:rValidate.need()==true">
+                        <div data-bind="css:{'warn':rValidate.isSelected()==false&&(rValidate.hasError()==1&&rValidate.val().length>0&&rValidate.hover()==false),'cho':rValidate.isSelected()}" class=" cho text type">
+                            <span class="ico_f_code"></span>
+                            <input tabindex="8" data-bind="textInput:rValidate.val,event:{change:rValidate.change,keydown:rValidate.keydown},hasFocus:rValidate.isSelected,attr:{placeholder:rValidate.isSelected()?'':'验证码'}" type="text" class="ipt_nor" placeholder="验证码" value="" />
+                            <div data-bind="visible:rValidate.val().length>0" class="option">
+                                <a data-bind="visible:rValidate.isSelected()==true||rValidate.hover()==true,click:rValidate.delval,event:{mouseout:rValidate.mouseout,mouseover:rValidate.mouseover}" href="#" class="ico_f_del" title="清空"></a>
+                            </div>
+                            <div data-bind="visible:rValidate.hasError()==1&&rValidate.val().length>0&&rValidate.isSelected()==false&&rValidate.hover()==false" class="tips mrg">
+                                <span class="ico_arw"></span>
+                                <span class="ico_arw_i"></span>
+                                <span class="ico_t_warn"></span>
+                                <p>验证码错误！请重新输入！</p>
+                            </div>	
+							<div data-bind="visible:rValidate.isSelected()==true||rValidate.hover()==true" id="divTipMail"  style="display:none;" class="tips note">
+                                <span class="ico_arw"></span>
+                                <span class="ico_arw_i"></span>
+                                <span class="ico_t_note"></span>
+                                <p>请输入图中验证码字符，不区分大小写</p>								
+                            </div>
+							<!--
+						
+							-->
+							
+                        </div>
+                        <div class="code">
+						<img data-bind="attr:{src:rValidate.url}"  align="absmiddle" alt="验证码" id="i_vi" height="56" width="140">
+						<a data-bind="click:rValidate.click" href="#">换一张</a></div>
+						<span data-bind="visible:rValidate.hasError()==0&&rValidate.isSelected()==false" style="display:none" class="ico_t_ok"></span>
+                    </li>
+                </ul>
+				<div class="warn" style="display:none">
+				</div>
+                <a data-bind="click:mailRegister.save" href="#" class="btn_nor_2" title="立即注册">立即注册</a>
+                <p class="txt_agree">注册即表示同意<a href="http://www.kankan.com/aboutcn/protocol.html" target="_blank">《天天看看网络服务使用协议》</a></p>
+				
+				
+				<p data-bind="visible:mailRegister.tip().length>0" style="display:none" class="warn_fail">
+					<i class="ico_t_warn"></i>
+					<span data-bind="text:mailRegister.tip">注册失败</span>
+				</p>
+				
+            </div>
+        </div>
+		</div>
+		<div  data-bind="visible:viewCtrl()==1" style="display:none;" class="res_suc">
+			<!-- 手机注册成功 
+			this.phoneRegister={kankan:ko.observable(''),phone:ko.observable(''),vTime:ko.observable(15)};
+			-->
+        	<div class="res_suc_phone">
+        		<h2><span class="ico_s_ok"></span>注册成功！</h2>
+                <div class="res_suc_des">
+                	<p class="acct">您的看看帐号：<em data-bind="text:phoneRegister.xunlei">12566555</em></p>
+                    <p class="ph_num"><b>您可使用手机号</b><em data-bind="text:phoneRegister.phone">135 1589 1648</em>（可变更）登录和安全保障</p>
+                    <p class="jump"><span data-bind="text:phoneRegister.vTime"></span>s后跳转回到来源页面 或 <a data-bind="click:vResult.jump" href="#" title="立即跳转">立即跳转</a></p>
+                </div>
+                <div class="res_suc_vip">
+                	<h3>看看会员,因快而乐!</h3>
+                    <p>去广告／高清正版／播放加速</p>
+                    <a href="http://vip.kankan.com/pay_suite.html" class="btn_vip" title="立即开通" target="_blank">立即开通</a>
+                </div>
+                <!--<div class="res_intro">
+                	<h3>推荐尝试以下业务</h3>
+                    <div class="res_int_con">
+                    	<a data-bind="event:{click:function(m,e){vAD.page(m,e,-1)}}" style="display:none" href="#" class="btn_pre" title="上翻"></a>
+                        <a data-bind="event:{click:function(m,e){vAD.page(m,e,0)}}" style="display:none" href="#" class="btn_next" title="下翻"></a>
+                        <div class="int_pic">
+                            <ul data-bind="visible:vAD.index()==0">
+                                <li>
+                                    <a href="http://jsq.kankan.com?referfrom=jsq_centre_all" target="_blank" class="pic" title="网游加速器">
+										<img src="v2.5/images/ad_xunyou_70x70.png" alt="网游加速器" />
+										<span>网游加速器</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="http://act.vip.kankan.com/vip/2015/jinrongquan/?from=zc" class="pic" title="看看理财">
+										<img src="v2.5/images/ad_licai_70x70.jpg" alt="看看理财" />
+                                    <span>看看理财</span>
+                                    </a>
+                                </li>
+								<li>
+                                    <a href="http://swjsq.kankan.com?referfrom=zczx" class="pic" title="看看快鸟">
+										<img src="v2.5/images/ad_swjsq_70x70.png" alt="看看快鸟" />
+                                    <span>看看快鸟</span>
+                                    </a>
+                                </li>
+								<li>
+                                    <a href="http://1.vip.kankan.com/?referfrom=zczx" class="pic" title="一元夺宝">
+										<img src="v2.5/images/ad_oneyun_70x70.png" alt="一元夺宝" />
+                                    <span>一元夺宝</span>
+                                    </a>
+                                </li>
+                                
+								<li>
+                                    <a href="#" class="pic" title="看看网游加速器"><img src="v2.5/images/70x70.jpg" alt="看看网游加速器" />
+                                    <span>看看网游加速器</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" class="pic" title="看看商城"><img src="v2.5/images/70x70.jpg" alt="看看商城" />
+                                    <span>看看商城1</span>
+                                    </a>
+                                </li>
+								
+                            </ul>
+							<ul data-bind="visible:vAD.index()==1" style="display:none">
+                                <li>
+                                    <a href="#" class="pic" title="看看牛X页游"><img src="v2.5/images/70x70.jpg" alt="看看牛X页游2" />
+                                    <span>看看牛X页游</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" class="pic" title="看看电影院"><img src="v2.5/images/70x70.jpg" alt="看看电影院2" />
+                                    <span>看看电影院</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" class="pic" title="看看网游加速器"><img src="v2.5/images/70x70.jpg" alt="看看网游加速器2" />
+                                    <span>看看网游加速器</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" class="pic" title="看看商城"><img src="v2.5/images/70x70.jpg" alt="看看商城2" />
+                                    <span>看看商城2span>
+                                    </a>
+                                </li>
+                            </ul>
+							<ul data-bind="visible:vAD.index()==2" style="display:none">
+                                <li>
+                                    <a href="#" class="pic" title="看看牛X页游3"><img src="v2.5/images/70x70.jpg" alt="看看牛X页游3" />
+                                    <span>看看牛X页游</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" class="pic" title="看看电影院"><img src="v2.5/images/70x70.jpg" alt="看看电影院3" />
+                                    <span>看看电影院</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" class="pic" title="看看网游加速器"><img src="v2.5/images/70x70.jpg" alt="看看网游加速器3" />
+                                    <span>看看网游加速器</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" class="pic" title="看看商城"><img src="v2.5/images/70x70.jpg" alt="看看商城3" />
+                                    <span>看看商城3</span>
+                                    </a>
+                                </li>
+                            </ul>
+                            <div class="point">
+                            	<a data-bind="event:{click:function(m,e){vAD.page(m,e,1)}},css:{'cur':vAD.index()==0}" style="display:none" href="#" class="cur" title="1"></a>
+                                <a data-bind="event:{click:function(m,e){vAD.page(m,e,2)}},css:{'cur':vAD.index()==1}" style="display:none" href="#" title="2"></a>
+                                <a data-bind="event:{click:function(m,e){vAD.page(m,e,3)}},css:{'cur':vAD.index()==2}" style="display:none" href="#" title="3"></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>-->
+            </div>
+        </div>
+        
+		<div data-bind="visible:viewCtrl()==2" style="display:none" class="res_suc">
+        	<div class="res_suc_email">
+        		<h2><span class="ico_s_ok"></span>注册成功！</h2>
+                <div class="res_suc_des">
+                	<p  class="acct">您的看看帐号：<em data-bind="text:mailRegister.xunlei">12566555</em></p>
+			<p class="email">您可使用邮箱：<em data-bind="text:mailRegister.mail">kalvenzhao@gamil.com</em>登录</p>
+			<p class="safe">安全性：<span><i class="red">危险</i><i></i><i></i></span></p>
+			<p class="note">邮箱尚未激活，帐号安全性低，且激活后才可不受限制使用</p>
+					
+					
+			<a data-bind="click:eSendActiveMail,text:vMailTip.isSend()==-1?'立即发送激活邮件':(vMailTip.isSend()==0?'正在发激活邮件...':'已经发送激活邮件')" 
+						href="#" class="btn_nor_3" title="立即发送激活邮件">立即发送激活邮件</a>
+			<a href="#" data-bind="click:vResult.jump,text:'或'+mailRegister.vTime()+'秒后返回来源网址'" class="link_back">或10秒后返回来源网址</a>
+                </div>
+                <div class="suc_help">
+                	<h3>没收到邮件怎么办？</h3>
+                    <ul>
+                        <li>检测邮箱的广告邮件，垃圾邮件</li>
+                        <li>确认没收到，<a data-bind="click:eSendActiveMail" href="#">点击这里</a> 重新发送一封激活邮件</li>
+                        <li>邮箱填错了，<a href="http://u.kankan.com/register.html">点击这里</a> 重新注册</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="footer">
+    	<p>增值电信业务经营许可证粤B2-20050219号 粤ICP备10240715号</p>
+		<p>&copy; 2003-2017 Kankan.com 版权所有</p>
+    </div>
+    <div class="light png"></div>
+</div>
+<!--[if IE 6]>
+	<script type="text/javascript" src="js/DD_PNG_min.js" ></script>
+<![endif]-->
+<!-- 测试代码 -->
+
+<!--弹出窗口 -->
+<div data-bind="visible:rDialog.view()!=-1" class="cover" style="_height:1000px;display:none"></div>
+<div data-bind="visible:rDialog.view()==0" class="pop_res" style="display:none">
+	<h3>发送激活邮件</h3>
+    <div class="pop_res_con">
+    	<div class="pop_sent_suc">
+            <h4><span class="ico_ok"></span>发送成功!</h4>
+            <p><a data-bind="click:eToMail" href="#">去邮箱看看&gt;&gt;</a></p>
+        </div>
+        <div class="fail_des">
+        	<p>如果还是无法收到邮件：</p>
+            <ul>
+            	<li>使用您注册的邮箱，给邮箱zhuche@kankan.com发送内容为“SXYJHYX”（不含引号）的邮件。</li>
+				<li>系统收到邮件1-2小时后，可帮您自动激活注册邮箱.</li>
+            </ul>
+        </div>
+    </div>
+    <a data-bind="click:rDialog.close" href="#" class="close" title="关闭"></a>
+</div>
+<div data-bind="visible:rDialog.view()==1" class="pop_res" style="display:none">
+	<h3>提示</h3>
+    <div class="pop_res_con">
+    	<div class="pop_sent_suc">
+            <p><a href="#">注册失败</a></p>
+        </div>
+    </div>
+    <a data-bind="click:rDialog.close" href="#" class="close" title="关闭"></a>
+</div>
+
+<div data-bind="visible:rDialog.view()==2"  style="display:none;" class="pop_res res_h_1">
+	<h3>请填写验证码</h3>
+    <div class="pop_res_con">
+    	<div class="pop_res_form">
+    	<ul>			
+            <li class="mrg1">
+                <label>验证码：</label>
+                <input data-bind="hasFocus:rVerifyCode.svisSelected,textInput:rVerifyCode.svtext,event:{keydown:rVerifyCode.svkeydown}" class="ipt_txt code" type="text" />
+				<a data-bind="click:rVerifyCode.svclick" href="#" class="link_chg">看不清，换一张</a>
+				<img data-bind="attr:{src:rVerifyCode.svurl}" id="al_c_img" height="44" width="112" src="http://iverify.kankan.com/image?t=SEA&amp;cachetime=1434074241954" class="pic_code" alt="">
+				<p data-bind="visible:rVerifyCode.svtip().length>0,text:rVerifyCode.svtip" class="txt_warn">
+                </p>
+			</li>
+        </ul>
+         <div class="btn_wp">
+			<a data-bind="click:rVerifyCode.svconfirm" href="#" class="btn_pop_1" title="确定">确&nbsp;定</a>
+			<a data-bind="click:rVerifyCode.svcancel" href="#" class="btn_pop_2" title="取消">取&nbsp;消</a>
+		 </div>
+        </div>
+    </div>
+    <a data-bind="click:rVerifyCode.svcancel" href="#" class="close" title="关闭"></a>
+</div>
+
+
+
+
+<!--弹出窗口 -->
+<script src="v2.5/js/jquery.js" type="text/javascript"></script> 
+<script src="v2.5/js/knockout-3.3.0.js" type="text/javascript"></script>
+<script src="v2.5/js/registeri.js?v=2015061211" type="text/javascript"></script>
+<!--
+
+<psw params="value:{target:rPsw1,css:'ipt_nor',placeholder:'密码'}"></psw><br>
+<psw params="value:{target:rPsw2,css:'ipt_nor',placeholder:'确认密码'}"></psw>
+<likepsw params="value:$root"></likepsw>
+-->
+
+<script type="text/javascript">
+
+_hmt.push(['_trackPageview', location.href]);
+function xEvent(category,action){
+	try{
+		var opt_label='';
+		var opt_value=1;
+		_hmt.push(['_trackEvent', category, action, opt_label, opt_value]);
+		//_hmt.push(['_trackEvent', 'test', 'test', opt_label, opt_value]);
+		
+	}catch(e){
+	}
+};
+//alert(parseInt((new Date()).valueOf()/1000));
+window.baiduStart=parseInt((new Date()).valueOf()/1000);
+window.baiduIsRegister=false;
+window.onunload = function(){
+	var end=parseInt((new Date()).valueOf()/1000);
+	if(window.baiduIsRegister){
+		
+	}else{
+		
+	}
+}; 
+//xEvent('test','test');
+function goJump(url){
+	if(url!=undefined&&url==true){
+		url='http://dynamic.u.kankan.com/user/account';
+	}else if(/kankan\.com/.test(getParameter('redirect_url'))){
+		//url='http://u.kankan.com';
+		url=getParameter('redirect_url');
+	}else {
+        url='http://dynamic.u.kankan.com/user/account';
+    }
+	var data=getQueryString();
+	//bugLog(url);
+	if(data.jump!=undefined&&data.jump.length>=7){
+		location.href=data.jump;
+	}else{
+		location.href=url;
+	}
+};
+$(function(){
+	
+	//ico_f_del
+	if(getIEVersion()<9&&getIEVersion()>0){
+		$('.ico_f_eye').remove();
+	}
+	initPlaceHolders();
+	
+	var obj=new registerCtrl();
+	obj.vAllTip.data={
+		'201':'只登录，没注册','300':'缺少参数','301':'参数格式有误',
+		'400':'IP 被限制','401':'同个手机发送短信太过频繁',
+		'402':'该业务没有权限','403':'一秒内短信发送量过大',
+		'405':'修改初始密码时，数据库里没有对应记录','406':'修改初始密码时超时',
+		'408':'该帐号已成功绑定，请从看看登录框直接登录','500':'服务器忙，请稍后重试','600':'验证码错误',
+		'702':'邮箱已存在','703':'手机已被注册','704':'旧帐号已存在'
+	};
+	obj.Binding();
+	
+	$(".form .ipt_nor").focus(function(){
+		$(this).parent().addClass("cho");
+	}).blur(function(){
+		$(this).parent().removeClass("cho");
+	});
+	$(".title a").click(function(){
+		$(this).removeClass("un").siblings().addClass("un");
+		var i = $(".title a").index(this);
+		if(i==0){
+			//$(".form_phone").css("display","block");
+			//$(".form_email").css("display","none")	
+			obj.viewCtrl(10);
+			//obj.initClearData();
+		}else{
+			//$(".form_phone").css("display","none");
+			//$(".form_email").css("display","block")
+			obj.viewCtrl(11);
+			//obj.initClearData();
+			//obj.funcValidate();
+			//obj.rDialog.show(0);
+		}
+		
+	});
+	$('#toRegisterMail').click(function(){
+		$('.phone').addClass('un').siblings().removeClass('un');
+		obj.viewCtrl(11);
+		//obj.initClearData();
+		//obj.funcValidate();
+		
+	});
+	//toRegisterPhone
+	$('[id*=toRegisterPhone]').click(function(){
+		$('.email').addClass('un').siblings().removeClass('un');
+		obj.viewCtrl(10);
+		//obj.initClearData();
+		//obj.funcValidate();
+		
+	});
+	$(".note").find('a:eq(0)').hover(function(){
+			$(".tips_note").css("display","block")
+		},function(){
+			$(".tips_note").css("display","none")
+		}
+	);
+	$('.drop_email').css("display","block");
+	$('.drop_email').css("display","none");
+
+	$('.ico_t_help').live('mouseover',function(){
+		$('.level_help').css('display','block');
+	});
+	$('.ico_t_help').live('mouseout',function(){
+		$('.level_help').css('display','none');
+	});
+	$('#divTipMail').hover(function(){
+		obj.rMail.isTip(true);
+		obj.rMail.isSelected(false);
+		$(this).show();
+	},function(){
+	obj.rMail.isTip(false);
+		obj.rMail.isSelected(true);
+	});
+	
+});
+</script>
+</body>
+</html>
