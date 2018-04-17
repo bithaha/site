@@ -102,3 +102,433 @@ a:hover{color:#249ff1;}
 .noresult p {background:url(../img/ico_1.png) no-repeat 295px center;padding:30px 0 30px 350px;font-size:14px;color:#333;}
 .noresult p a {margin-left:5px;color:#249ff1;}
 .box2_tt .refresh {float:right;}
+
+
+
+.yk-container{background: #f1f2f3;}
+.yk-content {padding-top: 10px;	*zoom: 1}
+.clearfix:after, .fix:after { content: "."; display: block; height: 0; clear: both; visibility: hidden;}
+
+.yk-content:after {content: '';	display: table;	clear: both;}
+
+.yk-content .mod {margin-bottom: 10px}
+
+.yk-content .mod .h {padding: 14px 20px 14px 0;	height: 30px;line-height: 30px}
+
+.yk-content .mod .h .right {float: right}
+
+.p-post {float: left;position: relative;width: 200px;height: 300px}
+
+.p-post .yk-pack .p-thumb img {width: 200px;height: 300px}
+
+.p-post .yk-pack .p-bottom {position: absolute;bottom: 4px}
+
+.p-post .yk-pack:hover .p-bottom .hover-hide {	display: none}
+
+.p-base {min-height: 300px;	position: relative;	margin-left: 220px;	color: #999}
+.p-base>ul {display: block;	min-height: 1%}
+.p-base>ul:after {font-size: 0;	content: ".";display: block;height: 0;clear: both;visibility: hidden}
+.p-base>ul>li {	float: left;width: 350px;margin-bottom: 2px}
+.p-base>ul>li.p-row {width: 100%}
+.p-base>ul>li.p-renew {margin-bottom: 15px;	font-size: 13px;margin-top: -19px}
+.p-base>ul>li.p-title {	font-size: 24px;color: #2fb3ff;	margin-bottom: 27px}
+.p-base>ul>li.p-title .sub-title {font-size: 20px;color: #999;margin-left: 10px}
+.p-base>ul>li.p-title .p-sub-btn {position: absolute;top: -5px;	font-size: 12px;display: inline-block;margin-left: 80px;border-radius: 13px;color: #FFF;height: 28px;line-height: 28px;	text-align: left;padding-left: 32px;width: 36px}
+.p-base>ul>li.p-title .p-sub-done {padding-left: 23px;width: 45px;background: url(/youku/dist/img/find/program/program_area_d3fdd20.png) -152px -20px #c8c8c8 no-repeat}
+.p-base>ul>li.p-title .p-sub-done:hover {padding-left: 0;width: 68px;text-align: center;background: #d2d2d2}
+.p-base>ul>li.p-title .p-sub-action {background: url(/youku/dist/img/find/program/program_area_d3fdd20.png) -144px 9px #2fb3ff no-repeat}
+.p-base>ul>li.p-title .p-sub-action:hover {	background-color: #59c2ff}
+
+.p-base>ul>li.p-alias {
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	padding-right: 10px;
+	box-sizing: border-box
+}
+
+.p-base>ul>li.p-score {
+	height: 20px
+}
+
+.p-base>ul>li.p-performer {
+	padding-right: 10px;
+	box-sizing: border-box;
+	text-overflow: ellipsis;
+	overflow: hidden;
+	white-space: nowrap
+}
+
+.p-base>ul>li .p-star {
+	position: relative;
+	top: 3px
+}
+
+.p-base>ul>li .star-num {
+	font-size: 16px;
+	color: #ff3c00
+}
+
+.p-base>ul>li .p-icon-vr {
+	width: 13px;
+	height: 13px;
+	margin-left: 3px;
+	background-position: -60px -33px
+}
+
+.p-base>ul>li.p-intro {
+	margin-top: 10px;
+	position: relative
+}
+
+.p-base>ul>li.p-intro .intro-more {
+	padding-right: 60px
+}
+
+.p-base>ul>li.p-intro .more-default {
+	display: none;
+	padding-right: 16px;
+	cursor: pointer;
+	color: #555;
+	position: absolute;
+	right: 5px
+}
+
+.p-base>ul>li.p-intro .more-default:after {
+	content: "";
+	width: 0;
+	height: 0;
+	position: absolute;
+	right: 0;
+	top: 6px;
+	border: 5px solid transparent;
+	border-top-color: #555
+}
+
+.p-base>ul>li.p-intro .more-default:hover {
+	color: #ff3c00
+}
+
+.p-base>ul>li.p-intro .more-default:hover:after {
+	border-top-color: #ff3c00
+}
+
+.p-base>ul>li.p-intro .more-default.more-expand:after {
+	content: "";
+	width: 0;
+	height: 0;
+	position: absolute;
+	right: 0;
+	top: 3px;
+	border: 5px solid transparent;
+	border-bottom-color: #555
+}
+
+.p-base>ul>li.p-intro .more-default.more-expand:hover:after {
+	border-bottom-color: #ff3c00
+}
+
+.p-base .p-play {margin-top:20px;}
+
+.p-base .p-btn {
+	display: inline-block;
+	width: 108px;
+	height: 40px;
+	line-height: 40px;
+	color: #fff;
+	font-size: 16px;
+	cursor: pointer;
+	text-align: center;
+	background: #2fb3ff;
+	border-radius: 2px
+}
+
+.p-base .p-btn:hover {
+	background: #59c2ff
+}
+
+.p-base .p-btn-gray {
+	background: #bbb;
+	cursor: default
+}
+
+.p-base .p-btn-gray:hover {
+	background: #bbb
+}
+.yk-pack .p-info {
+    width: 180px;
+    margin: 0 10px;
+    color: #DEDEDE;
+}
+.p-post .yk-pack .p-bottom {
+    position: absolute;
+    bottom: 4px;
+}
+.yk-pack .p-info li {
+    white-space: nowrap;
+    height: 20px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+        margin-bottom: 6px;
+    overflow: visible;
+}
+.yk-pack .p-time {
+    color: #FFF;
+    position: relative;
+    float: right!important;
+    margin-top: 2px;
+    height: 18px;
+    line-height: 18px;
+}
+.yk-pack .p-time .ibg {
+    border-radius: 2px;
+    position: absolute;
+    display: block;
+    top: auto;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #000;
+    opacity: .5;
+    -ms-filter: alpha(opacity=50);
+    filter: alpha(opacity=50);
+    z-index: 0;
+}
+.yk-pack .p-time span {
+    position: relative;
+    display: inline-block;
+    padding: 0 5px;
+    height: 18px;
+    line-height: 18px;
+    z-index: 10;
+}
+.mod-area-left {
+	float: left;
+	width: 660px
+}
+.mod-area-right {
+	float: left;
+	margin-left: 30px!important;
+	width: 310px
+}
+
+.yk-content .mod-new {
+	padding: 20px ;
+	background-color: #fff;
+	box-shadow: 0 0 8px 1px #e4e5e6
+}
+
+.yk-content .mod-new .h {
+	height: 20px;
+	line-height: 20px;
+	padding: 2px 0 13px;
+	margin: 0 20px 20px 0;
+	border-bottom: 1px solid #eee;
+	font-size: 0
+}
+
+.yk-content .mod-new .h h1,.yk-content .mod-new .h h2,.yk-content .mod-new .h h3,.yk-content .mod-new .h h4 {
+	color: #555;
+	line-height: 20px;
+	font-weight: 400
+}
+
+.yk-content .mod-new .h h1 a,.yk-content .mod-new .h h2 a,.yk-content .mod-new .h h3 a,.yk-content .mod-new .h h4 a {
+	color: #555;
+	font-weight: 400;
+	line-height: 20px
+}
+
+.yk-content .mod-new .h h1 a:after,.yk-content .mod-new .h h2 a:after,.yk-content .mod-new .h h3 a:after,.yk-content .mod-new .h h4 a:after {
+	content: "";
+	display: inline-block;
+	vertical-align: middle;
+	height: 20px;
+	width: 10px;
+	background: url(/youku/dist/img/find/g_0c02dfd.png) no-repeat -103px -26px;
+	margin-left: 18px
+}
+
+.yk-content .mod-new .h h1 a:hover,.yk-content .mod-new .h h2 a:hover,.yk-content .mod-new .h h3 a:hover,.yk-content .mod-new .h h4 a:hover {
+	color: #ff3c00
+}
+
+.yk-content .mod-new .h h1 a:hover:after,.yk-content .mod-new .h h2 a:hover:after,.yk-content .mod-new .h h3 a:hover:after,.yk-content .mod-new .h h4 a:hover:after {
+	background: url(/youku/dist/img/find/g_0c02dfd.png) no-repeat -116px -26px
+}
+
+.yk-content .mod-new .h h1 a.no-arrow:after,.yk-content .mod-new .h h2 a.no-arrow:after,.yk-content .mod-new .h h3 a.no-arrow:after,.yk-content .mod-new .h h4 a.no-arrow:after {
+	display: none
+}
+
+.yk-content .mod-new .c {
+	padding-bottom: 0
+}
+
+.yk-content .mod-new .mod {
+	margin-bottom: 0
+}
+
+.yk-content .mod-new .mod:after {
+	border: 0
+}
+
+.yk-content .mod-new:after {
+	border: 0
+}
+
+.yk-content .mod-new .yk-pack .p-user {
+	position: relative;
+	z-index: 4
+}
+
+.yk-content .mod-new .yk-pack .p-user .user-level {
+	zoom: 1;
+	display: inline-block;
+	height: 14px
+}
+
+.yk-content .mod-new .yk-pack .p-user .user-level dt,.yk-content .mod-new .yk-pack .p-user .user-level dd {
+	display: inline-block;
+	float: left;
+	height: 14px;
+	line-height: 14px;
+	font-size: 12px
+}
+
+.yk-content .mod-new .yk-pack .p-user .user-level dt {
+	width: 30px;
+	height: 30px;
+	border-radius: 20px;
+	border: 4px solid #fff;
+	z-index: 60;
+	position: relative;
+	margin: -4px 5px 0 -4px
+}
+
+.yk-content .mod-new .yk-pack .p-user .user-level dt img {
+	margin: 0;
+	width: 30px;
+	height: 30px
+}
+
+.yk-content .mod-new .yk-pack .p-user .user-level .u-name {
+	width: 160px;
+	overflow: hidden;
+	margin: 0
+}
+
+.yk-content .mod-new .yk-pack .p-user .user-level .u-name a {
+	color: #555
+}
+
+.yk-content .mod-new .yk-pack .p-user .user-level .u-name a:hover {
+	color: #ff3c00
+}
+
+.yk-content .mod-new .yk-pack .info-list {
+	padding-bottom: 0
+}
+
+.yk-content .mod-new .yk-pack .info-list li {
+	padding: 0
+}
+
+.yk-content .mod-new .yk-pack .info-list li span {
+	color: #999;
+	margin-right: 5px
+}
+
+.yk-content .mod-new .yk-pack .info-list .title span {
+	color: #555
+}
+
+.yk-content .mod-new .yk-packs a:hover {
+	color: #fff
+}
+
+.yk-content .mod-new .has-user .p-thumb {
+	z-index: 0
+}
+
+.yk-content .mod-new .has-user .p-list .p-info {
+	top: 100px
+}
+
+.yk-content .mod-new .p-list:hover {
+	box-shadow: none
+}
+
+.yk-content .mod-new .pack-film .p-thumb .bg {
+	display: none
+}
+
+.yk-content .mod-new .pack-film .p-thumb:hover .bg {
+	display: block;
+	background: #000;
+	opacity: .35;
+	filter: alpha(opacity=35)
+}
+
+.yk-content .mod-new .pack-film .info-list li {
+	margin-bottom: 4px
+}
+
+.yk-content .mod-new .t_tab {
+	margin: -1px 0 0 20px
+}
+
+.yk-content .mod-new .t_tab li a {
+	padding: 0;
+	margin: 0 10px;
+	height: 34px;
+	font-size: 14px
+}
+
+.yk-content .mod-new .t_tab .current a,.yk-content .mod-new .t_tab li:hover a {
+	background: 0;
+	color: #2fb3ff;
+	border-bottom: 1px solid #2fb3ff;
+	border-radius: 0
+}
+
+.yk-content .mod-new .yk-AD-sponsor {
+	top: 0;
+	right: 0
+}
+
+.yk-content .mod-new .yk-AD-sponsor a {
+	border-bottom: 0!important;
+	height: 40px!important;
+	margin: 0!important
+}
+.yk-content .p-h {
+    font-size: 16px;
+    line-height: 16px;
+    color: #555;
+    padding-bottom: 15px;
+    margin: 0 20px 20px 0;
+    border-bottom: 1px solid #eee;
+    position: relative;
+}
+.mod-p-actor .p-thumb-small li {
+    float: left;
+    width: 80px;
+    min-height: 126px;
+    margin-right: 20px;
+    margin-bottom: 18px;
+}
+.mod-p-actor .p-thumb-small li dt {
+    margin-bottom: 8px;
+}
+.mod-p-actor .p-thumb-small li dt img {
+    width: 80px;
+    height: 80px;
+}
+.mod-p-actor .p-thumb-small li dd {
+    line-height: 18px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
