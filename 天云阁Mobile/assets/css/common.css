@@ -117,8 +117,10 @@ img[src=""]{opacity: 0;}
 
 .co-news-list .item{padding:.25rem;}
 /*六大班型*/
-.class-item{margin: 0 .25rem;background: #f2f4f7;}
-.class-item .img{border-radius:8px;overflow: hidden;}
+.class-slider{padding-right: .5rem;margin-left: .25rem;}
+.class-item{margin: 0 .25rem 0 0;background: #f2f4f7;}
+.class-item .img{border-radius:8px 8px 0 0;overflow: hidden;}
+.class-item .img img{width: 100%;display: block;}
 .class-item .det{padding: .35rem .15rem .45rem;}
 .class-item .det h3{font-size: .36rem;color: #000;margin-bottom: .25rem;}
 .class-item .det .name{vertical-align: bottom;color:#df0000;margin-bottom: .25rem;}
@@ -268,6 +270,7 @@ img[src=""]{opacity: 0;}
 .m-title{padding: 0 .25rem;margin-bottom: .2rem;color:#000;font-weight: normal;font-size: .36rem;}
 
 .empty{padding: .3rem 0;text-align: center;color: #999;}
+
 @media (min-width: 600px){
 	body{width: 600px;margin: 0 auto;box-shadow: 0 0 15px rgba(0,0,0,.3);}
 	.header,.footer-bar{width: 600px;left: 50%;margin-left: -300px;}

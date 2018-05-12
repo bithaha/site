@@ -110,17 +110,50 @@
 		<h3 class="title"><span class="red">六大班型</span>自由选择</h3>
 		<div class="desc"><span class="l"></span><span class="txt">Six large class free choice</span><span class="l"></span></div>
 	</div>
-	<div class="class-item">
-		<div class="img"><img src="assets/images/demo/class-main.jpg"></div>
-		<div class="det">
-			<h3>联考精品班</h3>
-			<div class="name">每班限招<b>22</b>人</div>
-			<div class="desc">综合班由天云阁骨干教师授课，更高的联考过线率，更高的统考分数，为你通过联考保驾护航。</div>
-			<div class="btns">
-				<a class="btn"><span>查看课程</span><i class="ico-arrow"></i></a>
-			</div>
-		</div>
+	<div class="swiper-container class-slider">
+	    <div class="swiper-wrapper">
+	        <div class="swiper-slide">
+	        	<div class="class-item">
+					<div class="img"><img src="assets/images/demo/class-main.jpg"></div>
+					<div class="det">
+						<h3>联考精品班</h3>
+						<div class="name">每班限招<b>22</b>人</div>
+						<div class="desc">综合班由天云阁骨干教师授课，更高的联考过线率，更高的统考分数，为你通过联考保驾护航。</div>
+						<div class="btns">
+							<a class="btn"><span>查看课程</span><i class="ico-arrow"></i></a>
+						</div>
+					</div>
+				</div>
+	        </div>
+	        <div class="swiper-slide">
+	        	<div class="class-item">
+					<div class="img"><img src="assets/images/demo/class-main.jpg"></div>
+					<div class="det">
+						<h3>联考精品班</h3>
+						<div class="name">每班限招<b>22</b>人</div>
+						<div class="desc">综合班由天云阁骨干教师授课，更高的联考过线率，更高的统考分数，为你通过联考保驾护航。</div>
+						<div class="btns">
+							<a class="btn"><span>查看课程</span><i class="ico-arrow"></i></a>
+						</div>
+					</div>
+				</div>
+	        </div>
+	        <div class="swiper-slide">
+	        	<div class="class-item">
+					<div class="img"><img src="assets/images/demo/class-main.jpg"></div>
+					<div class="det">
+						<h3>联考精品班</h3>
+						<div class="name">每班限招<b>22</b>人</div>
+						<div class="desc">综合班由天云阁骨干教师授课，更高的联考过线率，更高的统考分数，为你通过联考保驾护航。</div>
+						<div class="btns">
+							<a class="btn"><span>查看课程</span><i class="ico-arrow"></i></a>
+						</div>
+					</div>
+				</div>
+	        </div>
+	    </div>
 	</div>
+	
 </div>
 <!--金牌团队-->
 <div class="section-master">
@@ -525,7 +558,7 @@ $(function(){
 		},
     });
     /*师生作品*/
-    var swiper4 = new Swiper('.work-slider', {
+    var swiper7 = new Swiper('.work-slider', {
     	pagination: {
     		clickable :true,
         	el: '.slider-tabs-work',
@@ -534,6 +567,10 @@ $(function(){
 	          return '<span class="' + className + '">' + (envis[index] || (index + 1)) + '</span>';
 	        },
     	},
+    });
+    /*教学环境*/
+    /*大图轮播*/
+    var swiper8 = new Swiper('.class-slider', {
     });
 
 });

@@ -90,15 +90,15 @@
 			<div class="left">
 				<ul class="toutiao-list">
 					<li class="item">
-						<div class="img"><a href="#" target="_blank"><img src="assets/images/demo/news-img-1.jpg"></a></div>
+						<div class="img m-img"><a href="#" target="_blank"></a></div>
 						<div class="det">
-							<h3 class="tit"><span class="ico-txt border red">活动</span><a href="#" target="_blank" title="">让每个学生拿起画笔描绘出灿烂的人生 · 为每个家庭创造精彩</a></h3>
+							<h3 class="tit"><a href="#" target="_blank" title="">让每个学生拿起画笔描绘出灿烂的人生 · 为每个家庭创造精彩</a></h3>
 							<div class="info"><span>画室活动</span>&nbsp;|&nbsp;<span>发布时间：2018年01月22日 12:05:56</span></div>
-							<div class="desc">这里是文章简介这里是文章简介这里是文章简介这里是文章简介这里是文章简介这里是文章简介这里是文章简介这里是文章简里是文章简介这介...</div>
+							<div class="desc">这里是文章简里是文章简介这介...</div>
 						</div>
 					</li>
 					<li class="item">
-						<div class="img"><a href="#" target="_blank"><img src="assets/images/demo/news-img-2.jpg"></a></div>
+						<div class="img m-img"><a href="#" target="_blank"><img class="lazy" data-src="assets/images/demo/news-img-2.jpg"></a></div>
 						<div class="det">
 							<h3 class="tit"><span class="ico-txt border red">精彩课堂</span><a href="#" target="_blank" title="">让每个学生拿起画笔描绘出灿烂的人生 · 为每个家庭创造精彩</a></h3>
 							<div class="info"><span>画室活动</span>&nbsp;|&nbsp;<span>发布时间：2018年01月22日 12:05:56</span></div>
@@ -106,7 +106,7 @@
 						</div>
 					</li>
 					<li class="item">
-						<div class="img"><a href="#" target="_blank"><img src="assets/images/demo/news-img-3.jpg"></a></div>
+						<div class="img m-img"><a href="#" target="_blank"></a></div>
 						<div class="det">
 							<h3 class="tit"><span class="ico-txt border red">活动</span><a href="#" target="_blank" title="">让每个学生拿起画笔描绘出灿烂的人生 · 为每个家庭创造精彩</a></h3>
 							<div class="info"><span>画室活动</span>&nbsp;|&nbsp;<span>发布时间：2018年01月22日 12:05:56</span></div>
@@ -150,11 +150,11 @@
 						<div class="desc"><p>武汉天云阁美术培训学校，始创于2003年，现有武汉、河南两大校区，致力于美术艺考教育15载...【详细介绍】</p></div>
 					</div>
 					<ul class="list">
-						<li class="item"><em>1</em><a href="#" target="_blank">学生拿起画笔描绘出灿烂的人生</a></li>
-						<li class="item"><em>2</em><a href="#" target="_blank">让每个学生拿起为每个家起庭创造精彩</a></li>
-						<li class="item"><em>3</em><a href="#" target="_blank">学生拿起画的人生笔描绘出灿烂起</a></li>
-						<li class="item"><em>4</em><a href="#" target="_blank">让每个拿起为每个家庭创造精彩学生</a></li>
-						<li class="item"><em>5</em><a href="#" target="_blank">学生拿起画笔描绘出灿烂的人生</a></li>
+						<li class="item"><a href="#" target="_blank">学生拿起画笔描绘出灿烂的人生</a></li>
+						<li class="item"><a href="#" target="_blank">让每个学生拿起为每个家起庭创造精彩</a></li>
+						<li class="item"><em></em><a href="#" target="_blank">学生拿起画的人生笔描绘出灿烂起</a></li>
+						<li class="item"><em></em><a href="#" target="_blank">让每个拿起为每个家庭创造精彩学生</a></li>
+						<li class="item"><em></em><a href="#" target="_blank">学生拿起画笔描绘出灿烂的人生</a></li>
 					</ul>
 				</div>
 				<div class="site-work">
@@ -294,7 +294,12 @@ $(function(){
         slideshowSpeed:6e3
     });
    
-
+	$('.site-about .list .item').each(function(i){
+		if($(this).find('em').length<=0){
+			$(this).prepend('<em>');
+		}
+		$(this).find('em').html(i+1);
+	})
 
 });
 

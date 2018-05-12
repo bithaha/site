@@ -682,100 +682,6 @@
 							<div class="name"><b>于珂</b>江汉高中</div>
 							<div class="sc"><span class="tag">湖北美术学院</span></div>
 						</dd>
-					</dl>
-		        </li>
-		        <li>
-		        	<dl class="xueyaun-list">
-						<dd>
-							<div class="img"><img src="assets/images/demo/uhead-2.png"></div>
-							<div class="name"><b>于珂d</b>江汉高中</div>
-							<div class="sc"><span class="tag">湖北美术学院</span></div>
-						</dd>
-						<dd>
-							<div class="img"><img src="assets/images/demo/uhead-3.png"></div>
-							<div class="name"><b>于珂d</b>江汉高中</div>
-							<div class="sc"><span class="tag">湖北美术学院</span></div>
-						</dd>
-						<dd>
-							<div class="img"><img src="assets/images/demo/uhead-1.png"></div>
-							<div class="name"><b>于珂d</b>江汉高中</div>
-							<div class="sc"><span class="tag">湖北美术学院</span></div>
-						</dd>
-						<dd>
-							<div class="img"><img src="assets/images/demo/uhead-4.png"></div>
-							<div class="name"><b>于珂d</b>江汉高中</div>
-							<div class="sc"><span class="tag">湖北美术学院</span></div>
-						</dd>
-						<dd>
-							<div class="img"><img src="assets/images/demo/uhead-5.png"></div>
-							<div class="name"><b>于珂</b>江汉高中</div>
-							<div class="sc"><span class="tag">湖北美术学院</span></div>
-						</dd>
-						<dd>
-							<div class="img"><img src="assets/images/demo/uhead-6.png"></div>
-							<div class="name"><b>于珂</b>江汉高中</div>
-							<div class="sc"><span class="tag">湖北美术学院</span></div>
-						</dd>
-						<dd>
-							<div class="img"><img src="assets/images/demo/uhead-7.png"></div>
-							<div class="name"><b>于珂</b>江汉高中</div>
-							<div class="sc"><span class="tag">湖北美术学院</span></div>
-						</dd>
-						<dd>
-							<div class="img"><img src="assets/images/demo/uhead-1.png"></div>
-							<div class="name"><b>于珂</b>江汉高中</div>
-							<div class="sc"><span class="tag">湖北美术学院</span></div>
-						</dd>
-						<dd>
-							<div class="img"><img src="assets/images/demo/uhead-2.png"></div>
-							<div class="name"><b>于珂</b>江汉高中</div>
-							<div class="sc"><span class="tag">湖北美术学院</span></div>
-						</dd>
-						<dd>
-							<div class="img"><img src="assets/images/demo/uhead-3.png"></div>
-							<div class="name"><b>于珂</b>江汉高中</div>
-							<div class="sc"><span class="tag">湖北美术学院</span></div>
-						</dd>
-						<dd>
-							<div class="img"><img src="assets/images/demo/uhead-4.png"></div>
-							<div class="name"><b>于珂</b>江汉高中</div>
-							<div class="sc"><span class="tag">湖北美术学院</span></div>
-						</dd>
-						<dd>
-							<div class="img"><img src="assets/images/demo/uhead-5.png"></div>
-							<div class="name"><b>于珂</b>江汉高中</div>
-							<div class="sc"><span class="tag">湖北美术学院</span></div>
-						</dd>
-						<dd>
-							<div class="img"><img src="assets/images/demo/uhead-6.png"></div>
-							<div class="name"><b>于珂</b>江汉高中</div>
-							<div class="sc"><span class="tag">湖北美术学院</span></div>
-						</dd>
-						<dd>
-							<div class="img"><img src="assets/images/demo/uhead-7.png"></div>
-							<div class="name"><b>于珂</b>江汉高中</div>
-							<div class="sc"><span class="tag">湖北美术学院</span></div>
-						</dd>
-						<dd>
-							<div class="img"><img src="assets/images/demo/uhead-1.png"></div>
-							<div class="name"><b>于珂</b>江汉高中</div>
-							<div class="sc"><span class="tag">湖北美术学院</span></div>
-						</dd>
-						<dd>
-							<div class="img"><img src="assets/images/demo/uhead-2.png"></div>
-							<div class="name"><b>于珂</b>江汉高中</div>
-							<div class="sc"><span class="tag">湖北美术学院</span></div>
-						</dd>
-						<dd>
-							<div class="img"><img src="assets/images/demo/uhead-3.png"></div>
-							<div class="name"><b>于珂</b>江汉高中</div>
-							<div class="sc"><span class="tag">湖北美术学院</span></div>
-						</dd>
-						<dd>
-							<div class="img"><img src="assets/images/demo/uhead-4.png"></div>
-							<div class="name"><b>于珂</b>江汉高中</div>
-							<div class="sc"><span class="tag">湖北美术学院</span></div>
-						</dd>
 						<dd>
 							<div class="img"><img src="assets/images/demo/uhead-5.png"></div>
 							<div class="name"><b>于珂</b>江汉高中</div>
@@ -977,6 +883,21 @@ $(function(){
         itemMargin: 15,
         controlNav: false
     });
+    /*学院分页处理*/
+    var xyPer = 21;
+    if($('.xueyaun-list dd').length>xyPer){
+    	var a = $('.xueyaun-list dd');
+    	$(".student-slider .slides").empty();
+
+    	var li;
+    	for(var i=0;i<a.length;i++){
+    		if(i%xyPer==0){
+    			li = $('<li><dl class="xueyaun-list"></dl></li>');
+    			$(".student-slider .slides").append(li);
+    		}
+    		li.find('dl').append(a[i]);
+    	}
+    }
     $(".student-slider").flexslider({
         animation:"slide",
         slideshowSpeed:6e3,

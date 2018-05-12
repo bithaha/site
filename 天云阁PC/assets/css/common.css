@@ -466,6 +466,7 @@ input[type="file"] > input[type="button"]::-moz-focus-inner{border:none;padding:
 .article-con .left .tit p{color:#df0000;}
 .article-con .left .tit .btn{display: inline-block;background: #df0000;color: #fff;padding: 0 10px;border-radius: 20px;}
 .art-body{font-size: 18px;line-height: 36px;color:#000;}
+.art-body img{max-width:100%;margin-bottom: 20px;}
 .article-con .left .share{margin-top: 40px;}
 .title-line{position: relative;}
 .title-line em{background: #fff;padding: 0 5px;display: inline-block;position: relative;z-index: 10;}
@@ -531,11 +532,11 @@ input[type="file"] > input[type="button"]::-moz-focus-inner{border:none;padding:
 .toutiao-list .item .img{width: 220px;height: 140px;float: left;overflow: hidden;}
 .toutiao-list .item .img img{width: 100%;height:100%;}
 .toutiao-list .item .det{margin-left: 240px;}
-.toutiao-list .item .det .tit{margin: 0 0 25px 0;line-height: 1;font-size: 20px;color: #333;text-overflow: ellipsis;overflow: hidden;white-space: nowrap;}
-.toutiao-list .item .det .tit a{color:#333;vertical-align: middle;}
-.toutiao-list .item .det .tit .ico-txt{margin-right: 10px;}
+.toutiao-list .item .det .tit{margin: 0 0 25px 0;line-height: 1.2;font-size: 20px;color: #333;text-overflow: ellipsis;overflow: hidden;white-space: nowrap;}
+.toutiao-list .item .det .tit a{color:#333;vertical-align: top;}
+.toutiao-list .item .det .tit .ico-txt{margin-right: 10px;    vertical-align: top;}
 .toutiao-list .item .det .info{color:#999;font-size: 14px;line-height: 1;margin-bottom: 20px;}
-.toutiao-list .item .det .desc{font-size: 14px;line-height: 28px;max-height:56px;overflow:hidden;color:#333;}
+.toutiao-list .item .det .desc{font-size: 14px;line-height: 28px;height:56px;overflow:hidden;color:#333;}
 
 .site-about{border:1px solid #ddd;padding: 35px 10px 20px;margin-bottom: 25px;}
 .site-about .about{border-bottom: 1px solid #ddd;padding-bottom: 15px;}
