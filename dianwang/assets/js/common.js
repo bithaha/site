@@ -9,9 +9,15 @@
 			if(!box){
 				throw new Error(selector+"容器不存在");
 			}
+
+			_this.box = box;
 			var bgImg = new Image();
 			bgImg.onload = function(){
 				_this.init(bgImg, box);
+				_this.bg = bgImg;
+				if(_this.afterBgLoaded && (_this.afterBgLoaded instanceof Function)){
+					_this.afterBgLoaded();
+				}
 			}
 			bgImg.src = opt.bg;
 		})
@@ -19,19 +25,23 @@
 	}
 	Navigate.prototype.init = function(bgImg, box){
 		box.appendChild(bgImg);
-		var iw = bgImg.offsetWidth,ih = bgImg.offsetHeight;
+		var iw = bgImg.offsetWidth,ih = bgImg.offsetHeight,w,h;
 		if(iw/ih > box.offsetWidth/box.offsetHeight){
-			var w = iw>box.offsetWidth?box.offsetWidth:iw
+			w = iw>box.offsetWidth?box.offsetWidth:iw;
+			h = w * ih/iw;
 			bgImg.style.width = w +'px';
-			bgImg.style.height = w * ih/iw+"px";
+			bgImg.style.height = h +"px";
 			this.scale = w/iw;
 		}else{
-			var h = iw>box.offsetHeight?box.offsetHeight:ih;
+			h = iw>box.offsetHeight?box.offsetHeight:ih;
+			w = h * iw/ih
 			bgImg.style.height = h +'px';
-			bgImg.style.width = h * iw/ih+"px";
+			bgImg.style.width = w+"px";
 			this.scale = h/ih;
 		}
-		this.box = box;
+		console.log(w+ '  '+h)
+		box.style.width=w+'px';
+		box.style.height=h+'px';
 		
 	}
 	var currentPosition = {
@@ -108,7 +118,7 @@
 	Navigate.prototype.show = function(id){
 		var _this = this;
 		var area = list.find(function(item){return item.id == id});
-		var showPath = function(imgItem){
+		var showPathItem = function(imgItem){
 			var pathDom = document.querySelector("#path_img_"+imgItem.id)
 			if(!pathDom){
 				var pathImg = new Image();
@@ -123,7 +133,7 @@
 				pathImg.src=imgItem.path;
 			}
 		}
-		if(area){
+		var showPath = function(){
 			$('.path_img').hide();
 			setTimeout(function(){
 				var curP = document.getElementById('currentPoint')
@@ -131,9 +141,16 @@
 				curP.style.left = currentPosition.left*_this.scale+"px";
 				curP.style.top = currentPosition.top*_this.scale+"px";
 				area.images.map(function(item){
-					showPath(item);
+					showPathItem(item);
 				})
 			},100)
+		}
+		if(area){
+			if(!_this.bg){
+				_this.afterBgLoaded = showPath;
+			}else{
+				showPath()
+			}
 			
 		}
 	}
@@ -141,7 +158,7 @@
 })()
 var map,navigate;
 
-navigate = new Navigate({container:".img-wraper",bg:"assets/images/yyt-1.jpg"});
+navigate = new Navigate({container:".img-container",bg:"assets/images/yyt-1.jpg"});
 
 
 $(function(){
@@ -171,7 +188,7 @@ function show_tab(type,_this){
 	if(type==2 || !map){
 		init_map();
 	}
-	if(type==1){console.log(_this)
+	if(type==1){
 		_this.parent().find('.subnav').find('a').each(function(){
 			$(this).parent().removeClass('active');
 			navigate.show($(this).data("id"));

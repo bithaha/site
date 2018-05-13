@@ -36,7 +36,7 @@ input[type="file"] > input[type="button"]::-moz-focus-inner{border:none;padding:
 
 
 /*导航*/
-.sitebar{width: 3.40rem;position: absolute;top: 0;left: 0;bottom:0;overflow: auto;}
+.sitebar{width: 3.40rem;position: absolute;top: 0;left: 0;bottom:0;overflow: auto;z-index: 50;}
 .sitebar .title{height: .33rem;line-height: .33rem;padding: .3rem 0;}
 .sitebar .title img{height: 100%;}
 .sitebar .nav{margin-left: .45rem;}
@@ -87,6 +87,7 @@ input[type="file"] > input[type="button"]::-moz-focus-inner{border:none;padding:
 .img-wraper{position: absolute;width: 100%;top: .2rem;left: 0;bottom: .8rem;text-align: center;}
 .img-wraper .path_img{position: absolute;z-index: 10;}
 .img-wraper .wave{position: absolute;z-index:30;}
+.img-container{position: absolute;width:100%;height: 100%;top: 50%;left: 50%;transform: translate(-50%,-50%);-webkit-transform: translate(-50%,-50%);}
 /*.img-wraper img{max-width: 100%;max-height: 100%;position: absolute;left: 50%;top: 50%;transform: translate(-50%,-50%);-webkit-transform: translate(-50%,-50%);}*/
 
 
