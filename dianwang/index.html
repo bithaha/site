@@ -6,6 +6,7 @@
 	<link rel="shortcut icon" href="assets/favicon.ico" type="image/x-icon" />
 	<link rel="stylesheet" href="assets/css/common.css">
 	<script type="text/javascript" src="assets/js/jquery.min.js"></script>
+	<script type="text/javascript" src="assets/js/base.js"></script>
 </head>
 <body>
 <div class="wraper">
@@ -17,31 +18,31 @@
 			<h1 class="title"><img src="assets/images/menu_title.png" alt="智能引导台"></h1>
 			<ul class="nav">
 				<li class="item active">
-					<a class="item-link" type="1"  href="javascript:;"><i class="ico-nav-1"></i><span>人工导览</span></a>
+					<a class="item-link" type="1" href="javascript:;"><i class="ico-nav-1"></i><span>人工导览</span></a>
 					<dl class="subnav">
-						<dd class="active"><a href="#">人工业务办理区</a></dd>
-						<dd><a href="#">自助业务办理区</a></dd>
-						<dd><a href="#">客户休息区</a></dd>
-						<dd><a href="#">全智能厨房展示厅</a></dd>
-						<dd><a href="#">国网商城体验台</a></dd>
-						<dd><a href="#">互动体验区</a></dd>
+						<dd class="active"><a href="#" data-id="1">人工业务办理区</a></dd>
+						<dd><a href="#" data-id="2">自助业务办理区</a></dd>
+						<dd><a href="#" data-id="3">客户休息区</a></dd>
+						<dd><a href="#" data-id="4">全智能厨房展示厅</a></dd>
+						<dd><a href="#" data-id="5">国网商城体验台</a></dd>
+						<dd><a href="#" data-id="6">互动体验区</a></dd>
 					</dl>
 				</li>
 				<li class="item">
-					<a class="item-link" href="#"><i class="ico-nav-2"></i><span>用电常识</span></a>
+					<a class="item-link" type="3" href="javascript:;"><i class="ico-nav-2"></i><span>用电常识</span></a>
 				</li>
 				<li class="item">
-					<a class="item-link" type="2" href="#"><i class="ico-nav-3"></i><span>营业网点</span></a>
+					<a class="item-link" type="2" href="javascript:;"><i class="ico-nav-3"></i><span>营业网点</span></a>
 				</li>
 				<li class="item">
-					<a class="item-link" href="#"><i class="ico-nav-4"></i><span>停电信息</span></a>
+					<a class="item-link" type="4" href="javascript:;"><i class="ico-nav-4"></i><span>停电信息</span></a>
 				</li>
 			</ul>
 		</div>
 		<!--导览-->
-		<div class="main-content" id="content-1">
+		<div class="main-content" style="display: block;" id="content-1">
 			<div class="img-wraper">
-				<img src="assets/images/yyt-1.jpg">
+				<!-- <img src="assets/images/yyt-1.jpg"> -->
 			</div>
 			<div class="img-notice">
 				<div class="item"><i class="ico-point-static"></i><span>您目前所在的位置</span></div>
@@ -49,10 +50,40 @@
 			</div>
 		</div>
 		<!--网点地图-->
-		<div class="main-content" style="display: none;" id="content-2">
+		<div class="main-content" id="content-2">
+			<div class="map-tit-infos">
+				<div class="item"><img src="assets/images/marker-1.png"><span>三型一化A级营业厅</span></div>
+				<div class="item"><img src="assets/images/marker-2.png"><span>三型一化B级营业厅</span></div>
+				<div class="item"><img src="assets/images/marker-3.png"><span>三型一化C级营业厅</span></div>
+				<div class="item"><img src="assets/images/marker-4.png"><span>非三型一化营业厅</span></div>
+			</div>
 			<div class="map-container" id="map">
 				地图
 			</div>
+		</div>
+		<!--用电常识-->
+		<div class="main-content" id="content-3">
+			<ul class="changshi-list">
+				<li><a href="#">1、不要超负荷用电。</a></li>
+				<li><a href="#">2、不要私自乱拉、乱接电线。</a></li>
+				<li><a href="#">3、不准用铜丝代替保险丝。</a></li>
+				<li><a href="#">4、照明灯具、开关、插头插座、接线盒等必须完整无损。</a></li>
+				<li><a href="#">5、不要随意将三眼插头改成两眼插头，切不可将三眼插头的相线（俗称火线）与接地线接错。</a></li>
+				<li><a href="#">6、不用湿手摸、湿布擦灯具、开关等电器用具。</a></li>
+				<li><a href="#">7、晒衣铁架要与电力线保持安全距离。</a></li>
+			</ul>
+		</div>
+		<!--停电信息-->
+		<div class="main-content" id="content-4">
+			<ul class="changshi-list">
+				<li><a href="#">1、不要超负荷用电1。</a></li>
+				<li><a href="#">2、不要私自乱拉、乱接电线1。</a></li>
+				<li><a href="#">3、不准用铜丝代替保险丝。</a></li>
+				<li><a href="#">4、照明灯具、开关、插头插座、接线盒等必须完整无损。</a></li>
+				<li><a href="#">5、不要随意将三眼插头改成两眼插头，切不可将三眼插头的相线（俗称火线）与接地线接错。</a></li>
+				<li><a href="#">6、不用湿手摸、湿布擦灯具、开关等电器用具。</a></li>
+				<li><a href="#">7、晒衣铁架要与电力线保持安全距离。</a></li>
+			</ul>
 		</div>
 	</div>
 	<div class="footer">

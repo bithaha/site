@@ -1,4 +1,129 @@
-
+(function(){
+	function Navigate(opt){
+		if(!opt){
+			throw new Error("参数不能为空");
+		}
+		var box = document.querySelector(opt.container);
+		if(!box){
+			throw new Error(selector+"容器不存在");
+		}
+		var bgImg = new Image(),_this = this;
+		bgImg.onload = function(){
+			_this.init(bgImg, box);
+		}
+		bgImg.src = opt.bg;
+	}
+	Navigate.prototype.init = function(bgImg, box){
+		box.appendChild(bgImg);
+		var iw = bgImg.offsetWidth,ih = bgImg.offsetHeight;
+		if(iw/ih > box.offsetWidth/box.offsetHeight){
+			var w = iw>box.offsetWidth?box.offsetWidth:iw
+			bgImg.style.width = w +'px';
+			bgImg.style.height = w * ih/iw+"px";
+			this.scale = w/iw;
+		}else{
+			var h = iw>box.offsetHeight?box.offsetHeight:ih;
+			bgImg.style.height = h +'px';
+			bgImg.style.width = h * iw/ih+"px";
+			this.scale = h/ih;
+		}
+		this.box = box;
+		
+	}
+	var list = [{
+		id: 1,
+		name: "人工业务办理区",
+		images: [{
+			id: 1,
+			path: "assets/images/area-1.png",
+			width: 679,
+			height: 182,
+			left: 155,
+			top: 135
+		}]
+	},{
+		id: 2,
+		name: "自主业务办理区",
+		images: [{
+			id: 2,
+			path: "assets/images/area-2.png",
+			width: 679,
+			height: 182,
+			left: 155,
+			top: 135
+		}]
+	},{
+		id: 3,
+		name: "自主业务办理区",
+		images: [{
+			id: 2,
+			path: "assets/images/area-3.png",
+			width: 679,
+			height: 182,
+			left: 155,
+			top: 135
+		}]
+	},{
+		id: 4,
+		name: "自主业务办理区",
+		images: [{
+			id: 2,
+			path: "assets/images/area-4.png",
+			width: 679,
+			height: 182,
+			left: 155,
+			top: 135
+		}]
+	},{
+		id: 5,
+		name: "自主业务办理区",
+		images: [{
+			id: 2,
+			path: "assets/images/area-5.png",
+			width: 679,
+			height: 182,
+			left: 155,
+			top: 135
+		}]
+	},{
+		id: 6,
+		name: "自主业务办理区",
+		images: [{
+			id: 2,
+			path: "assets/images/area-6.png",
+			width: 679,
+			height: 182,
+			left: 155,
+			top: 135
+		}]
+	}]
+	Navigate.prototype.show = function(id){
+		var _this = this;
+		var area = list.find(function(item){return item.id == id});
+		var showPath = function(imgItem){
+			var pathDom = document.querySelector("#path_img_"+imgItem.id)
+			if(!pathDom){
+				var pathImg = new Image();
+				pathImg.onload = function(){
+					this.style.width = imgItem.width*_this.scale+'px';
+					this.style.height = imgItem.height*_this.scale+'px';
+					this.style.top = imgItem.top*_this.scale+"px";
+					this.style.left = imgItem.left*_this.scale+"px";
+					this.classList.add('path_img');
+					_this.box.appendChild(pathImg);
+				}
+				pathImg.src=imgItem.path;
+			}
+		}
+		if(area){
+			$('.path_img').hide();
+			area.images.map(function(item){
+				showPath(item);
+			})
+		}
+	}
+	window.Navigate = Navigate;
+})()
 
 $(function(){
 	$(".sitebar .item-link").click(function(){
@@ -8,19 +133,24 @@ $(function(){
 		}
 		$(this).parent().siblings().find('.subnav').slideUp();
 
-		show_tab($(this).attr('type'));
+		show_tab($(this).attr('type'),$(this).data("id"));
 	})
 	$(".sitebar .subnav a").click(function(){
 		$(this).parent().addClass('active').siblings().removeClass('active');
+		navigate.show($(this).data("id"));
 	})
-})
-var map;
 
-function show_tab(type){
+})
+var map,navigate;
+setTimeout(function(){
+	navigate = new Navigate({container:".img-wraper",bg:"assets/images/yyt-1.jpg"})
+})
+function show_tab(type,id){
 	$('#content-'+type).show().siblings('.main-content').hide();
 	if(type==2 || !map){
 		init_map();
 	}
+
 }
 
 
@@ -53,19 +183,20 @@ ZoomControl.prototype.initialize = function(map){
 
 function init_map(){
 	map = new BMap.Map("map"); // 创建地图实例  
-	var point = new BMap.Point(114.31758,30.550172);  // 创建点坐标  
+	var point = new BMap.Point(114.5,30.550172);  // 创建点坐标  
 	map.centerAndZoom(point, 13);                 // 初始化地图，设置中心点坐标和地图级别
 
 	map.addControl(new BMap.NavigationControl());    
 	map.addControl(new BMap.ScaleControl());    
 	map.addControl(new BMap.OverviewMapControl());    
 
-	map.setCurrentCity("武汉"); // 仅当设置城市信息时，MapTypeControl的切换功能才能可用  
+	// map.setCurrentCity("武汉"); // 仅当设置城市信息时，MapTypeControl的切换功能才能可用  
 
 	// 创建控件实例    
 	var myZoomCtrl = new ZoomControl();    
 	// 添加到地图当中    
 	map.addControl(myZoomCtrl);
+
 
 	load_marker();
 }
@@ -76,52 +207,125 @@ function load_marker(){
 		"lon": 114.359549,
 		"lat": 30.528772,
 		"name": "国网宁波供电营业厅",
-		"rank": "A级",
+		"rank": "1",
 		"address": "宁波市海曙区中心西路",
-		"phone": "0574-51101051",
-		"worktime": "8:30-16:30周一-周日(国定节假日不营业)",
-		"service": "人工柜台、自助设备、电子渠道"
+		"tel": "0574-51101051",
+		"worktime": "8:30-16:30周一-周日(国定节假日休息)",
+		"service": "人工柜台、自助设备、电子渠道",
+		"iscurrent": 0
 	},{
 		"lon": 114.357896,
 		"lat": 30.549923,
 		"name": "国网宁波供电营业厅1",
-		"rank": "A级",
+		"rank": "2",
 		"address": "宁波市海曙区中心西路",
-		"phone": "0574-51101051",
-		"worktime": "8:30-16:30周一-周日(国定节假日不营业)",
-		"service": "人工柜台、自助设备、电子渠道"
+		"tel": "0574-51101051",
+		"worktime": "8:30-16:30周一-周日(国定节假日休息)",
+		"service": "人工柜台、自助设备、电子渠道",
+		"iscurrent": 0
 	},{
 		"lon": 114.397134,
 		"lat": 30.508239,
 		"name": "武汉工程大学",
-		"rank": "A级",
+		"rank": "3",
 		"address": "宁波市海曙区中心西路",
-		"phone": "0574-51101051",
-		"worktime": "8:30-16:30周一-周日(国定节假日不营业)",
-		"service": "人工柜台、自助设备、电子渠道"
+		"tel": "0574-51101051",
+		"worktime": "8:30-16:30周一-周日(国定节假日休息)",
+		"service": "人工柜台、自助设备、电子渠道",
+		"iscurrent": 1
+	},{
+		"lon": 114.397134,
+		"lat": 30.59,
+		"name": "武汉工程大学",
+		"rank": "4",
+		"address": "宁波市海曙区中心西路",
+		"tel": "0574-51101051",
+		"worktime": "8:30-16:30周一-周日(国定节假日休息)",
+		"service": "人工柜台、自助设备、电子渠道",
+		"iscurrent": 0
 	}]
-
+	
+	var a = {
+		"1":{
+			icon: "assets/images/marker-1.png",
+			rank: "A类"
+		},
+		"2":{
+			icon: "assets/images/marker-2.png",
+			rank: "B类"
+		},
+		"3":{
+			icon: "assets/images/marker-3.png",
+			rank: "C类"
+		},
+		"4":{
+			icon: "assets/images/marker-4.png",
+			rank: "非三型一化"
+		}
+	}
+	
+	/*保存当前点*/
+	var current = list.find(function(a){return a.iscurrent});
+	var currentPoint = current?new BMap.Point(current.lon,current.lat):null;
 	list.map(function(item){
-		var myIcon = new BMap.Icon("assets/images/marker.png", new BMap.Size(44, 64), {    
-	        anchor: new BMap.Size(22, 60)/*下尖角距离图片左上角坐标*/
-	    });      
-		var marker = new BMap.Marker(new BMap.Point(item.lon,item.lat),{icon: myIcon});//创建标注
-		var content = '名称：'+item.name;
+		add_marker(item);
+	});
 
+	function add_marker(item){
+		var rank = a[item.rank];
+		var myIcon = new BMap.Icon(rank.icon, new BMap.Size(64, 64), {    
+	        anchor: new BMap.Size(30, 60)/*下尖角距离图片左上角坐标*/
+	    });
+	    var myPoint = new BMap.Point(item.lon,item.lat);
+		var marker = new BMap.Marker(myPoint,{icon: myIcon});//创建标注
+		//计算距离
+		var distance = '';
+		if(currentPoint && item.iscurrent){
+			distance = "当前营业厅";
+		}else{
+			distance = "距离"+parseFloat(map.getDistance(currentPoint,myPoint)/1000).toFixed(1)+"公里";
+		}
+		var content = ` <div class="map-info-window">
+							<div class="left">
+								<div class="img"><img src="assets/images/demo-1.jpg"></div>
+								<p>${distance}</p>
+							</div>
+							<div class="det">
+								<table>
+									<tr>
+										<td width="90">网点级别：</td><td>${rank.rank}</td>
+									</tr>
+									<tr>
+										<td>网点地址：</td><td>${item.address}</td>
+									</tr>
+									<tr>
+										<td>联系电话：</td><td>${item.tel}</td>
+									</tr>
+									<tr>
+										<td>营业时间：</td><td>${item.worktime}</td>
+									</tr>
+									<tr>
+										<td>服务模式：</td><td>${item.service}</td>
+									</tr>
+								</table>
+							</div>
+						</div>`;
 		map.addOverlay(marker);
 		addClickHander(content, marker);
-	})
+	}
 
 
 	function addClickHander(content,marker){  
+        marker.addEventListener("touchstart",function(e){  
+        openInfo(" "+content,e)});  
         marker.addEventListener("click",function(e){  
         openInfo(" "+content,e)});  
     }  
     //++  
     var opts = {  
-        width : 200,     // 信息窗口宽度  
-        height: 80,     // 信息窗口高度  
-        title : "站点信息" , // 信息窗口标题  
+        width : 780,     // 信息窗口宽度  
+        height: 240,     // 信息窗口高度  
+        title : "国网宁波供电营业厅" , // 信息窗口标题  
         enableMessage:true//设置允许信息窗发送短息  
 	}; 
     function openInfo(content,e){  
