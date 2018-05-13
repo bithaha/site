@@ -86,6 +86,7 @@ input[type="file"] > input[type="button"]::-moz-focus-inner{border:none;padding:
 .ico-point-path{width: .83rem;height: .12rem;display: inline-block;background: url(../images/point_blue.png) no-repeat;background-size:100% 100%;}
 .img-wraper{position: absolute;width: 100%;top: .2rem;left: 0;bottom: .8rem;text-align: center;}
 .img-wraper .path_img{position: absolute;z-index: 10;}
+.img-wraper .wave{position: absolute;z-index:30;}
 /*.img-wraper img{max-width: 100%;max-height: 100%;position: absolute;left: 50%;top: 50%;transform: translate(-50%,-50%);-webkit-transform: translate(-50%,-50%);}*/
 
 
@@ -109,3 +110,68 @@ input[type="file"] > input[type="button"]::-moz-focus-inner{border:none;padding:
 /* 用电常识 */
 .changshi-list{}
 .changshi-list li{padding: 10px 20px;font-size: 16px;}
+
+/**/
+.wave {  
+    position: relative;  
+    width: 70px;  
+    height: 70px;  
+    text-align: center;  
+    line-height: 70px;  
+    font-size: 28px;  
+}  
+
+.wave .circle {  
+    position: absolute;  
+    border-radius: 50%;  
+    opacity: 0;  
+}  
+.wave-content{line-height: 65px;}
+.wave-content i{width: .2rem;height: .2rem;background: #df0000;border-radius:50%;display: inline-block;}
+
+/* 波纹效果 */  
+.wave.ripple .circle {  
+    width: calc(100% - 6px); /* 减去边框的大小 */  
+    height: calc(100% - 6px);/* 减去边框的大小 */  
+    border: 3px solid #fff;  
+}  
+
+.wave.ripple .circle:first-child {  
+    animation: circle-opacity 2s infinite;  
+}  
+
+.wave.ripple .circle:nth-child(2) {  
+    animation: circle-opacity 2s infinite;  
+    animation-delay: .3s;  
+}  
+
+.wave.ripple .circle:nth-child(3) {  
+    animation: circle-opacity 2s infinite;  
+    animation-delay: .6s;  
+}  
+
+.wave.ripple.danger {  
+    color: red;  
+}  
+
+.wave.ripple.danger .circle {  
+    border-color: red;  
+}  
+
+.wave.ripple.warning {  
+    color: orange;  
+}  
+
+.wave.ripple.warning .circle {  
+    border-color: orange;  
+}  
+@keyframes circle-opacity{  
+    from {  
+        opacity: 1;  
+        transform: scale(0);  
+    }  
+    to {  
+        opacity: 0;  
+        transform: scale(1);  
+    }  
+} 

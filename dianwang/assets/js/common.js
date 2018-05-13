@@ -1,17 +1,21 @@
 (function(){
 	function Navigate(opt){
-		if(!opt){
-			throw new Error("参数不能为空");
-		}
-		var box = document.querySelector(opt.container);
-		if(!box){
-			throw new Error(selector+"容器不存在");
-		}
-		var bgImg = new Image(),_this = this;
-		bgImg.onload = function(){
-			_this.init(bgImg, box);
-		}
-		bgImg.src = opt.bg;
+		var _this = this;
+		setTimeout(function(){
+			if(!opt){
+				throw new Error("参数不能为空");
+			}
+			var box = document.querySelector(opt.container);
+			if(!box){
+				throw new Error(selector+"容器不存在");
+			}
+			var bgImg = new Image();
+			bgImg.onload = function(){
+				_this.init(bgImg, box);
+			}
+			bgImg.src = opt.bg;
+		})
+		
 	}
 	Navigate.prototype.init = function(bgImg, box){
 		box.appendChild(bgImg);
@@ -30,6 +34,10 @@
 		this.box = box;
 		
 	}
+	var currentPosition = {
+		top: 300,
+		left: 520
+	}
 	var list = [{
 		id: 1,
 		name: "人工业务办理区",
@@ -47,10 +55,10 @@
 		images: [{
 			id: 2,
 			path: "assets/images/area-2.png",
-			width: 679,
-			height: 182,
-			left: 155,
-			top: 135
+			width: 247,
+			height: 232,
+			left: 584,
+			top: 334
 		}]
 	},{
 		id: 3,
@@ -58,10 +66,10 @@
 		images: [{
 			id: 2,
 			path: "assets/images/area-3.png",
-			width: 679,
-			height: 182,
-			left: 155,
-			top: 135
+			width: 475,
+			height: 263,
+			left: 620,
+			top: 311
 		}]
 	},{
 		id: 4,
@@ -69,10 +77,10 @@
 		images: [{
 			id: 2,
 			path: "assets/images/area-4.png",
-			width: 679,
-			height: 182,
-			left: 155,
-			top: 135
+			width: 364,
+			height: 218,
+			left: 623,
+			top: 350
 		}]
 	},{
 		id: 5,
@@ -80,10 +88,10 @@
 		images: [{
 			id: 2,
 			path: "assets/images/area-5.png",
-			width: 679,
-			height: 182,
-			left: 155,
-			top: 135
+			width: 169,
+			height: 196,
+			left: 392,
+			top: 109
 		}]
 	},{
 		id: 6,
@@ -91,10 +99,10 @@
 		images: [{
 			id: 2,
 			path: "assets/images/area-6.png",
-			width: 679,
-			height: 182,
-			left: 155,
-			top: 135
+			width: 476,
+			height: 336,
+			left: 25,
+			top: 220
 		}]
 	}]
 	Navigate.prototype.show = function(id){
@@ -117,13 +125,24 @@
 		}
 		if(area){
 			$('.path_img').hide();
-			area.images.map(function(item){
-				showPath(item);
-			})
+			setTimeout(function(){
+				var curP = document.getElementById('currentPoint')
+				curP.style.display = "block";
+				curP.style.left = currentPosition.left*_this.scale+"px";
+				curP.style.top = currentPosition.top*_this.scale+"px";
+				area.images.map(function(item){
+					showPath(item);
+				})
+			},100)
+			
 		}
 	}
 	window.Navigate = Navigate;
 })()
+var map,navigate;
+
+navigate = new Navigate({container:".img-wraper",bg:"assets/images/yyt-1.jpg"});
+
 
 $(function(){
 	$(".sitebar .item-link").click(function(){
@@ -133,22 +152,30 @@ $(function(){
 		}
 		$(this).parent().siblings().find('.subnav').slideUp();
 
-		show_tab($(this).attr('type'),$(this).data("id"));
+		show_tab($(this).attr('type'),$(this));
 	})
 	$(".sitebar .subnav a").click(function(){
 		$(this).parent().addClass('active').siblings().removeClass('active');
 		navigate.show($(this).data("id"));
-	})
+	});
+
+	setTimeout(function(){
+		$(".sitebar .item-link").eq(0).click();
+	},100)
+	
 
 })
-var map,navigate;
-setTimeout(function(){
-	navigate = new Navigate({container:".img-wraper",bg:"assets/images/yyt-1.jpg"})
-})
-function show_tab(type,id){
+
+function show_tab(type,_this){
 	$('#content-'+type).show().siblings('.main-content').hide();
 	if(type==2 || !map){
 		init_map();
+	}
+	if(type==1){console.log(_this)
+		_this.parent().find('.subnav').find('a').each(function(){
+			$(this).parent().removeClass('active');
+			navigate.show($(this).data("id"));
+		})
 	}
 
 }

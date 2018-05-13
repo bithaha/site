@@ -19,8 +19,8 @@
 			<ul class="nav">
 				<li class="item active">
 					<a class="item-link" type="1" href="javascript:;"><i class="ico-nav-1"></i><span>人工导览</span></a>
-					<dl class="subnav">
-						<dd class="active"><a href="#" data-id="1">人工业务办理区</a></dd>
+					<dl class="subnav" style="display: none;">
+						<dd><a href="#" data-id="1">人工业务办理区</a></dd>
 						<dd><a href="#" data-id="2">自助业务办理区</a></dd>
 						<dd><a href="#" data-id="3">客户休息区</a></dd>
 						<dd><a href="#" data-id="4">全智能厨房展示厅</a></dd>
@@ -43,6 +43,14 @@
 		<div class="main-content" style="display: block;" id="content-1">
 			<div class="img-wraper">
 				<!-- <img src="assets/images/yyt-1.jpg"> -->
+				<div class="wave ripple danger path_img" id="currentPoint" style="display: none;">  
+		            <div class="circle"></div>  
+		            <div class="circle"></div>  
+		            <div class="circle"></div>  
+		            <div class="wave-content">  
+		                <i></i>  
+		            </div>  
+		        </div>  
 			</div>
 			<div class="img-notice">
 				<div class="item"><i class="ico-point-static"></i><span>您目前所在的位置</span></div>
