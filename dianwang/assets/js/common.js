@@ -317,8 +317,8 @@ function load_marker(){
 
 	function add_marker(item){
 		var rank = a[item.rank];
-		var myIcon = new BMap.Icon(rank.icon, new BMap.Size(64, 64), {    
-	        anchor: new BMap.Size(30, 60)/*下尖角距离图片左上角坐标*/
+		var myIcon = new BMap.Icon(rank.icon, new BMap.Size(52, 74), {    
+	        anchor: new BMap.Size(26, 74)/*下尖角距离图片左上角坐标*/
 	    });
 	    var myPoint = new BMap.Point(item.lon,item.lat);
 		var marker = new BMap.Marker(myPoint,{icon: myIcon});//创建标注
@@ -337,19 +337,13 @@ function load_marker(){
 							<div class="det">
 								<table>
 									<tr>
-										<td width="90">网点级别：</td><td>${rank.rank}</td>
-									</tr>
-									<tr>
-										<td>网点地址：</td><td>${item.address}</td>
+										<td width="80">网点地址：</td><td>${item.address}</td>
 									</tr>
 									<tr>
 										<td>联系电话：</td><td>${item.tel}</td>
 									</tr>
 									<tr>
 										<td>营业时间：</td><td>${item.worktime}</td>
-									</tr>
-									<tr>
-										<td>服务模式：</td><td>${item.service}</td>
 									</tr>
 								</table>
 							</div>
@@ -367,8 +361,8 @@ function load_marker(){
     }  
     //++  
     var opts = {  
-        width : 780,     // 信息窗口宽度  
-        height: 240,     // 信息窗口高度  
+        width : 560,     // 信息窗口宽度  
+        height: 150,     // 信息窗口高度  
         title : "国网宁波供电营业厅" , // 信息窗口标题  
         enableMessage:true//设置允许信息窗发送短息  
 	}; 
