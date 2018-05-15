@@ -345,19 +345,19 @@ function load_marker(){
 	var a = {
 		"1":{
 			icon: "assets/images/marker-2.png",
-			rank: "A类"
+			rank: "三型一化A级厅"
 		},
 		"2":{
 			icon: "assets/images/marker-1.png",
-			rank: "B类"
+			rank: "三型一化B级厅"
 		},
 		"3":{
 			icon: "assets/images/marker-4.png",
-			rank: "C类"
+			rank: "三型一化C级厅"
 		},
 		"4":{
 			icon: "assets/images/marker-3.png",
-			rank: "非三型一化"
+			rank: "非三型一化厅"
 		}
 	}
 	
@@ -380,6 +380,7 @@ function load_marker(){
 		var distance = '';
 		if(currentPoint && item.iscurrent){
 			distance = "当前营业厅";
+			rank.rank += "（本厅）"
 		}else{
 			distance = "距离当前位置"+parseFloat(map.getDistance(currentPoint,myPoint)/1000).toFixed(1)+"公里";
 		}
@@ -390,6 +391,9 @@ function load_marker(){
 							</div>
 							<div class="det">
 								<table>
+									<tr>
+										<td width="80">网点类型：</td><td>${rank.rank}</td>
+									</tr>
 									<tr>
 										<td width="80">网点地址：</td><td>${item.address}</td>
 									</tr>
