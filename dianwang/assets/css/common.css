@@ -93,7 +93,7 @@ input[type="file"] > input[type="button"]::-moz-focus-inner{border:none;padding:
 
 
 /* 地图 */
-.map-container {position: absolute;width: 100%;top: 1rem;left: 0;bottom: .8rem;}
+.map-container {position: absolute;top: 1rem;left: 1rem;right:1rem;bottom: .8rem;}
 .map-back-center{background-color: #999;color: #fff;text-align: center;line-height: 15px;width: 30px;padding:10px;left: auto!important;right: 10px!important;top: auto!important;bottom: 90px!important;}
 .map-info-window{overflow: hidden;font-size: 16px;margin-top: -18px;padding-left: 10px;}
 .map-info-window .left{float: left;width:180px;}
@@ -106,8 +106,10 @@ input[type="file"] > input[type="button"]::-moz-focus-inner{border:none;padding:
 .BMap_bubble_title{padding-left:200px;color:#000;font-size: 18px;font-weight: bold;padding-top:8px;}
 .map-tit-infos{position: absolute;top: 0;width: 100%;left: 0;z-index:20;text-align: center;white-space: nowrap;    text-shadow: 1px 1px 1px #fff;}
 .map-tit-infos .item{display: inline-block;margin: 0 .2rem;font-size: 18px;color:#666; vertical-align: top;}
-.map-tit-infos .item img{vertical-align: baseline;margin-right: .1rem;width: .5rem;}
+.map-tit-infos .item img{vertical-align: baseline;margin-right: .1rem;width: .4rem;}
 .map-tit-infos .item span{color: #24a4e3;}
+
+.BMap_Marker img{width: 100%;height: 100%;}
 
 .BMap_pop .BMap_top,
 .BMap_pop .BMap_top + div > div,

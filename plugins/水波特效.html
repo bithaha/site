@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>PHP中文网</title>
+        <style>
+             a{
+                text-decoration:none;
+                user-select:none;
+                position: relative;
+                display: block;
+                margin: 100px auto;
+                width:120px;
+                height:50px;
+                line-height:50px;
+                text-align:center;
+                border-radius:25px;
+                color:#fff;
+                font-size:16px;
+                cursor:pointer;
+                background-color: #ff8300;
+                box-shadow: 0 3px 9px 0 rgba(255, 131, 0, 0.35);
+                overflow: hidden;
+            }
+ 
+             a:after{
+                position: absolute;
+                content: "";
+                display: block;
+                margin: auto;
+                left: -40px;
+                top:-75px;
+                width: 200px;
+                height: 200px;
+                background: #ff8300;
+                border-radius: 50%;
+                opacity: 0;
+                transition: all 0.8s;
+            }
+             /*a:hover{
+                 background-color: #FF9D00;
+                 
+                 box-shadow: 0 5px 13px 0 rgba(255, 131, 0, 0.59);
+            }*/
+            /* a:active{
+                 background-color: #ff8300;
+                 top:0;
+                 box-shadow: 0 3px 9px 0 rgba(255, 131, 0, 0.35);
+            }*/
+             a:active:after{
+                width: 0;
+                height: 0;
+                left:60px;
+                top: 25px;
+                opacity: 1;
+                transition-duration: 0s;
+            }
+        </style>
+    </head>
+    <body>
+            <a href="javascript:void(0)">PHP中文网</a>
+    </body>
+</html>

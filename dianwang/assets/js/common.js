@@ -274,27 +274,27 @@ function load_marker(){
 		"lon": 111.739425,
 		"lat": 30.430509,
 		"name": "枝江市供电公司客户服务中心",
-		"rank": "1",
+		"rank": "4",
 		"address": "枝江市迎宾大道153号",
 		"tel": "0717-4207742",
 		"worktime": "8:30-18：00",
 		"service": "人工柜台、自助设备、电子渠道",
-		"iscurrent": 1
+		"iscurrent": 0
 	},{
 		"lon": 111.761598,
 		"lat": 30.430364,
 		"name": "枝江市供电公司客户服务中心马店供电所",
-		"rank": "2",
+		"rank": "1",
 		"address": "江口镇318国道",
 		"tel": "0717-4350241",
 		"worktime": "8:30-18：00",
 		"service": "人工柜台、自助设备、电子渠道",
-		"iscurrent": 0
+		"iscurrent": 1
 	},{
 		"lon": 111.843168,
 		"lat": 30.527316,
 		"name": "枝江市供电公司客户服务中心问安供电所",
-		"rank": "3",
+		"rank": "4",
 		"address": "枝江市问安镇向阳路",
 		"tel": "0717-4320022",
 		"worktime": " 8:30-18：00",
@@ -304,7 +304,7 @@ function load_marker(){
 		"lon": 111.600963,
 		"lat": 30.529813,
 		"name": "枝江市供电公司客户服务中心安福寺供电所",
-		"rank": "3",
+		"rank": "4",
 		"address": "安福寺镇之字溪大道16号",
 		"tel": "0717-4460096",
 		"worktime": "8:30-18：00",
@@ -314,7 +314,7 @@ function load_marker(){
 		"lon": 111.518768,
 		"lat": 30.42841,
 		"name": "枝江市供电公司客户服务中心白洋供电所",
-		"rank": "2",
+		"rank": "4",
 		"address": "白洋镇太白路3号",
 		"tel": "0717-4400124",
 		"worktime": "8:30-18：00",
@@ -324,7 +324,7 @@ function load_marker(){
 		"lon": 111.574525,
 		"lat": 30.341732,
 		"name": "枝江市供电公司客户服务中心顾店供电所",
-		"rank": "2",
+		"rank": "4",
 		"address": "顾家店镇九公里长安大道103",
 		"tel": "0717-4160038",
 		"worktime": "8:30-18：00",
@@ -334,7 +334,7 @@ function load_marker(){
 		"lon": 111.805749,
 		"lat": 30.410244,
 		"name": "枝江市供电公司客户服务中心百里洲供电所",
-		"rank": "2",
+		"rank": "4",
 		"address": "百里洲镇解放路138号",
 		"tel": "0717-4060354",
 		"worktime": "8:30-18：00",
@@ -344,19 +344,19 @@ function load_marker(){
 	
 	var a = {
 		"1":{
-			icon: "assets/images/marker-1.png",
+			icon: "assets/images/marker-2.png",
 			rank: "A类"
 		},
 		"2":{
-			icon: "assets/images/marker-2.png",
+			icon: "assets/images/marker-1.png",
 			rank: "B类"
 		},
 		"3":{
-			icon: "assets/images/marker-3.png",
+			icon: "assets/images/marker-4.png",
 			rank: "C类"
 		},
 		"4":{
-			icon: "assets/images/marker-4.png",
+			icon: "assets/images/marker-3.png",
 			rank: "非三型一化"
 		}
 	}
@@ -370,8 +370,9 @@ function load_marker(){
 
 	function add_marker(item){
 		var rank = a[item.rank];
-		var myIcon = new BMap.Icon(rank.icon, new BMap.Size(52, 74), {    
-	        anchor: new BMap.Size(26, 74)/*下尖角距离图片左上角坐标*/
+		var pageScale = $(window).width()>600?$(window).width()/1920:600/1920;
+		var myIcon = new BMap.Icon(rank.icon, new BMap.Size(40*pageScale, 57*pageScale), {
+	        anchor: new BMap.Size(20*pageScale, 57*pageScale)/*下尖角距离图片左上角坐标*/
 	    });
 	    var myPoint = new BMap.Point(item.lon,item.lat);
 		var marker = new BMap.Marker(myPoint,{icon: myIcon});//创建标注
@@ -380,7 +381,7 @@ function load_marker(){
 		if(currentPoint && item.iscurrent){
 			distance = "当前营业厅";
 		}else{
-			distance = "距离"+parseFloat(map.getDistance(currentPoint,myPoint)/1000).toFixed(1)+"公里";
+			distance = "距离当前位置"+parseFloat(map.getDistance(currentPoint,myPoint)/1000).toFixed(1)+"公里";
 		}
 		var content = ` <div class="map-info-window">
 							<div class="left">
