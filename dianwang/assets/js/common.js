@@ -61,7 +61,7 @@
 		}]
 	},{
 		id: 2,
-		name: "自主业务办理区",
+		name: "自助业务办理区",
 		images: [{
 			id: 2,
 			path: "assets/images/area-2.png",
@@ -72,29 +72,7 @@
 		}]
 	},{
 		id: 3,
-		name: "自主业务办理区",
-		images: [{
-			id: 2,
-			path: "assets/images/area-3.png",
-			width: 475,
-			height: 263,
-			left: 620,
-			top: 311
-		}]
-	},{
-		id: 4,
-		name: "自主业务办理区",
-		images: [{
-			id: 2,
-			path: "assets/images/area-4.png",
-			width: 364,
-			height: 218,
-			left: 623,
-			top: 350
-		}]
-	},{
-		id: 5,
-		name: "自主业务办理区",
+		name: "客户休息区",
 		images: [{
 			id: 2,
 			path: "assets/images/area-5.png",
@@ -104,8 +82,30 @@
 			top: 109
 		}]
 	},{
+		id: 4,
+		name: "全智能厨房展示厅",
+		images: [{
+			id: 2,
+			path: "assets/images/area-3.png",
+			width: 475,
+			height: 263,
+			left: 620,
+			top: 311
+		}]
+	},{
+		id: 5,
+		name: "国网商城体验区",
+		images: [{
+			id: 2,
+			path: "assets/images/area-4.png",
+			width: 364,
+			height: 218,
+			left: 623,
+			top: 350
+		}]
+	},{
 		id: 6,
-		name: "自主业务办理区",
+		name: "互动体验区",
 		images: [{
 			id: 2,
 			path: "assets/images/area-6.png",
@@ -115,6 +115,13 @@
 			top: 220
 		}]
 	}]
+	Navigate.prototype.showCurrent = function(){
+		var _this = this;
+		var curP = document.getElementById('currentPoint')
+		curP.style.display = "block";
+		curP.style.left = currentPosition.left*_this.scale+"px";
+		curP.style.top = currentPosition.top*_this.scale+"px";
+	}
 	Navigate.prototype.show = function(id){
 		var _this = this;
 		var area = list.find(function(item){return item.id == id});
@@ -136,10 +143,7 @@
 		var showPath = function(){
 			$('.path_img').hide();
 			setTimeout(function(){
-				var curP = document.getElementById('currentPoint')
-				curP.style.display = "block";
-				curP.style.left = currentPosition.left*_this.scale+"px";
-				curP.style.top = currentPosition.top*_this.scale+"px";
+				_this.showCurrent();
 				area.images.map(function(item){
 					showPathItem(item);
 				})
@@ -175,10 +179,20 @@ $(function(){
 		$(this).parent().addClass('active').siblings().removeClass('active');
 		navigate.show($(this).data("id"));
 	});
+	$(document).on('click','.changshi-list .link',function(){
+		if($(this).parent().hasClass('active')){
+			$(this).parent().removeClass('active').find('.subs').slideUp();
+		}else{
+			$('.changshi-list .subs').slideUp();
+			$(this).parent().addClass('active').siblings().removeClass('active');
+			$(this).next().slideDown();
+		}
+		
+	})
 
 	setTimeout(function(){
 		$(".sitebar .item-link").eq(0).click();
-	},100)
+	},100);
 	
 
 })
@@ -189,10 +203,9 @@ function show_tab(type,_this){
 		init_map();
 	}
 	if(type==1){
-		_this.parent().find('.subnav').find('a').each(function(){
-			$(this).parent().removeClass('active');
-			navigate.show($(this).data("id"));
-		})
+		_this.next().find('dd').removeClass('active');
+		$(".path_img").hide();
+		navigate.showCurrent();
 	}
 
 }
@@ -217,7 +230,7 @@ ZoomControl.prototype.initialize = function(map){
     div.classList.add('map-back-center');
     // 绑定事件，点击一次放大两级    
     div.onclick = function(e){  
-        map.panTo(new BMap.Point(114.31758,30.550172));    
+        map.panTo(new BMap.Point(111.765968,30.436091));    
     }    
     // 添加DOM元素到地图中   
     map.getContainer().appendChild(div);    
@@ -227,8 +240,8 @@ ZoomControl.prototype.initialize = function(map){
 
 function init_map(){
 	map = new BMap.Map("map"); // 创建地图实例  
-	var point = new BMap.Point(114.5,30.550172);  // 创建点坐标  
-	map.centerAndZoom(point, 13);                 // 初始化地图，设置中心点坐标和地图级别
+	var point = new BMap.Point(111.765968,30.436091);  // 创建点坐标  
+	map.centerAndZoom(point, 12);                 // 初始化地图，设置中心点坐标和地图级别
 
 	map.addControl(new BMap.NavigationControl());    
 	map.addControl(new BMap.ScaleControl());    
@@ -248,43 +261,73 @@ function init_map(){
 
 function load_marker(){
 	var list = [{
-		"lon": 114.359549,
-		"lat": 30.528772,
-		"name": "国网宁波供电营业厅",
+		"lon": 111.739425,
+		"lat": 30.430509,
+		"name": "枝江市供电公司客户服务中心",
 		"rank": "1",
-		"address": "宁波市海曙区中心西路",
-		"tel": "0574-51101051",
-		"worktime": "8:30-16:30周一-周日(国定节假日休息)",
-		"service": "人工柜台、自助设备、电子渠道",
-		"iscurrent": 0
-	},{
-		"lon": 114.357896,
-		"lat": 30.549923,
-		"name": "国网宁波供电营业厅1",
-		"rank": "2",
-		"address": "宁波市海曙区中心西路",
-		"tel": "0574-51101051",
-		"worktime": "8:30-16:30周一-周日(国定节假日休息)",
-		"service": "人工柜台、自助设备、电子渠道",
-		"iscurrent": 0
-	},{
-		"lon": 114.397134,
-		"lat": 30.508239,
-		"name": "武汉工程大学",
-		"rank": "3",
-		"address": "宁波市海曙区中心西路",
-		"tel": "0574-51101051",
-		"worktime": "8:30-16:30周一-周日(国定节假日休息)",
+		"address": "枝江市迎宾大道153号",
+		"tel": "0717-4207742",
+		"worktime": "8:30-18：00",
 		"service": "人工柜台、自助设备、电子渠道",
 		"iscurrent": 1
 	},{
-		"lon": 114.397134,
-		"lat": 30.59,
-		"name": "武汉工程大学",
-		"rank": "4",
-		"address": "宁波市海曙区中心西路",
-		"tel": "0574-51101051",
-		"worktime": "8:30-16:30周一-周日(国定节假日休息)",
+		"lon": 111.761598,
+		"lat": 30.430364,
+		"name": "枝江市供电公司客户服务中心马店供电所",
+		"rank": "2",
+		"address": "江口镇318国道",
+		"tel": "0717-4350241",
+		"worktime": "8:30-18：00",
+		"service": "人工柜台、自助设备、电子渠道",
+		"iscurrent": 0
+	},{
+		"lon": 111.843168,
+		"lat": 30.527316,
+		"name": "枝江市供电公司客户服务中心问安供电所",
+		"rank": "3",
+		"address": "枝江市问安镇向阳路",
+		"tel": "0717-4320022",
+		"worktime": " 8:30-18：00",
+		"service": "人工柜台、自助设备、电子渠道",
+		"iscurrent": 0
+	},{
+		"lon": 111.600963,
+		"lat": 30.529813,
+		"name": "枝江市供电公司客户服务中心安福寺供电所",
+		"rank": "3",
+		"address": "安福寺镇之字溪大道16号",
+		"tel": "0717-4460096",
+		"worktime": "8:30-18：00",
+		"service": "人工柜台、自助设备、电子渠道",
+		"iscurrent": 0
+	},{
+		"lon": 111.518768,
+		"lat": 30.42841,
+		"name": "枝江市供电公司客户服务中心白洋供电所",
+		"rank": "2",
+		"address": "白洋镇太白路3号",
+		"tel": "0717-4400124",
+		"worktime": "8:30-18：00",
+		"service": "人工柜台、自助设备、电子渠道",
+		"iscurrent": 0
+	},{
+		"lon": 111.574525,
+		"lat": 30.341732,
+		"name": "枝江市供电公司客户服务中心顾店供电所",
+		"rank": "2",
+		"address": "顾家店镇九公里长安大道103",
+		"tel": "0717-4160038",
+		"worktime": "8:30-18：00",
+		"service": "人工柜台、自助设备、电子渠道",
+		"iscurrent": 0
+	},{
+		"lon": 111.805749,
+		"lat": 30.410244,
+		"name": "枝江市供电公司客户服务中心百里洲供电所",
+		"rank": "2",
+		"address": "百里洲镇解放路138号",
+		"tel": "0717-4060354",
+		"worktime": "8:30-18：00",
 		"service": "人工柜台、自助设备、电子渠道",
 		"iscurrent": 0
 	}]
@@ -349,25 +392,26 @@ function load_marker(){
 							</div>
 						</div>`;
 		map.addOverlay(marker);
-		addClickHander(content, marker);
+		addClickHander(item.name,content, marker);
 	}
 
 
-	function addClickHander(content,marker){  
+	function addClickHander(title,content,marker){  
         marker.addEventListener("touchstart",function(e){  
-        openInfo(" "+content,e)});  
+        openInfo(title," "+content,e)});  
         marker.addEventListener("click",function(e){  
-        openInfo(" "+content,e)});  
+        openInfo(title," "+content,e)});  
     }  
     //++  
     var opts = {  
         width : 560,     // 信息窗口宽度  
         height: 150,     // 信息窗口高度  
-        title : "国网宁波供电营业厅" , // 信息窗口标题  
+        title : "" , // 信息窗口标题  
         enableMessage:true//设置允许信息窗发送短息  
 	}; 
-    function openInfo(content,e){  
+    function openInfo(title,content,e){  
         var p = e.target;  
+        opts.title = title;
         var point = new BMap.Point(p.getPosition().lng, p.getPosition().lat);  
         var infoWindow = new BMap.InfoWindow(content,opts);  // 创建信息窗口对象   
         map.openInfoWindow(infoWindow,point);                //开启信息窗口  
