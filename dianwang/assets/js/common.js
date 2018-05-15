@@ -117,10 +117,20 @@
 	}]
 	Navigate.prototype.showCurrent = function(){
 		var _this = this;
-		var curP = document.getElementById('currentPoint')
-		curP.style.display = "block";
-		curP.style.left = currentPosition.left*_this.scale+"px";
-		curP.style.top = currentPosition.top*_this.scale+"px";
+		if(!_this.bg){
+			_this.afterBgLoaded = function(){
+				var curP = document.getElementById('currentPoint')
+				curP.style.display = "block";
+				curP.style.left = currentPosition.left*_this.scale+"px";
+				curP.style.top = currentPosition.top*_this.scale+"px";
+			};
+		}else{
+			var curP = document.getElementById('currentPoint')
+			curP.style.display = "block";
+			curP.style.left = currentPosition.left*_this.scale+"px";
+			curP.style.top = currentPosition.top*_this.scale+"px";
+		}
+		
 	}
 	Navigate.prototype.show = function(id){
 		var _this = this;
