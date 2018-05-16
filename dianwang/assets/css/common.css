@@ -31,8 +31,8 @@ input[type="file"] > input[type="button"]::-moz-focus-inner{border:none;padding:
 .wraper{margin:0 .7rem;height:100%;position: relative;}
 .container{position: absolute;top: 1.8rem;bottom: .2rem;left: .6rem;right: .6rem;}
 
-.header{position: relative;z-index: 20;background: url(../images/head-bg.png);background-size:auto 100%;height: 1.23rem;top: .1rem;left: .2rem;}
-.header .logo{padding: .47rem .2rem 0 0;text-align: center;}
+.header{position: relative;z-index: 20;background: url(../images/head-bg.png) no-repeat;background-size:auto 100%;height: 1.3rem;top: .1rem;left: .2rem;}
+.header .logo{padding: .5rem .2rem 0 0;text-align: center;}
 .header .logo img{height: .45rem;}
 
 
