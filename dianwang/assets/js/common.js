@@ -177,11 +177,16 @@ navigate = new Navigate({container:".img-container",bg:"assets/images/yyt-1.jpg"
 
 $(function(){
 	$(".sitebar .item-link").click(function(){
-		$(this).parent().addClass('active').siblings().removeClass('active');
-		if($(this).parent().find('.subnav')){
-			$(this).parent().find('.subnav').slideDown();
+		if($(this).parent().hasClass('active')){
+			$(this).parent().removeClass('active').find('.subnav').slideUp();
+		}else{
+			$(this).parent().addClass('active').siblings().removeClass('active');
+			if($(this).parent().find('.subnav')){
+				$(this).parent().find('.subnav').slideDown();
+			}
+			$(this).parent().siblings().find('.subnav').slideUp();
 		}
-		$(this).parent().siblings().find('.subnav').slideUp();
+		
 
 		show_tab($(this).attr('type'),$(this));
 	})
