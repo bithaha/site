@@ -1,4 +1,3 @@
-@charset "urf8";
 
 body,html,input,button,textarea{color:#111;font:1rem "Microsoft YaHei",Arial,simsun,Tahoma,Verdana,Helvetica,sans-serif;}
 article,aside,figcaption,figure,footer,header,hgroup,main,nav,section{display:block;}
@@ -21,20 +20,31 @@ input[type="file"] > input[type="button"]::-moz-focus-inner{border:none;padding:
 .header .container{position: relative;}
 .header .logo{padding: 10px 0;}
 .header .logo img{height: 50px;}
-.header .nav{float: right;}
+.header .nav{float: right;display: block;}
+.header .nav .nav-item{float: left;}
 .header .nav .nav-link{display: block;padding: 0 1rem;line-height:70px;position: relative;}
 .header .nav .nav-link:hover{color:#268685;}
 .header .nav .nav-link.active{color:#268685;font-weight: bold;}
-.header .nav .nav-link:after{width:100%;height:2px;display:block;content:"";background:#268685;position:absolute;left:0;bottom:0;transition: all .3s;-webkit-transition: all .3s;transform: scaleX(0);-webkit-transform: scaleX(0);}
-.header .nav .nav-link.active:after{transform: scaleX(1);-webkit-transform: scaleX(1);}
+.header .nav .nav-link:after{width:100%;height:2px;display:block;content:"";background:#268685;position:absolute;left:0;bottom:0;width:0;transition: all .3s;-webkit-transition: all .3s;transform: scaleX(0);-webkit-transform: scaleX(0);}
+.header .nav .nav-link.active:after{transform: scaleX(1);-webkit-transform: scaleX(1);width:100%;}
 .header .nav .badge{top: -5px;position: relative;margin-left:5px;    border-radius: .6rem; min-width: 1.2rem;}
 
+.breadcrumb{display: block; overflow: hidden;}
+.breadcrumb .breadcrumb-item{float: left;}
 .breadcrumb-1{background: none;margin-top: 1rem;}
 
 .main-container{background-color: #fff;padding: 20px;}
 .footer{padding: 3rem 0;text-align: center;}
 
 .btn-menu{position: absolute;right: 15px;top: 50%;transform: translateY(-50%);-webkit-transform: translateY(-50%);font-size: 1.4rem;display: none;}
+
+.pid-form .col-form-label{text-align: right;}
+
+.kid-title{margin-bottom: 20px;text-align: center;}
+.kid-buttons{margin-bottom: 30px;}
+/*兼容safari*/
+select.form-control:not([size]):not([multiple]),select.form-control-plaintext:not([size]):not([multiple]){height: calc(2.25rem + 2px);}
+
 @media (max-width: 768px){
 	.btn-menu{display: block;}
 	.header{position: relative;z-index: 1000;}
@@ -42,6 +52,10 @@ input[type="file"] > input[type="button"]::-moz-focus-inner{border:none;padding:
 	.header.nav-show .nav{transform: translateY(0);-webkit-transform: translateY(0);opacity: 1;visibility: visible;}
 	.header.nav-show .btn-menu i:before{content:"\f00d";}
 	.header-cover{position: fixed;width: 100%;height: 100%;top: 0;left: 0;background-color: rgba(0,0,0,.3);z-index: 999;}
+
+
+.pid-form .col-form-label{text-align: left;}
+
 }
 
 

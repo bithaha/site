@@ -1,0 +1,239 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>pi english</title>
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no">
+<meta name="format-detection" content="telephone=no">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+<link href="assets/libs/bootstrap/bootstrap.min.css" rel="stylesheet">
+<link href="assets/css/font-awesome.min.css" rel="stylesheet">
+<link href="assets/css/base.css" rel="stylesheet" type="text/css">
+<script src="assets/libs/jquery.min.js"></script>
+<script src="assets/libs/bootstrap/bootstrap.min.js"></script>
+<script src="assets/js/base.js"></script>
+<!--[if lt IE 9]>
+  <script src="assets/libs/bootstrap/html5shiv.min.js"></script>
+  <script src="assets/libs/bootstrap/response.min.js"></script>
+<![endif]-->
+</head>
+
+<body>
+<div class="header">
+    <div class="container clearfix">
+        <ul class="nav">
+            <li class="nav-item">
+                <a class="nav-link active" href="#">Personal Info</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Courses</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Classes</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Kids</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Lessons</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Messages<span class="badge badge-danger">4</span></a>
+            </li>
+        </ul>
+        <div class="logo"><img src="assets/imgs/logo.png"></div>
+        <a class="btn-menu" href="javascript:;"><i class="fa fa-bars"></i></a>
+    </div>    
+</div>
+<div class="container">
+    <nav aria-label="breadcrumb">
+        <ol class="breadcrumb breadcrumb-1">
+            <li class="breadcrumb-item"><a href="#">Assistant</a></li>
+            <li class="breadcrumb-item"><a href="#">Kid</a></li>
+            <li class="breadcrumb-item active" aria-current="page">kid detail</li>
+        </ol>
+    </nav>
+    <div class="main-container">
+    	<h2 class="kid-title">董兆波</h3>
+        <div class="kid-buttons clearfix text-center">
+            <a href="javascript:;" id="btnEdit" class="btn btn-primary">Edit</a>
+            <a href="#" class="btn btn-danger">Delete</a>
+            <a href="#" class="btn btn-warning">Send message</a>
+            <a href="#" class="btn btn-info">All Classes</a>
+        </div>
+        <form id="form" class="pid-form">
+			<div class="form-group row">
+			    <label class="col-sm-2 col-form-label">Name</label>
+			    <div class="col-sm-10">
+			        <input type="text" class="form-control" placeholder="Name" value="董兆波">
+			    </div>
+			</div>
+			<div class="form-group row">
+			    <label class="col-sm-2 col-form-label">Nick name</label>
+			    <div class="col-sm-10">
+			        <input type="text" class="form-control" placeholder="Nick name" value="Steven">
+			    </div>
+			</div>
+			<div class="form-group row">
+			    <label class="col-sm-2 col-form-label">Login name</label>
+			    <div class="col-sm-10">
+			        <input type="text" class="form-control" placeholder="Login name" value="0139">
+			    </div>
+			</div>
+			<div class="form-group row">
+			    <label class="col-sm-2 col-form-label">Password</label>
+			    <div class="col-sm-10">
+			        <input type="password" class="form-control" placeholder="Password" value="123456">
+			    </div>
+			</div>
+			<div class="form-group row">
+			    <label class="col-sm-2 col-form-label">Gender</label>
+			    <div class="col-sm-10">
+			        <select class="form-control">
+			        	<option value="M">male</option>
+			        	<option value="M">famale</option>
+			        </select>
+			    </div>
+			</div>
+			<div class="form-group row">
+			    <label class="col-sm-2 col-form-label">Birthday</label>
+			    <div class="col-sm-10">
+			        <input type="text" id="datepicker" class="form-control" placeholder="Birthday" value="2009-12-3">
+			    </div>
+			</div>
+			<div class="form-group row">
+			    <label class="col-sm-2 col-form-label">School</label>
+			    <div class="col-sm-10">
+			        <input type="text" class="form-control" placeholder="School" value="北京红杉小学">
+			    </div>
+			</div>
+			<div class="form-group row">
+			    <label class="col-sm-2 col-form-label">Grade</label>
+			    <div class="col-sm-10">
+			    	<select class="form-control">
+			        	<option value="G6">G6</option>
+			        	<option value="G5">G5</option>
+			        	<option value="G4">G4</option>
+			        	<option value="G3">G3</option>
+			        	<option value="G2">G2</option>
+			        	<option value="G1">G1</option>
+			        </select>
+			    </div>
+			</div>
+			<div class="form-group row">
+			    <label class="col-sm-2 col-form-label">Address</label>
+			    <div class="col-sm-10">
+			        <input type="text" class="form-control" placeholder="Address" value="北京西城区金融街">
+			    </div>
+			</div>
+			<div class="form-group row">
+			    <label class="col-sm-2 col-form-label">Parent name</label>
+			    <div class="col-sm-10">
+			        <input type="text" class="form-control" placeholder="Parent name" value="董昭">
+			    </div>
+			</div>
+			<div class="form-group row">
+			    <label class="col-sm-2 col-form-label">Parent mobile</label>
+			    <div class="col-sm-10">
+			        <input type="text" class="form-control" placeholder="Parent mobile" value="13944324322">
+			    </div>
+			</div>
+			<div class="form-group row">
+			    <label class="col-sm-2 col-form-label">Parent email</label>
+			    <div class="col-sm-10">
+			        <input type="text" class="form-control" placeholder="Parent email" value="dongzhao@139.com">
+			    </div>
+			</div>
+			<div class="form-group row">
+			    <label class="col-sm-2 col-form-label">Parent wechat</label>
+			    <div class="col-sm-10">
+			        <input type="text" class="form-control" placeholder="Parent wechat" value="dongzhao">
+			    </div>
+			</div>
+			<div class="form-group row">
+			    <label class="col-sm-2 col-form-label">Comment</label>
+			    <div class="col-sm-10">
+			        <textarea class="form-control" placeholder="Comment"></textarea>
+			    </div>
+			</div>
+			<div class="form-group row">
+			    <label class="col-sm-2 col-form-label">Payment</label>
+			    <div class="col-sm-10">
+			    	<div class="table-responsive">
+				        <table class="table table-striped table-bordered table-hover">
+				        	<thead>
+				        		<tr>
+				        			<th>Class</th><th>Tuition Fee</th><th>Payment</th><th>Status</th>
+				        		</tr>
+				        	</thead>
+				        	<tbody>
+				        		<tr>
+				        			<td>24</td>
+				        			<td>$2000</td>
+				        			<td>
+				        				<ol>
+				        					<li>2018.1.16 Payed $1000</li>
+				        					<li>2018.1.17 Payed $1000</li>
+				        				</ol>
+				        			</td>
+				        			<td>Clear</td>
+				        		</tr>
+				        		<tr>
+				        			<td>23</td>
+				        			<td>$1500</td>
+				        			<td>
+				        				<span class="color-gray">No payment record</span>
+				        			</td>
+				        			<td>Debit $1500</td>
+				        		</tr>
+				        	</tbody>
+				        	<tfoot>
+				        		<tr>
+				        			<td colspan="4" class="text-right">Total: $2000</td>
+				        		</tr>
+				        	</tfoot>
+				        </table>
+				    </div>
+			    </div>
+			</div>
+		</form>
+    </div>
+</div>
+<div class="footer">
+    <div class="container">
+        PIEngish  2012-2018 All rights reserved.
+    </div>
+</div>
+
+<link rel="stylesheet" type="text/css" href="assets/libs/bootstrap-datepicker/bootstrap-datepicker.min.css">
+<script type="text/javascript" src="assets/libs/bootstrap-datepicker/bootstrap-datepicker.min.js"></script>
+<script type="text/javascript">
+
+	$(function(){
+		/*初始化时，将所有选项设置为不可编辑*/
+		$("#form .form-control").attr("readonly","").addClass("form-control-plaintext").removeClass("form-control");
+
+		/* 开始编辑 */
+		var isEdit=false;
+		$('#btnEdit').click(function(){
+			if(!isEdit){
+				$("#form .form-control-plaintext").removeAttr("readonly").addClass("form-control").removeClass("form-control-plaintext");
+				$('#datepicker').datepicker({
+		            "autoclose":true,
+		            "format":"yyyy-mm-dd"
+		        });
+		        isEdit=true;
+	        }else{
+	        	$("#form .form-control").attr("readonly","").addClass("form-control-plaintext").removeClass("form-control");
+	        	isEdit=false;
+	        }
+		})
+		
+	})
+
+</script>
+</body>
+</html>
