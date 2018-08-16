@@ -1,0 +1,70 @@
+@charset "gb2312";
+body,html,h1,h2,h3,h4,h5,h6,p,ul,ol,li,dl,dt,dd,th,td,form,object,iframe,blockquote,pre,a,abbr,address,code,img,fieldset,form,label,figure{margin:0;padding:0;}
+body,html,input,button,textarea{color:#666;font:12px/1.8 'Microsoft YaHei',Arial,Tahoma,Verdana,Helvetica,sans-serif;}
+article,aside,figcaption,figure,footer,header,hgroup,main,nav,section{display:block;}
+body{_background-image:url(about:blank);_background-attachment:fixed;}
+h1{font-size:18px;}
+h2{font-size:16px;}
+h3,h4,h5{font-size:14px;}
+img{border:none;vertical-align:middle;}
+li{list-style:none;}
+i,em{font-style:normal;}
+a{color:#666;text-decoration:none;}
+a:focus{outline:none;}
+a:hover{color:#bc2c09;text-decoration:none;}
+input[type="text"]:focus{outline:none;}
+input[type="button"],input[type="reset"],input[type="submit"]{cursor:pointer;}
+input[type="reset"]::-moz-focus-inner,input[type="button"]::-moz-focus-inner,input[type="submit"]::-moz-focus-inner,
+input[type="file"] > input[type="button"]::-moz-focus-inner{border:none;padding:0;}
+.jianju10{ height:10px; clear:both; overflow:hidden;}
+.jianju15{ height:15px; clear:both; overflow:hidden;}
+.jianju20{ height:20px; clear:both; overflow:hidden;}
+.jianju30{ height:30px; clear:both; overflow:hidden;}
+.jianju40{ height:40px; clear:both; overflow:hidden;}
+.jianju50{ height:50px; clear:both; overflow:hidden;}
+.jianju60{ height:60px; clear:both; overflow:hidden;}
+.jianju70{ height:70px; clear:both; overflow:hidden;}
+.wraper{width:1420px;margin:0 auto;}
+.z9999{z-index:9999;position:relative;}
+.z8888{z-index:8888;position:relative;}
+.disabled{display:none;}
+
+/*======================================
+*                图标
+========================================*/
+.ico-phone,.ico-msg,.ico-mail,.ico-history,.ico-menu,.ico-marker{width: 25px;height: 25px;display: inline-block;background:url(../images/sprites.png) no-repeat;}
+.ico-marker{background-position: 0 0;}
+.ico-phone{background-position: -25px 0;}
+.ico-msg{background-position: -50px 0;}
+.ico-mail{background-position: -75px 0;}
+.ico-history{background-position: -100px 0;}
+.ico-menu{background-position: -125px 0;}
+
+.ico-arrow-down{display: inline-block;width: 8px;height: 5px;background: url(../images/arrow-down-white.png) no-repeat;}
+/*颜色*/
+
+.citylist a:hover{color:#da1520;}
+
+
+/*======================================
+*                头部
+========================================*/
+.topbar{background-color: #da1520;height: 45px;}
+.topbar .nav{}
+.topbar .nav.left{float: left;}
+.topbar .nav.right{float: right;}
+.topbar .nav .item{float: left;color:#fff;font-size: 16px;line-height: 45px;position: relative;}
+.topbar .nav .item-link{padding: 0 15px;color:#fff;display: block;line-height: 45px;height:45px; border-right:1px solid #e4575f;}
+.topbar .nav a.item-link:hover{background-color: #c1000b;}
+.topbar .nav .item-link > i{vertical-align: top;margin-top: 10px;}
+.topbar .nav .item-link > span{vertical-align: top;}
+.topbar .nav .item:last-child{border:0;}
+.topbar .nav .item .ico-arrow-down{margin-top: 20px;margin-left:10px;}
+.topbar .nav .item-link >i + span{margin-left: 10px;}
+
+.subnav{background: #fff;border:1px solid #eee;box-shadow: 0 5px 5px #eee;position: absolute;left: 0;top: 100%;border-radius: 0 0 5px 5px;}
+
+.citylist{width:450px;padding:15px;line-height: 30px;font-size: 0;}
+.citylist a{display: inline-block;width: 64px;text-align: center;height: 30px;line-height: 30px;margin: 3px 0;font-size: 14px;color:#404040;}
+.citylist a{*display: inline;}
+.citylist a.active{background: #da1520;color:#fff;border-radius: 5px;}

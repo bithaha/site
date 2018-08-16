@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html ng-app="app">
+<head>
+	<meta charset="utf-8">
+	<title>公众号菜单</title>
+	<script type="text/javascript" src="js/angular1.3.0.min.js"></script>
+	<script type="text/javascript" src="js/wx_app.js"></script>
+	<link type="text/css" href="css/wx_app.css" rel="stylesheet">
+</head>
+<body ng-controller="AppCtrl">
+	<div class="menu-container">
+		<div class="wx-editor">
+			<div class="wx-menu-preview">
+				<div class="wx-preview-hd"><div class="title">公众号</div></div>
+				<div class="wx-preview-bd">
+					<ul class="bd-menu">
+						<li ng-repeat="item in buttons" ng-class="{true:'current'}[button_index == $index]">
+							<div class="title" ng-bind="item.name" ng-click="select_button($index,item)"></div> 
+							<ul class="sub" ng-if="button_index == $index">
+								<li ng-class="{true:'current'}[$index==sub_index]" ng-repeat="sub in item.sub_button.list" ng-bind="sub.name" ng-click="select_sub_button($index,sub)"></li>
+								<li class="add" ng-click="add_sub(item)" ng-hide="item.sub_button.list.length>=5"><i class="add-icon"></i></li>
+							</ul>
+						</li>
+						<!-- <li class="current">
+							<div class="title">绑定手机</div>
+							<ul class="sub">
+								<li class="">手机绑定</li>
+								<li class="">查看取货码</li>
+								<li class="current">手机绑定</li>
+								<li class="add"><i class="add-icon"></i></li>
+							</ul>
+						</li>
+						<li class="">
+							<div class="title">我的</div>
+							<ul class="sub" style="display: none;">
+								<li class="">我的订单</li>
+								<li class="">寄件地址</li>
+								<li class="">收件地址</li>
+							</ul>
+						</li> -->
+          			</ul>
+          		</div>
+			</div>
+			<div class="wx-menu-detail">
+				<div class="content">
+					<div class="detail-group head">
+						<div class="name">手机绑定</div>
+						<div class="button" ng-click="delete_btn()">删除菜单</div>
+					</div>
+					<div class="detail-group content" ng-if="select_btn.name">
+						<div class="input-label">按钮名称</div>
+						<div class="input-content">
+							<input type="text" class="input" ng-model="select_btn.name">
+							<p class="input-tips">字数不超过8个汉字或16个字母</p>
+						</div>
+					</div>
+					<div class="detail-group content" ng-if="select_btn.name">
+						<div class="input-label">按钮类型</div>
+						<div class="input-content">
+							<select class="input" ng-model="select_btn.type">
+								<option value="view">跳转网页(view)</option>
+							</select>
+						</div>
+					</div>
+					<div class="detail-main-content" ng-if="select_btn.type">
+						<p class="top-tips">订阅者点击该子菜单会跳到以下链接</p>
+
+						<div class="input-box" ng-if="is_auto_url">
+							<span class="input-box-label">页面地址</span>
+							<div class="input-box-content"><input type="text" class="input-text" ng-model="select_btn.url"></div>
+						</div>
+
+						<div style="margin-top: 10px; margin-left: 8em; padding-left: 11px;">
+							<div role="radiogroup" class="el-radio-group url-view-type">
+								<div>
+								<label role="radio" class="el-radio" ng-click="select_url({})">
+										<span class="el-radio__input" ng-class="{true:'is-checked'}[is_auto_url]">
+											<span class="el-radio__inner"></span>
+											<input type="radio" tabindex="-1" class="el-radio__original" value="0">
+										</span>
+										<span class="el-radio__label">自定义</span>
+									</label></div>
+								<div ng-repeat="item in origin_urls">
+									
+									<label role="radio" class="el-radio" ng-click="select_url(item)">
+										<span class="el-radio__input" ng-class="{true:'is-checked'}[select_btn.url==item.url]">
+											<span class="el-radio__inner"></span>
+											<input type="radio" tabindex="-1" class="el-radio__original" value="0">
+										</span>
+										<span class="el-radio__label" ng-bind="item.text"></span>
+									</label>
+									
+
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="wx-btn-group">
+			<button type="button" class="el-button el-button--danger" ng-click="submit()"><span>发 布</span></button>
+			<button type="button" class="el-button el-button--primary"><span>撤 销</span></button>
+			<button type="button" class="el-button el-button--default"><span>取 消</span></button>
+		</div>
+	</div>
+</body>
+</html>
