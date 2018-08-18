@@ -6,7 +6,7 @@ $(document).ready(function(){
 				
 	}), $backToTopFun = function() {	
 	        var st = $(document).scrollTop(), winh = $(window).height();
-	        (st > 150)? $backToTopEle.fadeIn(): $backToTopEle.fadeOut();    
+	        // (st > 150)? $backToTopEle.fadeIn(): $backToTopEle.fadeOut();    
 	        if (!window.XMLHttpRequest) {
 	            $backToTopEle.css("top", st + winh - 210);    
 	        }
@@ -27,3 +27,34 @@ $(function() {
 		 data_attribute: "src"
 	  });
 });
+
+//顶部导航
+$(function(){
+	$(".topbar .nav .item,.float-menu .item").hover(function(){
+		$(this).addClass('active');
+	},function(){
+		$(this).removeClass('active');
+	})
+	/*顶部城市*/
+	var current_city= (localStorage && localStorage.getItem('current_city')) || "全国";
+	$("#cityname").html(current_city);
+	$('.citylist a').each(function(){
+		if($(this).html()==current_city){$(this).addClass('active').siblings().removeClass('active');}
+	})
+	$('.citylist a').click(function(){
+		$(this).addClass('active').siblings().removeClass('active');
+		$("#cityname").html($(this).html());
+		$(".citylist").parent().parent().removeClass('active');
+		localStorage.setItem('current_city',$(this).html())
+	});
+	/*菜单*/
+	$(".btn-menu").click(function(){
+		$('.topbar').toggleClass('open-menu-active')
+	})
+	$(document).on('click',function(){$('.topbar').removeClass('open-menu-active');})
+	$('.topbar').click(function(e){e.stopPropagation();})
+	/*右侧浮动菜单*/
+	$('.float-menu .item').hover(function(){
+
+	})
+})
