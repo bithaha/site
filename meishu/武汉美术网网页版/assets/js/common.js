@@ -8,11 +8,12 @@ $(document).ready(function(){
 	            $("html, body").animate({ scrollTop:0 }, 300);
 				
 	}), $backToTopFun = function() {	
-	        var st = $(document).scrollTop(), winh = $(window).height();
-	        // (st > 150)? $backToTopEle.fadeIn(): $backToTopEle.fadeOut();    
-	        if (!window.XMLHttpRequest) {
-	            $backToTopEle.css("top", st + winh - 210);    
-	        }
+        var st = $(document).scrollTop(), winh = $(window).height();
+        // (st > 150)? $backToTopEle.fadeIn(): $backToTopEle.fadeOut();    
+        if (!window.XMLHttpRequest) {
+            $backToTopEle.css("top", st + winh - 210);    
+        }
+        
 	};
 	$(window).bind("scroll", $backToTopFun);
 	$(function() { $backToTopFun();});
@@ -30,6 +31,40 @@ $(function() {
 		 data_attribute: "src"
 	  });
 });
+
+//页面适配
+$(function() { 
+	function init_page(){
+		if($(window).width()<1420){
+			$('body').addClass('max-width-1420');
+		}else{
+			$('body').removeClass('max-width-1420');
+		}
+	}
+	init_page();
+	$(window).resize(function(){
+		init_page();
+	})
+
+	var leftTop = $("#left-bar-start").length?$("#left-bar-start").offset().top:0;
+	var rightTop = $("#right-bar-start").length?$("#right-bar-start").offset().top:0;
+
+	var scrollFun = function(){
+		var st = $(document).scrollTop();
+		if(leftTop && st > leftTop){
+	        $('body').addClass('float-fixed-left');
+        }else{
+        	$('body').removeClass('float-fixed-left');
+        }
+        if(rightTop && st > rightTop){
+			$('body').addClass('float-fixed-right');
+        }else{
+        	$('body').removeClass('float-fixed-right');
+        }
+	}
+	$(window).bind("scroll", scrollFun);
+	$(function() { scrollFun();});
+})
 
 //顶部导航
 $(function(){
