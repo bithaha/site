@@ -171,8 +171,8 @@
                 </div>
                 <div class="g-bd">
                     <div class="zhuanlan-item">
-                        <div class="img"><img src="assets/images/left-tit-1.gif" alt="2019美术艺考"></div>
-                        <h4 class="title">2019美术艺考</h4>
+                        <div class="img"><a href="#"><img src="assets/images/left-tit-1.gif" alt="2019美术艺考"></a></div>
+                        <h4 class="title"><a href="#">2019美术艺考</a></h4>
                         <div class="zt">
                             <span class="tag">专题</span>
                             <img src="">
@@ -180,47 +180,68 @@
                         <div class="desc">全国各地2019年美术联考将在12月-1月陆续举行，本站将第一时间为考生提供专题报道</div>
                     </div>
                     <div class="zhuanlan-item">
-                        <div class="img"><img src="assets/images/left-tit-2.gif" alt="2019艺术生招生简章"></div>
-                        <h4 class="title">2019艺术生招生简章</h4>
+                        <div class="img"><a href="#"><img src="assets/images/left-tit-2.gif" alt="2019艺术生招生简章"></a></div>
+                        <h4 class="title"><a href="#">2019艺术生招生简章</a></h4>
+                        <div class="zt">
+                            <span class="tag">专题</span>
+                            <img src="">
+                        </div>
                         <ul class="news">
                             <li><a href="#">福建师范大学2018艺术类招生简章</a></li>
                             <li><a href="#">东北林业大学2018艺术类招生简章</a></li>
                         </ul>
                     </div>
                     <div class="zhuanlan-item">
-                        <div class="img"><img src="assets/images/left-tit-3.gif" alt="2018艺术类录取分数线"></div>
-                        <h4 class="title">2018艺术类录取分数线</h4>
+                        <div class="img"><a href="#"><img src="assets/images/left-tit-3.gif" alt="2018艺术类录取分数线"></a></div>
+                        <h4 class="title"><a href="#">2018艺术类录取分数线</a></h4>
+                        <div class="zt">
+                            <span class="tag">专题</span>
+                            <img src="">
+                        </div>
                         <ul class="news">
                             <li><a href="#">山东理工大学2018艺术类录取分数线</a></li>
                             <li><a href="#">湖北工业大学2018艺术类录取分数线</a></li>
                         </ul>
                     </div>
                     <div class="zhuanlan-item">
-                        <div class="img"><img src="assets/images/left-tit-4.gif" alt="艺术生文化课"></div>
-                        <h4 class="title">艺术生文化课</h4>
+                        <div class="img"><a href="#"><img src="assets/images/left-tit-4.gif" alt="艺术生文化课"></a></div>
+                        <h4 class="title"><a href="#">艺术生文化课</a></h4>
+                        <div class="zt">
+                            <span class="tag">专题</span>
+                            <img src="">
+                        </div>
                         <ul class="news">
                             <li><a href="#">武汉邦德艺考文化课：家长必看</a></li>
                             <li><a href="#">邦德艺考艺术生文化课：为艺考战！</a></li>
                         </ul>
                     </div>
                     <div class="zhuanlan-item">
-                        <div class="img"><img src="assets/images/left-tit-5.gif" alt="画室大全"></div>
-                        <h4 class="title">画室大全</h4>
+                        <div class="img"><a href="#"><img src="assets/images/left-tit-5.gif" alt="画室大全"></a></div>
+                        <h4 class="title"><a href="#">画室大全</a></h4>
+                        <div class="zt">
+                            <span class="tag">专题</span>
+                            <img src="">
+                        </div>
                         <div class="desc">7年实地考察，严查虚假信息，只为把优质的美术教育推荐给你。</div>
                     </div>
                     <div class="zhuanlan-item">
-                        <div class="img"><img src="assets/images/left-tit-6.gif" alt="美术联考分数查询"></div>
-                        <h4 class="title">美术联考分数查询</h4>
+                        <div class="img"><a href="#"><img src="assets/images/left-tit-6.gif" alt="美术联考分数查询"></a></div>
+                        <h4 class="title"><a href="#">美术联考分数查询</a></h4>
+                        <div class="zt">
+                            <span class="tag">专题</span>
+                            <img src="">
+                        </div>
                         <div class="desc">2018年各省市美术联考/统考分数线查询入口</div>
                         
                     </div>
                 </div>
+                    <span class="white_bg" id="js_white_bg"></span>
             </div>
             <div class="grid grid-search">
                 <div class="g-bd">
                     <div class="search-box">
                         <div class="s-row">
-                            <select class="form-control" style="width: 100%;"><option>地区选择</option></select>
+                            <select class="form-control" id="address_select" style="width: 100%;"><option>地区选择</option></select>
                         </div>
                         <div class="s-row no-margin">
                             <a href="#" class="btn" style="width: 100%">查分人口</a>
@@ -930,6 +951,9 @@
     
 </div>
 
+<link rel="stylesheet" type="text/css" href="assets/js/chosen/chosen.min.css">
+<script type="text/javascript" src="assets/js/chosen/chosen.jquery.min.js"></script>
+<script type="text/javascript" src="assets/js/chosen/chosen.proto.min.js"></script>
 <script type="text/javascript">
     /*新闻轮播图*/
     $(".index-slider").flexslider({
@@ -949,7 +973,35 @@
     })
     $(".main-news").switchTab({titCell: ".tabs li", trigger: "mouseover", delayTime:200});
 
+    /*专栏滑动效果*/
+    $(".zhuanlan-item").eq(0).addClass('hover').find('.zt').show();//默认第一个专题图片显示
+    $(".zhuanlan-item .img,.zhuanlan-item .title").on('mouseenter',function(){
+        var _this = this;
+        $(_this).parent().addClass('hover');
+        if($(_this).parent().find('.zt').length){
+            setTimeout(function(){
+                if($(_this).parent().hasClass('hover')){
+                    $(_this).parent().find('.zt').show(500);
+                }
+            },800)
+            
+        }
+    })
+    $(".zhuanlan-item").on('mouseleave',function(e){
+        $(this).removeClass('hover');
+        if($(this).parent().find('.zt').length){
+            $(this).parent().find('.zt').hide(500);
+        }
+    })
 
-</script>
+    /**/
+    $('#address_select').chosen({
+        disable_search_threshold: 10,
+        no_results_text: "Oops, nothing found!",
+        placeholder_text_single:"请选择一级分类",
+        width: "95%"
+    });
+
+</script> 
 </body>
 </html>

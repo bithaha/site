@@ -46,15 +46,17 @@ $(function() {
 		init_page();
 	})
 
-	var leftTop = $("#left-bar-start").length?$("#left-bar-start").offset().top:0;
+	var leftTop = $("#left-bar-start").length?($("#left-bar-start").offset().top+$("#left-bar-start").height()):0;
 	var rightTop = $("#right-bar-start").length?$("#right-bar-start").offset().top:0;
 
 	var scrollFun = function(){
 		var st = $(document).scrollTop();
 		if(leftTop && st > leftTop){
 	        $('body').addClass('float-fixed-left');
+	        $("#left-bar-start .g-bd").css({height: ($(window).height()-220)+'px',overflow:'auto'})
         }else{
         	$('body').removeClass('float-fixed-left');
+	        $("#left-bar-start .g-bd").css({height: 'auto',overflow:'visible'})
         }
         if(rightTop && st > rightTop){
 			$('body').addClass('float-fixed-right');
