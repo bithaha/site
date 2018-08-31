@@ -241,7 +241,39 @@
                 <div class="g-bd">
                     <div class="search-box">
                         <div class="s-row">
-                            <select class="form-control" id="address_select" style="width: 100%;"><option>地区选择</option></select>
+                            <select class="form-control chosen"  data-placeholder="地区选择" style="width: 100%;">
+                                <option>湖北</option>
+                                <option>北京</option>
+                                <option>浙江</option>
+                                <option>山东</option>
+                                <option>天津</option>
+                                <option>上海</option>
+                                <option>重庆</option>
+                                <option>辽宁</option>
+                                <option>江苏</option>
+                                <option>安徽</option>
+                                <option>福建</option>
+                                <option>广东</option>
+                                <option>江西</option>
+                                <option>湖南</option>
+                                <option>四川</option>
+                                <option>陕西</option>
+                                <option>海南</option>
+                                <option>吉林</option>
+                                <option>山西</option>
+                                <option>广西</option>
+                                <option>云南</option>
+                                <option>青海</option>
+                                <option>甘肃</option>
+                                <option>西藏</option>
+                                <option>河北</option>
+                                <option>贵州</option>
+                                <option>河南</option>
+                                <option>新疆</option>
+                                <option>宁夏</option>
+                                <option>内蒙古</option>
+                                <option>黑龙江</option>
+                            </select>
                         </div>
                         <div class="s-row no-margin">
                             <a href="#" class="btn" style="width: 100%">查分人口</a>
@@ -266,7 +298,7 @@
             </div>
             <!--主体区域文章列表-->
             <div class="main-news">
-                <div class="head">
+                <div class="head" id="center-bar-start">
                     <ul class="tabs">
                         <li><a href="#">艺考资讯</a></li>
                         <li><a href="#">优秀作品</a></li>
@@ -344,6 +376,39 @@
                                  
                             </a>
                             <div class="info"><span class="ico-txt border blue">广告</span><span>广告供应商</span></div>
+                        </li>
+                        <li class="item">
+                            <div class="det">
+                                <h3 class="tit"><a href="#" target="_blank" title="">2019年全国各省市艺术类联考大纲官方入口汇总</a></h3>
+                                <div class="info"><span class="ico-txt border red">置顶</span><span>艺考查查</span><span>2018-01-22</span></div>
+                            </div>
+                        </li>
+                        <li class="item">
+                            <div class="det">
+                                <h3 class="tit"><a href="#" target="_blank" title="">关于发布2019年河北省普通高校招生美术类、音乐类、舞蹈类专业统考大纲及说明的通知彩</a></h3>
+                                <div class="info"><span class="ico-txt border red">热门</span><span>艺考查查</span><span>2018-01-22</span></div>
+                            </div>
+                        </li>
+                        <li class="item">
+                            <div class="img m-img"><a href="#" target="_blank"></a></div>
+                            <div class="det">
+                                <h3 class="tit"><a href="#" target="_blank" title="">教育部发通知：不得将艺术类专业学生调整到普通类专业</a></h3>
+                                <div class="info"><span class="ico-txt border green">作品</span><span>艺考查查</span><span>2018-01-22</span></div>
+                            </div>
+                        </li>
+                        <li class="item">
+                            <div class="img m-img"><a href="#" target="_blank"><img class="lazy" data-src="http://cms-bucket.nosdn.127.net/2018/08/20/14be88bc4623477a90d6961ceaecda7c.jpeg?imageView&amp;thumbnail=190y120&amp;quality=85" class="pic_last" onerror="javascript:this.src='./assets/images/logo-loading.png';"></a></div>
+                            <div class="det">
+                                <h3 class="tit"><a href="#" target="_blank" title="">教育部发通知：不得将艺术类专业学生调整到普通类专业</a></h3>
+                                <div class="info"><span class="ico-txt border yellow">原创</span><span>艺考查查</span><span>2018-01-22</span></div>
+                            </div>
+                        </li>
+                        <li class="item">
+                            <div class="img m-img"><a href="#" target="_blank"></a></div>
+                            <div class="det">
+                                <h3 class="tit"><a href="#" target="_blank" title="">教育部发通知：不得将艺术类专业学生调整到普通类专业</a></h3>
+                                <div class="info"><span class="ico-txt border purple">作品</span><span>艺考查查</span><span>2018-01-22</span></div>
+                            </div>
                         </li>
                     </ul>
                     <a class="btn-load-more" href="javascript:void(0);"><i class="ico-plus"></i><span>加载更多</span></a>
@@ -690,6 +755,7 @@
                                     <span class="p_img3">
                                         <img class="lazy" data-src="http://cms-bucket.nosdn.127.net/2018/08/20/14be88bc4623477a90d6961ceaecda7c.jpeg?imageView&amp;thumbnail=190y120&amp;quality=85" width="198" height="125" class="pic_last" onerror="javascript:this.src='./assets/images/logo-loading.png';">                                    
                                     </span>
+                                    <span class="p_more"></span>
                                 </a>
                             </div>
                             <div class="info"><span class="ico-txt border purple">作品</span><span>艺考查查</span><span>2018-01-22</span></div>
@@ -755,7 +821,7 @@
             </ul>
             <div class="grid">
                 <div class="g-hd">
-                    <span class="more">24小时热点</span>
+                    <span class="more img"><img src=""></span>
                     <h3 class="title">热文排行</h3>
                 </div>
                 <div class="g-bd">
@@ -781,8 +847,44 @@
                             <a href="javascript:;" class="btn btn-search">搜索</a>
                         </div>
                         <div class="s-row">
-                            <select class="form-control" style="width: 76px;"><option>北京</option></select>                            
-                            <select class="form-control" style="width: 156px;"><option>中央美术学院</option></select>
+                            <div class="s-row-item" style="width: 95px;">
+                                <select class="form-control chosen">
+                                    <option>湖北</option>
+                                    <option>北京</option>
+                                    <option>浙江</option>
+                                    <option>山东</option>
+                                    <option>天津</option>
+                                    <option>上海</option>
+                                    <option>重庆</option>
+                                    <option>辽宁</option>
+                                    <option>江苏</option>
+                                    <option>安徽</option>
+                                    <option>福建</option>
+                                    <option>广东</option>
+                                    <option>江西</option>
+                                    <option>湖南</option>
+                                    <option>四川</option>
+                                    <option>陕西</option>
+                                    <option>海南</option>
+                                    <option>吉林</option>
+                                    <option>山西</option>
+                                    <option>广西</option>
+                                    <option>云南</option>
+                                    <option>青海</option>
+                                    <option>甘肃</option>
+                                    <option>西藏</option>
+                                    <option>河北</option>
+                                    <option>贵州</option>
+                                    <option>河南</option>
+                                    <option>新疆</option>
+                                    <option>宁夏</option>
+                                    <option>内蒙古</option>
+                                    <option>黑龙江</option>
+                                </select>
+                            </div>       
+                            <div class="s-row-item" style="width: 156px;">       
+                                <select class="form-control chosen"><option>中央美术学院</option></select>
+                            </div>
                             <a href="javascript:;" class="btn btn-search">搜索</a>
                         </div>
                         <div class="s-row ys-btns">
@@ -922,13 +1024,13 @@
             </ul>
             <ul class="col-5">
                 <li><h3 class="tit">027Art手机站</h3></li>
-                <li><img src="assets/images/qrcode.jpg"></li>
+                <li><img src="assets/images/qrcode.png"></li>
             </ul>
         </div>
     </div>
     <div class="footer-info">
         <div class="wraper">
-            <span>Copyright © 2008-2018 027Art.Com All Rights Reserved</span><span>画鱼公司 · 版权所有</span><span><img src="assets/images/ico_beian.png">&nbsp;鄂公网安备42010702000113号</span><span>鄂ICP备08100980号</span><span><img src="assets/images/foot-img-1.jpg" height="25"></span><span><img src="assets/images/sm_124x47.png" height="25"></span>
+            <span>Copyright © 2008-2018 027Art.Com All Rights Reserved</span><span>画鱼公司 · 版权所有</span><span><img src="assets/images/ico_beian.png">&nbsp;鄂公网安备42010702000113号</span><span>鄂ICP备08100980号</span><span><img src="assets/images/foot-img-1.png" height="25"></span><span class="last"><img src="assets/images/sm_124x47.png" height="25"></span>
         </div>
     </div>
 </div>
@@ -939,7 +1041,7 @@
         <li class="item">
             <a class="link" href="javascript:void(0);"><i class="ico-qrcode"></i></a>
             <div class="sub">
-                <div class="qrcode"><img src="assets/images/qrcode.jpg"></div>
+                <div class="qrcode"><img src="assets/images/qrcode.png"></div>
                 <div class="txt">
                     <p>扫描二维码</p>
                     <p>下载<span class="color-red">武汉美术网</span></p>
@@ -954,6 +1056,9 @@
 <link rel="stylesheet" type="text/css" href="assets/js/chosen/chosen.min.css">
 <script type="text/javascript" src="assets/js/chosen/chosen.jquery.min.js"></script>
 <script type="text/javascript" src="assets/js/chosen/chosen.proto.min.js"></script>
+
+<link rel="stylesheet" type="text/css" href="assets/css/jquery.mCustomScrollbar.css">
+<script src="assets/js/jquery.mCustomScrollbar.concat.min.js"></script>
 <script type="text/javascript">
     /*新闻轮播图*/
     $(".index-slider").flexslider({
@@ -995,12 +1100,12 @@
     })
 
     /**/
-    $('#address_select').chosen({
+    $('.chosen').chosen({
         disable_search_threshold: 10,
         no_results_text: "Oops, nothing found!",
-        placeholder_text_single:"请选择一级分类",
         width: "95%"
     });
+
 
 </script> 
 </body>

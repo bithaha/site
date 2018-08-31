@@ -47,22 +47,42 @@ $(function() {
 	})
 
 	var leftTop = $("#left-bar-start").length?($("#left-bar-start").offset().top+$("#left-bar-start").height()):0;
-	var rightTop = $("#right-bar-start").length?$("#right-bar-start").offset().top:0;
-
+	var rightTop = $("#right-bar-start").length?($("#right-bar-start").offset().top+$("#right-bar-start").height()):0;
+	var centerTop = $("#center-bar-start").length?($("#center-bar-start").offset().top+$("#center-bar-start").height()):0;
+	console.log(centerTop)
 	var scrollFun = function(){
 		var st = $(document).scrollTop();
-		if(leftTop && st > leftTop){
-	        $('body').addClass('float-fixed-left');
-	        $("#left-bar-start .g-bd").css({height: ($(window).height()-220)+'px',overflow:'auto'})
-        }else{
-        	$('body').removeClass('float-fixed-left');
-	        $("#left-bar-start .g-bd").css({height: 'auto',overflow:'visible'})
+		if(leftTop){
+			if(st > leftTop){
+		        $('body').addClass('float-fixed-left');
+		        $("#left-bar-start .g-bd").css({height: ($(window).height()-220)+'px',overflow:'auto'})
+		        if(!$("#left-bar-start .g-bd").attr('data-scroll_active')){
+		        	$("#left-bar-start .g-bd").attr('data-scroll_active',1);
+		        	$("#left-bar-start .g-bd").mCustomScrollbar({scrollInertia:150});
+		        }
+	     		
+	        }else{
+	        	$('body').removeClass('float-fixed-left');
+		        $("#left-bar-start .g-bd").css({height: 'auto',overflow:'visible'});
+		        $("#left-bar-start .g-bd").mCustomScrollbar("destroy");
+		        $("#left-bar-start .g-bd").removeAttr('data-scroll_active');
+	        }
+	    }
+	    if(rightTop){
+	        if(st > rightTop){
+				$('body').addClass('float-fixed-right');
+	        }else{
+	        	$('body').removeClass('float-fixed-right');
+	        }
         }
-        if(rightTop && st > rightTop){
-			$('body').addClass('float-fixed-right');
-        }else{
-        	$('body').removeClass('float-fixed-right');
+        if(centerTop){
+	        if( && st > centerTop){
+				$('body').addClass('float-fixed-center');
+	        }else{
+	        	$('body').removeClass('float-fixed-center');
+	        }
         }
+        
 	}
 	$(window).bind("scroll", scrollFun);
 	$(function() { scrollFun();});
