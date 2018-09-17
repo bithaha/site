@@ -224,6 +224,9 @@
                 <span class="item">发布时间：2017-9-19</span>
             </div>
             <div class="article-body">
+                <div class="bn336">
+                    <p style="height:280px;line-height:280px;text-align: center;background-color: #eee;color:#999;">此处是广告位</p>
+                </div>
                 <p><b>关于艺术的起源都有什么样的观点？</b></p>
                 <p><br></p>
                 <p>艺术的产生经历了一个漫长历史发展过程，其中也渗透着人类模仿的需要、表现的冲动和游戏的本能。艺术的发生虽然是多元决定的，但是巫术说与劳动说更为重要。从根本上讲，艺术的起源最终应归结为人类的实践活动。事实上，巫术在原始社会中同样是人类的一种实践活动。归根结底，艺术的产生和发展来自人类的社会实践活动，艺术是人类文化发展历史进程中的必然产物，艺术的起源应当是原始社会中一个相当漫长的历史过程。关于艺术的起源重要有模仿说、游戏说、表现说、巫术说、劳动说这五种观点。</p>
@@ -403,7 +406,7 @@
     
     $('.hot-news li').each(function(i){
         if($(this).find('em').length<=0){
-            $(this).prepend('<em></em>');
+            $(this).find('a').prepend('<em></em>');
         }
         $(this).find('em').html('0'+(i+1));
     })

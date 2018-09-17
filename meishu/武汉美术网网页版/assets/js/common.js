@@ -37,6 +37,7 @@ $(function() {
 	function init_page(){
 		if($(window).width()<1420){
 			$('body').addClass('max-width-1420');
+			$('html').css('background','none');
 		}else{
 			$('body').removeClass('max-width-1420');
 		}
@@ -76,7 +77,7 @@ $(function() {
 	        }
         }
         if(centerTop){
-	        if( && st > centerTop){
+	        if( st > centerTop){
 				$('body').addClass('float-fixed-center');
 	        }else{
 	        	$('body').removeClass('float-fixed-center');
