@@ -1,7 +1,7 @@
 *{margin:0;padding: 0;box-sizing: border-box;}
 html, body{height: 100%;width: 100%;}
 .btn:active{box-shadow: 1px 3px 6px rgba(0,0,0,.3) inset;}
-.welcome-body{background:url(../images/welcome-bg.jpg) bottom center no-repeat;background-size: cover;}
+.welcome-body{background:url(../images/welcome-bg.jpg) bottom center no-repeat;background-size: cover;position: relative;}
 .welcome-btns{position: absolute;left: 0;width: 100%;bottom: .5rem; overflow: hidden;}
 .welcome-btns .btn{width: 4.5rem;float: left;text-align: center;color: #fff;font-size: .44rem;line-height: 1.2rem;border-radius: 1.2rem;margin: 0 0 .6rem .6rem;}
 .welcome-btns .btn-blue{background-color: #47afed;}
@@ -26,4 +26,7 @@ html, body{height: 100%;width: 100%;}
     transform: rotate(10deg);
   }
 
+}
+@media (min-width: 600px){
+  body,html{width: 600px;margin: 0 auto;box-shadow: 0 0 15px rgba(0,0,0,.3);}
 }

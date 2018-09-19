@@ -82,7 +82,7 @@ img[src=""]{opacity: 0;}
 .footer {position: fixed;bottom: 0;left: 0;width: 100%;z-index: 100;background: #fff;border-top: 1px solid #eee;box-shadow: 0 1px 3px rgba(0,0,0,.05);}
 .footer ul {float: left;width: 100%;position: relative;}
 .footer li {float: left;width: 20%;height: 100%;text-align: center;position: relative;min-height: 1px;float: left;padding: .15rem 0;height: 1.2rem;font-size: .26rem;}
-.footer li .point {background: #f43531;width: 6px;height: 6px;border-radius: 100%;display: block;position: absolute;left: 50%;top: 5px;margin-left: 5px;}
+.footer li .point {background: #f43531;width: 6px;height: 6px;border-radius: 100%;display: block;position: absolute;left: 50%;top: 5px;margin-left: 10px;}
 .footer li .num{background: #f43531;min-width: 16px;height: 16px;line-height:16px;color:#fff;text-align:center;border-radius: 100%;display: block;position: absolute;left: 50%;top: 5px;margin-left: 5px;}
 .footer li span{display: block;color:#5c5c5c;margin-top: .1rem;}
 .footer li img{width: .55rem;}
@@ -173,7 +173,7 @@ img[src=""]{opacity: 0;}
 
 .ad-big{padding: 0 .4rem;margin-bottom: .6rem;}
 .ad-big .img{display: block;margin-bottom: .4rem;border-radius: .15rem;overflow: hidden;}
-.ad-big .det .name{margin-left: .3rem;}
+.ad-big .det .name{margin-left: .3rem;color:#999;}
 
 .news-section{padding: .6rem 0;}
 .news-section .title{padding: 0 .4rem;font-weight: normal;}
@@ -286,7 +286,7 @@ body.night .guanzhu-box .det .tit{color:#999;}
 .works .tim{margin: 0;padding:0 .2rem;line-height:1rem;color:#4e4e4e;border-top: 1px solid #eee;font-size: .28rem;}
 .works .tim .time{float: right;color: #999999;}
 .works-item .det{padding: .4rem .2rem;}
-.works-item .tit{color: #000; padding-right: 20px;position: relative;margin-bottom: .2rem;overflow: hidden; white-space: nowrap; text-overflow: ellipsis;}
+.works-item .tit{color: #000;position: relative;margin-bottom: .2rem;overflow: hidden; white-space: nowrap; text-overflow: ellipsis;}
 .works-item .tit a{color: #000;}
 .works-item .tit .ico-dots{position: absolute;right: 0;top: 50%;margin-top: -.05rem;width: .5rem;height: .1rem;display: block;opacity: .5;}
 .works-item .btns{padding: 15px 0 0;}
@@ -309,11 +309,22 @@ body.night .guanzhu-box .det .tit{color:#999;}
 .modal-filter .body{top: 1.5rem;}
 .modal-filter .tip{margin: 0 .4rem .4rem;color:#999;}
 
+.modal-type{background:none;}
+.modal-type .inner{position: absolute;left: 5%;right: 5%;top:5%;bottom:5%;background-color: #fff;z-index: 100;border-radius: 5px;}
+.modal-type  .cover{position: absolute;width: 100%;height: 100%;z-index: 99;background-color: rgba(0,0,0,.6);transition: all .3s;-webkit-transition: all .3s;opacity: 0;visibility: hidden;}
+.modal-type.active,.modal-type.active .cover{opacity: 1;visibility: visible;}
+.modal-type.active .inner{-webkit-transform: translateY(0);transform: translateY(0);}
+.modal-type .body{top: 1.5rem;}
+.modal-type .tip{margin: 0 .4rem .4rem;color:#999;}
+
 .filter-container{overflow: hidden;}
-.filter-container .col{width: 50%;float: left;}
+.filter-container .col{width: 50%;float: left;padding: 0 .4rem;}
 .filter-container li{line-height: 1.1rem;text-align: center;margin-bottom: .05rem;}
 .filter-container li a{display: inline-block;font-size: .5rem;color:#404040;padding: 0 .4rem;}
 .filter-container li.active a{background:#f3f3f3;}
+
+
+.modal-type .filter-container li{text-align: left;}
 @media (min-width: 600px){
 	body{width: 600px;margin: 0 auto;box-shadow: 0 0 15px rgba(0,0,0,.3);}
 	.header,.footer,.a-header,.modal{width: 600px;left: 50%;margin-left: -300px;}

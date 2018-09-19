@@ -67,7 +67,7 @@
             <div class="works-item">
                 <div class="img"><a href="#"><img src="assets/images/demo/img-1.jpg" /></a></div>
                 <div class="det">
-                    <div class="tit"><a href="#">中国美术学院2017年优秀试卷</a><i class="ico-dots"></i></div>
+                    <div class="tit"><a href="#">中国美术学院2017年优秀试卷</a></div>
                     <div class="txt">美术高考高分试卷 - 色彩风景</div>
                     <div class="btns"><a class="btn" href="#"><span>分享</span><i class="ico-share"></i></a><a class="btn" href="#"><span>下载</span><i class="ico-download"></i></a></div>
                 </div>
@@ -76,7 +76,7 @@
             <div class="works-item">
                 <div class="img"><a href="#"><img src="assets/images/demo/img-2.jpg" /></a></div>
                 <div class="det">
-                    <div class="tit"><a href="#">中国美术学院2017年优秀试卷</a><i class="ico-dots"></i></div>
+                    <div class="tit"><a href="#">中国美术学院2017年优秀试卷</a></div>
                     <div class="txt">美术高考高分试卷 - 色彩风景</div>
                     <div class="btns"><a class="btn" href="#"><span>分享</span><i class="ico-share"></i></a><a class="btn" href="#"><span>下载</span><i class="ico-download"></i></a></div>
                 </div>
@@ -85,7 +85,7 @@
             <div class="works-item">
                 <div class="img"><a href="#"><img src="assets/images/demo/img-1.jpg" /></a></div>
                 <div class="det">
-                    <div class="tit"><a href="#">中国美术学院2017年优秀试卷</a><i class="ico-dots"></i></div>
+                    <div class="tit"><a href="#">中国美术学院2017年优秀试卷</a></div>
                     <div class="txt">美术高考高分试卷 - 色彩风景</div>
                     <div class="btns"><a class="btn" href="#"><span>分享</span><i class="ico-share"></i></a><a class="btn" href="#"><span>下载</span><i class="ico-download"></i></a></div>
                 </div>
@@ -94,7 +94,7 @@
             <div class="works-item">
                 <div class="img"><a href="#"><img src="assets/images/demo/img-2.jpg" /></a></div>
                 <div class="det">
-                    <div class="tit"><a href="#">中国美术学院2017年优秀试卷</a><i class="ico-dots"></i></div>
+                    <div class="tit"><a href="#">中国美术学院2017年优秀试卷</a></div>
                     <div class="txt">美术高考高分试卷 - 色彩风景</div>
                     <div class="btns"><a class="btn" href="#"><span>分享</span><i class="ico-share"></i></a><a class="btn" href="#"><span>下载</span><i class="ico-download"></i></a></div>
                 </div>
@@ -103,7 +103,7 @@
             <div class="works-item">
                 <div class="img"><a href="#"><img src="assets/images/demo/img-1.jpg" /></a></div>
                 <div class="det">
-                    <div class="tit"><a href="#">中国美术学院2017年优秀试卷</a><i class="ico-dots"></i></div>
+                    <div class="tit"><a href="#">中国美术学院2017年优秀试卷</a></div>
                     <div class="txt">美术高考高分试卷 - 色彩风景</div>
                     <div class="btns"><a class="btn" href="#"><span>分享</span><i class="ico-share"></i></a><a class="btn" href="#"><span>下载</span><i class="ico-download"></i></a></div>
                 </div>
@@ -112,7 +112,7 @@
             <div class="works-item">
                 <div class="img"><a href="#"><img src="assets/images/demo/img-2.jpg" /></a></div>
                 <div class="det">
-                    <div class="tit"><a href="#">中国美术学院2017年优秀试卷</a><i class="ico-dots"></i></div>
+                    <div class="tit"><a href="#">中国美术学院2017年优秀试卷</a></div>
                     <div class="txt">美术高考高分试卷 - 色彩风景</div>
                     <div class="btns"><a class="btn" href="#"><span>分享</span><i class="ico-share"></i></a><a class="btn" href="#"><span>下载</span><i class="ico-download"></i></a></div>
                 </div>
@@ -121,7 +121,7 @@
             <div class="works-item">
                 <div class="img"><a href="#"><img src="assets/images/demo/img-1.jpg" /></a></div>
                 <div class="det">
-                    <div class="tit"><a href="#">中国美术学院2017年优秀试卷</a><i class="ico-dots"></i></div>
+                    <div class="tit"><a href="#">中国美术学院2017年优秀试卷</a></div>
                     <div class="txt">美术高考高分试卷 - 色彩风景</div>
                     <div class="btns"><a class="btn" href="#"><span>分享</span><i class="ico-share"></i></a><a class="btn" href="#"><span>下载</span><i class="ico-download"></i></a></div>
                 </div>
@@ -130,7 +130,7 @@
             <div class="works-item">
                 <div class="img"><a href="#"><img src="assets/images/demo/img-2.jpg" /></a></div>
                 <div class="det">
-                    <div class="tit"><a href="#">中国美术学院2017年优秀试卷</a><i class="ico-dots"></i></div>
+                    <div class="tit"><a href="#">中国美术学院2017年优秀试卷</a></div>
                     <div class="txt">美术高考高分试卷 - 色彩风景</div>
                     <div class="btns"><a class="btn" href="#"><span>分享</span><i class="ico-share"></i></a><a class="btn" href="#"><span>下载</span><i class="ico-download"></i></a></div>
                 </div>
@@ -229,6 +229,10 @@ $(function(){
     	filter_modal.show()
     })
 
+    type_modal.init()
+    $(".imgs-type li").click(function(){
+    	type_modal.show()
+    })
 
 });
 
@@ -294,6 +298,57 @@ var filter_modal={
     }
 }
 window.filter_modal = filter_modal;
+})(window,jQuery);
+
+/*筛选插件*/
+;(function(window,$){
+var type_modal={
+    container: $(".modal-type"),
+    show:function(){
+        this.container.addClass('active');
+        this.bind_click();
+    },
+    bind_click:function(){
+        var _this = this;
+        this.container.off('click')
+        .on('click','.btn-close',function(){
+            _this.hide();
+        })
+    },
+    hide:function(){
+        this.container.removeClass('active');
+    },
+    init:function(){
+        if(!this.container.length){
+            $('body').append('<div class="modal modal-type">\
+				<div class="inner">\
+					<div class="head"><a class="btn-close"></a></div>\
+					<div class="body">\
+						<div class="tip">筛选</div>\
+						<div class="filter-container">\
+							<div class="col">\
+								<ul>\
+									<li class="active"><a href="javascript:;">静物素描</a></li>\
+									<li><a href="javascript:;">素描头像</a></li>\
+									<li><a href="javascript:;">素描半身带手</a></li>\
+									<li><a href="javascript:;">设计素描</a></li>\
+									<li><a href="javascript:;">人物速写</a></li>\
+									<li><a href="javascript:;">风景速写</a></li>\
+									<li><a href="javascript:;">水粉静物</a></li>\
+									<li><a href="javascript:;">水粉头像</a></li>\
+								</ul>\
+							</div>\
+						</div>\
+					</div>\
+				</div>\
+				<div class="cover"></div>\
+			</div>')
+        }
+        this.container = $(".modal-type")
+        
+    }
+}
+window.type_modal = type_modal;
 })(window,jQuery);
 
 </script>
