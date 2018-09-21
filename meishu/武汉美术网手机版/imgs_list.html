@@ -44,6 +44,7 @@
 					<li><img src="assets/images/imgs-menu-2.jpg"><span>国美</span></li>
 					<li><img src="assets/images/imgs-menu-3.jpg"><span>清美</span></li>
 					<li><img src="assets/images/imgs-menu-4.jpg"><span>湖美</span></li>
+					<li class="more"><span class="ico-more"></span></li>
 				</ul>
 	        </div>
 	    </div>
@@ -225,7 +226,7 @@ $(function(){
     });
 
     filter_modal.init()
-    $(".imgs-category li").click(function(){
+    $(".imgs-category .more").click(function(){
     	filter_modal.show()
     })
 
