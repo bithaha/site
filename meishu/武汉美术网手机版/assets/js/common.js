@@ -91,7 +91,6 @@ var city_modal={
                 </div>\
                 <div class="subhead">\
                     <span class="tip">点击确定地区</span>\
-                    <span class="tit">切换地区</span>\
                 </div>\
                 <div class="body">\
                     <div class="city-list">\
@@ -191,8 +190,7 @@ var channel_modal={
                     <h3 class="title">所有频道</h3>\
                 </div>\
                 <div class="subhead">\
-                    <span class="tip">拖动频道顺序</span>\
-                    <span class="tit">我的频道</span>\
+                    <span class="tip">点击进入频道</span>\
                 </div>\
                 <div class="body">\
                     <div class="city-list">'+channel_list_dom+'\

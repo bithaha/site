@@ -40,10 +40,10 @@
 	    <div class="swiper-wrapper">
 	        <div class="swiper-slide">
 	        	<ul>
-					<li><img src="assets/images/imgs-menu-1.jpg"><span>央美</span></li>
-					<li><img src="assets/images/imgs-menu-2.jpg"><span>国美</span></li>
-					<li><img src="assets/images/imgs-menu-3.jpg"><span>清美</span></li>
-					<li><img src="assets/images/imgs-menu-4.jpg"><span>湖美</span></li>
+					<li><img src="assets/images/imgs-menu-1.jpg"><span>头像</span></li>
+					<li><img src="assets/images/imgs-menu-2.jpg"><span>素描</span></li>
+					<li><img src="assets/images/imgs-menu-3.jpg"><span>色彩</span></li>
+					<li><img src="assets/images/imgs-menu-4.jpg"><span>速写</span></li>
 					<li class="more"><span class="ico-more"></span></li>
 				</ul>
 	        </div>
@@ -225,9 +225,9 @@ $(function(){
         });
     });
 
-    filter_modal.init()
+    type_modal.init()
     $(".imgs-category .more").click(function(){
-    	filter_modal.show()
+    	type_modal.show()
     })
 
     
@@ -236,8 +236,8 @@ $(function(){
 
 /*筛选插件*/
 ;(function(window,$){
-var filter_modal={
-    container: $(".modal-filter"),
+var type_modal={
+    container: $(".modal-type"),
     show:function(){
         this.container.addClass('active');
         this.bind_click();
@@ -254,7 +254,7 @@ var filter_modal={
     },
     init:function(){
         if(!this.container.length){
-            $('body').append('<div class="modal modal-filter">\
+            $('body').append('<div class="modal modal-type">\
 				<div class="inner">\
 					<div class="head"><a class="btn-close"></a></div>\
 					<div class="body">\
@@ -262,27 +262,14 @@ var filter_modal={
 						<div class="filter-container">\
 							<div class="col">\
 								<ul>\
-									<li class="active"><a href="javascript:;">中央美术学院</a></li>\
-									<li class="active"><a href="javascript:;">中国美术学院</a></li>\
-									<li><a href="javascript:;">清华美术学院</a></li>\
-									<li><a href="javascript:;">湖北美术学院</a></li>\
-									<li><a href="javascript:;">鲁迅美术学院</a></li>\
-									<li><a href="javascript:;">天津美术学院</a></li>\
-									<li><a href="javascript:;">四川美术学院</a></li>\
-									<li><a href="javascript:;">广州美术学院</a></li>\
-									<li><a href="javascript:;">西安美术学院</a></li>\
-								</ul>\
-							</div>\
-							<div class="col">\
-								<ul>\
-									<li class="active"><a href="javascript:;">2010</a></li>\
-									<li><a href="javascript:;">2009</a></li>\
-									<li><a href="javascript:;">2007</a></li>\
-									<li><a href="javascript:;">2006</a></li>\
-									<li><a href="javascript:;">2005</a></li>\
-									<li><a href="javascript:;">2004</a></li>\
-									<li><a href="javascript:;">2003</a></li>\
-									<li><a href="javascript:;">2001</a></li>\
+									<li class="active"><a href="javascript:;">静物素描</a></li>\
+									<li><a href="javascript:;">素描头像</a></li>\
+									<li><a href="javascript:;">素描半身带手</a></li>\
+									<li><a href="javascript:;">设计素描</a></li>\
+									<li><a href="javascript:;">人物速写</a></li>\
+									<li><a href="javascript:;">风景速写</a></li>\
+									<li><a href="javascript:;">水粉静物</a></li>\
+									<li><a href="javascript:;">水粉头像</a></li>\
 								</ul>\
 							</div>\
 						</div>\
@@ -291,11 +278,11 @@ var filter_modal={
 				<div class="cover"></div>\
 			</div>')
         }
-        this.container = $(".modal-filter")
+        this.container = $(".modal-type")
         
     }
 }
-window.filter_modal = filter_modal;
+window.type_modal = type_modal;
 })(window,jQuery);
 
 </script>

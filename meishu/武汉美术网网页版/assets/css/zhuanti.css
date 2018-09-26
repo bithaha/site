@@ -1,0 +1,39 @@
+.section1{background:url(../images/zhuanti/1-bg.jpg) center center no-repeat #130a41;}
+.section1 .logo{text-align: center;}
+.section1 .imgs{position: relative;width: 100%;height: 780px;overflow: hidden;}
+.section1 .imgs img{position: absolute;left: 50%;top: 0;}
+.section1 .imgs .img-1{margin-left: -560px;top: 80px;}
+.section1 .imgs .img-2{margin-left: 55px;top: 140px;}
+.section1 .imgs .img-3{margin-left: -830px;top: 340px;}
+.section1 .imgs .img-4{margin-left: 650px;top: 80px;}
+.section1 .imgs .img-5{margin-left: 480px;top: 490px;}
+.section1 .imgs .img-6{margin-left: -650px;}
+.section1 .imgs .img-7{margin-left: 530px;top: 425px;}
+.section1 .imgs .img-8{margin-left: -80px;top: 660px;}
+.section1 .imgs .img-9{margin-left: 540px;top: 0px;}
+.section1 .imgs .img-10{margin-left: 600px;top: 40px;}
+.section1 .imgs .img-11{margin-left: 725px;top: 680px;}
+
+.section1 .txt1{text-align: center;}
+.section1 .txt2{text-align: center;color:#fff;margin-top: 40px;font-size: 24px;}
+
+.section2,.section3{background: url(../images/zhuanti/2-bg.jpg) center center no-repeat #f7bf00;text-align: center;}
+.section2 .logo{margin-bottom: 100px;}
+.section2 .txt{font-size: 24px;color:#282828;line-height: 50px;margin-bottom: 100px;width: 1060px;margin: 0 auto;}
+
+.section3 .art{position: absolute;left: 0;top: 100px;}
+.section3 .version{position: absolute;left: 0;top: 600px;}
+.section3 .imgs{width: 50%;height: 920px;position: relative;float: left;}
+.section3 .imgs img{position: absolute;}
+.section3 .imgs .img-1{top: 180px;right: 130px;}
+.section3 .imgs .img-2{top: 125px;right: 160px;}
+.section3 .imgs .img-3{top: 65px;right: 100px;}
+.section3 .imgs .img-4{top: 0;right: 60px;}
+.section3 .det{width:50%;float:left;text-align: left;color:#282828;}
+.section3 .det .txt-1{font-size: 58px;margin-left:140px;margin-bottom: 20px;line-height: 1;}
+.section3 .det .txt-2{font-size: 30px;margin-left:140px;margin-bottom: 40px;}
+.section3 .det .txt-3{font-size: 53px;margin-left:140px;padding-bottom: 60px;}
+.section3 .det .txt-4{font-size: 30px;margin-left:140px;line-height: 50px;margin-top: 40px;}
+.section3 .det .txt-5{font-size: 30px;margin-left:140px;line-height: 50px;margin-top: 40px;}
+.section3 .det .txt-2 span{border-top: 1px solid #282828;border-bottom: 1px solid #282828;display: inline-block;line-height: 50px;}
+.section3 .det p{margin: 0;}
