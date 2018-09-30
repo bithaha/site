@@ -25,7 +25,7 @@ img[src=""]{opacity: 0;}
 .color-gray{color: #999;}
 /* 标签 */
 /* tag */
-.ico-txt{display:inline-block;padding: .09rem .15rem; font-weight:normal;color:#fff;font-size:.32rem;border-radius: .1rem;}
+.ico-txt{display:inline-block;padding: .06rem .15rem; font-weight:normal;color:#fff;font-size:.32rem;border-radius: .1rem;}
 .ico-txt{*display:inline;}
 .ico-txt.red{background-color:#eb4c5e;}
 .ico-txt.pink{background-color:#fcaaaa;}
@@ -83,7 +83,7 @@ img[src=""]{opacity: 0;}
 .footer ul {float: left;width: 100%;position: relative;}
 .footer li {float: left;width: 20%;height: 100%;text-align: center;position: relative;min-height: 1px;float: left;padding: .15rem 0;height: 1.2rem;font-size: .26rem;}
 .footer li .point {background: #f43531;width: 6px;height: 6px;border-radius: 100%;display: block;position: absolute;left: 50%;top: 5px;margin-left: 10px;}
-.footer li .num{background: #f43531;min-width: 16px;height: 16px;line-height:16px;color:#fff;text-align:center;border-radius: 100%;display: block;position: absolute;left: 50%;top: 5px;margin-left: 5px;}
+.footer li .num{background: #f43531;min-width: .3rem;height: .3rem;line-height:.3rem;color:#fff;text-align:center;border-radius: 100%;display: block;position: absolute;left: 50%;top: 5px;margin-left: 5px;}
 .footer li span{display: block;color:#5c5c5c;margin-top: .1rem;}
 .footer li img{width: .55rem;}
 .footer li.cent-logo{position: relative;}
@@ -104,8 +104,8 @@ img[src=""]{opacity: 0;}
 .news-list .item .tit{color: #222222;font-weight: normal;line-height: .7rem;max-height: 1.4rem;margin-bottom: .34rem; margin-top: -.15rem;}
 .news-list .item .tit a{color: #222222;}
 .news-list .item .info{}
-.news-list .item .info .time{float: right;color: #999999;font-size: .3rem;line-height: .5rem;}
-.news-list .item .info .t{margin-left: .3rem;color: #999999;font-size: .32rem;}
+.news-list .item .info .time{float: right;color: #999999;font-size: .36rem;line-height: .5rem;}
+.news-list .item .info .t{margin-left: .3rem;color: #999999;font-size: .36rem;}
 
 /*一张小图*/
 .news-list .item.img-1 .img{position: absolute;right: .4rem;top: .4rem;width: 3.4rem;height: 2.4rem;display: block;border-radius: .1rem;overflow: hidden;}
@@ -155,7 +155,7 @@ img[src=""]{opacity: 0;}
 
 .article-con{padding: .3rem .4rem;}
 .article-con .title{font-size: .72rem;color:#343434;line-height: .96rem;font-weight: normal;margin-bottom: .4rem;}
-.article-con .info{color: #999;font-size: .34rem;}
+.article-con .info{color: #999;}
 .article-con .info span{margin-right: .5rem;}
 .article-con .body{font-size: .5rem;line-height: .8rem;}
 .article-con .tips{color: #999;font-size: .42rem;line-height: .72rem;margin-top: 1.6rem;margin-bottom: 1.5rem;}
@@ -186,7 +186,7 @@ img[src=""]{opacity: 0;}
 .in-news-list .item .img{display: block;width: 3.4rem;height: 2.4rem;float: left;overflow: hidden; margin-top: .09rem;}
 .in-news-list .item .det{display: block;margin-left: 3.8rem;}
 .in-news-list .item .det .tit{display:block;color:#222222;font-size: .48rem;line-height: .7rem;height: 1.4rem;overflow: hidden;}
-.in-news-list .item .det .desc{display:block;font-size: .32rem;color:#999;margin-top: .55rem;}
+.in-news-list .item .det .desc{display:block;color:#999;margin-top: .55rem;}
 .in-news-list .item .det .desc .time{float: right;line-height: .5rem;}
 .in-news-list .item .det .desc .tag{margin-left: .3rem;}
 
@@ -281,8 +281,8 @@ body.night .guanzhu-box .det .tit{color:#999;}
 
 
 .works-section{background-color: #ececec;padding: .75rem 0;}
-.works { overflow: hidden;}
-.works-item { position: relative;margin-bottom: .4rem;margin-left:.4rem;float: left; width: 4.8rem;background: #fff;border-radius:5px;overflow: hidden;border:1px solid #eee; }
+.works { overflow: hidden;margin-left: .4rem;}
+.works-item { position: relative;margin-bottom: .3rem;margin-right:.3rem;float: left; width: 4.85rem;background: #fff;border-radius:5px;overflow: hidden;border:1px solid #eee; }
 .works-item img { width: 100% }
 .works-item .img a:hover{opacity: .8;filter: alpha(opacity=80);}
 .works .txt { font-size: .32rem;color:#707070; line-height: 1;overflow: hidden; white-space: nowrap; text-overflow: ellipsis; }

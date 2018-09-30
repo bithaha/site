@@ -1,0 +1,12 @@
+{
+  "pages":[
+    "pages/index/index",
+    "pages/logs/logs"
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#da1520",
+    "navigationBarTitleText": "艺考查查",
+    "navigationBarTextStyle":"white"
+  }
+}

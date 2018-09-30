@@ -17,7 +17,7 @@
 .section1 .txt1{text-align: center;}
 .section1 .txt2{text-align: center;color:#fff;margin-top: 40px;font-size: 24px;}
 
-.section2,.section3{background: url(../images/zhuanti/2-bg.jpg) center center no-repeat #f7bf00;text-align: center;}
+.section2,.section3,.section4,.section5,.section6,.section7,.section8{background: url(../images/zhuanti/2-bg.jpg) center center no-repeat #f7bf00;text-align: center;}
 .section2 .logo{margin-bottom: 100px;}
 .section2 .txt{font-size: 24px;color:#282828;line-height: 50px;margin-bottom: 100px;width: 1060px;margin: 0 auto;}
 
@@ -32,8 +32,59 @@
 .section3 .det{width:50%;float:left;text-align: left;color:#282828;}
 .section3 .det .txt-1{font-size: 58px;margin-left:140px;margin-bottom: 20px;line-height: 1;}
 .section3 .det .txt-2{font-size: 30px;margin-left:140px;margin-bottom: 40px;}
-.section3 .det .txt-3{font-size: 53px;margin-left:140px;padding-bottom: 60px;}
+.section3 .det .txt-3{font-size: 53px;margin-left:140px;padding-bottom: 60px;position: relative;}
 .section3 .det .txt-4{font-size: 30px;margin-left:140px;line-height: 50px;margin-top: 40px;}
 .section3 .det .txt-5{font-size: 30px;margin-left:140px;line-height: 50px;margin-top: 40px;}
 .section3 .det .txt-2 span{border-top: 1px solid #282828;border-bottom: 1px solid #282828;display: inline-block;line-height: 50px;}
 .section3 .det p{margin: 0;}
+.section3 .det .txt-3 .line{width: 40px;height: 4px;background: #282828;position: absolute;bottom: 0;left: 0;}
+
+.m-title{font-size: 54px;padding-bottom: 50px;position: relative;}
+.m-title .line{width: 50px;height: 3px;background: #282828;position: absolute;bottom:0;left: 50%;margin-left:-25px;}
+.m-title .t{font-size: 30px;border-top: 1px solid #282828;border-bottom: 1px solid #282828;margin: 0 20px;}
+.m-title span{display: inline-block;vertical-align: top;height: 50px;line-height: 50px;}
+.m-txt{width: 1040px;line-height: 50px;margin: 0 auto;font-size: 24px;margin-top: 40px;}
+.m-img{margin-top: 120px;}
+
+.section5 .m-img ul{overflow: hidden;width: 1620px;margin: 0 auto;padding: 0;}
+.section5 .m-img ul li{width: 520px;float: left;margin:0 10px 20px 10px;list-style: none;}
+.section5 .txt-1{position: absolute;right: 0;top: 50%;margin-top: -370px;}
+.section5 .txt-2{position: absolute;left: 0;top: 50%;margin-top: -150px;}
+
+.section7 .m-img ul{width: 1650px;overflow: hidden;margin: 0 auto;padding: 0;}
+.section7 .m-img ul li{width: 500px;float: left;margin:0 25px;list-style: none;}
+
+.section9{background:url(../images/zhuanti/1-bg.jpg) center center no-repeat #130a41;text-align: center;color: #fff;}
+.section9 .logo{text-align: center;}
+.section9 .imgs{position: relative;width: 100%;height: 780px;overflow: hidden;}
+.section9 .imgs img{position: absolute;left: 50%;top: 0;}
+.section9 .imgs .img-1{margin-left: -560px;top: 80px;}
+.section9 .imgs .img-2{margin-left: 55px;top: 140px;}
+.section9 .imgs .img-3{margin-left: -830px;top: 340px;}
+.section9 .imgs .img-4{margin-left: 650px;top: 80px;}
+.section9 .imgs .img-5{margin-left: 480px;top: 490px;}
+.section9 .imgs .img-6{margin-left: -650px;}
+.section9 .imgs .img-7{margin-left: 530px;top: 425px;}
+.section9 .imgs .img-8{margin-left: -80px;top: 660px;}
+.section9 .imgs .img-9{margin-left: 540px;top: 0px;}
+.section9 .imgs .img-10{margin-left: 600px;top: 40px;}
+.section9 .imgs .img-11{margin-left: 725px;top: 680px;}
+.section9 .txt-1{}
+.section9 .txt-2{margin-top: 160px;font-size: 24px;line-height: 40px;}
+.section9 .txt-2 p{margin: 0;}
+.section9 .txt-3{margin-top: 100px;}
+.section9 .txt-3 .btn{width: 300px;height: 50px;line-height: 50px;color:#282828;text-align: center;border-radius:5px;font-size: 18px;background: #f3c300;text-decoration: none;display: inline-block;}
+.section9 .txt-4{margin-top: 40px;}
+.section9 .img-1{position: absolute;left: 50%;margin-left: 670px;top: 0}
+.section9 .img-2{position: absolute;left: 50%;margin-left: -700px;top: 0px;}
+.section9 .img-3{position: absolute;left: 50%;margin-left: 690px;top: 410px;}
+.section9 .img-4{position: absolute;left: 50%;margin-left: 460px;top: 620px;}
+.section9 .img-5{position: absolute;left: 50%;margin-left: 400px;top: 730px;}
+.section9 .img-6{position: absolute;left: 50%;margin-left: -900px;top: 400px;}
+
+
+
+.page-show{position: relative;display: none;}
+.section.active .page-show{display: block;}
+#fp-nav span, .fp-slidesNav span{width: 5px;height: 5px;background: #f3c300;border:1px solid #282828;}
+#fp-nav li .active span, .fp-slidesNav .active span{width: 12px;height: 12px;background: #f3c300;left: -1px;top: -1px;}
