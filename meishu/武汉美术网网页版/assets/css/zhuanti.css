@@ -1,3 +1,5 @@
+body{font:16px/1.8 'Microsoft YaHei',Arial,Tahoma,Verdana,Helvetica,sans-serif;}
+
 .section1{background:url(../images/zhuanti/1-bg.jpg) center center no-repeat #130a41;}
 .section1 .logo{text-align: center;}
 .section1 .imgs{position: relative;width: 100%;height: 780px;overflow: hidden;}
@@ -19,7 +21,7 @@
 
 .section2,.section3,.section4,.section5,.section6,.section7,.section8{background: url(../images/zhuanti/2-bg.jpg) center center no-repeat #f7bf00;text-align: center;}
 .section2 .logo{margin-bottom: 100px;}
-.section2 .txt{font-size: 24px;color:#282828;line-height: 50px;margin-bottom: 100px;width: 1060px;margin: 0 auto;}
+.section2 .txt{font-size: 24px;color:#282828;line-height: 50px;width: 1060px;margin: 0 auto 100px;}
 
 .section3 .art{position: absolute;left: 0;top: 100px;}
 .section3 .version{position: absolute;left: 0;top: 600px;}
@@ -84,7 +86,7 @@
 
 
 
-.page-show{position: relative;display: none;}
-.section.active .page-show{display: block;}
+.page-show{position: relative;display: none;zoom:.7;margin: 0 auto;}
+.section .page-show.active{display: block;}
 #fp-nav span, .fp-slidesNav span{width: 5px;height: 5px;background: #f3c300;border:1px solid #282828;}
 #fp-nav li .active span, .fp-slidesNav .active span{width: 12px;height: 12px;background: #f3c300;left: -1px;top: -1px;}
