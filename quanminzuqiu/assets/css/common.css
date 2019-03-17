@@ -1,0 +1,555 @@
+@charset "utf-8";
+*{ margin:0; padding:0; box-sizing: border-box;}
+body, input, button, textarea { color:#000; font:.4rem/1 "Microsoft YaHei", Arial, simsun, Tahoma, Verdana, Helvetica, sans-serif; }
+article, aside, figcaption, figure, footer, header, hgroup, main, nav, section { display:block; }
+body { padding-bottom: 1.2rem;background: url(../images/bg.jpg) center top no-repeat #000;background-size: cover;}
+img { border:none; max-width: 100%;}
+li { list-style:none; }
+i, em { font-style:normal; }
+i{width: 1em;height: 1em;display: inline-block;background-repeat: no-repeat;background-size: 100% 100%;}
+a { color:#333; text-decoration:none; cursor:pointer; -webkit-transition: color,background .2s;transition: color,background .2s;}
+a:focus { outline:none; }
+a:hover { text-decoration:none; }
+input[type="text"]:focus ,select,textarea{ outline:none; }
+input[type="button"], input[type="reset"], input[type="submit"] { cursor:pointer; }
+input[type="reset"]::-moz-focus-inner, input[type="button"]::-moz-focus-inner, input[type="submit"]::-moz-focus-inner, input[type="file"] > input[type="button"]::-moz-focus-inner {border:none;padding:0;}
+img[src=""]{opacity: 0;}
+.btn:active{box-shadow: 3px 3px 10px rgba(0,0,0,.2) inset;}
+
+
+.input-row:after,.bind-row:after,.list .item:after,.filter-row:after{content: "";display: block;clear: both;}
+.color-blue{color:#4888f4!important;}
+.color-green{color:#58c073!important;}
+.color-red{color:#ff0000!important;}
+.color-base{color:#917140!important;}
+.color-gray{color: #ccc;}
+.color-gray2 {color: #999;}
+/* 标签 */
+
+
+.list{}
+.list .item{padding:.25rem 0.25rem;display: block; position: relative;border-bottom: 1px solid #eee;}
+.list .item-divider{background-color: #f4f4f4;padding: .2rem 0;}
+.list .item-link{}
+.list .item-link .arrow-left{font-size: .7rem;position: absolute;left: .35rem;top:50%;margin-top: -.35rem;}
+.list .item-link .arrow-right{font-size: 1rem;position: absolute;right: .35rem;top:50%;margin-top: -.5rem;color: #ccc;}
+.list .item-link .arrow-left + .txt{padding-left: 1.4rem;}
+.list a.item:active{background-color: #f4f4f4;}
+.line{height: .15rem;background:#f2f4f7;}
+
+
+.header{position: fixed;top: 0;width: 100%;left: 0;z-index: 100;background-color: #222;box-shadow: 0 0 10px rgba(0,0,0,.1);}
+.header .title{line-height: 1.2rem;text-align: center;color:#fff;font-weight: normal;}
+.header .title .tab-item{color: #ccc;display: inline-block;padding: 0 .2rem;line-height: .6rem;border-radius: .6rem;}
+.header .title .tab-item.active{background-color: #ffeb3b;color: #222;}
+
+.header + .viewport{padding-top: 1.2rem;}
+.sub-header + .viewport{padding-top: 2.2rem;}
+.sub-header{position: fixed;width: 100%;top: 1.18rem;left: 0;background-color: #1a1a1a;z-index: 101;}
+.sub-header .tabs{ overflow: hidden;display: -webkit-box;display: -webkit-flex;display: -moz-box; display: -moz-flex; display: -ms-flexbox;display: flex; }
+.sub-header .tabs .item{    -webkit-box-flex: 1; -webkit-flex: 1; -moz-box-flex: 1; -moz-flex: 1; -ms-flex: 1; flex: 1;border-bottom:1px solid rgba(255,255,255,.1);text-align: center;font-size: .32rem;line-height: .4rem;}
+.sub-header .tabs .item a{color: #ccc;}
+.sub-header .tabs .item.active{border-bottom-color: #ffeb3b;}
+.sub-header .tabs .item.active a{color: #ffeb3b;}
+
+.header .btn-menu{position: absolute;width: 1.2rem;height: 1.2rem;top: 0;right: 0;z-index: 10;}
+.header .btn-menu:before,.header .btn-menu:after,.header .btn-menu b{content:"";width: .6rem;height: 2px;background-color: #ccc;display: block;position: absolute;top: 50%;left: 50%;margin: -1px 0 0 -.3rem;border-radius: 2px;}
+.header .btn-menu:before{margin-top: -7px;}
+.header .btn-menu:after{margin-top: 5px;}
+
+
+/* -------------------------------- 
+ * 页底 
+ * -------------------------------- */
+.footer {position: fixed;bottom: 0;left: 0;width: 100%;z-index: 100;background: #000;border-top: 1px solid rgba(255,255,255,.1);box-shadow: 0 1px 3px rgba(0,0,0,.05);}
+.footer ul {float: left;width: 100%;position: relative;}
+.footer li {float: left;width: 20%;height: 100%;text-align: center;position: relative;min-height: 1px;float: left;padding: .15rem 0;height: 1.2rem;font-size: .26rem;}
+.footer li .num{background: #f43531;min-width: .3rem;height: .3rem;line-height:.3rem;color:#fff;text-align:center;border-radius: 100%;display: block;position: absolute;left: 50%;top: 5px;margin-left: 5px;}
+.footer li span{display: block;color:#fff;margin-top: .1rem;}
+.footer li img{width: .55rem;}
+.footer li i{font-size: .55rem;width: 1em;height: 1em;background-size: contain;background-position: center;display: inline-block;}
+.ico-nav-1{background-image: url(../images/ico-nav-1.png);}
+.ico-nav-2{background-image: url(../images/ico-nav-2.png);}
+.ico-nav-3{background-image: url(../images/ico-nav-3.png);}
+.ico-nav-4{background-image: url(../images/ico-nav-4.png);}
+.ico-nav-5{background-image: url(../images/ico-nav-5.png);}
+.footer li.active{background: rgba(255,255,255,.1);}
+.footer li.active span{color:#ffeb3b;}
+.footer li.active .ico-nav-1{background-image: url(../images/ico-nav-1-yellow.png);}
+.footer li.active .ico-nav-2{background-image: url(../images/ico-nav-2-yellow.png);}
+.footer li.active .ico-nav-3{background-image: url(../images/ico-nav-3-yellow.png);}
+.footer li.active .ico-nav-4{background-image: url(../images/ico-nav-4-yellow.png);}
+.footer li.active .ico-nav-5{background-image: url(../images/ico-nav-5-yellow.png);}
+
+
+.gotop{display:none;width: 1rem;height: 1rem;text-align:center;color:#fff;font-size:12px;border-radius:50%;background:#bbb url(../images/go-top.png) center center no-repeat;background-size:50% 50%;position:fixed;right:10px;bottom:2rem;z-index:9999;line-height:1.3em;}
+
+
+
+.empty{padding: .3rem 0;text-align: center;color: #999;}
+
+/* -------------------------------- 
+ * 公共 
+ * -------------------------------- */
+.text-a-c {
+    text-align: center;
+}
+.p-b-5 {
+    padding-bottom: 5px;
+}
+.f-s-12 {
+    font-size: 12px;
+}
+.bgcolor-red {
+    background-color: #de1e30;
+}
+.bgcolor-yellow4 {
+    background-color: #f2bf51;
+}
+.col-6 {
+    width: 16.66%;
+}
+.w-bar-46 {
+    width: 46%;
+}
+.w-bar-27 {
+    width: 27%;
+}
+.m-t-10 {
+    margin-top: 10px;
+}
+.svg-icon {
+    width: 1em;
+    height: 1em;
+    vertical-align: -0.15em;
+    fill: currentColor;
+    overflow: hidden;
+}
+/* -------------------------------- 
+ * 首页 
+ * -------------------------------- */
+.list-type-one .list-item {
+	width: 100%
+}
+
+.list-type-one .statu-text {
+	left: 0;
+	position: absolute;
+	top: -19px;
+	width: 100%;
+	text-align: center
+}
+
+.list-type-one .statu-text .ap-code-dian {
+	position: absolute;
+	top: 0
+}
+
+.list-type-one>li .row-i {
+	position: relative;
+	float: left
+}
+
+.list-type-one>li .row-i .rol {
+	float: left
+}
+
+.list-type-one .list-item {
+	display: inline-block;
+	width: 100%;
+	vertical-align: top;
+	font-size: 12px;
+	min-height: 70px;
+	overflow: hidden
+}
+
+.list-type-one .data-time {
+	background-color: transparent;
+	font-size: 14px;
+	text-align: center;
+	margin: 0;
+	position: relative;
+	bottom: -5px;
+	padding: 2px 0 7px
+}
+
+.list-type-one .find-table {
+	background-color: #fff;
+	box-shadow: 0px -1px 0px #e2e2e5 inset;
+	display: block;
+	color: #333;
+	margin-top: 5px
+}
+
+.list-type-one .find-table tr td.lives {
+	width: 4px;
+	padding: 0;
+	margin: 0;
+	overflow: hidden
+}
+
+.list-type-one .find-table tr td.lives.bg0 {
+	background-color: #f00
+}
+
+.list-type-one .find-table tr td.lives.bg1 {
+	background-color: #DE1E30
+}
+
+.list-type-one .find-table tr td.lives.bg2 {
+	background-color: #FF9000
+}
+
+.list-type-one .find-table tr td.lives.bg3 {
+	background-color: #FFD138
+}
+
+.list-type-one .find-table tr td.lives.bg4 {
+	background-color: #5988C2
+}
+
+.list-type-one .find-table tr td.lives.bg5 {
+	background-color: #C6C3EF
+}
+
+.list-type-one .find-table tr td.lives.bg6 {
+	background-color: #999
+}
+
+.list-type-one .find-table tr td.lives.bg7 {
+	background-color: #bbb
+}
+
+.list-type-one .find-table tr td .t-head {
+	width: 100%
+}
+
+.list-type-one .find-table tr td .t-head .left,.list-type-one .find-table tr td .t-head .right {
+	white-space: nowrap;
+	width: 33%
+}
+
+.list-type-one .find-table tr td .t-head .left .eventname {
+	width: 65px;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	margin: 0 5px;
+	display: inline-block;
+	vertical-align: top
+}
+
+.list-type-one .find-table tr td .t-head .left .time {
+	color: #999
+}
+
+.list-type-one .find-table tr td .t-head .right {
+	text-align: right
+}
+
+.list-type-one .find-table tr td .tishi-right {
+	position: absolute;
+	width: 30px;
+	top: 5px;
+	right: 0;
+	text-align: center
+}
+
+.list-type-one .find-table tr .name {
+	font-size: 13px;
+	color: #333;
+	width: 105px;
+	border-right: 1px solid #e2e2e5;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	display: block;
+	padding: 2px 0
+}
+
+.list-type-one .find-table .tr-one td,.list-type-one .find-table .tr-tow td {
+	padding: 0;
+	margin: 0;
+	line-height: 22px
+}
+
+.list-type-one .find-table .team-left,.list-type-one .find-table .team-right {
+	font-size: 14px;
+	color: #333;
+	padding: 5px 0;
+	width: 43%
+}
+
+.list-type-one .find-table .team-left .rank,.list-type-one .find-table .team-right .rank {
+	font-size: 12px;
+	color: #bbb;
+	white-space: nowrap
+}
+
+.list-type-one .find-table .team-left .card,.list-type-one .find-table .team-right .card {
+	font-size: 12px;
+	color: #fff;
+	padding: 0 2px;
+	border-radius: 3px;
+	line-height: 15px
+}
+
+.list-type-one .find-table .team-left {
+	text-align: right;
+	padding-left: 5px
+}
+
+.list-type-one .find-table .team-left .icon-collecth {
+	font-size: 16px;
+	position: absolute;
+	left: 10px;
+	top: 4px
+}
+
+.list-type-one .find-table .team-right {
+	text-align: left;
+	padding-right: 30px
+}
+
+.list-type-one .find-table .team-center {
+	color: #de1e30;
+	white-space: nowrap;
+	padding: 5px;
+	width: 50px;
+	text-align: center;
+	position: relative;
+	line-height: 20px
+}
+
+.list-type-one .find-table .team-center .score {
+	font-size: 14px
+}
+
+.list-type-one .find-table .icon-next {
+	position: relative;
+	top: 2px
+}
+
+.list-type-one .find-table .icon-live-tv,.list-type-one .find-table .icon-live-animation {
+	font-size: 18px;
+	margin-right: 1px
+}
+
+.list-type-one .find-table .hometeamname_cn,.list-type-one .find-table .awayteamname_cn {
+	border-radius: 3px;
+	padding: 1px 4px
+}
+
+.list-type-one .find-table .lottery {
+	position: absolute;
+	top: 0;
+	left: 5px
+}
+
+.list-type-one .find-table .lottery .text-jc,.list-type-one .find-table .lottery .text-bd,.list-type-one .find-table .lottery .text-zc {
+	display: none
+}
+
+.list-type-one.tennis .list-item {
+	background-color: #fff;
+	box-shadow: 0px -1px 0px #e2e2e5 inset;
+	display: block;
+	color: #333;
+	margin-top: 5px;
+	padding-bottom: 10px;
+	overflow: hidden
+}
+
+.list-type-one.tennis .list-item .items {
+	clear: both;
+	display: inline-block;
+	vertical-align: top;
+	width: 100%
+}
+
+.list-type-one.tennis .list-item .items:after,.list-type-one.tennis .list-item .items:before {
+	content: '';
+	display: table
+}
+
+.list-type-one.tennis .list-item .items .bd-clear {
+	display: block;
+	margin: -1px 10px 0px;
+	border-top: 1px solid #D8D8D8
+}
+
+.list-type-one.tennis .list-item tr td {
+	font-size: 14px
+}
+
+.list-type-one.tennis .list-item tr td.status,.list-type-one.tennis .list-item tr td.time {
+	padding-left: 10px;
+	width: 50px;
+	color: #666
+}
+
+.list-type-one.tennis .list-item tr td.status.on {
+	color: #E7505F
+}
+
+.list-type-one.tennis .list-item tr td.name {
+	border: 0;
+	border-left: 1px solid #e2e2e5;
+	padding-left: 10px;
+	display: table-cell;
+	color: #333;
+	white-space: initial;
+	word-break: break-all
+}
+
+.list-type-one.tennis .list-item tr td.score-box {
+	width: 50px;
+	text-align: right;
+	color: #88C31C
+}
+
+.list-type-one.tennis .list-item tr td.score-box:before {
+	transform: translateY(-15px);
+	-webkit-transform: translateY(-15px);
+	-moz-transform: translateY(-15px);
+	-o-transform: translateY(-15px);
+	content: "";
+	width: 14px;
+	height: 14px;
+	color: #d7e123;
+	opacity: 0;
+	float: left;
+	margin-top: 3px
+}
+
+.list-type-one.tennis .list-item tr td.score-box .score {
+	padding: 2px 3px;
+	margin-left: 5px;
+	border-radius: 2px
+}
+
+.list-type-one.tennis .list-item tr td.score-box.on .score {
+	animation-name: background-color;
+	animation-duration: 1.5s;
+	animation-timing-function: linear;
+	animation-iteration-count: infinite;
+	animation-fill-mode: forwards;
+	animation-delay: .1s;
+	-webkit-animation-name: background-color;
+	-webkit-animation-duration: 1.5s;
+	-webkit-animation-timing-function: linear;
+	-webkit-animation-iteration-count: infinite;
+	-webkit-animation-fill-mode: forwards;
+	-webkit-animation-delay: .1s;
+	-moz-animation-name: background-color;
+	-moz-animation-duration: 1.5s;
+	-moz-animation-timing-function: linear;
+	-moz-animation-iteration-count: infinite;
+	-moz-animation-fill-mode: forwards;
+	-moz-animation-delay: .1s;
+	-o-animation-name: background-color;
+	-o-animation-duration: 1.5s;
+	-o-animation-timing-function: linear;
+	-o-animation-iteration-count: infinite;
+	-o-animation-fill-mode: forwards;
+	-o-animation-delay: .1s;
+	background-color: #D6F2A3
+}
+
+.list-type-one.tennis .list-item tr td.score-box.ball:before {
+	animation-name: tennis-goal-before;
+	animation-duration: .5s;
+	animation-timing-function: cubic-bezier(0, 1.31, 0.54, 1.22);
+	animation-iteration-count: 1;
+	animation-fill-mode: forwards;
+	animation-delay: .1s;
+	-webkit-animation-name: tennis-goal-before;
+	-webkit-animation-duration: .5s;
+	-webkit-animation-timing-function: cubic-bezier(0, 1.31, 0.54, 1.22);
+	-webkit-animation-iteration-count: 1;
+	-webkit-animation-fill-mode: forwards;
+	-webkit-animation-delay: .1s;
+	-moz-animation-name: tennis-goal-before;
+	-moz-animation-duration: .5s;
+	-moz-animation-timing-function: cubic-bezier(0, 1.31, 0.54, 1.22);
+	-moz-animation-iteration-count: 1;
+	-moz-animation-fill-mode: forwards;
+	-moz-animation-delay: .1s;
+	-o-animation-name: tennis-goal-before;
+	-o-animation-duration: .5s;
+	-o-animation-timing-function: cubic-bezier(0, 1.31, 0.54, 1.22);
+	-o-animation-iteration-count: 1;
+	-o-animation-fill-mode: forwards;
+	-o-animation-delay: .1s;
+	content: "\e705"
+}
+
+.list-type-one.tennis .list-item tr td.race {
+	width: 25px;
+	text-align: center;
+	border-right: 1px solid #E2E2E5;
+	color: #666
+}
+
+.list-type-one.tennis .list-item tr td.panlot {
+	width: 25px;
+	padding-right: 10px;
+	text-align: center;
+	color: #E34E59
+}
+
+.list-type-one.tennis .list-item tr.t-head td {
+	padding: 10px
+}
+
+.list-type-one.tennis .list-item tr.t-head td .people {
+	color: #bbb;
+	display: inline-block;
+	vertical-align: top;
+	margin: 1px 5px 0 0
+}
+
+.list-type-one.tennis .list-item tr.t-head td .people .iconfont {
+	font-size: 14px
+}
+
+.list-type-one.tennis .list-item tr.t-head .event {
+	font-weight: bold;
+	color: #333
+}
+
+.list-type-one.tennis .list-item tr.home td {
+	padding-top: 0;
+	padding-bottom: 3px
+}
+
+.list-type-one.tennis .list-item tr.away td {
+	padding-top: 3px;
+	padding-bottom: 0
+}
+
+.list-type-one.jc .lottery .text-jc {
+	display: inline-block
+}
+
+.list-type-one.bd .lottery .text-bd {
+	display: inline-block
+}
+
+.list-type-one.zc .lottery .text-zc {
+	display: inline-block
+}
+/**/
+.list-type-one.black .find-table{
+	background-color: rgba(30,30,30,.8);
+	color: #ccc;
+	box-shadow: 0px -1px 0px #333 inset;
+}
+.list-type-one .find-table .team-left, .list-type-one .find-table .team-right{
+	color: #ccc;
+}
+
+@media (min-width: 600px){
+	body{width: 600px;margin: 0 auto;box-shadow: 0 0 15px rgba(0,0,0,.3);}
+	.header,.footer,.sub-header,.modal{width: 600px;left: 50%;margin-left: -300px;}
+}
