@@ -16,10 +16,10 @@
 <!-- header start -->
 
 <div class="viewport">
-    <div class="fixed-top-panel" home-id="10050" away-id="10322" style="height: 259.354px;">
+    <div class="fixed-top-panel" style="height: 259.354px;">
         <div class="fixed-top" style="height: 259.354px;">
             <div class="detail-header">
-                <div class="float-left"><a class="head-btn iconfont icon-prev" onclick="football_againstplay.back();"></a></div>
+                <div class="float-left"><a class="head-btn" onclick="history.back()"><i class="ico-back"></i></a></div>
                 <div class="title"><span class="tip-one display-b m-t-10"><span id="eventname" class="m-r-5">德甲</span> 第26轮</span> <span class="tip-tow">比赛时间：2019年03月16日22:30</span></div>
             </div>
             <div class="against-plan">
@@ -29,7 +29,7 @@
                         <div class="name">斯图加特</div>
                     </div>
                 </div>
-                <div class="centre"><span class="ap-code"><span class="m-l-2 race-time" data-time="1552753345" data-status="4" data-mlivedata="0,1552753345,0,90,0,4">54<span class="ap-code-dian">'</span></span></span>
+                <div class="centre"><span class="ap-code"><span class="m-l-2 race-time">54<span class="ap-code-dian">'</span></span></span>
                     <div class="clearfix"></div>
                     <div class="mark"> <span class="full-court-one ">1</span> <span class="vs">-</span> <span class="full-court-tow ">1</span></div>
                     <div class="half ">(0-1)</div>
@@ -41,18 +41,21 @@
                     </div>
                 </div>
                 <div class="clearfix"></div>
-                <div class="watch-live touch-btn "> <a class="link" onclick="football_againstplay.watchLive()"><i class="iconfont icon-live-animation1"></i>动画直播</a> <a class="link" onclick="LeisuJS.layoutDownload()"><i class="iconfont icon-live-tv1"></i>视频直播</a> </div>
+                <div class="watch-live touch-btn ">
+                    <a class="link"><i class="iconfont icon-live-animation1"></i>动画直播</a>
+                    <a class="link"><i class="iconfont icon-live-tv1"></i>视频直播</a>
+                </div>
             </div>
-            <div class="bkt-live-frame-panel" data-id="2507364" data-halftime="" data-serve-time="1552752540.454">
-                <div class="mask" onclick="football_againstplay.showHeader()"></div>
+            <div class="bkt-live-frame-panel">
+                <div class="mask"></div>
             </div>
-            <ul class="detail-nav" data-aaa="4351">
-                <li class="col-6 load-success active" onclick="football_againstplay.detailNav(this)" data-src="//m.leisu.com/live/zhibo?id=2507364">直播</li>
-                <li class="col-6  load-success" onclick="football_againstplay.detailNav(this)" data-src="//m.leisu.com/live/lineup?id=2507364">阵容</li>
-                <li class="col-6" onclick="football_againstplay.detailNav(this)">情报</li>
-                <li class="col-6" onclick="football_againstplay.detailNav(this)">分析</li>
-                <li class="col-6" onclick="football_againstplay.detailNav(this)">赔率</li>
-                <li class="col-6" onclick="football_againstplay.detailNav(this)">聊天</li>
+            <ul class="detail-nav">
+                <li class="col-6 active" onclick="detailNav(this)">直播</li>
+                <li class="col-6" onclick="detailNav(this)">阵容</li>
+                <li class="col-6" onclick="detailNav(this)">情报</li>
+                <li class="col-6" onclick="detailNav(this)">分析</li>
+                <li class="col-6" onclick="detailNav(this)">赔率</li>
+                <li class="col-6" onclick="detailNav(this)">聊天</li>
             </ul>
         </div>
     </div>
@@ -61,12 +64,15 @@
             <div class="field-view zhibo">
                 <div class="clearfix m-l-10 m-r-10 m-t-10">
                     
-                    <div class="technical-statistics"><span class="home-name">斯图加特</span> <span class="away-name">霍芬海姆</span>
+                    <div class="technical-statistics">
+                        <span class="home-name">斯图加特</span>
+                        <span class="away-name">霍芬海姆</span>
                         <div class="c-panel">
                             <div class="pie-chart-panel">
                                 <div class="pie-chart statistics-li-23">
                                     <div class="title">进攻</div>
-                                    <div class="bottom"><span class="num1">116</span>
+                                    <div class="bottom">
+                                        <span class="num1">116</span>
                                         <div id="statistics-chart-23" class="chart">
                                             <div id="highcharts-20f3hdn-29" class="highcharts-container " style="position: relative; overflow: hidden; width: 48px; height: 48px; text-align: left; line-height: normal; z-index: 0; -webkit-tap-highlight-color: rgba(0, 0, 0, 0);"><svg version="1.1" class="highcharts-root" style="font-family:&quot;Lucida Grande&quot;, &quot;Lucida Sans Unicode&quot;, Arial, Helvetica, sans-serif;font-size:12px;" xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 48 48">
                                                     <desc>Created with Highcharts 5.0.14</desc>
@@ -92,13 +98,16 @@
                                                             <g></g>
                                                         </g>
                                                     </g>
-                                                </svg></div>
-                                        </div><span class="num2">113</span>
+                                                </svg>
+                                            </div>
+                                        </div>
+                                        <span class="num2">113</span>
                                     </div>
                                 </div>
                                 <div class="pie-chart statistics-li-24">
                                     <div class="title">危险进攻</div>
-                                    <div class="bottom"><span class="num1">41</span>
+                                    <div class="bottom">
+                                        <span class="num1">41</span>
                                         <div id="statistics-chart-24" class="chart" data-type="24" data-highcharts-chart="5">
                                             <div id="highcharts-20f3hdn-31" class="highcharts-container " style="position: relative; overflow: hidden; width: 48px; height: 48px; text-align: left; line-height: normal; z-index: 0; -webkit-tap-highlight-color: rgba(0, 0, 0, 0);"><svg version="1.1" class="highcharts-root" style="font-family:&quot;Lucida Grande&quot;, &quot;Lucida Sans Unicode&quot;, Arial, Helvetica, sans-serif;font-size:12px;" xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 48 48">
                                                     <desc>Created with Highcharts 5.0.14</desc>
@@ -124,13 +133,16 @@
                                                             <g></g>
                                                         </g>
                                                     </g>
-                                                </svg></div>
-                                        </div><span class="num2">56</span>
+                                                </svg>
+                                            </div>
+                                        </div>
+                                        <span class="num2">56</span>
                                     </div>
                                 </div>
                                 <div class="pie-chart statistics-li-25">
                                     <div class="title">控球</div>
-                                    <div class="bottom"><span class="num1">42</span>
+                                    <div class="bottom">
+                                        <span class="num1">42</span>
                                         <div id="statistics-chart-25" class="chart" data-type="25" data-highcharts-chart="6">
                                             <div id="highcharts-20f3hdn-33" class="highcharts-container " style="position: relative; overflow: hidden; width: 48px; height: 48px; text-align: left; line-height: normal; z-index: 0; -webkit-tap-highlight-color: rgba(0, 0, 0, 0);"><svg version="1.1" class="highcharts-root" style="font-family:&quot;Lucida Grande&quot;, &quot;Lucida Sans Unicode&quot;, Arial, Helvetica, sans-serif;font-size:12px;" xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 48 48">
                                                     <desc>Created with Highcharts 5.0.14</desc>
@@ -156,31 +168,58 @@
                                                             <g></g>
                                                         </g>
                                                     </g>
-                                                </svg></div>
-                                        </div><span class="num2">58</span>
+                                                </svg>
+                                            </div>
+                                        </div>
+                                        <span class="num2">58</span>
                                     </div>
                                 </div>
                             </div>
                             <div class="clearfix display-i-b w-bar-100 m-t-10">
                                 <div class="statistics-left w-bar-27">
-                                    <div class="field statistics-li-2"><span class="icon"><svg class="svg-icon" id="icon-event_corner" viewBox="0 0 1024 1024" width="100%" height="100%"><path d="M0 1018.530491l367.251539-365.733929s326.296428-97.906243 651.284045 371.203438L0 1018.530491z" fill="#64B78D"></path><path d="M830.906989 986.232889H96.994659l308.843908-284.847329 20.71691 22.458597-251.358047 231.832818h655.709559z" fill="#FFFFFF"></path><path d="M458.348906 963.331231c-31.778151-130.59598-124.332017-144.142435-128.253359-144.6517l3.722729-30.326745c4.771815 0.570377 117.237952 15.777037 154.220794 167.757064l-29.690164 7.221381z" fill="#FFFFFF"></path><path d="M102.897043 448.138138h59.018749v534.351652H102.897043z" fill="#E5E2E2"></path><path d="M670.075932 448.138138L102.897043 0v448.138138z" fill="#F44B4B"></path></svg></span> <span class="num1 clearfix">4</span></div>
-                                    <div class="field statistics-li-4"><span class="icon"><svg class="svg-icon" id="icon-event_rc" viewBox="0 0 1024 1024" width="100%" height="100%"><path d="M370.69312 79.63136L140.82048 794.61888l467.21024 149.2736 228.36736-717.9776z" fill="#E74C5B"></path></svg></span> <span class="num1 clearfix">0</span></div>
-                                    <div class="field statistics-li-3"><span class="icon"><svg class="svg-icon" id="icon-event_yc" viewBox="0 0 1024 1024" width="100%" height="100%"><path d="M370.69312 79.63136L140.82048 794.61888l467.21024 149.26848L836.4032 225.91488z" fill="#FDBF04"></path></svg></span> <span class="num1 clearfix">4</span></div>
+                                    <div class="field statistics-li-2">
+                                        <span class="icon">
+                                            <svg class="svg-icon" id="icon-event_corner" viewBox="0 0 1024 1024" width="100%" height="100%"><path d="M0 1018.530491l367.251539-365.733929s326.296428-97.906243 651.284045 371.203438L0 1018.530491z" fill="#64B78D"></path><path d="M830.906989 986.232889H96.994659l308.843908-284.847329 20.71691 22.458597-251.358047 231.832818h655.709559z" fill="#FFFFFF"></path><path d="M458.348906 963.331231c-31.778151-130.59598-124.332017-144.142435-128.253359-144.6517l3.722729-30.326745c4.771815 0.570377 117.237952 15.777037 154.220794 167.757064l-29.690164 7.221381z" fill="#FFFFFF"></path><path d="M102.897043 448.138138h59.018749v534.351652H102.897043z" fill="#E5E2E2"></path><path d="M670.075932 448.138138L102.897043 0v448.138138z" fill="#F44B4B"></path></svg>
+                                        </span>
+                                        <span class="num1 clearfix">4</span>
+                                    </div>
+                                    <div class="field statistics-li-4">
+                                        <span class="icon"><svg class="svg-icon" id="icon-event_rc" viewBox="0 0 1024 1024" width="100%" height="100%"><path d="M370.69312 79.63136L140.82048 794.61888l467.21024 149.2736 228.36736-717.9776z" fill="#E74C5B"></path></svg></span>
+                                        <span class="num1 clearfix">0</span>
+                                    </div>
+                                    <div class="field statistics-li-3">
+                                        <span class="icon"><svg class="svg-icon" id="icon-event_yc" viewBox="0 0 1024 1024" width="100%" height="100%"><path d="M370.69312 79.63136L140.82048 794.61888l467.21024 149.26848L836.4032 225.91488z" fill="#FDBF04"></path></svg></span>
+                                        <span class="num1 clearfix">4</span>
+                                    </div>
                                 </div>
                                 <ul class="statistics-list w-bar-46">
                                     <li class="statistics-li-21">
-                                        <div class="title">射正球门</div><span class="num1">2</span>
-                                        <div class="line"><i class="l1" style="width:25%;"></i> <i class="l2" style="width:75%;"></i></div><span class="num2">6</span>
+                                        <div class="title">射正球门</div>
+                                        <span class="num1">2</span>
+                                        <div class="line"><i class="l1" style="width:25%;"></i> <i class="l2" style="width:75%;"></i></div>
+                                        <span class="num2">6</span>
                                     </li>
                                     <li class="statistics-li-22">
                                         <div class="title">射偏球门</div><span class="num1">11</span>
-                                        <div class="line"><i class="l1" style="width:30.43478260869565%;"></i> <i class="l2" style="width:69.56521739130434%;"></i></div><span class="num2">16</span>
+                                        <div class="line"><i class="l1" style="width:30%;"></i> <i class="l2" style="width:69%;"></i></div>
+                                        <span class="num2">16</span>
                                     </li>
                                 </ul>
                                 <div class="statistics-right w-bar-27">
-                                    <div class="field statistics-li-3"><span class="icon"><svg class="svg-icon" id="icon-event_yc" viewBox="0 0 1024 1024" width="100%" height="100%"><path d="M370.69312 79.63136L140.82048 794.61888l467.21024 149.26848L836.4032 225.91488z" fill="#FDBF04"></path></svg></span> <span class="num2 clearfix">2</span></div>
-                                    <div class="field statistics-li-4"><span class="icon"><svg class="svg-icon" id="icon-event_rc" viewBox="0 0 1024 1024" width="100%" height="100%"><path d="M370.69312 79.63136L140.82048 794.61888l467.21024 149.2736 228.36736-717.9776z" fill="#E74C5B"></path></svg></span> <span class="num2 clearfix">0</span></div>
-                                    <div class="field statistics-li-2"><span class="icon"><svg class="svg-icon" id="icon-event_corner" viewBox="0 0 1024 1024" width="100%" height="100%"><path d="M0 1018.530491l367.251539-365.733929s326.296428-97.906243 651.284045 371.203438L0 1018.530491z" fill="#64B78D"></path><path d="M830.906989 986.232889H96.994659l308.843908-284.847329 20.71691 22.458597-251.358047 231.832818h655.709559z" fill="#FFFFFF"></path><path d="M458.348906 963.331231c-31.778151-130.59598-124.332017-144.142435-128.253359-144.6517l3.722729-30.326745c4.771815 0.570377 117.237952 15.777037 154.220794 167.757064l-29.690164 7.221381z" fill="#FFFFFF"></path><path d="M102.897043 448.138138h59.018749v534.351652H102.897043z" fill="#E5E2E2"></path><path d="M670.075932 448.138138L102.897043 0v448.138138z" fill="#F44B4B"></path></svg></span> <span class="num2 clearfix">9</span></div>
+                                    <div class="field statistics-li-3">
+                                        <span class="icon"><svg class="svg-icon" id="icon-event_yc" viewBox="0 0 1024 1024" width="100%" height="100%"><path d="M370.69312 79.63136L140.82048 794.61888l467.21024 149.26848L836.4032 225.91488z" fill="#FDBF04"></path></svg></span>
+                                        <span class="num2 clearfix">2</span>
+                                    </div>
+                                    <div class="field statistics-li-4">
+                                        <span class="icon"><svg class="svg-icon" id="icon-event_rc" viewBox="0 0 1024 1024" width="100%" height="100%"><path d="M370.69312 79.63136L140.82048 794.61888l467.21024 149.2736 228.36736-717.9776z" fill="#E74C5B"></path></svg></span>
+                                        <span class="num2 clearfix">0</span>
+                                    </div>
+                                    <div class="field statistics-li-2">
+                                        <span class="icon">
+                                            <svg class="svg-icon" id="icon-event_corner" viewBox="0 0 1024 1024" width="100%" height="100%"><path d="M0 1018.530491l367.251539-365.733929s326.296428-97.906243 651.284045 371.203438L0 1018.530491z" fill="#64B78D"></path><path d="M830.906989 986.232889H96.994659l308.843908-284.847329 20.71691 22.458597-251.358047 231.832818h655.709559z" fill="#FFFFFF"></path><path d="M458.348906 963.331231c-31.778151-130.59598-124.332017-144.142435-128.253359-144.6517l3.722729-30.326745c4.771815 0.570377 117.237952 15.777037 154.220794 167.757064l-29.690164 7.221381z" fill="#FFFFFF"></path><path d="M102.897043 448.138138h59.018749v534.351652H102.897043z" fill="#E5E2E2"></path><path d="M670.075932 448.138138L102.897043 0v448.138138z" fill="#F44B4B"></path></svg>
+                                        </span>
+                                        <span class="num2 clearfix">9</span>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -188,34 +227,40 @@
                     <div class="event-list">
                         <div class="title">事件</div>
                         <ul class="list-content">
-                            <li class=""><span class="icon" data-type="0"><svg class="svg-icon" aria-hidden="true">
-                                        <use xlink:href="#icon-event_info"></use>
-                                    </svg></span>
+                            <li class="">
+                                <span class="icon">
+                                    <svg class="svg-icon" viewBox="0 0 1024 1024" width="100%" height="100%"><path d="M370.69312 79.63136L140.82048 794.61888l467.21024 149.26848L836.4032 225.91488z" fill="#FDBF04"></path></svg>
+                                </span>
                                 <div class="contont"><span class="text">1:1 罚牌 70:00 - 79:59</span> <i class="line-after"></i></div>
                             </li>
-                            <li class=""><span class="icon" data-type="0"><svg class="svg-icon" aria-hidden="true">
-                                        <use xlink:href="#icon-event_info"></use>
-                                    </svg></span>
+                            <li class="">
+                                <span class="icon">
+                                    <svg class="svg-icon" viewBox="0 0 1024 1024" width="100%" height="100%"><path d="M370.69312 79.63136L140.82048 794.61888l467.21024 149.26848L836.4032 225.91488z" fill="#FDBF04"></path></svg>
+                                </span>
                                 <div class="contont"><span class="text">0:0 罚牌 00:00 - 09:59</span> <i class="line-after"></i></div>
                             </li>
-                            <li class="home"><span class="icon" data-type="2"><svg class="svg-icon" aria-hidden="true">
-                                        <use xlink:href="#icon-event_corner"></use>
-                                    </svg></span>
+                            <li class="home">
+                                <span class="icon">
+                                    <svg class="svg-icon" viewBox="0 0 1024 1024" width="100%" height="100%"><path d="M0 1018.530491l367.251539-365.733929s326.296428-97.906243 651.284045 371.203438L0 1018.530491z" fill="#64B78D"></path><path d="M830.906989 986.232889H96.994659l308.843908-284.847329 20.71691 22.458597-251.358047 231.832818h655.709559z" fill="#FFFFFF"></path><path d="M458.348906 963.331231c-31.778151-130.59598-124.332017-144.142435-128.253359-144.6517l3.722729-30.326745c4.771815 0.570377 117.237952 15.777037 154.220794 167.757064l-29.690164 7.221381z" fill="#FFFFFF"></path><path d="M102.897043 448.138138h59.018749v534.351652H102.897043z" fill="#E5E2E2"></path><path d="M670.075932 448.138138L102.897043 0v448.138138z" fill="#F44B4B"></path></svg>
+                                </span>
                                 <div class="contont"><span class="text">8' - 比赛第8分钟，斯图加特取得了本场比赛的第1个角球</span> <i class="line-after"></i></div>
                             </li>
-                            <li class=""><span class="icon" data-type="10"><svg class="svg-icon" aria-hidden="true">
-                                        <use xlink:href="#icon-event_start"></use>
-                                    </svg></span>
+                            <li class="">
+                                <span class="icon">
+                                    <svg class="svg-icon" viewBox="0 0 1024 1024" width="100%" height="100%"><path d="M850.55488 731.22304c-13.70112 74.79296-98.39616 220.17024-262.01088 203.99104-362.25024-35.81952-229.09952-429.17888-229.09952-429.17888L54.00064 329.32352l50.90304-126.22848s96.54272 34.71872 214.66112 77.09696c11.87328 4.26496 2.19136 44.74368 14.42304 49.1264 6.05184 2.16576 24.00256 26.16832 50.90816 25.23648 17.32096-0.59904 46.96064-26.65472 50.90304-25.23648 156.83584 56.20224 218.112 72.99584 247.05024 82.5344 169.71776 86.30272 186.9056 214.57408 167.7056 319.37024z m-254.4896-255.1552c-105.73824 0-191.45216 86.02624-191.45216 192.12288 0 106.10688 85.7088 192.12288 191.45216 192.12288 105.74336 0 191.46752-86.02112 191.46752-192.12288-0.00512-106.09152-85.72416-192.12288-191.46752-192.12288z" fill="#BBBBBB"></path><path d="M601.25696 531.29216c77.32224 0 139.99616 62.16704 139.99616 138.8544 0 76.68736-62.67392 138.84928-139.99616 138.84928-77.30688 0-139.98592-62.16704-139.98592-138.84928-0.00512-76.69248 62.67904-138.8544 139.98592-138.8544zM879.95392 894.83264c-49.64864 0-90.05568-39.57248-90.05568-88.21248 0-48.62976 40.40704-88.20224 90.05568-88.20224 49.64352 0 90.04032 39.57248 90.04032 88.20224 0 48.64512-40.39168 88.21248-90.04032 88.21248z m0-130.19136c-24.17664 0-43.83232 18.8416-43.83232 41.97888 0 23.15264 19.66592 41.99424 43.83232 41.99424 24.15104 0 43.82208-18.8416 43.82208-41.99424 0-23.1424-19.67104-41.97888-43.82208-41.97888zM339.16416 287.60064a23.11168 23.11168 0 0 1-22.83008-19.73248l-25.59488-173.21472a23.11168 23.11168 0 0 1 45.72672-6.75328l25.59488 173.21472a23.1168 23.1168 0 0 1-22.89664 26.48576zM457.16992 323.39968a23.12192 23.12192 0 0 1-21.66784-15.06816 23.10656 23.10656 0 0 1 13.61408-29.71136l186.09152-69.18656a23.10656 23.10656 0 0 1 16.11264 43.32032L465.20832 321.9456a23.02464 23.02464 0 0 1-8.0384 1.45408zM412.71808 293.30944a23.11168 23.11168 0 0 1-20.21376-34.28352l94.3616-170.97216a23.0912 23.0912 0 0 1 31.39584-9.06752 23.10144 23.10144 0 0 1 9.07776 31.40096L432.9728 281.36448a23.10144 23.10144 0 0 1-20.25472 11.94496z" fill="#BBBBBB"></path></svg>
+                                </span>
                                 <div class="contont"><span class="text">随着主裁判一声哨响,上半场比赛开始.</span> <i class="line-after"></i></div>
                             </li>
-                            <li class=""><span class="icon" data-type="0"><svg class="svg-icon" aria-hidden="true">
-                                        <use xlink:href="#icon-event_info"></use>
-                                    </svg></span>
+                            <li class="">
+                                <span class="icon" data-type="0">
+                                    <svg class="svg-icon" viewBox="0 0 1024 1024" width="100%" height="100%"><path d="M512.01024 935.08096c-236.7744 0-428.71296-189.41952-428.71296-423.09632 0-233.6512 191.94368-423.0656 428.71296-423.0656 198.74816 0 365.47584 133.71392 413.9776 314.81856l4.41856 17.6128 3.75296 19.53792c3.9936 23.17312 6.53312 46.7968 6.53312 71.0912 0.01536 233.67168-191.92832 423.10144-428.68224 423.10144z m0-32.32256c43.7248 0 85.67808-7.28064 125.01504-20.20864l-85.05344-37.632 21.08928 9.32352-278.61504-66.85184-60.96896-5.13536-31.5904-34.60096-8.98048-5.00224c72.06912 96.92672 187.96032 160.10752 319.104 160.10752z m-240.4352-146.06336l264.60672 64.7936 40.67328-52.66944-120.35584-228.1216-115.57376-16.30208-113.32608 191.104 43.97568 41.19552z m322.43712-8.19712l146.14016 3.90144 100.21888-222.65344-46.39232-98.0992h-265.75872l-54.5536 88.832 120.3456 228.0192z m-405.4528-15.40608l-9.46688-10.37824c2.71872 4.18816 5.30944 8.448 8.20224 12.52864l1.26464-2.1504z m-12.35968-427.84256c-38.07232 59.94496-60.17024 130.74944-60.17024 206.73536 0 55.80288 12.17024 108.66688 33.58208 156.63616l58.49088 31.54944 108.4672-182.9376-4.73088-79.60064-133.27872-113.664-2.36032-18.71872z m11.07968-16.0256l122.25024 109.80864-0.95744-16.12288 39.79264-30.40256c29.03552-54.12352 90.8544-167.27552 132.80256-229.72416a396.544 396.544 0 0 0-293.888 166.44096z m446.65856-148.63872l-120.22784 1.81248-6.51776-5.82656-103.76192 173.86496 32.73728-25.0112 107.01312 121.84576h256.96256l55.05024-89.50272c-48.53248-83.23584-127.18592-147.06176-221.25568-177.18272z m226.688 404.18304l-112.86016 250.7776 3.24608 27.904-83.6864 48.00512c132.42368-55.808 227.77856-180.72576 239.41632-328.86784l-46.11584 2.18112z" fill="#ccc"></path></svg>
+                                </span>
                                 <div class="contont"><span class="text">本场比赛场地情况：良好</span> <i class="line-after"></i></div>
                             </li>
-                            <li class=""><span class="icon" data-type="0"><svg class="svg-icon" aria-hidden="true">
-                                        <use xlink:href="#icon-event_info"></use>
-                                    </svg></span>
+                            <li class="">
+                                <span class="icon" data-type="0">
+                                    <svg class="svg-icon" viewBox="0 0 1024 1024" width="100%" height="100%"><path d="M901.98528 885.76c0 76.34944-61.89056 138.24-138.24 138.24H263.8848c-76.34944 0-138.24-61.89056-138.24-138.24V138.24c0-76.34944 61.89056-138.24 138.24-138.24h499.86048c76.34944 0 138.24 61.89056 138.24 138.24v747.52z" fill="#CCCCCC"></path><path d="M614.69184 1.18784V265.6768h287.29344s-0.99328-85.888-0.99328-137.01632S830.77632 0 793.96352 0s-179.27168 1.18784-179.27168 1.18784z" fill="#DDDDDD"></path><path d="M901.66784 472.89856l0.31744-207.22176h-287.29344z" fill="#AAAAAA"></path><path d="M614.69184 390.07744a39.8848 39.8848 0 0 1-39.87968 39.87968H267.37664a39.8848 39.8848 0 0 1 0-79.75936h307.4304a39.8848 39.8848 0 0 1 39.8848 39.87968zM716.93824 555.7248a40.56064 40.56064 0 0 1-40.56064 40.56064h-408.32a40.56064 40.56064 0 0 1 0-81.12128h408.32a40.56064 40.56064 0 0 1 40.56064 40.56064zM716.93824 717.96224a41.92256 41.92256 0 0 1-41.92256 41.92256H269.42464a41.92768 41.92768 0 0 1 0-83.84512h405.59616a41.92256 41.92256 0 0 1 41.91744 41.92256z" fill="#FFFFFF"></path></svg>
+                                </span>
                                 <div class="contont"><span class="text">大家好,欢迎收看雷速体育直播,球员们正在热身,比赛即将开始</span> <i class="line-after"></i></div>
                             </li>
                         </ul>
@@ -223,20 +268,33 @@
                 </div>
                 <div class="tooltip ">
                     <div class="btn" onclick="$('.tooltip .find').addClass('show')">?</div>
-                    <div class="find"><span class="closed iconfont icon-next" onclick="$('.tooltip .find').removeClass('show')"></span>
+                    <div class="find">
+                        <span class="closed iconfont icon-next" onclick="$('.tooltip .find').removeClass('show')"></span>
                         <ul class="list">
-                            <li class="o-hidden"><span class="icon"><svg class="svg-icon" aria-hidden="true">
-                                        <use xlink:href="#icon-event_goal"></use>
-                                    </svg></span> 进球</li>
-                            <li class="o-hidden"><span class="icon"><svg class="svg-icon" aria-hidden="true">
-                                        <use xlink:href="#icon-event_pkgoal"></use>
-                                    </svg></span> 点球</li>
-                            <li class="o-hidden"><span class="icon"><svg class="svg-icon" aria-hidden="true">
+                            <li class="o-hidden">
+                                <span class="icon">
+                                    <svg class="svg-icon" viewBox="0 0 1024 1024" width="100%" height="100%"><path d="M512.01024 935.08096c-236.7744 0-428.71296-189.41952-428.71296-423.09632 0-233.6512 191.94368-423.0656 428.71296-423.0656 198.74816 0 365.47584 133.71392 413.9776 314.81856l4.41856 17.6128 3.75296 19.53792c3.9936 23.17312 6.53312 46.7968 6.53312 71.0912 0.01536 233.67168-191.92832 423.10144-428.68224 423.10144z m0-32.32256c43.7248 0 85.67808-7.28064 125.01504-20.20864l-85.05344-37.632 21.08928 9.32352-278.61504-66.85184-60.96896-5.13536-31.5904-34.60096-8.98048-5.00224c72.06912 96.92672 187.96032 160.10752 319.104 160.10752z m-240.4352-146.06336l264.60672 64.7936 40.67328-52.66944-120.35584-228.1216-115.57376-16.30208-113.32608 191.104 43.97568 41.19552z m322.43712-8.19712l146.14016 3.90144 100.21888-222.65344-46.39232-98.0992h-265.75872l-54.5536 88.832 120.3456 228.0192z m-405.4528-15.40608l-9.46688-10.37824c2.71872 4.18816 5.30944 8.448 8.20224 12.52864l1.26464-2.1504z m-12.35968-427.84256c-38.07232 59.94496-60.17024 130.74944-60.17024 206.73536 0 55.80288 12.17024 108.66688 33.58208 156.63616l58.49088 31.54944 108.4672-182.9376-4.73088-79.60064-133.27872-113.664-2.36032-18.71872z m11.07968-16.0256l122.25024 109.80864-0.95744-16.12288 39.79264-30.40256c29.03552-54.12352 90.8544-167.27552 132.80256-229.72416a396.544 396.544 0 0 0-293.888 166.44096z m446.65856-148.63872l-120.22784 1.81248-6.51776-5.82656-103.76192 173.86496 32.73728-25.0112 107.01312 121.84576h256.96256l55.05024-89.50272c-48.53248-83.23584-127.18592-147.06176-221.25568-177.18272z m226.688 404.18304l-112.86016 250.7776 3.24608 27.904-83.6864 48.00512c132.42368-55.808 227.77856-180.72576 239.41632-328.86784l-46.11584 2.18112z" fill="#ccc"></path></svg>
+                                </span> 进球
+                            </li>
+                            <li class="o-hidden">
+                                <span class="icon">
+                                    <svg id="icon-event_pkgoal" viewBox="0 0 1024 1024" width="100%" height="100%"><path d="M493.184 910.59712c-228.49536 0-413.73184-182.79936-413.73184-408.30464 0-225.4848 185.23648-408.27904 413.73184-408.27904 191.81056 0 352.70656 129.03936 399.5136 303.81568l7.88992 11.24864v24.60672c3.8656 22.36416 6.31296 45.16352 6.31296 68.608 0.00512 225.50016-185.23648 408.30464-413.71648 408.30464z m0-31.18592c42.19392 0 82.68288-7.01952 120.64256-19.5072l-82.0736-36.31104 20.34688 9.00096-268.8768-64.51712-58.83904-4.95104-30.48448-33.3824-8.66816-4.82816c69.55008 93.52704 181.39136 154.496 307.95264 154.496z m-232.02816-140.95872l255.35488 62.53056 39.26016-50.83136-116.15232-220.14976-111.5392-15.72352-109.3632 184.42752 42.43968 39.74656z m311.16288-7.9104l141.0304 3.7632 96.72192-214.87616-44.76928-94.6688H508.83072L456.18176 510.48448l116.13696 220.0576z m-391.28064-14.8736l-9.13408-10.02496c2.62656 4.04992 5.12 8.16128 7.91552 12.09856l1.21856-2.0736z m-11.9296-412.88704c-36.74112 57.85088-58.07104 126.17728-58.07104 199.51104 0 53.85216 11.74528 104.86784 32.4096 151.15776l56.448 30.44864 104.6784-176.54784-4.56704-76.82048-128.61952-109.69088-2.2784-18.05824z m10.69056-15.46752L297.7792 393.28768l-0.9216-15.55968 38.4-29.34272c28.02176-52.23424 87.68-161.42848 128.16384-221.696a382.70464 382.70464 0 0 0-283.6224 160.62464zM610.85696 143.872l-116.02944 1.75104-6.29248-5.62176-100.13184 167.7824 31.5904-24.13568 103.2704 117.58592h247.97696l53.13024-86.3744c-46.83264-80.32768-122.73152-141.92128-213.51424-170.98752z m218.75712 390.05696l-108.91776 242.0224 3.13344 26.92608-80.75776 46.336c127.80032-53.8624 219.81696-174.4128 231.04512-317.38368l-44.50304 2.0992z" fill="#333333"></path><path d="M702.02368 693.06368m-243.06176 0a243.06176 243.06176 0 1 0 486.12352 0 243.06176 243.06176 0 1 0-486.12352 0Z" fill="#62AE87"></path><path d="M512.74752 805.7344v-222.32576h83.86048c14.76096 0 26.0352 0.71168 33.8176 2.11968 10.91584 1.82272 20.06528 5.28384 27.44832 10.3936 7.3728 5.09952 13.31712 12.25728 17.8176 21.4528 4.49536 9.20064 6.74816 19.31264 6.74816 30.336 0 18.90304-6.02112 34.89792-18.048 47.99488s-33.77152 19.6352-65.20832 19.6352h-57.02144v90.38848h-29.4144z m29.42464-116.62336h57.47712c19.00544 0 32.50688-3.5328 40.48896-10.61376 7.99232-7.07072 11.97568-17.03424 11.97568-29.8752 0-9.2928-2.35008-17.25952-7.04512-23.8848-4.70528-6.61504-10.89536-10.99264-18.58048-13.11744-4.95616-1.31584-14.1056-1.97632-27.44832-1.97632h-56.86272v79.46752zM718.6944 805.7344v-222.32576h29.41952v110.25408l110.40256-110.25408h39.88992l-93.27104 90.0864 97.36704 132.23936h-38.82496l-79.16544-112.53248-36.39296 35.48672v77.04576h-29.42464z" fill="#FFFFFF"></path></svg>
+                                </span> 点球
+                            </li>
+                            <li class="o-hidden">
+                                <span class="icon">
+                                    <svg class="svg-icon" aria-hidden="true">
                                         <use xlink:href="#icon-event_corner"></use>
-                                    </svg></span> 角球</li>
-                            <li class="o-hidden"><span class="icon"><svg class="svg-icon" aria-hidden="true">
-                                        <use xlink:href="#icon-event_placekick"></use>
-                                    </svg></span> 任意球</li>
+                                    </svg>
+                                </span> 角球
+                            </li>
+                            <li class="o-hidden">
+                                <span class="icon">
+                                    <svg class="svg-icon" aria-hidden="true">
+                                        <use xlink:href="#icon-event_corner"></use>
+                                    </svg>
+                                </span> 任意球
+                                </li>
                             <li class="o-hidden"><span class="icon"><svg class="svg-icon" aria-hidden="true">
                                         <use xlink:href="#icon-event_outball"></use>
                                     </svg></span> 界外球</li>
@@ -263,41 +321,7 @@
         
     </div>
 </div>
-<!-- footer start -->
-<div class="footer">
-    <ul>
-        <li>
-            <a href="#">
-                <img src="assets/images/ico-nav-1.png">
-                <span>社区</span>
-            </a>
-        </li>
-        <li class="active">
-            <a href="#">
-                <img src="assets/images/ico-nav-2.png">
-                <span>赛事</span>
-            </a>
-        </li>
-        <li>
-            <a href="#">
-                <img src="assets/images/ico-nav-3.png">
-                <span>充值</span>
-            </a>
-        </li>
-        <li>
-            <a href="#">
-                <img src="assets/images/ico-nav-4.png">
-                <span>大数据</span>
-            </a>
-        </li>
-        <li>
-            <a href="#">
-                <img src="assets/images/ico-nav-5.png">
-                <span>我的</span>
-            </a>
-        </li>
-    </ul>
-</div>
+
 <!-- footer end -->
 <!-- 返回顶部 -->
 <a href="javascript:" target="_parent" class="gotop"></a>
