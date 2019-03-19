@@ -9,12 +9,12 @@
     <link rel="stylesheet" href="assets/css/swiper.min.css">
     <link rel="stylesheet" href="assets/css/common.css">
     <link rel="stylesheet" href="assets/css/time-axis.css">
+    <link rel="stylesheet" href="assets/css/message.css">    
     <link rel="stylesheet" href="assets/css/saishi-detail.css">
     <script type="text/javascript" src="assets/js/jquery.min.js"></script>
     <script type="text/javascript" src="assets/js/common.js"></script>
 </head>
 <!-- header start -->
-
 <div class="viewport">
     <div class="fixed-top-panel" style="height: 259.354px;">
         <div class="fixed-top" style="height: 259.354px;">
@@ -59,11 +59,10 @@
             </ul>
         </div>
     </div>
-    <div class="detail-nav-content">
+    <div class="detail-nav-content" id="detail-nav-content">
         <div class="field active-obj" style="min-height: 347px;">
             <div class="field-view zhibo">
                 <div class="clearfix m-l-10 m-r-10 m-t-10">
-                    
                     <div class="technical-statistics">
                         <span class="home-name">斯图加特</span>
                         <span class="away-name">霍芬海姆</span>
@@ -74,7 +73,8 @@
                                     <div class="bottom">
                                         <span class="num1">116</span>
                                         <div id="statistics-chart-23" class="chart">
-                                            <div id="highcharts-20f3hdn-29" class="highcharts-container " style="position: relative; overflow: hidden; width: 48px; height: 48px; text-align: left; line-height: normal; z-index: 0; -webkit-tap-highlight-color: rgba(0, 0, 0, 0);"><svg version="1.1" class="highcharts-root" style="font-family:&quot;Lucida Grande&quot;, &quot;Lucida Sans Unicode&quot;, Arial, Helvetica, sans-serif;font-size:12px;" xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 48 48">
+                                            <div id="highcharts-20f3hdn-29" class="highcharts-container " style="position: relative; overflow: hidden; width: 48px; height: 48px; text-align: left; line-height: normal; z-index: 0; -webkit-tap-highlight-color: rgba(0, 0, 0, 0);">
+                                                <svg version="1.1" class="highcharts-root" style="font-family:&quot;Lucida Grande&quot;, &quot;Lucida Sans Unicode&quot;, Arial, Helvetica, sans-serif;font-size:12px;" xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 48 48">
                                                     <desc>Created with Highcharts 5.0.14</desc>
                                                     <defs>
                                                         <clipPath id="highcharts-20f3hdn-30">
@@ -109,7 +109,8 @@
                                     <div class="bottom">
                                         <span class="num1">41</span>
                                         <div id="statistics-chart-24" class="chart" data-type="24" data-highcharts-chart="5">
-                                            <div id="highcharts-20f3hdn-31" class="highcharts-container " style="position: relative; overflow: hidden; width: 48px; height: 48px; text-align: left; line-height: normal; z-index: 0; -webkit-tap-highlight-color: rgba(0, 0, 0, 0);"><svg version="1.1" class="highcharts-root" style="font-family:&quot;Lucida Grande&quot;, &quot;Lucida Sans Unicode&quot;, Arial, Helvetica, sans-serif;font-size:12px;" xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 48 48">
+                                            <div id="highcharts-20f3hdn-31" class="highcharts-container " style="position: relative; overflow: hidden; width: 48px; height: 48px; text-align: left; line-height: normal; z-index: 0; -webkit-tap-highlight-color: rgba(0, 0, 0, 0);">
+                                                <svg version="1.1" class="highcharts-root" style="font-family:&quot;Lucida Grande&quot;, &quot;Lucida Sans Unicode&quot;, Arial, Helvetica, sans-serif;font-size:12px;" xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 48 48">
                                                     <desc>Created with Highcharts 5.0.14</desc>
                                                     <defs>
                                                         <clipPath id="highcharts-20f3hdn-32">
@@ -144,7 +145,8 @@
                                     <div class="bottom">
                                         <span class="num1">42</span>
                                         <div id="statistics-chart-25" class="chart" data-type="25" data-highcharts-chart="6">
-                                            <div id="highcharts-20f3hdn-33" class="highcharts-container " style="position: relative; overflow: hidden; width: 48px; height: 48px; text-align: left; line-height: normal; z-index: 0; -webkit-tap-highlight-color: rgba(0, 0, 0, 0);"><svg version="1.1" class="highcharts-root" style="font-family:&quot;Lucida Grande&quot;, &quot;Lucida Sans Unicode&quot;, Arial, Helvetica, sans-serif;font-size:12px;" xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 48 48">
+                                            <div id="highcharts-20f3hdn-33" class="highcharts-container " style="position: relative; overflow: hidden; width: 48px; height: 48px; text-align: left; line-height: normal; z-index: 0; -webkit-tap-highlight-color: rgba(0, 0, 0, 0);">
+                                                <svg version="1.1" class="highcharts-root" style="font-family:&quot;Lucida Grande&quot;, &quot;Lucida Sans Unicode&quot;, Arial, Helvetica, sans-serif;font-size:12px;" xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 48 48">
                                                     <desc>Created with Highcharts 5.0.14</desc>
                                                     <defs>
                                                         <clipPath id="highcharts-20f3hdn-34">
@@ -179,16 +181,20 @@
                                 <div class="statistics-left w-bar-27">
                                     <div class="field statistics-li-2">
                                         <span class="icon">
-                                            <svg class="svg-icon" id="icon-event_corner" viewBox="0 0 1024 1024" width="100%" height="100%"><path d="M0 1018.530491l367.251539-365.733929s326.296428-97.906243 651.284045 371.203438L0 1018.530491z" fill="#64B78D"></path><path d="M830.906989 986.232889H96.994659l308.843908-284.847329 20.71691 22.458597-251.358047 231.832818h655.709559z" fill="#FFFFFF"></path><path d="M458.348906 963.331231c-31.778151-130.59598-124.332017-144.142435-128.253359-144.6517l3.722729-30.326745c4.771815 0.570377 117.237952 15.777037 154.220794 167.757064l-29.690164 7.221381z" fill="#FFFFFF"></path><path d="M102.897043 448.138138h59.018749v534.351652H102.897043z" fill="#E5E2E2"></path><path d="M670.075932 448.138138L102.897043 0v448.138138z" fill="#F44B4B"></path></svg>
+                                            <img class="svg-icon" src="assets/images/icon_event_corner.svg">
                                         </span>
                                         <span class="num1 clearfix">4</span>
                                     </div>
                                     <div class="field statistics-li-4">
-                                        <span class="icon"><svg class="svg-icon" id="icon-event_rc" viewBox="0 0 1024 1024" width="100%" height="100%"><path d="M370.69312 79.63136L140.82048 794.61888l467.21024 149.2736 228.36736-717.9776z" fill="#E74C5B"></path></svg></span>
+                                        <span class="icon">
+                                            <img class="svg-icon" src="assets/images/icon_event_rc.svg">
+                                        </span>
                                         <span class="num1 clearfix">0</span>
                                     </div>
                                     <div class="field statistics-li-3">
-                                        <span class="icon"><svg class="svg-icon" id="icon-event_yc" viewBox="0 0 1024 1024" width="100%" height="100%"><path d="M370.69312 79.63136L140.82048 794.61888l467.21024 149.26848L836.4032 225.91488z" fill="#FDBF04"></path></svg></span>
+                                        <span class="icon">
+                                            <img class="svg-icon" src="assets/images/icon_event_yc.svg">
+                                        </span>
                                         <span class="num1 clearfix">4</span>
                                     </div>
                                 </div>
@@ -207,16 +213,20 @@
                                 </ul>
                                 <div class="statistics-right w-bar-27">
                                     <div class="field statistics-li-3">
-                                        <span class="icon"><svg class="svg-icon" id="icon-event_yc" viewBox="0 0 1024 1024" width="100%" height="100%"><path d="M370.69312 79.63136L140.82048 794.61888l467.21024 149.26848L836.4032 225.91488z" fill="#FDBF04"></path></svg></span>
+                                        <span class="icon">
+                                            <img class="svg-icon" src="assets/images/icon_event_yc.svg">
+                                        </span>
                                         <span class="num2 clearfix">2</span>
                                     </div>
                                     <div class="field statistics-li-4">
-                                        <span class="icon"><svg class="svg-icon" id="icon-event_rc" viewBox="0 0 1024 1024" width="100%" height="100%"><path d="M370.69312 79.63136L140.82048 794.61888l467.21024 149.2736 228.36736-717.9776z" fill="#E74C5B"></path></svg></span>
+                                        <span class="icon">
+                                            <img class="svg-icon" src="assets/images/icon_event_rc.svg">
+                                        </span>
                                         <span class="num2 clearfix">0</span>
                                     </div>
                                     <div class="field statistics-li-2">
                                         <span class="icon">
-                                            <svg class="svg-icon" id="icon-event_corner" viewBox="0 0 1024 1024" width="100%" height="100%"><path d="M0 1018.530491l367.251539-365.733929s326.296428-97.906243 651.284045 371.203438L0 1018.530491z" fill="#64B78D"></path><path d="M830.906989 986.232889H96.994659l308.843908-284.847329 20.71691 22.458597-251.358047 231.832818h655.709559z" fill="#FFFFFF"></path><path d="M458.348906 963.331231c-31.778151-130.59598-124.332017-144.142435-128.253359-144.6517l3.722729-30.326745c4.771815 0.570377 117.237952 15.777037 154.220794 167.757064l-29.690164 7.221381z" fill="#FFFFFF"></path><path d="M102.897043 448.138138h59.018749v534.351652H102.897043z" fill="#E5E2E2"></path><path d="M670.075932 448.138138L102.897043 0v448.138138z" fill="#F44B4B"></path></svg>
+                                            <img class="svg-icon" src="assets/images/icon_event_corner.svg">
                                         </span>
                                         <span class="num2 clearfix">9</span>
                                     </div>
@@ -229,37 +239,37 @@
                         <ul class="list-content">
                             <li class="">
                                 <span class="icon">
-                                    <svg class="svg-icon" viewBox="0 0 1024 1024" width="100%" height="100%"><path d="M370.69312 79.63136L140.82048 794.61888l467.21024 149.26848L836.4032 225.91488z" fill="#FDBF04"></path></svg>
+                                    <img class="svg-icon" src="assets/images/icon_event_yc.svg">
                                 </span>
                                 <div class="contont"><span class="text">1:1 罚牌 70:00 - 79:59</span> <i class="line-after"></i></div>
                             </li>
                             <li class="">
                                 <span class="icon">
-                                    <svg class="svg-icon" viewBox="0 0 1024 1024" width="100%" height="100%"><path d="M370.69312 79.63136L140.82048 794.61888l467.21024 149.26848L836.4032 225.91488z" fill="#FDBF04"></path></svg>
+                                    <img class="svg-icon" src="assets/images/icon_event_yc.svg">
                                 </span>
                                 <div class="contont"><span class="text">0:0 罚牌 00:00 - 09:59</span> <i class="line-after"></i></div>
                             </li>
                             <li class="home">
                                 <span class="icon">
-                                    <svg class="svg-icon" viewBox="0 0 1024 1024" width="100%" height="100%"><path d="M0 1018.530491l367.251539-365.733929s326.296428-97.906243 651.284045 371.203438L0 1018.530491z" fill="#64B78D"></path><path d="M830.906989 986.232889H96.994659l308.843908-284.847329 20.71691 22.458597-251.358047 231.832818h655.709559z" fill="#FFFFFF"></path><path d="M458.348906 963.331231c-31.778151-130.59598-124.332017-144.142435-128.253359-144.6517l3.722729-30.326745c4.771815 0.570377 117.237952 15.777037 154.220794 167.757064l-29.690164 7.221381z" fill="#FFFFFF"></path><path d="M102.897043 448.138138h59.018749v534.351652H102.897043z" fill="#E5E2E2"></path><path d="M670.075932 448.138138L102.897043 0v448.138138z" fill="#F44B4B"></path></svg>
+                                    <img class="svg-icon" src="assets/images/icon_event_corner.svg">
                                 </span>
                                 <div class="contont"><span class="text">8' - 比赛第8分钟，斯图加特取得了本场比赛的第1个角球</span> <i class="line-after"></i></div>
                             </li>
                             <li class="">
                                 <span class="icon">
-                                    <svg class="svg-icon" viewBox="0 0 1024 1024" width="100%" height="100%"><path d="M850.55488 731.22304c-13.70112 74.79296-98.39616 220.17024-262.01088 203.99104-362.25024-35.81952-229.09952-429.17888-229.09952-429.17888L54.00064 329.32352l50.90304-126.22848s96.54272 34.71872 214.66112 77.09696c11.87328 4.26496 2.19136 44.74368 14.42304 49.1264 6.05184 2.16576 24.00256 26.16832 50.90816 25.23648 17.32096-0.59904 46.96064-26.65472 50.90304-25.23648 156.83584 56.20224 218.112 72.99584 247.05024 82.5344 169.71776 86.30272 186.9056 214.57408 167.7056 319.37024z m-254.4896-255.1552c-105.73824 0-191.45216 86.02624-191.45216 192.12288 0 106.10688 85.7088 192.12288 191.45216 192.12288 105.74336 0 191.46752-86.02112 191.46752-192.12288-0.00512-106.09152-85.72416-192.12288-191.46752-192.12288z" fill="#BBBBBB"></path><path d="M601.25696 531.29216c77.32224 0 139.99616 62.16704 139.99616 138.8544 0 76.68736-62.67392 138.84928-139.99616 138.84928-77.30688 0-139.98592-62.16704-139.98592-138.84928-0.00512-76.69248 62.67904-138.8544 139.98592-138.8544zM879.95392 894.83264c-49.64864 0-90.05568-39.57248-90.05568-88.21248 0-48.62976 40.40704-88.20224 90.05568-88.20224 49.64352 0 90.04032 39.57248 90.04032 88.20224 0 48.64512-40.39168 88.21248-90.04032 88.21248z m0-130.19136c-24.17664 0-43.83232 18.8416-43.83232 41.97888 0 23.15264 19.66592 41.99424 43.83232 41.99424 24.15104 0 43.82208-18.8416 43.82208-41.99424 0-23.1424-19.67104-41.97888-43.82208-41.97888zM339.16416 287.60064a23.11168 23.11168 0 0 1-22.83008-19.73248l-25.59488-173.21472a23.11168 23.11168 0 0 1 45.72672-6.75328l25.59488 173.21472a23.1168 23.1168 0 0 1-22.89664 26.48576zM457.16992 323.39968a23.12192 23.12192 0 0 1-21.66784-15.06816 23.10656 23.10656 0 0 1 13.61408-29.71136l186.09152-69.18656a23.10656 23.10656 0 0 1 16.11264 43.32032L465.20832 321.9456a23.02464 23.02464 0 0 1-8.0384 1.45408zM412.71808 293.30944a23.11168 23.11168 0 0 1-20.21376-34.28352l94.3616-170.97216a23.0912 23.0912 0 0 1 31.39584-9.06752 23.10144 23.10144 0 0 1 9.07776 31.40096L432.9728 281.36448a23.10144 23.10144 0 0 1-20.25472 11.94496z" fill="#BBBBBB"></path></svg>
+                                    <img class="svg-icon" src="assets/images/icon_event_start.svg">
                                 </span>
                                 <div class="contont"><span class="text">随着主裁判一声哨响,上半场比赛开始.</span> <i class="line-after"></i></div>
                             </li>
                             <li class="">
                                 <span class="icon" data-type="0">
-                                    <svg class="svg-icon" viewBox="0 0 1024 1024" width="100%" height="100%"><path d="M512.01024 935.08096c-236.7744 0-428.71296-189.41952-428.71296-423.09632 0-233.6512 191.94368-423.0656 428.71296-423.0656 198.74816 0 365.47584 133.71392 413.9776 314.81856l4.41856 17.6128 3.75296 19.53792c3.9936 23.17312 6.53312 46.7968 6.53312 71.0912 0.01536 233.67168-191.92832 423.10144-428.68224 423.10144z m0-32.32256c43.7248 0 85.67808-7.28064 125.01504-20.20864l-85.05344-37.632 21.08928 9.32352-278.61504-66.85184-60.96896-5.13536-31.5904-34.60096-8.98048-5.00224c72.06912 96.92672 187.96032 160.10752 319.104 160.10752z m-240.4352-146.06336l264.60672 64.7936 40.67328-52.66944-120.35584-228.1216-115.57376-16.30208-113.32608 191.104 43.97568 41.19552z m322.43712-8.19712l146.14016 3.90144 100.21888-222.65344-46.39232-98.0992h-265.75872l-54.5536 88.832 120.3456 228.0192z m-405.4528-15.40608l-9.46688-10.37824c2.71872 4.18816 5.30944 8.448 8.20224 12.52864l1.26464-2.1504z m-12.35968-427.84256c-38.07232 59.94496-60.17024 130.74944-60.17024 206.73536 0 55.80288 12.17024 108.66688 33.58208 156.63616l58.49088 31.54944 108.4672-182.9376-4.73088-79.60064-133.27872-113.664-2.36032-18.71872z m11.07968-16.0256l122.25024 109.80864-0.95744-16.12288 39.79264-30.40256c29.03552-54.12352 90.8544-167.27552 132.80256-229.72416a396.544 396.544 0 0 0-293.888 166.44096z m446.65856-148.63872l-120.22784 1.81248-6.51776-5.82656-103.76192 173.86496 32.73728-25.0112 107.01312 121.84576h256.96256l55.05024-89.50272c-48.53248-83.23584-127.18592-147.06176-221.25568-177.18272z m226.688 404.18304l-112.86016 250.7776 3.24608 27.904-83.6864 48.00512c132.42368-55.808 227.77856-180.72576 239.41632-328.86784l-46.11584 2.18112z" fill="#ccc"></path></svg>
+                                    <img class="svg-icon" src="assets/images/icon_event_yc.svg">
                                 </span>
                                 <div class="contont"><span class="text">本场比赛场地情况：良好</span> <i class="line-after"></i></div>
                             </li>
                             <li class="">
                                 <span class="icon" data-type="0">
-                                    <svg class="svg-icon" viewBox="0 0 1024 1024" width="100%" height="100%"><path d="M901.98528 885.76c0 76.34944-61.89056 138.24-138.24 138.24H263.8848c-76.34944 0-138.24-61.89056-138.24-138.24V138.24c0-76.34944 61.89056-138.24 138.24-138.24h499.86048c76.34944 0 138.24 61.89056 138.24 138.24v747.52z" fill="#CCCCCC"></path><path d="M614.69184 1.18784V265.6768h287.29344s-0.99328-85.888-0.99328-137.01632S830.77632 0 793.96352 0s-179.27168 1.18784-179.27168 1.18784z" fill="#DDDDDD"></path><path d="M901.66784 472.89856l0.31744-207.22176h-287.29344z" fill="#AAAAAA"></path><path d="M614.69184 390.07744a39.8848 39.8848 0 0 1-39.87968 39.87968H267.37664a39.8848 39.8848 0 0 1 0-79.75936h307.4304a39.8848 39.8848 0 0 1 39.8848 39.87968zM716.93824 555.7248a40.56064 40.56064 0 0 1-40.56064 40.56064h-408.32a40.56064 40.56064 0 0 1 0-81.12128h408.32a40.56064 40.56064 0 0 1 40.56064 40.56064zM716.93824 717.96224a41.92256 41.92256 0 0 1-41.92256 41.92256H269.42464a41.92768 41.92768 0 0 1 0-83.84512h405.59616a41.92256 41.92256 0 0 1 41.91744 41.92256z" fill="#FFFFFF"></path></svg>
+                                    <img class="svg-icon" src="assets/images/icon_event_goal.svg">
                                 </span>
                                 <div class="contont"><span class="text">大家好,欢迎收看雷速体育直播,球员们正在热身,比赛即将开始</span> <i class="line-after"></i></div>
                             </li>
@@ -269,65 +279,1072 @@
                 <div class="tooltip ">
                     <div class="btn" onclick="$('.tooltip .find').addClass('show')">?</div>
                     <div class="find">
-                        <span class="closed iconfont icon-next" onclick="$('.tooltip .find').removeClass('show')"></span>
+                        <span class="closed ico-back" onclick="$('.tooltip .find').removeClass('show')"></span>
                         <ul class="list">
                             <li class="o-hidden">
                                 <span class="icon">
-                                    <svg class="svg-icon" viewBox="0 0 1024 1024" width="100%" height="100%"><path d="M512.01024 935.08096c-236.7744 0-428.71296-189.41952-428.71296-423.09632 0-233.6512 191.94368-423.0656 428.71296-423.0656 198.74816 0 365.47584 133.71392 413.9776 314.81856l4.41856 17.6128 3.75296 19.53792c3.9936 23.17312 6.53312 46.7968 6.53312 71.0912 0.01536 233.67168-191.92832 423.10144-428.68224 423.10144z m0-32.32256c43.7248 0 85.67808-7.28064 125.01504-20.20864l-85.05344-37.632 21.08928 9.32352-278.61504-66.85184-60.96896-5.13536-31.5904-34.60096-8.98048-5.00224c72.06912 96.92672 187.96032 160.10752 319.104 160.10752z m-240.4352-146.06336l264.60672 64.7936 40.67328-52.66944-120.35584-228.1216-115.57376-16.30208-113.32608 191.104 43.97568 41.19552z m322.43712-8.19712l146.14016 3.90144 100.21888-222.65344-46.39232-98.0992h-265.75872l-54.5536 88.832 120.3456 228.0192z m-405.4528-15.40608l-9.46688-10.37824c2.71872 4.18816 5.30944 8.448 8.20224 12.52864l1.26464-2.1504z m-12.35968-427.84256c-38.07232 59.94496-60.17024 130.74944-60.17024 206.73536 0 55.80288 12.17024 108.66688 33.58208 156.63616l58.49088 31.54944 108.4672-182.9376-4.73088-79.60064-133.27872-113.664-2.36032-18.71872z m11.07968-16.0256l122.25024 109.80864-0.95744-16.12288 39.79264-30.40256c29.03552-54.12352 90.8544-167.27552 132.80256-229.72416a396.544 396.544 0 0 0-293.888 166.44096z m446.65856-148.63872l-120.22784 1.81248-6.51776-5.82656-103.76192 173.86496 32.73728-25.0112 107.01312 121.84576h256.96256l55.05024-89.50272c-48.53248-83.23584-127.18592-147.06176-221.25568-177.18272z m226.688 404.18304l-112.86016 250.7776 3.24608 27.904-83.6864 48.00512c132.42368-55.808 227.77856-180.72576 239.41632-328.86784l-46.11584 2.18112z" fill="#ccc"></path></svg>
+                                    <img class="svg-icon" src="assets/images/icon_event_goal.svg">
                                 </span> 进球
                             </li>
                             <li class="o-hidden">
                                 <span class="icon">
-                                    <svg id="icon-event_pkgoal" viewBox="0 0 1024 1024" width="100%" height="100%"><path d="M493.184 910.59712c-228.49536 0-413.73184-182.79936-413.73184-408.30464 0-225.4848 185.23648-408.27904 413.73184-408.27904 191.81056 0 352.70656 129.03936 399.5136 303.81568l7.88992 11.24864v24.60672c3.8656 22.36416 6.31296 45.16352 6.31296 68.608 0.00512 225.50016-185.23648 408.30464-413.71648 408.30464z m0-31.18592c42.19392 0 82.68288-7.01952 120.64256-19.5072l-82.0736-36.31104 20.34688 9.00096-268.8768-64.51712-58.83904-4.95104-30.48448-33.3824-8.66816-4.82816c69.55008 93.52704 181.39136 154.496 307.95264 154.496z m-232.02816-140.95872l255.35488 62.53056 39.26016-50.83136-116.15232-220.14976-111.5392-15.72352-109.3632 184.42752 42.43968 39.74656z m311.16288-7.9104l141.0304 3.7632 96.72192-214.87616-44.76928-94.6688H508.83072L456.18176 510.48448l116.13696 220.0576z m-391.28064-14.8736l-9.13408-10.02496c2.62656 4.04992 5.12 8.16128 7.91552 12.09856l1.21856-2.0736z m-11.9296-412.88704c-36.74112 57.85088-58.07104 126.17728-58.07104 199.51104 0 53.85216 11.74528 104.86784 32.4096 151.15776l56.448 30.44864 104.6784-176.54784-4.56704-76.82048-128.61952-109.69088-2.2784-18.05824z m10.69056-15.46752L297.7792 393.28768l-0.9216-15.55968 38.4-29.34272c28.02176-52.23424 87.68-161.42848 128.16384-221.696a382.70464 382.70464 0 0 0-283.6224 160.62464zM610.85696 143.872l-116.02944 1.75104-6.29248-5.62176-100.13184 167.7824 31.5904-24.13568 103.2704 117.58592h247.97696l53.13024-86.3744c-46.83264-80.32768-122.73152-141.92128-213.51424-170.98752z m218.75712 390.05696l-108.91776 242.0224 3.13344 26.92608-80.75776 46.336c127.80032-53.8624 219.81696-174.4128 231.04512-317.38368l-44.50304 2.0992z" fill="#333333"></path><path d="M702.02368 693.06368m-243.06176 0a243.06176 243.06176 0 1 0 486.12352 0 243.06176 243.06176 0 1 0-486.12352 0Z" fill="#62AE87"></path><path d="M512.74752 805.7344v-222.32576h83.86048c14.76096 0 26.0352 0.71168 33.8176 2.11968 10.91584 1.82272 20.06528 5.28384 27.44832 10.3936 7.3728 5.09952 13.31712 12.25728 17.8176 21.4528 4.49536 9.20064 6.74816 19.31264 6.74816 30.336 0 18.90304-6.02112 34.89792-18.048 47.99488s-33.77152 19.6352-65.20832 19.6352h-57.02144v90.38848h-29.4144z m29.42464-116.62336h57.47712c19.00544 0 32.50688-3.5328 40.48896-10.61376 7.99232-7.07072 11.97568-17.03424 11.97568-29.8752 0-9.2928-2.35008-17.25952-7.04512-23.8848-4.70528-6.61504-10.89536-10.99264-18.58048-13.11744-4.95616-1.31584-14.1056-1.97632-27.44832-1.97632h-56.86272v79.46752zM718.6944 805.7344v-222.32576h29.41952v110.25408l110.40256-110.25408h39.88992l-93.27104 90.0864 97.36704 132.23936h-38.82496l-79.16544-112.53248-36.39296 35.48672v77.04576h-29.42464z" fill="#FFFFFF"></path></svg>
+                                    <img class="svg-icon" src="assets/images/icon_event_pkgoal.svg">
                                 </span> 点球
                             </li>
                             <li class="o-hidden">
                                 <span class="icon">
-                                    <svg class="svg-icon" aria-hidden="true">
-                                        <use xlink:href="#icon-event_corner"></use>
-                                    </svg>
+                                    <img class="svg-icon" src="assets/images/icon_event_corner.svg">
                                 </span> 角球
                             </li>
                             <li class="o-hidden">
                                 <span class="icon">
-                                    <svg class="svg-icon" aria-hidden="true">
-                                        <use xlink:href="#icon-event_corner"></use>
-                                    </svg>
+                                    <img class="svg-icon" src="assets/images/icon_event_placekick.svg">
                                 </span> 任意球
-                                </li>
-                            <li class="o-hidden"><span class="icon"><svg class="svg-icon" aria-hidden="true">
-                                        <use xlink:href="#icon-event_outball"></use>
-                                    </svg></span> 界外球</li>
-                            <li class="o-hidden"><span class="icon"><svg class="svg-icon" aria-hidden="true">
-                                        <use xlink:href="#icon-event_goalkick"></use>
-                                    </svg></span> 球门球</li>
-                            <li class="o-hidden"><span class="icon"><svg class="svg-icon" aria-hidden="true">
-                                        <use xlink:href="#icon-event_yc"></use>
-                                    </svg></span> 黄牌</li>
-                            <li class="o-hidden"><span class="icon"><svg class="svg-icon" aria-hidden="true">
-                                        <use xlink:href="#icon-event_rc"></use>
-                                    </svg></span> 红牌</li>
-                            <li class="o-hidden"><span class="icon"><svg class="svg-icon" aria-hidden="true">
-                                        <use xlink:href="#icon-event_austauschen"></use>
-                                    </svg></span> 换人</li>
-                            <li class="o-hidden"><span class="icon"><svg class="svg-icon" aria-hidden="true">
-                                        <use xlink:href="#icon-event_start"></use>
-                                    </svg></span> 开赛</li>
+                            </li>
+                            <li class="o-hidden">
+                                <span class="icon">
+                                    <img class="svg-icon" src="assets/images/icon_event_outball.svg">
+                                </span> 界外球</li>
+                            <li class="o-hidden">
+                                <span class="icon">
+                                    <img class="svg-icon" src="assets/images/icon_event_goalkick.svg">
+                                </span> 球门球
+                            </li>
+                            <li class="o-hidden">
+                                <span class="icon">
+                                    <img class="svg-icon" src="assets/images/icon_event_yc.svg">
+                                </span> 黄牌
+                            </li>
+                            <li class="o-hidden">
+                                <span class="icon">
+                                    <img class="svg-icon" src="assets/images/icon_event_rc.svg">
+                                </span> 红牌
+                            </li>
+                            <li class="o-hidden">
+                                <span class="icon">
+                                    <img class="svg-icon" src="assets/images/icon_event_austauschen.svg">
+                                </span> 换人
+                            </li>
+                            <li class="o-hidden">
+                                <span class="icon">
+                                    <img class="svg-icon" src="assets/images/icon_event_start.svg">
+                                </span> 开赛
+                            </li>
                         </ul>
                     </div>
                 </div>
             </div>
         </div>
-        
+        <!--阵容-->
+        <div class="field hide">
+            <div class="field-view lineup">
+                <div class="empty-panel m-t-30">
+                    <div class="tips">当前无阵容数据</div>
+                </div>
+            </div>
+        </div>
+        <!--情报-->
+        <div class="field hide">
+            <div class="field-view info">
+                <div class="nav-postion-f">
+                    <ul class="live-code-nav">
+                        <li class="col-3 active" onclick="showInfo(this)">有利</li>
+                        <li class="col-3" onclick="showInfo(this)">不利</li>
+                        <li class="col-3" onclick="showInfo(this)">中立</li>
+                    </ul>
+                </div>
+                <div class="info-block m-t-60">
+                    <div class="list-content ">
+                        <div class="team home">
+                            <div class="team-name">
+                                <i class="icon"><img src="assets/images/logo1.png"></i> <span class="name">缅甸联邦</span>
+                            </div>
+                            <ul class="list">
+                                <li class="">
+                                    <span class="text">缅甸联邦全场大球率也尚可，过去15场各项赛事有12场打出大2.5球，只有1场互交白卷</span><i class="iconfont icon-collecth"></i>
+                                </li>
+                                <li class="">
+                                    <span class="text">缅甸联邦最近15场各项赛事有13场比赛上半场有球，半大率有一定提升</span>
+                                </li>
+                                <li class="">
+                                    <span class="text">缅甸联邦此前与中国台北有过1次交手，是在2013年亚洲足联挑战杯，当时主场1比1与对方战平</span>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="team home">
+                            <div class="team-name"><i class="icon"><img src="assets/images/logo2.png"></i> <span class="name">中国台北</span></div>
+                            <ul class="list">
+                                <li class=""><span class="text">中国台北半大能力不俗，近24场各项赛事多达20场半场有球，不过最近略有下滑</span> </li>
+                                <li class=""><span class="text">中国台北的比赛分胜负能力较强，近27场各项 赛事只有1场打出平局，整体打法激进</span> </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="list-content hide">
+                        <div class="team home">
+                            <div class="team-name">
+                                <i class="icon"><img src="assets/images/logo1.png"></i> <span class="name">缅甸联邦</span>
+                            </div>
+                            <ul class="list">
+                                <li class=""><span class="text">缅甸联邦上一次参加正式比赛是在去年11月的东南亚锦标赛，在前2场小组赛都取胜的情况下，后2场1平1负，最终无缘四强</span> <i class="iconfont icon-collecth"></i> </li>
+                                <li class=""><span class="text">缅甸联邦过去9个主场比赛只取得3胜2平4负的战绩，主场表现并不出色，防守端表现不是很稳定</span> </li>
+                            </ul>
+                        </div>
+                        <div class="team home">
+                            <div class="team-name"><i class="icon"><img src="assets/images/logo2.png"></i> <span class="name">中国台北</span></div>
+                            <ul class="list">
+                                <li class=""><span class="text">中国台北过去7场比赛都分胜负，输掉其中5场，在去年11月的东亚杯战胜了蒙古，但输给朝鲜和香港</span> <i class="iconfont icon-collecth"></i> </li>
+                                <li class=""><span class="text">中国台北过去9个客场比赛只有2胜1平6负，战胜的2个对手是新加坡和东帝汶，客战能力比较平庸</span> </li>
+                                <li class=""><span class="text">中国台北攻强守弱，近22场正赛只有5场零封，但对手皆为绝对弱旅，而场均1.61的失球数也不低</span> </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="list-content hide">
+                        <div class="team">
+                            <ul class="list">
+                                <li class=""><span class="text">缅甸联邦世界排名第141位，亚洲中下游水平，在东南亚还算比较有竞争力的球队</span> <i class="iconfont icon-collecth"></i> </li>
+                                <li class=""><span class="text">中国台北近年进步明显，球队从亚洲准鱼腩提升到亚洲三流定位，目前世界排名124，比香港还高</span> </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--分析-->
+        <div class="field hide">
+            <div class="field-view analysis">
+                <div class="analysis-block">
+                    <div class="historical pg-panel">
+                        <div class="clearfix-row f-s-14 color-333 m-t-16 m-b-13"><span class="m-l-16">历史交锋</span>
+                            <div class="float-right m-r-16"><a class="button ss-quer" onclick="football_againstplay.vs.quemTeam(this);">主客相同</a></div>
+                        </div>
+                        <div class="page" home-id="13573" data-type="home">
+                            <table class="table tb-list text-a-c" cellpadding="0" cellspacing="0">
+                                <tbody>
+                                    <tr class="th">
+                                        <td class="w-45 p-l-8">日期</td>
+                                        <td>赛事</td>
+                                        <td class="w-70 text-a-r">主队</td>
+                                        <td class="w-45">比分</td>
+                                        <td class="w-70 text-a-l">客队</td>
+                                        <td class="w-50">盘路</td>
+                                    </tr>
+                                    <tr class="" data-scheduleid="874236" data-eventid="493" data-homeid="13573" data-awayid="19245" data-asian="0.68,1.75,1.15,0" data-odds="1.14,6.00,13.00,0" data-size="0.77,3.25,1.02,0">
+                                        <td class="p-t-8 p-b-8 p-l-8 color-999"> 2013<br>03/04</td>
+                                        <td> 亚挑杯 </td>
+                                        <td class="text-a-r"> <span class=""> 缅甸联邦 </span></td>
+                                        <td> <span class="home-score color-007fff">1</span>-<span class="away-score color-007fff">1</span><br>(1-0)</td>
+                                        <td class="text-a-l"> <span class=""> 中国台北 </span></td>
+                                        <td class="panlu-td" aaa="1,1" bb="19245" cc="13573"> <span class="color-7fdf00">
+                                                <p>1.5/2</p>输
+                                            </span> </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <div class="bottom-tip clearfix-row text-a-c f-s-12 color-999">
+                                <div class="p-l-10 p-r-10 p-t-8 p-b-8"> 近1场交锋， <span class="name"> 缅甸联邦 </span> <span class="color-red">0</span>胜<span class="color-007fff">1</span>平<span class="color-7fdf00">0</span>负,进1球,失1球,胜率:<span class="color-red">0%</span></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="recent-record pg-panel">
+                        <div class="clearfix-row f-s-14 color-333 m-t-16 m-b-13"><span class="m-l-16">近期战绩</span>
+                            <div class="float-right m-r-16"><a class="button ss-quer" onclick="football_againstplay.vs.quemTeam(this);">同主客</a> <a class="button event-quer" onclick="football_againstplay.vs.quemTeam(this);">同赛事</a></div>
+                        </div>
+                        <div class="page" home-id="13573" event-id="34" data-type="home">
+                            <div class="clearfix-row position-r z-index-2 bgcolor-fafafa p-t-8"> <a class="team-data float-left m-l-8 m-r-8"><span class="icon" style="background-image: url('//cdn.leisu.com/teamflag_s/309e44d58ce1c55c1f9055a24b6cf7f2.png?imageView2/1/w/60/h/60');background-size: contain;"></span> <span class="name"> 缅甸联邦 </span></a></div>
+                            <table class="table tb-list text-a-c" cellpadding="0" cellspacing="0">
+                                <tbody>
+                                    <tr class="th">
+                                        <td class="w-45 p-l-8">日期</td>
+                                        <td>赛事</td>
+                                        <td class="w-70 text-a-r">主队</td>
+                                        <td class="w-45">比分</td>
+                                        <td class="w-70 text-a-l">客队</td>
+                                        <td class="w-50">盘路</td>
+                                    </tr>
+                                    <tr class="" data-scheduleid="2566928" data-eventid="497" data-homeid="12257" data-awayid="13573" data-asian="0.97,0.75,0.82,0" data-odds="1.72,3.6,4.75,0" data-size="0.85,2.25,0.95,0">
+                                        <td class="p-t-8 p-b-8 p-l-8 color-999"> 2018<br>11/24</td>
+                                        <td> 东南锦 </td>
+                                        <td class="text-a-r"> <span class=""> 马来西亚 </span></td>
+                                        <td> <span class="home-score ">3</span>-<span class="away-score ">0</span><br>(2-0)</td>
+                                        <td class="text-a-l"> <span class=""> 缅甸联邦 </span></td>
+                                        <td class="panlu-td"> <span class="color-7fdf00">
+                                                <p>0.5/1</p>输
+                                            </span> </td>
+                                    </tr>
+                                    <tr class="" data-scheduleid="2566925" data-eventid="497" data-homeid="13573" data-awayid="12161" data-asian="0.97,-0.75,0.82,0" data-odds="5.5,3.8,1.61,0" data-size="0.95,2.5,0.85,0">
+                                        <td class="p-t-8 p-b-8 p-l-8 color-999"> 2018<br>11/20</td>
+                                        <td> 东南锦 </td>
+                                        <td class="text-a-r"> <span class=""> 缅甸联邦 </span></td>
+                                        <td> <span class="home-score color-007fff">0</span>-<span class="away-score color-007fff">0</span><br>(0-0)</td>
+                                        <td class="text-a-l"> <span class=""> 越南 </span></td>
+                                        <td class="panlu-td"> <span class="color-red">
+                                                <p>-0.5/1</p>赢
+                                            </span> </td>
+                                    </tr>
+                                    <tr class="" data-scheduleid="2566923" data-eventid="497" data-homeid="13740" data-awayid="13573" data-asian="0.8,-1.75,1.0,0" data-odds="12.0,5.5,1.25,0" data-size="0.87,3.25,0.92,0">
+                                        <td class="p-t-8 p-b-8 p-l-8 color-999"> 2018<br>11/16</td>
+                                        <td> 东南锦 </td>
+                                        <td class="text-a-r"> <span class=""> 老挝 </span></td>
+                                        <td> <span class="home-score ">1</span>-<span class="away-score color-red">3</span><br>(1-1)</td>
+                                        <td class="text-a-l"> <span class="color-red"> 缅甸联邦 </span></td>
+                                        <td class="panlu-td"> <span class="color-red">
+                                                <p>-1.5/2</p>赢
+                                            </span> </td>
+                                    </tr>
+                                    <tr class="" data-scheduleid="2566922" data-eventid="497" data-homeid="13573" data-awayid="11677" data-asian="1.0,1.5,0.8,0" data-odds="1.36,5.0,8.0,0" data-size="0.77,3.0,1.02,0">
+                                        <td class="p-t-8 p-b-8 p-l-8 color-999"> 2018<br>11/12</td>
+                                        <td> 东南锦 </td>
+                                        <td class="text-a-r"> <span class="color-red"> 缅甸联邦 </span></td>
+                                        <td> <span class="home-score color-red">4</span>-<span class="away-score ">1</span><br>(0-1)</td>
+                                        <td class="text-a-l"> <span class=""> 柬埔寨 </span></td>
+                                        <td class="panlu-td"> <span class="color-red">
+                                                <p>1.5</p>赢
+                                            </span> </td>
+                                    </tr>
+                                    <tr class="" data-scheduleid="2587331" data-eventid="34" data-homeid="24688" data-awayid="13573" data-asian="0.8,1.75,1.0,0" data-odds="1.166,6.0,13.0,0" data-size="0.8,2.75,1.0,0">
+                                        <td class="p-t-8 p-b-8 p-l-8 color-999"> 2018<br>10/19</td>
+                                        <td> 国际友谊 </td>
+                                        <td class="text-a-r"> <span class=""> 艾杜哈尼 </span></td>
+                                        <td> <span class="home-score ">2</span>-<span class="away-score ">1</span><br>(2-0)</td>
+                                        <td class="text-a-l"> <span class=""> 缅甸联邦 </span></td>
+                                        <td class="panlu-td"> <span class="color-red">
+                                                <p>1.5/2</p>赢
+                                            </span> </td>
+                                    </tr>
+                                    <tr class="" data-scheduleid="2586459" data-eventid="34" data-homeid="10587" data-awayid="13573" data-asian="0.925,1.75,0.925,1" data-odds="1.2,5.5,12.0,1" data-size="1.05,3.0,0.8,1">
+                                        <td class="p-t-8 p-b-8 p-l-8 color-999"> 2018<br>10/17</td>
+                                        <td> 国际友谊 </td>
+                                        <td class="text-a-r"> <span class=""> 巴林 </span></td>
+                                        <td> <span class="home-score ">4</span>-<span class="away-score ">1</span><br>(1-0)</td>
+                                        <td class="text-a-l"> <span class=""> 缅甸联邦 </span></td>
+                                        <td class="panlu-td"> <span class="color-7fdf00">
+                                                <p>1.5/2</p>输
+                                            </span> </td>
+                                    </tr>
+                                    <tr class="" data-scheduleid="2583978" data-eventid="34" data-homeid="13573" data-awayid="10453" data-asian="0.975,-2.0,0.875,0" data-odds="12.0,6.5,1.181,0" data-size="0.95,3.5,0.9,0">
+                                        <td class="p-t-8 p-b-8 p-l-8 color-999"> 2018<br>10/13</td>
+                                        <td> 国际友谊 </td>
+                                        <td class="text-a-r"> <span class=""> 缅甸联邦 </span></td>
+                                        <td> <span class="home-score ">0</span>-<span class="away-score ">3</span><br>(0-2)</td>
+                                        <td class="text-a-l"> <span class=""> 玻利维亚 </span></td>
+                                        <td class="panlu-td"> <span class="color-7fdf00">
+                                                <p>-2</p>输
+                                            </span> </td>
+                                    </tr>
+                                    <tr class="" data-scheduleid="2583960" data-eventid="34" data-homeid="11269" data-awayid="13573" data-asian="0.92,1.0,0.92,0" data-odds="1.5,3.8,7.5,0" data-size="0.87,2.5,0.97,0">
+                                        <td class="p-t-8 p-b-8 p-l-8 color-999"> 2018<br>10/10</td>
+                                        <td> 国际友谊 </td>
+                                        <td class="text-a-r"> <span class=""> 印度尼西亚 </span></td>
+                                        <td> <span class="home-score ">3</span>-<span class="away-score ">0</span><br>(3-0)</td>
+                                        <td class="text-a-l"> <span class=""> 缅甸联邦 </span></td>
+                                        <td class="panlu-td"> <span class="color-7fdf00">
+                                                <p>1</p>输
+                                            </span> </td>
+                                    </tr>
+                                    <tr class="" data-scheduleid="2478542" data-eventid="34" data-homeid="11087" data-awayid="13573" data-asian="0.85,2.75,1.0,0" data-odds="1.05,9.0,34.0,0" data-size="1.0,3.75,0.85,0">
+                                        <td class="p-t-8 p-b-8 p-l-8 color-999"> 2018<br>05/26</td>
+                                        <td> 国际友谊 </td>
+                                        <td class="text-a-r"> <span class=""> 中国 </span></td>
+                                        <td> <span class="home-score ">1</span>-<span class="away-score ">0</span><br>(1-0)</td>
+                                        <td class="text-a-l"> <span class=""> 缅甸联邦 </span></td>
+                                        <td class="panlu-td"> <span class="color-red">
+                                                <p>2.5/3</p>赢
+                                            </span> </td>
+                                    </tr>
+                                    <tr class="" data-scheduleid="2178274" data-eventid="490" data-homeid="13573" data-awayid="13495" data-asian="0.62,2.50,1.25,0" data-odds="1.08,8.50,15.00,0" data-size="0.60,3.75,1.30,0">
+                                        <td class="p-t-8 p-b-8 p-l-8 color-999"> 2018<br>03/27</td>
+                                        <td> 亚洲杯 </td>
+                                        <td class="text-a-r"> <span class="color-red"> 缅甸联邦 </span></td>
+                                        <td> <span class="home-score color-red">1</span>-<span class="away-score ">0</span><br>(0-0)</td>
+                                        <td class="text-a-l"> <span class=""> 中国澳门 </span></td>
+                                        <td class="panlu-td"> <span class="color-7fdf00">
+                                                <p>2.5</p>输
+                                            </span> </td>
+                                    </tr>
+                                    <tr class="hide" data-scheduleid="2178268" data-eventid="490" data-homeid="14386" data-awayid="13573" data-asian="0.95,0.50,0.85,0" data-odds="2.00,3.30,3.80,0" data-size="0.90,2.50,0.90,0">
+                                        <td class="p-t-8 p-b-8 p-l-8 color-999"> 2018<br>03/22</td>
+                                        <td> 亚洲杯 </td>
+                                        <td class="text-a-r"> <span class=""> 吉尔吉斯斯坦 </span></td>
+                                        <td> <span class="home-score ">5</span>-<span class="away-score ">1</span><br>(2-0)</td>
+                                        <td class="text-a-l"> <span class=""> 缅甸联邦 </span></td>
+                                        <td class="panlu-td"> <span class="color-7fdf00">
+                                                <p>0.5</p>输
+                                            </span> </td>
+                                    </tr>
+                                    <tr class="hide" data-scheduleid="2178272" data-eventid="490" data-homeid="11270" data-awayid="13573" data-asian="0.85,0.75,0.95,0" data-odds="1.66,3.60,5.25,0" data-size="0.82,2.25,0.98,0">
+                                        <td class="p-t-8 p-b-8 p-l-8 color-999"> 2017<br>11/14</td>
+                                        <td> 亚洲杯 </td>
+                                        <td class="text-a-r"> <span class=""> 印度 </span></td>
+                                        <td> <span class="home-score color-007fff">2</span>-<span class="away-score color-007fff">2</span><br>(1-2)</td>
+                                        <td class="text-a-l"> <span class=""> 缅甸联邦 </span></td>
+                                        <td class="panlu-td"> <span class="color-red">
+                                                <p>0.5/1</p>赢
+                                            </span> </td>
+                                    </tr>
+                                    <tr class="hide" data-scheduleid="2299897" data-eventid="34" data-homeid="11677" data-awayid="13573" data-asian="1.05,-0.75,0.80,0" data-odds="5.00,4.20,1.60,0" data-size="0.78,3.25,1.10,0">
+                                        <td class="p-t-8 p-b-8 p-l-8 color-999"> 2017<br>11/09</td>
+                                        <td> 国际友谊 </td>
+                                        <td class="text-a-r"> <span class=""> 柬埔寨 </span></td>
+                                        <td> <span class="home-score ">1</span>-<span class="away-score color-red">2</span><br>(0-1)</td>
+                                        <td class="text-a-l"> <span class="color-red"> 缅甸联邦 </span></td>
+                                        <td class="panlu-td"> <span class="color-red">
+                                                <p>-0.5/1</p>赢
+                                            </span> </td>
+                                    </tr>
+                                    <tr class="hide" data-scheduleid="2178270" data-eventid="490" data-homeid="13573" data-awayid="14386" data-asian="1.00,0.25,0.80,0" data-odds="2.30,3.10,3.00,0" data-size="1.00,2.25,0.80,0">
+                                        <td class="p-t-8 p-b-8 p-l-8 color-999"> 2017<br>10/10</td>
+                                        <td> 亚洲杯 </td>
+                                        <td class="text-a-r"> <span class=""> 缅甸联邦 </span></td>
+                                        <td> <span class="home-score color-007fff">2</span>-<span class="away-score color-007fff">2</span><br>(0-1)</td>
+                                        <td class="text-a-l"> <span class=""> 吉尔吉斯斯坦 </span></td>
+                                        <td class="panlu-td"> <span class="color-7fdf00">
+                                                <p>0/0.5</p>输
+                                            </span> </td>
+                                    </tr>
+                                    <tr class="hide" data-scheduleid="2287490" data-eventid="34" data-homeid="13573" data-awayid="11085" data-asian="" data-odds="" data-size="">
+                                        <td class="p-t-8 p-b-8 p-l-8 color-999"> 2017<br>10/05</td>
+                                        <td> 国际友谊 </td>
+                                        <td class="text-a-r"> <span class=""> 缅甸联邦 </span></td>
+                                        <td> <span class="home-score ">1</span>-<span class="away-score ">3</span><br>(0-2)</td>
+                                        <td class="text-a-l"> <span class=""> 泰国 </span></td>
+                                        <td class="panlu-td"> &nbsp; </td>
+                                    </tr>
+                                    <tr class="hide" data-scheduleid="2267889" data-eventid="34" data-homeid="13573" data-awayid="12257" data-asian="" data-odds="" data-size="">
+                                        <td class="p-t-8 p-b-8 p-l-8 color-999"> 2017<br>08/29</td>
+                                        <td> 国际友谊 </td>
+                                        <td class="text-a-r"> <span class="color-red"> 缅甸联邦 </span></td>
+                                        <td> <span class="home-score color-red">1</span>-<span class="away-score ">0</span><br>(0-0)</td>
+                                        <td class="text-a-l"> <span class=""> 马来西亚 </span></td>
+                                        <td class="panlu-td"> &nbsp; </td>
+                                    </tr>
+                                    <tr class="hide" data-scheduleid="2178265" data-eventid="490" data-homeid="13495" data-awayid="13573" data-asian="1.05,-1.25,0.75,0" data-odds="8.00,5.00,1.36,0" data-size="1.00,3.25,0.80,0">
+                                        <td class="p-t-8 p-b-8 p-l-8 color-999"> 2017<br>06/13</td>
+                                        <td> 亚洲杯 </td>
+                                        <td class="text-a-r"> <span class=""> 中国澳门 </span></td>
+                                        <td> <span class="home-score ">0</span>-<span class="away-score color-red">4</span><br>(0-2)</td>
+                                        <td class="text-a-l"> <span class="color-red"> 缅甸联邦 </span></td>
+                                        <td class="panlu-td"> <span class="color-red">
+                                                <p>-1/1.5</p>赢
+                                            </span> </td>
+                                    </tr>
+                                    <tr class="hide" data-scheduleid="2203394" data-eventid="34" data-homeid="14189" data-awayid="13573" data-asian="" data-odds="0.00,0.00,0.00,0" data-size="">
+                                        <td class="p-t-8 p-b-8 p-l-8 color-999"> 2017<br>06/06</td>
+                                        <td> 国际友谊 </td>
+                                        <td class="text-a-r"> <span class=""> 新加坡 </span></td>
+                                        <td> <span class="home-score color-007fff">1</span>-<span class="away-score color-007fff">1</span><br>(0-0)</td>
+                                        <td class="text-a-l"> <span class=""> 缅甸联邦 </span></td>
+                                        <td class="panlu-td"> &nbsp; </td>
+                                    </tr>
+                                    <tr class="hide" data-scheduleid="2174764" data-eventid="490" data-homeid="13573" data-awayid="11270" data-asian="1.02,0.25,0.78,0" data-odds="2.37,3.25,3.00,0" data-size="0.88,2.25,0.92,0">
+                                        <td class="p-t-8 p-b-8 p-l-8 color-999"> 2017<br>03/28</td>
+                                        <td> 亚洲杯 </td>
+                                        <td class="text-a-r"> <span class=""> 缅甸联邦 </span></td>
+                                        <td> <span class="home-score ">0</span>-<span class="away-score ">1</span><br>(0-0)</td>
+                                        <td class="text-a-l"> <span class=""> 印度 </span></td>
+                                        <td class="panlu-td"> <span class="color-7fdf00">
+                                                <p>0/0.5</p>输
+                                            </span> </td>
+                                    </tr>
+                                    <tr class="hide" data-scheduleid="2174719" data-eventid="34" data-homeid="11269" data-awayid="13573" data-asian="1.05,1.00,0.80,0" data-odds="1.53,4.00,5.25,0" data-size="0.92,2.75,0.92,0">
+                                        <td class="p-t-8 p-b-8 p-l-8 color-999"> 2017<br>03/21</td>
+                                        <td> 国际友谊 </td>
+                                        <td class="text-a-r"> <span class=""> 印度尼西亚 </span></td>
+                                        <td> <span class="home-score ">1</span>-<span class="away-score color-red">3</span><br>(1-1)</td>
+                                        <td class="text-a-l"> <span class="color-red"> 缅甸联邦 </span></td>
+                                        <td class="panlu-td"> <span class="color-red">
+                                                <p>1</p>赢
+                                            </span> </td>
+                                    </tr>
+                                    <tr class="hide" data-scheduleid="2132731" data-eventid="497" data-homeid="11085" data-awayid="13573" data-asian="0.80,2.25,1.00,0" data-odds="1.14,7.50,17.00,0" data-size="0.90,3.50,0.90,0">
+                                        <td class="p-t-8 p-b-8 p-l-8 color-999"> 2016<br>12/08</td>
+                                        <td> 东南锦 </td>
+                                        <td class="text-a-r"> <span class=""> 泰国 </span></td>
+                                        <td> <span class="home-score ">4</span>-<span class="away-score ">0</span><br>(1-0)</td>
+                                        <td class="text-a-l"> <span class=""> 缅甸联邦 </span></td>
+                                        <td class="panlu-td"> <span class="color-7fdf00">
+                                                <p>2/2.5</p>输
+                                            </span> </td>
+                                    </tr>
+                                    <tr class="hide" data-scheduleid="2132311" data-eventid="497" data-homeid="13573" data-awayid="11085" data-asian="0.98,-1.25,0.82,0" data-odds="8.00,4.75,1.36,0" data-size="1.02,3.00,0.78,0">
+                                        <td class="p-t-8 p-b-8 p-l-8 color-999"> 2016<br>12/04</td>
+                                        <td> 东南锦 </td>
+                                        <td class="text-a-r"> <span class=""> 缅甸联邦 </span></td>
+                                        <td> <span class="home-score ">0</span>-<span class="away-score ">2</span><br>(0-1)</td>
+                                        <td class="text-a-l"> <span class=""> 泰国 </span></td>
+                                        <td class="panlu-td"> <span class="color-7fdf00">
+                                                <p>-1/1.5</p>输
+                                            </span> </td>
+                                    </tr>
+                                    <tr class="hide" data-scheduleid="2117476" data-eventid="497" data-homeid="13573" data-awayid="12257" data-asian="0.90,0.25,0.90,0" data-odds="2.05,3.30,3.60,0" data-size="0.85,2.25,0.95,0">
+                                        <td class="p-t-8 p-b-8 p-l-8 color-999"> 2016<br>11/26</td>
+                                        <td> 东南锦 </td>
+                                        <td class="text-a-r"> <span class="color-red"> 缅甸联邦 </span></td>
+                                        <td> <span class="home-score color-red">1</span>-<span class="away-score ">0</span><br>(0-0)</td>
+                                        <td class="text-a-l"> <span class=""> 马来西亚 </span></td>
+                                        <td class="panlu-td"> <span class="color-red">
+                                                <p>0/0.5</p>赢
+                                            </span> </td>
+                                    </tr>
+                                    <tr class="hide" data-scheduleid="2127402" data-eventid="497" data-homeid="13573" data-awayid="11677" data-asian="0.82,1.25,0.98,0" data-odds="1.40,4.75,7.00,0" data-size="0.95,3.50,0.85,0">
+                                        <td class="p-t-8 p-b-8 p-l-8 color-999"> 2016<br>11/23</td>
+                                        <td> 东南锦 </td>
+                                        <td class="text-a-r"> <span class="color-red"> 缅甸联邦 </span></td>
+                                        <td> <span class="home-score color-red">3</span>-<span class="away-score ">1</span><br>(2-1)</td>
+                                        <td class="text-a-l"> <span class=""> 柬埔寨 </span></td>
+                                        <td class="panlu-td"> <span class="color-red">
+                                                <p>1/1.5</p>赢
+                                            </span> </td>
+                                    </tr>
+                                    <tr class="hide" data-scheduleid="2115956" data-eventid="497" data-homeid="13573" data-awayid="12161" data-asian="0.95,-0.75,0.85,0" data-odds="5.00,3.60,1.61,0" data-size="0.90,2.75,0.90,0">
+                                        <td class="p-t-8 p-b-8 p-l-8 color-999"> 2016<br>11/20</td>
+                                        <td> 东南锦 </td>
+                                        <td class="text-a-r"> <span class=""> 缅甸联邦 </span></td>
+                                        <td> <span class="home-score ">1</span>-<span class="away-score ">2</span><br>(0-1)</td>
+                                        <td class="text-a-l"> <span class=""> 越南 </span></td>
+                                        <td class="panlu-td"> <span class="color-7fdf00">
+                                                <p>-0.5/1</p>输
+                                            </span> </td>
+                                    </tr>
+                                    <tr class="hide" data-scheduleid="2113854" data-eventid="34" data-homeid="13573" data-awayid="12258" data-asian="0.90,-0.75,0.95,0" data-odds="11.00,5.00,1.25,0" data-size="0.98,2.75,0.88,0">
+                                        <td class="p-t-8 p-b-8 p-l-8 color-999"> 2016<br>11/14</td>
+                                        <td> 国际友谊 </td>
+                                        <td class="text-a-r"> <span class=""> 缅甸联邦 </span></td>
+                                        <td> <span class="home-score ">0</span>-<span class="away-score ">3</span><br>(0-1)</td>
+                                        <td class="text-a-l"> <span class=""> 阿曼 </span></td>
+                                        <td class="panlu-td"> <span class="color-7fdf00">
+                                                <p>-0.5/1</p>输
+                                            </span> </td>
+                                    </tr>
+                                    <tr class="hide" data-scheduleid="2112278" data-eventid="34" data-homeid="13573" data-awayid="11269" data-asian="0.78,0.00,1.10,0" data-odds="2.30,3.40,3.00,0" data-size="0.92,2.50,0.92,0">
+                                        <td class="p-t-8 p-b-8 p-l-8 color-999"> 2016<br>11/04</td>
+                                        <td> 国际友谊 </td>
+                                        <td class="text-a-r"> <span class=""> 缅甸联邦 </span></td>
+                                        <td> <span class="home-score color-007fff">0</span>-<span class="away-score color-007fff">0</span><br>(0-0)</td>
+                                        <td class="text-a-l"> <span class=""> 印度尼西亚 </span></td>
+                                        <td class="panlu-td"> <span class="color-007fff">
+                                                <p>0</p>走
+                                            </span> </td>
+                                    </tr>
+                                    <tr class="hide" data-scheduleid="2102707" data-eventid="34" data-homeid="11836" data-awayid="13573" data-asian="0.80,0.75,1.00,0" data-odds="1.57,3.75,4.75,0" data-size="0.78,2.75,1.02,0">
+                                        <td class="p-t-8 p-b-8 p-l-8 color-999"> 2016<br>10/05</td>
+                                        <td> 国际友谊 </td>
+                                        <td class="text-a-r"> <span class=""> 塞浦路斯U21 </span></td>
+                                        <td> <span class="home-score ">3</span>-<span class="away-score ">1</span><br>(2-1)</td>
+                                        <td class="text-a-l"> <span class=""> 缅甸联邦 </span></td>
+                                        <td class="panlu-td"> <span class="color-7fdf00">
+                                                <p>0.5/1</p>输
+                                            </span> </td>
+                                    </tr>
+                                    <tr class="hide" data-scheduleid="2418437" data-eventid="1793" data-homeid="13573" data-awayid="11086" data-asian="0.80,-0.25,1.05,0" data-odds="3.00,3.40,2.30,0" data-size="0.85,2.25,1.00,0">
+                                        <td class="p-t-8 p-b-8 p-l-8 color-999"> 2016<br>06/06</td>
+                                        <td> 四国赛 </td>
+                                        <td class="text-a-r"> <span class="color-red"> 缅甸联邦 </span></td>
+                                        <td> <span class="home-score color-red">3</span>-<span class="away-score ">0</span><br>(1-0)</td>
+                                        <td class="text-a-l"> <span class=""> 中国香港 </span></td>
+                                        <td class="panlu-td"> <span class="color-red">
+                                                <p>-0/0.5</p>赢
+                                            </span> </td>
+                                    </tr>
+                                    <tr class="hide" data-scheduleid="2099633" data-eventid="34" data-homeid="13573" data-awayid="14189" data-asian="0.78,0.00,1.10,0" data-odds="" data-size="0.88,1.75,0.98,0">
+                                        <td class="p-t-8 p-b-8 p-l-8 color-999"> 2016<br>06/03</td>
+                                        <td> 国际友谊 </td>
+                                        <td class="text-a-r"> <span class=""> 缅甸联邦 </span></td>
+                                        <td> <span class="home-score ">0</span>-<span class="away-score ">1</span><br>(0-1)</td>
+                                        <td class="text-a-l"> <span class=""> 新加坡 </span></td>
+                                        <td class="panlu-td"> <span class="color-7fdf00">
+                                                <p>0</p>输
+                                            </span> </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <div class="bottom-tip bd-bottom clearfix-row text-a-c f-s-12 color-999">
+                                <div class="p-l-10 p-r-10 p-t-8 p-b-8">近10场战绩， <span class="name"> 缅甸联邦 </span> <span class="color-red">3</span>胜<span class="color-007fff">1</span>平<span class="color-7fdf00">6</span>负,进10球,失18球,胜率:<span class="color-red">30%</span></div>
+                            </div>
+                        </div>
+                        <div class="page" home-id="19245" event-id="34" data-type="away">
+                            <div class="clearfix-row position-r z-index-2 bgcolor-fafafa p-t-8"> <a class="team-data float-left m-l-8 m-r-8"><span class="icon" style="background-image: url('//cdn.leisu.com/teamflag_s/b073dd4936b5758e6204bb58a4359a74.png?imageView2/1/w/60/h/60');background-size: contain;"></span> <span class="name"> 中国台北 </span></a></div>
+                            <table class="table tb-list text-a-c" cellpadding="0" cellspacing="0">
+                                <tbody>
+                                    <tr class="th">
+                                        <td class="w-45 p-l-8">日期</td>
+                                        <td>赛事</td>
+                                        <td class="w-70 text-a-r">主队</td>
+                                        <td class="w-45">比分</td>
+                                        <td class="w-70 text-a-l">客队</td>
+                                        <td class="w-50">盘路</td>
+                                    </tr>
+                                    <tr class="" data-scheduleid="2595355" data-eventid="494" data-homeid="19245" data-awayid="11266" data-asian="1.0,-1.75,0.8,0" data-odds="12.0,6.0,1.18,0" data-size="0.77,3.0,1.02,0">
+                                        <td class="p-t-8 p-b-8 p-l-8 color-999"> 2018<br>11/16</td>
+                                        <td> 东亚杯 </td>
+                                        <td class="text-a-r"> <span class=""> 中国台北 </span></td>
+                                        <td> <span class="home-score ">0</span>-<span class="away-score ">2</span><br>(0-0)</td>
+                                        <td class="text-a-l"> <span class=""> 朝鲜 </span></td>
+                                        <td class="panlu-td"> <span class="color-7fdf00">
+                                                <p>-1.5/2</p>输
+                                            </span> </td>
+                                    </tr>
+                                    <tr class="" data-scheduleid="2594912" data-eventid="494" data-homeid="19245" data-awayid="21200" data-asian="0.9,1.75,0.9,0" data-odds="1.2,5.75,9.0,0" data-size="0.85,3.25,0.95,0">
+                                        <td class="p-t-8 p-b-8 p-l-8 color-999"> 2018<br>11/13</td>
+                                        <td> 东亚杯 </td>
+                                        <td class="text-a-r"> <span class="color-red"> 中国台北 </span></td>
+                                        <td> <span class="home-score color-red">2</span>-<span class="away-score ">1</span><br>(2-0)</td>
+                                        <td class="text-a-l"> <span class=""> 蒙古 </span></td>
+                                        <td class="panlu-td"> <span class="color-7fdf00">
+                                                <p>1.5/2</p>输
+                                            </span> </td>
+                                    </tr>
+                                    <tr class="" data-scheduleid="2594913" data-eventid="494" data-homeid="19245" data-awayid="11086" data-asian="0.95,-1.0,0.85,0" data-odds="5.5,4.5,1.44,0" data-size="0.85,2.75,0.95,0">
+                                        <td class="p-t-8 p-b-8 p-l-8 color-999"> 2018<br>11/11</td>
+                                        <td> 东亚杯 </td>
+                                        <td class="text-a-r"> <span class=""> 中国台北 </span></td>
+                                        <td> <span class="home-score ">1</span>-<span class="away-score ">2</span><br>(0-0)</td>
+                                        <td class="text-a-l"> <span class=""> 中国香港 </span></td>
+                                        <td class="panlu-td"> <span class="color-007fff">
+                                                <p>-1</p>走
+                                            </span> </td>
+                                    </tr>
+                                    <tr class="" data-scheduleid="2553345" data-eventid="34" data-homeid="19245" data-awayid="12257" data-asian="0.82,0.0,1.02,0" data-odds="2.37,3.2,2.8,0" data-size="0.95,2.5,0.9,0">
+                                        <td class="p-t-8 p-b-8 p-l-8 color-999"> 2018<br>09/07</td>
+                                        <td> 国际友谊 </td>
+                                        <td class="text-a-r"> <span class="color-red"> 中国台北 </span></td>
+                                        <td> <span class="home-score color-red">2</span>-<span class="away-score ">0</span><br>(1-0)</td>
+                                        <td class="text-a-l"> <span class=""> 马来西亚 </span></td>
+                                        <td class="panlu-td"> <span class="color-red">
+                                                <p>0</p>赢
+                                            </span> </td>
+                                    </tr>
+                                    <tr class="" data-scheduleid="2482383" data-eventid="34" data-homeid="19245" data-awayid="14267" data-asian="1.02,-1.25,0.82,0" data-odds="8.5,4.5,1.33,0" data-size="0.9,2.75,0.95,0">
+                                        <td class="p-t-8 p-b-8 p-l-8 color-999"> 2018<br>06/08</td>
+                                        <td> 国际友谊 </td>
+                                        <td class="text-a-r"> <span class=""> 中国台北 </span></td>
+                                        <td> <span class="home-score ">0</span>-<span class="away-score ">4</span><br>(0-0)</td>
+                                        <td class="text-a-l"> <span class=""> 肯尼亚 </span></td>
+                                        <td class="panlu-td"> <span class="color-7fdf00">
+                                                <p>-1/1.5</p>输
+                                            </span> </td>
+                                    </tr>
+                                    <tr class="" data-scheduleid="2481809" data-eventid="34" data-homeid="19245" data-awayid="14400" data-asian="0.9,-2.0,0.95,0" data-odds="12.0,6.0,1.166,0" data-size="1.0,3.25,0.85,0">
+                                        <td class="p-t-8 p-b-8 p-l-8 color-999"> 2018<br>06/05</td>
+                                        <td> 国际友谊 </td>
+                                        <td class="text-a-r"> <span class=""> 中国台北 </span></td>
+                                        <td> <span class="home-score ">0</span>-<span class="away-score ">1</span><br>(0-1)</td>
+                                        <td class="text-a-l"> <span class=""> 新西兰 </span></td>
+                                        <td class="panlu-td"> <span class="color-red">
+                                                <p>-2</p>赢
+                                            </span> </td>
+                                    </tr>
+                                    <tr class="" data-scheduleid="2480823" data-eventid="34" data-homeid="11270" data-awayid="19245" data-asian="1.02,1.75,0.82,0" data-odds="1.25,5.5,12.0,0" data-size="0.85,3.0,1.0,0">
+                                        <td class="p-t-8 p-b-8 p-l-8 color-999"> 2018<br>06/01</td>
+                                        <td> 国际友谊 </td>
+                                        <td class="text-a-r"> <span class=""> 印度 </span></td>
+                                        <td> <span class="home-score ">5</span>-<span class="away-score ">0</span><br>(2-0)</td>
+                                        <td class="text-a-l"> <span class=""> 中国台北 </span></td>
+                                        <td class="panlu-td"> <span class="color-7fdf00">
+                                                <p>1.5/2</p>输
+                                            </span> </td>
+                                    </tr>
+                                    <tr class="" data-scheduleid="2178264" data-eventid="490" data-homeid="19245" data-awayid="14189" data-asian="0.75,0.50,1.05,0" data-odds="1.65,3.60,4.75,0" data-size="1.00,2.75,0.80,0">
+                                        <td class="p-t-8 p-b-8 p-l-8 color-999"> 2018<br>03/27</td>
+                                        <td> 亚洲杯 </td>
+                                        <td class="text-a-r"> <span class="color-red"> 中国台北 </span></td>
+                                        <td> <span class="home-score color-red">1</span>-<span class="away-score ">0</span><br>(1-0)</td>
+                                        <td class="text-a-l"> <span class=""> 新加坡 </span></td>
+                                        <td class="panlu-td"> <span class="color-red">
+                                                <p>0.5</p>赢
+                                            </span> </td>
+                                    </tr>
+                                    <tr class="" data-scheduleid="2306266" data-eventid="1793" data-homeid="19245" data-awayid="13740" data-asian="" data-odds="" data-size="">
+                                        <td class="p-t-8 p-b-8 p-l-8 color-999"> 2017<br>12/05</td>
+                                        <td> 四国赛 </td>
+                                        <td class="text-a-r"> <span class="color-red"> 中国台北 </span></td>
+                                        <td> <span class="home-score color-red">2</span>-<span class="away-score ">0</span><br>(2-0)</td>
+                                        <td class="text-a-l"> <span class=""> 老挝 </span></td>
+                                        <td class="panlu-td"> &nbsp; </td>
+                                    </tr>
+                                    <tr class="" data-scheduleid="2306265" data-eventid="1793" data-homeid="19245" data-awayid="13574" data-asian="0.95,1.50,0.90,0" data-odds="0.00,0.00,0.00,0" data-size="0.80,3.00,1.05,0">
+                                        <td class="p-t-8 p-b-8 p-l-8 color-999"> 2017<br>12/04</td>
+                                        <td> 四国赛 </td>
+                                        <td class="text-a-r"> <span class="color-red"> 中国台北 </span></td>
+                                        <td> <span class="home-score color-red">3</span>-<span class="away-score ">1</span><br>(1-0)</td>
+                                        <td class="text-a-l"> <span class=""> 东帝汶 </span></td>
+                                        <td class="panlu-td"> <span class="color-red">
+                                                <p>1.5</p>赢
+                                            </span> </td>
+                                    </tr>
+                                    <tr class="hide" data-scheduleid="2306264" data-eventid="1793" data-homeid="19245" data-awayid="12320" data-asian="1.10,0.00,0.78,0" data-odds="2.80,3.25,2.30,0" data-size="0.72,2.75,1.15,0">
+                                        <td class="p-t-8 p-b-8 p-l-8 color-999"> 2017<br>12/03</td>
+                                        <td> 四国赛 </td>
+                                        <td class="text-a-r"> <span class="color-red"> 中国台北 </span></td>
+                                        <td> <span class="home-score color-red">3</span>-<span class="away-score ">0</span><br>(1-0)</td>
+                                        <td class="text-a-l"> <span class=""> 菲律宾 </span></td>
+                                        <td class="panlu-td"> <span class="color-red">
+                                                <p>0</p>赢
+                                            </span> </td>
+                                    </tr>
+                                    <tr class="hide" data-scheduleid="2178262" data-eventid="490" data-homeid="12067" data-awayid="19245" data-asian="0.78,1.50,1.02,0" data-odds="1.25,6.00,10.00,0" data-size="0.65,3.00,1.20,0">
+                                        <td class="p-t-8 p-b-8 p-l-8 color-999"> 2017<br>11/14</td>
+                                        <td> 亚洲杯 </td>
+                                        <td class="text-a-r"> <span class=""> 土库曼斯坦 </span></td>
+                                        <td> <span class="home-score ">2</span>-<span class="away-score ">1</span><br>(2-0)</td>
+                                        <td class="text-a-l"> <span class=""> 中国台北 </span></td>
+                                        <td class="panlu-td"> <span class="color-red">
+                                                <p>1.5</p>赢
+                                            </span> </td>
+                                    </tr>
+                                    <tr class="hide" data-scheduleid="2178260" data-eventid="490" data-homeid="19245" data-awayid="10587" data-asian="1.08,-1.25,0.72,0" data-odds="7.00,5.25,1.33,0" data-size="0.90,3.25,0.90,0">
+                                        <td class="p-t-8 p-b-8 p-l-8 color-999"> 2017<br>10/10</td>
+                                        <td> 亚洲杯 </td>
+                                        <td class="text-a-r"> <span class="color-red"> 中国台北 </span></td>
+                                        <td> <span class="home-score color-red">2</span>-<span class="away-score ">1</span><br>(0-1)</td>
+                                        <td class="text-a-l"> <span class=""> 巴林 </span></td>
+                                        <td class="panlu-td"> <span class="color-red">
+                                                <p>-1/1.5</p>赢
+                                            </span> </td>
+                                    </tr>
+                                    <tr class="hide" data-scheduleid="2287485" data-eventid="34" data-homeid="19245" data-awayid="21200" data-asian="0.55,1.25,1.36,0" data-odds="1.24,5.4,7.5,0" data-size="0.55,3.0,1.33,0">
+                                        <td class="p-t-8 p-b-8 p-l-8 color-999"> 2017<br>10/05</td>
+                                        <td> 国际友谊 </td>
+                                        <td class="text-a-r"> <span class="color-red"> 中国台北 </span></td>
+                                        <td> <span class="home-score color-red">4</span>-<span class="away-score ">2</span><br>(1-1)</td>
+                                        <td class="text-a-l"> <span class=""> 蒙古 </span></td>
+                                        <td class="panlu-td"> <span class="color-red">
+                                                <p>1/1.5</p>赢
+                                            </span> </td>
+                                    </tr>
+                                    <tr class="hide" data-scheduleid="2178258" data-eventid="490" data-homeid="10587" data-awayid="19245" data-asian="0.65,1.75,1.20,0" data-odds="1.12,6.00,17.00,0" data-size="0.68,2.75,1.15,0">
+                                        <td class="p-t-8 p-b-8 p-l-8 color-999"> 2017<br>09/06</td>
+                                        <td> 亚洲杯 </td>
+                                        <td class="text-a-r"> <span class=""> 巴林 </span></td>
+                                        <td> <span class="home-score ">5</span>-<span class="away-score ">0</span><br>(2-0)</td>
+                                        <td class="text-a-l"> <span class=""> 中国台北 </span></td>
+                                        <td class="panlu-td"> <span class="color-7fdf00">
+                                                <p>1.5/2</p>输
+                                            </span> </td>
+                                    </tr>
+                                    <tr class="hide" data-scheduleid="2178255" data-eventid="490" data-homeid="14189" data-awayid="19245" data-asian="1.25,1.25,0.62,0" data-odds="1.53,4.33,5.50,0" data-size="1.00,2.75,0.80,0">
+                                        <td class="p-t-8 p-b-8 p-l-8 color-999"> 2017<br>06/10</td>
+                                        <td> 亚洲杯 </td>
+                                        <td class="text-a-r"> <span class=""> 新加坡 </span></td>
+                                        <td> <span class="home-score ">1</span>-<span class="away-score color-red">2</span><br>(1-1)</td>
+                                        <td class="text-a-l"> <span class="color-red"> 中国台北 </span></td>
+                                        <td class="panlu-td"> <span class="color-red">
+                                                <p>1/1.5</p>赢
+                                            </span> </td>
+                                    </tr>
+                                    <tr class="hide" data-scheduleid="2174773" data-eventid="490" data-homeid="19245" data-awayid="12067" data-asian="1.02,-0.75,0.78,0" data-odds="5.50,3.60,1.57,0" data-size="0.88,2.50,0.92,0">
+                                        <td class="p-t-8 p-b-8 p-l-8 color-999"> 2017<br>03/26</td>
+                                        <td> 亚洲杯 </td>
+                                        <td class="text-a-r"> <span class=""> 中国台北 </span></td>
+                                        <td> <span class="home-score ">1</span>-<span class="away-score ">3</span><br>(1-2)</td>
+                                        <td class="text-a-l"> <span class=""> 土库曼斯坦 </span></td>
+                                        <td class="panlu-td"> <span class="color-7fdf00">
+                                                <p>-0.5/1</p>输
+                                            </span> </td>
+                                    </tr>
+                                    <tr class="hide" data-scheduleid="2174673" data-eventid="34" data-homeid="12161" data-awayid="19245" data-asian="0.85,1.75,1.00,0" data-odds="1.25,5.75,9.00,0" data-size="0.85,3.25,1.00,0">
+                                        <td class="p-t-8 p-b-8 p-l-8 color-999"> 2017<br>03/22</td>
+                                        <td> 国际友谊 </td>
+                                        <td class="text-a-r"> <span class=""> 越南 </span></td>
+                                        <td> <span class="home-score color-007fff">1</span>-<span class="away-score color-007fff">1</span><br>(0-0)</td>
+                                        <td class="text-a-l"> <span class=""> 中国台北 </span></td>
+                                        <td class="panlu-td"> <span class="color-red">
+                                                <p>1.5/2</p>赢
+                                            </span> </td>
+                                    </tr>
+                                    <tr class="hide" data-scheduleid="2112854" data-eventid="494" data-homeid="19245" data-awayid="20908" data-asian="0.82,0.25,1.0,0" data-odds="2.0,3.5,3.0,0" data-size="0.7,2.75,1.11,0">
+                                        <td class="p-t-8 p-b-8 p-l-8 color-999"> 2016<br>11/12</td>
+                                        <td> 东亚杯 </td>
+                                        <td class="text-a-r"> <span class="color-red"> 中国台北 </span></td>
+                                        <td> <span class="home-score color-red">2</span>-<span class="away-score ">0</span><br>(1-0)</td>
+                                        <td class="text-a-l"> <span class=""> 关岛 </span></td>
+                                        <td class="panlu-td"> <span class="color-red">
+                                                <p>0/0.5</p>赢
+                                            </span> </td>
+                                    </tr>
+                                    <tr class="hide" data-scheduleid="2113571" data-eventid="494" data-homeid="11086" data-awayid="19245" data-asian="0.72,1.50,1.08,0" data-odds="1.22,5.50,11.00,0" data-size="0.68,2.75,1.15,0">
+                                        <td class="p-t-8 p-b-8 p-l-8 color-999"> 2016<br>11/09</td>
+                                        <td> 东亚杯 </td>
+                                        <td class="text-a-r"> <span class=""> 中国香港 </span></td>
+                                        <td> <span class="home-score ">4</span>-<span class="away-score ">2</span><br>(1-0)</td>
+                                        <td class="text-a-l"> <span class=""> 中国台北 </span></td>
+                                        <td class="panlu-td"> <span class="color-7fdf00">
+                                                <p>1.5</p>输
+                                            </span> </td>
+                                    </tr>
+                                    <tr class="hide" data-scheduleid="2112133" data-eventid="494" data-homeid="11266" data-awayid="19245" data-asian="1.10,2.00,0.70,0" data-odds="1.16,7.00,11.00,0" data-size="1.25,3.50,0.62,0">
+                                        <td class="p-t-8 p-b-8 p-l-8 color-999"> 2016<br>11/06</td>
+                                        <td> 东亚杯 </td>
+                                        <td class="text-a-r"> <span class=""> 朝鲜 </span></td>
+                                        <td> <span class="home-score ">2</span>-<span class="away-score ">0</span><br>(1-0)</td>
+                                        <td class="text-a-l"> <span class=""> 中国台北 </span></td>
+                                        <td class="panlu-td"> <span class="color-007fff">
+                                                <p>2</p>走
+                                            </span> </td>
+                                    </tr>
+                                    <tr class="hide" data-scheduleid="2047582" data-eventid="490" data-homeid="19245" data-awayid="13574" data-asian="0.85,1.5,0.97,0" data-odds="1.27,5.2,7.1,0" data-size="0.9,3.25,0.9,0">
+                                        <td class="p-t-8 p-b-8 p-l-8 color-999"> 2016<br>10/11</td>
+                                        <td> 亚洲杯 </td>
+                                        <td class="text-a-r"> <span class="color-red"> 中国台北 </span></td>
+                                        <td> <span class="home-score color-red">2</span>-<span class="away-score ">1</span><br>(1-0)</td>
+                                        <td class="text-a-l"> <span class=""> 东帝汶 </span></td>
+                                        <td class="panlu-td"> <span class="color-7fdf00">
+                                                <p>1.5</p>输
+                                            </span> </td>
+                                    </tr>
+                                    <tr class="hide" data-scheduleid="2047175" data-eventid="490" data-homeid="13574" data-awayid="19245" data-asian="" data-odds="3.20,3.30,2.00,0" data-size="">
+                                        <td class="p-t-8 p-b-8 p-l-8 color-999"> 2016<br>10/08</td>
+                                        <td> 亚洲杯 </td>
+                                        <td class="text-a-r"> <span class=""> 东帝汶 </span></td>
+                                        <td> <span class="home-score ">1</span>-<span class="away-score color-red">2</span><br>(1-2)</td>
+                                        <td class="text-a-l"> <span class="color-red"> 中国台北 </span></td>
+                                        <td class="panlu-td"> &nbsp; </td>
+                                    </tr>
+                                    <tr class="hide" data-scheduleid="2012174" data-eventid="494" data-homeid="19245" data-awayid="13495" data-asian="" data-odds="" data-size="">
+                                        <td class="p-t-8 p-b-8 p-l-8 color-999"> 2016<br>07/04</td>
+                                        <td> 东亚杯 </td>
+                                        <td class="text-a-r"> <span class="color-red"> 中国台北 </span></td>
+                                        <td> <span class="home-score color-red">3</span>-<span class="away-score ">2</span><br>(1-1)</td>
+                                        <td class="text-a-l"> <span class=""> 中国澳门 </span></td>
+                                        <td class="panlu-td"> &nbsp; </td>
+                                    </tr>
+                                    <tr class="hide" data-scheduleid="2012172" data-eventid="494" data-homeid="21200" data-awayid="19245" data-asian="" data-odds="" data-size="">
+                                        <td class="p-t-8 p-b-8 p-l-8 color-999"> 2016<br>07/02</td>
+                                        <td> 东亚杯 </td>
+                                        <td class="text-a-r"> <span class=""> 蒙古 </span></td>
+                                        <td> <span class="home-score ">0</span>-<span class="away-score color-red">2</span><br>(0-0)</td>
+                                        <td class="text-a-l"> <span class="color-red"> 中国台北 </span></td>
+                                        <td class="panlu-td"> &nbsp; </td>
+                                    </tr>
+                                    <tr class="hide" data-scheduleid="2011754" data-eventid="494" data-homeid="19245" data-awayid="26461" data-asian="" data-odds="" data-size="">
+                                        <td class="p-t-8 p-b-8 p-l-8 color-999"> 2016<br>06/30</td>
+                                        <td> 东亚杯 </td>
+                                        <td class="text-a-r"> <span class="color-red"> 中国台北 </span></td>
+                                        <td> <span class="home-score color-red">8</span>-<span class="away-score ">1</span><br>(4-0)</td>
+                                        <td class="text-a-l"> <span class=""> 北马里亚纳群岛 </span></td>
+                                        <td class="panlu-td"> &nbsp; </td>
+                                    </tr>
+                                    <tr class="hide" data-scheduleid="2000985" data-eventid="490" data-homeid="11677" data-awayid="19245" data-asian="0.78,0.25,1.02,0" data-odds="1.95,3.75,3.20,0" data-size="0.70,3.00,1.10,0">
+                                        <td class="p-t-8 p-b-8 p-l-8 color-999"> 2016<br>06/07</td>
+                                        <td> 亚洲杯 </td>
+                                        <td class="text-a-r"> <span class=""> 柬埔寨 </span></td>
+                                        <td> <span class="home-score ">2</span>-<span class="away-score ">0</span><br>(1-0)</td>
+                                        <td class="text-a-l"> <span class=""> 中国台北 </span></td>
+                                        <td class="panlu-td"> <span class="color-7fdf00">
+                                                <p>0/0.5</p>输
+                                            </span> </td>
+                                    </tr>
+                                    <tr class="hide" data-scheduleid="2000514" data-eventid="490" data-homeid="19245" data-awayid="11677" data-asian="0.78,0.75,1.02,0" data-odds="1.65,3.60,5.50,0" data-size="0.88,2.75,0.92,0">
+                                        <td class="p-t-8 p-b-8 p-l-8 color-999"> 2016<br>06/02</td>
+                                        <td> 亚洲杯 </td>
+                                        <td class="text-a-r"> <span class=""> 中国台北 </span></td>
+                                        <td> <span class="home-score color-007fff">2</span>-<span class="away-score color-007fff">2</span><br>(2-2)</td>
+                                        <td class="text-a-l"> <span class=""> 柬埔寨 </span></td>
+                                        <td class="panlu-td"> <span class="color-7fdf00">
+                                                <p>0.5/1</p>输
+                                            </span> </td>
+                                    </tr>
+                                    <tr class="hide" data-scheduleid="2090321" data-eventid="3" data-homeid="12161" data-awayid="19245" data-asian="0.92,1.75,0.92,0" data-odds="1.22,6.50,11.00,0" data-size="0.82,3.00,1.02,0">
+                                        <td class="p-t-8 p-b-8 p-l-8 color-999"> 2016<br>03/24</td>
+                                        <td> 亚洲预选 </td>
+                                        <td class="text-a-r"> <span class=""> 越南 </span></td>
+                                        <td> <span class="home-score ">4</span>-<span class="away-score ">1</span><br>(3-1)</td>
+                                        <td class="text-a-l"> <span class=""> 中国台北 </span></td>
+                                        <td class="panlu-td"> <span class="color-7fdf00">
+                                                <p>1.5/2</p>输
+                                            </span> </td>
+                                    </tr>
+                                    <tr class="hide" data-scheduleid="2100056" data-eventid="34" data-homeid="19245" data-awayid="20908" data-asian="0.68,0.00,1.25,0" data-odds="2.15,3.40,2.90,0" data-size="1.15,2.50,0.72,0">
+                                        <td class="p-t-8 p-b-8 p-l-8 color-999"> 2016<br>03/19</td>
+                                        <td> 国际友谊 </td>
+                                        <td class="text-a-r"> <span class="color-red"> 中国台北 </span></td>
+                                        <td> <span class="home-score color-red">3</span>-<span class="away-score ">2</span><br>(1-2)</td>
+                                        <td class="text-a-l"> <span class=""> 关岛 </span></td>
+                                        <td class="panlu-td"> <span class="color-red">
+                                                <p>0</p>赢
+                                            </span> </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <div class="bottom-tip bd-bottom clearfix-row text-a-c f-s-12 color-999">
+                                <div class="p-l-10 p-r-10 p-t-8 p-b-8">近10场战绩， <span class="name"> 中国台北 </span> <span class="color-red">5</span>胜<span class="color-007fff">0</span>平<span class="color-7fdf00">5</span>负,进11球,失16球,胜率:<span class="color-red">50%</span></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="since-trend m-b-16">
+                        <div class="clearfix-row f-s-14 color-333 m-t-16 m-b-13"><span class="m-l-16">盘路走势</span></div>
+                        <div class="page bd-bottom">
+                            <div class="pie-chart-page bd-bottom">
+                                <div class="pie-chart-since home" data-color="rgba(255,160,59,1)|rgba(255,160,59,0.4)">
+                                    <div class="bottom"> <span class="num1">60%</span>
+                                        <div id="statistics-chart-since-home" class="chart" data-type="since-home" data-highcharts-chart="5">
+                                            <div id="highcharts-l5zyare-13" class="highcharts-container " style="position: relative; overflow: hidden; width: 70px; height: 70px; text-align: left; line-height: normal; z-index: 0; -webkit-tap-highlight-color: rgba(0, 0, 0, 0);"><svg version="1.1" class="highcharts-root" style="font-family:&quot;Lucida Grande&quot;, &quot;Lucida Sans Unicode&quot;, Arial, Helvetica, sans-serif;font-size:12px;" xmlns="http://www.w3.org/2000/svg" width="70" height="70" viewBox="0 0 70 70">
+                                                    <desc>Created with Highcharts 5.0.14</desc>
+                                                    <defs>
+                                                        <clipPath id="highcharts-l5zyare-14">
+                                                            <rect x="0" y="0" width="90" height="90" fill="none"></rect>
+                                                        </clipPath>
+                                                    </defs>
+                                                    <rect fill="transparent" class="highcharts-background" x="0" y="0" width="70" height="70" rx="0" ry="0"></rect>
+                                                    <rect fill="none" class="highcharts-plot-background" x="-10" y="-10" width="90" height="90"></rect>
+                                                    <rect fill="none" class="highcharts-plot-border" x="-10" y="-10" width="90" height="90"></rect>
+                                                    <g class="highcharts-series-group">
+                                                        <g class="highcharts-series highcharts-series-0 highcharts-pie-series highcharts-color-undefined highcharts-tracker" transform="translate(-10,-10) scale(1 1)">
+                                                            <path fill="rgba(255,160,59,1)" d="M 44.99287143787067 10.000000725948553 A 35 35 0 0 1 65.61430602599543 73.28516195934908 L 62.93444624261603 69.6080909046337 A 30.45 30.45 0 0 0 44.993798150947484 14.55000063157524 Z" transform="translate(0,0)" stroke="#ffffff" stroke-width="1" stroke-linejoin="round" class="highcharts-point highcharts-color-0"></path>
+                                                            <path fill="rgba(255,160,59,0.4)" d="M 65.58601056159813 73.30576211935956 A 35 35 0 1 1 44.95138570216749 10.00003376215848 L 44.95770556088572 14.550029373077876 A 30.45 30.45 0 1 0 62.90982918859037 69.62601304384282 Z" transform="translate(0,0)" stroke="#ffffff" stroke-width="1" stroke-linejoin="round" class="highcharts-point highcharts-color-1"></path>
+                                                        </g>
+                                                        <g class="highcharts-markers highcharts-series-0 highcharts-pie-series highcharts-color-undefined " transform="translate(-10,-10) scale(1 1)"></g>
+                                                    </g>
+                                                    <g class="highcharts-legend">
+                                                        <rect fill="none" class="highcharts-legend-box" rx="0" ry="0" x="0" y="0" width="8" height="8" visibility="hidden"></rect>
+                                                        <g>
+                                                            <g></g>
+                                                        </g>
+                                                    </g>
+                                                </svg></div>
+                                        </div><span class="num2">40 %</span>
+                                    </div>
+                                    <div class="title">赢盘率</div>
+                                </div>
+                                <div class="pie-chart-since away" data-color="rgba(226,226,229,1)|rgba(226,226,229,0.4)">
+                                    <div class="bottom"> <span class="num1">60%</span>
+                                        <div id="statistics-chart-since-away" class="chart" data-type="since-home" data-highcharts-chart="6">
+                                            <div id="highcharts-l5zyare-15" class="highcharts-container " style="position: relative; overflow: hidden; width: 70px; height: 70px; text-align: left; line-height: normal; z-index: 0; -webkit-tap-highlight-color: rgba(0, 0, 0, 0);"><svg version="1.1" class="highcharts-root" style="font-family:&quot;Lucida Grande&quot;, &quot;Lucida Sans Unicode&quot;, Arial, Helvetica, sans-serif;font-size:12px;" xmlns="http://www.w3.org/2000/svg" width="70" height="70" viewBox="0 0 70 70">
+                                                    <desc>Created with Highcharts 5.0.14</desc>
+                                                    <defs>
+                                                        <clipPath id="highcharts-l5zyare-16">
+                                                            <rect x="0" y="0" width="90" height="90" fill="none"></rect>
+                                                        </clipPath>
+                                                    </defs>
+                                                    <rect fill="transparent" class="highcharts-background" x="0" y="0" width="70" height="70" rx="0" ry="0"></rect>
+                                                    <rect fill="none" class="highcharts-plot-background" x="-10" y="-10" width="90" height="90"></rect>
+                                                    <rect fill="none" class="highcharts-plot-border" x="-10" y="-10" width="90" height="90"></rect>
+                                                    <g class="highcharts-series-group">
+                                                        <g class="highcharts-series highcharts-series-0 highcharts-pie-series highcharts-color-undefined highcharts-tracker" transform="translate(-10,-10) scale(1 1)">
+                                                            <path fill="rgba(226,226,229,1)" d="M 44.99287143787067 10.000000725948553 A 35 35 0 0 1 65.61430602599543 73.28516195934908 L 62.93444624261603 69.6080909046337 A 30.45 30.45 0 0 0 44.993798150947484 14.55000063157524 Z" transform="translate(0,0)" stroke="#ffffff" stroke-width="1" stroke-linejoin="round" class="highcharts-point highcharts-color-0"></path>
+                                                            <path fill="rgba(226,226,229,0.4)" d="M 65.58601056159813 73.30576211935956 A 35 35 0 1 1 44.95138570216749 10.00003376215848 L 44.95770556088572 14.550029373077876 A 30.45 30.45 0 1 0 62.90982918859037 69.62601304384282 Z" transform="translate(0,0)" stroke="#ffffff" stroke-width="1" stroke-linejoin="round" class="highcharts-point highcharts-color-1"></path>
+                                                        </g>
+                                                        <g class="highcharts-markers highcharts-series-0 highcharts-pie-series highcharts-color-undefined " transform="translate(-10,-10) scale(1 1)"></g>
+                                                    </g>
+                                                    <g class="highcharts-legend">
+                                                        <rect fill="none" class="highcharts-legend-box" rx="0" ry="0" x="0" y="0" width="8" height="8" visibility="hidden"></rect>
+                                                        <g>
+                                                            <g></g>
+                                                        </g>
+                                                    </g>
+                                                </svg></div>
+                                        </div><span class="num2">40%</span>
+                                    </div>
+                                    <div class="title">赢盘率</div>
+                                </div>
+                            </div>
+                            <div class="display-b m-l-16">
+                                <table class="table">
+                                    <tbody>
+                                        <tr class="th">
+                                            <td class="">&nbsp;</td>
+                                            <td class="w-45">主客</td>
+                                            <td class="w-45">赢盘</td>
+                                            <td class="w-45">走水</td>
+                                            <td class="w-45">输盘</td>
+                                            <td class="w-45">大球</td>
+                                            <td class="w-45">小球</td>
+                                        </tr>
+                                        <tr class="td-rw ">
+                                            <td class="text-a-l" rowspan="2"> <a class="team-data min-w-55 position"><span class="icon" style="background-image: url('//cdn.leisu.com/teamflag_s/309e44d58ce1c55c1f9055a24b6cf7f2.png?imageView2/1/w/60/h/60');background-size: contain;"></span> <span class="name left-16"> 缅甸联邦 </span></a></td>
+                                            <td>全</td>
+                                            <td> 12</td>
+                                            <td> 1</td>
+                                            <td> 17</td>
+                                            <td> 17</td>
+                                            <td> 56.6%</td>
+                                        </tr>
+                                        <tr class="td-aw">
+                                            <td> 主 </td>
+                                            <td> 5</td>
+                                            <td> 1</td>
+                                            <td> 10</td>
+                                            <td> 17</td>
+                                            <td> 106.2%</td>
+                                        </tr>
+                                        <tr class="td-rw bd-top">
+                                            <td class="text-a-l" rowspan="2"> <a class="team-data min-w-55 position"><span class="icon" style="background-image: url('//cdn.leisu.com/teamflag_s/b073dd4936b5758e6204bb58a4359a74.png?imageView2/1/w/60/h/60');background-size: contain;"></span> <span class="name left-16"> 中国台北 </span></a></td>
+                                            <td>全</td>
+                                            <td> 12</td>
+                                            <td> 2</td>
+                                            <td> 16</td>
+                                            <td> 13</td>
+                                            <td> 43.3%</td>
+                                        </tr>
+                                        <tr class="td-aw">
+                                            <td> 客 </td>
+                                            <td> 3</td>
+                                            <td> 1</td>
+                                            <td> 7</td>
+                                            <td> 0</td>
+                                            <td> 0%</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--赔率-->
+        <div class="field hide">
+            <div class="field-view odds">
+                <div class="nav-postion-f bd-bottom">
+                    <ul class="live-code-nav">
+                        <li class="col-3 active" onclick="football_againstplay.showOdds(this)">亚赔</li>
+                        <li class="col-3" onclick="football_againstplay.showOdds(this)">欧赔</li>
+                        <li class="col-3" onclick="football_againstplay.showOdds(this)">大小</li>
+                    </ul>
+                </div>
+                <div class="odds-block m-t-60">
+                    <div class="list-content">
+                        <div class="table-one m-b-10">
+                            <div class="clear-fid">
+                                <div class="clear-fid color-gray f-s-12 text-a-c">
+                                    <div class="float-left w-bar-20">公司</div>
+                                    <div class="float-left w-bar-35">初盘</div>
+                                    <div class="float-left w-bar-35">即时盘</div>
+                                </div>
+                                <a class="field color-black h-35 line-h-35" href="#" target="_blank"><span class="float-left w-bar-22 bd-right"><span class="o-hidden  display-b">BET365</span></span> <span class="float-left w-bar-35 bd-right"><span class="float-left col-3">0.8</span> <span class="float-left col-3">0.0</span> <span class="float-left col-3">1.0</span></span> <span class="float-left w-bar-35 bd-right"> <span class="float-left col-3 color-green">0.5</span> <span class="float-left col-3 color-green">0.0</span> <span class="float-left col-3 color-red">1.65</span> <span class="float-left col-3 color-green">0</span> </span> <span class="float-left w-bar-8"><i class="ico-back"></i></span></a>
+                                <a class="field color-black h-35 line-h-35" href="#" target="_blank"> <span class="float-left w-bar-22 bd-right"><span class="o-hidden  display-b">皇冠</span></span> <span class="float-left w-bar-35 bd-right"><span class="float-left col-3">0.87</span> <span class="float-left col-3">0.25</span> <span class="float-left col-3">0.95</span></span> <span class="float-left w-bar-35 bd-right"> <span class="float-left col-3 color-green">0.5</span> <span class="float-left col-3 color-green">0.0</span> <span class="float-left col-3 color-red">1.61</span> <span class="float-left col-3 color-green">0</span> </span> <span class="float-left w-bar-8"><i class="ico-back"></i></span></a> <a class="field color-black h-35 line-h-35" href="/live/yapan/2642959/10?_cid=2,3,10,7,4,11,14,15,21,17,6,22" target="_blank"> <span class="float-left w-bar-22 bd-right"><span class="o-hidden  display-b">易胜博</span></span> <span class="float-left w-bar-35 bd-right"><span class="float-left col-3">0.85</span> <span class="float-left col-3">0.25</span> <span class="float-left col-3">1.05</span></span> <span class="float-left w-bar-35 bd-right"> <span class="float-left col-3 color-green">0.46</span> <span class="float-left col-3 color-green">0.0</span> <span class="float-left col-3 color-red">1.7</span> <span class="float-left col-3 color-green">0</span> </span> <span class="float-left w-bar-8"><i class="ico-back"></i></span></a> <a class="field color-black h-35 line-h-35" href="/live/yapan/2642959/7?_cid=2,3,10,7,4,11,14,15,21,17,6,22" target="_blank"> <span class="float-left w-bar-22 bd-right"><span class="o-hidden  display-b">澳彩</span></span> <span class="float-left w-bar-35 bd-right"><span class="float-left col-3">0.8</span> <span class="float-left col-3">0.0</span> <span class="float-left col-3">1.0</span></span> <span class="float-left w-bar-35 bd-right"> <span class="float-left col-3 color-red">1.4</span> <span class="float-left col-3 color-red">0.25</span> <span class="float-left col-3 color-green">0.35</span> <span class="float-left col-3 color-green">0</span> </span> <span class="float-left w-bar-8"><i class="ico-back"></i></span></a> <a class="field color-black h-35 line-h-35" href="/live/yapan/2642959/4?_cid=2,3,10,7,4,11,14,15,21,17,6,22" target="_blank"> <span class="float-left w-bar-22 bd-right"><span class="o-hidden  display-b">10BET</span></span> <span class="float-left w-bar-35 bd-right"><span class="float-left col-3">0.85</span> <span class="float-left col-3">0.0</span> <span class="float-left col-3">1.05</span></span> <span class="float-left w-bar-35 bd-right"> <span class="float-left col-3 color-green">0.51</span> <span class="float-left col-3 color-green">0.0</span> <span class="float-left col-3 color-red">1.7</span> <span class="float-left col-3 color-green">0</span> </span> <span class="float-left w-bar-8"><i class="ico-back"></i></span></a> <a class="field color-black h-35 line-h-35" href="/live/yapan/2642959/11?_cid=2,3,10,7,4,11,14,15,21,17,6,22" target="_blank"> <span class="float-left w-bar-22 bd-right"><span class="o-hidden  display-b">韦德</span></span> <span class="float-left w-bar-35 bd-right"><span class="float-left col-3">0.98</span> <span class="float-left col-3">0.25</span> <span class="float-left col-3">0.86</span></span> <span class="float-left w-bar-35 bd-right"> <span class="float-left col-3 color-green">0.97</span> <span class="float-left col-3 color-red">0.5</span> <span class="float-left col-3 color-red">0.88</span> <span class="float-left col-3 color-green">0</span> </span> <span class="float-left w-bar-8"><i class="ico-back"></i></span></a> <a class="field color-black h-35 line-h-35" href="/live/yapan/2642959/14?_cid=2,3,10,7,4,11,14,15,21,17,6,22" target="_blank"> <span class="float-left w-bar-22 bd-right"><span class="o-hidden  display-b">12bet</span></span> <span class="float-left w-bar-35 bd-right"><span class="float-left col-3">0.96</span> <span class="float-left col-3">0.25</span> <span class="float-left col-3">0.88</span></span> <span class="float-left w-bar-35 bd-right"> <span class="float-left col-3 color-green">0.48</span> <span class="float-left col-3 color-green">0.0</span> <span class="float-left col-3 color-red">1.56</span> <span class="float-left col-3 color-green">0</span> </span> <span class="float-left w-bar-8"><i class="ico-back"></i></span></a> <a class="field color-black h-35 line-h-35" href="/live/yapan/2642959/15?_cid=2,3,10,7,4,11,14,15,21,17,6,22" target="_blank"> <span class="float-left w-bar-22 bd-right"><span class="o-hidden  display-b">利记</span></span> <span class="float-left w-bar-35 bd-right"><span class="float-left col-3">0.85</span> <span class="float-left col-3">0.25</span> <span class="float-left col-3">0.99</span></span> <span class="float-left w-bar-35 bd-right"> <span class="float-left col-3 color-green">0.46</span> <span class="float-left col-3 color-green">0.0</span> <span class="float-left col-3 color-red">1.61</span> <span class="float-left col-3 color-green">0</span> </span> <span class="float-left w-bar-8"><i class="ico-back"></i></span></a> <a class="field color-black h-35 line-h-35" href="/live/yapan/2642959/21?_cid=2,3,10,7,4,11,14,15,21,17,6,22" target="_blank"> <span class="float-left w-bar-22 bd-right"><span class="o-hidden  display-b">188</span></span> <span class="float-left w-bar-35 bd-right"><span class="float-left col-3">0.98</span> <span class="float-left col-3">0.25</span> <span class="float-left col-3">0.86</span></span> <span class="float-left w-bar-35 bd-right"> <span class="float-left col-3 color-green">0.50</span> <span class="float-left col-3 color-green">0.0</span> <span class="float-left col-3 color-red">1.72</span> <span class="float-left col-3 color-green">0</span> </span> <span class="float-left w-bar-8"><i class="ico-back"></i></span></a> <a class="field color-black h-35 line-h-35" href="/live/yapan/2642959/17?_cid=2,3,10,7,4,11,14,15,21,17,6,22" target="_blank"> <span class="float-left w-bar-22 bd-right"><span class="o-hidden  display-b">18Bet</span></span> <span class="float-left w-bar-35 bd-right"><span class="float-left col-3">0.98</span> <span class="float-left col-3">0.25</span> <span class="float-left col-3">0.86</span></span> <span class="float-left w-bar-35 bd-right"> <span class="float-left col-3 color-green">0.5</span> <span class="float-left col-3 color-green">0.0</span> <span class="float-left col-3 color-red">1.64</span> <span class="float-left col-3 color-green">0</span> </span> <span class="float-left w-bar-8"><i class="ico-back"></i></span></a> <a class="field color-black h-35 line-h-35" href="/live/yapan/2642959/6?_cid=2,3,10,7,4,11,14,15,21,17,6,22" target="_blank"> <span class="float-left w-bar-22 bd-right"><span class="o-hidden  display-b">明陞</span></span> <span class="float-left w-bar-35 bd-right"><span class="float-left col-3">0.96</span> <span class="float-left col-3">0.25</span> <span class="float-left col-3">0.88</span></span> <span class="float-left w-bar-35 bd-right"> <span class="float-left col-3 color-green">0.48</span> <span class="float-left col-3 color-green">0.0</span> <span class="float-left col-3 color-red">1.56</span> <span class="float-left col-3 color-green">0</span> </span> <span class="float-left w-bar-8"><i class="ico-back"></i></span></a> <a class="field color-black h-35 line-h-35" href="/live/yapan/2642959/22?_cid=2,3,10,7,4,11,14,15,21,17,6,22" target="_blank"> <span class="float-left w-bar-22 bd-right"><span class="o-hidden  display-b">平博</span></span> <span class="float-left w-bar-35 bd-right"><span class="float-left col-3">0.81</span> <span class="float-left col-3">0.25</span> <span class="float-left col-3">1.07</span></span> <span class="float-left w-bar-35 bd-right"> <span class="float-left col-3 color-red">1.01</span> <span class="float-left col-3 color-red">0.5</span> <span class="float-left col-3 color-green">0.83</span> <span class="float-left col-3 color-green">0</span> </span> <span class="float-left w-bar-8"><i class="ico-back"></i></span></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="list-content hide">
+                        <div class="table-one m-b-10">
+                            <div class="clear-fid">
+                                <div class="clear-fid">
+                                    <div class="field p-t-7 p-b-7">
+                                        <div class="float-left w-bar-23 color-black"><b class="display-b p-t-10">最高值</b></div>
+                                        <div class="float-left w-bar-14"><span class="clear-fid m-b-5">初盘</span> <span class="clear-fid">即盘</span></div>
+                                        <div class="float-left w-bar-19"><span class="clear-fid m-b-5">2.45</span> <span class="clear-fid">5.6</span></div>
+                                        <div class="float-left w-bar-19"><span class="clear-fid m-b-5">3.45</span> <span class="clear-fid">3.6</span></div>
+                                        <div class="float-left w-bar-19"><span class="clear-fid m-b-5">3.44</span> <span class="clear-fid">10</span></div>
+                                        <div class="float-left w-bar-6"><i class="ico-back"></i></div>
+                                    </div>
+                                    <div class="field p-t-7 p-b-7">
+                                        <div class="float-left w-bar-23 color-black"><b class="display-b p-t-10">最低值</b></div>
+                                        <div class="float-left w-bar-14"><span class="clear-fid m-b-5">初盘</span> <span class="clear-fid">即盘</span></div>
+                                        <div class="float-left w-bar-19"><span class="clear-fid m-b-5">2.07</span> <span class="clear-fid">1.9</span></div>
+                                        <div class="float-left w-bar-19"><span class="clear-fid m-b-5">3.15</span> <span class="clear-fid">1.24</span></div>
+                                        <div class="float-left w-bar-19"><span class="clear-fid m-b-5">2.5</span> <span class="clear-fid">3.25</span></div>
+                                        <div class="float-left w-bar-6"><i class="ico-back"></i></div>
+                                    </div>
+                                    <div class="field p-t-7 p-b-7">
+                                        <div class="float-left w-bar-23 color-black"><b class="display-b p-t-10">平均值</b></div>
+                                        <div class="float-left w-bar-14"><span class="clear-fid m-b-5">初盘</span> <span class="clear-fid">即盘</span></div>
+                                        <div class="float-left w-bar-19"><span class="clear-fid m-b-5">2.23</span> <span class="clear-fid">3.14</span></div>
+                                        <div class="float-left w-bar-19"><span class="clear-fid m-b-5">3.34</span> <span class="clear-fid">2.64</span></div>
+                                        <div class="float-left w-bar-19"><span class="clear-fid m-b-5">2.87</span> <span class="clear-fid">5.61</span></div>
+                                        <div class="float-left w-bar-6"><i class="ico-back"></i></div>
+                                    </div>
+                                </div>
+                                <div class="clear-fid color-gray f-s-12 text-a-c">
+                                    <div class="float-left w-bar-23">公司</div>
+                                    <div class="float-left w-bar-14">&nbsp;</div>
+                                    <div class="float-left w-bar-19">主胜</div>
+                                    <div class="float-left w-bar-19">平局</div>
+                                    <div class="float-left w-bar-19">客胜</div>
+                                </div> <a class="field color-black p-t-7 p-b-7" href="#" target="_blank"> <span class="float-left w-bar-23 color-black"><span class="o-hidden  display-b p-t-10">BET365</span></span> <span class="float-left w-bar-14"><span class="clear-fid m-b-5">初盘</span> <span class="clear-fid">即盘</span></span> <span class="float-left w-bar-19"><span class="clear-fid m-b-5">2.4</span> <span class="clear-fid color-red">5.5</span></span> <span class="float-left w-bar-19"><span class="clear-fid m-b-5">3.4</span> <span class="clear-fid color-green">1.25</span></span> <span class="float-left w-bar-19"><span class="clear-fid m-b-5">2.5</span> <span class="clear-fid color-red">10.0</span></span> <span class="float-left w-bar-6"><i class="ico-back"></i></span></a> <a class="field color-black p-t-7 p-b-7" href="/live/oupei/2642959/3?_cid=2,3,9,10,7,4,5,11,14,15,21,17,6,22" target="_blank"> <span class="float-left w-bar-23 color-black"><span class="o-hidden  display-b p-t-10">皇冠</span></span> <span class="float-left w-bar-14"><span class="clear-fid m-b-5">初盘</span> <span class="clear-fid">即盘</span></span> <span class="float-left w-bar-19"><span class="clear-fid m-b-5">2.14</span> <span class="clear-fid color-red">5.6</span></span> <span class="float-left w-bar-19"><span class="clear-fid m-b-5">3.4</span> <span class="clear-fid color-green">1.25</span></span> <span class="float-left w-bar-19"><span class="clear-fid m-b-5">2.8</span> <span class="clear-fid color-red">9.6</span></span> <span class="float-left w-bar-6"><i class="ico-back"></i></span></a> <a class="field color-black p-t-7 p-b-7" href="/live/oupei/2642959/9?_cid=2,3,9,10,7,4,5,11,14,15,21,17,6,22" target="_blank"> <span class="float-left w-bar-23 color-black"><span class="o-hidden  display-b p-t-10">威廉希尔</span></span> <span class="float-left w-bar-14"><span class="clear-fid m-b-5">初盘</span> <span class="clear-fid">即盘</span></span> <span class="float-left w-bar-19"><span class="clear-fid m-b-5">2.3</span> <span class="clear-fid color-green">2.0</span></span> <span class="float-left w-bar-19"><span class="clear-fid m-b-5">3.4</span> <span class="clear-fid color-green">3.4</span></span> <span class="float-left w-bar-19"><span class="clear-fid m-b-5">3.0</span> <span class="clear-fid color-red">3.75</span></span> <span class="float-left w-bar-6"><i class="ico-back"></i></span></a> <a class="field color-black p-t-7 p-b-7" href="/live/oupei/2642959/10?_cid=2,3,9,10,7,4,5,11,14,15,21,17,6,22" target="_blank"> <span class="float-left w-bar-23 color-black"><span class="o-hidden  display-b p-t-10">易胜博</span></span> <span class="float-left w-bar-14"><span class="clear-fid m-b-5">初盘</span> <span class="clear-fid">即盘</span></span> <span class="float-left w-bar-19"><span class="clear-fid m-b-5">2.13</span> <span class="clear-fid color-green">1.94</span></span> <span class="float-left w-bar-19"><span class="clear-fid m-b-5">3.2</span> <span class="clear-fid color-red">3.3</span></span> <span class="float-left w-bar-19"><span class="clear-fid m-b-5">3.1</span> <span class="clear-fid color-red">3.6</span></span> <span class="float-left w-bar-6"><i class="ico-back"></i></span></a> <a class="field color-black p-t-7 p-b-7" href="/live/oupei/2642959/7?_cid=2,3,9,10,7,4,5,11,14,15,21,17,6,22" target="_blank"> <span class="float-left w-bar-23 color-black"><span class="o-hidden  display-b p-t-10">澳彩</span></span> <span class="float-left w-bar-14"><span class="clear-fid m-b-5">初盘</span> <span class="clear-fid">即盘</span></span> <span class="float-left w-bar-19"><span class="clear-fid m-b-5">2.41</span> <span class="clear-fid color-green">1.9</span></span> <span class="float-left w-bar-19"><span class="clear-fid m-b-5">3.42</span> <span class="clear-fid color-red">3.45</span></span> <span class="float-left w-bar-19"><span class="clear-fid m-b-5">2.51</span> <span class="clear-fid color-red">3.25</span></span> <span class="float-left w-bar-6"><i class="ico-back"></i></span></a> <a class="field color-black p-t-7 p-b-7" href="/live/oupei/2642959/4?_cid=2,3,9,10,7,4,5,11,14,15,21,17,6,22" target="_blank"> <span class="float-left w-bar-23 color-black"><span class="o-hidden  display-b p-t-10">10BET</span></span> <span class="float-left w-bar-14"><span class="clear-fid m-b-5">初盘</span> <span class="clear-fid">即盘</span></span> <span class="float-left w-bar-19"><span class="clear-fid m-b-5">2.4</span> <span class="clear-fid color-green">1.9</span></span> <span class="float-left w-bar-19"><span class="clear-fid m-b-5">3.45</span> <span class="clear-fid color-red">3.6</span></span> <span class="float-left w-bar-19"><span class="clear-fid m-b-5">2.8</span> <span class="clear-fid color-red">3.6</span></span> <span class="float-left w-bar-6"><i class="ico-back"></i></span></a> <a class="field color-black p-t-7 p-b-7" href="/live/oupei/2642959/5?_cid=2,3,9,10,7,4,5,11,14,15,21,17,6,22" target="_blank"> <span class="float-left w-bar-23 color-black"><span class="o-hidden  display-b p-t-10">立博</span></span> <span class="float-left w-bar-14"><span class="clear-fid m-b-5">初盘</span> <span class="clear-fid">即盘</span></span> <span class="float-left w-bar-19"><span class="clear-fid m-b-5">2.45</span> <span class="clear-fid color-green">1.95</span></span> <span class="float-left w-bar-19"><span class="clear-fid m-b-5">3.2</span> <span class="clear-fid color-red">3.25</span></span> <span class="float-left w-bar-19"><span class="clear-fid m-b-5">2.65</span> <span class="clear-fid color-red">3.5</span></span> <span class="float-left w-bar-6"><i class="ico-back"></i></span></a> <a class="field color-black p-t-7 p-b-7" href="/live/oupei/2642959/11?_cid=2,3,9,10,7,4,5,11,14,15,21,17,6,22" target="_blank"> <span class="float-left w-bar-23 color-black"><span class="o-hidden  display-b p-t-10">韦德</span></span> <span class="float-left w-bar-14"><span class="clear-fid m-b-5">初盘</span> <span class="clear-fid">即盘</span></span> <span class="float-left w-bar-19"><span class="clear-fid m-b-5">2.25</span> <span class="clear-fid color-green">1.92</span></span> <span class="float-left w-bar-19"><span class="clear-fid m-b-5">3.4</span> <span class="clear-fid color-red">3.5</span></span> <span class="float-left w-bar-19"><span class="clear-fid m-b-5">3.0</span> <span class="clear-fid color-red">3.75</span></span> <span class="float-left w-bar-6"><i class="ico-back"></i></span></a> <a class="field color-black p-t-7 p-b-7" href="/live/oupei/2642959/14?_cid=2,3,9,10,7,4,5,11,14,15,21,17,6,22" target="_blank"> <span class="float-left w-bar-23 color-black"><span class="o-hidden  display-b p-t-10">12bet</span></span> <span class="float-left w-bar-14"><span class="clear-fid m-b-5">初盘</span> <span class="clear-fid">即盘</span></span> <span class="float-left w-bar-19"><span class="clear-fid m-b-5">2.11</span> <span class="clear-fid color-red">4.75</span></span> <span class="float-left w-bar-19"><span class="clear-fid m-b-5">3.3</span> <span class="clear-fid color-green">1.27</span></span> <span class="float-left w-bar-19"><span class="clear-fid m-b-5">2.95</span> <span class="clear-fid color-red">8.2</span></span> <span class="float-left w-bar-6"><i class="ico-back"></i></span></a> <a class="field color-black p-t-7 p-b-7" href="/live/oupei/2642959/15?_cid=2,3,9,10,7,4,5,11,14,15,21,17,6,22" target="_blank"> <span class="float-left w-bar-23 color-black"><span class="o-hidden  display-b p-t-10">利记</span></span> <span class="float-left w-bar-14"><span class="clear-fid m-b-5">初盘</span> <span class="clear-fid">即盘</span></span> <span class="float-left w-bar-19"><span class="clear-fid m-b-5">2.13</span> <span class="clear-fid color-red">5.0</span></span> <span class="float-left w-bar-19"><span class="clear-fid m-b-5">3.15</span> <span class="clear-fid color-green">1.24</span></span> <span class="float-left w-bar-19"><span class="clear-fid m-b-5">2.99</span> <span class="clear-fid color-red">9.0</span></span> <span class="float-left w-bar-6"><i class="ico-back"></i></span></a> <a class="field color-black p-t-7 p-b-7" href="/live/oupei/2642959/21?_cid=2,3,9,10,7,4,5,11,14,15,21,17,6,22" target="_blank"> <span class="float-left w-bar-23 color-black"><span class="o-hidden  display-b p-t-10">188</span></span> <span class="float-left w-bar-14"><span class="clear-fid m-b-5">初盘</span> <span class="clear-fid">即盘</span></span> <span class="float-left w-bar-19"><span class="clear-fid m-b-5">2.19</span> <span class="clear-fid color-red">5.60</span></span> <span class="float-left w-bar-19"><span class="clear-fid m-b-5">3.35</span> <span class="clear-fid color-green">1.25</span></span> <span class="float-left w-bar-19"><span class="clear-fid m-b-5">2.72</span> <span class="clear-fid color-red">9.60</span></span> <span class="float-left w-bar-6"><i class="ico-back"></i></span></a> <a class="field color-black p-t-7 p-b-7" href="/live/oupei/2642959/17?_cid=2,3,9,10,7,4,5,11,14,15,21,17,6,22" target="_blank"> <span class="float-left w-bar-23 color-black"><span class="o-hidden  display-b p-t-10">18Bet</span></span> <span class="float-left w-bar-14"><span class="clear-fid m-b-5">初盘</span> <span class="clear-fid">即盘</span></span> <span class="float-left w-bar-19"><span class="clear-fid m-b-5">2.15</span> <span class="clear-fid color-green">1.95</span></span> <span class="float-left w-bar-19"><span class="clear-fid m-b-5">3.35</span> <span class="clear-fid color-red">3.5</span></span> <span class="float-left w-bar-19"><span class="clear-fid m-b-5">2.8</span> <span class="clear-fid color-red">3.6</span></span> <span class="float-left w-bar-6"><i class="ico-back"></i></span></a> <a class="field color-black p-t-7 p-b-7" href="/live/oupei/2642959/6?_cid=2,3,9,10,7,4,5,11,14,15,21,17,6,22" target="_blank"> <span class="float-left w-bar-23 color-black"><span class="o-hidden  display-b p-t-10">明陞</span></span> <span class="float-left w-bar-14"><span class="clear-fid m-b-5">初盘</span> <span class="clear-fid">即盘</span></span> <span class="float-left w-bar-19"><span class="clear-fid m-b-5">2.11</span> <span class="clear-fid color-green">1.96</span></span> <span class="float-left w-bar-19"><span class="clear-fid m-b-5">3.3</span> <span class="clear-fid color-green">3.2</span></span> <span class="float-left w-bar-19"><span class="clear-fid m-b-5">2.95</span> <span class="clear-fid color-red">3.4</span></span> <span class="float-left w-bar-6"><i class="ico-back"></i></span></a> <a class="field color-black p-t-7 p-b-7" href="/live/oupei/2642959/22?_cid=2,3,9,10,7,4,5,11,14,15,21,17,6,22" target="_blank"> <span class="float-left w-bar-23 color-black"><span class="o-hidden  display-b p-t-10">平博</span></span> <span class="float-left w-bar-14"><span class="clear-fid m-b-5">初盘</span> <span class="clear-fid">即盘</span></span> <span class="float-left w-bar-19"><span class="clear-fid m-b-5">2.07</span> <span class="clear-fid color-green">2.02</span></span> <span class="float-left w-bar-19"><span class="clear-fid m-b-5">3.44</span> <span class="clear-fid color-red">3.53</span></span> <span class="float-left w-bar-19"><span class="clear-fid m-b-5">3.44</span> <span class="clear-fid color-red">3.64</span></span> <span class="float-left w-bar-6"><i class="ico-back"></i></span></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="list-content hide">
+                        <div class="table-one m-b-10">
+                            <div class="clear-fid">
+                                <div class="clear-fid color-gray f-s-12 text-a-c">
+                                    <div class="float-left w-bar-20">公司</div>
+                                    <div class="float-left w-bar-35">初盘</div>
+                                    <div class="float-left w-bar-35">即时盘</div>
+                                </div> <a class="field color-black h-35 line-h-35" href="/live/daxiaoqiu/2642959/2?_cid=2,3,10,7,4,5,11,14,15,21,17,6,22" target="_blank"> <span class="float-left w-bar-22 bd-right"><span class="o-hidden  display-b">BET365</span></span> <span class="float-left w-bar-35 bd-right"><span class="float-left col-3">0.9</span> <span class="float-left col-3">2.5</span> <span class="float-left col-3">0.9</span></span> <span class="float-left w-bar-35 bd-right"> <span class="float-left col-3 color-red">2.6</span> <span class="float-left col-3 color-green">0.5</span> <span class="float-left col-3 color-green">0.28</span> <span class="float-left col-3 color-green">0</span> </span> <span class="float-left w-bar-8"><i class="ico-back"></i></span></a> <a class="field color-black h-35 line-h-35" href="/live/daxiaoqiu/2642959/3?_cid=2,3,10,7,4,5,11,14,15,21,17,6,22" target="_blank"> <span class="float-left w-bar-22 bd-right"><span class="o-hidden  display-b">皇冠</span></span> <span class="float-left w-bar-35 bd-right"><span class="float-left col-3">0.85</span> <span class="float-left col-3">2.5</span> <span class="float-left col-3">0.95</span></span> <span class="float-left w-bar-35 bd-right"> <span class="float-left col-3 color-red">2.43</span> <span class="float-left col-3 color-green">0.5</span> <span class="float-left col-3 color-green">0.28</span> <span class="float-left col-3 color-green">0</span> </span> <span class="float-left w-bar-8"><i class="ico-back"></i></span></a> <a class="field color-black h-35 line-h-35" href="/live/daxiaoqiu/2642959/10?_cid=2,3,10,7,4,5,11,14,15,21,17,6,22" target="_blank"> <span class="float-left w-bar-22 bd-right"><span class="o-hidden  display-b">易胜博</span></span> <span class="float-left w-bar-35 bd-right"><span class="float-left col-3">0.91</span> <span class="float-left col-3">2.5</span> <span class="float-left col-3">0.96</span></span> <span class="float-left w-bar-35 bd-right"> <span class="float-left col-3 color-red">3.0</span> <span class="float-left col-3 color-green">0.5</span> <span class="float-left col-3 color-green">0.24</span> <span class="float-left col-3 color-green">0</span> </span> <span class="float-left w-bar-8"><i class="ico-back"></i></span></a> <a class="field color-black h-35 line-h-35" href="/live/daxiaoqiu/2642959/7?_cid=2,3,10,7,4,5,11,14,15,21,17,6,22" target="_blank"> <span class="float-left w-bar-22 bd-right"><span class="o-hidden  display-b">澳彩</span></span> <span class="float-left w-bar-35 bd-right"><span class="float-left col-3">0.85</span> <span class="float-left col-3">2.5</span> <span class="float-left col-3">0.85</span></span> <span class="float-left w-bar-35 bd-right"> <span class="float-left col-3 color-red">1.35</span> <span class="float-left col-3 color-green">0.5</span> <span class="float-left col-3 color-green">0.3</span> <span class="float-left col-3 color-green">0</span> </span> <span class="float-left w-bar-8"><i class="ico-back"></i></span></a> <a class="field color-black h-35 line-h-35" href="/live/daxiaoqiu/2642959/4?_cid=2,3,10,7,4,5,11,14,15,21,17,6,22" target="_blank"> <span class="float-left w-bar-22 bd-right"><span class="o-hidden  display-b">10BET</span></span> <span class="float-left w-bar-35 bd-right"><span class="float-left col-3">0.83</span> <span class="float-left col-3">2.5</span> <span class="float-left col-3">1.03</span></span> <span class="float-left w-bar-35 bd-right"> <span class="float-left col-3 color-red">2.47</span> <span class="float-left col-3 color-green">0.5</span> <span class="float-left col-3 color-green">0.34</span> <span class="float-left col-3 color-green">0</span> </span> <span class="float-left w-bar-8"><i class="ico-back"></i></span></a> <a class="field color-black h-35 line-h-35" href="/live/daxiaoqiu/2642959/5?_cid=2,3,10,7,4,5,11,14,15,21,17,6,22" target="_blank"> <span class="float-left w-bar-22 bd-right"><span class="o-hidden  display-b">立博</span></span> <span class="float-left w-bar-35 bd-right"><span class="float-left col-3">0.86</span> <span class="float-left col-3">2.5</span> <span class="float-left col-3">0.86</span></span> <span class="float-left w-bar-35 bd-right"> <span class="float-left col-3 color-green">0.86</span> <span class="float-left col-3 color-green">2.5</span> <span class="float-left col-3 color-green">0.85</span> <span class="float-left col-3 color-green">0</span> </span> <span class="float-left w-bar-8"><i class="ico-back"></i></span></a> <a class="field color-black h-35 line-h-35" href="/live/daxiaoqiu/2642959/11?_cid=2,3,10,7,4,5,11,14,15,21,17,6,22" target="_blank"> <span class="float-left w-bar-22 bd-right"><span class="o-hidden  display-b">韦德</span></span> <span class="float-left w-bar-35 bd-right"><span class="float-left col-3">0.88</span> <span class="float-left col-3">2.5</span> <span class="float-left col-3">0.98</span></span> <span class="float-left w-bar-35 bd-right"> <span class="float-left col-3 color-red">0.98</span> <span class="float-left col-3 color-green">2.5</span> <span class="float-left col-3 color-green">0.89</span> <span class="float-left col-3 color-green">0</span> </span> <span class="float-left w-bar-8"><i class="ico-back"></i></span></a> <a class="field color-black h-35 line-h-35" href="/live/daxiaoqiu/2642959/14?_cid=2,3,10,7,4,5,11,14,15,21,17,6,22" target="_blank"> <span class="float-left w-bar-22 bd-right"><span class="o-hidden  display-b">12bet</span></span> <span class="float-left w-bar-35 bd-right"><span class="float-left col-3">0.84</span> <span class="float-left col-3">2.5</span> <span class="float-left col-3">0.98</span></span> <span class="float-left w-bar-35 bd-right"> <span class="float-left col-3 color-red">2.08</span> <span class="float-left col-3 color-green">0.5</span> <span class="float-left col-3 color-green">0.3</span> <span class="float-left col-3 color-green">0</span> </span> <span class="float-left w-bar-8"><i class="ico-back"></i></span></a> <a class="field color-black h-35 line-h-35" href="/live/daxiaoqiu/2642959/15?_cid=2,3,10,7,4,5,11,14,15,21,17,6,22" target="_blank"> <span class="float-left w-bar-22 bd-right"><span class="o-hidden  display-b">利记</span></span> <span class="float-left w-bar-35 bd-right"><span class="float-left col-3">0.86</span> <span class="float-left col-3">2.5</span> <span class="float-left col-3">0.96</span></span> <span class="float-left w-bar-35 bd-right"> <span class="float-left col-3 color-red">2.12</span> <span class="float-left col-3 color-green">0.5</span> <span class="float-left col-3 color-green">0.29</span> <span class="float-left col-3 color-green">0</span> </span> <span class="float-left w-bar-8"><i class="ico-back"></i></span></a> <a class="field color-black h-35 line-h-35" href="/live/daxiaoqiu/2642959/21?_cid=2,3,10,7,4,5,11,14,15,21,17,6,22" target="_blank"> <span class="float-left w-bar-22 bd-right"><span class="o-hidden  display-b">188</span></span> <span class="float-left w-bar-35 bd-right"><span class="float-left col-3">0.86</span> <span class="float-left col-3">2.5</span> <span class="float-left col-3">0.96</span></span> <span class="float-left w-bar-35 bd-right"> <span class="float-left col-3 color-red">2.70</span> <span class="float-left col-3 color-green">0.5</span> <span class="float-left col-3 color-green">0.27</span> <span class="float-left col-3 color-green">0</span> </span> <span class="float-left w-bar-8"><i class="ico-back"></i></span></a> <a class="field color-black h-35 line-h-35" href="/live/daxiaoqiu/2642959/17?_cid=2,3,10,7,4,5,11,14,15,21,17,6,22" target="_blank"> <span class="float-left w-bar-22 bd-right"><span class="o-hidden  display-b">18Bet</span></span> <span class="float-left w-bar-35 bd-right"><span class="float-left col-3">0.86</span> <span class="float-left col-3">2.5</span> <span class="float-left col-3">0.96</span></span> <span class="float-left w-bar-35 bd-right"> <span class="float-left col-3 color-red">2.43</span> <span class="float-left col-3 color-green">0.5</span> <span class="float-left col-3 color-green">0.27</span> <span class="float-left col-3 color-green">0</span> </span> <span class="float-left w-bar-8"><i class="ico-back"></i></span></a> <a class="field color-black h-35 line-h-35" href="/live/daxiaoqiu/2642959/6?_cid=2,3,10,7,4,5,11,14,15,21,17,6,22" target="_blank"> <span class="float-left w-bar-22 bd-right"><span class="o-hidden  display-b">明陞</span></span> <span class="float-left w-bar-35 bd-right"><span class="float-left col-3">0.84</span> <span class="float-left col-3">2.5</span> <span class="float-left col-3">0.98</span></span> <span class="float-left w-bar-35 bd-right"> <span class="float-left col-3 color-red">2.17</span> <span class="float-left col-3 color-green">0.5</span> <span class="float-left col-3 color-green">0.28</span> <span class="float-left col-3 color-green">0</span> </span> <span class="float-left w-bar-8"><i class="ico-back"></i></span></a> <a class="field color-black h-35 line-h-35" href="/live/daxiaoqiu/2642959/22?_cid=2,3,10,7,4,5,11,14,15,21,17,6,22" target="_blank"> <span class="float-left w-bar-22 bd-right"><span class="o-hidden  display-b">平博</span></span> <span class="float-left w-bar-35 bd-right"><span class="float-left col-3">0.89</span> <span class="float-left col-3">2.5</span> <span class="float-left col-3">0.89</span></span> <span class="float-left w-bar-35 bd-right"> <span class="float-left col-3 color-red">0.93</span> <span class="float-left col-3 color-green">2.5</span> <span class="float-left col-3 color-green">0.89</span> <span class="float-left col-3 color-green">0</span> </span> <span class="float-left w-bar-8"><i class="ico-back"></i></span></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--聊天-->
+        <div class="field hide"><div id="mobile-message" class="field-view chat-room"><div id="discussion"><!-- 讨论区 -->
+<div class="discussion">
+    <div class="title">
+        <div class="link active" onclick="message.tabCheck(this);">
+            <span>聊天室</span>
+            <span class="count people">
+                <i class="iconfont icon-ico-user-data"></i>
+                <span class="text">139</span>
+            </span>
+        </div>
+        <div class="link plan" onclick="message.tabCheck(this);">
+            <span>方案</span>
+            <span class="count">
+                <span class="text none">0</span>
+            </span>
+        </div>
+    </div>
+    <div class="content-bottom">
+        <div class="box active">
+            <div id="msg-list" class="msg-list nano">
+                <div class="nano-content" tabindex="0">
+                    <ul><li id="msg-item-1553000841434" class=""><span class="live-lb gold"><span class="icon"></span><span class="tips"><span class="m-r-2">Lv</span>28</span></span><a class="iconfont icon-phone" href="//www.leisu.com/app" target="_blank"></a><span class="name">老天救救我吧<span class="colon">：</span><span class="shield-report"><a class="btn" onclick="message.shield(this)">屏蔽</a><a class="btn" onclick="message.report(this)">举报</a></span></span><span class="content-txt">双方400进攻，200危险进攻，下半一个不日，赛跑比赛？</span></li><li id="msg-item-1553000904659" class=""><span class="live-lb silver"><span class="icon"></span><span class="tips"><span class="m-r-2">Lv</span>10</span></span><a class="iconfont icon-phone" href="//www.leisu.com/app" target="_blank"></a><span class="name">张文恺<span class="colon">：</span><span class="shield-report"><a class="btn" onclick="message.shield(this)">屏蔽</a><a class="btn" onclick="message.report(this)">举报</a></span></span><span class="content-txt">你们别琢磨改一个球了</span></li><li id="msg-item-1553000960955" class=""><span class="live-lb silver"><span class="icon"></span><span class="tips"><span class="m-r-2">Lv</span>14</span></span><a class="iconfont icon-phone" href="//www.leisu.com/app" target="_blank"></a><span class="name">wfl999<span class="colon">：</span><span class="shield-report"><a class="btn" onclick="message.shield(this)">屏蔽</a><a class="btn" onclick="message.report(this)">举报</a></span></span><span class="content-txt">别意淫了小五已经收米了</span></li><li id="msg-item-1553000961802" class=""><span class="live-lb silver"><span class="icon"></span><span class="tips"><span class="m-r-2">Lv</span>11</span></span><a class="iconfont icon-phone" href="//www.leisu.com/app" target="_blank"></a><span class="name">路子<span class="colon">：</span><span class="shield-report"><a class="btn" onclick="message.shield(this)">屏蔽</a><a class="btn" onclick="message.report(this)">举报</a></span></span><span class="content-txt">死了600</span></li><li id="msg-item-1553001108066" class=""><span class="live-lb gold"><span class="icon"></span><span class="tips"><span class="m-r-2">Lv</span>25</span></span><a class="iconfont icon-phone" href="//www.leisu.com/app" target="_blank"></a><span class="name">希拉贝尔<span class="colon">：</span><span class="shield-report"><a class="btn" onclick="message.shield(this)">屏蔽</a><a class="btn" onclick="message.report(this)">举报</a></span></span><span class="content-txt">？</span></li><li id="msg-item-1553000978769" class=""><span class="live-lb silver"><span class="icon"></span><span class="tips"><span class="m-r-2">Lv</span>11</span></span><a class="iconfont icon-phone" href="//www.leisu.com/app" target="_blank"></a><span class="name">路子<span class="colon">：</span><span class="shield-report"><a class="btn" onclick="message.shield(this)">屏蔽</a><a class="btn" onclick="message.report(this)">举报</a></span></span><span class="content-txt">2-2</span></li><li id="msg-item-1553000955946" class=""><span class="live-lb silver"><span class="icon"></span><span class="tips"><span class="m-r-2">Lv</span>10</span></span><a class="iconfont icon-phone" href="//www.leisu.com/app" target="_blank"></a><span class="name">张文恺<span class="colon">：</span><span class="shield-report"><a class="btn" onclick="message.shield(this)">屏蔽</a><a class="btn" onclick="message.report(this)">举报</a></span></span><span class="content-txt">哪有那么多改比分的</span></li><li id="msg-item-1553001326703" class=""><span class="live-lb gold"><span class="icon"></span><span class="tips"><span class="m-r-2">Lv</span>28</span></span><a class="iconfont icon-phone" href="//www.leisu.com/app" target="_blank"></a><span class="name">七零七五八十五<span class="colon">：</span><span class="shield-report"><a class="btn" onclick="message.shield(this)">屏蔽</a><a class="btn" onclick="message.report(this)">举报</a></span></span><span class="content-txt">改个鸡吧</span></li><li id="msg-item-1553000970133" class=""><span class="live-lb silver"><span class="icon"></span><span class="tips"><span class="m-r-2">Lv</span>10</span></span><a class="iconfont icon-phone" href="//www.leisu.com/app" target="_blank"></a><span class="name">张文恺<span class="colon">：</span><span class="shield-report"><a class="btn" onclick="message.shield(this)">屏蔽</a><a class="btn" onclick="message.report(this)">举报</a></span></span><span class="content-txt">想多了</span></li><li id="msg-item-1553001155517" class=""><span class="live-lb gold"><span class="icon"></span><span class="tips"><span class="m-r-2">Lv</span>25</span></span><a class="iconfont icon-phone" href="//www.leisu.com/app" target="_blank"></a><span class="name">希拉贝尔<span class="colon">：</span><span class="shield-report"><a class="btn" onclick="message.shield(this)">屏蔽</a><a class="btn" onclick="message.report(this)">举报</a></span></span><span class="content-txt">我是说我买了小4.75买3000块已经结算了，你们说改比分搞得我很慌</span></li><li id="msg-item-1553000904538" class=""><span class="live-lb silver"><span class="icon"></span><span class="tips"><span class="m-r-2">Lv</span>14</span></span><a class="iconfont icon-phone" href="//www.leisu.com/app" target="_blank"></a><span class="name">C罗一天赢5000<span class="colon">：</span><span class="shield-report"><a class="btn" onclick="message.shield(this)">屏蔽</a><a class="btn" onclick="message.report(this)">举报</a></span></span><span class="content-txt">幸亏没追，躲过一劫，被台北坑了艹😂</span></li><li id="msg-item-1552999591397" class=""><span class="live-lb silver"><span class="icon"></span><span class="tips"><span class="m-r-2">Lv</span>19</span></span><a class="iconfont icon-phone" href="//www.leisu.com/app" target="_blank"></a><span class="name">黔南陈冠希<span class="colon">：</span><span class="shield-report"><a class="btn" onclick="message.shield(this)">屏蔽</a><a class="btn" onclick="message.report(this)">举报</a></span></span><span class="content-txt">平局等了45分钟。都关机了</span></li><li id="msg-item-1553001280049" class=""><span class="live-lb silver"><span class="icon"></span><span class="tips"><span class="m-r-2">Lv</span>11</span></span><a class="iconfont icon-phone" href="//www.leisu.com/app" target="_blank"></a><span class="name">光速158<span class="colon">：</span><span class="shield-report"><a class="btn" onclick="message.shield(this)">屏蔽</a><a class="btn" onclick="message.report(this)">举报</a></span></span><span class="content-txt">万人坑吗，哈哈哈</span></li><li id="msg-item-1553001666443" class=""><span class="live-lb silver"><span class="icon"></span><span class="tips"><span class="m-r-2">Lv</span>19</span></span><a class="iconfont icon-phone" href="//www.leisu.com/app" target="_blank"></a><span class="name">2元不能再多了<span class="colon">：</span><span class="shield-report"><a class="btn" onclick="message.shield(this)">屏蔽</a><a class="btn" onclick="message.report(this)">举报</a></span></span><span class="content-txt">罗甲剧本，艹</span></li><li id="msg-item-1553001909022" class=""><span class="live-lb bronze"><span class="icon"></span><span class="tips"><span class="m-r-2">Lv</span>5</span></span><a class="iconfont icon-phone" href="//www.leisu.com/app" target="_blank"></a><span class="name">小弟在此万分感谢<span class="colon">：</span><span class="shield-report"><a class="btn" onclick="message.shield(this)">屏蔽</a><a class="btn" onclick="message.report(this)">举报</a></span></span><span class="content-txt">回来一看，小5，小6收米～</span></li><li id="msg-item-1553001977644" class=""><span class="live-lb silver"><span class="icon"></span><span class="tips"><span class="m-r-2">Lv</span>15</span></span><a class="iconfont icon-phone" href="//www.leisu.com/app" target="_blank"></a><span class="name">不冲动多好啊<span class="colon">：</span><span class="shield-report"><a class="btn" onclick="message.shield(this)">屏蔽</a><a class="btn" onclick="message.report(this)">举报</a></span></span><span class="content-txt">两个狗东西</span></li><li id="msg-item-1553001313721" class=""><span class="live-lb silver"><span class="icon"></span><span class="tips"><span class="m-r-2">Lv</span>18</span></span><a class="iconfont icon-phone" href="//www.leisu.com/app" target="_blank"></a><span class="name">欧赔核心涅槃思维<span class="colon">：</span><span class="shield-report"><a class="btn" onclick="message.shield(this)">屏蔽</a><a class="btn" onclick="message.report(this)">举报</a></span></span><span class="content-txt">尼玛，小5以为死了，上半场26分钟买的</span></li><li id="msg-item-1553000186646" class=""><span class="live-lb bronze"><span class="icon"></span><span class="tips"><span class="m-r-2">Lv</span>8</span></span><a class="iconfont icon-phone" href="//www.leisu.com/app" target="_blank"></a><span class="name">不耐烦1<span class="colon">：</span><span class="shield-report"><a class="btn" onclick="message.shield(this)">屏蔽</a><a class="btn" onclick="message.report(this)">举报</a></span></span><span class="content-txt">尼玛，下半场一球没有</span></li><li id="msg-item-1553000195593" class=""><span class="live-lb silver"><span class="icon"></span><span class="tips"><span class="m-r-2">Lv</span>20</span></span><a class="iconfont icon-phone" href="//www.leisu.com/app" target="_blank"></a><span class="name">深埋520<span class="colon">：</span><span class="shield-report"><a class="btn" onclick="message.shield(this)">屏蔽</a><a class="btn" onclick="message.report(this)">举报</a></span></span><span class="content-txt">日</span></li><li id="msg-item-1553002377995" class=""><span class="live-lb platnum"><span class="icon"></span><span class="tips"><span class="m-r-2">Lv</span>35</span></span><a class="iconfont icon-phone" href="//www.leisu.com/app" target="_blank"></a><span class="name">重启三十岁人生<span class="colon">：</span><span class="shield-report"><a class="btn" onclick="message.shield(this)">屏蔽</a><a class="btn" onclick="message.report(this)">举报</a></span></span><span class="content-txt">...</span></li></ul>
+                </div>
+            <div class="nano-pane" style="display: none;"><div class="nano-slider" style="height: 656px; transform: translate(0px, 0px);"></div></div></div>
+            <div class="msg-post">
+                <div class="warning"></div>
+                <textarea class="msg-content txt" placeholder="请输入文字..." maxlength="80"></textarea>
+                <a class="btn-post">发送</a>
+            </div>
+        </div>
+        <div class="box ">
+            <div class="plan-list nano">
+                <div class="nano-content">
+                    <ul>
+
+                    </ul>
+                </div>
+            </div>
+        </div>
     </div>
 </div>
-
+</div>
+<a class="msg-post-bottom" onclick="">
+    <i class="ico-pic m-l-8"></i>
+    <span class="text">在这里输入聊天内容</span>
+    <div class="float-right">
+        <i class="ico-gift color-red m-r-5"></i>
+        <i class="ico-emo m-r-8"></i>
+    </div>
+</a>
+</div>
+</div>
+    </div>
+</div>
 <!-- footer end -->
 <!-- 返回顶部 -->
 <a href="javascript:" target="_parent" class="gotop"></a>
+<!---->
 <script type="text/javascript">
+function detailNav(o) {
+    $(o).addClass('active').siblings().removeClass('active');
+    var index = $(o).parent().find('li').index($(o));
+    $('.detail-nav-content>.field').addClass('hide').removeClass('active-obj');
+    $('.detail-nav-content>.field').eq(index).addClass('active-obj').removeClass('hide');
+}
+
+
+function showInfo(o) {
+    $(o).addClass('active').siblings().removeClass('active');
+    var index = $(o).parent().find('li').index($(o));
+    $('.info-block>.list-content').addClass('hide');
+    $('.info-block>.list-content').eq(index).removeClass('hide');
+}
+
 $(function() {
-    window.initRem && initRem();
+
 
 
 
