@@ -2969,7 +2969,9 @@ body {
     position: relative;
     z-index: 0;
     font-size: 12px;
-    text-align: center
+    text-align: center;
+    height: 35px;
+    line-height: 35px;
 }
 
 .detail-nav-content .field .field-view.odds .table-one .field:after,
@@ -3399,5 +3401,6 @@ body.skin-wx .tooltip {
 	background-image: url(../images/gift.png);
 }
 .ico-emo{
-background-image: url(../images/emo.png);
+    background-image: url(../images/emo.png);
 }
+

@@ -631,5 +631,5 @@ img[src=""]{opacity: 0;}
 .ico-back{width: 1em;height: 1em;display: inline-block;background: url(../images/back.png);background-size: 100% 100%;font-size: 20px;}
 @media (min-width: 600px){
 	body{width: 600px;margin: 0 auto;box-shadow: 0 0 15px rgba(0,0,0,.3);}
-	.header,.footer,.sub-header,.modal{width: 600px;left: 50%;margin-left: -300px;}
+	.header,.footer,.sub-header,.modal,.fixed-top{width: 600px;left: 50%!important;margin-left: -300px;}
 }
