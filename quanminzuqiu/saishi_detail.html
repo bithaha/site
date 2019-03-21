@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="assets/css/swiper.min.css">
     <link rel="stylesheet" href="assets/css/common.css">
     <link rel="stylesheet" href="assets/css/time-axis.css">
-    <link rel="stylesheet" href="assets/css/message.css">    
+    <link rel="stylesheet" href="assets/css/message.css">
     <link rel="stylesheet" href="assets/css/saishi-detail.css">
     <script type="text/javascript" src="assets/js/jquery.min.js"></script>
     <script type="text/javascript" src="assets/js/common.js"></script>
@@ -336,13 +336,252 @@
             </div>
         </div>
         <!--阵容-->
-        <div class="field hide">
+        <div class="field active-obj" style="min-height: 347px;">
+            <div class="field-view lineup">
+                <div class="nav-postion-f">
+                    <ul class="live-code-nav">
+                        <li class="col-2 active" onclick="showInfo(this)">中国</li>
+                        <li class="col-2 " onclick="showInfo(this)">泰国</li>
+                    </ul>
+                </div>
+                <div class="info-block m-t-42">
+                    <div class="list-content  home">
+                        <div class="lineup-court m-t-18"><img class="img-bg" src="assets/images/lineup_court.png">
+                            <div class="children">
+                                <span class="player-item animate" style="left: 173.5px; top: 22.12px;">
+                                    <span class="radius">1</span>
+                                    <span class="text">颜骏凌</span>
+                                </span>
+                                <span class="player-item animate" style="left: 34.75px; top: 82.32px;">
+                                    <span class="radius">5</span>
+                                    <span class="text">张琳芃</span>
+                                </span>
+                                <span class="player-item animate" style="left: 121px; top: 82.32px;">
+                                    <span class="radius">3</span>
+                                    <span class="text">高准翼</span>
+                                </span>
+                                <span class="player-item animate" style="left: 226px; top: 82.32px;">
+                                    <span class="radius">6</span>
+                                    <span class="text">冯潇霆</span>
+                                </span>
+                                <span class="player-item animate" style="left: 312.25px; top: 82.32px;">
+                                    <span class="radius">4</span>
+                                    <span class="text">李磊</span>
+                                </span>
+                                <span class="player-item animate" style="left: 121px; top: 136.5px;">
+                                    <span class="radius">27</span>
+                                    <span class="text">王永珀</span>
+                                </span>
+                                <span class="player-item animate" style="left: 226px; top: 136.5px;">
+                                    <span class="radius">11</span>
+                                    <span class="text">蒿俊闵</span>
+                                </span>
+                                <span class="player-item animate" style="left: 68.5px; top: 196.7px;">
+                                    <span class="radius">7</span>
+                                    <span class="text">韦世豪</span>
+                                </span>
+                                <span class="player-item animate" style="left: 173.5px; top: 196.7px;">
+                                    <span class="radius">16</span>
+                                    <span class="text">张修维</span>
+                                </span>
+                                <span class="player-item animate" style="left: 278.5px; top: 196.7px;">
+                                    <span class="radius">15</span>
+                                    <span class="text">吴曦</span>
+                                </span>
+                                <span class="player-item animate" style="left: 173.5px; top: 256.9px;">
+                                    <span class="radius">9</span>
+                                    <span class="text">董学升</span>
+                                </span>
+                            </div>
+                        </div>
+                        <div class="clearfix-row f-s-14 line-h-40 color-333"><span class="m-l-16"> 首发阵容 4-2-3-1</span></div>
+                        <div class="clearfix-row">
+                            <ul class="list">
+                                <li id="58505">
+                                    <i class="user-icon" style="background-image: url('assets/images/avatar/c6eae85dc90cfef959b9d57205ddf48d.jpeg');"></i>
+                                    <span class="numb">1</span> <span class="name">颜骏凌</span>
+                                    <div class="float-right m-r-16 m-t-4"></div>
+                                </li>
+                                <li id="33871"
+                                <i class="user-icon" style="background-image: url('assets/images/avatar/3a5eae952a8ff75ea0ef3a566ab8084d.jpg');"></i> <span class="numb">5</span> <span class="name">张琳芃</span>
+                                    <div class="float-right m-r-16 m-t-4"></div>
+                                </li>
+                                <li id="53975"><i class="user-icon" style="background-image: url('assets/images/avatar/0a573174cff7b513acf534d683bfcbab.jpg');"></i> <span class="numb">3</span> <span class="name">高准翼</span>
+                                    <div class="float-right m-r-16 m-t-4"></div>
+                                </li>
+                                <li id="18164"><i class="user-icon" style="background-image: url('assets/images/avatar/ba1e638f1bfa60f9b488dedac53ac507.jpg');"></i> <span class="numb">6</span> <span class="name">冯潇霆</span>
+                                    <div class="float-right m-r-16 m-t-4"></div>
+                                </li>
+                                <li id="60163"><i class="user-icon" style="background-image: url('assets/images/avatar/fea91b7345c3bc7a8f44f47bc35a5162.jpg');"></i> <span class="numb">4</span> <span class="name">李磊</span>
+                                    <div class="float-right m-r-16 m-t-4"> <span class="icon icon-type-icon_austauschen"></span> <span class="time">45'</span> </div>
+                                </li>
+                                <li id="22393"><i class="user-icon" style="background-image: url('assets/images/avatar/0cc35097825820b57b856dd1ea418887.jpeg');"></i> <span class="numb">27</span> <span class="name">王永珀</span>
+                                    <div class="float-right m-r-16 m-t-4"> <span class="icon icon-type-icon_austauschen"></span> <span class="time">46'</span> <span class="icon icon-type-icon_YC"></span> <span class="time">29'</span> </div>
+                                </li>
+                                <li id="18171"><i class="user-icon" style="background-image: url('assets/images/avatar/26c3641ec8f19b323885ba7d01875bd5.png');"></i> <span class="numb">11</span> <span class="name">蒿俊闵</span>
+                                    <div class="float-right m-r-16 m-t-4"></div>
+                                </li>
+                                <li id="56170"><i class="user-icon" style="background-image: url('assets/images/avatar/6b963f676e84859e8157bda0559fa4bb.jpg');"></i> <span class="numb">7</span> <span class="name">韦世豪</span>
+                                    <div class="float-right m-r-16 m-t-4"></div>
+                                </li>
+                                <li id="84323"><i class="user-icon" style="background-image: url('assets/images/avatar/bc1fc82f0c5a7202acc54a9cc6120348.jpg');"></i> <span class="numb">16</span> <span class="name">张修维</span>
+                                    <div class="float-right m-r-16 m-t-4"></div>
+                                </li>
+                                <li id="40734"><i class="user-icon" style="background-image: url('assets/images/avatar/32e9a0d15fa603d5ba5eec1bcce64fe1.jpg');"></i> <span class="numb">15</span> <span class="name">吴曦</span>
+                                    <div class="float-right m-r-16 m-t-4"></div>
+                                </li>
+                                <li id="61184"><i class="user-icon" style="background-image: url('assets/images/avatar/ac691fe8be185960f29938a92607fa3c.jpeg');"></i> <span class="numb">9</span> <span class="name">董学升</span>
+                                    <div class="float-right m-r-16 m-t-4"></div>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="clearfix-row f-s-14 line-h-40 color-333"><span class="m-l-16">替补阵容</span></div>
+                        <div class="clearfix-row">
+                            <ul class="list">
+                                <li id="62734"><i class="user-icon" style="background-image: url('assets/images/avatar/de466a0ebeb30ca82d18a4770ef6a85e.jpg');"></i> <span class="numb">13</span> <span class="name">何超</span>
+                                    <div class="float-right m-r-16 m-t-4"></div>
+                                </li>
+                                <li id="45562"><i class="user-icon" style="background-image: url('assets/images/avatar/7fcefb60171ac7e64d76c3b8c36f6c32.png');"></i> <span class="numb">23</span> <span class="name">王大雷</span>
+                                    <div class="float-right m-r-16 m-t-4"></div>
+                                </li>
+                                <li id="22387"><i class="user-icon" style="background-image: url('assets/images/avatar/fc2182c7716809652346ecffcaf0e7cc.jpg');"></i> <span class="numb">1</span> <span class="name">曾诚</span>
+                                    <div class="float-right m-r-16 m-t-4"></div>
+                                </li>
+                                <li id="62559"><i class="user-icon" style="background-image: url('assets/images/avatar/280d3a5a1534bacd49a0174d2c028604.jpeg');"></i> <span class="numb">24</span> <span class="name">傅欢</span>
+                                    <div class="float-right m-r-16 m-t-4"></div>
+                                </li>
+                                <li id="58504"><i class="user-icon" style="background-image: url('assets/images/avatar/af4c215860182da1ddb82aab76c8d28f.jpg');"></i> <span class="numb">26</span> <span class="name">李昂</span>
+                                    <div class="float-right m-r-16 m-t-4"></div>
+                                </li>
+                                <li id="47934"><i class="user-icon" style="background-image: url('assets/images/avatar/84d6518cc4f3af3387f9dcb9b3e48a66.jpeg');"></i> <span class="numb">25</span> <span class="name">吕文君</span>
+                                    <div class="float-right m-r-16 m-t-4"></div>
+                                </li>
+                                <li id="42641"><i class="user-icon" style="background-image: url('assets/images/avatar/6db461defd77e97398318accc58b60ae.jpg');"></i> <span class="numb">14</span> <span class="name">张稀哲</span>
+                                    <div class="float-right m-r-16 m-t-4"> <span class="icon icon-type-icon_austauschen"></span> <span class="time">69'</span> </div>
+                                </li>
+                                <li>
+                                    <i class="user-icon" style="background-image: url('assets/images/avatar/77a13da4dfb668323715397ed3955077.jpg');"></i> <span class="numb">19</span> <span class="name">谢鹏飞</span>
+                                    <div class="float-right m-r-16 m-t-4"> <span class="icon icon-type-icon_austauschen"></span> <span class="time">46'</span>
+                                    </div>
+                                </li>
+                                <li>
+                                    <i class="user-icon" style="background-image: url('assets/images/avatar/393e154fcd8a6520752c587ba441e49f.png');"></i>
+                                    <span class="numb">30</span> <span class="name">彭欣力</span>
+                                    <div class="float-right m-r-16 m-t-4"></div>
+                                </li>
+                                <li id="36286"><i class="user-icon" style="background-image: url('assets/images/avatar/265577f631fcc5c814d0b2d57d740ec2.png');"></i> <span class="numb">21</span> <span class="name">谭龙</span>
+                                    <div class="float-right m-r-16 m-t-4"></div>
+                                </li>
+                                <li id="81409"><i class="user-icon" style="background-image: url('assets/images/avatar/64e577653bcca54cf98c9e2f1ae00696.png');"></i> <span class="numb">28</span> <span class="name">刘洋</span>
+                                    <div class="float-right m-r-16 m-t-4"> <span class="icon icon-type-icon_YC"></span> <span class="time">75'</span> <span class="icon icon-type-icon_austauschen"></span> <span class="time">45'</span> </div>
+                                </li>
+                                <li id="26281"><i class="user-icon" style="background-image: url('assets/images/avatar/81f5d4b583fae246cfc858e0b88c19eb.jpg');"></i> <span class="numb">17</span> <span class="name">王刚</span>
+                                    <div class="float-right m-r-16 m-t-4"> <span class="icon icon-type-icon_austauschen"></span> <span class="time">69'</span> </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="list-content hide away">
+                        <div class="lineup-court m-t-18">
+                            <img class="img-bg" src="assets/images/lineup_court.png">
+                            <div class="children">
+                                <span class="player-item animate" style="left: 173.5px; top: 22.12px;">
+                                    <span class="radius">23</span>
+                                    <span class="text">西瓦拉克·特德逊诺安</span>
+                                </span>
+                                <span class="player-item animate" style="left: 76px; top: 82.32px;">
+                                    <span class="radius">27</span>
+                                    <span class="text">那达邦</span>
+                                </span>
+                                <span class="player-item animate" style="left: 173.5px; top: 82.32px;">
+                                    <span class="radius">26</span>
+                                    <span class="text">素攀·通颂</span>
+                                </span>
+                                <span class="player-item animate" style="left: 271px; top: 82.32px;"> 
+                                    <span class="radius">5</span>
+                                    <span class="text">阿迪森·普罗姆拉克</span>
+                                </span>
+                                <span class="player-item animate" style="left: 34.75px; top: 172.62px;">
+                                    <span class="radius">19</span>
+                                    <span class="text">特里斯坦·杜</span>
+                                </span>
+                                <span class="player-item animate" style="left: 121px; top: 154.56px;">
+                                    <span class="radius">17</span>
+                                    <span class="text">塔那汶·革萨拉</span>
+                                </span>
+                                <span class="player-item animate" style="left: 226px; top: 154.56px;">
+                                    <span class="radius">4</span>
+                                    <span class="text">沙拉奇</span>
+                                </span>
+                                <span class="player-item animate" style="left: 312.25px; top: 172.62px;">
+                                    <span class="radius">3</span>
+                                    <span class="text">提拉通·汶马探</span>
+                                </span>
+                                <span class="player-item animate" style="left: 79.75px; top: 229.81px;">
+                                    <span class="radius">8</span>
+                                    <span class="text">提迪潘·普昂詹</span>
+                                </span>
+                                <span class="player-item animate" style="left: 267.25px; top: 229.81px;">
+                                    <span class="radius">18</span>
+                                    <span class="text">猜拿迪普·颂克拉辛</span>
+                                </span>
+                                <span class="player-item animate" style="left: 173.5px; top: 256.9px;">
+                                    <span class="radius">9</span>
+                                    <span class="text">阿迪萨克·克莱松</span>
+                                </span>
+                            </div>
+                        </div>
+                        <div class="clearfix-row f-s-14 line-h-40 color-333"><span class="m-l-16"> 首发阵容 3-4-2-1</span></div>
+                        <div class="clearfix-row">
+                            <ul class="list">
+                                <li>
+                                    <i class="user-icon" style="background-image: url('assets/images/avatar/0a573174cff7b513acf534d683bfcbab.jpg');"></i>
+                                    <span class="numb">23</span> <span class="name">西瓦拉克·特德逊诺安</span>
+                                    <div class="float-right m-r-16 m-t-4"></div>
+                                </li>
+                                <li>
+                                    <i class="user-icon" style="background-image: url('assets/images/avatar/c6eae85dc90cfef959b9d57205ddf48d.jpeg');"></i>
+                                    <span class="numb">27</span> <span class="name">那达邦</span>
+                                    <div class="float-right m-r-16 m-t-4"></div>
+                                </li>
+                                <li>
+                                    <i class="user-icon" style="background-image: url('assets/images/avatar/0cc35097825820b57b856dd1ea418887.jpeg');"></i>
+                                    <span class="numb">26</span> <span class="name">素攀·通颂</span>
+                                    <div class="float-right m-r-16 m-t-4"></div>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="clearfix-row f-s-14 line-h-40 color-333"><span class="m-l-16">替补阵容</span></div>
+                        <div class="clearfix-row">
+                            <ul class="list">
+                                <li>
+                                    <i class="user-icon" style="background-image: url('assets/images/avatar/0a573174cff7b513acf534d683bfcbab.jpg');"></i>
+                                    <span class="numb">23</span> <span class="name">西瓦拉克·特德逊诺安</span>
+                                    <div class="float-right m-r-16 m-t-4"></div>
+                                </li>
+                                <li>
+                                    <i class="user-icon" style="background-image: url('assets/images/avatar/0cc35097825820b57b856dd1ea418887.jpeg');"></i>
+                                    <span class="numb">27</span> <span class="name">那达邦</span>
+                                    <div class="float-right m-r-16 m-t-4"></div>
+                                </li>
+                                <li>
+                                    <i class="user-icon" style="background-image: url('assets/images/c6eae85dc90cfef959b9d57205ddf48d.jpeg');"></i>
+                                    <span class="numb">26</span> <span class="name">素攀·通颂</span>
+                                    <div class="float-right m-r-16 m-t-4"></div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- <div class="field hide">
             <div class="field-view lineup">
                 <div class="empty-panel m-t-30">
                     <div class="tips">当前无阵容数据</div>
                 </div>
             </div>
-        </div>
+        </div> -->
         <!--情报-->
         <div class="field hide">
             <div class="field-view info">
@@ -1269,58 +1508,84 @@
             </div>
         </div>
         <!--聊天-->
-        <div class="field hide"><div id="mobile-message" class="field-view chat-room"><div id="discussion"><!-- 讨论区 -->
-<div class="discussion">
-    <div class="title">
-        <div class="link active" onclick="message.tabCheck(this);">
-            <span>聊天室</span>
-            <span class="count people">
-                <i class="iconfont icon-ico-user-data"></i>
-                <span class="text">139</span>
-            </span>
-        </div>
-        <div class="link plan" onclick="message.tabCheck(this);">
-            <span>方案</span>
-            <span class="count">
-                <span class="text none">0</span>
-            </span>
-        </div>
-    </div>
-    <div class="content-bottom">
-        <div class="box active">
-            <div id="msg-list" class="msg-list nano">
-                <div class="nano-content" tabindex="0">
-                    <ul><li id="msg-item-1553000841434" class=""><span class="live-lb gold"><span class="icon"></span><span class="tips"><span class="m-r-2">Lv</span>28</span></span><a class="iconfont icon-phone" href="//www.leisu.com/app" target="_blank"></a><span class="name">老天救救我吧<span class="colon">：</span><span class="shield-report"><a class="btn" onclick="message.shield(this)">屏蔽</a><a class="btn" onclick="message.report(this)">举报</a></span></span><span class="content-txt">双方400进攻，200危险进攻，下半一个不日，赛跑比赛？</span></li><li id="msg-item-1553000904659" class=""><span class="live-lb silver"><span class="icon"></span><span class="tips"><span class="m-r-2">Lv</span>10</span></span><a class="iconfont icon-phone" href="//www.leisu.com/app" target="_blank"></a><span class="name">张文恺<span class="colon">：</span><span class="shield-report"><a class="btn" onclick="message.shield(this)">屏蔽</a><a class="btn" onclick="message.report(this)">举报</a></span></span><span class="content-txt">你们别琢磨改一个球了</span></li><li id="msg-item-1553000960955" class=""><span class="live-lb silver"><span class="icon"></span><span class="tips"><span class="m-r-2">Lv</span>14</span></span><a class="iconfont icon-phone" href="//www.leisu.com/app" target="_blank"></a><span class="name">wfl999<span class="colon">：</span><span class="shield-report"><a class="btn" onclick="message.shield(this)">屏蔽</a><a class="btn" onclick="message.report(this)">举报</a></span></span><span class="content-txt">别意淫了小五已经收米了</span></li><li id="msg-item-1553000961802" class=""><span class="live-lb silver"><span class="icon"></span><span class="tips"><span class="m-r-2">Lv</span>11</span></span><a class="iconfont icon-phone" href="//www.leisu.com/app" target="_blank"></a><span class="name">路子<span class="colon">：</span><span class="shield-report"><a class="btn" onclick="message.shield(this)">屏蔽</a><a class="btn" onclick="message.report(this)">举报</a></span></span><span class="content-txt">死了600</span></li><li id="msg-item-1553001108066" class=""><span class="live-lb gold"><span class="icon"></span><span class="tips"><span class="m-r-2">Lv</span>25</span></span><a class="iconfont icon-phone" href="//www.leisu.com/app" target="_blank"></a><span class="name">希拉贝尔<span class="colon">：</span><span class="shield-report"><a class="btn" onclick="message.shield(this)">屏蔽</a><a class="btn" onclick="message.report(this)">举报</a></span></span><span class="content-txt">？</span></li><li id="msg-item-1553000978769" class=""><span class="live-lb silver"><span class="icon"></span><span class="tips"><span class="m-r-2">Lv</span>11</span></span><a class="iconfont icon-phone" href="//www.leisu.com/app" target="_blank"></a><span class="name">路子<span class="colon">：</span><span class="shield-report"><a class="btn" onclick="message.shield(this)">屏蔽</a><a class="btn" onclick="message.report(this)">举报</a></span></span><span class="content-txt">2-2</span></li><li id="msg-item-1553000955946" class=""><span class="live-lb silver"><span class="icon"></span><span class="tips"><span class="m-r-2">Lv</span>10</span></span><a class="iconfont icon-phone" href="//www.leisu.com/app" target="_blank"></a><span class="name">张文恺<span class="colon">：</span><span class="shield-report"><a class="btn" onclick="message.shield(this)">屏蔽</a><a class="btn" onclick="message.report(this)">举报</a></span></span><span class="content-txt">哪有那么多改比分的</span></li><li id="msg-item-1553001326703" class=""><span class="live-lb gold"><span class="icon"></span><span class="tips"><span class="m-r-2">Lv</span>28</span></span><a class="iconfont icon-phone" href="//www.leisu.com/app" target="_blank"></a><span class="name">七零七五八十五<span class="colon">：</span><span class="shield-report"><a class="btn" onclick="message.shield(this)">屏蔽</a><a class="btn" onclick="message.report(this)">举报</a></span></span><span class="content-txt">改个鸡吧</span></li><li id="msg-item-1553000970133" class=""><span class="live-lb silver"><span class="icon"></span><span class="tips"><span class="m-r-2">Lv</span>10</span></span><a class="iconfont icon-phone" href="//www.leisu.com/app" target="_blank"></a><span class="name">张文恺<span class="colon">：</span><span class="shield-report"><a class="btn" onclick="message.shield(this)">屏蔽</a><a class="btn" onclick="message.report(this)">举报</a></span></span><span class="content-txt">想多了</span></li><li id="msg-item-1553001155517" class=""><span class="live-lb gold"><span class="icon"></span><span class="tips"><span class="m-r-2">Lv</span>25</span></span><a class="iconfont icon-phone" href="//www.leisu.com/app" target="_blank"></a><span class="name">希拉贝尔<span class="colon">：</span><span class="shield-report"><a class="btn" onclick="message.shield(this)">屏蔽</a><a class="btn" onclick="message.report(this)">举报</a></span></span><span class="content-txt">我是说我买了小4.75买3000块已经结算了，你们说改比分搞得我很慌</span></li><li id="msg-item-1553000904538" class=""><span class="live-lb silver"><span class="icon"></span><span class="tips"><span class="m-r-2">Lv</span>14</span></span><a class="iconfont icon-phone" href="//www.leisu.com/app" target="_blank"></a><span class="name">C罗一天赢5000<span class="colon">：</span><span class="shield-report"><a class="btn" onclick="message.shield(this)">屏蔽</a><a class="btn" onclick="message.report(this)">举报</a></span></span><span class="content-txt">幸亏没追，躲过一劫，被台北坑了艹😂</span></li><li id="msg-item-1552999591397" class=""><span class="live-lb silver"><span class="icon"></span><span class="tips"><span class="m-r-2">Lv</span>19</span></span><a class="iconfont icon-phone" href="//www.leisu.com/app" target="_blank"></a><span class="name">黔南陈冠希<span class="colon">：</span><span class="shield-report"><a class="btn" onclick="message.shield(this)">屏蔽</a><a class="btn" onclick="message.report(this)">举报</a></span></span><span class="content-txt">平局等了45分钟。都关机了</span></li><li id="msg-item-1553001280049" class=""><span class="live-lb silver"><span class="icon"></span><span class="tips"><span class="m-r-2">Lv</span>11</span></span><a class="iconfont icon-phone" href="//www.leisu.com/app" target="_blank"></a><span class="name">光速158<span class="colon">：</span><span class="shield-report"><a class="btn" onclick="message.shield(this)">屏蔽</a><a class="btn" onclick="message.report(this)">举报</a></span></span><span class="content-txt">万人坑吗，哈哈哈</span></li><li id="msg-item-1553001666443" class=""><span class="live-lb silver"><span class="icon"></span><span class="tips"><span class="m-r-2">Lv</span>19</span></span><a class="iconfont icon-phone" href="//www.leisu.com/app" target="_blank"></a><span class="name">2元不能再多了<span class="colon">：</span><span class="shield-report"><a class="btn" onclick="message.shield(this)">屏蔽</a><a class="btn" onclick="message.report(this)">举报</a></span></span><span class="content-txt">罗甲剧本，艹</span></li><li id="msg-item-1553001909022" class=""><span class="live-lb bronze"><span class="icon"></span><span class="tips"><span class="m-r-2">Lv</span>5</span></span><a class="iconfont icon-phone" href="//www.leisu.com/app" target="_blank"></a><span class="name">小弟在此万分感谢<span class="colon">：</span><span class="shield-report"><a class="btn" onclick="message.shield(this)">屏蔽</a><a class="btn" onclick="message.report(this)">举报</a></span></span><span class="content-txt">回来一看，小5，小6收米～</span></li><li id="msg-item-1553001977644" class=""><span class="live-lb silver"><span class="icon"></span><span class="tips"><span class="m-r-2">Lv</span>15</span></span><a class="iconfont icon-phone" href="//www.leisu.com/app" target="_blank"></a><span class="name">不冲动多好啊<span class="colon">：</span><span class="shield-report"><a class="btn" onclick="message.shield(this)">屏蔽</a><a class="btn" onclick="message.report(this)">举报</a></span></span><span class="content-txt">两个狗东西</span></li><li id="msg-item-1553001313721" class=""><span class="live-lb silver"><span class="icon"></span><span class="tips"><span class="m-r-2">Lv</span>18</span></span><a class="iconfont icon-phone" href="//www.leisu.com/app" target="_blank"></a><span class="name">欧赔核心涅槃思维<span class="colon">：</span><span class="shield-report"><a class="btn" onclick="message.shield(this)">屏蔽</a><a class="btn" onclick="message.report(this)">举报</a></span></span><span class="content-txt">尼玛，小5以为死了，上半场26分钟买的</span></li><li id="msg-item-1553000186646" class=""><span class="live-lb bronze"><span class="icon"></span><span class="tips"><span class="m-r-2">Lv</span>8</span></span><a class="iconfont icon-phone" href="//www.leisu.com/app" target="_blank"></a><span class="name">不耐烦1<span class="colon">：</span><span class="shield-report"><a class="btn" onclick="message.shield(this)">屏蔽</a><a class="btn" onclick="message.report(this)">举报</a></span></span><span class="content-txt">尼玛，下半场一球没有</span></li><li id="msg-item-1553000195593" class=""><span class="live-lb silver"><span class="icon"></span><span class="tips"><span class="m-r-2">Lv</span>20</span></span><a class="iconfont icon-phone" href="//www.leisu.com/app" target="_blank"></a><span class="name">深埋520<span class="colon">：</span><span class="shield-report"><a class="btn" onclick="message.shield(this)">屏蔽</a><a class="btn" onclick="message.report(this)">举报</a></span></span><span class="content-txt">日</span></li><li id="msg-item-1553002377995" class=""><span class="live-lb platnum"><span class="icon"></span><span class="tips"><span class="m-r-2">Lv</span>35</span></span><a class="iconfont icon-phone" href="//www.leisu.com/app" target="_blank"></a><span class="name">重启三十岁人生<span class="colon">：</span><span class="shield-report"><a class="btn" onclick="message.shield(this)">屏蔽</a><a class="btn" onclick="message.report(this)">举报</a></span></span><span class="content-txt">...</span></li></ul>
+        <div class="field hide">
+            <div id="mobile-message" class="field-view chat-room">
+                <div id="discussion">
+                    <!-- 讨论区 -->
+                    <div class="discussion">
+                        <div class="title">
+                            <div class="link active" onclick="message.tabCheck(this);">
+                                <span>聊天室</span>
+                                <span class="count people">
+                                    <i class="iconfont icon-ico-user-data"></i>
+                                    <span class="text">139</span>
+                                </span>
+                            </div>
+                            <div class="link plan" onclick="message.tabCheck(this);">
+                                <span>方案</span>
+                                <span class="count">
+                                    <span class="text none">0</span>
+                                </span>
+                            </div>
+                        </div>
+                        <div class="content-bottom">
+                            <div class="box active">
+                                <div id="msg-list" class="msg-list nano">
+                                    <div class="nano-content" tabindex="0">
+                                        <ul>
+                                            <li id="msg-item-1553000841434" class=""><span class="live-lb gold"><span class="icon"></span><span class="tips"><span class="m-r-2">Lv</span>28</span></span><a class="iconfont icon-phone" href="#" target="_blank"></a><span class="name">老天救救我吧<span class="colon">：</span><span class="shield-report"><a class="btn" onclick="message.shield(this)">屏蔽</a><a class="btn" onclick="message.report(this)">举报</a></span></span><span class="content-txt">双方400进攻，200危险进攻，下半一个不日，赛跑比赛？</span></li>
+                                            <li id="msg-item-1553000904659" class=""><span class="live-lb silver"><span class="icon"></span><span class="tips"><span class="m-r-2">Lv</span>10</span></span><a class="iconfont icon-phone" href="#" target="_blank"></a><span class="name">张文恺<span class="colon">：</span><span class="shield-report"><a class="btn" onclick="message.shield(this)">屏蔽</a><a class="btn" onclick="message.report(this)">举报</a></span></span><span class="content-txt">你们别琢磨改一个球了</span></li>
+                                            <li id="msg-item-1553000960955" class=""><span class="live-lb silver"><span class="icon"></span><span class="tips"><span class="m-r-2">Lv</span>14</span></span><a class="iconfont icon-phone" href="#" target="_blank"></a><span class="name">wfl999<span class="colon">：</span><span class="shield-report"><a class="btn" onclick="message.shield(this)">屏蔽</a><a class="btn" onclick="message.report(this)">举报</a></span></span><span class="content-txt">别意淫了小五已经收米了</span></li>
+                                            <li id="msg-item-1553000961802" class=""><span class="live-lb silver"><span class="icon"></span><span class="tips"><span class="m-r-2">Lv</span>11</span></span><a class="iconfont icon-phone" href="#" target="_blank"></a><span class="name">路子<span class="colon">：</span><span class="shield-report"><a class="btn" onclick="message.shield(this)">屏蔽</a><a class="btn" onclick="message.report(this)">举报</a></span></span><span class="content-txt">死了600</span></li>
+                                            <li id="msg-item-1553001108066" class=""><span class="live-lb gold"><span class="icon"></span><span class="tips"><span class="m-r-2">Lv</span>25</span></span><a class="iconfont icon-phone" href="#" target="_blank"></a><span class="name">希拉贝尔<span class="colon">：</span><span class="shield-report"><a class="btn" onclick="message.shield(this)">屏蔽</a><a class="btn" onclick="message.report(this)">举报</a></span></span><span class="content-txt">？</span></li>
+                                            <li id="msg-item-1553000978769" class=""><span class="live-lb silver"><span class="icon"></span><span class="tips"><span class="m-r-2">Lv</span>11</span></span><a class="iconfont icon-phone" href="#" target="_blank"></a><span class="name">路子<span class="colon">：</span><span class="shield-report"><a class="btn" onclick="message.shield(this)">屏蔽</a><a class="btn" onclick="message.report(this)">举报</a></span></span><span class="content-txt">2-2</span></li>
+                                            <li id="msg-item-1553000955946" class=""><span class="live-lb silver"><span class="icon"></span><span class="tips"><span class="m-r-2">Lv</span>10</span></span><a class="iconfont icon-phone" href="#" target="_blank"></a><span class="name">张文恺<span class="colon">：</span><span class="shield-report"><a class="btn" onclick="message.shield(this)">屏蔽</a><a class="btn" onclick="message.report(this)">举报</a></span></span><span class="content-txt">哪有那么多改比分的</span></li>
+                                            <li id="msg-item-1553001326703" class=""><span class="live-lb gold"><span class="icon"></span><span class="tips"><span class="m-r-2">Lv</span>28</span></span><a class="iconfont icon-phone" href="#" target="_blank"></a><span class="name">七零七五八十五<span class="colon">：</span><span class="shield-report"><a class="btn" onclick="message.shield(this)">屏蔽</a><a class="btn" onclick="message.report(this)">举报</a></span></span><span class="content-txt">改个鸡吧</span></li>
+                                            <li id="msg-item-1553000970133" class=""><span class="live-lb silver"><span class="icon"></span><span class="tips"><span class="m-r-2">Lv</span>10</span></span><a class="iconfont icon-phone" href="#" target="_blank"></a><span class="name">张文恺<span class="colon">：</span><span class="shield-report"><a class="btn" onclick="message.shield(this)">屏蔽</a><a class="btn" onclick="message.report(this)">举报</a></span></span><span class="content-txt">想多了</span></li>
+                                            <li id="msg-item-1553001155517" class=""><span class="live-lb gold"><span class="icon"></span><span class="tips"><span class="m-r-2">Lv</span>25</span></span><a class="iconfont icon-phone" href="#" target="_blank"></a><span class="name">希拉贝尔<span class="colon">：</span><span class="shield-report"><a class="btn" onclick="message.shield(this)">屏蔽</a><a class="btn" onclick="message.report(this)">举报</a></span></span><span class="content-txt">我是说我买了小4.75买3000块已经结算了，你们说改比分搞得我很慌</span></li>
+                                            <li id="msg-item-1553000904538" class=""><span class="live-lb silver"><span class="icon"></span><span class="tips"><span class="m-r-2">Lv</span>14</span></span><a class="iconfont icon-phone" href="#" target="_blank"></a><span class="name">C罗一天赢5000<span class="colon">：</span><span class="shield-report"><a class="btn" onclick="message.shield(this)">屏蔽</a><a class="btn" onclick="message.report(this)">举报</a></span></span><span class="content-txt">幸亏没追，躲过一劫，被台北坑了艹😂</span></li>
+                                            <li id="msg-item-1552999591397" class=""><span class="live-lb silver"><span class="icon"></span><span class="tips"><span class="m-r-2">Lv</span>19</span></span><a class="iconfont icon-phone" href="#" target="_blank"></a><span class="name">黔南陈冠希<span class="colon">：</span><span class="shield-report"><a class="btn" onclick="message.shield(this)">屏蔽</a><a class="btn" onclick="message.report(this)">举报</a></span></span><span class="content-txt">平局等了45分钟。都关机了</span></li>
+                                            <li id="msg-item-1553001280049" class=""><span class="live-lb silver"><span class="icon"></span><span class="tips"><span class="m-r-2">Lv</span>11</span></span><a class="iconfont icon-phone" href="#" target="_blank"></a><span class="name">光速158<span class="colon">：</span><span class="shield-report"><a class="btn" onclick="message.shield(this)">屏蔽</a><a class="btn" onclick="message.report(this)">举报</a></span></span><span class="content-txt">万人坑吗，哈哈哈</span></li>
+                                            <li id="msg-item-1553001666443" class=""><span class="live-lb silver"><span class="icon"></span><span class="tips"><span class="m-r-2">Lv</span>19</span></span><a class="iconfont icon-phone" href="#" target="_blank"></a><span class="name">2元不能再多了<span class="colon">：</span><span class="shield-report"><a class="btn" onclick="message.shield(this)">屏蔽</a><a class="btn" onclick="message.report(this)">举报</a></span></span><span class="content-txt">罗甲剧本，艹</span></li>
+                                            <li id="msg-item-1553001909022" class=""><span class="live-lb bronze"><span class="icon"></span><span class="tips"><span class="m-r-2">Lv</span>5</span></span><a class="iconfont icon-phone" href="#" target="_blank"></a><span class="name">小弟在此万分感谢<span class="colon">：</span><span class="shield-report"><a class="btn" onclick="message.shield(this)">屏蔽</a><a class="btn" onclick="message.report(this)">举报</a></span></span><span class="content-txt">回来一看，小5，小6收米～</span></li>
+                                            <li id="msg-item-1553001977644" class=""><span class="live-lb silver"><span class="icon"></span><span class="tips"><span class="m-r-2">Lv</span>15</span></span><a class="iconfont icon-phone" href="#" target="_blank"></a><span class="name">不冲动多好啊<span class="colon">：</span><span class="shield-report"><a class="btn" onclick="message.shield(this)">屏蔽</a><a class="btn" onclick="message.report(this)">举报</a></span></span><span class="content-txt">两个狗东西</span></li>
+                                            <li id="msg-item-1553001313721" class=""><span class="live-lb silver"><span class="icon"></span><span class="tips"><span class="m-r-2">Lv</span>18</span></span><a class="iconfont icon-phone" href="#" target="_blank"></a><span class="name">欧赔核心涅槃思维<span class="colon">：</span><span class="shield-report"><a class="btn" onclick="message.shield(this)">屏蔽</a><a class="btn" onclick="message.report(this)">举报</a></span></span><span class="content-txt">尼玛，小5以为死了，上半场26分钟买的</span></li>
+                                            <li id="msg-item-1553000186646" class=""><span class="live-lb bronze"><span class="icon"></span><span class="tips"><span class="m-r-2">Lv</span>8</span></span><a class="iconfont icon-phone" href="#" target="_blank"></a><span class="name">不耐烦1<span class="colon">：</span><span class="shield-report"><a class="btn" onclick="message.shield(this)">屏蔽</a><a class="btn" onclick="message.report(this)">举报</a></span></span><span class="content-txt">尼玛，下半场一球没有</span></li>
+                                            <li id="msg-item-1553000195593" class=""><span class="live-lb silver"><span class="icon"></span><span class="tips"><span class="m-r-2">Lv</span>20</span></span><a class="iconfont icon-phone" href="#" target="_blank"></a><span class="name">深埋520<span class="colon">：</span><span class="shield-report"><a class="btn" onclick="message.shield(this)">屏蔽</a><a class="btn" onclick="message.report(this)">举报</a></span></span><span class="content-txt">日</span></li>
+                                            <li id="msg-item-1553002377995" class=""><span class="live-lb platnum"><span class="icon"></span><span class="tips"><span class="m-r-2">Lv</span>35</span></span><a class="iconfont icon-phone" href="#" target="_blank"></a><span class="name">重启三十岁人生<span class="colon">：</span><span class="shield-report"><a class="btn" onclick="message.shield(this)">屏蔽</a><a class="btn" onclick="message.report(this)">举报</a></span></span><span class="content-txt">...</span></li>
+                                        </ul>
+                                    </div>
+                                    <div class="nano-pane" style="display: none;">
+                                        <div class="nano-slider" style="height: 656px; transform: translate(0px, 0px);"></div>
+                                    </div>
+                                </div>
+                                <div class="msg-post">
+                                    <div class="warning"></div>
+                                    <textarea class="msg-content txt" placeholder="请输入文字..." maxlength="80"></textarea>
+                                    <a class="btn-post">发送</a>
+                                </div>
+                            </div>
+                            <div class="box ">
+                                <div class="plan-list nano">
+                                    <div class="nano-content">
+                                        <ul>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-            <div class="nano-pane" style="display: none;"><div class="nano-slider" style="height: 656px; transform: translate(0px, 0px);"></div></div></div>
-            <div class="msg-post">
-                <div class="warning"></div>
-                <textarea class="msg-content txt" placeholder="请输入文字..." maxlength="80"></textarea>
-                <a class="btn-post">发送</a>
+                <a class="msg-post-bottom" onclick="">
+                    <i class="ico-pic m-l-8"></i>
+                    <span class="text">在这里输入聊天内容</span>
+                    <div class="float-right">
+                        <i class="ico-gift color-red m-r-5"></i>
+                        <i class="ico-emo m-r-8"></i>
+                    </div>
+                </a>
             </div>
         </div>
-        <div class="box ">
-            <div class="plan-list nano">
-                <div class="nano-content">
-                    <ul>
-
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-</div>
-<a class="msg-post-bottom" onclick="">
-    <i class="ico-pic m-l-8"></i>
-    <span class="text">在这里输入聊天内容</span>
-    <div class="float-right">
-        <i class="ico-gift color-red m-r-5"></i>
-        <i class="ico-emo m-r-8"></i>
-    </div>
-</a>
-</div>
-</div>
     </div>
 </div>
 <!-- footer end -->
@@ -1339,8 +1604,9 @@ function detailNav(o) {
 function showInfo(o) {
     $(o).addClass('active').siblings().removeClass('active');
     var index = $(o).parent().find('li').index($(o));
-    $('.info-block>.list-content').addClass('hide');
-    $('.info-block>.list-content').eq(index).removeClass('hide');
+    var list = $(o).parent().parent().next('.info-block').children('.list-content')
+    list.addClass('hide');
+    list.eq(index).removeClass('hide');
 }
 
 $(function() {

@@ -106,6 +106,9 @@ img[src=""]{opacity: 0;}
 .bgcolor-yellow4 {
     background-color: #f2bf51;
 }
+.col-2 {
+    width: 50%;
+}
 .col-6 {
     width: 16.66%;
 }
@@ -166,6 +169,9 @@ img[src=""]{opacity: 0;}
 .p-r-10 {
     padding-right: 10px;
 }
+.m-t-42 {
+    margin-top: 42px;
+}
 .svg-icon {
     width: 1em;
     height: 1em;
@@ -199,6 +205,9 @@ img[src=""]{opacity: 0;}
 }
 .line-h-35 {
     line-height: 35px;
+}
+.line-h-40 {
+    line-height: 40px;
 }
 .h-35 {
     height: 35px;
@@ -630,6 +639,7 @@ img[src=""]{opacity: 0;}
 /* 图标 */
 .ico-back{width: 1em;height: 1em;display: inline-block;background: url(../images/back.png);background-size: 100% 100%;font-size: 20px;}
 @media (min-width: 600px){
-	body{width: 600px;margin: 0 auto;box-shadow: 0 0 15px rgba(0,0,0,.3);}
-	.header,.footer,.sub-header,.modal{width: 600px;left: 50%;margin-left: -300px;}
+	body,.fixed-top{width: 600px;margin: 0 auto;box-shadow: 0 0 15px rgba(0,0,0,.3);}
+
+	.header,.footer,.sub-header,.modal,{width: 600px;left: 50%;margin-left: -300px;}
 }
