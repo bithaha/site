@@ -1,0 +1,28 @@
+/*入驻申请*/
+.ruzhu-head-tips{padding: .4rem .5rem;line-height: 1.4;font-size: .34rem;background: rgba(255,255,255,.1);}
+.reg-form .item {padding-left: .5rem;padding-right: .5rem;line-height: .6rem;display: -webkit-box;display: -webkit-flex;display: -moz-box;display: -moz-flex; display: -ms-flexbox; display: flex;}
+.reg-form .tit,.reg-form .label { font-weight: normal; white-space: nowrap; margin: 0;}
+.reg-form .txt ,.reg-form input[type="text"]{ border: 0; width: 80%;margin-left: 2%;  background:none;}
+.reg-form .tit + .txt,.reg-form .tit + input[type="text"]{padding-left: .6rem;}
+.reg-form textarea{height: 1.6rem;line-height: 1.2;}
+.reg-form .divide{height: .2rem;background: #444}
+
+.upload-avatar{display: inline-block;overflow: hidden;position: relative;}
+.upload-avatar input[type="file"]{opacity: 0;position: absolute;top: 0;left: 0;z-index: 20;}
+.upload-avatar img{width: 100%;height: 100%;}
+
+.reg-form .upload-avatar{width: .6rem;height: .6rem;border-radius:50%;position: absolute;right:1rem;top: 50%;margin-top: -.3rem;}
+
+
+.ruzhu-form .upload-card-item{display: block;}
+.ruzhu-form .upload-card-item .upload-avatar{display:block;width: 4rem;height: 2rem;border-radius: 0;position: static;margin: .3rem 0 .3rem;}
+.btn-submit{display: block;background: #ffeb3b;color: #000;text-align: center;line-height: .8rem;width: 100%;}
+.ruzhu-form .item-foot{padding: .4rem;}
+
+
+.my-container{}
+.my-container .head{height: 5.6rem;background: url(../images/uhead.jpg);background-size: cover;position: relative;}
+.my-container .head .login-link{position: absolute;bottom: .8rem;left: .5rem;color: #fff;}
+.my-container .head .login-link a{margin: 0 .2rem;color: #fff;}
+.my-container .menu-list{margin: 0 .3rem;}
+.my-container .menu-list .item{padding-top: .4rem;padding-bottom: .4rem;}

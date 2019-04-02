@@ -1,12 +1,12 @@
 @charset "utf-8";
 *{ margin:0; padding:0; box-sizing: border-box;}
-body, input, button, textarea { color:#ccc; font:.4rem/1 "Microsoft YaHei", Arial, simsun, Tahoma, Verdana, Helvetica, sans-serif; }
+body, input, button, textarea,select { color:#ccc; font:.4rem/1 "Microsoft YaHei", Arial, simsun, Tahoma, Verdana, Helvetica, sans-serif; }
 article, aside, figcaption, figure, footer, header, hgroup, main, nav, section { display:block; }
 body { padding-bottom: 1.2rem;background: url(../images/bg.jpg) center top no-repeat #000;background-size: cover;}
 img { border:none; max-width: 100%;}
 li { list-style:none; }
 i, em { font-style:normal; }
-i{width: 1em;height: 1em;display: inline-block;background-repeat: no-repeat;background-size: 100% 100%;}
+i{width: 1em;height: 1em;display: inline-block;background-repeat: no-repeat;background-size: 100% 100%;background-position: center;}
 a { color:#ccc; text-decoration:none; cursor:pointer; -webkit-transition: color,background .2s;transition: color,background .2s;}
 a:focus { outline:none; }
 a:hover { text-decoration:none; }
@@ -28,40 +28,45 @@ img[src=""]{opacity: 0;}
 
 
 .list{}
-.list .item{padding:.25rem 0.25rem;display: block; position: relative;border-bottom: 1px solid #eee;}
+.list .item{padding:.25rem 0.25rem;display: block; position: relative;border-bottom: 1px solid #444;}
 .list .item-divider{background-color: #f4f4f4;padding: .2rem 0;}
 .list .item-link{}
 .list .item-link .arrow-left{font-size: .7rem;position: absolute;left: .35rem;top:50%;margin-top: -.35rem;}
-.list .item-link .arrow-right{font-size: 1rem;position: absolute;right: .35rem;top:50%;margin-top: -.5rem;color: #ccc;}
-.list .item-link .arrow-left + .txt{padding-left: 1.4rem;}
+.list .item-link .arrow-right{font-size: .4rem;position: absolute;right: .35rem;top:50%;margin-top: -.2rem;color: #ccc;}
+.list .item-link .arrow-left + .txt{padding-left: 1rem;}
 .list a.item:active{background-color: #f4f4f4;}
 .line{height: .15rem;background:#f2f4f7;}
+.list .item-link .arrow-right .ico-arrow{background-image: url(../images/ico-arrow-right.png);}
 
 
 .header{position: fixed;top: 0;width: 100%;left: 0;z-index: 100;background-color: #222;box-shadow: 0 0 10px rgba(0,0,0,.1);}
 .header .title{line-height: 1.2rem;text-align: center;color:#fff;font-weight: normal;}
 .header .title .tab-item{color: #ccc;display: inline-block;padding: 0 .2rem;line-height: .6rem;border-radius: .6rem;}
 .header .title .tab-item.active{background-color: #ffeb3b;color: #222;}
+.header .btn-back{position: absolute;left: 0;top: 0;width: 1.2rem;height: 1.2rem;line-height: 1.2rem;text-align: center;}
+.header .btn-back i{vertical-align: middle;}
+.header .btn-right{position: absolute;right: 0;top: 0;line-height: 1.2rem;color: #ffeb3b;padding: 0 .2rem;}
+.header .btn-right.border{right: .3rem;top: 50%;margin-top: -.3rem;line-height: .6rem;border: 1px solid #ffeb3b;font-size: .34rem;}
 
-.header + .viewport{padding-top: 1.2rem;}
-.sub-header + .viewport{padding-top: 2.2rem;}
+.sub-header + .viewport{padding-top: 1rem;}
 .sub-header{position: fixed;width: 100%;top: 1.18rem;left: 0;background-color: #1a1a1a;z-index: 101;}
 .sub-header .tabs{ overflow: hidden;display: -webkit-box;display: -webkit-flex;display: -moz-box; display: -moz-flex; display: -ms-flexbox;display: flex; }
 .sub-header .tabs .item{    -webkit-box-flex: 1; -webkit-flex: 1; -moz-box-flex: 1; -moz-flex: 1; -ms-flex: 1; flex: 1;border-bottom:1px solid rgba(255,255,255,.1);text-align: center;font-size: .32rem;line-height: .4rem;}
 .sub-header .tabs .item a{color: #ccc;}
 .sub-header .tabs .item.active{border-bottom-color: #ffeb3b;}
 .sub-header .tabs .item.active a{color: #ffeb3b;}
+.sub-header .tabs .item i{margin-left: .2rem;}
 
 .header .btn-menu{position: absolute;width: 1.2rem;height: 1.2rem;top: 0;right: 0;z-index: 10;}
 .header .btn-menu:before,.header .btn-menu:after,.header .btn-menu b{content:"";width: .6rem;height: 2px;background-color: #ccc;display: block;position: absolute;top: 50%;left: 50%;margin: -1px 0 0 -.3rem;border-radius: 2px;}
 .header .btn-menu:before{margin-top: -7px;}
 .header .btn-menu:after{margin-top: 5px;}
 
-
+.divide-line{height: .2rem;background: #666;}
 /* -------------------------------- 
  * 页底 
  * -------------------------------- */
-.footer {position: fixed;bottom: 0;left: 0;width: 100%;z-index: 100;background: #000;border-top: 1px solid rgba(255,255,255,.1);box-shadow: 0 1px 3px rgba(0,0,0,.05);}
+.footer {position: fixed;bottom: 0;left: 0;width: 100%;z-index: 100;background: #000;border-top: 1px solid rgba(255,255,255,.1);padding: 0;box-shadow: 0 1px 3px rgba(0,0,0,.05);}
 .footer ul {float: left;width: 100%;position: relative;}
 .footer li {float: left;width: 20%;height: 100%;text-align: center;position: relative;min-height: 1px;float: left;padding: .15rem 0;height: 1.2rem;font-size: .26rem;}
 .footer li .num{background: #f43531;min-width: .3rem;height: .3rem;line-height:.3rem;color:#fff;text-align:center;border-radius: 100%;display: block;position: absolute;left: 50%;top: 5px;margin-left: 5px;}
@@ -84,7 +89,24 @@ img[src=""]{opacity: 0;}
 
 .gotop{display:none;width: 1rem;height: 1rem;text-align:center;color:#fff;font-size:12px;border-radius:50%;background:#bbb url(../images/go-top.png) center center no-repeat;background-size:50% 50%;position:fixed;right:10px;bottom:2rem;z-index:9999;line-height:1.3em;}
 
-
+/* tag */
+.ico-txt{display:inline-block;padding: .06rem .15rem; font-weight:normal;color:#fff;font-size:.32rem;border-radius: .1rem;}
+.ico-txt{*display:inline;}
+.ico-txt.red{background-color:#eb4c5e;}
+.ico-txt.pink{background-color:#fcaaaa;}
+.ico-txt.blue{background-color:#208aee;}
+.ico-txt.yellow{background-color:#f19149;}
+.ico-txt.green{background-color:#6db852;}
+.ico-txt.purple{background-color:#be9bd9;}
+.ico-txt.orange{background-color:#f19149;}
+.ico-txt.border{border: 1px solid transparent;}
+.ico-txt.border.red{background-color: transparent;color:#eb4c5e;border-color:#eb4c5e; }
+.ico-txt.border.pink{background-color:#fcaaaa;background-color: transparent;color:#df0000;border-color:#df0000: }
+.ico-txt.border.blue{background-color: transparent;color:#208aee;border-color:#208aee; }
+.ico-txt.border.yellow{background-color: transparent;color:#ffbe58;border-color:#ffbe58; }
+.ico-txt.border.green{background-color: transparent;color:#6db852;border-color:#6db852; }
+.ico-txt.border.purple{background-color: transparent;color:#be9bd9;border-color:#be9bd9; }
+.ico-txt.border.orange{background-color: transparent;color:#f19149;border-color:#f19149; }
 
 .empty{padding: .3rem 0;text-align: center;color: #999;}
 
@@ -642,3 +664,31 @@ img[src=""]{opacity: 0;}
 	body{width: 600px;margin: 0 auto;box-shadow: 0 0 15px rgba(0,0,0,.3);}
 	.header,.footer,.sub-header,.modal,.fixed-top{width: 600px;left: 50%!important;margin-left: -300px;}
 }
+
+body.has-header{padding-top: 1.2rem;}
+body.has-footer{padding-bottom: 1.2rem;}
+.header{border-bottom-color: #444;}
+.header + .page__bd{padding-top: 44px;}
+.header h3{color: #ccc;}
+.login-page{color: #ccc;}
+.login-page .weui-cells{background: #000;}
+.login-page .weui-cells:before{border-color:#999;}
+.login-page .weui-cells:after{border-color: #999;}
+.login-page .weui-cell:before{border-color:#999;}
+.login-page .form-box .weui-label, .login-page .form-box .weui-cell__bd,.login-page  .form-box .weui-cell__bd p{color: #ccc;}
+.login-page .weui-loadmore_line .weui-loadmore__tips{background: #000;}
+.login-page .weui-loadmore_line{border-top-color:#666;}
+.login-page .weui-btn_default{background: #222;color: #ccc;border:1px solid #333;}
+.login-page .weui-btn_default:active{background: #000;color: #ccc;}
+.login-page .form-box .vcode .weui-vcode-btn{border-color: #666;}
+
+/*大群超商样式替换*/
+.weui-grid__label,.weui-panel__hd{color: #ccc;}
+.nav-list{background: #333;}
+.weui-panel{background: #333;}
+.weui-grids:before,.weui-grid:after,.weui-grid:before,.weui-panel:before,.weui-panel:after,.weui-panel__hd:after,.weui-cell:before{border-color: #666;}
+
+.txt-list ul li{background: none;}
+.txt-list ul li>a{color: #ccc;border-top-color:#666;}
+.txt-list ul li>a>h2{color: #ccc;}
+.photo-list li a h2{color: #ccc;}
