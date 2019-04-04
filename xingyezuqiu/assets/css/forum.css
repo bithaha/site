@@ -106,7 +106,9 @@
 
 
 .reply-post{padding: .4rem;}
-.reply-post .text{width: 100%;height: 5rem;background: none;border: 0;}
+.reply-post .text{width: 100%;background: none;border: 0;}
+.reply-post input.text{height: 1rem;border-bottom: 1px solid #666;margin-bottom: .3rem;}
+.reply-post textarea.text{height: 10rem;}
 .reply-post .imglist{margin-top: .4rem;}
 .reply-post .imglist .item{float: left;width: 2.2rem;height: 2.2rem;margin: 0 .3rem .3rem 0;position: relative;}
 .reply-post .imglist .item .btn-remove{position: absolute;top: -.2rem;right: -.2rem;background: #ccc;width: .4rem;height: .4rem;text-align: center;line-height: .4rem;border-radius: 50%;}
@@ -115,3 +117,48 @@
 .reply-post .imglist .item-plus{border:2px dashed #ccc;border-radius: 3px;}
 .reply-post .imglist .item-plus:before,.reply-post .imglist .item-plus:after{content: "";display: block;background: #ccc;position: absolute;width: 50%;left: 25%;height: .1rem;top: 50%;margin-top: -.05rem;}
 .reply-post .imglist .item-plus:after{transform: rotate(90deg);}
+
+
+/*圈子*/
+.forum-menus{}
+.forum-menus:after{content: "";display: block;clear: both;}
+.forum-menus li{width: 33.3333333%;float: left;text-align: center;}
+.forum-menus li a{display: block;padding: .4rem 0;}
+.forum-menus li span{display: block;margin-top: .1rem;}
+.forum-menus li i{font-size: 1.6rem;margin-left: .3rem;}
+.ico-menu-1{background-image: url(../images/menu-1.png);}
+.ico-menu-2{background-image: url(../images/menu-2.png);}
+.ico-menu-3{background-image: url(../images/menu-3.png);}
+
+.forum-tuijie{border-top: 1px solid #666; padding: .3rem .4rem;overflow: hidden;}
+.forum-tuijie .title{width: 2rem;float: left;}
+.tuijie-slider{margin-left: 2rem;height: .6rem;}
+
+.expert-slider{}
+.expert-slider li{width: 25%;float: left;text-align: center;padding: .3rem 0;}
+.expert-slider li span{display: block;}
+.expert-slider li .name{margin-top: .2rem;}
+.expert-slider li .img{position: relative;}
+.expert-slider li .img img{width: 1.6rem;border-radius: 50%;height: 1.6rem;}
+.expert-slider li .img .tag{position: absolute;z-index: 10;bottom: 0;left: 50%;width: 1.6rem;margin-left: -.8rem;border-radius: .6rem;line-height: .5rem;text-align: center;color: #fff;background: #ff0000;font-size: .34rem;overflow: hidden;text-overflow: ellipsis;white-space: nowrap;}
+.expert-slider li .img .vip{position: absolute;background-image: url(../images/ico_lv_gold.png);top: 0;right: .56rem;font-size: .4rem;}
+
+.section{background: #222;}
+.section .hd{padding: 0 .4rem;margin-bottom: .3rem;border-bottom: 1px solid #444;line-height: 1rem;}
+.section .hd:after{content: "";display: block;clear: both;vertical-align: middle;}
+.section .hd .tit{vertical-align: middle;}
+.section .hd .more{float: right;}
+.section .hd .title em{vertical-align: middle;color: #999;margin-left: .2rem;font-size: .34rem;}
+.section .hd .title:before{content: "";display: inline-block;width: 2px;height: .4rem;background: #ffeb3b;margin-right: .2rem;vertical-align: middle;}
+.section + .section{margin-top: .4rem;}
+.forum-expert-page .swiper-pagination-bullet{width: auto;height: auto;background: none;padding: 0 .2rem;color: #ccc;border-radius: 0;opacity: 1;}
+.forum-expert-page .swiper-pagination-bullet.swiper-pagination-bullet-active{border-bottom: 1px solid #ffeb3b;color: #ffeb3b;}
+
+.attention-list{overflow: hidden;}
+.attention-list li{width: 25%;float: left;text-align: center;padding: .3rem 0;}
+.attention-list li img{width: 1.3rem;}
+.attention-list li .name{display: block;margin-top: .2rem;overflow: hidden;text-overflow: ellipsis;white-space: nowrap;}
+.attention-list li .des{display: block;margin-top: .2rem;font-size: .34rem;color:#999;}
+
+.forum-hot-list{}
+.forum-hot-list li{width: 20%;}

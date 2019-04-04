@@ -4,27 +4,24 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>全民足球</title>
+    <title>星爷足球</title>
     <link rel="shortcut icon" href="assets/favicon.ico" type="image/x-icon" />
     <link rel="stylesheet" href="assets/css/swiper.min.css">
     <link rel="stylesheet" href="assets/css/common.css">
+    <link rel="stylesheet" href="assets/css/forum.css">
 
     <script type="text/javascript" src="assets/js/jquery.min.js"></script>
     <script type="text/javascript" src="assets/js/lazyload.js"></script>
     <script type="text/javascript" src="assets/js/swiper.min.js"></script>
-    <script type="text/javascript" src="assets/js/Sortable.min.js"></script>
     <script type="text/javascript" src="assets/js/common.js"></script>
 </head>
-<!-- header start -->
-<div class="header">
-    <div class="title">
-        <a href="index.html" class="tab-item">足球</a>
-        <a href="lottery.html" class="tab-item">懂彩</a>
-        <a href="forum.html" class="tab-item active">圈子</a>
-    </div>
-</div>
+
 <div class="viewport">
-	
+    <div class="forum-home-head">
+        <a class="btn-back"><i class="ico-back"></i></a>
+        
+    </div>
+
 </div>
 <!-- footer start -->
 <div class="footer">
@@ -68,6 +65,14 @@
 $(function() {
     window.initRem && initRem();
     
+    var swiper = new Swiper('.index-slider', {
+        pagination:{
+            el: '.index-slider-pagination'
+        }, 
+        autoplay: true,
+        paginationClickable: true,
+
+    });
     
 
 });
