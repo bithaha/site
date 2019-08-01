@@ -1,8 +1,8 @@
 @media(max-width: 1260px){
 	.wraper{width: 100%;}
 	/*首页*/
-	.index-slider .slides{height: 4rem;}
-	.index-slider .slide-img{height: 4rem;}
+	.index-slider .slides{height: 6rem;}
+	.index-slider .slide-img{height: 6rem;}
 	.index-slider .slide-text .inner{left: .20rem;}
 	.index-items .item{width: 48%;left: 1.5%;}
 	.index-items .item-1{}
