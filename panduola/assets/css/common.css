@@ -1,6 +1,6 @@
 @charset "utf8";
 body,html,h1,h2,h3,h4,h5,h6,p,ul,ol,li,dl,dt,dd,th,td,form,object,iframe,blockquote,pre,a,abbr,address,code,img,fieldset,form,label,figure{margin:0;padding:0;}
-body,html,input,button,textarea{color:#6d6d6d;font:.12rem/1.8 "Microsoft YaHei",Arial,simsun,Tahoma,Verdana,Helvetica,sans-serif;}
+body,html,input,button,textarea{color:#000;font:.14rem/1.8 "Microsoft YaHei",Arial,simsun,Tahoma,Verdana,Helvetica,sans-serif;}
 article,aside,figcaption,figure,footer,header,hgroup,main,nav,section{display:block;}
 body{_background-image:url(about:blank);_background-attachment:fixed;}
 h1{font-size:.18rem;}
@@ -9,7 +9,7 @@ h3,h4,h5{font-size:.14rem;}
 img{border:none;vertical-align:middle;}
 li{list-style:none;}
 i,em{font-style:normal;}
-a{color:#666;text-decoration:none;}
+a{color:#000;text-decoration:none;}
 a:focus{outline:none;}
 a:hover{color:#df0000;text-decoration:none;}
 input[type="text"]:focus{outline:none;}
@@ -243,6 +243,10 @@ input[type="file"] > input[type="button"]::-moz-focus-inner{border:none;padding:
 .content-slider .head .menus{float: right;}
 .content-slider .head .menus li{float: left;}
 .content-slider .head .menus li a{padding: 0 5px;color: #fff;}
+.content-slider.no-bg{color: #000}
+.content-slider.no-bg .head .menus li a{color: #000}
+.content-slider.no-bg .head{border-bottom: 1px solid #ddd;}
+.content-slider.no-bg .wraper{height: auto;}
 
 /*帮助中心*/
 .content-slider-help{background-image: url(../images/help-bg.jpg);}
@@ -268,14 +272,70 @@ input[type="file"] > input[type="button"]::-moz-focus-inner{border:none;padding:
 .section-product-menu li{float: left;width: 25%;}
 .section-product-menu li a{display: block;background: #f9f9f9;text-align: center;margin: 0 4px;padding: .3rem 0;}
 .section-product-menu li span{display: block;margin-top: 10px;font-size: .16rem;color: #000;}
+.section-product-menu li a:hover{background: #eee;}
 .ico-promenu-1,.ico-promenu-2,.ico-promenu-3,.ico-promenu-4{width: 1em;height: 1em;display: inline-block;background: url(../images/sprites-60x60.png) no-repeat;background-size: 100% auto;font-size: .6rem;}
 .ico-promenu-1{background-position: 0 0;}
 .ico-promenu-2{background-position: 0 -2em;}
 .ico-promenu-3{background-position: 0 -4em;}
 .ico-promenu-4{background-position: 0 -6em;}
 .section-product-container{background: #f9f9f9;padding-top: .3rem;}
-.section-product-container .wraper{margin-bottom: .3rem;}
+.section-product-container .wraper{padding-bottom: .3rem;}
+.section-product-container .wraper .big-img img{width: 100%;}
 .section-product-container .title{margin-bottom: .2rem;font-size: .25rem;color: #000;}
 .child-products{overflow: hidden;}
-.child-products > div{float: left;background: #fff;border: 3px solid #f9f9f9;width: 25%;height: 3.1rem;}
+.child-products > div{float: left;background: #fff;width: 25%;text-align: center;}
+.child-products > div a{display: block;border: 3px solid #f9f9f9;height: 2.8rem;padding-top: .3rem;position: relative;}
+.child-products > div .tit{display: block;margin-top: .2rem;font-size: .14rem;color: #000;font-weight: bold;}
 .child-products .item-1{width: 100%;height: auto;}
+.child-products .item-1 a{height: auto;padding-top: 0;}
+.child-products .item-9 a{height: 1.5rem;padding-top: 0;text-align: left;}
+.child-products .item-9 a .tit{width: 1.2rem;position: absolute;right: 0;top: 50%;transform: translateY(-50%);-webkit-transform: translateY(-50%);margin-top: 0;}
+.child-products .item-9 img{margin-left: .1rem;}
+.child-products .item-6 a{background: url(../images/product/product-child-bg.png) center no-repeat;background-size: cover;color: #fff;}
+.child-products .item-6 .t-tit{color: #fff;font-size: .16rem;text-align: center;display: block;}
+.child-products .item-6 .t-subtit{color: #fff;font-size: .14rem;text-align: center;display: block;}
+.child-products .item-6 .tit{margin-top: .1rem;}
+.child-products .item-6 img{width: 1.7rem;height: 1.7rem;}
+
+
+
+/*分页*/
+.pagination{padding: .40rem 0;text-align: center;}
+.pagination .page{display: inline-block;margin: 0 3px;height: 30px;line-height: 30px;text-align: center;border: 1px solid #ddd;padding: 0 10px;}
+.pagination .page.active{background: #ff0000;color: #fff;border-color: #ff0000;}
+.pagination input[type="text"]{width: 50px;border:1px solid #ddd;padding: 0 5px;line-height: 30px;height: 30px;}
+
+/*产品详情*/
+.content-slider-productdetail{background-image: url(../images/product/product-detail-bg.jpg);height: 3.3rem;}
+.section-product-detail .wraper{padding: .3rem 0;}
+.product-description{text-align: center;padding-top: .3rem;}
+.product-description img{max-width: 100%;}
+
+/* 关于我们 */
+.content-slider-contact{background-image: url(../images/contact-bg.jpg);height: 4rem;}
+.contact-list{overflow: hidden;}
+.contact-list .item{width: 50%;float: left;line-height: 2}
+.contact-list .item .title{font-size: .24rem;color: #000;}
+.section-contact{padding: .8rem 0;}
+
+/*媒体中心*/
+.section-media{background: #f2f2f2;}
+.media-list{margin-top: .4rem;}
+.media-list:after{content: "";display: block;clear: both;}
+.media-list .item{width: 33.3333333%;float: left;margin-bottom: 6px;}
+.media-list .item .img{background:#fff;margin: 0 3px;position: relative;padding-bottom: 74%;}
+.media-list .item .img img{position: absolute;width: 100%;top: 50%;left: 50%;transform: translate(-50%,-50%);-webkit-transform: translate(-50%,-50%);}
+.media-list .item .content{background:#fff;margin: 0 3px;padding: .2rem .15rem;}
+.media-list .item .content .title{line-height: .3rem;color: #000;height: .6rem;font-size: .16rem;overflow: hidden;}
+.media-list .item .content .foot{margin-top: .1rem;overflow: hidden;}
+.media-list .item .content .foot .preview{float: right;color: #999;}
+.media-list .item .content .foot .time{float: left;color: #999;}
+.media-list .item .content .foot .time i{}
+.ico-eye{width: 1em;height: 1em;display: inline-block;background: url(../images/sprites-20x20.png) no-repeat;background-position: 0 -6em;font-size: 20px;vertical-align: middle;}
+
+.media-article{padding: .3rem 0;}
+.media-article .title{font-size: .3rem;margin-bottom: .1rem;}
+.media-article .info{margin-bottom: .1rem;font-size: 12px;}
+.media-article .info .item{margin-right: .3rem;}
+.media-article .body{line-height: .3rem;}
+.media-article .body img{max-width: 100%;}
