@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="22" height="22" viewBox="0 0 22 22">
+  <defs>
+    <clipPath id="clip-path">
+      <circle id="椭圆_1290" data-name="椭圆 1290" cx="11" cy="11" r="11" transform="translate(348 1065)"/>
+    </clipPath>
+    <clipPath id="clip-path-2">
+      <path id="路径_4865" data-name="路径 4865" d="M0,0H22V22H0Z" fill="rgba(0,0,0,0.67)"/>
+    </clipPath>
+  </defs>
+  <g id="蒙版组_383" data-name="蒙版组 383" transform="translate(-348 -1065)" clip-path="url(#clip-path)">
+    <g id="a" transform="translate(348 1065)" clip-path="url(#clip-path-2)">
+      <g id="组_4640" data-name="组 4640">
+        <path id="路径_4854" data-name="路径 4854" d="M0,0H33V2.445H0Z" fill="#0d5eaf" fill-rule="evenodd"/>
+        <path id="路径_4855" data-name="路径 4855" d="M0,56.98H33v2.445H0Z" transform="translate(0 -54.535)" fill="#fff" fill-rule="evenodd"/>
+        <path id="路径_4856" data-name="路径 4856" d="M0,113.96H33V116.4H0Z" transform="translate(0 -109.071)" fill="#0d5eaf" fill-rule="evenodd"/>
+        <path id="路径_4857" data-name="路径 4857" d="M0,170.94H33v2.445H0Z" transform="translate(0 -163.606)" fill="#fff" fill-rule="evenodd"/>
+        <path id="路径_4858" data-name="路径 4858" d="M0,227.92H33v2.445H0Z" transform="translate(0 -218.141)" fill="#0d5eaf" fill-rule="evenodd"/>
+        <path id="路径_4859" data-name="路径 4859" d="M0,284.9H33v2.445H0Z" transform="translate(0 -272.676)" fill="#fff" fill-rule="evenodd"/>
+        <path id="路径_4860" data-name="路径 4860" d="M0,341.88H33v2.445H0Z" transform="translate(0 -327.212)" fill="#0d5eaf" fill-rule="evenodd"/>
+        <path id="路径_4861" data-name="路径 4861" d="M0,398.86H33V401.3H0Z" transform="translate(0 -381.747)" fill="#fff" fill-rule="evenodd"/>
+        <path id="路径_4862" data-name="路径 4862" d="M0,19.558H33V22H0ZM0,0H12.224V12.224H0Z" fill="#0d5eaf" fill-rule="evenodd"/>
+        <g id="组_4639" data-name="组 4639">
+          <path id="路径_4863" data-name="路径 4863" d="M113.96,0H116.4V12.224H113.96Z" transform="translate(-109.071)" fill="#fff" fill-rule="evenodd"/>
+          <path id="路径_4864" data-name="路径 4864" d="M0,113.96H12.224V116.4H0Z" transform="translate(0 -109.071)" fill="#fff" fill-rule="evenodd"/>
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>

@@ -32,3 +32,40 @@ $(function(){
         $("img.lazy").lazyload({ effect : "fadeIn",data_attribute:"src"});   
     }
 })
+
+
+var language = {
+    init: function(){
+        $('body').append(`<div class="countryWrapper">
+            <div class="countryMask"></div>
+            <div class="countryWrap" style="">
+                <i class="icon-close" onclick="language.close()"></i>
+                <a href="#"><img src="assets/images/language/c25ea55.svg" alt="" class="countryImg"> <span>Global</span></a>
+                <a href="#"><img src="assets/images/language/1536c93.svg" alt="" class="countryImg"> <span>Česko</span></a>
+                <a href="#"><img src="" alt="" class="countryImg"> <span>Colombia</span></a>
+                <a href="#"><img src="assets/images/language/5ad4195.svg" alt="" class="countryImg"> <span>Deutschland</span></a>
+                <a href="#"><img src="assets/images/language/f7d3cf9.svg" alt="" class="countryImg"> <span>Espana</span></a>
+                <a href="#"><img src="assets/images/language/c8b9d57.svg" alt="" class="countryImg"> <span>Ελλάδα</span></a>
+                <a href="#"><img src="assets/images/language/france.svg" alt="" class="countryImg"> <span>France</span></a>
+                <a href="#"><img src="assets/images/language/f32d28c.svg" alt="" class="countryImg"> <span>Hrvatska</span></a>
+                <a href="#"><img src="assets/images/language/italia.svg" alt="" class="countryImg"> <span>Italia</span></a>
+                <a href="#"><img src="assets/images/language/nederland.svg" alt="" class="countryImg"> <span>Nederland</span></a>
+                <a href="#"><img src="assets/images/language/dd05728.svg" alt="" class="countryImg"> <span>Slovenija</span></a>
+                <a href="#"><img src="assets/images/language/45b729c.svg" alt="" class="countryImg"> <span>Srbija</span></a>
+                <a href="#"><img src="assets/images/language/polska.svg" alt="" class="countryImg"> <span>Polska</span></a>
+                <a href="/" class="nuxt-link-exact-active nuxt-link-active"><img src="assets/images/language/china.svg" alt="" class="countryImg"> <span>中国</span></a></div>
+        </div>`)
+    },
+    show: function(){
+        if(!$('.countryWrapper').length){
+            this.init();
+        }
+        setTimeout(function(){
+            $('.countryWrap,.countryMask').addClass('open')
+        })
+        
+    },
+    close: function(){
+        $('.countryWrap,.countryMask').removeClass('open')
+    }
+}
