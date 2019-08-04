@@ -19,6 +19,9 @@
 	 .countryWrap{width: 90%;height: auto;padding-bottom: .3rem;}
 	 .countryWrap a{width: 1.6rem;}
 
+	 /*关于*/
+	 .about-desc{padding-right: 0;}
+	 .about-desc .video-area{position: relative;}
 }
 
 @media(max-width: 600px){
@@ -33,4 +36,25 @@
 	.footer .copyrights .left{float: none;}
 	.footer .copyrights .links{float: none;text-align: center;}
 	.countryWrap{padding: .5rem 0 .5rem .5rem;}
+
+	.about-desc .video-area{width: 100%;}
+	.about-history-wraper dl{width: 100%;}
+	.about-slogan .item{float: none;display: inline-block;vertical-align: top;}
+	.section-brand-story .storys li.s-1,.section-brand-story .storys li.s-2,.section-brand-story .storys li.s-3,.section-brand-story .storys li.s-4{width: 100%;}
+	.section-brand-list .item .img{width: 100%;float: none;}
+	.section-brand-list .item .det{width: 100%;float: none;}
+	.section-brand-list .item .det .desc,.section-brand-list .item:nth-child(even) .det .desc{padding: .3rem;}
+	.contact-list .item{width: 90%;margin: 0 5%;margin-bottom: .2rem;}
+	.help-list{margin: .7rem .3rem;}
+
+	.media-list .item{width: 50%;}
+	.child-products > div{width: 50%;}
+	.child-products > div a{height: 4rem;}
+
+	.img-show{width: 100%;float: none;}
+	.pro-detail{margin-left: 0;}
+
+	.video-list .img{float: none;}
+	.video-list .det{margin-right: 0;}
+
 }
