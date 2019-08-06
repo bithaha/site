@@ -57,4 +57,6 @@
 	.video-list .img{float: none;}
 	.video-list .det{margin-right: 0;}
 
+	.image-list li{width: 50%;padding-bottom: 32.94%;}
+
 }

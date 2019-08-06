@@ -344,7 +344,18 @@ input[type="file"] > input[type="button"]::-moz-focus-inner{border:none;padding:
 .media-article .body{line-height: .3rem;}
 .media-article .body img{max-width: 100%;}
 
-
+.media-slider{margin-bottom: .2rem;}
+.media-slider .slides > li{background: #fff;}
+.media-slider .slide-img{margin-right: 3.5rem;}
+.media-slider .slide-text{position: absolute;width: 3.5rem;top: .9rem;right: 0;background:#fff;}
+.media-slider .slide-text .inner{width: 2.6rem;margin: 0 auto;}
+.media-slider .slide-img img{height: 4.5rem;}
+.media-slider .slide-text h2{font-size: .26rem;text-align: center;}
+.media-slider .slide-text .desc{margin-top: .2rem;height: 2rem;overflow: hidden;}
+.media-slider .slide-text .foot{overflow: hidden;font-size: 12px;color: #999;}
+.media-slider .slide-text .foot .view{float: right;}
+.flexslider .flex-control-paging li a{box-shadow: 0 0 5px 2px rgba(0,0,0,.1);background: #fff;}
+.flexslider .flex-control-paging li a.flex-active{background: #ff0000;}
 /*品牌文化*/
 .content-slider-brand{background-image: url(../images/brand-bg.jpg)}
 .content-slider-brand .text{position: absolute;top: 40%;left: 20%;}
@@ -419,3 +430,33 @@ input[type="file"] > input[type="button"]::-moz-focus-inner{border:none;padding:
 .video-list .det .foot{text-align: right;}
 .video-list .det .foot .btn{color: #999;margin-left: .2rem;}
 .video-list .det .foot .btn i{margin-right: 3px;}
+
+.image-navs{padding: .3rem 0;}
+.image-navs a{margin-right: .3rem;}
+.image-navs a.active{color: #ff0000;}
+.image-list{overflow: hidden;margin-left: -10px;margin-right: -10px;}
+.image-list li{width: 25%;float: left;padding-bottom: 16.47%;position: relative;}
+.image-list li .inner{position: absolute;left: 10px;top: 10px;right: 10px;bottom:10px;overflow: hidden;}
+.image-list li .inner img{width: 100%;height: 100%;}
+
+/*专利证书*/
+.content-slider-patent{background-image: url(../images/patent-bg.jpg);}
+.patent-list{margin: .5rem 0;text-align: center;}
+.patent-list li{display: inline-block;margin: 0 .1rem;width: 2.5rem;margin-bottom: .3rem;vertical-align: top;}
+.patent-list li .img{border: 4px solid #9edbf2;height: 3.5rem;overflow: hidden;}
+.patent-list li .img img{width: 100%;}
+.patent-list li .det{padding-top: .1rem;}
+.patent-list li .time{font-size: 12px;color: #999;}
+
+/*线下体验*/
+.content-slider-offline{background-image: url(../images/offline/offline-bg.jpg);}
+.section-offline{margin: .5rem 0;}
+.offline-list{text-align: center;}
+.offline-list li{display: inline-block;margin: 0 .05rem;width: 3.8rem;margin-bottom: .3rem;vertical-align: top;border: 4px solid #eeeeee;}
+.offline-list li .img{border-bottom: 4px solid #eeeeee;height: 3.38rem;overflow: hidden;}
+.offline-list li .det{padding: .1rem 0;}
+.offline-list li .address{font-size: 12px;color: #999;}
+.offline-map{margin-bottom: .3rem;}
+.offline-title{background: url(../images/flag-bg.jpg);background-size: cover;color: #fff;font-size: .25rem;font-weight: bold;padding: 0 .1rem;margin-bottom: .2rem;line-height: .6rem;}
+
+.offline-map img{max-width: 100%;}
