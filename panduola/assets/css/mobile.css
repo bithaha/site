@@ -1,5 +1,5 @@
 @media(max-width: 1260px){
-	.wraper{width: 100%;}
+	.wraper{width: auto;margin-left: .15rem;margin-right: .15rem;}
 	/*首页*/
 	.index-slider .slides{height: 6rem;}
 	.index-slider .slide-img{height: 6rem;}
@@ -28,6 +28,7 @@
 	.index-items{height: auto;}
 	.index-items .item{position:relative;left: 3%;top: auto;width: 94%;}
 	.activity-list li{width: 100%;float: none;}
+	.top-right{padding-top: .03rem}
 
 	.navbar li a.link{padding: 0 .2rem;}
 	.navbar .sel-lang{display: none;}
@@ -58,5 +59,10 @@
 	.video-list .det{margin-right: 0;}
 
 	.image-list li{width: 50%;padding-bottom: 32.94%;}
+
+	.section-join .wraper{width: auto;margin-left: .15rem;margin-right: .15rem;}
+	.join-left{float: none;width: 100%;margin-bottom: .2rem;}
+	.join-right{float: none;width: 100%;margin:0;}
+	.content-slider-join .text{padding-left: .15rem;padding-right: .15rem;}
 
 }

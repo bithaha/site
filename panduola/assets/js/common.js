@@ -16,9 +16,9 @@
 
     if (!doc.addEventListener) return;
     win.initRem = recalc;
-    win.onresize = function(){recalc();};
     win.addEventListener(resizeEvt, recalc, false);
     doc.addEventListener('DOMContentLoaded', recalc, false);
+    win.onresize = function(){recalc();};
 })(document, window);
 
 

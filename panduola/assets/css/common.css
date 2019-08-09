@@ -2,6 +2,7 @@
 body,html,h1,h2,h3,h4,h5,h6,p,ul,ol,li,dl,dt,dd,th,td,form,object,iframe,blockquote,pre,a,abbr,address,code,img,fieldset,form,label,figure{margin:0;padding:0;}
 body,html,input,button,textarea{color:#000;font:.14rem/1.8 "Microsoft YaHei",Arial,simsun,Tahoma,Verdana,Helvetica,sans-serif;}
 article,aside,figcaption,figure,footer,header,hgroup,main,nav,section{display:block;}
+html{font-size: 100px;}
 body{_background-image:url(about:blank);_background-attachment:fixed;}
 h1{font-size:.18rem;}
 h2{font-size:.16rem;}
@@ -19,41 +20,16 @@ input[type="file"] > input[type="button"]::-moz-focus-inner{border:none;padding:
 
 /* 清除浮动 */
 .clearfix:after,.wraper:after{content:"";display:block;height:0;clear:both; visibility:hidden;}
-* html .clearfix,* +html .layout,* html .header,* html .navbar .nav,* html .main-tit-bar,* html .flinks ul,* html .foot-nav,* html .sub-menu-2{display:inline-block;}
-* +html .clerfix,* +html .layout,* +html .header,* +html .navbar .nav,* +html .main-tit-bar,* +html .flinks ul,* +html .foot-nav,* +html .sub-menu-2{display:inline-block;}
+
 
 /* 布局 */
 .wraper{width:1260px;margin:0 auto;}
+
 
 /* 动画 */
 .navbar li a,.navbar li .subnav,.team-slider li .det .fot .btn,.team-slider li,.m-img,.tabs li a,.btn-border{-moz-transition:all 0.3s ease-in-out;-webkit-transition:all 0.3s ease-in-out;-ms-transition:all 0.3s ease-in-out;-o-transition:all 0.3s ease-in-out;transition:all 0.3s ease-in-out;}
 .course-banner a:before{-moz-transition:all 0.5s ease-in-out;-webkit-transition:all 0.5s ease-in-out;-ms-transition:all 0.5s ease-in-out;-o-transition:all 0.5s ease-in-out;transition:all 0.5s ease-in-out;}
 
-/* 颜色 */
-.footer a:hover,.wenhua-list li .det .tit a:hover,.dlink-list a:hover,.toutiao-list .item .det .tit a:hover,.site-about .list .item a:hover{color:#df0000;}
-
-/* tag */
-.ico-txt{display:inline-block;height:22px;line-height:22px;padding:0 6px; font-weight:normal;color:#fff;font-size:14px;border-radius:3px;}
-.ico-txt{*display:inline;}
-.ico-txt.red{background-color:#df0000;}
-.ico-txt.pink{background-color:#fcaaaa;}
-.ico-txt.blue{background-color:#a9c3f9;}
-.ico-txt.yellow{background-color:#ffbe58;}
-.ico-txt.green{background-color:#86d38d;}
-.ico-txt.purple{background-color:#be9bd9;}
-.ico-txt.green{background-color:#86d38d;}
-.ico-text.dark-green{background-color:#42ac01;}
-.ico-text.dark-red{background-color:#c00;}
-.ico-txt.border{border: 1px solid transparent;}
-.ico-txt.border.red{background-color: transparent;color:#df0000;border-color:#df0000; }
-.ico-txt.border.pink{background-color:#fcaaaa;background-color: transparent;color:#df0000;border-color:#df0000: }
-.ico-txt.border.blue{background-color: transparent;color:#a9c3f9;border-color:#a9c3f9; }
-.ico-txt.border.yellow{background-color: transparent;color:#ffbe58;border-color:#ffbe58; }
-.ico-txt.border.green{background-color: transparent;color:#86d38d;border-color:#86d38d; }
-.ico-txt.border.purple{background-color: transparent;color:#be9bd9;border-color:#be9bd9; }
-.ico-txt.border.green{background-color: transparent;color:#86d38d;border-color:#86d38d; }
-.ico-text.border.dark-green{background-color: transparent;color:#42ac01;border-color:#42ac01; }
-.ico-text.border.dark-red{background-color: transparent;color:#c00;border-color:#c00; }
 
 /* 图片 */
 .m-img{display:block;position:relative;overflow:hidden;background-color:#eee;background-image:url(../images/logo-for-load.png); background-position:center;background-repeat:no-repeat;}
@@ -460,3 +436,26 @@ input[type="file"] > input[type="button"]::-moz-focus-inner{border:none;padding:
 .offline-title{background: url(../images/flag-bg.jpg);background-size: cover;color: #fff;font-size: .25rem;font-weight: bold;padding: 0 .1rem;margin-bottom: .2rem;line-height: .6rem;}
 
 .offline-map img{max-width: 100%;}
+
+.content-slider-join{background-image: url(../images/join-bg.jpg);}
+.content-slider-join .text{padding-top: .3rem}
+.content-slider-join .text h3{color: #fff;}
+.content-slider-join .text h4{color: #f88585;}
+
+.section-join{padding: .5rem 0;}
+.section-join .wraper{width: 9.8rem;min-height: 6rem;}
+.join-left{width: 3.6rem;float: left}
+.join-right{width: 5.8rem;float: left;margin-left: .3rem;}
+.section-join .title{font-size: .2rem;}
+.job-tips{line-height: 30px;color: #9d9a9a;background: #f4f0f0;padding: .3rem;}
+.job-search-form{margin-top: .2rem;}
+.job-search-form .row{margin-bottom: .1rem;}
+.job-search-form .row:after{content: "";display: block;clear: both;}
+.job-search-form .text{width: 98%;border: 1px solid #ddd;line-height: 36px;height: 36px;padding: 0 1%;outline: none;}
+.job-search-form .text:focus{border-color: #f88585;}
+.job-search-form .item-category{width: 49%;}
+.job-search-form .item-city{width: 49%;float: right;}
+.join-table{width: 100%;border-collapse: collapse;}
+.join-table td{line-height: 40px;border-collapse: collapse;}
+.join-table thead td{font-size: .2rem;font-weight: bold;}
+.join-table tbody td{border-bottom: 1px solid #ddd;}
