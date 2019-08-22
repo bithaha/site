@@ -1,0 +1,96 @@
+﻿<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <title>常用地址录入</title>
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <script src="js/rem.js"></script>
+    <link rel="stylesheet" type="text/css" href="css/base.css" />
+    <link rel="stylesheet" type="text/css" href="css/page.css" />
+    <link rel="stylesheet" type="text/css" href="css/all.css" />
+    <link rel="stylesheet" type="text/css" href="css/mui.min.css" />
+    <link rel="stylesheet" type="text/css" href="css/loaders.min.css" />
+    <link rel="stylesheet" type="text/css" href="css/loading.css" />
+    <link rel="stylesheet" type="text/css" href="slick/slick.css" />
+    <script type="text/javascript" src="js/jquery-1.8.3.min.js"></script>
+    <script type="text/javascript" src="js/jquery.SuperSlide.2.1.js"></script>
+    <script type="text/javascript" src="slick/slick.min.js"></script>
+    <script type="text/javascript" src="js/jquery.leanModal.min.js"></script>
+    <script type="text/javascript">
+        $(window).load(function () {
+            $(".loading").addClass("loader-chanage")
+            $(".loading").fadeOut(300)
+        })
+    </script>
+</head>
+
+<body>
+    <!--loading页开始-->
+    <div class="loading">
+        <div class="loader">
+            <div class="loader-inner pacman">
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+        </div>
+    </div>
+    <!--loading页结束-->
+    <div class="headertwo clearfloat" id="header">
+        <a href="javascript:history.go(-1)" class="fl box-s"><i class="iconfont icon-arrow-l fl"></i></a>
+        <p class="fl">常用地址录入</p>
+    </div>
+
+    <div class="carried clearfloat" id="main">
+        <div class="top clearfloat box-s">
+        </div>
+        <div class="land-ctent land-ctenttwo bottom clearfloat">
+            <ul>
+                <li class="box-s clearfloat">
+                    <p class="tit fl">省</p>
+                    <input type="text" name="" id="" value="" placeholder="请选择省" class="fl day" />
+                    <i class="iconfont icon-arrowright fl"></i>
+                </li>
+                <li class="box-s clearfloat">
+                    <p class="tit fl">市</p>
+                    <input type="text" name="" id="" value="" placeholder="请选择市" class="fl day" />
+                    <i class="iconfont icon-arrowright fl"></i>
+                </li>
+                <li class="box-s clearfloat">
+                    <p class="tit fl">区</p>
+                    <input type="text" name="" id="" value="" placeholder="请选择区" class="fl day" />
+                    <i class="iconfont icon-arrowright fl"></i>
+                </li>
+
+                <li class="box-s clearfloat">
+                    <span class="tit fl">地址</span>
+                    <input type="text" name="" id="" value="" placeholder="请输入地址" class="fl" />
+                </li>
+                <li class="box-s clearfloat">
+                    <span class="tit fl">联系人</span>
+                    <input type="text" name="" id="" value="" placeholder="请输入联系人" class=" fl" />
+                </li>
+                <li class="box-s clearfloat">
+                    <span class="tit fl">电话</span>
+                    <input type="text" name="" id="" value="" placeholder="请输入电话" class=" fl" />
+                </li>
+                <li class="box-s clearfloat">
+                    <p class="tit fl">类型(1自己，2朋友)</p>
+                    <input type="text" name="" id="" value="" placeholder="请选择类型" class="fl day" />
+                    <i class="iconfont icon-arrowright fl"></i>
+                </li>
+
+
+            </ul>
+        </div>
+        <a href="javascript:void(0);ajaxPost();" class="pay-btn clearfloat">
+            提交
+        </a>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,73 @@
+﻿<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <title>运单录入</title>
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <script src="js/rem.js"></script>
+    <link rel="stylesheet" type="text/css" href="css/base.css" />
+    <link rel="stylesheet" type="text/css" href="css/page.css" />
+    <link rel="stylesheet" type="text/css" href="css/all.css" />
+    <link rel="stylesheet" type="text/css" href="css/mui.min.css" />
+    <link rel="stylesheet" type="text/css" href="css/loaders.min.css" />
+    <link rel="stylesheet" type="text/css" href="css/loading.css" />
+    <link rel="stylesheet" type="text/css" href="slick/slick.css" />
+    <script type="text/javascript" src="js/jquery-1.8.3.min.js"></script>
+    <script type="text/javascript" src="js/jquery.SuperSlide.2.1.js"></script>
+    <script type="text/javascript" src="slick/slick.min.js"></script>
+    <script type="text/javascript" src="js/jquery.leanModal.min.js"></script>
+    <script type="text/javascript" src="js/tchuang.js"></script>
+    <script type="text/javascript" src="js/hmt.js"></script>
+
+    <script type="text/javascript">
+        $(window).load(function () {
+            $(".loading").addClass("loader-chanage")
+            $(".loading").fadeOut(300)
+        })
+    </script>
+</head>
+
+<body>
+    <!--loading页开始-->
+    <div class="loading">
+        <div class="loader">
+            <div class="loader-inner pacman">
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+        </div>
+    </div>
+    <!--loading页结束-->
+    <div class="headertwo clearfloat" id="header">
+        <a href="javascript:history.go(-1)" class="fl box-s"><i class="iconfont icon-arrow-l fl"></i></a>
+        <p class="fl">运单录入</p>
+    </div>
+
+    <div class="modify clearfloat" id="main">
+        <ul>
+            <li class="clearfloat">
+                <span class="fl">运单号</span>
+                <input type="text" name="" id="" value="" placeholder="请输入右图验证码" class="syzma fl" />
+                <a href="#" class="fr">扫码</a>
+            </li>
+            <li class="clearfloat">
+                <span class="fl">地址</span>
+                <input type="text" name="" id="" value="" placeholder="收件地址" class="syzma fl" />
+            </li>
+            <li class="clearfloat">
+                <span class="fl">手机号</span>
+                <input type="text" name="" id="" value="" placeholder="手机/邮箱/用户名" class="syzma fl" />
+            </li>
+        </ul>
+        <a href="javascript:void(0);ajaxPost();" class="pay-btn clearfloat">
+            提交
+        </a>
+    </div>
+</body>
+
+</html>

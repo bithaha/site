@@ -1,0 +1,39 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>添加请求头跨域访问Demo</title>
+    <script src="js/jquery-1.8.3.min.js"></script>
+    <script type="text/javascript">
+        function crosRequest() {
+            $.post("http://localhost:9900/api/admin_ajax.ashx?action=test", { uName: "zzq" }, function (data) {
+                for (var i in data) {
+                    alert(data[i]);
+                }
+            }, "json")
+        }
+        function crosAjaxRequest()
+        {
+            $.ajax({
+                url: "http://localhost:9900/api/user_ajax.ashx?action=user_login",
+                type: "post",
+                timeout: 60000,
+                data: { "username": "200288000", "password": "123456" },
+                dataType: "json",
+                success: function (data, type) {
+                    alert(data.msg);
+                },
+                error: function (XMLHttpRequest, textStatus, errorThrown) {
+                     alert("状态：" + textStatus + "；出错提示：" + errorThrown);
+                }
+            });
+        }
+    </script>
+</head>
+<body>
+    <input type="button" value="添加请求头跨域访问" onclick="crosRequest()" />
+
+    <input type="button" value="ajax添加请求头跨域访问" onclick="crosAjaxRequest()" />
+
+</body>
+</html>

@@ -1,0 +1,144 @@
+﻿<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <title>运单详情</title>
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <script src="js/rem.js"></script>
+    <link rel="stylesheet" type="text/css" href="css/base.css" />
+    <link rel="stylesheet" type="text/css" href="css/page.css" />
+    <link rel="stylesheet" type="text/css" href="css/all.css" />
+    <link rel="stylesheet" type="text/css" href="css/mui.min.css" />
+    <link rel="stylesheet" type="text/css" href="css/loaders.min.css" />
+    <link rel="stylesheet" type="text/css" href="css/loading.css" />
+    <link rel="stylesheet" type="text/css" href="slick/slick.css" />
+    <script type="text/javascript" src="js/jquery-1.8.3.min.js"></script>
+    <script type="text/javascript" src="slick/slick.min.js"></script>
+    <script type="text/javascript" src="js/jquery.leanModal.min.js"></script>
+    <script type="text/javascript" src="js/tchuang.js"></script>
+    <script type="text/javascript" src="js/hmt.js"></script>
+    <script type="text/javascript">
+        $(window).load(function () {
+            $(".loading").addClass("loader-chanage")
+            $(".loading").fadeOut(300)
+        })
+    </script>
+</head>
+<!--loading页开始-->
+<div class="loading">
+    <div class="loader">
+        <div class="loader-inner pacman">
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+    </div>
+</div>
+<!--loading页结束-->
+<body>
+    <div class="headertwo clearfloat" id="header">
+        <a href="javascript:history.go(-1)" class="fl box-s"><i class="iconfont icon-arrow-l fl"></i></a>
+        <p class="fl">运单详情</p>
+    </div>
+
+
+
+    <div class="clearfloat" id="main">
+
+        <div class="service-top clearfloat box-s">
+            <div class="left fl clearfloat">
+                <span></span>
+                <img src="img/touxiang.png"  style="width:64px; height:64px"/>
+            </div>
+            <div class="right fl clearfloat box-s">
+                <p class="tit titwo"><span>43534531323</span></p>
+                <p class="fu-tit">校园物流</p>
+            </div>
+        </div>
+        <div class="topsche-top entrust box-s clearfloat">
+            <a href="#" class="tit fr entrust-btn">
+                抢单
+            </a>
+            <a href="#" class="tit fr entrust-btn rent-btn">
+                收件
+            </a>
+            <a href="#" class="tit fr entrust-btn rent-btn">
+                存件
+            </a>
+            <a href="#" class="tit fr entrust-btn rent-btn">
+                签收
+            </a>
+            <a href="#" class="tit fr entrust-btn rent-btn">
+                退回
+            </a>
+            <a href="#" class="tit fr entrust-btn rent-btn">
+                取消
+            </a>
+        </div>
+        <div class="service-ctent clearfloat">
+            <div class="recom-tit clearfloat box-s">
+                <p>运单信息</p>
+            </div>
+            <div class="service-list clearfloat box-s">
+                <ul>
+                    <li>寄件人：张三</li>
+                    <li>电话：15900159000</li>
+                </ul>
+                <p class="service-tit">地址：广州天河区棠下村</p>
+                <ul>
+                    <li>收件人：李四</li>
+                    <li>电话：1380013800</li>
+                </ul>
+                <p class="service-tit">地址：中科大院</p>
+                <p class="service-tit">发货时间：2016/03/07</p>
+            </div>
+        </div>
+
+        <div class="service-ctent clearfloat">
+            <div class="recom-tit clearfloat box-s">
+                <p>包裹信息</p>
+            </div>
+            <div class="service-list clearfloat box-s">
+                <ul>
+                    <li>名称：书本</li>
+                    <li>重量：1kg</li>
+                </ul>
+                <p class="service-tit">备注：不要打开</p>
+            </div>
+        </div>
+        <div class="service-ctent clearfloat">
+            <div class="recom-tit clearfloat box-s">
+                <p>物殊备注</p>
+            </div>
+            <p class="tit box-s">
+                要求木箱打包
+            </p>
+        </div>
+
+        <div class="service-ctent clearfloat">
+            <div class="recom-tit clearfloat box-s">
+                <p>物流追踪</p>
+            </div>
+            <div class="service-list clearfloat box-s">
+                <p class="service-tit">2019-7-3 12:36 存入快递柜已签收</p>
+                <p class="service-tit">2019-7-3 11:16 派送中</p>
+                <p class="service-tit">2019-7-3 8:16 运输中</p>
+                <p class="service-tit">2019-7-2 15:12：发货中</p>
+
+            </div>
+        </div>
+
+    </div>
+
+
+    <!--弹窗内容 end-->
+
+</body>
+
+
+
+</html>
