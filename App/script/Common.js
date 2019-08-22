@@ -1,5 +1,5 @@
 ﻿function Global() {
-    //  this.APP_PATH = "http://localhost:9900/";
+     // this.APP_PATH = "http://localhost:9900/";
       this.APP_PATH = "http://106.13.125.110:888/";
     this.IndexUrl = "index.html";
     //  jQuery.support.cors = true;

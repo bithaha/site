@@ -2,11 +2,13 @@
 $(document).ready(function () {
     //权限是否登录
     islogin();
-    loadUI();
+    var datatype = $("#hddatatype").val();
+    loadUI(1, 20, datatype);
 });
 
-function loadUI()
+function loadUI(pageindex, pagenum, datatype)
 {
+    console.log('global',global)
     var sendurl = global.APP_PATH + "api/submit_ajax.ashx?action=app_QueryWayAddress";
     var datatype = $("#hddatatype").val();
     //提交
