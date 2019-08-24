@@ -221,7 +221,7 @@
 .land-ctent{width: 100%; margin-top: 3%; background-color: #fff;}
 .land-ctent ul li{width: 100%; float: left; padding:2% 2% 2% 0; border-bottom: 1px solid #dddddd;}
 .land-ctent ul li .tit{font-size: .4rem; color: #666666; line-height: 1.4rem; width: 20%; text-align: right;}
-.land-ctent ul li input{width: 78%; line-height: 1.4rem; height: 1.4rem; margin-bottom: 0; text-align: right; border: none; font-size: .4rem; color: #cbcbcb; padding: 0;}
+.land-ctent ul li input,.land-ctent ul li select{width: 78%; line-height: 1.4rem; height: 1.4rem; margin-bottom: 0; text-align: right; border: none; font-size: .4rem; color: #cbcbcb; padding: 0;direction: rtl;}
 .land-ctent .day{width: 74%; border: none; font-size: .45rem; color: #a9a9a9;}
 .land-ctent .allline{width: 94%; border: none; font-size: .45rem; color: #a9a9a9;}
 .land-ctent ul li i{font-size: .57rem; color: #b7b7b7; line-height: 1.4rem;}

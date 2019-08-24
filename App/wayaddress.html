@@ -59,13 +59,13 @@
         <div class="bottom clearfloat">
             <div class="noticetwo">
                 <div class="tab-hd clearfloat">
-                    <ul class="tab-nav clearfloat">
-                        <li><a href="#">自己地址</a></li>
-                        <li><a href="#">朋友地址</a></li>
+                    <ul class="tab-nav clearfloat" id="tab">
+                        <li class="on" data-type="1"><a href="#">自己地址</a></li>
+                        <li data-type="2"><a href="#">朋友地址</a></li>
                     </ul>
                 </div>
                 <div class="tab-bd clearfloat">
-                    <div class="tab-pal">
+                    <div class="tab-pal" id="list">
                         <dl class="list clearfloat box-s fl">
                             <dt>
                                 <p class="fl">广东省广州市怀宁路宁溪家园</p>
@@ -89,15 +89,6 @@
                         </dl>
                     </div>
 
-                    <div class="tab-pal">
-                        <dl class="list clearfloat box-s fl">
-                            <dt>
-                                <p class="fl">广东省广州市怀宁路宁溪家园</p>
-                                <span class="fr">李先生</span>
-                            </dt>
-                            <dd>18665653100</dd>
-                        </dl>
-                    </div>
 
                 </div>
             </div>
@@ -106,7 +97,7 @@
     </div>
 
     <script type="text/javascript">
-		jQuery(".noticetwo").slide({ titCell:".tab-hd li", mainCell:".tab-bd",trigger: "click",delayTime:0 });
+		// jQuery(".noticetwo").slide({ titCell:".tab-hd li", mainCell:".tab-bd",trigger: "click",delayTime:0 });
     </script>
 </body>
 
