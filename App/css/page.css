@@ -203,7 +203,7 @@
 #smqsform .flatbtn-blutwo{position: absolute;right: -15px;top: -15px;background: url(../img/closetwo.png) center no-repeat; background-size: 100%; width: 32px;height: 32px;border: none;cursor: pointer;}
 
 #smsjmodal{width:76%; min-height: 200px;background:#fff;-webkit-border-radius:10px;-moz-border-radius:10px;border-radius:10px;-webkit-box-shadow:0 1px 5px rgba(0, 0, 0, 0.5);-moz-box-shadow:0 1px 5px rgba(0, 0, 0, 0.5);box-shadow:0 1px 5px rgba(0, 0, 0, 0.5);position: relative;}
-#smsjform label{display:block; font-size:1.1em; font-weight:bold; color:#7c8291; margin-bottom:3px; }
+.common-modal label{display:block; font-size:1.1em; font-weight:bold; color:#7c8291; margin-bottom:3px; }
 #smsjform .flatbtn-blu{position: absolute;right: -40px;top: -40px;background: url(../img/close.png) center no-repeat; background-size: 100%; width: 100px;height: 92px;border: none;cursor: pointer;}
 #smsjmodal .top{width: 100%; font-size: .42rem; color: #333333; padding-left: .5rem; line-height: 1rem;}
 #smsjmodal .bottom{width: 100%; padding: 6% 10% 10% 10%;}
@@ -213,19 +213,23 @@
 #smsjmodal .bottom .btn{width: 100%; background-color: #f58611; color: #fff; font-size: .42rem; text-align: center; padding: 4% 0; border: none; border-radius: 5px; -webkit-border-radius: 5px; -webkit-appearance: none;}
 #smsjform .flatbtn-blutwo{position: absolute;right: -15px;top: -15px;background: url(../img/closetwo.png) center no-repeat; background-size: 100%; width: 32px;height: 32px;border: none;cursor: pointer;}
 
+
+
 /*---------------------------------------------------------------------------------------
  landlord
  * */
 .land-banner,
 .land-banner img{width: 100%;}
 .land-ctent{width: 100%; margin-top: 3%; background-color: #fff;}
-.land-ctent ul li{width: 100%; float: left; padding:2% 2% 2% 0; border-bottom: 1px solid #dddddd;}
+.land-ctent ul li{width: 100%; float: left; padding:2% 2% 2% 0; border-bottom: 1px solid #dddddd;position: relative;}
 .land-ctent ul li .tit{font-size: .4rem; color: #666666; line-height: 1.4rem; width: 20%; text-align: right;}
 .land-ctent ul li input,.land-ctent ul li select{width: 78%; line-height: 1.4rem; height: 1.4rem; margin-bottom: 0; text-align: right; border: none; font-size: .4rem; color: #cbcbcb; padding: 0;direction: rtl;}
 .land-ctent .day{width: 74%; border: none; font-size: .45rem; color: #a9a9a9;}
 .land-ctent .allline{width: 94%; border: none; font-size: .45rem; color: #a9a9a9;}
 .land-ctent ul li i{font-size: .57rem; color: #b7b7b7; line-height: 1.4rem;}
 .land-ctent .btn{width: 90%; margin: 5%; background-color: #f58611; color: #fff; font-size: .45rem; padding: 4% 0; border: none; border-radius: 5px; -webkit-border-radius: 5px; -webkit-appearance: none; text-align: center;}
+.land-ctent ul li i.icon-arrowright{position: absolute;top: 50%;right: 10px;transform: translateY(-50%);-webkit-transform: translateY(-50%);}
+.land-ctent ul li .txt{color: #666;padding-left: 15px;    font-size: .36rem;}
 #loginmodal .bottom .btn1{border-radius: 0 0 10px 10px; background-color: #01b94f; position: absolute; bottom: 0; left: 0;}
 .login-dui{width: 100%; text-align: center;}
 .login-dui .tu img{width: 30%;}
@@ -678,7 +682,19 @@ ul.oe_menu{
 	clear:both;
 }
 
+/*公共弹窗*/
+.common-modal{width:76%; min-height: 200px;background:#fff;-webkit-border-radius:10px;-moz-border-radius:10px;border-radius:10px;-webkit-box-shadow:0 1px 5px rgba(0, 0, 0, 0.5);-moz-box-shadow:0 1px 5px rgba(0, 0, 0, 0.5);box-shadow:0 1px 5px rgba(0, 0, 0, 0.5);position: relative;overflow: hidden;}
+.common-modal label{display:block; font-size:1.1em; font-weight:bold; color:#7c8291; margin-bottom:3px; }
+.common-modal .flatbtn-blu{position: absolute;right: -40px;top: -40px;background: url(../img/close.png) center no-repeat; background-size: 100%; width: 100px;height: 92px;border: none;cursor: pointer;}
+.common-modal .top{width: 100%; font-size: .42rem; color: #333333; padding-left: .5rem; line-height: 1rem;}
+.common-modal .bottom{padding: 0 15px;max-height: 400px;
+    overflow: auto;}
+.common-modal .bottom .btn{width: 100%; background-color: #f58611; color: #fff; font-size: .42rem; text-align: center; padding: 4% 0; border: none; border-radius: 5px; -webkit-border-radius: 5px; -webkit-appearance: none;}
+.common-modal .flatbtn-blutwo{position: absolute;right: -15px;top: -15px;background: url(../img/closetwo.png) center no-repeat; background-size: 100%; width: 32px;height: 32px;border: none;cursor: pointer;}
 
-
-
+/*地址*/
+.address-list{}
+.address-list li{position: relative;padding: 10px 0;border-bottom: 1px solid #eee;font-size: 12px;color: #666;}
+.address-list li .name{position: absolute;right: 0;top: 10px;}
+.address-list li:active{background: #f2f2f2;}
 

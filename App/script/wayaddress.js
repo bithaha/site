@@ -13,8 +13,7 @@ $(document).ready(function () {
 
 function loadUI(pageindex, pagenum, datatype)
 {
-    console.log('global',global)
-    var sendurl = global.APP_PATH + "api/submit_ajax.ashx?action=app_queryMyAddress";
+    var sendurl = global.APP_PATH + "api/submit_ajax.ashx?action=app_queryMyAddressList";
     //提交
     $.ajax({
         url: sendurl,
