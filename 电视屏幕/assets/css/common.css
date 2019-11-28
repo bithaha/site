@@ -1,0 +1,53 @@
+@charset "utf-8";
+body, html, h1, h2, h3, h4, h5, h6, p, ul, ol, li, dl, dt, dd, th, td, form, object, iframe, blockquote, pre, a, abbr, address, code, img, fieldset, form, label, figure { margin:0; padding:0; }
+body, html, input, button, textarea { color:#fff; font:16px/1.8 "Microsoft YaHei", Arial, simsun, Tahoma, Verdana, Helvetica, sans-serif; }
+article, aside, figcaption, figure, footer, header, hgroup, main, nav, section { display:block; }
+body { _background-image:url(about:blank); _background-attachment:fixed; }
+h1 { font-size:18px; }
+h2 { font-size:16px; }
+h3, h4, h5 { font-size:14px; }
+img { border:none; vertical-align:middle; }
+li { list-style:none; }
+i, em { font-style:normal; }
+a { color:#6d6d6d; text-decoration:none; cursor:pointer; }
+a:focus { outline:none; }
+a:hover { color:#28ad38; text-decoration:none; }
+input[type="text"]:focus ,select{ outline:none; }
+input[type="button"], input[type="reset"], input[type="submit"] { cursor:pointer; }
+input[type="reset"]::-moz-focus-inner, input[type="button"]::-moz-focus-inner, input[type="submit"]::-moz-focus-inner, input[type="file"] > input[type="button"]::-moz-focus-inner {border:none;padding:0;}
+::-webkit-input-placeholder { color:    #e1e1e1;}
+:-moz-placeholder { color:    #e1e1e1;}
+::-moz-placeholder {color:    #e1e1e1;}
+:-ms-input-placeholder {color:    #e1e1e1;}
+
+/* 清除浮动 */
+.clearfix:after { content:""; display:block; height:0; clear:both; visibility:hidden; }
+/* 布局 */
+.viewport{width: 134vh;height: 100vh;position: absolute;top: 0;left: 50%;margin-left: -66.5vh;}
+.viewport-bg{position: absolute;z-index: 1;top: 0;left: 0;width: 100%;height: 100%;}
+.viewport-bg img{width: 100%;vertical-align: top;}
+
+.viewport-main{position: absolute;width: 128vh;left: 3vh;top: 62.3vh;/*border:1px solid red;*/height: 37vh;z-index: 20;}
+.table-container{float: left;width: 33.333333%;/*border:1px solid green;*/}
+.table-container table{border-collapse: collapse;width: 100%;}
+.table-container table td{line-height: 3.7vh;border-collapse: collapse;font-size: 2vh;text-align: center;white-space: nowrap;text-overflow: ellipsis;}
+
+.uname{display: inline-block;line-height: 2vh;vertical-align: top;margin-top: .25vh;}
+.uname img{width: 2vh;height: 2vh;vertical-align: middle;margin-right: 5px;border-radius: 50%;}
+.uname span{vertical-align: middle;display: inline-block;}
+.color-yellow{color: #f1eb3e;}
+.color-pink-light{color:#e8549a;}
+.color-pink-dark{color:#e8549a;}
+.color-purple{color:#df93fa;}
+.table-container .num{display: inline-block;width: 2.7vh;height: 2.7vh;position: relative;vertical-align: middle;}
+.table-container .num b{display: inline-block;width: 2.7vh;height: 2.7vh;line-height: 2.7vh;text-align:center;background: #e55356;font-size: 1.8vh;border-radius: 50%;border:1px solid #fff;font-weight: normal;position: relative;z-index: 20;vertical-align: top}
+.table-container .num em{position: absolute;width: 2.3vh;left: .2vh;bottom:1vh;height: 1.8vh;border:1px solid #ffc591;}
+.table-container .num em:before{content:"";display: block;height:100%;width: .77vh;margin: 0 auto;border-left: 1px solid #ffc591;border-right: 1px solid #ffc591;}
+.table-container .num.num-1 b{background: url(../images/num-1.png) top center no-repeat;background-size: contain;border-color:#fbe7bf;color:#d3a43c;font-weight: bold;}
+.table-container .num.num-2 b{background: url(../images/num-2.png) top center no-repeat;background-size: contain;border-color:#faf9f9;color:#a9a8a8;font-weight: bold;}
+.table-container .num.num-3 b{background: url(../images/num-3.png) top center no-repeat;background-size: contain;border-color:#fcd6ba;color:#db8b38;font-weight: bold;}
+.table-container tr.l1{background: url(../images/num-1-bg.png) center no-repeat;background-size:contain;}
+.table-container tr.l2{background: url(../images/num-2-bg.png) center no-repeat;background-size:contain;}
+.table-container tr.l3{background: url(../images/num-3-bg.png) center no-repeat;background-size:contain;}
+.table-container tr.level td{color:#430d58;}
+.table-container tr.level .num{display: none;}
