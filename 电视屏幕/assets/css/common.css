@@ -28,6 +28,7 @@ input[type="reset"]::-moz-focus-inner, input[type="button"]::-moz-focus-inner, i
 .viewport-bg img{width: 100%;vertical-align: top;}
 
 .viewport-main{position: absolute;width: 128vh;left: 3vh;top: 62.3vh;/*border:1px solid red;*/height: 37vh;z-index: 20;}
+.viewport-main .center,.viewport-main .right{padding-left: 1vh;box-sizing:border-box;}
 .table-container{float: left;width: 33.333333%;/*border:1px solid green;*/}
 .table-container table{border-collapse: collapse;width: 100%;}
 .table-container table td{line-height: 3.7vh;border-collapse: collapse;font-size: 2vh;text-align: center;white-space: nowrap;text-overflow: ellipsis;}
@@ -51,3 +52,9 @@ input[type="reset"]::-moz-focus-inner, input[type="button"]::-moz-focus-inner, i
 .table-container tr.l3{background: url(../images/num-3-bg.png) center no-repeat;background-size:contain;}
 .table-container tr.level td{color:#430d58;}
 .table-container tr.level .num{display: none;}
+
+.award-slider{position: absolute;z-index: 25;width: 30.3vh;height: 12.2vh;}
+.award-slider img{width: 100%;}
+.slider-1{top: 37.6vh;left: 20.5vh;}
+.slider-2{top: 37.6vh;left: 51.7vh;}
+.slider-3{top: 37.6vh;left: 83vh;}
