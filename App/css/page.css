@@ -13,9 +13,11 @@
 
 /*cation*/
 .cation{width: 100%; background-color: #fff; padding-top: 5%;}
-.cation ul li{width: 25%; float: left; text-align: center; padding-bottom: 5%;}
+.cation ul li{width: 25%; float: left; text-align: center; padding-bottom: 5%;position: relative;}
+.cation ul li a{display: block;position: relative;}
 .cation ul li img{width: 62.97%;}
 .cation ul li p{width: 100%; text-align: center; margin-top: .3rem; font-size: .4rem; color: #555555;}
+.cation ul li .weui-badge{position: absolute;top: 0;right: 18%;}
 
 /*recom*/
 .recom{width: 100%; margin-top: 3%; background-color: #fff;}
