@@ -1,0 +1,16 @@
+.header{background: #ff9600;}
+.user-avatar{background: #ff9900;}
+.header-right li .submenu{background: #e88b00;}
+.header-right li:hover a{background: #e88b00;}
+.header-right li .submenu a.active{background: rgba(0,0,0,.1);}
+
+.menu-bar{background: #f3f3f3;color: #444;}
+.menu-bar li > a{background: #fff;color: #444;}
+.menu-bar li.active > a, .menu-bar li > a:hover{background: #ff9900;color: #fff;}
+.ico-menu-1{    background-image: url(../../images/ico-org-gray.png);}
+.ico-menu-2{    background-image: url(../../images/ico-task-gray.png);}
+.menu-bar li.active .ico-menu-1, .menu-bar li > a:hover .ico-menu-1{background-image: url(../../images/ico-org.png);}
+.menu-bar li.active .ico-menu-2, .menu-bar li > a:hover .ico-menu-2{background-image: url(../../images/ico-task.png);}
+
+.table thead td{background: #f4f4f4;color: #444;}
+.table td{color: #666;}

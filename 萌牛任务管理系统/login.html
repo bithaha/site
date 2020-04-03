@@ -1,0 +1,109 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>萌牛任务管理系统</title>
+	<link rel="shortcut icon" href="assets/favicon.ico" type="image/x-icon" />
+  	<link rel="stylesheet" href="assets/layui/css/layui.css">
+	<link rel="stylesheet" href="assets/css/common.css">
+	<script type="text/javascript" src="assets/js/jquery.min.js"></script>
+	<script type="text/javascript" src="assets/js/common.js"></script>
+</head>
+
+<body style="width:100%;">
+	<div class="login-head-logo"><img src="assets/images/logo.png"><span>萌牛科技有限公司</span></div>
+	<div class="login-container">
+		<div class="login-logo">员工统一身份认证</div>
+		<div class="login-title">登录</div>
+		<div class="login-form">
+			<div class="row">
+				<div class="tit">手机号</div>
+				<div class="det codeitem">
+					<input type="text" class="text" id="username" placeholder="手机号">
+					<a href="javascript:;" class="btn btn-send" id="btnCode">发送验证码</a>
+				</div>
+			</div>
+			<div class="row">
+				<div class="tit">验证码</div>
+				<div class="det"><input type="password" class="text" id="password"></div>
+			</div>
+			<div class="row">
+				<a href="javascript:;" class="btn btn-login" id="login">登录</a>
+			</div>
+		</div>
+	</div>
+	<div class="login-bg"></div>
+
+
+<!-- footer end -->
+<script src="assets/layui/layui.all.js"></script>
+<script type="text/javascript">
+$(function(){
+	
+	$('#login').click(function(){
+		var username = $.trim($('#username').val())
+		var password = $.trim($('#password').val())
+		if(!username){
+			return layer.msg('请输入用户名');
+		}
+		if(!password){
+			return layer.msg('请输入密码');
+		}
+		$.ajax({
+			url:'#',
+			method:"post",
+			data:{username:username,password:password},
+			success:function(resp){
+				layer.msg('登录成功');
+			},
+			error:function(resp){
+				layer.msg('登录失败');
+			}
+		})
+	})
+
+
+	/*发送验证码*/
+	var loading=false;
+	function sendCode(opt){
+		setTimeout(()=>{
+			opt.success && opt.success()
+		},1000)
+	}
+	function startTime(){
+		var second = 60;
+		loading=true;
+		$('#btnCode').html(second+'s后重新获取');
+		var time = setInterval(function(){
+			if(second<=1){
+				$('#btnCode').html('发送验证码');
+				$('#btnCode').removeClass('disabled');
+				window.clearInterval(time);
+				loading=false;
+				return;
+			}
+			$('#btnCode').html(--second+'s后重新获取');
+		},1000)
+	}
+
+	/*发送验证码*/
+	$('#btnCode').click(function(){
+		if(loading){
+			return;
+		}
+		$(this).addClass('disabled');
+		$(this).html('发送中...');
+
+		/*此处模拟ajax*/
+		sendCode({
+			success:function(){
+				startTime();
+			}
+		})
+	})
+
+});
+
+</script>
+</body>
+</html>
