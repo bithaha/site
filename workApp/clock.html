@@ -34,11 +34,11 @@
             </label>
             <label class="item">
                 <span class="tit">当前位置</span>
-                <input type="text" class="txt" value="" placeholder="当前位置">
+                <select id="location" class="txt" placeholder="当前位置"></select>
             </label>
         </div>
         <div class="map-main">
-            <div class="map" id="map" style="height: 300px"></div>
+            <div class="map" id="map" style="height: 10rem"></div>
         </div>
     </div>
     <div class="footer-bar">
@@ -71,6 +71,8 @@
             var logoutTime = $('#logoutTime').val();
             
         })
+        var h = $(window).height()-($('.header').height()+$('.shiming-form').height()+$('.empty-title').height()+$('.footer-bar').height()+$('.line').height())
+        $('#map').css({'height':h+'px'})
 
     })
     </script>
@@ -84,13 +86,14 @@
     function initMap() {
         map = new google.maps.Map(document.getElementById('map'), {
             center: { lat: 25.0321057200, lng: 121.5348815900 },
-            zoom: 6
+            zoom: 15
         });
         geocoder = new google.maps.Geocoder;
         infoWindow = new google.maps.InfoWindow;
 
         // Try HTML5 geolocation.
         if (navigator.geolocation) {
+            console.log('开始调用系统定位')
             navigator.geolocation.getCurrentPosition(function(position) {
                 pos = {
                     lat: position.coords.latitude,
@@ -102,8 +105,8 @@
                 infoWindow.open(map);
                 map.setCenter(pos);
 
-                // findPlace(pos); //通过经纬度查询地理位置信息
-            }, function() {
+                findPlace(pos); //通过经纬度查询地理位置信息
+            }, function(err) {console.log('定位错误：',err)
                 handleLocationError(true, infoWindow, map.getCenter());
             });
         } else {
@@ -116,6 +119,11 @@
         if (status === 'OK') {
             console.log(results,'results')
           if (results[0]) {
+            results.forEach(item=>{
+                $('#location').append('<option value="'+item.formatted_address+'">'+item.formatted_address+'</option>')
+            })
+            
+            $('#location').val(results[0].formatted_address)
             // map.setZoom(11);
             // var marker = new google.maps.Marker({
             //   position: latlng,
@@ -140,7 +148,7 @@
         infoWindow.open(map);
     }
     </script>
-    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAyTEyWVY3qJQK2_tZtpiJamG17-Uwr5k0&callback=initMap">
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCoseXb47uonHJXzt6xQ8rqhjChNUggM5g&callback=initMap">
     </script>
 </body>
 
